@@ -37,3 +37,55 @@
 #lpRoot .bp-card.bp-vip::before{display:none!important}
 #lpRoot .bp-card.bp-vip{background-image:linear-gradient(160deg,#10306A 0%,#0B1B33 60%,#071226 100%)!important}
 #lpRoot .bp-card .bp-price strong{background:none!important;-webkit-text-fill-color:#0B1B33!important}
+/* v3 depth pass */
+#lpRoot .bp-offer{background:
+ radial-gradient(900px 500px at 12% 8%,rgba(94,182,255,.35) 0%,rgba(94,182,255,0) 60%),
+ radial-gradient(800px 500px at 88% 90%,rgba(10,98,240,.22) 0%,rgba(10,98,240,0) 60%),
+ linear-gradient(180deg,#F7FAFF 0%,#EDF3FC 100%)!important;position:relative}
+#lpRoot .bp-offer .bp-grid{perspective:1800px}
+#lpRoot .bp-card{position:relative;
+ background:linear-gradient(165deg,#FFFFFF 0%,#F7FAFF 55%,#EEF4FD 100%)!important;
+ border:1px solid rgba(255,255,255,.9)!important;
+ box-shadow:
+  inset 0 1px 0 rgba(255,255,255,1),
+  inset 0 -1px 0 rgba(10,98,240,.06),
+  0 1px 1px rgba(11,27,51,.04),
+  0 6px 12px rgba(11,27,51,.05),
+  0 18px 36px rgba(11,27,51,.08),
+  0 48px 90px rgba(10,98,240,.14)!important;
+ transform:rotateY(2.5deg) translateZ(0);transform-origin:right center}
+#lpRoot .bp-card::before{content:"";position:absolute;inset:0;border-radius:inherit;pointer-events:none;
+ background:linear-gradient(120deg,rgba(255,255,255,.95) 0%,rgba(255,255,255,0) 38%),radial-gradient(600px 300px at 20% -10%,rgba(94,182,255,.22),rgba(94,182,255,0) 70%)}
+#lpRoot .bp-card .bp-price strong{text-shadow:0 2px 0 #fff,0 10px 24px rgba(11,27,51,.14)!important}
+#lpRoot .bp-card .bp-button{background:linear-gradient(180deg,#2F7DFF 0%,#0A62F0 55%,#0850C4 100%)!important;
+ box-shadow:inset 0 1px 0 rgba(255,255,255,.45),inset 0 -2px 0 rgba(0,0,0,.18),0 10px 22px rgba(10,98,240,.35),0 2px 4px rgba(10,98,240,.3)!important}
+/* VIP */
+#lpRoot .bp-card.bp-vip{transform:rotateY(-2.5deg) translateZ(0) scale(1.02);transform-origin:left center;
+ background:
+  radial-gradient(700px 420px at 85% 0%,rgba(94,182,255,.45) 0%,rgba(94,182,255,0) 60%),
+  radial-gradient(600px 400px at 0% 100%,rgba(10,98,240,.55) 0%,rgba(10,98,240,0) 60%),
+  linear-gradient(160deg,#143A7A 0%,#0C2049 45%,#070F22 100%)!important;
+ border:1px solid rgba(94,182,255,.55)!important;
+ box-shadow:
+  inset 0 1px 0 rgba(255,255,255,.22),
+  inset 0 0 0 1px rgba(94,182,255,.12),
+  0 0 0 6px rgba(94,182,255,.10),
+  0 30px 60px rgba(7,15,34,.45),
+  0 60px 120px rgba(10,98,240,.35),
+  0 0 90px rgba(94,182,255,.30)!important}
+#lpRoot .bp-card.bp-vip::before{display:block!important;content:"";position:absolute;inset:0;border-radius:inherit;pointer-events:none;
+ background:linear-gradient(115deg,rgba(255,255,255,.14) 0%,rgba(255,255,255,0) 30%),
+ repeating-linear-gradient(0deg,rgba(255,255,255,.015) 0 1px,transparent 1px 3px)}
+#lpRoot .bp-card.bp-vip::after{inset:auto -25% -45% auto;width:80%;height:80%;background:radial-gradient(closest-side,rgba(94,182,255,.55),rgba(94,182,255,0))}
+#lpRoot .bp-card.bp-vip h3{text-shadow:0 2px 12px rgba(94,182,255,.35)}
+#lpRoot .bp-card.bp-vip .bp-price strong{text-shadow:0 0 30px rgba(94,182,255,.55),0 6px 20px rgba(0,0,0,.4)!important}
+#lpRoot .bp-card.bp-vip .bp-price sup{text-shadow:0 0 18px rgba(214,179,106,.7)}
+#lpRoot .bp-card.bp-vip .bp-rule{box-shadow:0 0 16px rgba(214,179,106,.6)}
+#lpRoot .bp-card.bp-vip .bp-button{background:linear-gradient(180deg,#7CC4FF 0%,#2F8CFF 50%,#0A62F0 100%)!important;
+ box-shadow:inset 0 1px 0 rgba(255,255,255,.7),inset 0 -2px 0 rgba(0,0,0,.25),0 14px 34px rgba(94,182,255,.5),0 0 40px rgba(94,182,255,.35)!important;border:1px solid rgba(255,255,255,.35)!important}
+#lpRoot .bp-card .bp-features li{position:relative}
+#lpRoot .bp-card::before,#lpRoot .bp-card::after{z-index:0}
+#lpRoot .bp-card>*{position:relative;z-index:1}
+#lpRoot .bp-card:not(.bp-vip)::before{background:linear-gradient(120deg,rgba(255,255,255,.7) 0%,rgba(255,255,255,0) 30%),radial-gradient(500px 260px at 15% -10%,rgba(94,182,255,.16),rgba(94,182,255,0) 70%)}
+#lpRoot .bp-card .bp-price strong{color:#0B1B33!important;-webkit-text-fill-color:#0B1B33!important}
+#lpRoot .bp-card.bp-vip .bp-price strong{-webkit-text-fill-color:#FFFFFF!important}
