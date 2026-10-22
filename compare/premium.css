@@ -127,3 +127,24 @@
 #lpRoot .bp-offer .bp-heading h2{font-size:clamp(52px,6vw,92px)!important}
 #lpRoot .bp-offer .bp-heading h2 em{font-size:.56em!important}
 #lpRoot .opt-sum{font-size:clamp(28px,3vw,42px)!important}
+/* v7 CTA pass */
+#lpRoot .bp-card .bp-button{display:inline-flex!important;width:auto!important;min-width:0!important;max-width:none!important;align-self:flex-start;margin:28px 0 0!important;padding:22px 40px!important;border-radius:999px!important;font-size:24px!important;font-weight:700!important;gap:14px!important;letter-spacing:-.2px}
+#lpRoot .bp-card .bp-button span:last-child{font-size:24px!important}
+#lpRoot .bp-card:not(.bp-vip) .bp-button{background:#0B1B33!important;color:#FFFFFF!important;border:0!important;box-shadow:0 12px 28px rgba(11,27,51,.28),inset 0 1px 0 rgba(255,255,255,.12)!important}
+#lpRoot .bp-card.bp-vip .bp-button{background:linear-gradient(180deg,#F0D693 0%,#D6B36A 55%,#B8933F 100%)!important;color:#0B1B33!important;border:0!important;box-shadow:0 14px 34px rgba(214,179,106,.45),0 0 40px rgba(214,179,106,.25),inset 0 1px 0 rgba(255,255,255,.6),inset 0 -2px 0 rgba(0,0,0,.15)!important}
+#lpRoot .bp-card .bp-guarantee{text-align:left!important;margin-top:16px!important}
+/* v8 legibility pass */
+#lpRoot .bp-card .bp-price{align-items:baseline!important;gap:14px!important}
+#lpRoot .bp-card .bp-price strong{font-size:108px!important;letter-spacing:-4px!important}
+#lpRoot .bp-card .bp-price span{font-size:30px!important;font-weight:600!important}
+#lpRoot .bp-card .bp-follow{font-size:36px!important;font-weight:800!important;line-height:1.2!important;margin-top:10px!important;letter-spacing:-.6px}
+#lpRoot .bp-card .bp-total{font-size:28px!important;font-weight:600!important;color:#1B2A44!important;margin-top:8px!important;line-height:1.3!important}
+#lpRoot .bp-card.bp-vip .bp-total{color:#DCE7F7!important}
+#lpRoot .bp-card .bp-desc{font-size:24px!important}
+#lpRoot .bp-card .bp-included{font-size:27px!important;margin-top:28px!important}
+#lpRoot .bp-card .bp-features li{font-size:26px!important;line-height:1.35!important;margin-bottom:16px!important}
+#lpRoot .bp-card .bp-features li b,#lpRoot .bp-card .bp-features li strong{font-size:27px!important}
+#lpRoot .bp-card .bp-features li .bp-detail,#lpRoot .bp-card .bp-features li small,#lpRoot .bp-card .bp-features li span{font-size:23px!important}
+#lpRoot .bp-card .bp-button{font-size:26px!important;padding:24px 44px!important}
+#lpRoot .bp-card .bp-guarantee{font-size:22px!important}
+#lpRoot .bp-card h3{font-size:46px!important}
