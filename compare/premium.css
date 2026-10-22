@@ -89,3 +89,41 @@
 #lpRoot .bp-card:not(.bp-vip)::before{background:linear-gradient(120deg,rgba(255,255,255,.7) 0%,rgba(255,255,255,0) 30%),radial-gradient(500px 260px at 15% -10%,rgba(94,182,255,.16),rgba(94,182,255,0) 70%)}
 #lpRoot .bp-card .bp-price strong{color:#0B1B33!important;-webkit-text-fill-color:#0B1B33!important}
 #lpRoot .bp-card.bp-vip .bp-price strong{-webkit-text-fill-color:#FFFFFF!important}
+/* v5 size pass */
+#lpRoot .bp-offer .bp-heading h2{font-size:clamp(44px,5vw,76px)!important;line-height:1.05!important}
+#lpRoot .bp-offer .bp-heading h2 em{font-size:.62em!important}
+#lpRoot .opt-sum{font-size:clamp(26px,2.6vw,36px)!important}
+#lpRoot .bp-card{padding:52px 48px!important}
+#lpRoot .bp-card h3{font-size:38px!important;line-height:1.1!important}
+#lpRoot .bp-card .bp-desc{font-size:21px!important;line-height:1.45!important}
+#lpRoot .bp-card .bp-price strong{font-size:112px!important;letter-spacing:-5px!important}
+#lpRoot .bp-card .bp-price sup{font-size:40px!important}
+#lpRoot .bp-card .bp-price span{font-size:24px!important}
+#lpRoot .bp-card .bp-follow{font-size:26px!important;line-height:1.3!important}
+#lpRoot .bp-card .bp-total{font-size:20px!important}
+#lpRoot .bp-card .bp-included{font-size:22px!important}
+#lpRoot .bp-card .bp-features li{font-size:21px!important;line-height:1.4!important;margin-bottom:12px!important}
+#lpRoot .bp-card .bp-features li b,#lpRoot .bp-card .bp-features li strong{font-size:22px!important}
+#lpRoot .bp-card .bp-features li .bp-detail,#lpRoot .bp-card .bp-features li small,#lpRoot .bp-card .bp-features li span{font-size:19px!important;line-height:1.4!important}
+#lpRoot .bp-card .bp-button{font-size:24px!important;padding:24px 34px!important;border-radius:18px!important;justify-content:space-between!important;letter-spacing:-.2px}
+#lpRoot .bp-card .bp-button span:last-child{font-size:28px!important}
+#lpRoot .bp-card .bp-guarantee{font-size:18px!important}
+/* v6 scale pass */
+#lpRoot .bp-offer .bp-wrap{max-width:1360px!important;width:100%!important;padding-left:24px;padding-right:24px}
+#lpRoot .bp-offer .bp-grid{gap:40px!important;max-width:1360px!important}
+#lpRoot .bp-card{padding:56px 52px!important}
+#lpRoot .bp-card h3{font-size:44px!important}
+#lpRoot .bp-card .bp-desc{font-size:23px!important}
+#lpRoot .bp-card .bp-price strong{font-size:128px!important}
+#lpRoot .bp-card .bp-follow{font-size:30px!important}
+#lpRoot .bp-card .bp-total{font-size:22px!important}
+#lpRoot .bp-card .bp-included{font-size:25px!important}
+#lpRoot .bp-card .bp-features li{font-size:24px!important;margin-bottom:14px!important}
+#lpRoot .bp-card .bp-features li b,#lpRoot .bp-card .bp-features li strong{font-size:25px!important}
+#lpRoot .bp-card .bp-features li .bp-detail,#lpRoot .bp-card .bp-features li small,#lpRoot .bp-card .bp-features li span{font-size:21px!important}
+#lpRoot .bp-card .bp-button{font-size:30px!important;font-weight:800!important;padding:28px 36px!important;justify-content:center!important;gap:16px!important;display:flex!important;align-items:center!important}
+#lpRoot .bp-card .bp-button span:last-child{font-size:30px!important}
+#lpRoot .bp-card .bp-guarantee{font-size:20px!important}
+#lpRoot .bp-offer .bp-heading h2{font-size:clamp(52px,6vw,92px)!important}
+#lpRoot .bp-offer .bp-heading h2 em{font-size:.56em!important}
+#lpRoot .opt-sum{font-size:clamp(28px,3vw,42px)!important}
