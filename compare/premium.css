@@ -168,3 +168,27 @@
 #lpRoot .bp-offer{padding-top:48px!important;padding-bottom:56px!important}
 #lpRoot .bp-offer .bp-heading{margin-bottom:28px!important}
 #lpRoot .bp-card .bp-features{margin-bottom:26px!important}
+/* v11 brand CTA + phone render */
+#lpRoot .bp-card:not(.bp-vip) .bp-button{background:linear-gradient(180deg,#2A86FF 0%,#006EFF 60%,#005BD6 100%)!important;color:#fff!important;box-shadow:0 14px 30px rgba(0,110,255,.35),inset 0 1px 0 rgba(255,255,255,.4)!important}
+#lpRoot .bp-card.bp-vip .bp-button{background:linear-gradient(180deg,#8FCBFF 0%,#5EB6FF 60%,#3FA2F5 100%)!important;color:#0B1B33!important;box-shadow:0 14px 34px rgba(94,182,255,.5),0 0 40px rgba(94,182,255,.3),inset 0 1px 0 rgba(255,255,255,.7)!important}
+#lpRoot .bp-card .bp-button{font-size:30px!important;padding:24px 44px!important;font-weight:800!important}
+#lpRoot .bp-card .bp-button span:last-child{font-size:30px!important}
+@media (max-width:1000px){
+#lpRoot .bp-offer .bp-grid{grid-template-columns:1fr!important;display:grid!important;gap:28px!important}
+#lpRoot .bp-card,#lpRoot .bp-card.bp-vip{transform:none!important;padding:40px 36px!important}
+#lpRoot .bp-card h3{font-size:44px!important}
+#lpRoot .bp-card .bp-desc{font-size:26px!important}
+#lpRoot .bp-card .bp-price strong{font-size:110px!important}
+#lpRoot .bp-card .bp-price span{font-size:30px!important}
+#lpRoot .bp-card .bp-follow{font-size:38px!important}
+#lpRoot .bp-card .bp-total{font-size:29px!important}
+#lpRoot .bp-card .bp-included{font-size:28px!important}
+#lpRoot .bp-card .bp-features li{font-size:28px!important;margin-bottom:10px!important}
+#lpRoot .bp-card .bp-button{font-size:32px!important;padding:26px 46px!important}
+#lpRoot .bp-card .bp-guarantee{font-size:23px!important}
+#lpRoot .bp-offer .bp-heading h2{font-size:64px!important}
+#lpRoot .bp-offer .bp-heading h2 em{font-size:.6em!important;line-height:1.15!important}
+#lpRoot .opt-sum{font-size:30px!important;white-space:normal!important;line-height:1.3!important}
+#lpRoot .bp-offer .bp-wrap{padding-left:20px;padding-right:20px}
+}
+@media (max-width:1000px){#lpRoot .bp-card.bp-vip .bp-features li,#lpRoot .bp-card.bp-vip .bp-features li b,#lpRoot .bp-card.bp-vip .bp-features li strong{font-size:28px!important}}
