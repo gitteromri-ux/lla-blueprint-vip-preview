@@ -192,3 +192,16 @@
 #lpRoot .bp-offer .bp-wrap{padding-left:20px;padding-right:20px}
 }
 @media (max-width:1000px){#lpRoot .bp-card.bp-vip .bp-features li,#lpRoot .bp-card.bp-vip .bp-features li b,#lpRoot .bp-card.bp-vip .bp-features li strong{font-size:28px!important}}
+/* v13 side-by-side large */
+@media (min-width:1001px){
+#lpRoot .bp-card h3{font-size:44px!important}
+#lpRoot .bp-card .bp-desc{font-size:25px!important}
+#lpRoot .bp-card .bp-price strong{font-size:104px!important}
+#lpRoot .bp-card .bp-price span{font-size:30px!important}
+#lpRoot .bp-card .bp-follow{font-size:36px!important}
+#lpRoot .bp-card .bp-total{font-size:28px!important}
+#lpRoot .bp-card .bp-included{font-size:27px!important}
+#lpRoot .bp-card .bp-features li,#lpRoot .bp-card .bp-features li b,#lpRoot .bp-card .bp-features li strong{font-size:27px!important}
+#lpRoot .bp-card .bp-button{font-size:30px!important;padding:24px 44px!important}
+#lpRoot .bp-card .bp-guarantee{font-size:22px!important}
+}
