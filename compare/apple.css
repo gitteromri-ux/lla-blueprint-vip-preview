@@ -73,3 +73,18 @@
 #lpRoot .bp-offer{padding-bottom:150px!important}
 #lpRoot .bp-card .bp-button{border-bottom:3px solid rgba(0,0,0,.18)!important}
 #lpRoot .bp-card.bp-vip .bp-button{border-bottom:3px solid rgba(0,0,0,.5)!important}
+/* a6: VIP in navy */
+#lpRoot .bp-card.bp-vip{background:linear-gradient(165deg,#13397A 0%,#0B1B33 55%,#081429 100%)!important;border-bottom:6px solid #061024!important;border-right:2px solid #0A1A33!important;box-shadow:
+  inset 0 1px 0 rgba(255,255,255,.18),
+  0 2px 0 rgba(0,0,0,.2),
+  0 10px 20px rgba(11,27,51,.2),
+  0 30px 50px rgba(11,27,51,.28),
+  0 60px 110px rgba(11,27,51,.30),
+  0 100px 160px rgba(0,110,255,.18)!important}
+#lpRoot .bp-card.bp-vip h3,#lpRoot .bp-card.bp-vip .bp-price,#lpRoot .bp-card.bp-vip .bp-price sup,#lpRoot .bp-card.bp-vip .bp-price strong,#lpRoot .bp-card.bp-vip .bp-follow,#lpRoot .bp-card.bp-vip .bp-included{color:#FFFFFF!important;-webkit-text-fill-color:#FFFFFF!important;text-shadow:none!important}
+#lpRoot .bp-card.bp-vip .bp-desc,#lpRoot .bp-card.bp-vip .bp-price span,#lpRoot .bp-card.bp-vip .bp-total,#lpRoot .bp-card.bp-vip .bp-guarantee{color:#B4C4DE!important}
+#lpRoot .bp-card.bp-vip .bp-features li,#lpRoot .bp-card.bp-vip .bp-features li b,#lpRoot .bp-card.bp-vip .bp-features li strong{color:#F2F6FC!important}
+#lpRoot .bp-card.bp-vip .bp-features li::before,#lpRoot .bp-card.bp-vip .bp-features li svg{color:#5EB6FF!important;fill:#5EB6FF!important}
+#lpRoot .bp-card.bp-vip .bp-rule{background:#24407A!important}
+#lpRoot .bp-card.bp-vip .bp-button{background:#5EB6FF!important;color:#0B1B33!important;border-bottom:3px solid rgba(0,0,0,.25)!important;box-shadow:0 1px 2px rgba(0,0,0,.2),0 10px 22px rgba(94,182,255,.35),inset 0 1px 0 rgba(255,255,255,.5)!important}
+#lpRoot .bp-card:not(.bp-vip) .bp-button{background:#006EFF!important;color:#fff!important}
