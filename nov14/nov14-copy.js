@@ -19,6 +19,10 @@
    style.textContent=rules.map(m=>m[1].replaceAll('#enrollModal','#ask')+'{'+m[2]+'}\n'+m[1].replaceAll('#enrollModal','.attendee-coupon')+'{'+m[2]+'}').join('\n')+'\n.attendee-coupon button[data-coupon]{color:inherit}html{scroll-padding-top:130px}';
    document.head.append(style);
   }
+  html('#hero h1','Build your personal longevity protocol in <span class="pdp-cine-blue">18 live classes.</span>');
+  html('#hero .pdp-cine-sub','18 live small-group classes with Julie and the LLA faculty. Abbott Lingo CGM shipped free. You leave with a written protocol built on your own numbers.');
+  text('#hero figcaption span','Founding Faculty, Longevity Life Academy');
+  const heroCTA=document.querySelector('#hero .pdp-cine-cta');if(heroCTA){heroCTA.href='#offer';heroCTA.dataset.enrollCourse='1';heroCTA.innerHTML='Enroll now';}
   document.querySelectorAll('#learn-com .topic-v2-desc').forEach((p,i)=>{if(descriptions[i])p.textContent=descriptions[i]});
   html('#included h2','What the course <em>includes</em>');
   html('#cgm h2','Abbott Lingo sensor <em>and app</em>');
@@ -35,9 +39,10 @@
   document.querySelectorAll('#whatitis .pdp-value-card h3').forEach((h,i)=>{if(methodTitles[i])h.textContent=methodTitles[i]});
   html('#faq h2','Frequently asked <em>questions</em>');
   document.querySelectorAll('#faq .faq-item').forEach(item=>{
-   if(/How much does it cost/i.test(item.textContent)){const answer=item.querySelector('.faq-a-inner');if(answer)answer.textContent='Tuition is $79 for your first month, then four monthly payments of $169, $755 in total. Julie\u2019s VIP Masterclass on November 14, the Abbott Lingo sensor and the learning platform are included. One payment of $799 is also available at checkout.'}
+   if(/How much does it cost/i.test(item.textContent)){const answer=item.querySelector('.faq-a-inner');if(answer)answer.textContent='November offer: $79 for your first month, then $169 a month for four months, $755 in total. The live 18-week course, a free Abbott Lingo CGM shipped to your home, $100 cash back towards your next course and Julie\u2019s VIP Masterclass on November 14 are all included. Online sign-ups in November only. One payment of $799 is also available at checkout.'}
   });
-  const strip=document.getElementById('mockStrip');if(strip)strip.innerHTML='<span class="t lg">Julie\u2019s VIP Masterclass, live November 14, is included free</span><span class="t sm"><a href="#enrollModal" data-enroll-course="1">Julie\u2019s Masterclass included&nbsp;&middot;&nbsp;<b>$79 month 1</b></a></span>';
+  const strip=document.getElementById('mockStrip');if(strip)strip.innerHTML='<span class="t lg">November offer: $79 first month, Julie\u2019s VIP Masterclass included free</span><span class="t sm"><a href="#enrollModal" data-enroll-course="1">November offer&nbsp;&middot;&nbsp;<b>$79 month 1</b></a></span>';
+  document.querySelectorAll('a[href*="checkout.html"]').forEach(a=>{a.href='#offer';a.removeAttribute('data-plan')});
   // The captured source places this initializer before the carousel markup.
   // Run the original one-card scroll behavior after that markup exists.
   const rail=document.getElementById('tgRail');

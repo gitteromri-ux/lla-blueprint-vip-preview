@@ -10,6 +10,9 @@
  }
  function apply(){
   const hero=document.getElementById('hero'),pillars=document.getElementById('learn-com'),syllabus=document.getElementById('syllabus'),offer=document.getElementById('offer');
+  const headline=document.querySelector('#hero h1'),sub=document.querySelector('#hero .pdp-cine-sub');
+  if(headline)headline.innerHTML='Build your personal longevity protocol in <span class="pdp-cine-blue">18 live classes.</span>';
+  if(sub)sub.textContent='18 live small-group classes with Julie and the LLA faculty. Abbott Lingo CGM shipped free. You leave with a written protocol built on your own numbers.';
   document.querySelectorAll('#hero .pdp-cine-cta,header .fn-nav-pill,#mockBar a,a').forEach(a=>{
    if(!a.matches('#hero .pdp-cine-cta,header .fn-nav-pill,#mockBar a')&&!/^enroll\s*now$/i.test(a.textContent.trim()))return;
    a.href='#enrollModal';a.dataset.enrollCourse='1';if(!a.classList.contains('nov14-cta-2')&&a.textContent!=='Enroll now')a.textContent='Enroll now';

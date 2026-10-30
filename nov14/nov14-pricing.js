@@ -12,7 +12,7 @@
   if(!checkout){
    text('#pp [data-pl="upfront"] .pp-sub','Total $799 USD, one payment');
    html('.att-price','<span class="att-big">$79</span><span class="att-unit">Month 1<br><s>$169</s></span>');
-   text('#enroll-mini .fn-pc-was','Launch offer');
+   text('#enroll-mini .fn-pc-was','November offer');
    html('#enroll-mini .lla-mini-price','<b><sup>$</sup>79</b><span>Month 1<br>then 4 × $169 · $755 total</span>');
    text('#fnExit p b','Regular tuition: $169 per month');
    text('#mockBar .l b','$79 month 1');
@@ -23,11 +23,11 @@
    const sum=$('#emSum');
    if(sum){
     sum.classList.add('credit-summary');sum.setAttribute('data-no-promo','');
-    const content='<p class="credit-heading">'+(active?'Launch offer: $79 first month':'Regular plan')+'</p><div class="credit-first">'+(active?'<s>$169</s>':'')+'<strong>$'+first+'</strong><span>Month 1</span></div><div class="credit-line"><span>Months 2–5</span><b>4 × $169</b></div><div class="credit-line"><span>Total tuition</span><b>$'+total+'</b></div>';
+    const content='<p class="credit-heading">'+(active?'November offer: $79 first month':'Regular plan')+'</p><div class="credit-first">'+(active?'<s>$169</s>':'')+'<strong>$'+first+'</strong><span>Month 1</span></div><div class="credit-line"><span>Months 2–5</span><b>4 × $169</b></div><div class="credit-line"><span>Total tuition</span><b>$'+total+'</b></div>';
     if(sum.innerHTML!==content)sum.innerHTML=content;
    }
    const msg=$('#emPromoMsg');
-   if(msg&&msg.classList.contains('ok'))text('#emPromoMsg',upfront?'$799 one payment.':'Launch offer applied: $79 first month.');
+   if(msg&&msg.classList.contains('ok'))text('#emPromoMsg',upfront?'$799 one payment.':'November offer applied: $79 first month.');
    text('.att-big-offer','$79');
   }
   // Pricing card is indicative. On checkout, only its verified CRM quote controls amounts.
