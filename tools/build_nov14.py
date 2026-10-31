@@ -51,7 +51,7 @@ strip='''
 '''
 # 6. Offer rewrite
 offer=blocks['offer']
-offer_new=re.sub(r'<p class="lp-lead">.*?</p>', '<p class="lp-lead">Online sign-ups in November only. The live 18-week course, a free Abbott Lingo CGM, $100 cash back towards your next course and Julie Gibson Clark’s VIP Masterclass, all in one price.</p>', offer, count=1, flags=re.S)
+offer_new=re.sub(r'<p class="lp-lead">.*?</p>', '<p class="lp-lead">The live 18-week course with top instructors, a free Abbott Lingo CGM shipped to your home and $100 cash back towards your next course. Online sign-ups in November only.</p>', offer, count=1, flags=re.S)
 card_new='''<aside class="lp-card">
         <p class="lp-plan credit-plan-label">November offer. Over 50% off your first month.</p>
         <div class="lp-big credit-month-one" data-no-promo data-credit-price><s aria-label="Regular first payment">$169</s><strong>$79</strong><span>Month 1</span></div>
@@ -102,7 +102,7 @@ blocks['included']=inc_new
 # 9. Pillar videos: no eager preload on the preview
 blocks['learn-com']=blocks['learn-com'].replace('preload="auto" data-lla-autoplay="1"','preload="metadata" data-lla-autoplay="1"')
 # 10. Reassemble in the new order
-order=['hero','offer','learn-com','syllabus','vip','included','cgm','teachers','institution','journal','whatitis','mechanism','faq','ask','enroll-mini']
+order=['hero','learn-com','syllabus','offer','vip','included','cgm','teachers','institution','journal','whatitis','mechanism','faq','ask','enroll-mini']
 blocks['nov14-clarity']=strip
 assembled='\n'.join(blocks[s] for s in order)+'\n'+res_join
 t=t[:first]+assembled+t[last:]
