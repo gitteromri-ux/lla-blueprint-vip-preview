@@ -51,24 +51,24 @@ strip='''
 '''
 # 6. Offer rewrite
 offer=blocks['offer']
-offer_new=re.sub(r'<p class="lp-lead">.*?</p>', '<p class="lp-lead">The live 18-week course with top instructors, a free Abbott Lingo CGM shipped to your home and $100 cash back towards your next course. Online sign-ups in November only.</p>', offer, count=1, flags=re.S)
+offer_new=re.sub(r'<p class="lp-lead">.*?</p>', '<p class="lp-lead">Live 18-week course, free Abbott Lingo CGM, $100 cash back. Online sign-ups in November only.</p>', offer, count=1, flags=re.S)
 card_new='''<aside class="lp-card">
         <p class="lp-plan credit-plan-label">November offer. Over 50% off your first month.</p>
         <div class="lp-big credit-month-one" data-no-promo data-credit-price><s aria-label="Regular first payment">$169</s><strong>$79</strong><span>Month 1</span></div>
         <div class="credit-rest" data-no-promo><span>Then 4 months</span><b>$169 <span style="font-size:16px;font-weight:400">/ month</span></b></div>
-        <p class="lp-total credit-total" data-no-promo><b>$755 total</b><small>Five payments. Nothing else to pay. Online sign-ups in November only.</small></p>
+        <p class="lp-total credit-total" data-no-promo><b>$755 total</b><small>Five payments. Nothing else to pay.</small></p>
         <a href="#enrollModal" class="lp-cta" id="offerEnroll" data-fn-cta="offer" data-enroll-course="1">Enroll now</a>
-        <p class="lp-trust"><b>14-day try-out refund on the course.</b> Questions before you enroll? Call +1-888-230-5110.</p>
+        <p class="lp-trust"><b>14-day try-out refund.</b> Questions? Call +1-888-230-5110.</p>
       </aside>'''
 offer_new,n5=re.subn(r'<aside class="lp-card">.*?</aside>', card_new, offer_new, count=1, flags=re.S)
 list_new='''<ul class="lp-bul">
-          <li><i style="--c1:#006EFF;--c2:#5EB6FF"></i><span><b>Live 18-week course in small groups.</b> One live class a week on Zoom, recorded for you.</span></li>
-          <li><i style="--c1:#22B27A;--c2:#7DE5C1"></i><span><b>Master the 6 pillars of longevity.</b> Nutrition, sleep, movement, supplements, stress and your protocol, with top instructors.</span></li>
-          <li><i style="--c1:#0FB5D6;--c2:#7DE5FF"></i><span><b>Your tailored longevity protocol in 18 weeks.</b> Built on your own numbers.</span></li>
-          <li><i style="--c1:#FF7A45;--c2:#FFB38A"></i><span><b>A free Abbott Lingo CGM.</b> Shipped to your home.</span></li>
+          <li><i style="--c1:#006EFF;--c2:#5EB6FF"></i><span><b>Live 18-week course in small groups.</b> One class a week, recorded.</span></li>
+          <li><i style="--c1:#22B27A;--c2:#7DE5C1"></i><span><b>Master the 6 pillars of longevity.</b> Top instructors.</span></li>
+          <li><i style="--c1:#0FB5D6;--c2:#7DE5FF"></i><span><b>Your tailored longevity protocol in 18 weeks.</b></span></li>
+          <li><i style="--c1:#FF7A45;--c2:#FFB38A"></i><span><b>Free Abbott Lingo CGM,</b> shipped to your home.</span></li>
           <li><i style="--c1:#22E39A;--c2:#7DE5C1"></i><span><b>$100 cash back towards your next course.</b></span></li>
-          <li><i style="--c1:#7C5CFF;--c2:#B79DFF"></i><span><b>Bonus: free VIP access to Julie Gibson Clark’s 90-minute VIP Masterclass plus Q&amp;A, November 14.</b> Live on Zoom, 1:00 PM ET.</span></li>
-          <li><i style="--c1:#006EFF;--c2:#5EB6FF"></i><span><b>14-day try-out refund on the course.</b></span></li>
+          <li><i style="--c1:#7C5CFF;--c2:#B79DFF"></i><span><b>Bonus: Julie Gibson Clark’s VIP Masterclass plus Q&amp;A, November 14.</b></span></li>
+          <li><i style="--c1:#006EFF;--c2:#5EB6FF"></i><span><b>14-day try-out refund.</b></span></li>
         </ul>'''
 offer_new,n6=re.subn(r'<ul class="lp-bul">.*?</ul>', list_new, offer_new, count=1, flags=re.S)
 log.append(f'offer card {n5} list {n6}')
@@ -76,24 +76,24 @@ blocks['offer']=offer_new
 # 7. VIP rewrite
 vip=blocks['vip']
 vip_new=re.sub(r'<h2 class="lla-vip-h2">.*?</h2>', '<h2 class="lla-vip-h2">Learn to age slower from the 2nd slowest aging human on earth. <em>Free when you enroll.</em></h2>', vip, count=1, flags=re.S)
-vip_new=re.sub(r'<p class="lla-vip-sub">.*?</p>', '<p class="lla-vip-sub">The Longevity Masterclass of the Year. Julie Gibson Clark ages eight months for every year. She teaches her complete protocol live on Zoom, Saturday, November 14, 1:00 PM ET, then a private Q&amp;A for VIP participants. Your VIP seat is included with The Longevity Blueprint.</p>', vip_new, count=1, flags=re.S)
+vip_new=re.sub(r'<p class="lla-vip-sub">.*?</p>', '<p class="lla-vip-sub">The Longevity Masterclass of the Year. Julie ages eight months for every year. Her complete protocol, live on Zoom, November 14. Your VIP seat is included.</p>', vip_new, count=1, flags=re.S)
 vip_new=re.sub(r'<h3 class="lla-vip-offer-h">.*?</h3>', '<h3 class="lla-vip-offer-h">Bonus: Julie’s VIP Longevity Masterclass, November 14</h3>', vip_new, count=1, flags=re.S)
 vip_new=re.sub(r'<ul class="lla-vip-list">.*?</ul>', '''<ul class="lla-vip-list">
-            <li><strong>90 minutes live with Julie, then her private 30-minute VIP Q&amp;A.</strong> Her protocol, her numbers, your questions.</li>
-            <li><strong>Saturday, November 14, 1:00 PM ET, on Zoom.</strong> Nothing pre-recorded.</li>
-            <li><strong>Free with your Blueprint enrollment.</strong> Your Zoom link arrives by email once you are enrolled.</li>
+            <li><strong>90 minutes live with Julie,</strong> then her private VIP Q&amp;A.</li>
+            <li><strong>Saturday, November 14, 1:00 PM ET,</strong> on Zoom.</li>
+            <li><strong>Free with your enrollment.</strong> Zoom link by email.</li>
           </ul>''', vip_new, count=1, flags=re.S)
 vip_new=re.sub(r'<a href="#offer" class="lla-vip-btn"[^>]*>.*?</a>', '<a href="#enrollModal" class="lla-vip-btn" data-fn-cta="vip" data-enroll-course="1">Enroll now <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"></path></svg></a>', vip_new, count=1, flags=re.S)
-vip_new=re.sub(r'<p class="lla-vip-after">.*?</p>', '<p class="lla-vip-after">Julie hosts the masterclass. The 18-week course is taught by LLA’s longevity faculty.</p>', vip_new, count=1, flags=re.S)
+vip_new=re.sub(r'<p class="lla-vip-after">.*?</p>', '<p class="lla-vip-after">Julie hosts the masterclass. LLA’s faculty teach the course.</p>', vip_new, count=1, flags=re.S)
 blocks['vip']=vip_new
 # 8. Included cards: one card per line of the November offer
-cards=[('#006EFF','#5EB6FF','Live 18-week course in small groups','One live class a week on Zoom with a certified longevity instructor. Every class is recorded and stays yours.','Included'),
- ('#22B27A','#7DE5C1','Master the 6 pillars of longevity','Nutrition, sleep, movement, supplements and wearables, stress, and your own protocol. Top instructors, one pillar at a time.','Included'),
- ('#0FB5D6','#7DE5FF','Your tailored longevity protocol in 18 weeks','Built on your own biomarkers and habits. You leave with a written protocol, not a reading list.','Included'),
- ('#FF7A45','#FFB38A','A free Abbott Lingo CGM','Shipped to your home. Read your own glucose data by lesson 5 and build your protocol on it.','Included'),
- ('#22E39A','#7DE5C1','$100 cash back towards your next course','Enroll in November and $100 comes back to you on your next Longevity Life Academy course.','November offer'),
- ('#7C5CFF','#B79DFF','Bonus: Julie Gibson Clark’s VIP Masterclass','90 minutes live on Zoom plus her private Q&amp;A, Saturday, November 14, 1:00 PM ET. The 2nd slowest aging human on earth.','Free with enrollment'),
- ('#006EFF','#5EB6FF','14-day try-out refund','Not for you? Tell us within 14 days of registration and the course fee comes back.','Included')]
+cards=[('#006EFF','#5EB6FF','Live 18-week course in small groups','One live class a week on Zoom. Recorded for you.','Included'),
+ ('#22B27A','#7DE5C1','Master the 6 pillars of longevity','Nutrition, sleep, movement, supplements, stress, protocol. Top instructors.','Included'),
+ ('#0FB5D6','#7DE5FF','Your tailored longevity protocol in 18 weeks','Written on your own numbers. Yours to keep.','Included'),
+ ('#FF7A45','#FFB38A','A free Abbott Lingo CGM','Shipped to your home. Your own data from lesson 5.','Included'),
+ ('#22E39A','#7DE5C1','$100 cash back towards your next course','On any Longevity Life Academy course.','November offer'),
+ ('#7C5CFF','#B79DFF','Bonus: Julie Gibson Clark’s VIP Masterclass','90 minutes live plus private Q&amp;A. November 14, 1:00 PM ET.','Free with enrollment'),
+ ('#006EFF','#5EB6FF','14-day try-out refund','Not for you? Course fee back within 14 days.','Included')]
 arts='\n'.join('      <article class="lla-incl-card" style="--c1:%s;--c2:%s"><span class="n">%02d</span><h3>%s</h3><p>%s</p><b>%s</b></article>'%(c1,c2,i+1,h,p,b) for i,(c1,c2,h,p,b) in enumerate(cards))
 inc=blocks['included']
 inc_new,n8=re.subn(r'(<div class="lla-incl-grid lla-slider">).*?(\n\s*</div>)', lambda m: m.group(1)+'\n'+arts+m.group(2), inc, count=1, flags=re.S)
@@ -128,7 +128,7 @@ html body#lpRoot #offer .lp-card .lp-cta:hover{background:#0a5fd9}
 </head>'''
 sub1(r'<div class="lla-vip-grid lla-slider">', '<div class="lla-vip-grid">', name='vip slider off')
 sub1(r'<div class="lla-incl-grid lla-slider">', '<div class="lla-incl-grid">', name='included slider off')
-sub1(r'<p>18 live sessions, live classes, Abbott Lingo CGM included\.</p>', lambda m: '<p>Live 18-week course, free Abbott Lingo CGM, $100 cash back and Julie’s VIP Masterclass on November 14, all included.</p>', name='enroll-mini lead')
+sub1(r'<p>18 live sessions, live classes, Abbott Lingo CGM included\.</p>', lambda m: '<p>18-week course, Lingo CGM, $100 cash back, Julie’s Masterclass. All included.</p>', name='enroll-mini lead')
 sub1(r'</head>', style, name='fold style')
 open(f'{OUT}/index.html','w',encoding='utf-8').write(t)
 # ---- support files ----
@@ -195,7 +195,7 @@ STRIP_NEW="  const strip=document.getElementById('mockStrip');if(strip)strip.inn
 cp,nstrip=re.subn(r"  const strip=document\.getElementById\('mockStrip'\);if\(strip\)strip\.innerHTML=.*?\n", lambda m: STRIP_NEW, cp, count=1, flags=re.S)
 assert nstrip==1, 'mockStrip rewrite not found'
 cp=re.sub(r"  const bar=document\.getElementById\('mockBar'\);if\(bar\)\{.*?\}\n", "", cp, count=1, flags=re.S)
-FAQ_NEW="answer.textContent='November offer: $79 for your first month, then $169 a month for four months, $755 in total. The live 18-week course, a free Abbott Lingo CGM shipped to your home, $100 cash back towards your next course and Julie\\u2019s VIP Masterclass on November 14 are all included. Online sign-ups in November only. One payment of $799 is also available at checkout.'"
+FAQ_NEW="answer.textContent='November offer: $79 first month, then $169 a month for four months, $755 total. Course, Lingo CGM, $100 cash back and Julie\\u2019s VIP Masterclass included. One payment of $799 also available.'"
 cp,nfaq=re.subn(r"answer\.textContent='Regular tuition is \$169 per month for five months[^']*'", lambda m: FAQ_NEW, cp, count=1)
 assert nfaq==1, 'FAQ cost answer not found'
 assert 'coupon codes' not in cp and "html('#hero h1'" in cp

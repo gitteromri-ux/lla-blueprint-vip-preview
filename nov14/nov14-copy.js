@@ -39,7 +39,7 @@
   document.querySelectorAll('#whatitis .pdp-value-card h3').forEach((h,i)=>{if(methodTitles[i])h.textContent=methodTitles[i]});
   html('#faq h2','Frequently asked <em>questions</em>');
   document.querySelectorAll('#faq .faq-item').forEach(item=>{
-   if(/How much does it cost/i.test(item.textContent)){const answer=item.querySelector('.faq-a-inner');if(answer)answer.textContent='November offer: $79 for your first month, then $169 a month for four months, $755 in total. The live 18-week course, a free Abbott Lingo CGM shipped to your home, $100 cash back towards your next course and Julie\u2019s VIP Masterclass on November 14 are all included. Online sign-ups in November only. One payment of $799 is also available at checkout.'}
+   if(/How much does it cost/i.test(item.textContent)){const answer=item.querySelector('.faq-a-inner');if(answer)answer.textContent='November offer: $79 first month, then $169 a month for four months, $755 total. Course, Lingo CGM, $100 cash back and Julie\u2019s VIP Masterclass included. One payment of $799 also available.'}
   });
   const strip=document.getElementById('mockStrip');if(strip)strip.innerHTML='<span class="t lg">November offer: $79 first month, Julie\u2019s VIP Masterclass included free</span><span class="t sm"><a href="#enrollModal" data-enroll-course="1">November offer&nbsp;&middot;&nbsp;<b>$79 month 1</b></a></span>';
   document.querySelectorAll('a[href*="checkout.html"]').forEach(a=>{a.href='#offer';a.removeAttribute('data-plan')});
