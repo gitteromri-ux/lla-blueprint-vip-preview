@@ -136,6 +136,7 @@ html body#lpRoot #offer .lp-card .nov14-card-list{margin:18px 0 6px;gap:9px;max-
 html body#lpRoot #offer .lp-card .nov14-card-list li{font-size:17px;line-height:1.35;padding-left:26px}
 html body#lpRoot #offer .lp-card .nov14-card-list li::before{width:12px;height:12px;top:.4em}
 html body#lpRoot #offer .lp-card .nov14-card-list li strong{color:#fff;font-weight:700}
+@media (min-width:901px){html body#lpRoot #offer .lp-card .nov14-card-list{display:none}}
 @media (max-width:900px){html body#lpRoot #offer .lp-list{display:none!important}html body#lpRoot #included{display:none!important}html body#lpRoot #included .lla-incl-grid{display:grid!important;grid-template-columns:1fr!important;gap:14px!important}html body#lpRoot #included{padding-top:28px!important}}
 @media (max-width:900px){html body#lpRoot #vip .lla-vip-grid{display:grid!important;grid-template-columns:1fr!important;gap:24px!important}}
 </style>
