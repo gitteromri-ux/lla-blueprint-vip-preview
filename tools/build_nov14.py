@@ -178,6 +178,7 @@ open(f'{OUT}/nov14-flow.js','w',encoding='utf-8').write(fl)
 # nov14-copy.js: section headings + pillar descriptions + rail, no hero/offer/strip rewrites
 cp=open(f'{SRC}/exact-attendee-copy.js',encoding='utf-8').read()
 cp=cp.replace("document.title='The Longevity Blueprint | Masterclass attendee course information';","")
+cp=cp.replace("html('#included h2','What the course <em>includes</em>');","html('#included h2','What <em>you get</em>');")
 for line in ["  html('#vip h2',\"Julie's VIP <em>Longevity Masterclass</em>\");\n",
              "  html('#offer h2','Tuition and <em>coupon codes</em>');\n",
              "  text('#offer .lp-lead','18 live classes, learning-platform access, Julie’s VIP masterclass and one Abbott Lingo sensor with U.S. shipping.');\n",
