@@ -57,27 +57,25 @@ card_new='''<aside class="lp-card">
         <div class="lp-big credit-month-one" data-no-promo data-credit-price><s aria-label="Regular first payment">$169</s><strong>$79</strong><span>Month 1</span></div>
         <div class="credit-rest" data-no-promo><span>Then 4 months</span><b>$169 <span style="font-size:16px;font-weight:400">/ month</span></b></div>
         <ul class="lla-vip-list nov14-card-list">
-          <li><strong>Live 18-week course,</strong> small groups</li>
-          <li><strong>The 6 pillars,</strong> top instructors</li>
-          <li><strong>Your protocol</strong> in 18 weeks</li>
-          <li><strong>Free Abbott Lingo CGM,</strong> shipped home</li>
+          <li><strong>Your personal longevity protocol,</strong> built in 18 weeks</li>
+          <li><strong>Bonus: Julie Gibson Clark’s VIP Masterclass,</strong> live November 14</li>
+          <li><strong>Free Abbott Lingo CGM,</strong> shipped to your home</li>
+          <li><strong>18 live classes in small groups,</strong> top instructors</li>
+          <li><strong>The 6 pillars of longevity,</strong> one pillar at a time</li>
           <li><strong>$100 cash back</strong> on your next course</li>
-          <li><strong>Bonus: Julie’s VIP Masterclass,</strong> Nov 14</li>
-          <li><strong>14-day try-out refund</strong></li>
         </ul>
         <a href="#enrollModal" class="lp-cta" id="offerEnroll" data-fn-cta="offer" data-enroll-course="1">Enroll now</a>
-        <p class="lp-total credit-total" data-no-promo><b>$755 total</b><small>Five payments. Nothing else to pay.</small></p>
-        <p class="lp-trust"><b>14-day try-out refund.</b> Questions? Call +1-888-230-5110.</p>
+        <p class="lp-total credit-total" data-no-promo><b>$755 total</b><small>Five payments. Nothing else to pay. Cancel within 14 days for a full refund.</small></p>
+        <p class="lp-trust">14-day try-out refund on the course. Online sign-ups in November only. Questions? Call +1-888-230-5110.</p>
       </aside>'''
 offer_new,n5=re.subn(r'<aside class="lp-card">.*?</aside>', card_new, offer_new, count=1, flags=re.S)
 list_new='''<ul class="lp-bul">
-          <li><i style="--c1:#006EFF;--c2:#5EB6FF"></i><span><b>Live 18-week course.</b> Small groups, recorded.</span></li>
-          <li><i style="--c1:#22B27A;--c2:#7DE5C1"></i><span><b>The 6 pillars of longevity.</b> Top instructors.</span></li>
-          <li><i style="--c1:#0FB5D6;--c2:#7DE5FF"></i><span><b>Your protocol in 18 weeks.</b></span></li>
-          <li><i style="--c1:#FF7A45;--c2:#FFB38A"></i><span><b>Free Abbott Lingo CGM,</b> shipped home.</span></li>
+          <li><i style="--c1:#006EFF;--c2:#5EB6FF"></i><span><b>Your personal longevity protocol,</b> built in 18 weeks.</span></li>
+          <li><i style="--c1:#7C5CFF;--c2:#B79DFF"></i><span><b>Bonus: Julie Gibson Clark’s VIP Masterclass,</b> live November 14.</span></li>
+          <li><i style="--c1:#FF7A45;--c2:#FFB38A"></i><span><b>Free Abbott Lingo CGM,</b> shipped to your home.</span></li>
+          <li><i style="--c1:#22B27A;--c2:#7DE5C1"></i><span><b>18 live classes in small groups,</b> top instructors.</span></li>
+          <li><i style="--c1:#0FB5D6;--c2:#7DE5FF"></i><span><b>The 6 pillars of longevity,</b> one pillar at a time.</span></li>
           <li><i style="--c1:#22E39A;--c2:#7DE5C1"></i><span><b>$100 cash back</b> on your next course.</span></li>
-          <li><i style="--c1:#7C5CFF;--c2:#B79DFF"></i><span><b>Bonus: Julie’s VIP Masterclass,</b> November 14.</span></li>
-          <li><i style="--c1:#006EFF;--c2:#5EB6FF"></i><span><b>14-day try-out refund.</b></span></li>
         </ul>'''
 offer_new,n6=re.subn(r'<ul class="lp-bul">.*?</ul>', list_new, offer_new, count=1, flags=re.S)
 log.append(f'offer card {n5} list {n6}')
@@ -112,7 +110,7 @@ blocks['included']=inc_new
 # 9. Pillar videos: no eager preload on the preview
 blocks['learn-com']=blocks['learn-com'].replace('preload="auto" data-lla-autoplay="1"','preload="metadata" data-lla-autoplay="1"')
 # 10. Reassemble in the new order
-order=['hero','offer','included','vip','learn-com','syllabus','cgm','teachers','institution','journal','whatitis','mechanism','faq','ask','enroll-mini']
+order=['hero','learn-com','syllabus','offer']
 blocks['nov14-clarity']=strip
 assembled='\n'.join(blocks[s] for s in order)+'\n'+res_join
 t=t[:first]+assembled+t[last:]
@@ -137,7 +135,7 @@ html body#lpRoot #offer .lp-card .nov14-card-list li{font-size:17px;line-height:
 html body#lpRoot #offer .lp-card .nov14-card-list li::before{width:12px;height:12px;top:.4em}
 html body#lpRoot #offer .lp-card .nov14-card-list li strong{color:#fff;font-weight:700}
 @media (min-width:901px){html body#lpRoot #offer .lp-card .nov14-card-list{display:none}}
-@media (max-width:900px){html body#lpRoot #offer .lp-list{display:none!important}html body#lpRoot #included{display:none!important}html body#lpRoot #included .lla-incl-grid{display:grid!important;grid-template-columns:1fr!important;gap:14px!important}html body#lpRoot #included{padding-top:28px!important}}
+@media (max-width:900px){html body#lpRoot #offer .lp-list{display:none!important}html body#lpRoot #included{display:none!important}html body#lpRoot #learn-com .topic-v2{flex:0 0 100%!important;width:100%!important}html body#lpRoot #learn-com .topic-v2-media,html body#lpRoot #learn-com .topic-v2-media video{min-height:300px!important;height:300px!important;object-fit:cover}html body#lpRoot #included .lla-incl-grid{display:grid!important;grid-template-columns:1fr!important;gap:14px!important}html body#lpRoot #included{padding-top:28px!important}}
 @media (max-width:900px){html body#lpRoot #vip .lla-vip-grid{display:grid!important;grid-template-columns:1fr!important;gap:24px!important}}
 </style>
 </head>'''
