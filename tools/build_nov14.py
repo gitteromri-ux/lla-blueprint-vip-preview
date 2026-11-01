@@ -76,7 +76,7 @@ blocks['offer']=offer_new
 # 7. VIP rewrite
 vip=blocks['vip']
 vip_new=re.sub(r'<h2 class="lla-vip-h2">.*?</h2>', '<h2 class="lla-vip-h2">Learn to age slower from the 2nd slowest aging human on earth. <em>Free when you enroll.</em></h2>', vip, count=1, flags=re.S)
-vip_new=re.sub(r'<p class="lla-vip-sub">.*?</p>', '<p class="lla-vip-sub">The Longevity Masterclass of the Year. Julie ages eight months for every year. Her complete protocol, live on Zoom, November 14. Your VIP seat is included.</p>', vip_new, count=1, flags=re.S)
+vip_new=re.sub(r'<p class="lla-vip-sub">.*?</p>', '<p class="lla-vip-sub">The Longevity Masterclass of the Year. Live on Zoom, November 14. Your VIP seat is included.</p>', vip_new, count=1, flags=re.S)
 vip_new=re.sub(r'<h3 class="lla-vip-offer-h">.*?</h3>', '<h3 class="lla-vip-offer-h">Bonus: Julie’s VIP Longevity Masterclass, November 14</h3>', vip_new, count=1, flags=re.S)
 vip_new=re.sub(r'<ul class="lla-vip-list">.*?</ul>', '''<ul class="lla-vip-list">
             <li><strong>90 minutes live with Julie,</strong> then her private VIP Q&amp;A.</li>
@@ -85,6 +85,7 @@ vip_new=re.sub(r'<ul class="lla-vip-list">.*?</ul>', '''<ul class="lla-vip-list"
           </ul>''', vip_new, count=1, flags=re.S)
 vip_new=re.sub(r'<a href="#offer" class="lla-vip-btn"[^>]*>.*?</a>', '<a href="#enrollModal" class="lla-vip-btn" data-fn-cta="vip" data-enroll-course="1">Enroll now <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"></path></svg></a>', vip_new, count=1, flags=re.S)
 vip_new=re.sub(r'<p class="lla-vip-after">.*?</p>', '<p class="lla-vip-after">Julie hosts the masterclass. LLA’s faculty teach the course.</p>', vip_new, count=1, flags=re.S)
+vip_new=re.sub(r'\s*<p class="lla-vip-bio">.*?</p>', '', vip_new, count=1, flags=re.S)
 blocks['vip']=vip_new
 # 8. Included cards: one card per line of the November offer
 cards=[('#006EFF','#5EB6FF','Live 18-week course','Small groups. One class a week, recorded.','Included'),
@@ -102,7 +103,7 @@ blocks['included']=inc_new
 # 9. Pillar videos: no eager preload on the preview
 blocks['learn-com']=blocks['learn-com'].replace('preload="auto" data-lla-autoplay="1"','preload="metadata" data-lla-autoplay="1"')
 # 10. Reassemble in the new order
-order=['hero','learn-com','syllabus','offer','included','vip','cgm','teachers','institution','journal','whatitis','mechanism','faq','ask','enroll-mini']
+order=['hero','offer','included','vip','learn-com','syllabus','cgm','teachers','institution','journal','whatitis','mechanism','faq','ask','enroll-mini']
 blocks['nov14-clarity']=strip
 assembled='\n'.join(blocks[s] for s in order)+'\n'+res_join
 t=t[:first]+assembled+t[last:]
