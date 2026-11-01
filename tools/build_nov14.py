@@ -62,12 +62,12 @@ card_new='''<aside class="lp-card">
       </aside>'''
 offer_new,n5=re.subn(r'<aside class="lp-card">.*?</aside>', card_new, offer_new, count=1, flags=re.S)
 list_new='''<ul class="lp-bul">
-          <li><i style="--c1:#006EFF;--c2:#5EB6FF"></i><span><b>Live 18-week course in small groups.</b> One class a week, recorded.</span></li>
-          <li><i style="--c1:#22B27A;--c2:#7DE5C1"></i><span><b>Master the 6 pillars of longevity.</b> Top instructors.</span></li>
-          <li><i style="--c1:#0FB5D6;--c2:#7DE5FF"></i><span><b>Your tailored longevity protocol in 18 weeks.</b></span></li>
-          <li><i style="--c1:#FF7A45;--c2:#FFB38A"></i><span><b>Free Abbott Lingo CGM,</b> shipped to your home.</span></li>
-          <li><i style="--c1:#22E39A;--c2:#7DE5C1"></i><span><b>$100 cash back towards your next course.</b></span></li>
-          <li><i style="--c1:#7C5CFF;--c2:#B79DFF"></i><span><b>Bonus: Julie Gibson Clark’s VIP Masterclass plus Q&amp;A, November 14.</b></span></li>
+          <li><i style="--c1:#006EFF;--c2:#5EB6FF"></i><span><b>Live 18-week course.</b> Small groups, recorded.</span></li>
+          <li><i style="--c1:#22B27A;--c2:#7DE5C1"></i><span><b>The 6 pillars of longevity.</b> Top instructors.</span></li>
+          <li><i style="--c1:#0FB5D6;--c2:#7DE5FF"></i><span><b>Your protocol in 18 weeks.</b></span></li>
+          <li><i style="--c1:#FF7A45;--c2:#FFB38A"></i><span><b>Free Abbott Lingo CGM,</b> shipped home.</span></li>
+          <li><i style="--c1:#22E39A;--c2:#7DE5C1"></i><span><b>$100 cash back</b> on your next course.</span></li>
+          <li><i style="--c1:#7C5CFF;--c2:#B79DFF"></i><span><b>Bonus: Julie’s VIP Masterclass,</b> November 14.</span></li>
           <li><i style="--c1:#006EFF;--c2:#5EB6FF"></i><span><b>14-day try-out refund.</b></span></li>
         </ul>'''
 offer_new,n6=re.subn(r'<ul class="lp-bul">.*?</ul>', list_new, offer_new, count=1, flags=re.S)
@@ -87,13 +87,13 @@ vip_new=re.sub(r'<a href="#offer" class="lla-vip-btn"[^>]*>.*?</a>', '<a href="#
 vip_new=re.sub(r'<p class="lla-vip-after">.*?</p>', '<p class="lla-vip-after">Julie hosts the masterclass. LLA’s faculty teach the course.</p>', vip_new, count=1, flags=re.S)
 blocks['vip']=vip_new
 # 8. Included cards: one card per line of the November offer
-cards=[('#006EFF','#5EB6FF','Live 18-week course in small groups','One live class a week on Zoom. Recorded for you.','Included'),
- ('#22B27A','#7DE5C1','Master the 6 pillars of longevity','Nutrition, sleep, movement, supplements, stress, protocol. Top instructors.','Included'),
- ('#0FB5D6','#7DE5FF','Your tailored longevity protocol in 18 weeks','Written on your own numbers. Yours to keep.','Included'),
- ('#FF7A45','#FFB38A','A free Abbott Lingo CGM','Shipped to your home. Your own data from lesson 5.','Included'),
- ('#22E39A','#7DE5C1','$100 cash back towards your next course','On any Longevity Life Academy course.','November offer'),
- ('#7C5CFF','#B79DFF','Bonus: Julie Gibson Clark’s VIP Masterclass','90 minutes live plus private Q&amp;A. November 14, 1:00 PM ET.','Free with enrollment'),
- ('#006EFF','#5EB6FF','14-day try-out refund','Not for you? Course fee back within 14 days.','Included')]
+cards=[('#006EFF','#5EB6FF','Live 18-week course','Small groups. One class a week, recorded.','Included'),
+ ('#22B27A','#7DE5C1','The 6 pillars of longevity','Top instructors.','Included'),
+ ('#0FB5D6','#7DE5FF','Your protocol in 18 weeks','Built on your own numbers.','Included'),
+ ('#FF7A45','#FFB38A','Free Abbott Lingo CGM','Shipped to your home.','Included'),
+ ('#22E39A','#7DE5C1','$100 cash back','On your next course.','November only'),
+ ('#7C5CFF','#B79DFF','Julie’s VIP Masterclass','Live, November 14. Plus private Q&amp;A.','Bonus, free'),
+ ('#006EFF','#5EB6FF','14-day try-out refund','Course fee back, no questions.','Included')]
 arts='\n'.join('      <article class="lla-incl-card" style="--c1:%s;--c2:%s"><span class="n">%02d</span><h3>%s</h3><p>%s</p><b>%s</b></article>'%(c1,c2,i+1,h,p,b) for i,(c1,c2,h,p,b) in enumerate(cards))
 inc=blocks['included']
 inc_new,n8=re.subn(r'(<div class="lla-incl-grid lla-slider">).*?(\n\s*</div>)', lambda m: m.group(1)+'\n'+arts+m.group(2), inc, count=1, flags=re.S)
