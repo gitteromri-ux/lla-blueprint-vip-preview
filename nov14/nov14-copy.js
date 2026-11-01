@@ -24,7 +24,7 @@
   text('#hero figcaption span','Founding Faculty, Longevity Life Academy');
   const heroCTA=document.querySelector('#hero .pdp-cine-cta');if(heroCTA){heroCTA.href='#offer';heroCTA.dataset.enrollCourse='1';heroCTA.innerHTML='Enroll now';}
   document.querySelectorAll('#learn-com .topic-v2-desc').forEach((p,i)=>{if(descriptions[i])p.textContent=descriptions[i]});
-  html('#included h2','What the course <em>includes</em>');
+  html('#included h2','What <em>you get</em>');
   html('#cgm h2','Abbott Lingo sensor <em>and app</em>');
   html('#syllabus h2','The 18-class <em>syllabus</em>');
   html('#teachers h2','Course <em>faculty</em>');

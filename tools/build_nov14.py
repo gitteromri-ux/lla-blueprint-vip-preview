@@ -102,7 +102,7 @@ blocks['included']=inc_new
 # 9. Pillar videos: no eager preload on the preview
 blocks['learn-com']=blocks['learn-com'].replace('preload="auto" data-lla-autoplay="1"','preload="metadata" data-lla-autoplay="1"')
 # 10. Reassemble in the new order
-order=['hero','learn-com','syllabus','offer','vip','included','cgm','teachers','institution','journal','whatitis','mechanism','faq','ask','enroll-mini']
+order=['hero','learn-com','syllabus','offer','included','vip','cgm','teachers','institution','journal','whatitis','mechanism','faq','ask','enroll-mini']
 blocks['nov14-clarity']=strip
 assembled='\n'.join(blocks[s] for s in order)+'\n'+res_join
 t=t[:first]+assembled+t[last:]
@@ -122,10 +122,12 @@ sub1(r'<div id="mockBar"><div class="l"><i>The Longevity Blueprint</i><b>\$179<s
 style='''<style id="nov14-fold">
 html body#lpRoot #offer .lp-card .lp-cta{margin:4px 0 18px;text-decoration:none;background:#006EFF;color:#fff}
 html body#lpRoot #offer .lp-card .lp-cta:hover{background:#0a5fd9}
+@media (max-width:900px){html body#lpRoot #offer .lp-list{display:none!important}html body#lpRoot #included .lla-incl-grid{display:grid!important;grid-template-columns:1fr!important;gap:14px!important}html body#lpRoot #included{padding-top:28px!important}}
 @media (max-width:900px){html body#lpRoot #vip .lla-vip-grid{display:grid!important;grid-template-columns:1fr!important;gap:24px!important}}
 </style>
 </head>'''
 sub1(r'<div class="lla-vip-grid lla-slider">', '<div class="lla-vip-grid">', name='vip slider off')
+sub1(r'<div class="lla-incl-grid lla-slider">', '<div class="lla-incl-grid">', name='included slider off')
 sub1(r'<p>18 live sessions, live classes, Abbott Lingo CGM included\.</p>', lambda m: '<p>Live 18-week course, free Abbott Lingo CGM, $100 cash back and Julie’s VIP Masterclass on November 14, all included.</p>', name='enroll-mini lead')
 sub1(r'</head>', style, name='fold style')
 open(f'{OUT}/index.html','w',encoding='utf-8').write(t)
