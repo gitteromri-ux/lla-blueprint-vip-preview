@@ -56,8 +56,17 @@ card_new='''<aside class="lp-card">
         <p class="lp-plan credit-plan-label">November offer. Over 50% off your first month.</p>
         <div class="lp-big credit-month-one" data-no-promo data-credit-price><s aria-label="Regular first payment">$169</s><strong>$79</strong><span>Month 1</span></div>
         <div class="credit-rest" data-no-promo><span>Then 4 months</span><b>$169 <span style="font-size:16px;font-weight:400">/ month</span></b></div>
-        <p class="lp-total credit-total" data-no-promo><b>$755 total</b><small>Five payments. Nothing else to pay.</small></p>
+        <ul class="lla-vip-list nov14-card-list">
+          <li><strong>Live 18-week course,</strong> small groups</li>
+          <li><strong>The 6 pillars,</strong> top instructors</li>
+          <li><strong>Your protocol</strong> in 18 weeks</li>
+          <li><strong>Free Abbott Lingo CGM,</strong> shipped home</li>
+          <li><strong>$100 cash back</strong> on your next course</li>
+          <li><strong>Bonus: Julie’s VIP Masterclass,</strong> Nov 14</li>
+          <li><strong>14-day try-out refund</strong></li>
+        </ul>
         <a href="#enrollModal" class="lp-cta" id="offerEnroll" data-fn-cta="offer" data-enroll-course="1">Enroll now</a>
+        <p class="lp-total credit-total" data-no-promo><b>$755 total</b><small>Five payments. Nothing else to pay.</small></p>
         <p class="lp-trust"><b>14-day try-out refund.</b> Questions? Call +1-888-230-5110.</p>
       </aside>'''
 offer_new,n5=re.subn(r'<aside class="lp-card">.*?</aside>', card_new, offer_new, count=1, flags=re.S)
@@ -123,7 +132,11 @@ sub1(r'<div id="mockBar"><div class="l"><i>The Longevity Blueprint</i><b>\$179<s
 style='''<style id="nov14-fold">
 html body#lpRoot #offer .lp-card .lp-cta{margin:4px 0 18px;text-decoration:none;background:#006EFF;color:#fff}
 html body#lpRoot #offer .lp-card .lp-cta:hover{background:#0a5fd9}
-@media (max-width:900px){html body#lpRoot #offer .lp-list{display:none!important}html body#lpRoot #included .lla-incl-grid{display:grid!important;grid-template-columns:1fr!important;gap:14px!important}html body#lpRoot #included{padding-top:28px!important}}
+html body#lpRoot #offer .lp-card .nov14-card-list{margin:18px 0 6px;gap:9px;max-width:none}
+html body#lpRoot #offer .lp-card .nov14-card-list li{font-size:17px;line-height:1.35;padding-left:26px}
+html body#lpRoot #offer .lp-card .nov14-card-list li::before{width:12px;height:12px;top:.4em}
+html body#lpRoot #offer .lp-card .nov14-card-list li strong{color:#fff;font-weight:700}
+@media (max-width:900px){html body#lpRoot #offer .lp-list{display:none!important}html body#lpRoot #included{display:none!important}html body#lpRoot #included .lla-incl-grid{display:grid!important;grid-template-columns:1fr!important;gap:14px!important}html body#lpRoot #included{padding-top:28px!important}}
 @media (max-width:900px){html body#lpRoot #vip .lla-vip-grid{display:grid!important;grid-template-columns:1fr!important;gap:24px!important}}
 </style>
 </head>'''
