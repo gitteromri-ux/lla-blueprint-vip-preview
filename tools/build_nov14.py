@@ -227,5 +227,7 @@ assert "(active?'Masterclass credit':'Regular plan')" in pr
 pr=pr.replace("(active?'Masterclass credit':'Regular plan')","(active?'November offer: $79 first month':'Regular plan')")
 pr=pr.replace("text('#emPromoMsg',upfront?'Code applied. $799 one payment.':'Masterclass credit applied.');","text('#emPromoMsg',upfront?'$799 one payment.':'November offer applied: $79 first month.');")
 assert 'JULIE249' not in pr.split('function render')[1].split('// Pricing card')[0], 'codes still in render'
+pr=pr.replace("text('#mockBar .l b','$79 month 1');","text('#mockBar .l b','$79 first month, over 50% off');")
+assert '$79 first month, over 50% off' in pr
 open(f'{OUT}/nov14-pricing.js','w',encoding='utf-8').write(pr)
 print('\n'.join(log)); print('written', OUT, 'index bytes', len(t))

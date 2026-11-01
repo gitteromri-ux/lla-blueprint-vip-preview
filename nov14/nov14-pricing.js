@@ -15,7 +15,7 @@
    text('#enroll-mini .fn-pc-was','November offer');
    html('#enroll-mini .lla-mini-price','<b><sup>$</sup>79</b><span>Month 1<br>then 4 × $169 · $755 total</span>');
    text('#fnExit p b','Regular tuition: $169 per month');
-   text('#mockBar .l b','$79 month 1');
+   text('#mockBar .l b','$79 first month, over 50% off');
    const band=$('#emStep2 .em-band .b-v');
    if(band){band.setAttribute('data-no-promo','');html('#emStep2 .em-band .b-v',upfront?'$799 <small>USD one payment</small>':(active?'<s style="opacity:.65;margin-right:8px">$169</s>':'')+'$'+first+' <small>Month 1 · then 4 × $169<br>$'+total+' total</small>');}
    html('#pp [data-pl="monthly"] .pp-price','$'+first+' <small>Month 1</small>');
