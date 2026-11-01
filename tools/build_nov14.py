@@ -84,8 +84,8 @@ log.append(f'offer card {n5} list {n6}')
 blocks['offer']=offer_new
 # 7. VIP rewrite
 vip=blocks['vip']
-vip_new=re.sub(r'<h2 class="lla-vip-h2">.*?</h2>', '<h2 class="lla-vip-h2">Learn to age slower from the 2nd slowest aging human on earth. <em>Free when you enroll.</em></h2>', vip, count=1, flags=re.S)
-vip_new=re.sub(r'<p class="lla-vip-sub">.*?</p>', '<p class="lla-vip-sub">The Longevity Masterclass of the Year. Live on Zoom, November 14. Your VIP seat is included.</p>', vip_new, count=1, flags=re.S)
+vip_new=re.sub(r'<h2 class="lla-vip-h2">.*?</h2>', '<h2 class="lla-vip-h2">Included free with your Blueprint course: <em>Julie’s VIP Longevity Masterclass.</em></h2>', vip, count=1, flags=re.S)
+vip_new=re.sub(r'<p class="lla-vip-sub">.*?</p>', '<p class="lla-vip-sub">90 minutes live on Zoom with the 2nd slowest-aging woman on earth, November 14. Your VIP seat comes free with your Blueprint enrollment.</p>', vip_new, count=1, flags=re.S)
 vip_new=re.sub(r'<h3 class="lla-vip-offer-h">.*?</h3>', '<h3 class="lla-vip-offer-h">Bonus: Julie’s VIP Longevity Masterclass, November 14</h3>', vip_new, count=1, flags=re.S)
 vip_new=re.sub(r'<ul class="lla-vip-list">.*?</ul>', '''<ul class="lla-vip-list">
             <li><strong>90 minutes live with Julie,</strong> then her private VIP Q&amp;A.</li>
@@ -112,7 +112,7 @@ blocks['included']=inc_new
 # 9. Pillar videos: no eager preload on the preview
 blocks['learn-com']=blocks['learn-com'].replace('preload="auto" data-lla-autoplay="1"','preload="metadata" data-lla-autoplay="1"')
 # 10. Reassemble in the new order
-order=['hero','offer','included','vip','learn-com','syllabus','cgm','teachers','institution','journal','whatitis','mechanism','faq','ask','enroll-mini']
+order=['hero','offer','included','learn-com','syllabus','cgm','vip','teachers','institution','journal','whatitis','mechanism','faq','ask','enroll-mini']
 blocks['nov14-clarity']=strip
 assembled='\n'.join(blocks[s] for s in order)+'\n'+res_join
 t=t[:first]+assembled+t[last:]
@@ -134,7 +134,8 @@ html body#lpRoot #offer .lp-card .lp-cta{margin:4px 0 18px;text-decoration:none;
 html body#lpRoot #offer .lp-card .lp-cta:hover{background:#0a5fd9}
 html body#lpRoot #offer .lp-card .nov14-card-list{margin:18px 0 6px;gap:9px;max-width:none}
 html body#lpRoot #offer .lp-card .nov14-card-list li{font-size:17px;line-height:1.35;padding-left:26px}
-html body#lpRoot #offer .lp-card .nov14-card-list li::before{width:12px;height:12px;top:.4em}
+html body#lpRoot #offer .lp-card .nov14-card-list li{position:relative}
+html body#lpRoot #offer .lp-card .nov14-card-list li::before{content:"";position:absolute;left:0;width:12px;height:12px;top:.4em;border-radius:50%;background:linear-gradient(135deg,#7DE5FF,#006EFF)}
 html body#lpRoot #offer .lp-card .nov14-card-list li strong{color:#fff;font-weight:700}
 @media (min-width:901px){html body#lpRoot #offer .lp-card .nov14-card-list{display:none}}
 @media (max-width:900px){html body#lpRoot #offer .lp-list{display:none!important}html body#lpRoot #included{display:none!important}html body#lpRoot #included .lla-incl-grid{display:grid!important;grid-template-columns:1fr!important;gap:14px!important}html body#lpRoot #included{padding-top:28px!important}}
@@ -189,6 +190,7 @@ fl=fl.replace("""  if(hero&&!document.getElementById('heroCouponNote')){
 fl=fl.replace("a.href='#enrollModal';a.dataset.enrollCourse='1';if(a.textContent!=='Enroll now')a.textContent='Enroll now';","a.href='#enrollModal';a.dataset.enrollCourse='1';if(!a.classList.contains('nov14-cta-2')&&a.textContent!=='Enroll now')a.textContent='Enroll now';")
 fl=fl.replace("const code=(input?.value||window.LLA_PROMO?.code||'JULIE249').trim().toUpperCase();","const code=(input?.value||window.LLA_PROMO?.code||'MASTERCLASS-VIP').trim().toUpperCase();")
 assert 'heroCouponNote' not in fl and "getElementById('vip')" not in fl
+fl=fl.replace('18 live small-group classes with Julie and the LLA faculty. Abbott Lingo CGM shipped free. You leave with a written protocol built on your own numbers.','18 live small-group classes with LLA’s longevity faculty. Abbott Lingo CGM shipped free. You leave with a written protocol built on your own numbers.')
 open(f'{OUT}/nov14-flow.js','w',encoding='utf-8').write(fl)
 # nov14-copy.js: section headings + pillar descriptions + rail, no hero/offer/strip rewrites
 cp=open(f'{SRC}/exact-attendee-copy.js',encoding='utf-8').read()
@@ -214,6 +216,7 @@ FAQ_NEW="answer.textContent='November offer: $79 first month, then $169 a month 
 cp,nfaq=re.subn(r"answer\.textContent='Regular tuition is \$169 per month for five months[^']*'", lambda m: FAQ_NEW, cp, count=1)
 assert nfaq==1, 'FAQ cost answer not found'
 assert 'coupon codes' not in cp and "html('#hero h1'" in cp
+cp=cp.replace('18 live small-group classes with Julie and the LLA faculty. Abbott Lingo CGM shipped free. You leave with a written protocol built on your own numbers.','18 live small-group classes with LLA’s longevity faculty. Abbott Lingo CGM shipped free. You leave with a written protocol built on your own numbers.')
 open(f'{OUT}/nov14-copy.js','w',encoding='utf-8').write(cp)
 # nov14-pricing.js: keep modal pricing, drop the offer/strip/FAQ credit-code rewrites
 pr=open(f'{SRC}/attendee-pricing.js',encoding='utf-8').read()

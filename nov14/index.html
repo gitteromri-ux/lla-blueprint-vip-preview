@@ -6022,7 +6022,8 @@ html body#lpRoot #offer .lp-card .lp-cta{margin:4px 0 18px;text-decoration:none;
 html body#lpRoot #offer .lp-card .lp-cta:hover{background:#0a5fd9}
 html body#lpRoot #offer .lp-card .nov14-card-list{margin:18px 0 6px;gap:9px;max-width:none}
 html body#lpRoot #offer .lp-card .nov14-card-list li{font-size:17px;line-height:1.35;padding-left:26px}
-html body#lpRoot #offer .lp-card .nov14-card-list li::before{width:12px;height:12px;top:.4em}
+html body#lpRoot #offer .lp-card .nov14-card-list li{position:relative}
+html body#lpRoot #offer .lp-card .nov14-card-list li::before{content:"";position:absolute;left:0;width:12px;height:12px;top:.4em;border-radius:50%;background:linear-gradient(135deg,#7DE5FF,#006EFF)}
 html body#lpRoot #offer .lp-card .nov14-card-list li strong{color:#fff;font-weight:700}
 @media (min-width:901px){html body#lpRoot #offer .lp-card .nov14-card-list{display:none}}
 @media (max-width:900px){html body#lpRoot #offer .lp-list{display:none!important}html body#lpRoot #included{display:none!important}html body#lpRoot #included .lla-incl-grid{display:grid!important;grid-template-columns:1fr!important;gap:14px!important}html body#lpRoot #included{padding-top:28px!important}}
@@ -6186,34 +6187,6 @@ html body#lpRoot #offer .lp-card .nov14-card-list li strong{color:#fff;font-weig
       <article class="lla-incl-card" style="--c1:#22E39A;--c2:#7DE5C1"><span class="n">05</span><h3>$100 cash back</h3><p>On your next course.</p><b>November only</b></article>
       <article class="lla-incl-card" style="--c1:#7C5CFF;--c2:#B79DFF"><span class="n">06</span><h3>Julie’s VIP Masterclass</h3><p>Live, November 14. Plus private Q&amp;A.</p><b>Bonus, free</b></article>
       <article class="lla-incl-card" style="--c1:#006EFF;--c2:#5EB6FF"><span class="n">07</span><h3>14-day try-out refund</h3><p>Course fee back, no questions.</p><b>Included</b></article>
-    </div>
-  </div>
-</section>
-<section id="vip" class="lla-vip lp-deep is-dark">
-  <div class="container">
-    <div class="lla-vip-head">
-      <h2 class="lla-vip-h2">Learn to age slower from the 2nd slowest aging human on earth. <em>Free when you enroll.</em></h2>
-      <p class="lla-vip-sub">The Longevity Masterclass of the Year. Live on Zoom, November 14. Your VIP seat is included.</p>
-    </div>
-    <div class="lla-vip-grid">
-      <div class="lla-vip-portrait">
-        <img src="https://longevitylifeacademy.pages.dev/assets/instructors/julie-gibson-clark.jpg" alt="Julie Gibson Clark, Founding Faculty at Longevity Life Academy" width="800" height="800" loading="eager" decoding="async">
-      </div>
-      <div class="lla-vip-copy">
-        <div class="lla-vip-name">Julie Gibson Clark</div>
-        <div class="lla-vip-title">Founding Faculty at Longevity Life Academy</div>
-        <div class="lla-vip-rank">2nd slowest-aging woman on earth</div>
-        <div class="lla-vip-offer">
-          <h3 class="lla-vip-offer-h">Bonus: Julie’s VIP Longevity Masterclass, November 14</h3>
-          <ul class="lla-vip-list">
-            <li><strong>90 minutes live with Julie,</strong> then her private VIP Q&amp;A.</li>
-            <li><strong>Saturday, November 14, 1:00 PM ET,</strong> on Zoom.</li>
-            <li><strong>Free with your enrollment.</strong> Zoom link by email.</li>
-          </ul>
-          <a href="#enrollModal" class="lla-vip-btn" data-fn-cta="vip" data-enroll-course="1">Enroll now <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"></path></svg></a>
-          <p class="lla-vip-after">Julie hosts the masterclass. LLA’s faculty teach the course.</p>
-        </div>
-      </div>
     </div>
   </div>
 </section>
@@ -6798,6 +6771,34 @@ html body#lpRoot #offer .lp-card .nov14-card-list li strong{color:#fff;font-weig
     </div>
     <div class="cgm-fold-cta-wrap reveal">
       <a href="https://longevitylifeacademy.com/cgm.html" target="_blank" rel="noopener" class="cgm-fold-cta">Learn more about the device <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"></path></svg></a>
+    </div>
+  </div>
+</section>
+<section id="vip" class="lla-vip lp-deep is-dark">
+  <div class="container">
+    <div class="lla-vip-head">
+      <h2 class="lla-vip-h2">Included free with your Blueprint course: <em>Julie’s VIP Longevity Masterclass.</em></h2>
+      <p class="lla-vip-sub">90 minutes live on Zoom with the 2nd slowest-aging woman on earth, November 14. Your VIP seat comes free with your Blueprint enrollment.</p>
+    </div>
+    <div class="lla-vip-grid">
+      <div class="lla-vip-portrait">
+        <img src="https://longevitylifeacademy.pages.dev/assets/instructors/julie-gibson-clark.jpg" alt="Julie Gibson Clark, Founding Faculty at Longevity Life Academy" width="800" height="800" loading="eager" decoding="async">
+      </div>
+      <div class="lla-vip-copy">
+        <div class="lla-vip-name">Julie Gibson Clark</div>
+        <div class="lla-vip-title">Founding Faculty at Longevity Life Academy</div>
+        <div class="lla-vip-rank">2nd slowest-aging woman on earth</div>
+        <div class="lla-vip-offer">
+          <h3 class="lla-vip-offer-h">Bonus: Julie’s VIP Longevity Masterclass, November 14</h3>
+          <ul class="lla-vip-list">
+            <li><strong>90 minutes live with Julie,</strong> then her private VIP Q&amp;A.</li>
+            <li><strong>Saturday, November 14, 1:00 PM ET,</strong> on Zoom.</li>
+            <li><strong>Free with your enrollment.</strong> Zoom link by email.</li>
+          </ul>
+          <a href="#enrollModal" class="lla-vip-btn" data-fn-cta="vip" data-enroll-course="1">Enroll now <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"></path></svg></a>
+          <p class="lla-vip-after">Julie hosts the masterclass. LLA’s faculty teach the course.</p>
+        </div>
+      </div>
     </div>
   </div>
 </section>
