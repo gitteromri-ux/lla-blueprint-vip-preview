@@ -480,7 +480,8 @@ header.co-head .logo img {
 /* Show the bonus only after CRM confirms the promo order. */
 .lla-vip-ck{display:none!important}
 html.lla-vip-eligible .lla-vip-ck{display:grid!important}
-</style><link rel="stylesheet" href="../guest-mobile.css?v=20261027-mobile4"></head>
+</style><link rel="stylesheet" href="../guest-mobile.css?v=20261027-mobile4"><style id="bill-addr-css">.bill-addr{margin:0 0 16px}.ba-grid{display:grid;gap:10px}.ba-row{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:10px}.ba-in{width:100%;min-width:0;height:48px;border:1px solid #D5DCE6;border-radius:7px;padding:0 12px;font:500 15.5px/1.2 Inter,system-ui,sans-serif;color:#1B2A41;background:#fff;box-sizing:border-box}.ba-in::placeholder{color:#8A96A8}.ba-in:focus{outline:none;border-color:#006EFF;box-shadow:0 0 0 3px rgba(0,110,255,.15)}.ba-chk{display:flex;align-items:center;gap:10px;margin:14px 0 4px;font:600 15px/1.3 Inter,system-ui,sans-serif;color:#1B2A41;cursor:pointer}.ba-chk input{width:20px;height:20px;accent-color:#006EFF;margin:0;flex:0 0 20px}.ba-ship{margin-top:12px;padding-top:12px;border-top:1px dashed #D5DCE6}@media(max-width:480px){.ba-row{grid-template-columns:1fr 1fr}.ba-row .ba-in:first-child{grid-column:1/-1}}</style>
+</head>
 <body>
 
 <header class="co-head">
@@ -565,6 +566,27 @@ html.lla-vip-eligible .lla-vip-ck{display:grid!important}
           <!-- Google Pay: rendered by the Airwallex Drop-In itself (googlepay method), not a site-level button. -->
 
           <div class="f-lbl" id="payLbl">Card or PayPal</div>
+          <div id="billAddr" class="bill-addr">
+            <div class="f-lbl">Billing address</div>
+            <div class="ba-grid">
+              <input class="ba-in" id="billName" placeholder="Name on card" autocomplete="cc-name">
+              <input class="ba-in" id="billLine1" placeholder="Street address" autocomplete="billing address-line1">
+              <input class="ba-in" id="billLine2" placeholder="Apt, suite, unit (optional)" autocomplete="billing address-line2">
+              <div class="ba-row"><input class="ba-in" id="billCity" placeholder="City" autocomplete="billing address-level2"><input class="ba-in" id="billState" placeholder="State" autocomplete="billing address-level1"><input class="ba-in" id="billZip" placeholder="ZIP" inputmode="numeric" autocomplete="billing postal-code"></div>
+            </div>
+            <label class="ba-chk"><input type="checkbox" id="shipSame" checked><span>Also ship my CGM here</span></label>
+            <div id="cgmAddr" class="ba-ship" hidden>
+              <div class="f-lbl">CGM shipping address</div>
+              <div class="ba-grid">
+                <input class="ba-in" id="shipName" placeholder="Recipient name" autocomplete="shipping name">
+                <input class="ba-in" id="shipLine1" placeholder="Street address" autocomplete="shipping address-line1">
+                <input class="ba-in" id="shipLine2" placeholder="Apt, suite, unit (optional)" autocomplete="shipping address-line2">
+                <div class="ba-row"><input class="ba-in" id="shipCity" placeholder="City" autocomplete="shipping address-level2"><input class="ba-in" id="shipState" placeholder="State" autocomplete="shipping address-level1"><input class="ba-in" id="shipZip" placeholder="ZIP" inputmode="numeric" autocomplete="shipping postal-code"></div>
+              </div>
+            </div>
+          </div>
+          <script>(function(){var c=document.getElementById('shipSame'),s=document.getElementById('cgmAddr');function sync(){s.hidden=c.checked;try{sessionStorage.setItem('lla_ship_same',c.checked?'1':'0')}catch(e){}}c.addEventListener('change',sync);sync();
+          window.LLA_ADDRESS=function(){var g=function(i){var e=document.getElementById(i);return e?e.value.trim():''};var b={name:g('billName'),line1:g('billLine1'),line2:g('billLine2'),city:g('billCity'),state:g('billState'),zip:g('billZip')};return{billing:b,shipping:c.checked?b:{name:g('shipName'),line1:g('shipLine1'),line2:g('shipLine2'),city:g('shipCity'),state:g('shipState'),zip:g('shipZip')},shipSame:c.checked}};})();</script>
           <!-- Airwallex Drop-In mount (real card entry, wired to eTeacher's Airwallex account) -->
           <div id="awx-dropin" style="min-height:220px;border:1px solid #D5DCE6;border-radius:7px;padding:12px;margin-bottom:14px;background:#fff">
             <!-- Visible loading state while the CRM reserves the seat and issues the payment intent (2-8 s). Replaced by the Drop-In on mount. -->
@@ -682,7 +704,7 @@ document.querySelectorAll('.pay-tab').forEach(function(t){
     document.querySelectorAll('.pay-tab').forEach(function(x){x.classList.remove('active')});
     t.classList.add('active');
     var pp = t.getAttribute('data-tab') === 'paypal';
-    [document.getElementById('awx-dropin'), document.getElementById('awx-status')].forEach(function(el){ if(el) el.style.display = pp ? 'none' : ''; });
+    [document.getElementById('awx-dropin'), document.getElementById('awx-status'), document.getElementById('billAddr')].forEach(function(el){ if(el) el.style.display = pp ? 'none' : ''; });
     var box = document.getElementById('paypalBox'); if (box) box.style.display = pp ? '' : 'none';
     var lbl = document.getElementById('payLbl'); if (lbl) lbl.textContent = pp ? 'PayPal' : 'Card';
     if (pp && window.LLA_RENDER_PAYPAL) window.LLA_RENDER_PAYPAL();
