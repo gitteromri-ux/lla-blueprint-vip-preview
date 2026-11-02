@@ -64,6 +64,7 @@ card_new='''<div class="pc2">
             <li><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="12" fill="url(#pc2g)"/><path d="M7.2 12.5l3 3 6.6-6.9" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><div><b>$100 cash back</b><span>On your next course.</span></div></li>
           </ul>
           <div class="pc2-vip"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.6l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.5l-5.9 3.1 1.2-6.5L2.5 9.5l6.6-.9z" fill="currentColor"/></svg><div><b>Free VIP access to Julie Gibson Clark’s Masterclass</b><span>90-minute masterclass and Q&amp;A, live on Zoom</span></div><em>Nov 14</em></div>
+          <a href="#enrollModal" class="pc2-cta pc2-cta--m" data-fn-cta="offer-m" data-enroll-course="1">Enroll now</a>
         </div>
         <div class="pc2-price" data-no-promo data-credit-price>
           <div class="pc2-badge"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.6 13.4l-7.2 7.2a2 2 0 0 1-2.8 0L3.4 13.4A2 2 0 0 1 2.8 12V4a2 2 0 0 1 2-2h8a2 2 0 0 1 1.4.6l7.2 7.2a2 2 0 0 1 0 2.8z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><circle cx="7.5" cy="7.5" r="1.6" fill="currentColor"/></svg>50% off your first month</div>
@@ -160,18 +161,22 @@ html body#lpRoot #offer .pc2-then b{color:#0a244e;font-weight:800}
 html body#lpRoot #offer .pc2-cta{display:block;width:100%;padding:20px 20px;border-radius:16px;background:#006EFF;color:#fff;font:800 19px/1 Inter,sans-serif;text-align:center;text-decoration:none;box-shadow:0 0 0 5px rgba(94,182,255,.22),0 22px 44px -12px rgba(0,110,255,.95);transition:transform .15s ease,background .15s ease}
 html body#lpRoot #offer .pc2-cta:hover{background:#0a5fd9;transform:translateY(-1px)}
 html body#lpRoot #offer .pc2-note{margin:14px 0 0;width:100%;font:500 14px/1.5 Inter,sans-serif;color:#5b6f8c;text-align:center}
+html body#lpRoot #offer .pc2-cta--m{display:none}
 @media (max-width:900px){
 html body#lpRoot #offer .pc2{grid-template-columns:1fr;border-radius:24px}
-html body#lpRoot #offer .pc2-price{order:-1;margin:14px 14px 0;padding:28px 22px 24px;align-items:stretch;text-align:left}
-html body#lpRoot #offer .pc2-now{font-size:96px;margin-top:18px}
-html body#lpRoot #offer .pc2-benefits{padding:30px 20px 28px}
-html body#lpRoot #offer .pc2-title{font-size:30px;margin:12px 0 24px}
-html body#lpRoot #offer .pc2-list{gap:18px}
-html body#lpRoot #offer .pc2-list b{font-size:21px}
-html body#lpRoot #offer .pc2-list span{font-size:16.5px}
-html body#lpRoot #offer .pc2-vip{padding:16px;gap:12px}
-html body#lpRoot #offer .pc2-vip b{font-size:18.5px}
-html body#lpRoot #offer .pc2-vip span{font-size:15px}
+html body#lpRoot #offer .pc2-price{order:-1;margin:12px 12px 0;padding:22px 20px 20px;align-items:stretch;text-align:left}
+html body#lpRoot #offer .pc2-now{font-size:88px;margin-top:12px}
+html body#lpRoot #offer .pc2-then{margin:14px 0 18px}
+html body#lpRoot #offer .pc2-benefits{padding:24px 18px 22px}
+html body#lpRoot #offer .pc2-title{font-size:26px;margin:10px 0 18px}
+html body#lpRoot #offer .pc2-list{gap:12px}
+html body#lpRoot #offer .pc2-list svg{width:24px;height:24px;flex-basis:24px}
+html body#lpRoot #offer .pc2-list b{font-size:18px}
+html body#lpRoot #offer .pc2-list span{font-size:15px;margin-top:2px}
+html body#lpRoot #offer .pc2-vip{margin-top:18px;padding:14px;gap:12px}
+html body#lpRoot #offer .pc2-vip b{font-size:16.5px}
+html body#lpRoot #offer .pc2-vip span{font-size:14px}
+html body#lpRoot #offer .pc2-cta--m{display:block;margin:18px 0 0}
 html body#lpRoot #vip .lla-vip-grid{display:grid!important;grid-template-columns:1fr!important;gap:24px!important}
 }
 #mockStrip .strip-cta{display:inline-flex;align-items:center;height:30px;padding:0 14px;margin-left:14px;border-radius:999px;background:#fff;color:#006EFF;font:700 13px/1 Inter,sans-serif;text-decoration:none;letter-spacing:.02em;vertical-align:middle}

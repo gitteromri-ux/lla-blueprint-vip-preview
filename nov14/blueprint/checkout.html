@@ -567,7 +567,7 @@ html.lla-vip-eligible .lla-vip-ck{display:grid!important}
 
           <div class="f-lbl" id="payLbl">Card or PayPal</div>
           <div id="billAddr" class="bill-addr">
-            <div class="f-lbl">Billing address</div>
+            <div class="f-lbl" style="margin-top:14px">Billing address</div>
             <div class="ba-grid">
               <input class="ba-in" id="billName" placeholder="Name on card" autocomplete="cc-name">
               <input class="ba-in" id="billLine1" placeholder="Street address" autocomplete="billing address-line1">
@@ -1212,5 +1212,6 @@ apply();document.addEventListener('DOMContentLoaded',apply);setTimeout(apply,800
 <div id="et-bumpyard-widget" class="active"><div class="et-bump-btn-holder"><a class="widget-trigger-btn" href="https://wa.me/12015023701" target="_blank" rel="noopener" aria-label="Chat with us on WhatsApp"><img src="assets/wa/whatsapp.svg" alt=""> <span class="label">Available on WhatsApp</span></a></div></div>
 <script src="assets/julie-brand-motion-v7.js?v=20260923-blueprint-1"></script>
 <script src="../guest-mobile.js?v=20261027-mobile5"></script>
+<script id="billAddrMover">document.addEventListener('DOMContentLoaded',function(){var b=document.getElementById('billAddr'),a=document.getElementById('awx-status')||document.getElementById('awx-dropin');if(b&&a&&a.nextElementSibling!==b)a.insertAdjacentElement('afterend',b);});</script>
 </body>
 </html>
