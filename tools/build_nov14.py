@@ -54,7 +54,8 @@ offer=blocks['offer']
 offer_new=re.sub(r'<p class="lp-lead">Online sign-ups in November only.</p>', '<p class="lp-lead">Live 18-week course, free Abbott Lingo CGM, $100 cash back. Online sign-ups in November only.</p>', offer, count=1, flags=re.S)
 card_new='''<div class="pc3">
         <svg width="0" height="0" aria-hidden="true" style="position:absolute"><defs><linearGradient id="pc2g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#5EB6FF"/><stop offset="1" stop-color="#006EFF"/></linearGradient></defs></svg>
-        <div class="pc3-head"><span class="pc3-eyebrow">The Longevity Blueprint</span><span class="pc3-badge">50% off your first month</span></div>
+        <div class="pc3-eyebrow">The Longevity Blueprint · November offer</div>
+        <div class="pc3-off"><span class="big">50% off</span><span class="sub">your first month</span></div>
         <div class="pc3-price" data-no-promo data-credit-price>
           <div class="pc3-now"><span class="cur">$</span>79<span class="per">first month</span></div>
           <div class="pc3-meta"><s>Regular $169</s><span class="save">You save $90</span></div>
@@ -128,32 +129,35 @@ html body#lpRoot #offer .lp-grid{display:block!important;grid-template-columns:n
 html body#lpRoot #offer .lp-list,html body#lpRoot #included{display:none!important}
 html body#lpRoot #offer .lp-wrap h2,html body#lpRoot #offer .lp-lead{text-align:center;margin-left:auto;margin-right:auto}
 html body#lpRoot #offer .lp-lead{margin-bottom:34px}
-html body#lpRoot #offer .pc3{position:relative;max-width:640px;margin:0 auto;padding:28px 32px 26px;border-radius:24px;background:#fff;color:#0a244e;border:1px solid rgba(94,182,255,.7);box-shadow:0 0 0 1px rgba(94,182,255,.3),0 0 70px rgba(94,182,255,.5),0 40px 90px -30px rgba(0,25,80,.55)}
-html body#lpRoot #offer .pc3-head{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;margin:0 0 18px}
-html body#lpRoot #offer .pc3-eyebrow{font:700 13px/1 Inter,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#4a6385}
-html body#lpRoot #offer .pc3-badge{display:inline-flex;align-items:center;padding:10px 14px;border-radius:999px;background:linear-gradient(90deg,#006EFF,#5EB6FF);color:#fff;font:700 13px/1 Inter,sans-serif;letter-spacing:.05em;text-transform:uppercase;box-shadow:0 0 0 4px rgba(94,182,255,.16),0 12px 24px -10px rgba(0,110,255,.9)}
-html body#lpRoot #offer .pc3-now{display:flex;align-items:baseline;gap:12px;font:500 clamp(76px,7vw,104px)/1.05 "Playfair Display",Georgia,serif;color:#0a244e;letter-spacing:-.04em}
-html body#lpRoot #offer .pc3-now .cur{font-size:.42em;color:#006EFF;margin-right:-6px;letter-spacing:0}
-html body#lpRoot #offer .pc3-now .per{font:700 14px/1 Inter,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#006EFF}
-html body#lpRoot #offer .pc3-meta{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin:6px 0 0}
-html body#lpRoot #offer .pc3-meta s{font:600 16px/1 Inter,sans-serif;color:#7a8aa3;text-decoration:line-through;text-decoration-thickness:2px}
-html body#lpRoot #offer .pc3-meta .save{font:700 12.5px/1 Inter,sans-serif;color:#0b7a4f;background:rgba(34,178,122,.12);border:1px solid rgba(34,178,122,.5);border-radius:999px;padding:8px 11px;letter-spacing:.06em;text-transform:uppercase;white-space:nowrap}
-html body#lpRoot #offer .pc3-then{margin:14px 0 0;font:500 18px/1.4 Inter,sans-serif;color:#203957}
-html body#lpRoot #offer .pc3-then b{color:#0a244e;font-weight:800}
-html body#lpRoot #offer .pc3-sep{display:flex;align-items:center;gap:12px;margin:22px 0 16px;font:700 11.5px/1 Inter,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#8094b3}
-html body#lpRoot #offer .pc3-sep::before,html body#lpRoot #offer .pc3-sep::after{content:"";flex:1;height:1px;background:#e3e9f3}
-html body#lpRoot #offer .pc3-list{list-style:none;margin:0;padding:0;display:grid;gap:13px}
-html body#lpRoot #offer .pc3-list li{display:flex;gap:12px;align-items:flex-start;padding:0;font:400 17.5px/1.4 Inter,sans-serif;color:#203957}
+html body#lpRoot #offer .pc3{position:relative;max-width:700px;margin:0 auto;padding:30px 34px 28px;border-radius:28px;color:#fff;background:radial-gradient(120% 90% at 100% 0%,rgba(94,182,255,.28),transparent 55%),radial-gradient(90% 70% at 0% 100%,rgba(124,92,255,.35),transparent 60%),linear-gradient(160deg,#0d2f7f 0%,#071b4c 50%,#030c28 100%);border:1px solid rgba(125,229,255,.55);box-shadow:0 0 0 1px rgba(125,229,255,.25),0 0 80px rgba(94,182,255,.55),0 0 160px rgba(0,110,255,.35),0 50px 100px -40px rgba(0,0,0,.9),inset 0 1px 0 rgba(255,255,255,.22);overflow:hidden}
+html body#lpRoot #offer .pc3::after{content:"";position:absolute;left:10%;right:10%;top:-1px;height:2px;background:linear-gradient(90deg,transparent,#7DE5FF,transparent);filter:blur(.5px);opacity:.9}
+html body#lpRoot #offer .pc3-eyebrow{font:700 14px/1 Inter,sans-serif;letter-spacing:.16em;text-transform:uppercase;color:#7DE5FF;margin:0 0 14px;text-shadow:0 0 14px rgba(125,229,255,.6)}
+html body#lpRoot #offer .pc3-off{display:flex;align-items:baseline;gap:16px;flex-wrap:wrap;margin:0 0 6px}
+html body#lpRoot #offer .pc3-off .big{font:600 clamp(64px,6.2vw,92px)/1 "Playfair Display",Georgia,serif;letter-spacing:-.03em;color:#fff;text-shadow:0 0 24px rgba(125,229,255,.75),0 0 60px rgba(0,110,255,.55)}
+html body#lpRoot #offer .pc3-off .sub{font:500 26px/1.1 "Playfair Display",Georgia,serif;font-style:italic;color:#7DE5FF}
+html body#lpRoot #offer .pc3-price{margin:14px 0 0;padding:18px 20px;border-radius:18px;background:rgba(255,255,255,.06);border:1px solid rgba(125,229,255,.22);box-shadow:inset 0 1px 0 rgba(255,255,255,.12),0 20px 40px -24px rgba(0,0,0,.8)}
+html body#lpRoot #offer .pc3-now{display:flex;align-items:baseline;gap:14px;font:500 clamp(60px,5.4vw,76px)/1 "Playfair Display",Georgia,serif;color:#fff;letter-spacing:-.035em}
+html body#lpRoot #offer .pc3-now .cur{font-size:.5em;color:#7DE5FF;margin-right:-8px;letter-spacing:0}
+html body#lpRoot #offer .pc3-now .per{font:700 15px/1 Inter,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#c9dcf8}
+html body#lpRoot #offer .pc3-meta{display:flex;align-items:baseline;gap:16px;flex-wrap:wrap;margin:10px 0 0}
+html body#lpRoot #offer .pc3-meta s{font:600 19px/1 Inter,sans-serif;color:#9fb3d6;text-decoration:line-through;text-decoration-thickness:2px}
+html body#lpRoot #offer .pc3-meta .save{font:800 19px/1 Inter,sans-serif;color:#7DE5C1;text-shadow:0 0 16px rgba(125,229,193,.7)}
+html body#lpRoot #offer .pc3-then{margin:12px 0 0;font:500 20px/1.35 Inter,sans-serif;color:#e6eeff}
+html body#lpRoot #offer .pc3-then b{color:#fff;font-weight:800}
+html body#lpRoot #offer .pc3-sep{display:flex;align-items:center;gap:12px;margin:22px 0 14px;font:800 12.5px/1 Inter,sans-serif;letter-spacing:.16em;text-transform:uppercase;color:#7DE5FF}
+html body#lpRoot #offer .pc3-sep::before,html body#lpRoot #offer .pc3-sep::after{content:"";flex:1;height:1px;background:linear-gradient(90deg,rgba(125,229,255,0),rgba(125,229,255,.6),rgba(125,229,255,0))}
+html body#lpRoot #offer .pc3-list{list-style:none;margin:0;padding:0;display:grid;gap:14px}
+html body#lpRoot #offer .pc3-list li{display:flex;gap:14px;align-items:flex-start;padding:0;font:400 22px/1.3 Inter,sans-serif;color:#deecff}
 html body#lpRoot #offer .pc3-list li::before{content:none}
-html body#lpRoot #offer .pc3-list b{color:#0a244e;font-weight:700}
-html body#lpRoot #offer .pc3-list svg{flex:0 0 24px;width:24px;height:24px;margin-top:1px}
-html body#lpRoot #offer .pc3-vip{margin:16px 0 0;display:flex;align-items:center;gap:14px;padding:16px 18px;border-radius:16px;background:linear-gradient(135deg,rgba(124,92,255,.14),rgba(183,157,255,.08));border:1px solid rgba(124,92,255,.4)}
-html body#lpRoot #offer .pc3-vip svg{flex:0 0 28px;width:28px;height:28px;color:#7C5CFF;filter:drop-shadow(0 0 8px rgba(124,92,255,.6))}
-html body#lpRoot #offer .pc3-vip b{display:block;font:700 17px/1.3 Inter,sans-serif;color:#2a1a66}
-html body#lpRoot #offer .pc3-vip span{display:block;font:500 14.5px/1.4 Inter,sans-serif;color:#5b4a8a;margin-top:3px}
-html body#lpRoot #offer .pc3-cta{display:block;margin:20px 0 0;padding:19px 20px;border-radius:16px;background:#006EFF;color:#fff;font:800 18px/1 Inter,sans-serif;text-align:center;text-decoration:none;box-shadow:0 0 0 5px rgba(94,182,255,.2),0 22px 44px -12px rgba(0,110,255,.95)}
-html body#lpRoot #offer .pc3-cta:hover{background:#0a5fd9}
-html body#lpRoot #offer .pc3-note{margin:12px 0 0;font:500 14px/1.5 Inter,sans-serif;color:#5b6f8c;text-align:center}
+html body#lpRoot #offer .pc3-list b{color:#fff;font-weight:700}
+html body#lpRoot #offer .pc3-list svg{flex:0 0 30px;width:30px;height:30px;margin-top:0;filter:drop-shadow(0 0 10px rgba(94,182,255,.9))}
+html body#lpRoot #offer .pc3-vip{margin:16px 0 0;display:flex;align-items:center;gap:16px;padding:16px 18px;border-radius:16px;background:linear-gradient(135deg,rgba(124,92,255,.5),rgba(183,157,255,.2));border:1px solid rgba(183,157,255,.75);box-shadow:0 0 30px rgba(124,92,255,.55),inset 0 1px 0 rgba(255,255,255,.2)}
+html body#lpRoot #offer .pc3-vip svg{flex:0 0 32px;width:32px;height:32px;color:#EDE6FF;filter:drop-shadow(0 0 12px rgba(183,157,255,1))}
+html body#lpRoot #offer .pc3-vip b{display:block;font:700 21px/1.25 Inter,sans-serif;color:#fff}
+html body#lpRoot #offer .pc3-vip span{display:block;font:500 16px/1.35 Inter,sans-serif;color:#E6DDFF;margin-top:4px}
+html body#lpRoot #offer .pc3-cta{display:block;margin:20px 0 0;padding:22px 20px;border-radius:16px;background:linear-gradient(90deg,#006EFF,#2a8dff);color:#fff;font:800 21px/1 Inter,sans-serif;text-align:center;text-decoration:none;box-shadow:0 0 0 5px rgba(94,182,255,.22),0 0 40px rgba(0,110,255,.8),0 24px 48px -12px rgba(0,110,255,1)}
+html body#lpRoot #offer .pc3-cta:hover{background:linear-gradient(90deg,#0a5fd9,#1f7ff0)}
+html body#lpRoot #offer .pc3-note{margin:12px 0 0;font:500 15px/1.5 Inter,sans-serif;color:#b9cff0;text-align:center}
 html body#lpRoot #vip .lla-vip-h2{font-style:normal!important;font-weight:400!important;font-size:clamp(38px,5vw,70px)!important;line-height:1.03!important}
 html body#lpRoot #vip .lla-vip-grid{grid-template-columns:minmax(300px,640px) minmax(0,1fr)}
 html body#lpRoot #vip .lla-vip-portrait{max-width:640px}
@@ -165,10 +169,15 @@ html body#lpRoot #hero .pdp-cine-sub{max-width:760px!important}
 html body#lpRoot #hero .lla-film{width:100%!important;max-width:none!important}
 }
 @media (max-width:900px){
-html body#lpRoot #offer .pc3{padding:22px 18px 20px;border-radius:20px}
-html body#lpRoot #offer .pc3-now{font-size:74px}
-html body#lpRoot #offer .pc3-list li{font-size:16.5px}
+html body#lpRoot #offer .pc3{padding:24px 18px 22px;border-radius:22px}
+html body#lpRoot #offer .pc3-off .big{font-size:60px}
+html body#lpRoot #offer .pc3-off .sub{font-size:22px}
+html body#lpRoot #offer .pc3-now{font-size:58px}
+html body#lpRoot #offer .pc3-list li{font-size:19px;gap:12px}
+html body#lpRoot #offer .pc3-list svg{flex-basis:26px;width:26px;height:26px}
 html body#lpRoot #offer .pc3-vip{padding:14px}
+html body#lpRoot #offer .pc3-vip b{font-size:18px}
+html body#lpRoot #offer .pc3-cta{padding:19px;font-size:19px}
 html body#lpRoot #vip .lla-vip-grid{display:grid!important;grid-template-columns:1fr!important;gap:24px!important}
 }
 </style>
