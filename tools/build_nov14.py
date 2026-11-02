@@ -158,7 +158,6 @@ html body#lpRoot #offer .pc3-vip span{display:block;font:500 16px/1.35 Inter,san
 html body#lpRoot #offer .pc3-cta{display:block;margin:20px 0 0;padding:22px 20px;border-radius:16px;background:linear-gradient(90deg,#006EFF,#2a8dff);color:#fff;font:800 21px/1 Inter,sans-serif;text-align:center;text-decoration:none;box-shadow:0 0 0 5px rgba(94,182,255,.22),0 0 40px rgba(0,110,255,.8),0 24px 48px -12px rgba(0,110,255,1)}
 html body#lpRoot #offer .pc3-cta:hover{background:linear-gradient(90deg,#0a5fd9,#1f7ff0)}
 html body#lpRoot #offer .pc3-note{margin:12px 0 0;font:500 15px/1.5 Inter,sans-serif;color:#b9cff0;text-align:center}
-html body#lpRoot #vip .lla-vip-h2{font-style:normal!important;font-weight:400!important;font-size:clamp(38px,5vw,70px)!important;line-height:1.03!important}
 html body#lpRoot #vip .lla-vip-grid{grid-template-columns:minmax(300px,640px) minmax(0,1fr)}
 html body#lpRoot #vip .lla-vip-portrait{max-width:640px}
 html body#lpRoot #vip .lla-vip-portrait img{aspect-ratio:1920/1224!important;border-radius:18px!important}
