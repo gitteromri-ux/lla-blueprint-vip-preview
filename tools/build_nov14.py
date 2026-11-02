@@ -174,12 +174,21 @@ html body#lpRoot #offer .pc2-vip b{font-size:18.5px}
 html body#lpRoot #offer .pc2-vip span{font-size:15px}
 html body#lpRoot #vip .lla-vip-grid{display:grid!important;grid-template-columns:1fr!important;gap:24px!important}
 }
+#mockStrip .strip-cta{display:inline-flex;align-items:center;height:30px;padding:0 14px;margin-left:14px;border-radius:999px;background:#fff;color:#006EFF;font:700 13px/1 Inter,sans-serif;text-decoration:none;letter-spacing:.02em;vertical-align:middle}
+#mockStrip .strip-cta:hover{background:#eaf2ff}
+#llaWa{position:fixed;right:16px;bottom:calc(92px + env(safe-area-inset-bottom));z-index:9991;display:inline-flex;align-items:center;gap:10px;height:56px;padding:0 18px 0 12px;border-radius:999px;background:#25D366;color:#fff;font:700 15px/1 Inter,sans-serif;text-decoration:none;box-shadow:0 14px 34px -10px rgba(37,211,102,.9),0 0 0 4px rgba(37,211,102,.18)}
+#llaWa svg{width:30px;height:30px;flex:0 0 30px}
+#llaWa:hover{background:#1ebe5b}
+body:has(#enrollModal.open) #llaWa,html.guest-menu-open #llaWa{display:none!important}
+#et-bumpyard-widget{display:none!important}
+@media(max-width:600px){#llaWa{right:12px;bottom:calc(84px + env(safe-area-inset-bottom));height:52px;width:52px;padding:0;justify-content:center}#llaWa span{display:none}}
 </style>
 </head>'''
 sub1(r'<div class="lla-vip-grid lla-slider">', '<div class="lla-vip-grid">', name='vip slider off')
 sub1(r'<div class="lla-incl-grid lla-slider">', '<div class="lla-incl-grid">', name='included slider off')
 sub1(r'<p>18 live sessions, live classes, Abbott Lingo CGM included\.</p>', lambda m: '<p>18-week course, Lingo CGM, $100 cash back, Julie’s Masterclass. All included.</p>', name='enroll-mini lead')
 sub1(r'</head>', style, name='fold style')
+t=t.replace('</body>','<a id="llaWa" href="https://wa.me/12015023701?text=Hi%2C%20I%20have%20a%20question%20about%20The%20Longevity%20Blueprint." target="_blank" rel="noopener" aria-label="Chat with us on WhatsApp"><svg viewBox="0 0 32 32" aria-hidden="true"><path fill="#fff" d="M16 3C8.8 3 3 8.7 3 15.8c0 2.5.7 4.9 2 7L3 29l6.4-1.9c2 1.1 4.3 1.7 6.6 1.7 7.2 0 13-5.7 13-12.8S23.2 3 16 3zm0 23.4c-2.1 0-4.1-.6-5.9-1.6l-.4-.2-3.8 1.1 1.2-3.6-.3-.4a10.3 10.3 0 0 1-1.7-5.9C5.1 10 10 5.2 16 5.2s10.9 4.8 10.9 10.6S22 26.4 16 26.4zm6-7.8c-.3-.2-1.9-1-2.2-1.1-.3-.1-.5-.2-.7.2l-1 1.2c-.2.2-.4.2-.7.1-.3-.2-1.4-.5-2.6-1.6-1-.9-1.6-1.9-1.8-2.2-.2-.3 0-.5.1-.7l.5-.6.3-.5c.1-.2 0-.4 0-.6l-1-2.4c-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4-.3.3-1.2 1.1-1.2 2.8s1.2 3.3 1.4 3.5c.2.2 2.4 3.6 5.8 5 .8.3 1.4.5 1.9.7.8.3 1.5.2 2.1.1.6-.1 1.9-.8 2.2-1.5.3-.7.3-1.4.2-1.5-.1-.2-.3-.3-.6-.4z"/></svg><span>WhatsApp</span></a>\n'+'</body>',1)
 open(f'{OUT}/index.html','w',encoding='utf-8').write(t)
 # ---- support files ----
 for f in ['exact-source-design.css','guest-mobile.css','guest-mobile.js','attendee-pricing.css','attendee-form.js','checkout.html','_headers']:

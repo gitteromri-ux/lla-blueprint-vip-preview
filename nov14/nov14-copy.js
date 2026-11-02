@@ -41,7 +41,7 @@
   document.querySelectorAll('#faq .faq-item').forEach(item=>{
    if(/How much does it cost/i.test(item.textContent)){const answer=item.querySelector('.faq-a-inner');if(answer)answer.textContent='November offer: $79 first month, then $169 a month for four months, $755 total. Course, Lingo CGM, $100 cash back and Julie\u2019s VIP Masterclass included. One payment of $799 also available.'}
   });
-  const strip=document.getElementById('mockStrip');if(strip)strip.innerHTML='<span class="t lg">November offer: $79 first month, Julie\u2019s VIP Masterclass included free</span><span class="t sm"><a href="#enrollModal" data-enroll-course="1">November offer&nbsp;&middot;&nbsp;<b>$79 month 1</b></a></span>';
+  const strip=document.getElementById('mockStrip');if(strip)strip.innerHTML='<span class="t lg">November offer: $79 first month, Julie\u2019s VIP Masterclass included free <a class="strip-cta" href="#enrollModal" data-enroll-course="1">Enroll now</a></span><span class="t sm"><a href="#enrollModal" data-enroll-course="1">November offer&nbsp;&middot;&nbsp;<b>$79 month 1</b></a></span>';
   document.querySelectorAll('a[href*="checkout.html"]').forEach(a=>{a.href='#offer';a.removeAttribute('data-plan')});
   // The captured source places this initializer before the carousel markup.
   // Run the original one-card scroll behavior after that markup exists.
