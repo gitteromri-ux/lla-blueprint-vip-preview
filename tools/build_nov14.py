@@ -109,7 +109,7 @@ blocks['included']=inc_new
 # 9. Pillar videos: no eager preload on the preview
 blocks['learn-com']=blocks['learn-com'].replace('preload="auto" data-lla-autoplay="1"','preload="metadata" data-lla-autoplay="1"')
 # 10. Reassemble in the new order
-order=['hero','learn-com','syllabus','offer']
+order=['hero','learn-com','syllabus','offer','included','cgm','vip','teachers','institution','journal','whatitis','mechanism','faq','ask','enroll-mini']
 blocks['nov14-clarity']=strip
 assembled='\n'.join(blocks[s] for s in order)+'\n'+res_join
 t=t[:first]+assembled+t[last:]
