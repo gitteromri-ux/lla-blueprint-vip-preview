@@ -6109,41 +6109,70 @@ html body#lpRoot #vip .lla-vip-portrait{max-width:680px}
 /* upright everywhere: the base stylesheet set the whole page to italic */
 html body#lpRoot#lpRoot#lpRoot#lpRoot#lpRoot#lpRoot#lpRoot#lpRoot#lpRoot#lpRoot#lpRoot#lpRoot,html body#lpRoot#lpRoot#lpRoot#lpRoot#lpRoot#lpRoot#lpRoot#lpRoot#lpRoot#lpRoot#lpRoot#lpRoot *:not(em):not(i):not(.serif-i){font-style:normal!important}
 html body#lpRoot em{font-style:italic}
-/* Julie VIP fold: masterclass typography, framed portrait, no film */
-html body#lpRoot #vip.mc-hero{position:relative;overflow:hidden;background:#04070e!important;color:#fff;padding:clamp(72px,8vw,112px) 0!important;margin:0;z-index:3;isolation:isolate}
-html body#lpRoot #vip.mc-hero::before,html body#lpRoot #vip.mc-hero::after{display:none!important;content:none!important}
-html body#lpRoot #vip .mc-inner{position:relative;z-index:2;display:grid;grid-template-columns:1.04fr .96fr;gap:clamp(40px,5vw,80px);align-items:center}
-html body#lpRoot #vip .mc-copy{max-width:640px}
-html body#lpRoot #vip .mc-media{position:relative;margin:0;width:100%;max-width:500px;justify-self:end}
-html body#lpRoot #vip .mc-media img{width:100%;aspect-ratio:4/4.9;object-fit:cover;object-position:50% 8%;border-radius:26px;border:1px solid rgba(138,210,255,.35);box-shadow:0 50px 120px rgba(0,0,0,.6),0 0 90px rgba(56,166,255,.25);display:block;max-width:100%}
-html body#lpRoot #vip .mc-media .mc-tag{position:absolute;left:20px;top:20px;margin:0}
-html body#lpRoot #vip .mc-tag{display:inline-block;background:linear-gradient(180deg,#8AD2FF,#38A6FF);color:#03182b!important;font-family:Inter,sans-serif!important;font-size:14px!important;font-weight:800!important;letter-spacing:.06em;text-transform:uppercase;line-height:1.2;padding:11px 18px;border-radius:999px;box-shadow:0 0 24px rgba(56,166,255,.6);margin:0 0 24px}
-html body#lpRoot #vip .mc-year{font-size:clamp(21px,1.75vw,26px)!important;line-height:1.3;color:#bcd9ff!important;font-family:'Instrument Serif',Georgia,serif!important;font-weight:400!important;margin:0 0 22px!important;max-width:none}
-html body#lpRoot #vip .mc-head{font-family:'Codec Pro','Inter',sans-serif!important;font-weight:700!important;font-size:clamp(40px,3.5vw,64px)!important;line-height:1.04!important;letter-spacing:-.02em!important;color:#fff!important;margin:0!important;max-width:none;text-align:left}
-html body#lpRoot #vip .mc-head::before{display:none!important;content:none!important}
-html body#lpRoot #vip .mc-head .serif-i{font-family:'Instrument Serif',Georgia,serif!important;font-weight:400!important;letter-spacing:0!important;color:#6FA8FF!important}
+/* Julie fold: the masterclass site's About Julie bento, scoped */
+html body#lpRoot #vip.mj{position:relative;overflow:hidden;background:linear-gradient(180deg,#f3f7ff 0%,#ffffff 100%)!important;color:#33445e;padding:clamp(72px,7vw,104px) 0!important;margin:0;z-index:3;isolation:isolate}
+html body#lpRoot #vip.mj::before,html body#lpRoot #vip.mj::after{display:none!important;content:none!important}
+html body#lpRoot #vip .mj-head{max-width:980px;margin:0 auto 40px;text-align:center}
+html body#lpRoot #vip .mj-eyebrow{font-family:Inter,sans-serif!important;font-size:15px!important;font-weight:700!important;color:#006EFF!important;letter-spacing:.2em;text-transform:uppercase;margin:0 0 20px!important;line-height:1.4}
+html body#lpRoot #vip .mj-h2{font-family:'Codec Pro','Inter',sans-serif!important;font-weight:700!important;font-size:clamp(38px,3.9vw,66px)!important;line-height:1.05!important;letter-spacing:-.02em!important;color:#0d1c33!important;margin:0!important;max-width:none;text-align:center}
+html body#lpRoot #vip .mj-h2::before{display:none!important;content:none!important}
+html body#lpRoot #vip .mj-h2 .serif-i{font-family:'Instrument Serif',Georgia,serif!important;font-weight:400!important;letter-spacing:0!important;color:#006EFF!important}
 html body#lpRoot#lpRoot#lpRoot#lpRoot#lpRoot#lpRoot#lpRoot#lpRoot#lpRoot#lpRoot#lpRoot#lpRoot#lpRoot #vip .serif-i{font-style:italic!important}
-html body#lpRoot #vip .mc-desc{margin:26px 0 0!important;font-family:Inter,sans-serif!important;font-size:20px!important;line-height:1.6!important;color:#e2eaf6!important;max-width:640px}
-html body#lpRoot #vip .mc-desc strong{color:#fff!important;font-weight:700!important}
-html body#lpRoot #vip .mc-actions{display:flex;flex-wrap:wrap;gap:18px;margin-top:30px}
-html body#lpRoot #vip .mc-btn{display:inline-flex;align-items:center;justify-content:center;border-radius:14px!important;font-family:Inter,sans-serif!important;font-size:18px!important;font-weight:700!important;letter-spacing:.01em;padding:19px 42px!important;cursor:pointer;border:1px solid transparent;transition:.35s ease;white-space:nowrap;text-decoration:none!important;line-height:1.2}
-html body#lpRoot #vip .mc-btn-blue{background:linear-gradient(180deg,#8AD2FF 0%,#38A6FF 100%)!important;color:#03182b!important;border:1px solid rgba(190,230,255,.9)!important;box-shadow:0 0 16px rgba(94,182,255,.85),0 0 46px rgba(0,150,255,.5),0 10px 30px rgba(0,0,0,.45),inset 0 1px 0 rgba(255,255,255,.7)!important}
-html body#lpRoot #vip .mc-btn-blue:hover{background:linear-gradient(180deg,#A5DEFF 0%,#54B6FF 100%)!important;transform:translateY(-2px)}
-html body#lpRoot #vip .mc-btn-ghost{background:transparent!important;color:#fff!important;border-color:rgba(255,255,255,.45)!important;box-shadow:none!important}
-html body#lpRoot #vip .mc-btn-ghost:hover{background:#fff!important;color:#05101f!important}
-html body#lpRoot #vip .mc-dates{margin:24px 0 0!important;font-size:20px!important;font-family:'Instrument Serif',Georgia,serif!important;font-weight:400!important;color:#cdd9ec!important;max-width:none}
-@media(max-width:980px){
- html body#lpRoot #vip .mc-inner{grid-template-columns:1fr;gap:36px}
- html body#lpRoot #vip .mc-media{max-width:440px;justify-self:start}
+html body#lpRoot #vip .mj-date{font-family:'Codec Pro','Inter',sans-serif!important;font-weight:700!important;font-size:clamp(22px,2vw,30px)!important;line-height:1.25!important;color:#0d1c33!important;margin:20px 0 0!important;letter-spacing:-.01em}
+html body#lpRoot #vip .mj-date b{color:#006EFF!important;font-weight:700!important}
+html body#lpRoot #vip .mj-vip{display:inline-block;margin:20px 0 0!important;background:linear-gradient(180deg,#8AD2FF,#38A6FF);color:#03182b!important;font-family:Inter,sans-serif!important;font-size:16px!important;font-weight:800!important;letter-spacing:.05em;text-transform:uppercase;line-height:1.25;padding:13px 22px;border-radius:999px;box-shadow:0 0 28px rgba(56,166,255,.55),0 10px 24px -12px rgba(0,60,150,.5)}
+html body#lpRoot #vip .mj-bento{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));grid-auto-rows:auto;gap:22px;min-width:0}
+html body#lpRoot #vip .mj-card{position:relative;overflow:hidden;border-radius:28px;min-width:0;box-shadow:0 2px 8px rgba(0,0,0,.18),0 34px 84px -20px rgba(10,25,60,.45);color:#fff}
+html body#lpRoot #vip .mj-navy{background:linear-gradient(165deg,#101c30 0%,#0A1424 100%);border:1px solid rgba(127,184,255,.3)}
+html body#lpRoot #vip .mj-royal{background:linear-gradient(165deg,#0f5fe0 0%,#0051CC 50%,#003C97 100%)}
+html body#lpRoot #vip .mj-photo{grid-column:1/5;grid-row:1/3;display:flex;flex-direction:column;min-height:100%;background:#0A1324}
+html body#lpRoot #vip .mj-photo img{width:100%!important;flex:1 1 0;min-height:0;height:auto!important;object-fit:cover;object-position:50% 14%;display:block;aspect-ratio:auto;max-width:100%}
+html body#lpRoot #vip .mj-photo-body{padding:26px 28px 30px;background:linear-gradient(180deg,rgba(10,19,36,0) 0%,#0A1324 30%);margin-top:-70px;position:relative}
+html body#lpRoot #vip .mj-card-eyebrow{font-family:Inter,sans-serif!important;color:#7CC4FF!important;font-size:12px!important;font-weight:700!important;letter-spacing:.16em;text-transform:uppercase;margin:0 0 10px!important;line-height:1.3}
+html body#lpRoot #vip .mj-h3{font-family:'Codec Pro','Inter',sans-serif!important;font-weight:700!important;font-size:clamp(30px,2.3vw,36px)!important;line-height:1.02!important;letter-spacing:-.02em!important;color:#fff!important;margin:0 0 10px!important;display:block}
+html body#lpRoot #vip .mj-role{font-family:'Instrument Serif',Georgia,serif!important;font-size:20px!important;line-height:1.35!important;color:rgba(255,255,255,.85)!important;margin:0 0 18px!important;max-width:none}
+html body#lpRoot #vip .mj-chips{display:flex;flex-wrap:wrap;gap:8px}
+html body#lpRoot #vip .mj-chips span{font-family:Inter,sans-serif!important;font-size:13.5px!important;font-weight:600!important;letter-spacing:.02em;padding:8px 13px;border-radius:999px;background:rgba(255,255,255,.08);border:1px solid rgba(124,196,255,.3);color:#dfeeff!important;line-height:1.2}
+html body#lpRoot #vip .mj-vid{display:flex;flex-direction:column}
+html body#lpRoot #vip .mj-vid:nth-child(2){grid-column:5/9}
+html body#lpRoot #vip .mj-vid:nth-child(3){grid-column:9/13}
+html body#lpRoot #vip .mj-vid video{display:block;width:100%!important;aspect-ratio:16/9;object-fit:cover;border-radius:0;max-width:100%;height:auto!important}
+html body#lpRoot #vip .mj-cap{padding:20px 24px 24px}
+html body#lpRoot #vip .mj-cap b{display:block;font-family:'Codec Pro','Inter',sans-serif!important;font-weight:700!important;font-size:clamp(22px,1.7vw,26px)!important;letter-spacing:-.02em;line-height:1.1!important;color:#fff!important}
+html body#lpRoot #vip .mj-cap span{display:block;margin-top:8px;font-family:Inter,sans-serif!important;font-size:16.5px!important;line-height:1.5!important;color:rgba(255,255,255,.76)!important}
+html body#lpRoot #vip .mj-wide{grid-column:5/13;grid-row:2/3;display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);align-items:stretch}
+html body#lpRoot #vip .mj-wide video{display:block;width:100%!important;height:100%!important;min-height:100%;object-fit:contain;background:#020714;max-width:100%}
+html body#lpRoot #vip .mj-wide-body{padding:24px 26px;display:flex;flex-direction:column;justify-content:center;color:#fff}
+html body#lpRoot #vip .mj-wide-body .mj-h3{font-size:clamp(28px,2.3vw,36px)!important;line-height:1!important;margin:0 0 10px!important}
+html body#lpRoot #vip .mj-wide-body p{font-family:Inter,sans-serif!important;font-size:16.5px!important;line-height:1.5!important;color:rgba(255,255,255,.9)!important;margin:0!important;max-width:none}
+html body#lpRoot #vip .mj-wide-vip{margin:12px 0 0!important;font-weight:700!important;color:#fff!important;font-size:17px!important}
+html body#lpRoot #vip .mj-cta{margin-top:16px;display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+html body#lpRoot #vip .mj-btn{display:inline-flex;align-items:center;justify-content:center;border-radius:14px!important;font-family:Inter,sans-serif!important;font-size:17px!important;font-weight:700!important;letter-spacing:.01em;padding:15px 24px!important;cursor:pointer;border:1px solid transparent;transition:.35s ease;white-space:nowrap;text-decoration:none!important;line-height:1.2;background:#fff!important;color:#0051CC!important;box-shadow:0 12px 30px -10px rgba(0,20,60,.5)}
+html body#lpRoot #vip .mj-btn:hover{background:#eaf2ff!important;transform:translateY(-2px)}
+html body#lpRoot #vip .mj-note{font-family:'Instrument Serif',Georgia,serif!important;font-size:17px!important;color:#fff!important;opacity:.9}
+@media(max-width:1000px){
+ html body#lpRoot #vip .mj-bento{grid-template-columns:1fr 1fr}
+ html body#lpRoot #vip .mj-photo{grid-column:1/3;grid-row:auto;min-height:0}
+ html body#lpRoot #vip .mj-photo img{aspect-ratio:16/11;flex:none}
+ html body#lpRoot #vip .mj-vid:nth-child(2),html body#lpRoot #vip .mj-vid:nth-child(3){grid-column:auto}
+ html body#lpRoot #vip .mj-wide{grid-column:1/3;grid-row:auto;grid-template-columns:1fr}
+ html body#lpRoot #vip .mj-wide video{aspect-ratio:16/9;height:auto!important;min-height:0;object-fit:cover}
 }
 @media(max-width:760px){
- html body#lpRoot #vip.mc-hero{padding:64px 0!important}
- html body#lpRoot #vip .mc-tag{font-size:12.5px!important;padding:10px 14px;white-space:normal;line-height:1.3}
- html body#lpRoot #vip .mc-media .mc-tag{left:14px;top:14px;font-size:11.5px!important}
- html body#lpRoot #vip .mc-head{font-size:clamp(38px,10vw,54px)!important}
- html body#lpRoot #vip .mc-desc{font-size:18.5px!important}
- html body#lpRoot #vip .mc-actions .mc-btn{width:100%;white-space:normal}
- html body#lpRoot #vip .mc-dates{font-size:18px!important}
+ html body#lpRoot #vip.mj{padding:56px 0!important}
+ html body#lpRoot #vip .mj-head{margin-bottom:28px}
+ html body#lpRoot #vip .mj-h2{font-size:clamp(32px,8.4vw,42px)!important}
+ html body#lpRoot #vip .mj-date{font-size:21px!important}
+ html body#lpRoot #vip .mj-vip{font-size:13.5px!important;padding:11px 16px;white-space:normal}
+ html body#lpRoot #vip .mj-bento{grid-template-columns:1fr;gap:16px}
+ html body#lpRoot #vip .mj-photo,html body#lpRoot #vip .mj-wide{grid-column:auto}
+ html body#lpRoot #vip .mj-photo img{aspect-ratio:4/4.2;object-position:50% 15%}
+ html body#lpRoot #vip .mj-cap b{font-size:24px!important}
+ html body#lpRoot #vip .mj-wide-body{padding:22px 20px 24px}
+ html body#lpRoot #vip .mj-wide-body .mj-h3{font-size:30px!important}
+ html body#lpRoot #vip .mj-cta{flex-direction:column;align-items:stretch}
+ html body#lpRoot #vip .mj-btn{width:100%;white-space:normal}
+ html body#lpRoot #vip .mj-note{text-align:center}
 }
 /* course timeline in four colours + benefit lines */
 html body#lpRoot #syllabus .curriculum-tab:nth-child(1){--tab-c:#22B27A}
@@ -6180,11 +6209,6 @@ html body#lpRoot #learn-com .section-title{overflow:visible!important;padding:0 
  html body#lpRoot #cgm .cgm-fold-cta-wrap{grid-area:cta;margin:0!important}
 }
 /* v2.1: film above the section glow, mobile video full-bleed, VIP fold above hero overflow */
-html body#lpRoot #vip.mc-hero::before,html body#lpRoot #vip.mc-hero::after{display:none!important;content:none!important}
-html body#lpRoot #vip.mc-hero{z-index:3;isolation:isolate}
-html body#lpRoot #vip .mc-media{z-index:1}
-html body#lpRoot #vip .mc-media video{opacity:1!important;visibility:visible!important;display:block!important;max-height:none!important;border-radius:0!important;box-shadow:none!important}
-@media(max-width:980px){html body#lpRoot#lpRoot#lpRoot#lpRoot#lpRoot#lpRoot#lpRoot#lpRoot#lpRoot#lpRoot#lpRoot#lpRoot #vip .mc-media video{width:100%!important;height:100%!important;top:0!important;transform:none!important;max-width:none!important;-webkit-mask-image:none!important;mask-image:none!important}}
 html body#lpRoot#lpRoot#lpRoot#lpRoot#lpRoot#lpRoot#lpRoot#lpRoot#lpRoot#lpRoot#lpRoot#lpRoot #hero h1,html body#lpRoot#lpRoot#lpRoot#lpRoot#lpRoot#lpRoot#lpRoot#lpRoot#lpRoot#lpRoot#lpRoot#lpRoot #hero .pdp-cine-h1{font-style:normal!important}
 </style>
 </head>
@@ -6856,23 +6880,42 @@ html body#lpRoot#lpRoot#lpRoot#lpRoot#lpRoot#lpRoot#lpRoot#lpRoot#lpRoot#lpRoot#
       <a href="#offer" class="section-cta-btn" data-fn-cta="section">Enroll now <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"></path></svg></a>
     </div>
   </section>
-<section id="vip" class="mc-hero is-dark" aria-label="Julie Gibson Clark VIP Masterclass, included">
-  <div class="container mc-inner">
-    <div class="mc-copy">
-      <span class="mc-tag">&#11088; Free VIP access included with The Longevity Blueprint</span>
-      <p class="mc-year serif-i">The Longevity Masterclass of the Year &middot; 60 minutes, live</p>
-      <h2 class="mc-head">Learn to age slower<br><span class="serif-i">from the 2nd slowest aging human on earth.</span></h2>
-      <p class="mc-desc"><strong>Julie Gibson Clark</strong> ages eight months for every year. She teaches you her complete protocol, live on Zoom. 60 minutes, with an additional 30-minute private Q&amp;A for VIP participants. <strong>Free VIP access included when you enroll in November.</strong></p>
-      <div class="mc-actions">
-        <a class="mc-btn mc-btn-blue" href="#enrollModal" data-fn-cta="vip" data-enroll-course="1">Enroll now &middot; VIP seat included</a>
-        <a class="mc-btn mc-btn-ghost" href="#offer">See the November offer</a>
-      </div>
-      <p class="mc-dates serif-i"><span style="white-space:nowrap">Sat, November 14 &middot; 1:00 PM ET</span> &middot; Live on Zoom</p>
+<section id="vip" class="mj is-light" aria-label="Julie Gibson Clark, VIP masterclass included">
+  <div class="container">
+    <div class="mj-head">
+      <p class="mj-eyebrow">Julie Gibson Clark &middot; Founding Faculty, Longevity Life Academy</p>
+      <h2 class="mj-h2">Julie Gibson Clark: <span class="serif-i">learn from the 2nd slowest aging human on earth.</span></h2>
+      <p class="mj-date"><b>Nov 14th</b> &middot; The Longevity Masterclass of the Year &middot; live on Zoom, 1:00 PM ET</p>
+      <p class="mj-vip">&#11088; Exclusive VIP access included with The Longevity Blueprint</p>
     </div>
-    <figure class="mc-media">
-      <img src="assets/julie-portrait-full.webp" alt="Julie Gibson Clark" loading="lazy" width="1000" height="1400">
-      <span class="mc-tag mc-tag--img">Julie Gibson Clark &middot; Founding Faculty</span>
-    </figure>
+    <div class="mj-bento">
+      <article class="mj-card mj-photo mj-navy">
+        <img src="assets/julie-portrait-full.webp" alt="Julie Gibson Clark" loading="lazy" width="1000" height="1400">
+        <div class="mj-photo-body">
+          <p class="mj-card-eyebrow">Founding Faculty &middot; Longevity Life Academy</p>
+          <h3 class="mj-h3">Julie Gibson Clark</h3>
+          <p class="serif-i mj-role">The 2nd slowest-aging human ever measured. She teaches the masterclass live.</p>
+          <div class="mj-chips"><span>56 &middot; Phoenix, AZ</span><span>~$100 / month</span><span>5:00 am &middot; 9:00 pm</span></div>
+        </div>
+      </article>
+      <article class="mj-card mj-vid mj-navy">
+        <video src="assets/anim/ANIM_PACE_1080.mp4" poster="assets/anim/pace-poster.jpg" autoplay muted loop playsinline preload="metadata"></video>
+        <div class="mj-cap"><b>She ages 8 months a year.</b><span>DunedinPACE 0.665, proven by verified epigenetic testing.</span></div>
+      </article>
+      <article class="mj-card mj-vid mj-navy">
+        <video src="assets/anim/ANIM_CURVE_1080.mp4" poster="assets/anim/curve-poster.jpg" autoplay muted loop playsinline preload="metadata"></video>
+        <div class="mj-cap"><b>34% slower than average.</b><span>Most people age one full year, every year. She doesn&rsquo;t.</span></div>
+      </article>
+      <article class="mj-card mj-wide mj-royal">
+        <video src="assets/anim/PLAY_V6_LLA_RANK.mp4" autoplay muted loop playsinline preload="metadata"></video>
+        <div class="mj-wide-body">
+          <b class="mj-h3">No.2 on Earth.</b>
+          <p>Rejuvenation Olympics leaderboard, ahead of Bryan Johnson&rsquo;s $2M-a-year program.</p>
+          <p class="mj-wide-vip">&#11088; Exclusive VIP access to her masterclass is included free with The Longevity Blueprint.</p>
+          <div class="mj-cta"><a class="mj-btn" href="#enrollModal" data-fn-cta="vip" data-enroll-course="1">Enroll now &middot; VIP seat included</a><span class="mj-note serif-i">Live on Zoom &middot; Nov 14</span></div>
+        </div>
+      </article>
+    </div>
   </div>
 </section>
 <section class="lla-price" id="offer" data-lp-num="04" data-lp-kicker="The course">
