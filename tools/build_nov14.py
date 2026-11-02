@@ -52,21 +52,31 @@ strip='''
 # 6. Offer rewrite
 offer=blocks['offer']
 offer_new=re.sub(r'<p class="lp-lead">.*?</p>', '<p class="lp-lead">Online sign-ups in November only.</p>', offer, count=1, flags=re.S)
-card_new='''<aside class="lp-card">
-        <p class="lp-plan credit-plan-label">November offer. 50% off your first month.</p>
-        <div class="lp-big credit-month-one" data-no-promo data-credit-price><s aria-label="Regular first payment">$169</s><strong>$79</strong><span>Month 1</span></div>
-        <div class="credit-rest" data-no-promo><span>Then 4 months</span><b>$169 <span style="font-size:16px;font-weight:400">/ month</span></b></div>
-        <ul class="nov14-card-list">
-          <li><strong>18-week live course,</strong> small groups</li>
-          <li><strong>Your own longevity protocol,</strong> tailored to your numbers</li>
-          <li><strong>Free Abbott Lingo CGM,</strong> shipped to you</li>
-          <li><strong>$100 cash back</strong> on your next course</li>
-          <li class="nov14-vip"><strong>Free VIP access to Julie Gibson Clark’s Masterclass</strong><em>November 14</em></li>
+card_new='''<aside class="lp-card pc">
+        <div class="pc-head">
+          <div class="pc-eyebrow">The Longevity Blueprint</div>
+          <div class="pc-title">18 live classes. One price.</div>
+          <div class="pc-badge"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.6 13.4l-7.2 7.2a2 2 0 0 1-2.8 0L3.4 13.4A2 2 0 0 1 2.8 12V4a2 2 0 0 1 2-2h8a2 2 0 0 1 1.4.6l7.2 7.2a2 2 0 0 1 0 2.8z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><circle cx="7.5" cy="7.5" r="1.6" fill="currentColor"/></svg>50% off your first month</div>
+        </div>
+        <div class="pc-price" data-no-promo data-credit-price>
+          <div class="pc-row">
+            <div class="pc-now"><span class="pc-cur">$</span>79<span class="pc-per">first<br>month</span></div>
+            <div class="pc-chips"><span class="pc-was">Regular $169</span><span class="pc-save">You save $90</span></div>
+          </div>
+          <div class="pc-then">Then $169 a month for 4 months</div>
+        </div>
+        <div class="pc-sep"><span>What you get</span></div>
+        <ul class="pc-list">
+          <li><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="rgba(94,182,255,.18)" stroke="#5EB6FF" stroke-width="1.6"/><path d="M7.5 12.4l2.9 2.9 6.1-6.4" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg><span><b>18-week live course,</b> small groups</span></li>
+          <li><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="rgba(94,182,255,.18)" stroke="#5EB6FF" stroke-width="1.6"/><path d="M7.5 12.4l2.9 2.9 6.1-6.4" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg><span><b>Your own longevity protocol,</b> tailored to your numbers</span></li>
+          <li><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="rgba(94,182,255,.18)" stroke="#5EB6FF" stroke-width="1.6"/><path d="M7.5 12.4l2.9 2.9 6.1-6.4" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg><span><b>Free Abbott Lingo CGM,</b> shipped to you</span></li>
+          <li><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="rgba(94,182,255,.18)" stroke="#5EB6FF" stroke-width="1.6"/><path d="M7.5 12.4l2.9 2.9 6.1-6.4" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg><span><b>$100 cash back</b> on your next course</span></li>
         </ul>
-        <a href="#enrollModal" class="lp-cta" id="offerEnroll" data-fn-cta="offer" data-enroll-course="1">Enroll now</a>
-        <p class="lp-note">14-day try-out refund.</p>
+        <div class="pc-vip"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.6l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.5l-5.9 3.1 1.2-6.5L2.5 9.5l6.6-.9z" fill="currentColor"/></svg><div><b>Free VIP access to Julie Gibson Clark’s Masterclass</b><span>90-minute masterclass and Q&amp;A, live on Zoom</span></div><em>Nov 14</em></div>
+        <a href="#enrollModal" class="lp-cta pc-cta" id="offerEnroll" data-fn-cta="offer" data-enroll-course="1">Enroll now</a>
+        <p class="pc-note">14-day try-out refund · Online sign-ups in November only</p>
       </aside>'''
-offer_new,n5=re.subn(r'<aside class="lp-card">.*?</aside>', card_new, offer_new, count=1, flags=re.S)
+offer_new,n5=re.subn(r'<aside class="lp-card[^"]*">.*?</aside>', card_new, offer_new, count=1, flags=re.S)
 offer_new,n6=re.subn(r'\s*<div class="lp-list">.*?</ul>\s*</div>', '', offer_new, count=1, flags=re.S)
 log.append(f'offer card {n5} list {n6}')
 blocks['offer']=offer_new
@@ -118,19 +128,40 @@ sub1(r'<script src="https://longevitylifeacademy\.pages\.dev/assets/lla-promo\.j
 sub1(r'<div id="mockBar"><div class="l"><i>The Longevity Blueprint</i><b>\$179<small>/ mo</small></b></div><a href="#offer" data-fn-cta="floater">Enroll Now</a></div>', '<div id="mockBar"><div class="l"><i>The Longevity Blueprint</i><b>$79 month 1</b></div><a href="#enrollModal" data-fn-cta="floater" data-enroll-course="1">Enroll now</a></div>', name='mockBar')
 # 14. Fold styles
 style='''<style id="nov14-fold">
-html body#lpRoot #offer .lp-grid{grid-template-columns:minmax(0,600px)!important}
+html body#lpRoot #offer .lp-grid{grid-template-columns:minmax(0,520px)!important}
 html body#lpRoot #offer .lp-list,html body#lpRoot #included{display:none!important}
-html body#lpRoot #offer .lp-card .lp-cta{margin:24px 0 14px;text-decoration:none;background:#006EFF;color:#fff}
-html body#lpRoot #offer .lp-card .lp-cta:hover{background:#0a5fd9}
-html body#lpRoot #offer .lp-card .nov14-card-list{list-style:none;margin:22px 0 0;padding:0;display:grid;gap:13px;max-width:none}
-html body#lpRoot #offer .lp-card .nov14-card-list li{position:relative;padding-left:30px;font:400 17px/1.4 Inter,sans-serif;color:#deecff}
-html body#lpRoot #offer .lp-card .nov14-card-list li::before{content:"";position:absolute;left:0;top:.42em;width:14px;height:14px;border-radius:50%;background:linear-gradient(135deg,#7DE5FF,#006EFF)}
-html body#lpRoot #offer .lp-card .nov14-card-list li strong{color:#fff;font-weight:700}
-html body#lpRoot #offer .lp-card .nov14-card-list li.nov14-vip{margin-top:6px;padding:14px 16px 14px 46px;border-radius:14px;background:linear-gradient(135deg,rgba(124,92,255,.32),rgba(183,157,255,.14));border:1px solid rgba(183,157,255,.6);color:#EDE6FF}
-html body#lpRoot #offer .lp-card .nov14-card-list li.nov14-vip::before{left:16px;top:18px;width:16px;height:16px;background:linear-gradient(135deg,#B79DFF,#7C5CFF);box-shadow:0 0 18px rgba(183,157,255,.9)}
-html body#lpRoot #offer .lp-card .nov14-card-list li.nov14-vip strong{color:#fff}
-html body#lpRoot #offer .lp-card .nov14-card-list li.nov14-vip em{display:block;font-style:normal;font-weight:700;color:#D9CCFF;margin-top:3px;letter-spacing:.01em}
-html body#lpRoot #offer .lp-card .lp-note{margin:0;font:400 14px/1.5 Inter,sans-serif;color:#c4d9f6;text-align:center}
+html body#lpRoot #offer .lp-card.pc{padding:0!important;overflow:hidden;display:block}
+html body#lpRoot #offer .pc .pc-head{padding:22px 24px 20px;background:linear-gradient(135deg,rgba(94,182,255,.24),rgba(0,110,255,.10));border-bottom:1px solid rgba(255,255,255,.12)}
+html body#lpRoot #offer .pc .pc-eyebrow{font:700 12px/1 Inter,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#9ecbff;margin:0 0 9px}
+html body#lpRoot #offer .pc .pc-title{font:500 26px/1.2 "Playfair Display",Georgia,serif;color:#fff;margin:0 0 14px;letter-spacing:-.01em}
+html body#lpRoot #offer .pc .pc-badge{display:inline-flex;align-items:center;gap:8px;padding:9px 13px;border-radius:999px;background:linear-gradient(90deg,#006EFF,#5EB6FF);color:#fff;font:700 12.5px/1 Inter,sans-serif;letter-spacing:.03em;text-transform:uppercase;box-shadow:0 10px 22px -10px rgba(0,110,255,1)}
+html body#lpRoot #offer .pc .pc-badge svg{width:16px;height:16px;flex:0 0 16px}
+html body#lpRoot #offer .pc .pc-price{padding:22px 24px 18px}
+html body#lpRoot #offer .pc .pc-row{display:flex;align-items:flex-end;justify-content:space-between;gap:12px;flex-wrap:wrap}
+html body#lpRoot #offer .pc .pc-now{display:flex;align-items:baseline;font:500 64px/.9 "Playfair Display",Georgia,serif;color:#fff;letter-spacing:-.04em}
+html body#lpRoot #offer .pc .pc-cur{font-size:34px;color:#9ecbff;margin-right:2px;letter-spacing:0}
+html body#lpRoot #offer .pc .pc-per{font:500 13px/1.15 Inter,sans-serif;color:#c9dcf8;margin-left:10px;letter-spacing:0;text-transform:uppercase}
+html body#lpRoot #offer .pc .pc-chips{display:flex;flex-direction:column;align-items:flex-end;gap:7px;padding-bottom:4px}
+html body#lpRoot #offer .pc .pc-was{font:500 13px/1 Inter,sans-serif;color:#aec3e6;text-decoration:line-through;text-decoration-thickness:1.5px}
+html body#lpRoot #offer .pc .pc-save{font:700 12px/1 Inter,sans-serif;color:#7DE5C1;background:rgba(125,229,193,.14);border:1px solid rgba(125,229,193,.5);border-radius:999px;padding:7px 10px;letter-spacing:.06em;text-transform:uppercase;white-space:nowrap}
+html body#lpRoot #offer .pc .pc-then{margin:12px 0 0;font:500 15px/1.4 Inter,sans-serif;color:#deecff}
+html body#lpRoot #offer .pc .pc-sep{display:flex;align-items:center;gap:12px;padding:0 24px;font:700 11px/1 Inter,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#8fb5e6}
+html body#lpRoot #offer .pc .pc-sep::before,html body#lpRoot #offer .pc .pc-sep::after{content:"";flex:1;height:1px;background:rgba(255,255,255,.14)}
+html body#lpRoot #offer .pc .pc-list{list-style:none;margin:0;padding:16px 24px 0;display:grid;gap:11px}
+html body#lpRoot #offer .pc .pc-list li{display:flex;gap:12px;align-items:flex-start;font:400 16px/1.4 Inter,sans-serif;color:#deecff;padding:0}
+html body#lpRoot #offer .pc .pc-list li::before{content:none}
+html body#lpRoot #offer .pc .pc-list b{color:#fff;font-weight:700}
+html body#lpRoot #offer .pc .pc-list svg{flex:0 0 22px;width:22px;height:22px;margin-top:1px}
+html body#lpRoot #offer .pc .pc-vip{margin:14px 24px 0;display:flex;align-items:center;gap:12px;padding:14px;border-radius:14px;background:linear-gradient(135deg,rgba(124,92,255,.40),rgba(183,157,255,.16));border:1px solid rgba(183,157,255,.65);color:#fff}
+html body#lpRoot #offer .pc .pc-vip svg{flex:0 0 26px;width:26px;height:26px;color:#D9CCFF;filter:drop-shadow(0 0 8px rgba(183,157,255,.9))}
+html body#lpRoot #offer .pc .pc-vip div{flex:1 1 auto;min-width:0}
+html body#lpRoot #offer .pc .pc-vip b{display:block;font:700 15px/1.3 Inter,sans-serif;color:#fff}
+html body#lpRoot #offer .pc .pc-vip span{display:block;font:500 13px/1.3 Inter,sans-serif;color:#D9CCFF;margin-top:3px}
+html body#lpRoot #offer .pc .pc-vip em{font:700 12px/1 Inter,sans-serif;font-style:normal;color:#2a1a66;background:#D9CCFF;border-radius:999px;padding:8px 10px;white-space:nowrap;letter-spacing:.04em;text-transform:uppercase}
+html body#lpRoot #offer .pc .pc-cta{display:block;margin:18px 24px 0;padding:17px 20px;border-radius:14px;background:#006EFF;color:#fff;font:700 17px/1 Inter,sans-serif;text-align:center;text-decoration:none;box-shadow:0 14px 30px -12px rgba(0,110,255,.95);width:auto}
+html body#lpRoot #offer .pc .pc-cta:hover{background:#0a5fd9}
+html body#lpRoot #offer .pc .pc-note{margin:0;padding:12px 24px 22px;font:400 13px/1.5 Inter,sans-serif;color:#b9cff0;text-align:center}
+@media (max-width:600px){html body#lpRoot #offer .pc .pc-head,html body#lpRoot #offer .pc .pc-price{padding-left:20px;padding-right:20px}html body#lpRoot #offer .pc .pc-sep,html body#lpRoot #offer .pc .pc-list{padding-left:20px;padding-right:20px}html body#lpRoot #offer .pc .pc-vip,html body#lpRoot #offer .pc .pc-cta{margin-left:20px;margin-right:20px}html body#lpRoot #offer .pc .pc-now{font-size:58px}}
 @media (max-width:900px){html body#lpRoot #vip .lla-vip-grid{display:grid!important;grid-template-columns:1fr!important;gap:24px!important}}
 </style>
 </head>'''
