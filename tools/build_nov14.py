@@ -72,6 +72,12 @@ card_new='''<div class="pc2">
           <div class="pc2-per">First month</div>
           <div class="pc2-chips"><s>Regular $169</s><span class="save">55% off trial discount</span></div>
           <div class="pc2-then">Then <b>$169</b> a month for 4 months</div>
+          <ul class="pc2-facts">
+            <li>Live classes start <b>Mon, Nov 23</b> or <b>Wed, Nov 25</b></li>
+            <li>Pay monthly by card or PayPal</li>
+            <li>Cancel within 14 days for a full refund</li>
+            <li>Julie’s VIP Masterclass seat confirmed by email</li>
+          </ul>
           <a href="#enrollModal" class="pc2-cta" id="offerEnroll" data-fn-cta="offer" data-enroll-course="1">Enroll now</a>
           <p class="pc2-note">14-day try-out refund · Online sign-ups in November only</p>
         </div>
@@ -93,7 +99,7 @@ vip_new=re.sub(r'<ul class="lla-vip-list">.*?</ul>', '''<ul class="lla-vip-list"
 vip_new=re.sub(r'<a href="#offer" class="lla-vip-btn"[^>]*>.*?</a>', '<a href="#enrollModal" class="lla-vip-btn" data-fn-cta="vip" data-enroll-course="1">Enroll now <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"></path></svg></a>', vip_new, count=1, flags=re.S)
 vip_new=re.sub(r'<p class="lla-vip-after">.*?</p>', '<p class="lla-vip-after">Julie hosts the masterclass. LLA’s faculty teach the course.</p>', vip_new, count=1, flags=re.S)
 vip_new=re.sub(r'\s*<p class="lla-vip-bio">.*?</p>', '', vip_new, count=1, flags=re.S)
-vip_new=re.sub(r'<img src="https://longevitylifeacademy\\.pages\\.dev/assets/instructors/julie-gibson-clark\\.jpg"[^>]*>', '<img src="assets/julie-masterclass-zoom.jpg" alt="Julie Gibson Clark hosting her live masterclass on Zoom" width="1920" height="1224" loading="lazy" decoding="async">', vip_new, count=1)
+vip_new=re.sub(r'<img src="https://longevitylifeacademy\\.pages\\.dev/assets/instructors/julie-gibson-clark\\.jpg"[^>]*>', '<div class="mock-browser"><div class="mock-browser-bar" aria-hidden="true"><i></i><i></i><i></i></div><img src="assets/zoom-40-ppl-logos.webp" alt="Julie Gibson Clark teaching her live masterclass on Zoom" width="1600" height="893" loading="lazy" decoding="async"></div>', vip_new, count=1)
 blocks['vip']=vip_new
 # 8. Included cards: one card per line of the November offer
 cards=[('#006EFF','#5EB6FF','Live 18-week course','Small groups. One class a week, recorded.','Included'),
@@ -111,7 +117,7 @@ blocks['included']=inc_new
 # 9. Pillar videos: no eager preload on the preview
 blocks['learn-com']=blocks['learn-com'].replace('preload="auto" data-lla-autoplay="1"','preload="metadata" data-lla-autoplay="1"')
 # 10. Reassemble in the new order
-order=['hero', 'learn-com', 'syllabus', 'offer', 'vip', 'included', 'cgm', 'teachers', 'institution', 'journal', 'whatitis', 'mechanism', 'faq', 'ask', 'enroll-mini']
+order=['hero', 'vip', 'offer', 'included', 'cgm', 'teachers', 'learn-com', 'syllabus', 'institution', 'journal', 'whatitis', 'mechanism', 'faq', 'ask', 'enroll-mini']
 blocks['nov14-clarity']=strip
 assembled='\n'.join(blocks[s] for s in order)+'\n'+res_join
 t=t[:first]+assembled+t[last:]
@@ -207,6 +213,15 @@ html body#lpRoot #vip .lla-vip-grid{display:grid!important;grid-template-columns
 body:has(#enrollModal.open) #llaWa,html.guest-menu-open #llaWa{display:none!important}
 #et-bumpyard-widget{display:none!important}
 @media(max-width:600px){#llaWa{right:12px;bottom:calc(84px + env(safe-area-inset-bottom));height:52px;width:52px;padding:0;justify-content:center}#llaWa span{display:none}}
+html body#lpRoot #offer .pc2-facts{list-style:none;margin:16px 0 0;padding:14px 0 0;border-top:1px solid #e3e9f3;display:grid;gap:9px}
+html body#lpRoot #offer .pc2-facts li{position:relative;padding-left:26px;font:500 16px/1.4 Inter,sans-serif;color:#203957}
+html body#lpRoot #offer .pc2-facts li::before{content:"";position:absolute;left:0;top:.35em;width:14px;height:14px;border-radius:50%;background:linear-gradient(135deg,#5EB6FF,#006EFF)}
+html body#lpRoot #offer .pc2-facts li::after{content:"";position:absolute;left:4px;top:calc(.35em + 4px);width:5px;height:3px;border-left:2px solid #fff;border-bottom:2px solid #fff;transform:rotate(-45deg)}
+html body#lpRoot #offer .pc2-facts b{color:#0a244e;font-weight:700}
+html body#lpRoot #vip .lla-vip-portrait .mock-browser,html body#lpRoot #vip .lla-vip-portrait .vip-frame{border-radius:18px;overflow:hidden;box-shadow:rgba(0,110,255,.38) 0 30px 90px,rgba(0,0,0,.45) 0 10px 30px;background:#0b1b33}
+html body#lpRoot #vip .lla-vip-portrait img{aspect-ratio:1600/893!important;border-radius:0!important;box-shadow:none!important}
+html body#lpRoot #vip .lla-vip-grid{grid-template-columns:minmax(300px,680px) minmax(0,1fr)}
+html body#lpRoot #vip .lla-vip-portrait{max-width:680px}
 </style>
 </head>'''
 sub1(r'<div class="lla-vip-grid lla-slider">', '<div class="lla-vip-grid">', name='vip slider off')
