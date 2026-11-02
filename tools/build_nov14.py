@@ -55,10 +55,10 @@ offer_new=re.sub(r'<p class="lp-lead">Online sign-ups in November only.</p>', '<
 card_new='''<div class="pc3">
         <svg width="0" height="0" aria-hidden="true" style="position:absolute"><defs><linearGradient id="pc2g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#5EB6FF"/><stop offset="1" stop-color="#006EFF"/></linearGradient></defs></svg>
         <div class="pc3-eyebrow">The Longevity Blueprint · November offer</div>
-        <div class="pc3-off"><span class="big">50% off</span><span class="sub">your first month</span></div>
+        <div class="pc3-off"><span class="big">55% off</span><span class="sub">your first month</span></div>
         <div class="pc3-price" data-no-promo data-credit-price>
           <div class="pc3-now"><span class="cur">$</span>79<span class="per">first month</span></div>
-          <div class="pc3-meta"><s>Regular $169</s><span class="save">You save $90</span></div>
+          <div class="pc3-meta"><s>Regular $169</s><span class="save">55% off trial discount</span></div>
           <div class="pc3-then">Then <b>$169</b> a month for 4 months</div>
         </div>
         <div class="pc3-sep"><span>What you get</span></div>
