@@ -6150,14 +6150,14 @@ html body#lpRoot #vip .mj-cap{padding:20px 24px 24px}
 html body#lpRoot #vip .mj-cap b{display:block;font-family:'Codec Pro','Inter',sans-serif!important;font-weight:700!important;font-size:clamp(22px,1.7vw,26px)!important;letter-spacing:-.02em;line-height:1.1!important;color:#fff!important}
 html body#lpRoot #vip .mj-cap span{display:block;margin-top:8px;font-family:Inter,sans-serif!important;font-size:16.5px!important;line-height:1.5!important;color:rgba(255,255,255,.76)!important}
 html body#lpRoot #vip .mj-wide{grid-column:5/13;grid-row:2/3;display:flex;flex-direction:column;min-height:0;background:#020714}
-html body#lpRoot #vip .mj-wide video{display:block;width:100%!important;flex:none;height:auto!important;aspect-ratio:21/9;object-fit:cover;background:#020714;max-width:100%}
+html body#lpRoot #vip .mj-wide video{display:block;width:100%!important;flex:none;height:auto!important;aspect-ratio:21/9;object-fit:contain!important;object-position:50% 50%;background:#020714;max-width:100%}
 @media(max-width:1000px){
  html body#lpRoot #vip .mj-bento{grid-template-columns:1fr 1fr}
  html body#lpRoot #vip .mj-photo{grid-column:1/3;grid-row:auto;min-height:0}
  html body#lpRoot #vip .mj-photo img{aspect-ratio:16/11;flex:none}
  html body#lpRoot #vip .mj-vid:nth-child(2),html body#lpRoot #vip .mj-vid:nth-child(3){grid-column:auto}
  html body#lpRoot #vip .mj-wide{grid-column:1/3;grid-row:auto;grid-template-columns:1fr}
- html body#lpRoot #vip .mj-wide video{aspect-ratio:16/9;height:auto!important;min-height:0;object-fit:cover;flex:none}
+ html body#lpRoot #vip .mj-wide video{aspect-ratio:16/9;height:auto!important;min-height:0;object-fit:contain!important;flex:none}
  html body#lpRoot #vip .mj-wide-bar{flex-direction:column;align-items:stretch;text-align:center}
  html body#lpRoot #vip .mj-btn{width:100%;white-space:normal}
 }
@@ -6176,7 +6176,8 @@ html body#lpRoot #vip .mj-wide video{display:block;width:100%!important;flex:non
  html body#lpRoot #vip .mj-photo-body{padding:16px 18px 18px;margin-top:-56px}
  html body#lpRoot #vip .mj-h3{font-size:26px!important}
  html body#lpRoot #vip .mj-role{font-size:17px!important;margin-bottom:10px!important}
- html body#lpRoot #vip .mj-vid video,html body#lpRoot #vip .mj-wide video{aspect-ratio:16/10!important;height:auto!important;flex:none!important}
+ html body#lpRoot #vip .mj-vid video{aspect-ratio:16/10!important;height:auto!important;flex:none!important}
+ html body#lpRoot #vip .mj-wide video{aspect-ratio:16/9!important;height:auto!important;flex:none!important;object-fit:contain!important}
  html body#lpRoot #vip .mj-cap{padding:14px 16px 16px}
  html body#lpRoot #vip .mj-cap b{font-size:21px!important}
  html body#lpRoot #vip .mj-cap span{font-size:15px!important}
