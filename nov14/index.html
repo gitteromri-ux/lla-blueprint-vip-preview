@@ -6109,41 +6109,60 @@ html body#lpRoot #vip .lla-vip-portrait{max-width:680px}
 /* upright everywhere: the base stylesheet set the whole page to italic */
 html body#lpRoot#lpRoot#lpRoot#lpRoot#lpRoot#lpRoot#lpRoot#lpRoot#lpRoot#lpRoot#lpRoot#lpRoot,html body#lpRoot#lpRoot#lpRoot#lpRoot#lpRoot#lpRoot#lpRoot#lpRoot#lpRoot#lpRoot#lpRoot#lpRoot *:not(em):not(i):not(.serif-i){font-style:normal!important}
 html body#lpRoot em{font-style:italic}
-/* Julie VIP fold: the masterclass hero */
-html body#lpRoot #vip.mc-hero{position:relative;overflow:hidden;background:#04070e!important;color:#fff;padding:0!important;margin:0}
-html body#lpRoot #vip .mc-media{position:absolute;inset:0;z-index:0}
-html body#lpRoot #vip .mc-media video{position:absolute;top:50%;transform:translateY(-50%);right:0;height:76%;width:46%;max-width:none;object-fit:cover;object-position:40% 22%;-webkit-mask-image:radial-gradient(115% 100% at 62% 50%,#000 55%,transparent 97%);mask-image:radial-gradient(115% 100% at 62% 50%,#000 55%,transparent 97%)}
-html body#lpRoot #vip .mc-media::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,#04070e 49%,rgba(4,7,14,.88) 57%,rgba(4,7,14,.35) 67%,rgba(4,7,14,0) 80%),linear-gradient(0deg,#04070e 0%,rgba(4,7,14,.55) 12%,rgba(4,7,14,0) 32%),linear-gradient(180deg,rgba(4,7,14,.75) 0%,rgba(4,7,14,.28) 18%,rgba(4,7,14,0) 38%)}
-html body#lpRoot #vip .mc-inner{position:relative;z-index:2;display:flex;align-items:center;min-height:min(82vh,800px);padding-top:120px;padding-bottom:110px}
-html body#lpRoot #vip .mc-copy{max-width:660px}
+/* Julie VIP fold: masterclass typography, framed portrait, no film */
+html body#lpRoot #vip.mc-hero{position:relative;overflow:hidden;background:#04070e!important;color:#fff;padding:clamp(72px,8vw,112px) 0!important;margin:0;z-index:3;isolation:isolate}
+html body#lpRoot #vip.mc-hero::before,html body#lpRoot #vip.mc-hero::after{display:none!important;content:none!important}
+html body#lpRoot #vip .mc-inner{position:relative;z-index:2;display:grid;grid-template-columns:1.04fr .96fr;gap:clamp(40px,5vw,80px);align-items:center}
+html body#lpRoot #vip .mc-copy{max-width:640px}
+html body#lpRoot #vip .mc-media{position:relative;margin:0;width:100%;max-width:500px;justify-self:end}
+html body#lpRoot #vip .mc-media img{width:100%;aspect-ratio:4/4.9;object-fit:cover;object-position:50% 8%;border-radius:26px;border:1px solid rgba(138,210,255,.35);box-shadow:0 50px 120px rgba(0,0,0,.6),0 0 90px rgba(56,166,255,.25);display:block;max-width:100%}
+html body#lpRoot #vip .mc-media .mc-tag{position:absolute;left:20px;top:20px;margin:0}
 html body#lpRoot #vip .mc-tag{display:inline-block;background:linear-gradient(180deg,#8AD2FF,#38A6FF);color:#03182b!important;font-family:Inter,sans-serif!important;font-size:14px!important;font-weight:800!important;letter-spacing:.06em;text-transform:uppercase;line-height:1.2;padding:11px 18px;border-radius:999px;box-shadow:0 0 24px rgba(56,166,255,.6);margin:0 0 24px}
 html body#lpRoot #vip .mc-year{font-size:clamp(21px,1.75vw,26px)!important;line-height:1.3;color:#bcd9ff!important;font-family:'Instrument Serif',Georgia,serif!important;font-weight:400!important;margin:0 0 22px!important;max-width:none}
-html body#lpRoot #vip .mc-head{font-family:'Codec Pro','Inter',sans-serif!important;font-weight:700!important;font-size:clamp(40px,3.7vw,68px)!important;line-height:1.04!important;letter-spacing:-.02em!important;color:#fff!important;margin:0!important;max-width:none;text-align:left}
+html body#lpRoot #vip .mc-head{font-family:'Codec Pro','Inter',sans-serif!important;font-weight:700!important;font-size:clamp(40px,3.5vw,64px)!important;line-height:1.04!important;letter-spacing:-.02em!important;color:#fff!important;margin:0!important;max-width:none;text-align:left}
 html body#lpRoot #vip .mc-head::before{display:none!important;content:none!important}
 html body#lpRoot #vip .mc-head .serif-i{font-family:'Instrument Serif',Georgia,serif!important;font-weight:400!important;letter-spacing:0!important;color:#6FA8FF!important}
 html body#lpRoot#lpRoot#lpRoot#lpRoot#lpRoot#lpRoot#lpRoot#lpRoot#lpRoot#lpRoot#lpRoot#lpRoot#lpRoot #vip .serif-i{font-style:italic!important}
-html body#lpRoot #vip .mc-desc{margin:26px 0 0!important;font-family:Inter,sans-serif!important;font-size:21px!important;line-height:1.6!important;color:#e2eaf6!important;max-width:640px}
+html body#lpRoot #vip .mc-desc{margin:26px 0 0!important;font-family:Inter,sans-serif!important;font-size:20px!important;line-height:1.6!important;color:#e2eaf6!important;max-width:640px}
 html body#lpRoot #vip .mc-desc strong{color:#fff!important;font-weight:700!important}
 html body#lpRoot #vip .mc-actions{display:flex;flex-wrap:wrap;gap:18px;margin-top:30px}
 html body#lpRoot #vip .mc-btn{display:inline-flex;align-items:center;justify-content:center;border-radius:14px!important;font-family:Inter,sans-serif!important;font-size:18px!important;font-weight:700!important;letter-spacing:.01em;padding:19px 42px!important;cursor:pointer;border:1px solid transparent;transition:.35s ease;white-space:nowrap;text-decoration:none!important;line-height:1.2}
 html body#lpRoot #vip .mc-btn-blue{background:linear-gradient(180deg,#8AD2FF 0%,#38A6FF 100%)!important;color:#03182b!important;border:1px solid rgba(190,230,255,.9)!important;box-shadow:0 0 16px rgba(94,182,255,.85),0 0 46px rgba(0,150,255,.5),0 10px 30px rgba(0,0,0,.45),inset 0 1px 0 rgba(255,255,255,.7)!important}
-html body#lpRoot #vip .mc-btn-blue:hover{background:linear-gradient(180deg,#A5DEFF 0%,#54B6FF 100%)!important;transform:translateY(-2px);box-shadow:0 0 24px rgba(120,200,255,.95),0 0 70px rgba(0,150,255,.6),0 14px 36px rgba(0,0,0,.5),inset 0 1px 0 rgba(255,255,255,.8)!important}
+html body#lpRoot #vip .mc-btn-blue:hover{background:linear-gradient(180deg,#A5DEFF 0%,#54B6FF 100%)!important;transform:translateY(-2px)}
 html body#lpRoot #vip .mc-btn-ghost{background:transparent!important;color:#fff!important;border-color:rgba(255,255,255,.45)!important;box-shadow:none!important}
 html body#lpRoot #vip .mc-btn-ghost:hover{background:#fff!important;color:#05101f!important}
 html body#lpRoot #vip .mc-dates{margin:24px 0 0!important;font-size:20px!important;font-family:'Instrument Serif',Georgia,serif!important;font-weight:400!important;color:#cdd9ec!important;max-width:none}
 @media(max-width:980px){
- html body#lpRoot #vip .mc-media video{width:100%;height:100%;top:0;transform:none;-webkit-mask-image:none;mask-image:none;object-position:50% 28%}
- html body#lpRoot #vip .mc-media::after{background:linear-gradient(180deg,rgba(4,7,14,.6) 0%,rgba(4,7,14,.78) 55%,#04070e 96%)}
- html body#lpRoot #vip .mc-inner{min-height:0;padding-top:96px;padding-bottom:72px}
+ html body#lpRoot #vip .mc-inner{grid-template-columns:1fr;gap:36px}
+ html body#lpRoot #vip .mc-media{max-width:440px;justify-self:start}
 }
 @media(max-width:760px){
- html body#lpRoot #vip .mc-inner{padding-top:76px;padding-bottom:56px}
+ html body#lpRoot #vip.mc-hero{padding:64px 0!important}
  html body#lpRoot #vip .mc-tag{font-size:12.5px!important;padding:10px 14px;white-space:normal;line-height:1.3}
- html body#lpRoot #vip .mc-head{font-size:clamp(38px,10vw,56px)!important}
+ html body#lpRoot #vip .mc-media .mc-tag{left:14px;top:14px;font-size:11.5px!important}
+ html body#lpRoot #vip .mc-head{font-size:clamp(38px,10vw,54px)!important}
  html body#lpRoot #vip .mc-desc{font-size:18.5px!important}
  html body#lpRoot #vip .mc-actions .mc-btn{width:100%;white-space:normal}
  html body#lpRoot #vip .mc-dates{font-size:18px!important}
 }
+/* course timeline in four colours + benefit lines */
+html body#lpRoot #syllabus .curriculum-tab:nth-child(1){--tab-c:#22B27A}
+html body#lpRoot #syllabus .curriculum-tab:nth-child(2){--tab-c:#2F7BFF}
+html body#lpRoot #syllabus .curriculum-tab:nth-child(3){--tab-c:#E8A75A}
+html body#lpRoot #syllabus .curriculum-tab:nth-child(4){--tab-c:#7C5CFF}
+html body#lpRoot #syllabus .curriculum-tab .curriculum-tab-num{color:var(--tab-c)!important;font-weight:700!important}
+html body#lpRoot #syllabus .curriculum-tab.is-active{border:1px solid var(--tab-c)!important;box-shadow:0 0 0 1px var(--tab-c),0 0 44px -8px var(--tab-c),0 30px 60px -30px rgba(6,22,51,.8)!important}
+html body#lpRoot #syllabus .phase-block[data-phase="1"]{--ph:#22B27A}
+html body#lpRoot #syllabus .phase-block[data-phase="2"]{--ph:#2F7BFF}
+html body#lpRoot #syllabus .phase-block[data-phase="3"]{--ph:#E8A75A}
+html body#lpRoot #syllabus .phase-block[data-phase="4"]{--ph:#7C5CFF}
+html body#lpRoot #syllabus .phase-block .curriculum-num{color:var(--ph)!important;background:color-mix(in srgb,var(--ph) 14%,#fff)!important;border:1px solid color-mix(in srgb,var(--ph) 45%,#fff)!important;font-weight:700!important}
+html body#lpRoot #syllabus .phase-benefit{display:flex;gap:14px;align-items:flex-start;margin:0 0 18px!important;padding:16px 20px;border-radius:14px;background:color-mix(in srgb,var(--ph) 9%,#fff);border:1px solid color-mix(in srgb,var(--ph) 30%,#fff);font-family:Inter,sans-serif!important;font-size:17px!important;line-height:1.5!important;color:#0a244e!important;max-width:none}
+html body#lpRoot #syllabus .phase-benefit b{color:var(--ph)!important;font-weight:700!important}
+html body#lpRoot #syllabus .phase-benefit::before{content:"";flex:0 0 5px;align-self:stretch;border-radius:3px;background:var(--ph);box-shadow:0 0 14px var(--ph)}
+html body#lpRoot #syllabus .syl-benefit{color:#0a5bd8!important;max-width:820px;margin:14px 0 0!important;font-weight:500!important}
+html body#lpRoot #learn-com .section-title{overflow:visible!important;padding:0 .12em!important}
+@media(max-width:760px){html body#lpRoot #syllabus .phase-benefit{font-size:15.5px!important;padding:13px 14px}}
 /* Abbott Lingo fold: compact two-column band on desktop, copy unchanged */
 @media(min-width:901px){
  html body#lpRoot #cgm{padding:clamp(56px,6vw,88px) 0!important}
@@ -6272,161 +6291,11 @@ html body#lpRoot#lpRoot#lpRoot#lpRoot#lpRoot#lpRoot#lpRoot#lpRoot#lpRoot#lpRoot#
       </figure></div>
   </div>
 </section>
-<section id="vip" class="mc-hero is-dark" aria-label="Julie Gibson Clark VIP Masterclass, included">
-  <div class="mc-media" aria-hidden="true">
-    <video src="assets/film/julie-film-720p.mp4" poster="assets/film/julie-film-poster.jpg" autoplay muted loop playsinline preload="metadata"></video>
-  </div>
-  <div class="container mc-inner">
-    <div class="mc-copy">
-      <span class="mc-tag">&#11088; Free VIP access included with The Longevity Blueprint</span>
-      <p class="mc-year serif-i">The Longevity Masterclass of the Year &middot; 60 minutes, live</p>
-      <h2 class="mc-head">Learn to age slower<br><span class="serif-i">from the 2nd slowest aging human on earth.</span></h2>
-      <p class="mc-desc"><strong>Julie Gibson Clark</strong> ages eight months for every year. She teaches you her complete protocol, live on Zoom. 60 minutes, with an additional 30-minute private Q&amp;A for VIP participants. <strong>Free VIP access included when you enroll in November.</strong></p>
-      <div class="mc-actions">
-        <a class="mc-btn mc-btn-blue" href="#enrollModal" data-fn-cta="vip" data-enroll-course="1">Enroll now &middot; VIP seat included</a>
-        <a class="mc-btn mc-btn-ghost" href="#offer">See the November offer</a>
-      </div>
-      <p class="mc-dates serif-i"><span style="white-space:nowrap">Sat, November 14 &middot; 1:00 PM ET</span> &middot; Live on Zoom</p>
-    </div>
-  </div>
-</section>
-<section class="lla-price" id="offer" data-lp-num="04" data-lp-kicker="The course">
-  <div class="lp-light" aria-hidden="true"></div>
-  <div class="lp-grid-bg" aria-hidden="true"></div>
-  <span class="lp-num" aria-hidden="true">04</span>
-  <div class="lp-wrap">
-    <h2>One price.<br><em>Everything included.</em></h2>
-    <p class="lp-lead">Online sign-ups in November only.</p>
-    <div class="lp-grid">
-      <div class="pc2">
-        <svg width="0" height="0" aria-hidden="true" style="position:absolute"><defs><linearGradient id="pc2g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#5EB6FF"/><stop offset="1" stop-color="#006EFF"/></linearGradient></defs></svg>
-        <div class="pc2-benefits">
-          <div class="pc2-eyebrow">The Longevity Blueprint</div>
-          <h3 class="pc2-title">Everything you need to build your own longevity protocol.</h3>
-          <ul class="pc2-list">
-            <li><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="12" fill="url(#pc2g)"/><path d="M7.2 12.5l3 3 6.6-6.9" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><div><b>18-week live course</b><span>Small groups, live online, one class a week.</span></div></li>
-            <li><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="12" fill="url(#pc2g)"/><path d="M7.2 12.5l3 3 6.6-6.9" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><div><b>Your own longevity protocol</b><span>Tailored to your numbers.</span></div></li>
-            <li><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="12" fill="url(#pc2g)"/><path d="M7.2 12.5l3 3 6.6-6.9" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><div><b>Free Abbott Lingo CGM</b><span>Shipped to you.</span></div></li>
-            <li><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="12" fill="url(#pc2g)"/><path d="M7.2 12.5l3 3 6.6-6.9" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><div><b>$100 cash back</b><span>On your next course.</span></div></li>
-          </ul>
-          <div class="pc2-vip"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.6l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.5l-5.9 3.1 1.2-6.5L2.5 9.5l6.6-.9z" fill="currentColor"/></svg><div><b>Free VIP access to Julie Gibson Clark’s Masterclass</b><span>90-minute masterclass and Q&amp;A, live on Zoom</span></div><em>Nov 14</em></div>
-          <a href="#enrollModal" class="pc2-cta pc2-cta--m" data-fn-cta="offer-m" data-enroll-course="1">Enroll now</a>
-        </div>
-        <div class="pc2-price" data-no-promo data-credit-price>
-          <div class="pc2-badge"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.6 13.4l-7.2 7.2a2 2 0 0 1-2.8 0L3.4 13.4A2 2 0 0 1 2.8 12V4a2 2 0 0 1 2-2h8a2 2 0 0 1 1.4.6l7.2 7.2a2 2 0 0 1 0 2.8z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><circle cx="7.5" cy="7.5" r="1.6" fill="currentColor"/></svg>55% off your first month</div>
-          <div class="pc2-now"><span class="cur">$</span>79</div>
-          <div class="pc2-per">First month</div>
-          <div class="pc2-chips"><s>Regular $169</s><span class="save">55% off trial discount</span></div>
-          <div class="pc2-then">Then <b>$169</b> a month for 4 months</div>
-          <ul class="pc2-facts">
-            <li>Live classes start <b>Mon, Nov 23</b> or <b>Wed, Nov 25</b></li>
-            <li>Pay monthly by card or PayPal</li>
-            <li>Cancel within 14 days for a full refund</li>
-            <li>Julie’s VIP Masterclass seat confirmed by email</li>
-          </ul>
-          <a href="#enrollModal" class="pc2-cta" id="offerEnroll" data-fn-cta="offer" data-enroll-course="1">Enroll now</a>
-          <p class="pc2-note">14-day try-out refund · Online sign-ups in November only</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<section class="lla-incl is-light" id="included">
-  <div class="container">
-    <div class="lla-incl-head">
-      <span class="eyebrow">What you get</span>
-      <h2 class="section-title">Everything a longevity protocol needs. <em>In one course.</em></h2>
-    </div>
-    <div class="lla-incl-grid">
-      <article class="lla-incl-card" style="--c1:#006EFF;--c2:#5EB6FF"><span class="n">01</span><h3>Live 18-week course</h3><p>Small groups. One class a week, recorded.</p><b>Included</b></article>
-      <article class="lla-incl-card" style="--c1:#22B27A;--c2:#7DE5C1"><span class="n">02</span><h3>The 6 pillars of longevity</h3><p>Top instructors.</p><b>Included</b></article>
-      <article class="lla-incl-card" style="--c1:#0FB5D6;--c2:#7DE5FF"><span class="n">03</span><h3>Your protocol in 18 weeks</h3><p>Built on your own numbers.</p><b>Included</b></article>
-      <article class="lla-incl-card" style="--c1:#FF7A45;--c2:#FFB38A"><span class="n">04</span><h3>Free Abbott Lingo CGM</h3><p>Shipped to your home.</p><b>Included</b></article>
-      <article class="lla-incl-card" style="--c1:#22E39A;--c2:#7DE5C1"><span class="n">05</span><h3>$100 cash back</h3><p>On your next course.</p><b>November only</b></article>
-      <article class="lla-incl-card" style="--c1:#7C5CFF;--c2:#B79DFF"><span class="n">06</span><h3>Julie’s VIP Masterclass</h3><p>Live, November 14. Plus private Q&amp;A.</p><b>Bonus, free</b></article>
-      <article class="lla-incl-card" style="--c1:#006EFF;--c2:#5EB6FF"><span class="n">07</span><h3>14-day try-out refund</h3><p>Course fee back, no questions.</p><b>Included</b></article>
-    </div>
-  </div>
-</section>
-<section class="cgm-fold is-dark" id="cgm">
-  <div class="container">
-    <div class="cgm-fold-header reveal">
-      <span class="cgm-fold-eyebrow">Part of the course</span>
-      <h2 class="cgm-fold-title">Get your free Lingo CGM. Read your own biomarkers by lesson 5, then build your protocol on them.</h2>
-      <p class="cgm-fold-sub">Included with the course. The Abbott Lingo sensor and app ship to your door, so from week 5 every class works on your own glucose data, not averages.</p>
-    </div>
-    <div class="cgm-fold-images reveal rail">
-      <div class="cgm-fold-img"><img src="https://longevitylifeacademy.pages.dev/assets/lingo-1.jpg" alt="Abbott Lingo biosensor and app" loading="lazy"></div>
-      <div class="cgm-fold-img"><img src="https://longevitylifeacademy.pages.dev/assets/lingo-2.jpg" alt="Lingo packaging" loading="lazy"></div>
-      <div class="cgm-fold-img"><img src="https://longevitylifeacademy.pages.dev/assets/lingo-6.jpg" alt="Lingo CGM lifestyle" loading="lazy"></div>
-    </div><div class="rail-dots" aria-hidden="true"><i></i><i></i><i></i></div>
-    <div class="cgm-fold-bullets reveal">
-      <div class="cgm-fold-bullet"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"></path></svg><span>14-day Abbott Lingo biosensor, water-resistant, painless application</span></div>
-      <div class="cgm-fold-bullet"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"></path></svg><span>Full Lingo app access included, iOS and Android, Apple Health and Health Connect</span></div>
-      <div class="cgm-fold-bullet"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"></path></svg><span>No prescription needed, FSA and HSA eligible</span></div>
-      <div class="cgm-fold-bullet"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"></path></svg><span>For students 18+. Not for insulin users. Not for medical diagnosis.</span></div>
-      <div class="cgm-fold-bullet"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"></path></svg><span>One unit per student, shipped to U.S. addresses</span></div>
-    </div>
-    <div class="cgm-fold-cta-wrap reveal">
-      <a href="https://longevitylifeacademy.com/cgm.html" target="_blank" rel="noopener" class="cgm-fold-cta">Learn more about the device <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"></path></svg></a>
-    </div>
-  </div>
-</section>
-<section class="hp-instructors is-light" id="teachers">
-  <div class="container">
-    <div class="hp-instructors-header reveal" style="text-align: center; margin-bottom: 48px;">
-      <span class="eyebrow" style="margin-bottom: 12px; display: block;">Your Instructors</span>
-      <h2 class="section-title">Who teaches you.</h2>
-      <p class="section-subtitle" style="margin: 0 auto; max-width: 720px;">Certified longevity practitioners and researchers. Live in every class, answering your questions.</p>
-    </div>
-    <!-- LIVE instructor grid: Row 1 = Natalie, Julie (middle), Courtney; Row 2 = Amy, Jordan -->
-    <div class="hp-teachers-grid-live reveal rail"><a class="hp-teacher-card-live hp-teacher-card-link" href="https://www.longevitylifeacademy.com/teachers/natalie.html" target="_blank" rel="noopener">
-        <div class="hp-teacher-card-live-photo hp-teacher-card-live-photo--square"><img src="https://longevitylifeacademy.pages.dev/assets/instructors/natalie.jpg" alt="Natalie Blackbourne" loading="lazy"></div>
-        <div class="hp-teacher-card-live-body">
-          <h4 class="hp-teacher-card-live-name">Natalie Blackbourne</h4>
-          <span class="hp-teacher-card-live-role">Longevity Researcher &amp; Educator</span>
-          <p class="hp-teacher-card-live-bio">M.S. Emotional Intelligence with ~20 years in health and wellness. Focuses on neuroscience and cognitive optimization for long-term vitality.</p>
-        </div>
-      </a><a class="hp-teacher-card-live hp-teacher-card-link" href="https://www.longevitylifeacademy.com/teachers/courtney.html" target="_blank" rel="noopener">
-        <div class="hp-teacher-card-live-photo hp-teacher-card-live-photo--square"><img src="https://longevitylifeacademy.pages.dev/assets/instructors/courtney.jpg" alt="Courtney Donofrio" loading="lazy"></div>
-        <div class="hp-teacher-card-live-body">
-          <h4 class="hp-teacher-card-live-name">Courtney Donofrio</h4>
-          <span class="hp-teacher-card-live-role">Longevity Life Academy Instructor</span>
-          <p class="hp-teacher-card-live-bio">IIN-certified founder of EatBiohackLove, based in Amsterdam. Specializes in gut health, hormone balance, and practical biohacking.</p>
-        </div>
-      </a><a class="hp-teacher-card-live is-julie hp-teacher-card-link is-founding" href="https://www.longevitylifeacademy.com/teachers/julie-gibson-clark.html" target="_blank" rel="noopener">
-        <div class="hp-teacher-card-live-photo hp-teacher-card-live-photo--square"><img src="https://longevitylifeacademy.pages.dev/assets/instructors/julie-gibson-clark.jpg" alt="Julie Gibson Clark" loading="lazy"></div>
-        <div class="hp-teacher-card-live-body">
-          <h4 class="hp-teacher-card-live-name">Julie Gibson Clark</h4>
-          <span class="hp-teacher-card-live-role">Founding Faculty, 2nd Slowest-Aging Woman on Earth</span>
-          <p class="hp-teacher-card-live-bio">2nd slowest-aging woman on earth, and a leading voice in accessible, evidence-based longevity, and Founding Faculty at Longevity Life Academy.</p>
-        </div>
-      </a><a class="hp-teacher-card-live hp-teacher-card-link" href="https://www.longevitylifeacademy.com/teachers/amy.html" target="_blank" rel="noopener">
-        <div class="hp-teacher-card-live-photo hp-teacher-card-live-photo--square"><img src="https://longevitylifeacademy.pages.dev/assets/instructors/amy.jpg" alt="Amy Jamieson" loading="lazy"></div>
-        <div class="hp-teacher-card-live-body">
-          <h4 class="hp-teacher-card-live-name">Amy Jamieson</h4>
-          <span class="hp-teacher-card-live-role">Senior Lecturer, UC Santa Barbara</span>
-          <p class="hp-teacher-card-live-bio">M.S. Health Science &amp; Kinesiology, NASM CPT/CES, ACE Health Coach. 25+ years in higher education and a master competitive runner.</p>
-        </div>
-      </a><a class="hp-teacher-card-live hp-teacher-card-link" href="https://www.longevitylifeacademy.com/teachers/jordan.html" target="_blank" rel="noopener">
-        <div class="hp-teacher-card-live-photo hp-teacher-card-live-photo--square"><img src="https://longevitylifeacademy.pages.dev/assets/instructors/jordan.jpg" alt="Jordan Lattimore" loading="lazy"></div>
-        <div class="hp-teacher-card-live-body">
-          <h4 class="hp-teacher-card-live-name">Jordan Lattimore</h4>
-          <span class="hp-teacher-card-live-role">Behavioral &amp; Education Specialist</span>
-          <p class="hp-teacher-card-live-bio">B.Sc. Psychology, University of Alberta. 12 years in Costa Rica near the Nicoya Blue Zone, 5+ years in behavioral therapy.</p>
-        </div>
-      </a></div><div class="rail-dots" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
-</div>
-    <!-- CREDENTIAL BADGES STRIP removed per CEO request - only official logos allowed, awaiting official org artwork -->
-    <div class="hp-instructors-cta reveal" style="text-align:center; margin-top: 48px;">
-      <a href="#offer" class="section-cta-btn" data-fn-cta="teachers">Enroll Now <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"></path></svg></a>
-    </div>
-  </section>
 <section class="topics" id="learn-com"><span class="lla-neon-top" aria-hidden="true"></span><span class="lla-neon-glow" aria-hidden="true"></span>
   <div class="container">
     <div class="topics-header">
       <span class="eyebrow">The course</span>
-      <h2 class="section-title">The Longevity Blueprint course. <em>Master the six pillars of longevity.</em></h2>
+      <h2 class="section-title">The Longevity Blueprint course. <em>Master the six pillars of longevity for a longer, better life.</em></h2>
       <p class="section-subtitle" style="margin:0 auto;">18 live classes over 18 weeks, one pillar at a time, with a certified longevity instructor.</p>
     </div>
     <div class="tg-rail-wrap"><button class="tg-arrow tg-prev" type="button" aria-label="Previous">‹</button><div class="topic-grid-v2" id="tgRail">
@@ -6502,6 +6371,7 @@ html body#lpRoot#lpRoot#lpRoot#lpRoot#lpRoot#lpRoot#lpRoot#lpRoot#lpRoot#lpRoot#
     <div class="curriculum-header reveal">
       <h2 class="section-title">The 18 classes, <em>week by week.</em></h2>
       <p class="section-subtitle" style="margin: 0 auto;">A structured 18-week course from longevity foundations to your personal blueprint, taught live by your instructor.</p>
+      <p class="section-subtitle syl-benefit">Every class ends with one experiment on your own numbers, so by week 18 your protocol is already tested on you, not on averages.</p>
     </div>
     <div class="curriculum-tabs reveal" role="tablist" aria-label="Curriculum phases">
       <button class="curriculum-tab is-active" data-phase-tab="1" role="tab" aria-selected="true">
@@ -6532,6 +6402,7 @@ html body#lpRoot#lpRoot#lpRoot#lpRoot#lpRoot#lpRoot#lpRoot#lpRoot#lpRoot#lpRoot#
           <span class="phase-block-label">Phase 1, Sessions 1-3</span>
           <span class="phase-block-name">Foundation</span>
         </div>
+        <p class="phase-benefit"><span><b>You leave Phase 1 with</b> your baseline: a self-assessment of where you stand today and the one signal, blood sugar, that the rest of the course is built on.</span></p>
         <div class="phase-block-sessions">
           <div class="curriculum-item" data-session="1">
             <button class="curriculum-trigger" onclick="toggleCurriculum(this)">
@@ -6610,6 +6481,7 @@ html body#lpRoot#lpRoot#lpRoot#lpRoot#lpRoot#lpRoot#lpRoot#lpRoot#lpRoot#lpRoot#
           <span class="phase-block-label">Phase 2, Sessions 4-7</span>
           <span class="phase-block-name">Data &amp; Discovery</span>
         </div>
+        <p class="phase-benefit"><span><b>You leave Phase 2 with</b> two weeks of your own glucose data and the ability to read it, so you know which meals, food orders and timings work for your body.</span></p>
         <div class="phase-block-sessions">
           <div class="curriculum-item" data-session="4">
             <button class="curriculum-trigger" onclick="toggleCurriculum(this)">
@@ -6711,6 +6583,7 @@ html body#lpRoot#lpRoot#lpRoot#lpRoot#lpRoot#lpRoot#lpRoot#lpRoot#lpRoot#lpRoot#
           <span class="phase-block-label">Phase 3, Sessions 8-13</span>
           <span class="phase-block-name">Lifestyle Systems</span>
         </div>
+        <p class="phase-benefit"><span><b>You leave Phase 3 with</b> tested answers on meal timing, movement, sleep and stress, each tried for a week on your own numbers, so you keep only what works for you.</span></p>
         <div class="phase-block-sessions">
           <div class="curriculum-item" data-session="8">
             <button class="curriculum-trigger" onclick="toggleCurriculum(this)">
@@ -6858,6 +6731,7 @@ html body#lpRoot#lpRoot#lpRoot#lpRoot#lpRoot#lpRoot#lpRoot#lpRoot#lpRoot#lpRoot#
           <span class="phase-block-label">Phase 4, Sessions 14-18</span>
           <span class="phase-block-name">Integration &amp; Blueprint</span>
         </div>
+        <p class="phase-benefit"><span><b>You leave Phase 4 with</b> your written Personal Longevity Blueprint, built on your blood work and 18 weeks of your data, plus a 90-day plan to keep it going.</span></p>
         <div class="phase-block-sessions">
           <div class="curriculum-item" data-session="14">
             <button class="curriculum-trigger" onclick="toggleCurriculum(this)">
@@ -6980,6 +6854,157 @@ html body#lpRoot#lpRoot#lpRoot#lpRoot#lpRoot#lpRoot#lpRoot#lpRoot#lpRoot#lpRoot#
   </div>
     <div class="curriculum-cta reveal" style="text-align:center; margin-top:64px;">
       <a href="#offer" class="section-cta-btn" data-fn-cta="section">Enroll now <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"></path></svg></a>
+    </div>
+  </section>
+<section id="vip" class="mc-hero is-dark" aria-label="Julie Gibson Clark VIP Masterclass, included">
+  <div class="container mc-inner">
+    <div class="mc-copy">
+      <span class="mc-tag">&#11088; Free VIP access included with The Longevity Blueprint</span>
+      <p class="mc-year serif-i">The Longevity Masterclass of the Year &middot; 60 minutes, live</p>
+      <h2 class="mc-head">Learn to age slower<br><span class="serif-i">from the 2nd slowest aging human on earth.</span></h2>
+      <p class="mc-desc"><strong>Julie Gibson Clark</strong> ages eight months for every year. She teaches you her complete protocol, live on Zoom. 60 minutes, with an additional 30-minute private Q&amp;A for VIP participants. <strong>Free VIP access included when you enroll in November.</strong></p>
+      <div class="mc-actions">
+        <a class="mc-btn mc-btn-blue" href="#enrollModal" data-fn-cta="vip" data-enroll-course="1">Enroll now &middot; VIP seat included</a>
+        <a class="mc-btn mc-btn-ghost" href="#offer">See the November offer</a>
+      </div>
+      <p class="mc-dates serif-i"><span style="white-space:nowrap">Sat, November 14 &middot; 1:00 PM ET</span> &middot; Live on Zoom</p>
+    </div>
+    <figure class="mc-media">
+      <img src="assets/julie-portrait-full.webp" alt="Julie Gibson Clark" loading="lazy" width="1000" height="1400">
+      <span class="mc-tag mc-tag--img">Julie Gibson Clark &middot; Founding Faculty</span>
+    </figure>
+  </div>
+</section>
+<section class="lla-price" id="offer" data-lp-num="04" data-lp-kicker="The course">
+  <div class="lp-light" aria-hidden="true"></div>
+  <div class="lp-grid-bg" aria-hidden="true"></div>
+  <span class="lp-num" aria-hidden="true">04</span>
+  <div class="lp-wrap">
+    <h2>One price.<br><em>Everything included.</em></h2>
+    <p class="lp-lead">Online sign-ups in November only.</p>
+    <div class="lp-grid">
+      <div class="pc2">
+        <svg width="0" height="0" aria-hidden="true" style="position:absolute"><defs><linearGradient id="pc2g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#5EB6FF"/><stop offset="1" stop-color="#006EFF"/></linearGradient></defs></svg>
+        <div class="pc2-benefits">
+          <div class="pc2-eyebrow">The Longevity Blueprint</div>
+          <h3 class="pc2-title">Everything you need to build your own longevity protocol.</h3>
+          <ul class="pc2-list">
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="12" fill="url(#pc2g)"/><path d="M7.2 12.5l3 3 6.6-6.9" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><div><b>18-week live course</b><span>Small groups, live online, one class a week.</span></div></li>
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="12" fill="url(#pc2g)"/><path d="M7.2 12.5l3 3 6.6-6.9" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><div><b>Your own longevity protocol</b><span>Tailored to your numbers.</span></div></li>
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="12" fill="url(#pc2g)"/><path d="M7.2 12.5l3 3 6.6-6.9" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><div><b>Free Abbott Lingo CGM</b><span>Shipped to you.</span></div></li>
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="12" fill="url(#pc2g)"/><path d="M7.2 12.5l3 3 6.6-6.9" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><div><b>$100 cash back</b><span>On your next course.</span></div></li>
+          </ul>
+          <div class="pc2-vip"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.6l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.5l-5.9 3.1 1.2-6.5L2.5 9.5l6.6-.9z" fill="currentColor"/></svg><div><b>Free VIP access to Julie Gibson Clark’s Masterclass</b><span>90-minute masterclass and Q&amp;A, live on Zoom</span></div><em>Nov 14</em></div>
+          <a href="#enrollModal" class="pc2-cta pc2-cta--m" data-fn-cta="offer-m" data-enroll-course="1">Enroll now</a>
+        </div>
+        <div class="pc2-price" data-no-promo data-credit-price>
+          <div class="pc2-badge"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.6 13.4l-7.2 7.2a2 2 0 0 1-2.8 0L3.4 13.4A2 2 0 0 1 2.8 12V4a2 2 0 0 1 2-2h8a2 2 0 0 1 1.4.6l7.2 7.2a2 2 0 0 1 0 2.8z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><circle cx="7.5" cy="7.5" r="1.6" fill="currentColor"/></svg>55% off your first month</div>
+          <div class="pc2-now"><span class="cur">$</span>79</div>
+          <div class="pc2-per">First month</div>
+          <div class="pc2-chips"><s>Regular $169</s><span class="save">55% off trial discount</span></div>
+          <div class="pc2-then">Then <b>$169</b> a month for 4 months</div>
+          <ul class="pc2-facts">
+            <li>Live classes start <b>Mon, Nov 23</b> or <b>Wed, Nov 25</b></li>
+            <li>Pay monthly by card or PayPal</li>
+            <li>Cancel within 14 days for a full refund</li>
+            <li>Julie’s VIP Masterclass seat confirmed by email</li>
+          </ul>
+          <a href="#enrollModal" class="pc2-cta" id="offerEnroll" data-fn-cta="offer" data-enroll-course="1">Enroll now</a>
+          <p class="pc2-note">14-day try-out refund · Online sign-ups in November only</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="lla-incl is-light" id="included">
+  <div class="container">
+    <div class="lla-incl-head">
+      <span class="eyebrow">What you get</span>
+      <h2 class="section-title">Everything a longevity protocol needs. <em>In one course.</em></h2>
+    </div>
+    <div class="lla-incl-grid">
+      <article class="lla-incl-card" style="--c1:#006EFF;--c2:#5EB6FF"><span class="n">01</span><h3>Live 18-week course</h3><p>Small groups. One class a week, recorded.</p><b>Included</b></article>
+      <article class="lla-incl-card" style="--c1:#22B27A;--c2:#7DE5C1"><span class="n">02</span><h3>The 6 pillars of longevity</h3><p>Top instructors.</p><b>Included</b></article>
+      <article class="lla-incl-card" style="--c1:#0FB5D6;--c2:#7DE5FF"><span class="n">03</span><h3>Your protocol in 18 weeks</h3><p>Built on your own numbers.</p><b>Included</b></article>
+      <article class="lla-incl-card" style="--c1:#FF7A45;--c2:#FFB38A"><span class="n">04</span><h3>Free Abbott Lingo CGM</h3><p>Shipped to your home.</p><b>Included</b></article>
+      <article class="lla-incl-card" style="--c1:#22E39A;--c2:#7DE5C1"><span class="n">05</span><h3>$100 cash back</h3><p>On your next course.</p><b>November only</b></article>
+      <article class="lla-incl-card" style="--c1:#7C5CFF;--c2:#B79DFF"><span class="n">06</span><h3>Julie’s VIP Masterclass</h3><p>Live, November 14. Plus private Q&amp;A.</p><b>Bonus, free</b></article>
+      <article class="lla-incl-card" style="--c1:#006EFF;--c2:#5EB6FF"><span class="n">07</span><h3>14-day try-out refund</h3><p>Course fee back, no questions.</p><b>Included</b></article>
+    </div>
+  </div>
+</section>
+<section class="cgm-fold is-dark" id="cgm">
+  <div class="container">
+    <div class="cgm-fold-header reveal">
+      <span class="cgm-fold-eyebrow">Part of the course</span>
+      <h2 class="cgm-fold-title">Get your free Lingo CGM. Read your own biomarkers by lesson 5, then build your protocol on them.</h2>
+      <p class="cgm-fold-sub">Included with the course. The Abbott Lingo sensor and app ship to your door, so from week 5 every class works on your own glucose data, not averages.</p>
+    </div>
+    <div class="cgm-fold-images reveal rail">
+      <div class="cgm-fold-img"><img src="https://longevitylifeacademy.pages.dev/assets/lingo-1.jpg" alt="Abbott Lingo biosensor and app" loading="lazy"></div>
+      <div class="cgm-fold-img"><img src="https://longevitylifeacademy.pages.dev/assets/lingo-2.jpg" alt="Lingo packaging" loading="lazy"></div>
+      <div class="cgm-fold-img"><img src="https://longevitylifeacademy.pages.dev/assets/lingo-6.jpg" alt="Lingo CGM lifestyle" loading="lazy"></div>
+    </div><div class="rail-dots" aria-hidden="true"><i></i><i></i><i></i></div>
+    <div class="cgm-fold-bullets reveal">
+      <div class="cgm-fold-bullet"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"></path></svg><span>14-day Abbott Lingo biosensor, water-resistant, painless application</span></div>
+      <div class="cgm-fold-bullet"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"></path></svg><span>Full Lingo app access included, iOS and Android, Apple Health and Health Connect</span></div>
+      <div class="cgm-fold-bullet"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"></path></svg><span>No prescription needed, FSA and HSA eligible</span></div>
+      <div class="cgm-fold-bullet"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"></path></svg><span>For students 18+. Not for insulin users. Not for medical diagnosis.</span></div>
+      <div class="cgm-fold-bullet"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"></path></svg><span>One unit per student, shipped to U.S. addresses</span></div>
+    </div>
+    <div class="cgm-fold-cta-wrap reveal">
+      <a href="https://longevitylifeacademy.com/cgm.html" target="_blank" rel="noopener" class="cgm-fold-cta">Learn more about the device <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"></path></svg></a>
+    </div>
+  </div>
+</section>
+<section class="hp-instructors is-light" id="teachers">
+  <div class="container">
+    <div class="hp-instructors-header reveal" style="text-align: center; margin-bottom: 48px;">
+      <span class="eyebrow" style="margin-bottom: 12px; display: block;">Your Instructors</span>
+      <h2 class="section-title">Who teaches you.</h2>
+      <p class="section-subtitle" style="margin: 0 auto; max-width: 720px;">Certified longevity practitioners and researchers. Live in every class, answering your questions.</p>
+    </div>
+    <!-- LIVE instructor grid: Row 1 = Natalie, Julie (middle), Courtney; Row 2 = Amy, Jordan -->
+    <div class="hp-teachers-grid-live reveal rail"><a class="hp-teacher-card-live hp-teacher-card-link" href="https://www.longevitylifeacademy.com/teachers/natalie.html" target="_blank" rel="noopener">
+        <div class="hp-teacher-card-live-photo hp-teacher-card-live-photo--square"><img src="https://longevitylifeacademy.pages.dev/assets/instructors/natalie.jpg" alt="Natalie Blackbourne" loading="lazy"></div>
+        <div class="hp-teacher-card-live-body">
+          <h4 class="hp-teacher-card-live-name">Natalie Blackbourne</h4>
+          <span class="hp-teacher-card-live-role">Longevity Researcher &amp; Educator</span>
+          <p class="hp-teacher-card-live-bio">M.S. Emotional Intelligence with ~20 years in health and wellness. Focuses on neuroscience and cognitive optimization for long-term vitality.</p>
+        </div>
+      </a><a class="hp-teacher-card-live hp-teacher-card-link" href="https://www.longevitylifeacademy.com/teachers/courtney.html" target="_blank" rel="noopener">
+        <div class="hp-teacher-card-live-photo hp-teacher-card-live-photo--square"><img src="https://longevitylifeacademy.pages.dev/assets/instructors/courtney.jpg" alt="Courtney Donofrio" loading="lazy"></div>
+        <div class="hp-teacher-card-live-body">
+          <h4 class="hp-teacher-card-live-name">Courtney Donofrio</h4>
+          <span class="hp-teacher-card-live-role">Longevity Life Academy Instructor</span>
+          <p class="hp-teacher-card-live-bio">IIN-certified founder of EatBiohackLove, based in Amsterdam. Specializes in gut health, hormone balance, and practical biohacking.</p>
+        </div>
+      </a><a class="hp-teacher-card-live is-julie hp-teacher-card-link is-founding" href="https://www.longevitylifeacademy.com/teachers/julie-gibson-clark.html" target="_blank" rel="noopener">
+        <div class="hp-teacher-card-live-photo hp-teacher-card-live-photo--square"><img src="https://longevitylifeacademy.pages.dev/assets/instructors/julie-gibson-clark.jpg" alt="Julie Gibson Clark" loading="lazy"></div>
+        <div class="hp-teacher-card-live-body">
+          <h4 class="hp-teacher-card-live-name">Julie Gibson Clark</h4>
+          <span class="hp-teacher-card-live-role">Founding Faculty, 2nd Slowest-Aging Woman on Earth</span>
+          <p class="hp-teacher-card-live-bio">2nd slowest-aging woman on earth, and a leading voice in accessible, evidence-based longevity, and Founding Faculty at Longevity Life Academy.</p>
+        </div>
+      </a><a class="hp-teacher-card-live hp-teacher-card-link" href="https://www.longevitylifeacademy.com/teachers/amy.html" target="_blank" rel="noopener">
+        <div class="hp-teacher-card-live-photo hp-teacher-card-live-photo--square"><img src="https://longevitylifeacademy.pages.dev/assets/instructors/amy.jpg" alt="Amy Jamieson" loading="lazy"></div>
+        <div class="hp-teacher-card-live-body">
+          <h4 class="hp-teacher-card-live-name">Amy Jamieson</h4>
+          <span class="hp-teacher-card-live-role">Senior Lecturer, UC Santa Barbara</span>
+          <p class="hp-teacher-card-live-bio">M.S. Health Science &amp; Kinesiology, NASM CPT/CES, ACE Health Coach. 25+ years in higher education and a master competitive runner.</p>
+        </div>
+      </a><a class="hp-teacher-card-live hp-teacher-card-link" href="https://www.longevitylifeacademy.com/teachers/jordan.html" target="_blank" rel="noopener">
+        <div class="hp-teacher-card-live-photo hp-teacher-card-live-photo--square"><img src="https://longevitylifeacademy.pages.dev/assets/instructors/jordan.jpg" alt="Jordan Lattimore" loading="lazy"></div>
+        <div class="hp-teacher-card-live-body">
+          <h4 class="hp-teacher-card-live-name">Jordan Lattimore</h4>
+          <span class="hp-teacher-card-live-role">Behavioral &amp; Education Specialist</span>
+          <p class="hp-teacher-card-live-bio">B.Sc. Psychology, University of Alberta. 12 years in Costa Rica near the Nicoya Blue Zone, 5+ years in behavioral therapy.</p>
+        </div>
+      </a></div><div class="rail-dots" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
+</div>
+    <!-- CREDENTIAL BADGES STRIP removed per CEO request - only official logos allowed, awaiting official org artwork -->
+    <div class="hp-instructors-cta reveal" style="text-align:center; margin-top: 48px;">
+      <a href="#offer" class="section-cta-btn" data-fn-cta="teachers">Enroll Now <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"></path></svg></a>
     </div>
   </section>
 <section class="hp-about is-dark" id="institution">
