@@ -51,33 +51,32 @@ strip='''
 '''
 # 6. Offer rewrite
 offer=blocks['offer']
-offer_new=re.sub(r'<p class="lp-lead">.*?</p>', '<p class="lp-lead">Live 18-week course, free Abbott Lingo CGM, $100 cash back. Online sign-ups in November only.</p>', offer, count=1, flags=re.S)
-card_new='''<aside class="lp-card">
-        <p class="lp-plan credit-plan-label">November offer. Over 50% off your first month.</p>
-        <div class="lp-big credit-month-one" data-no-promo data-credit-price><s aria-label="Regular first payment">$169</s><strong>$79</strong><span>Month 1</span></div>
-        <div class="credit-rest" data-no-promo><span>Then 4 months</span><b>$169 <span style="font-size:16px;font-weight:400">/ month</span></b></div>
-        <ul class="lla-vip-list nov14-card-list">
-          <li><strong>Your personal longevity protocol,</strong> built in 18 weeks</li>
-          <li><strong>Bonus: Julie Gibson Clark’s VIP Masterclass,</strong> live November 14</li>
-          <li><strong>Free Abbott Lingo CGM,</strong> shipped to your home</li>
-          <li><strong>18 live classes in small groups,</strong> top instructors</li>
-          <li><strong>The 6 pillars of longevity,</strong> one pillar at a time</li>
-          <li><strong>$100 cash back</strong> on your next course</li>
-        </ul>
-        <a href="#enrollModal" class="lp-cta" id="offerEnroll" data-fn-cta="offer" data-enroll-course="1">Enroll now</a>
-        <p class="lp-total credit-total" data-no-promo><b>$755 total</b><small>Five payments. Nothing else to pay. Cancel within 14 days for a full refund.</small></p>
-        <p class="lp-trust">14-day try-out refund on the course. Online sign-ups in November only. Questions? Call +1-888-230-5110.</p>
-      </aside>'''
-offer_new,n5=re.subn(r'<aside class="lp-card">.*?</aside>', card_new, offer_new, count=1, flags=re.S)
-list_new='''<ul class="lp-bul">
-          <li><i style="--c1:#006EFF;--c2:#5EB6FF"></i><span><b>Your personal longevity protocol,</b> built in 18 weeks.</span></li>
-          <li><i style="--c1:#7C5CFF;--c2:#B79DFF"></i><span><b>Bonus: Julie Gibson Clark’s VIP Masterclass,</b> live November 14.</span></li>
-          <li><i style="--c1:#FF7A45;--c2:#FFB38A"></i><span><b>Free Abbott Lingo CGM,</b> shipped to your home.</span></li>
-          <li><i style="--c1:#22B27A;--c2:#7DE5C1"></i><span><b>18 live classes in small groups,</b> top instructors.</span></li>
-          <li><i style="--c1:#0FB5D6;--c2:#7DE5FF"></i><span><b>The 6 pillars of longevity,</b> one pillar at a time.</span></li>
-          <li><i style="--c1:#22E39A;--c2:#7DE5C1"></i><span><b>$100 cash back</b> on your next course.</span></li>
-        </ul>'''
-offer_new,n6=re.subn(r'<ul class="lp-bul">.*?</ul>', list_new, offer_new, count=1, flags=re.S)
+offer_new=re.sub(r'<p class="lp-lead">Online sign-ups in November only.</p>', '<p class="lp-lead">Live 18-week course, free Abbott Lingo CGM, $100 cash back. Online sign-ups in November only.</p>', offer, count=1, flags=re.S)
+card_new='''<div class="pc2">
+        <svg width="0" height="0" aria-hidden="true" style="position:absolute"><defs><linearGradient id="pc2g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#5EB6FF"/><stop offset="1" stop-color="#006EFF"/></linearGradient></defs></svg>
+        <div class="pc2-benefits">
+          <div class="pc2-eyebrow">The Longevity Blueprint</div>
+          <h3 class="pc2-title">Everything you need to build your own longevity protocol.</h3>
+          <ul class="pc2-list">
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="12" fill="url(#pc2g)"/><path d="M7.2 12.5l3 3 6.6-6.9" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><div><b>18-week live course</b><span>Small groups, live online, one class a week.</span></div></li>
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="12" fill="url(#pc2g)"/><path d="M7.2 12.5l3 3 6.6-6.9" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><div><b>Your own longevity protocol</b><span>Tailored to your numbers.</span></div></li>
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="12" fill="url(#pc2g)"/><path d="M7.2 12.5l3 3 6.6-6.9" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><div><b>Free Abbott Lingo CGM</b><span>Shipped to you.</span></div></li>
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="12" fill="url(#pc2g)"/><path d="M7.2 12.5l3 3 6.6-6.9" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><div><b>$100 cash back</b><span>On your next course.</span></div></li>
+          </ul>
+          <div class="pc2-vip"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.6l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.5l-5.9 3.1 1.2-6.5L2.5 9.5l6.6-.9z" fill="currentColor"/></svg><div><b>Free VIP access to Julie Gibson Clark’s Masterclass</b><span>90-minute masterclass and Q&amp;A, live on Zoom</span></div><em>Nov 14</em></div>
+        </div>
+        <div class="pc2-price" data-no-promo data-credit-price>
+          <div class="pc2-badge"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.6 13.4l-7.2 7.2a2 2 0 0 1-2.8 0L3.4 13.4A2 2 0 0 1 2.8 12V4a2 2 0 0 1 2-2h8a2 2 0 0 1 1.4.6l7.2 7.2a2 2 0 0 1 0 2.8z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><circle cx="7.5" cy="7.5" r="1.6" fill="currentColor"/></svg>50% off your first month</div>
+          <div class="pc2-now"><span class="cur">$</span>79</div>
+          <div class="pc2-per">First month</div>
+          <div class="pc2-chips"><s>Regular $169</s><span class="save">You save $90</span></div>
+          <div class="pc2-then">Then <b>$169</b> a month for 4 months</div>
+          <a href="#enrollModal" class="pc2-cta" id="offerEnroll" data-fn-cta="offer" data-enroll-course="1">Enroll now</a>
+          <p class="pc2-note">14-day try-out refund · Online sign-ups in November only</p>
+        </div>
+      </div>'''
+offer_new,n5=re.subn(r'<aside class="lp-card[^"]*">.*?</aside>', card_new, offer_new, count=1, flags=re.S)
+offer_new,n6=re.subn(r'\s*<div class="lp-list">.*?</ul>\s*</div>', '', offer_new, count=1, flags=re.S)
 log.append(f'offer card {n5} list {n6}')
 blocks['offer']=offer_new
 # 7. VIP rewrite
@@ -128,15 +127,53 @@ sub1(r'<script src="https://longevitylifeacademy\.pages\.dev/assets/lla-promo\.j
 sub1(r'<div id="mockBar"><div class="l"><i>The Longevity Blueprint</i><b>\$179<small>/ mo</small></b></div><a href="#offer" data-fn-cta="floater">Enroll Now</a></div>', '<div id="mockBar"><div class="l"><i>The Longevity Blueprint</i><b>$79 month 1</b></div><a href="#enrollModal" data-fn-cta="floater" data-enroll-course="1">Enroll now</a></div>', name='mockBar')
 # 14. Fold styles
 style='''<style id="nov14-fold">
-html body#lpRoot #offer .lp-card .lp-cta{margin:4px 0 18px;text-decoration:none;background:#006EFF;color:#fff}
-html body#lpRoot #offer .lp-card .lp-cta:hover{background:#0a5fd9}
-html body#lpRoot #offer .lp-card .nov14-card-list{margin:18px 0 6px;gap:9px;max-width:none}
-html body#lpRoot #offer .lp-card .nov14-card-list li{font-size:17px;line-height:1.35;padding-left:26px}
-html body#lpRoot #offer .lp-card .nov14-card-list li::before{width:12px;height:12px;top:.4em}
-html body#lpRoot #offer .lp-card .nov14-card-list li strong{color:#fff;font-weight:700}
-@media (min-width:901px){html body#lpRoot #offer .lp-card .nov14-card-list{display:none}}
-@media (max-width:900px){html body#lpRoot #offer .lp-list{display:none!important}html body#lpRoot #included{display:none!important}html body#lpRoot #learn-com .topic-v2{flex:0 0 100%!important;width:100%!important}html body#lpRoot #learn-com .topic-v2-media,html body#lpRoot #learn-com .topic-v2-media video{min-height:300px!important;height:300px!important;object-fit:cover}html body#lpRoot #included .lla-incl-grid{display:grid!important;grid-template-columns:1fr!important;gap:14px!important}html body#lpRoot #included{padding-top:28px!important}}
-@media (max-width:900px){html body#lpRoot #vip .lla-vip-grid{display:grid!important;grid-template-columns:1fr!important;gap:24px!important}}
+html body#lpRoot #offer .lp-grid{display:block!important;grid-template-columns:none!important;max-width:none!important}
+html body#lpRoot #offer .lp-list,html body#lpRoot #included{display:none!important}
+html body#lpRoot #offer .pc2{position:relative;display:grid;grid-template-columns:1.15fr .85fr;border-radius:28px;overflow:hidden;background:linear-gradient(160deg,#0d327f 0%,#071b4c 48%,#03102e 100%);box-shadow:0 44px 90px -34px rgba(0,25,80,.8),0 0 0 1px rgba(255,255,255,.08) inset;color:#fff}
+html body#lpRoot #offer .pc2::before{content:"";position:absolute;top:-40%;right:-10%;width:60%;height:140%;background:radial-gradient(closest-side,rgba(94,182,255,.32),transparent 72%);pointer-events:none}
+html body#lpRoot #offer .pc2-benefits{position:relative;padding:46px 44px 42px}
+html body#lpRoot #offer .pc2-eyebrow{font:700 13px/1 Inter,sans-serif;letter-spacing:.16em;text-transform:uppercase;color:#9ecbff;margin:0}
+html body#lpRoot #offer .pc2-title{font:500 clamp(30px,3vw,42px)/1.12 "Playfair Display",Georgia,serif;color:#fff;margin:14px 0 30px;max-width:19ch;letter-spacing:-.01em}
+html body#lpRoot #offer .pc2-list{list-style:none;margin:0;padding:0;display:grid;gap:20px}
+html body#lpRoot #offer .pc2-list li{display:flex;gap:16px;align-items:flex-start;padding:0}
+html body#lpRoot #offer .pc2-list li::before{content:none}
+html body#lpRoot #offer .pc2-list svg{flex:0 0 28px;width:28px;height:28px;margin-top:1px;filter:drop-shadow(0 6px 14px rgba(0,110,255,.6))}
+html body#lpRoot #offer .pc2-list b{display:block;font:700 21px/1.25 Inter,sans-serif;color:#fff}
+html body#lpRoot #offer .pc2-list span{display:block;font:400 16px/1.45 Inter,sans-serif;color:#c9dcf8;margin-top:4px}
+html body#lpRoot #offer .pc2-vip{position:relative;margin:26px 0 0;display:flex;align-items:center;gap:16px;padding:18px 20px;border-radius:18px;background:linear-gradient(135deg,rgba(124,92,255,.48),rgba(183,157,255,.18));border:1px solid rgba(183,157,255,.7);box-shadow:0 24px 44px -26px rgba(124,92,255,1)}
+html body#lpRoot #offer .pc2-vip svg{flex:0 0 30px;width:30px;height:30px;color:#E6DDFF;filter:drop-shadow(0 0 10px rgba(183,157,255,1))}
+html body#lpRoot #offer .pc2-vip div{flex:1 1 auto;min-width:0}
+html body#lpRoot #offer .pc2-vip b{display:block;font:700 19px/1.25 Inter,sans-serif;color:#fff}
+html body#lpRoot #offer .pc2-vip span{display:block;font:400 15px/1.4 Inter,sans-serif;color:#DDD3FF;margin-top:4px}
+html body#lpRoot #offer .pc2-vip em{font:700 13px/1 Inter,sans-serif;font-style:normal;letter-spacing:.06em;text-transform:uppercase;color:#2a1a66;background:#E6DDFF;border-radius:999px;padding:10px 12px;white-space:nowrap}
+html body#lpRoot #offer .pc2-price{position:relative;margin:22px 22px 22px 0;padding:36px 32px 28px;border-radius:22px;background:#fff;border:1px solid rgba(94,182,255,.75);box-shadow:0 0 0 1px rgba(94,182,255,.35),0 0 52px rgba(94,182,255,.6),0 40px 80px -30px rgba(0,0,0,.75);display:flex;flex-direction:column;align-items:flex-start;justify-content:center;color:#0a244e}
+html body#lpRoot #offer .pc2-badge{display:inline-flex;align-items:center;gap:8px;padding:11px 15px;border-radius:999px;background:linear-gradient(90deg,#006EFF,#5EB6FF);color:#fff;font:700 14px/1 Inter,sans-serif;letter-spacing:.06em;text-transform:uppercase;box-shadow:0 0 0 4px rgba(94,182,255,.18),0 14px 28px -10px rgba(0,110,255,.9)}
+html body#lpRoot #offer .pc2-badge svg{width:16px;height:16px;flex:0 0 16px}
+html body#lpRoot #offer .pc2-now{display:flex;align-items:baseline;margin:22px 0 0;font:500 clamp(96px,8.6vw,124px)/.9 "Playfair Display",Georgia,serif;color:#0a244e;letter-spacing:-.045em}
+html body#lpRoot #offer .pc2-now .cur{font-size:.42em;color:#006EFF;margin-right:4px;letter-spacing:0}
+html body#lpRoot #offer .pc2-per{margin:10px 0 14px;font:700 15px/1 Inter,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#006EFF}
+html body#lpRoot #offer .pc2-chips{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+html body#lpRoot #offer .pc2-chips s{font:600 17px/1 Inter,sans-serif;color:#7a8aa3;text-decoration:line-through;text-decoration-thickness:2px}
+html body#lpRoot #offer .pc2-chips .save{font:700 13.5px/1 Inter,sans-serif;color:#0b7a4f;background:rgba(34,178,122,.12);border:1px solid rgba(34,178,122,.5);border-radius:999px;padding:9px 12px;letter-spacing:.06em;text-transform:uppercase;white-space:nowrap}
+html body#lpRoot #offer .pc2-then{margin:20px 0 24px;font:500 19px/1.4 Inter,sans-serif;color:#203957}
+html body#lpRoot #offer .pc2-then b{color:#0a244e;font-weight:800}
+html body#lpRoot #offer .pc2-cta{display:block;width:100%;padding:20px 20px;border-radius:16px;background:#006EFF;color:#fff;font:800 19px/1 Inter,sans-serif;text-align:center;text-decoration:none;box-shadow:0 0 0 5px rgba(94,182,255,.22),0 22px 44px -12px rgba(0,110,255,.95);transition:transform .15s ease,background .15s ease}
+html body#lpRoot #offer .pc2-cta:hover{background:#0a5fd9;transform:translateY(-1px)}
+html body#lpRoot #offer .pc2-note{margin:14px 0 0;width:100%;font:500 14px/1.5 Inter,sans-serif;color:#5b6f8c;text-align:center}
+@media (max-width:900px){
+html body#lpRoot #offer .pc2{grid-template-columns:1fr;border-radius:24px}
+html body#lpRoot #offer .pc2-price{order:-1;margin:14px 14px 0;padding:28px 22px 24px;align-items:stretch;text-align:left}
+html body#lpRoot #offer .pc2-now{font-size:96px;margin-top:18px}
+html body#lpRoot #offer .pc2-benefits{padding:30px 20px 28px}
+html body#lpRoot #offer .pc2-title{font-size:30px;margin:12px 0 24px}
+html body#lpRoot #offer .pc2-list{gap:18px}
+html body#lpRoot #offer .pc2-list b{font-size:21px}
+html body#lpRoot #offer .pc2-list span{font-size:16.5px}
+html body#lpRoot #offer .pc2-vip{padding:16px;gap:12px}
+html body#lpRoot #offer .pc2-vip b{font-size:18.5px}
+html body#lpRoot #offer .pc2-vip span{font-size:15px}
+html body#lpRoot #vip .lla-vip-grid{display:grid!important;grid-template-columns:1fr!important;gap:24px!important}
+}
 </style>
 </head>'''
 sub1(r'<div class="lla-vip-grid lla-slider">', '<div class="lla-vip-grid">', name='vip slider off')
