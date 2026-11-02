@@ -51,35 +51,23 @@ strip='''
 '''
 # 6. Offer rewrite
 offer=blocks['offer']
-offer_new=re.sub(r'<p class="lp-lead">.*?</p>', '<p class="lp-lead">Live 18-week course, free Abbott Lingo CGM, $100 cash back. Online sign-ups in November only.</p>', offer, count=1, flags=re.S)
+offer_new=re.sub(r'<p class="lp-lead">.*?</p>', '<p class="lp-lead">Online sign-ups in November only.</p>', offer, count=1, flags=re.S)
 card_new='''<aside class="lp-card">
-        <p class="lp-plan credit-plan-label">November offer. Over 50% off your first month.</p>
+        <p class="lp-plan credit-plan-label">November offer. 50% off your first month.</p>
         <div class="lp-big credit-month-one" data-no-promo data-credit-price><s aria-label="Regular first payment">$169</s><strong>$79</strong><span>Month 1</span></div>
         <div class="credit-rest" data-no-promo><span>Then 4 months</span><b>$169 <span style="font-size:16px;font-weight:400">/ month</span></b></div>
-        <ul class="lla-vip-list nov14-card-list">
-          <li><strong>Live 18-week course,</strong> small groups</li>
-          <li><strong>The 6 pillars,</strong> top instructors</li>
-          <li><strong>Your protocol</strong> in 18 weeks</li>
-          <li><strong>Free Abbott Lingo CGM,</strong> shipped home</li>
+        <ul class="nov14-card-list">
+          <li><strong>18-week live course,</strong> small groups</li>
+          <li><strong>Your own longevity protocol,</strong> tailored to your numbers</li>
+          <li><strong>Free Abbott Lingo CGM,</strong> shipped to you</li>
           <li><strong>$100 cash back</strong> on your next course</li>
-          <li><strong>Bonus: Julie’s VIP Masterclass,</strong> Nov 14</li>
-          <li><strong>14-day try-out refund</strong></li>
+          <li class="nov14-vip"><strong>Free VIP access to Julie Gibson Clark’s Masterclass</strong><em>November 14</em></li>
         </ul>
         <a href="#enrollModal" class="lp-cta" id="offerEnroll" data-fn-cta="offer" data-enroll-course="1">Enroll now</a>
-        <p class="lp-total credit-total" data-no-promo><b>$755 total</b><small>Five payments. Nothing else to pay.</small></p>
-        <p class="lp-trust"><b>14-day try-out refund.</b> Questions? Call +1-888-230-5110.</p>
+        <p class="lp-note">14-day try-out refund.</p>
       </aside>'''
 offer_new,n5=re.subn(r'<aside class="lp-card">.*?</aside>', card_new, offer_new, count=1, flags=re.S)
-list_new='''<ul class="lp-bul">
-          <li><i style="--c1:#006EFF;--c2:#5EB6FF"></i><span><b>Live 18-week course.</b> Small groups, recorded.</span></li>
-          <li><i style="--c1:#22B27A;--c2:#7DE5C1"></i><span><b>The 6 pillars of longevity.</b> Top instructors.</span></li>
-          <li><i style="--c1:#0FB5D6;--c2:#7DE5FF"></i><span><b>Your protocol in 18 weeks.</b></span></li>
-          <li><i style="--c1:#FF7A45;--c2:#FFB38A"></i><span><b>Free Abbott Lingo CGM,</b> shipped home.</span></li>
-          <li><i style="--c1:#22E39A;--c2:#7DE5C1"></i><span><b>$100 cash back</b> on your next course.</span></li>
-          <li><i style="--c1:#7C5CFF;--c2:#B79DFF"></i><span><b>Bonus: Julie’s VIP Masterclass,</b> November 14.</span></li>
-          <li><i style="--c1:#006EFF;--c2:#5EB6FF"></i><span><b>14-day try-out refund.</b></span></li>
-        </ul>'''
-offer_new,n6=re.subn(r'<ul class="lp-bul">.*?</ul>', list_new, offer_new, count=1, flags=re.S)
+offer_new,n6=re.subn(r'\s*<div class="lp-list">.*?</ul>\s*</div>', '', offer_new, count=1, flags=re.S)
 log.append(f'offer card {n5} list {n6}')
 blocks['offer']=offer_new
 # 7. VIP rewrite
@@ -130,15 +118,19 @@ sub1(r'<script src="https://longevitylifeacademy\.pages\.dev/assets/lla-promo\.j
 sub1(r'<div id="mockBar"><div class="l"><i>The Longevity Blueprint</i><b>\$179<small>/ mo</small></b></div><a href="#offer" data-fn-cta="floater">Enroll Now</a></div>', '<div id="mockBar"><div class="l"><i>The Longevity Blueprint</i><b>$79 month 1</b></div><a href="#enrollModal" data-fn-cta="floater" data-enroll-course="1">Enroll now</a></div>', name='mockBar')
 # 14. Fold styles
 style='''<style id="nov14-fold">
-html body#lpRoot #offer .lp-card .lp-cta{margin:4px 0 18px;text-decoration:none;background:#006EFF;color:#fff}
+html body#lpRoot #offer .lp-grid{grid-template-columns:minmax(0,600px)!important}
+html body#lpRoot #offer .lp-list,html body#lpRoot #included{display:none!important}
+html body#lpRoot #offer .lp-card .lp-cta{margin:24px 0 14px;text-decoration:none;background:#006EFF;color:#fff}
 html body#lpRoot #offer .lp-card .lp-cta:hover{background:#0a5fd9}
-html body#lpRoot #offer .lp-card .nov14-card-list{margin:18px 0 6px;gap:9px;max-width:none}
-html body#lpRoot #offer .lp-card .nov14-card-list li{font-size:17px;line-height:1.35;padding-left:26px}
-html body#lpRoot #offer .lp-card .nov14-card-list li{position:relative}
-html body#lpRoot #offer .lp-card .nov14-card-list li::before{content:"";position:absolute;left:0;width:12px;height:12px;top:.4em;border-radius:50%;background:linear-gradient(135deg,#7DE5FF,#006EFF)}
+html body#lpRoot #offer .lp-card .nov14-card-list{list-style:none;margin:22px 0 0;padding:0;display:grid;gap:13px;max-width:none}
+html body#lpRoot #offer .lp-card .nov14-card-list li{position:relative;padding-left:30px;font:400 17px/1.4 Inter,sans-serif;color:#deecff}
+html body#lpRoot #offer .lp-card .nov14-card-list li::before{content:"";position:absolute;left:0;top:.42em;width:14px;height:14px;border-radius:50%;background:linear-gradient(135deg,#7DE5FF,#006EFF)}
 html body#lpRoot #offer .lp-card .nov14-card-list li strong{color:#fff;font-weight:700}
-@media (min-width:901px){html body#lpRoot #offer .lp-card .nov14-card-list{display:none}}
-@media (max-width:900px){html body#lpRoot #offer .lp-list{display:none!important}html body#lpRoot #included{display:none!important}html body#lpRoot #included .lla-incl-grid{display:grid!important;grid-template-columns:1fr!important;gap:14px!important}html body#lpRoot #included{padding-top:28px!important}}
+html body#lpRoot #offer .lp-card .nov14-card-list li.nov14-vip{margin-top:6px;padding:14px 16px 14px 46px;border-radius:14px;background:linear-gradient(135deg,rgba(124,92,255,.32),rgba(183,157,255,.14));border:1px solid rgba(183,157,255,.6);color:#EDE6FF}
+html body#lpRoot #offer .lp-card .nov14-card-list li.nov14-vip::before{left:16px;top:18px;width:16px;height:16px;background:linear-gradient(135deg,#B79DFF,#7C5CFF);box-shadow:0 0 18px rgba(183,157,255,.9)}
+html body#lpRoot #offer .lp-card .nov14-card-list li.nov14-vip strong{color:#fff}
+html body#lpRoot #offer .lp-card .nov14-card-list li.nov14-vip em{display:block;font-style:normal;font-weight:700;color:#D9CCFF;margin-top:3px;letter-spacing:.01em}
+html body#lpRoot #offer .lp-card .lp-note{margin:0;font:400 14px/1.5 Inter,sans-serif;color:#c4d9f6;text-align:center}
 @media (max-width:900px){html body#lpRoot #vip .lla-vip-grid{display:grid!important;grid-template-columns:1fr!important;gap:24px!important}}
 </style>
 </head>'''
