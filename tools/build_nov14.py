@@ -151,6 +151,18 @@ os.makedirs(f'{OUT}/blueprint/assets',exist_ok=True)
 for f in ['eteacher-ecomm.js','blueprint-hotfix-state.js','nanp-state-autofill.js','ecom-layer.js','lla-country.js','lla-promo.js']:
     shutil.copy(f'{SRC}/blueprint/assets/{f}', f'{OUT}/blueprint/assets/{f}')
 shutil.copy(f'{SRC}/blueprint/privacy.html', f'{OUT}/blueprint/privacy.html') if os.path.exists(f'{SRC}/blueprint/privacy.html') else None
+# live checkout lives at /blueprint/checkout.html with its own assets: publish it with the files it references
+for d in ['brand','eteacher','instructors','pay','wa']:
+    if os.path.isdir(f'{SRC}/blueprint/assets/{d}'):
+        shutil.copytree(f'{SRC}/blueprint/assets/{d}', f'{OUT}/blueprint/assets/{d}', dirs_exist_ok=True, ignore=shutil.ignore_patterns('*.mp4','*.webm','*.mov'))
+for f in ['elements.bundle.min.js','eteacher-leads.js','julie-brand-motion-v7.js','lla-clickid-v20260922.js','lla-logo-dark-text-clean@2x.png','lla-logo-exact-transparent@2x.png','lla-logo-nav.png','lla-relay-receipts.js']:
+    if os.path.exists(f'{SRC}/blueprint/assets/{f}'): shutil.copy(f'{SRC}/blueprint/assets/{f}', f'{OUT}/blueprint/assets/{f}')
+bc=open(f'{SRC}/blueprint/checkout.html',encoding='utf-8').read()
+old_env="window.LLA_ECOMM_CONFIG.env  = (_q.get('env') === 'staging') ? 'staging' : 'production';"
+assert old_env in bc, 'checkout env line'
+bc=bc.replace(old_env,"window.LLA_ECOMM_CONFIG.env  = (_q.get('env') === 'staging') ? 'staging' : ((_q.get('env') === 'production') ? 'production' : (/github\\.io$/.test(location.hostname) ? 'staging' : 'production'));",1)
+open(f'{OUT}/blueprint/checkout.html','w',encoding='utf-8').write(bc)
+log.append('blueprint checkout published')
 # checkout.html: same CSP + env patch
 c=open(f'{OUT}/checkout.html',encoding='utf-8').read()
 c=c.replace("script-src 'self' 'unsafe-inline'","script-src 'self' 'unsafe-inline' https://longevitylifeacademy.pages.dev",1).replace("style-src 'self' 'unsafe-inline'","style-src 'self' 'unsafe-inline' https://longevitylifeacademy.pages.dev",1)
