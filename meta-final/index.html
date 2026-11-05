@@ -9797,6 +9797,26 @@ html.mf body .mfp-tbonus span{color:#FFFFFF}
   html.mf body .mfp-t:nth-child(2) b{font-size:27px}
   html.mf body .mfp-t span{font-size:18px}
 }
+/* Round 20 (Omri: nice idea, cheap and worded wrong): no boxes, hairline grid, Playfair titles in navy, his wording; the bonus stays the one lit neon element */
+html.mf body .mfp-tiles{gap:0!important;margin-top:4px!important;border-top:1px solid rgba(10,30,58,.12)}
+html.mf body .mfp-t{background:none!important;border:0!important;box-shadow:none!important;border-radius:0!important;padding:18px 14px 18px 0!important;gap:6px!important;border-bottom:1px solid rgba(10,30,58,.12)!important}
+html.mf body .mfp-t:nth-child(odd):not(.mfp-twide){padding-right:16px!important;border-right:1px solid rgba(10,30,58,.12)!important}
+html.mf body .mfp-t:nth-child(even){padding-left:16px!important}
+html.mf body .mfp-t b,html.mf body .mfp-t:nth-child(2) b{font:500 24px/1.15 'Playfair Display',Georgia,serif!important;color:#0A1E3A!important;letter-spacing:-.005em!important;text-shadow:none!important}
+html.mf body .mfp-t span{font:400 18px/1.4 Inter,sans-serif!important;color:#33456B!important}
+html.mf body .mfp-twide{flex-direction:column!important;align-items:flex-start!important;gap:6px!important;border-bottom:0!important;padding-bottom:4px!important}
+html.mf body .mfp-tbonus{margin:10px 0 10px 12px!important;padding:16px 14px!important;border-radius:16px!important;border:1.5px solid #7CC8FF!important;border-right:1.5px solid #7CC8FF!important;background:radial-gradient(80% 90% at 50% 0%,rgba(0,110,255,.24),transparent 70%),linear-gradient(180deg,#0A1A40 0%,#050D24 100%)!important;box-shadow:0 0 6px rgba(124,200,255,.95),0 0 18px rgba(59,167,255,.75),0 0 40px rgba(0,110,255,.55),inset 0 0 14px rgba(124,200,255,.35),inset 0 0 30px rgba(0,110,255,.25)!important}
+html.mf body .mfp-tbonus em{font:italic 500 19px/1 'Playfair Display',Georgia,serif;color:#BFE6FF;text-shadow:0 0 8px rgba(124,200,255,1),0 0 18px rgba(59,167,255,.8)}
+html.mf body .mfp-tbonus b{color:#FFFFFF!important;text-shadow:0 0 14px rgba(124,200,255,.6)!important}
+html.mf body .mfp-tbonus span{color:#E3F0FF!important}
+@media (max-width:760px){
+  html.mf body .mfp-t b,html.mf body .mfp-t:nth-child(2) b{font-size:22px!important}
+  html.mf body .mfp-t span{font-size:17px!important}
+  html.mf body .mfp-t{padding:16px 10px 16px 0!important}
+  html.mf body .mfp-t:nth-child(even){padding-left:12px!important}
+  html.mf body .mfp-t:nth-child(odd):not(.mfp-twide){padding-right:12px!important}
+  html.mf body .mfp-tbonus{margin:10px 0 10px 10px!important;padding:14px 12px!important}
+}
 
 
 </style>
@@ -10481,11 +10501,11 @@ html.mf body .mfp-tbonus span{color:#FFFFFF}
       <a class="pk-btn" href="#pricing" data-preview-enroll><span>Enroll now</span><span class="pk-arr" aria-hidden="true">&rarr;</span></a>
       <p class="pk-previewnote" hidden>Preview. On longevitylifeacademy.com this button opens eTeacher's checkout, unchanged.</p><p class="pk-foot">14-day try-out refund on the course.</p>
       <div class="mfp-tiles">
-        <div class="mfp-t"><b>18</b><span>live, online weekly classes</span></div>
-        <div class="mfp-t"><b>Protocol</b><span>yours, built on your own numbers</span></div>
-        <div class="mfp-t"><b>Free</b><span>Abbott Lingo CGM, shipped home</span></div>
-        <div class="mfp-t mfp-tbonus"><b>Bonus</b><span>Julie Gibson Clark's 90-minute VIP Masterclass</span></div>
-        <div class="mfp-t mfp-twide"><b>$100</b><span>cash back on your next course</span></div>
+        <div class="mfp-t"><b>18 live classes</b><span>Online, weekly, in small groups</span></div>
+        <div class="mfp-t"><b>Your protocol</b><span>Tailored to you in 18 weeks</span></div>
+        <div class="mfp-t"><b>Abbott Lingo CGM</b><span>Free, shipped to your home</span></div>
+        <div class="mfp-t mfp-tbonus"><em>Bonus</em><b>VIP Masterclass</b><span>Free, 90 minutes with Julie Gibson Clark</span></div>
+        <div class="mfp-t mfp-twide"><b>$100 cash back</b><span>Towards your next course</span></div>
       </div>
     </article>
   </div>
