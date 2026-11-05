@@ -235,6 +235,17 @@ def common(s):
             print('note: not found:', a[:60])
     s = s.replace(' \\u2014 ', ', ')
     s = re.sub(r'(<a [^>]*class="section-cta-btn[^"]*"[^>]*>)Enroll now', r'\1Enroll Now', s)
+    # Round 26 (Omri: no long cards on phones): review quotes trimmed from the end, unchanged words
+    for a, b in [
+        ('So happy finding eTeacher Group. They are genuinely concerned that you learn what you want to learn. They listen to what you want to learn and why, and then give thoughtful recommendations. Excellent classes and teachers.',
+         'So happy finding eTeacher Group. They are genuinely concerned that you learn what you want to learn.'),
+        ("Our teacher is patient and kind. She does great. Even when I can't attend a session, the recording helps me catch up, and the materials mean I can learn at a time that's convenient.",
+         "Our teacher is patient and kind. She does great. Even when I can't attend a session, the recording helps me catch up."),
+        ('At first I was finding logistics difficult, but I got a phone call from a staff member checking in on me and she opened up a clear path forward. I really appreciate that personal touch, staff who stay with students to keep their learning moving.',
+         'At first I was finding logistics difficult, but I got a phone call from a staff member checking in on me and she opened up a clear path forward.'),
+    ]:
+        if a in s: s = s.replace(a, b)
+        else: print('note: review not found:', a[:50])
     css = open(os.path.join(HERE, 'meta_final.css'), encoding='utf-8').read().replace('/*%%HERO_CSS%%*/', '').replace('/*%%NEW_FOLDS%%*/', open(os.path.join(HERE, 'meta_final_newfolds.css'), encoding='utf-8').read()).replace('/*%%JULIE_CSS%%*/', open(os.path.join(HERE, 'masterclass_julie.css'), encoding='utf-8').read()).replace('/*%%BRAND%%*/', open(os.path.join(HERE, 'meta_final_fix.css'), encoding='utf-8').read() + '\n' + open(os.path.join(HERE, 'meta_final_pricing_big.css'), encoding='utf-8').read())
     s = s.replace('</head>', '<style id="meta-final">\n' + css + '\n</style>\n</head>', 1)
     js = open(os.path.join(HERE, 'meta_final.js'), encoding='utf-8').read()

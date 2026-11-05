@@ -178,3 +178,10 @@ html.mf body .mfp-tbonus.mfp-twide span{font:500 17px/1.38 Inter,sans-serif!impo
 @keyframes mfpNeon{0%,100%{box-shadow:0 0 8px rgba(154,216,255,1),0 0 22px rgba(59,167,255,.9),0 0 54px rgba(0,110,255,.7),inset 0 0 16px rgba(124,200,255,.45),inset 0 0 36px rgba(0,110,255,.3)}50%{box-shadow:0 0 10px rgba(154,216,255,1),0 0 30px rgba(59,167,255,1),0 0 72px rgba(0,110,255,.85),inset 0 0 20px rgba(124,200,255,.55),inset 0 0 42px rgba(0,110,255,.35)}}
 @media (min-width:761px){html.mf body .mfp-tbonus.mfp-twide .mfp-bhead b{font-size:24px!important}html.mf body .mfp-bhead em{font-size:22px}html.mf body .mfp-tbonus.mfp-twide span{font-size:18px!important}}
 html.mf body .mfp-tbonus.mfp-twide .mfp-bhead b{white-space:nowrap}
+/* Round 26 (Omri: trust items at the payment): lock, Secure checkout, official card and PayPal marks from the .com checkout */
+html.mf body .mfp-secure{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:10px 14px;margin:2px 0 20px}
+html.mf body .mfp-lock{display:inline-flex;align-items:center;gap:6px;font:600 17px/1 Inter,sans-serif;color:#0A1E3A}
+html.mf body .mfp-lock svg{width:18px;height:18px;fill:none;stroke:#0A1E3A;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+html.mf body .mfp-pay{display:inline-flex;align-items:center;gap:6px}
+html.mf body .mfp-pay img{height:26px;width:auto;display:block}
+html.mf body .mfp-card .pk-foot{margin:10px 0 10px!important}

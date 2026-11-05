@@ -977,3 +977,24 @@ html.mf body section.trust-strip .trust-logo-img{mix-blend-mode:lighten!importan
 html.mf body :is(#hexDetailTitle,.bump-whatsapp,.et-bump-btn){font-family:Inter,system-ui,sans-serif!important}
 html.mf body section.value .value-header h2.section-title :is(span,em){background:linear-gradient(180deg,#CFE8FF 0%,#7CC0FF 100%)!important;-webkit-background-clip:text!important;background-clip:text!important;color:transparent!important;-webkit-text-fill-color:transparent!important}
 html.mf body #lead-gen .lead-gen-v2-trust svg{display:none!important}
+/* ===== Round 26 (Omri: no long cards with small text on phones; footage as before) ===== */
+@media (max-width:900px){
+  html.mf body .mf-dsk{display:none}
+  html.mf body #teachers .teacher-card-live-photo{height:190px!important;aspect-ratio:auto!important}
+  html.mf body #teachers .teacher-card-live-photo img{height:100%!important;object-fit:cover!important;object-position:50% 18%!important}
+  html.mf body #teachers .teacher-card-live-bio{font-size:18px!important;line-height:1.45!important}
+  html.mf body .skills .skill-card .skill-bg{height:200px!important}
+  html.mf body section.testimonials .quote-card{padding:22px 20px!important}
+}
+/* final banner: original footage colour shifted to brand blue, not greyed out */
+html.mf body section.final-cta .final-cta-video{filter:hue-rotate(28deg) saturate(1.05) brightness(.9)!important}
+html.mf body section.final-cta .final-cta-overlay{background:linear-gradient(180deg,rgba(0,40,120,.35) 0%,rgba(0,14,40,.65) 100%)!important}
+@media (max-width:900px){
+  html.mf body #teachers .teacher-card-live{flex:0 0 82vw!important;width:82vw!important;min-width:82vw!important;max-width:82vw!important}
+  html.mf body #teachers .teacher-card-live-photo,html.mf body #teachers .teacher-card-live-photo--square{width:100%!important;height:200px!important}
+  html.mf body .skills .skill-card{flex:0 0 82vw!important;width:82vw!important;min-width:82vw!important;max-width:82vw!important}
+  html.mf body #julie .jbento{align-items:flex-start!important}
+  html.mf body #julie .jb{min-height:0!important;height:auto!important}
+  html.mf body #julie .jb-photo img{height:220px!important}
+}
+@media (max-width:900px){html.mf body #teachers .teacher-card-live-photo,html.mf body #teachers .teacher-card-live-photo--square{height:170px!important}html.mf body .skills .skill-card .skill-bg{height:180px!important}}
