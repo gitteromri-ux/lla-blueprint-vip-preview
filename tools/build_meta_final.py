@@ -76,9 +76,9 @@ ORDER = [  # Omri's review-file order (claude-selection.json); hero, pricing and
     ('teachers', '<section class="instructors" id="teachers">', None),
     ('how', '<section class="how-v2" id="how">', None),
     ('news', '<section class="skills" id="skills">', None),
+    ('form', '<section class="lead-gen lead-gen-v2" id="lead-gen">', None),  # Omri: the form comes up two folds
     ('why', '<section class="value">', None),
     ('systems', '<section class="deepdive">', None),
-    ('form', '<section class="lead-gen lead-gen-v2" id="lead-gen">', None),
     ('quiz', '<section class="bioquiz">', None),
     ('reviews', '<section class="testimonials">', None),
     ('faq', '<section class="faq" id="faq">', None),
