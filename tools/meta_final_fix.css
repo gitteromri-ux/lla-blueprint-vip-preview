@@ -1228,3 +1228,6 @@ html.mf body #julie .jher-proof img{display:block;width:100%;height:auto}
 }
 @media (max-width:900px){html.mf body #julie .jher-proof{border-radius:18px}}
 @media (max-width:900px){html.mf body #julie .jher-facts li:nth-child(2){display:none!important}html.mf body #julie .jher-photo{max-width:220px}html.mf body #julie .jher{gap:16px!important}}
+/* Round 33 (Omri: you can't show her decks): no slide; photo and three facts */
+@media (min-width:901px){html.mf body #julie .jher{grid-template-columns:minmax(0,400px) minmax(0,1fr)!important;grid-template-areas:"photo facts"!important;align-items:center!important}html.mf body #julie .jher-photo img{aspect-ratio:1/1;height:auto}html.mf body #julie .jher-facts{display:block!important}html.mf body #julie .jher-facts li,html.mf body #julie .jher-facts li:first-child{padding:18px 0!important;border-left:0!important;border-bottom:1px solid rgba(160,210,255,.22)!important}html.mf body #julie .jher-facts li:last-child{border-bottom:0!important}html.mf body #julie .jher-facts li:first-child{padding-top:0!important}}
+@media (max-width:900px){html.mf body #julie .jher-facts li:nth-child(2){display:block!important}}
