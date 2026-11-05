@@ -8,8 +8,8 @@ Your job: check tracking, then put it live on longevitylifeacademy.com once Omri
    - It is the approved preview page with .com's own tracking and eTeacher's checkout left exactly as on the live .com homepage: Meta pixel, GTM, lla-funnel.js, lla-page-meta.js, ai-attribution.js, the CAPI relay calls, lla-promo.js, eteacher-ecomm.js (/nov/), nov-offer.js and the enroll modal.
    - Rename it to `index.html` and replace the .com homepage with it.
 2. **Asset files.** Upload `meta-final/assets/*` to the .com repo as `assets/mf/`:
-   - `assets/mf/julie-goldenhour-crop.jpg`
-   - `assets/mf/cgm-man.jpg`
+   - `assets/mf/julie-seated.jpg`
+   - `assets/mf/cgm-woman.jpg`
    - `assets/mf/anim/ANIM_PACE_1080.mp4`
    - `assets/mf/anim/ANIM_CURVE_1080.mp4`
    - `assets/mf/anim/PLAY_V6_LLA_RANK.mp4`

@@ -178,6 +178,15 @@ def common(s):
     parts = re.split(r'(<script\b.*?</script>|<style\b.*?</style>)', s[head_end:], flags=re.S)
     parts = [p if p.startswith('<script') or p.startswith('<style') else re.sub(r'>[^<]+<', clean_text, p) for p in parts]
     s = s[:head_end] + ''.join(parts)
+    # Round 9 (Omri: Playfair italic display, consistent on all headers): headers with a line break and no accent span
+    # get the text after the break marked as the italic accent. Markup only, the wording is unchanged.
+    def _acc(m):
+        inner = m.group(3)
+        if '<span' in inner or '<em' in inner or '<br>' not in inner:
+            return m.group(0)
+        a, b = inner.split('<br>', 1)
+        return m.group(1) + a + '<br><span class="mf-acc">' + b + '</span>' + m.group(4)
+    s = re.sub(r'(<h2 class="(section-title|bioquiz-title|how-v2-title)[^"]*"[^>]*>)(.*?)(</h2>)', _acc, s, flags=re.S)
     css = open(os.path.join(HERE, 'meta_final.css'), encoding='utf-8').read().replace('/*%%HERO_CSS%%*/', '').replace('/*%%NEW_FOLDS%%*/', open(os.path.join(HERE, 'meta_final_newfolds.css'), encoding='utf-8').read()).replace('/*%%JULIE_CSS%%*/', open(os.path.join(HERE, 'masterclass_julie.css'), encoding='utf-8').read()).replace('/*%%BRAND%%*/', open(os.path.join(HERE, 'meta_final_fix.css'), encoding='utf-8').read())
     s = s.replace('</head>', '<style id="meta-final">\n' + css + '\n</style>\n</head>', 1)
     js = open(os.path.join(HERE, 'meta_final.js'), encoding='utf-8').read()

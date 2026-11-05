@@ -531,3 +531,33 @@ html body section.value .value-card .value-title{color:color-mix(in srgb,var(--v
 /* Six Systems: no orange nodes (Omri: no orange) */
 html body .deepdive .hex-node[data-hex="3"]{border-color:rgba(46,196,182,.75)!important;box-shadow:0 0 30px rgba(46,196,182,.35),inset 0 0 30px rgba(46,196,182,.1)!important}
 html body .deepdive .hex-node[data-hex="5"]{border-color:rgba(126,200,255,.75)!important;box-shadow:0 0 30px rgba(126,200,255,.35),inset 0 0 30px rgba(126,200,255,.1)!important}
+/* ===== Round 9 (Omri, 5 Nov): Playfair Display on every fold header, the accent in Playfair Display italic, one size scale ===== */
+html.mf body :is(h1.hero-title,.section-title,.how-v2-title,.about-mainhead,.lead-gen-v2-headline,.bioquiz-title,.final-cta-title){font-family:'Playfair Display',Georgia,serif!important;font-weight:500!important;font-style:normal!important;letter-spacing:-.012em!important;line-height:1.1!important;text-transform:none!important;font-size:clamp(36px,3.9vw,56px)!important}
+html.mf body h1.hero-title{font-size:clamp(42px,4.6vw,66px)!important;line-height:1.06!important}
+html.mf body :is(h1.hero-title,.section-title,.how-v2-title,.about-mainhead,.lead-gen-v2-headline,.bioquiz-title,.final-cta-title) :is(span,em):not(.lla-cta-pill):not(.price){font-family:'Playfair Display',Georgia,serif!important;font-style:italic!important;font-weight:400!important;letter-spacing:-.005em!important}
+/* accent colour: light blue on dark folds, brand blue on light folds */
+html.mf body :is(#hero,section.topics,#pricing,#julie,#cgm,#about,#how,#skills,section.deepdive,#lead-gen,section.bioquiz,#apply,section.final-cta) :is(h1.hero-title,.section-title,.how-v2-title,.about-mainhead,.lead-gen-v2-headline,.bioquiz-title,.final-cta-title) :is(span,em):not(.lla-cta-pill):not(.price){background:linear-gradient(180deg,#CFE8FF 0%,#7CC0FF 100%)!important;-webkit-background-clip:text!important;background-clip:text!important;color:transparent!important;-webkit-text-fill-color:transparent!important}
+html.mf body :is(#syllabus,#included,#teachers,section.value,section.testimonials,#faq) :is(.section-title) :is(span,em):not(.lla-cta-pill):not(.price){background:none!important;color:#006EFF!important;-webkit-text-fill-color:#006EFF!important}
+html.mf body .mf-lb{font-family:'Playfair Display',Georgia,serif!important;font-style:italic!important;font-weight:400!important}
+@media (max-width:900px){
+  html.mf body :is(h1.hero-title,.section-title,.how-v2-title,.about-mainhead,.lead-gen-v2-headline,.bioquiz-title,.final-cta-title){font-size:36px!important}
+  html.mf body h1.hero-title{font-size:42px!important}
+}
+/* ===== Round 9: Why This Course Is Different, each card its own brand colour, large text ===== */
+html.mf body section.value .value-track .value-card{position:relative;overflow:hidden;background:var(--vbg)!important;border:1px solid rgba(255,255,255,.22)!important;border-top:1px solid rgba(255,255,255,.45)!important;border-left:1px solid rgba(255,255,255,.22)!important;border-radius:26px!important;padding:34px 32px 36px!important;box-shadow:0 34px 60px -30px var(--vglow),0 0 46px -14px var(--vglow),inset 0 1px 0 rgba(255,255,255,.4)!important}
+html.mf body section.value .value-track .value-card::after{content:'';position:absolute;left:-20%;top:-60%;width:90%;height:120%;background:radial-gradient(closest-side,rgba(255,255,255,.26),transparent);pointer-events:none}
+html.mf body section.value .value-track .value-card:nth-child(4n+1){--vbg:linear-gradient(155deg,#2A86FF 0%,#0057E0 100%);--vglow:rgba(0,110,255,.8)}
+html.mf body section.value .value-track .value-card:nth-child(4n+2){--vbg:linear-gradient(155deg,#8F74FF 0%,#5634E0 100%);--vglow:rgba(123,97,255,.8)}
+html.mf body section.value .value-track .value-card:nth-child(4n+3){--vbg:linear-gradient(155deg,#0FA897 0%,#056A60 100%);--vglow:rgba(0,201,176,.75)}
+html.mf body section.value .value-track .value-card:nth-child(4n+4){--vbg:linear-gradient(155deg,#16408F 0%,#071A44 100%);--vglow:rgba(111,182,255,.8);border-top-color:rgba(160,210,255,.7)!important}
+html.mf body section.value .value-track .value-card .value-title{position:relative;z-index:1;font-family:'Playfair Display',Georgia,serif!important;font-weight:600!important;font-style:normal!important;font-size:31px!important;line-height:1.15!important;letter-spacing:-.01em!important;color:#fff!important;-webkit-text-fill-color:#fff!important;margin:0 0 14px!important}
+html.mf body section.value .value-track .value-card .value-desc{position:relative;z-index:1;font:500 21px/1.55 Inter,sans-serif!important;color:#fff!important;opacity:1!important}
+@media (max-width:900px){
+  html.mf body section.value .value-track .value-card{padding:28px 24px 30px!important}
+  html.mf body section.value .value-track .value-card .value-title{font-size:29px!important}
+  html.mf body section.value .value-track .value-card .value-desc{font-size:20.5px!important}
+}
+@media (min-width:901px){html.mf body section.testimonials .container .section-title{font-size:clamp(36px,3.9vw,56px)!important}}
+@media (min-width:1100px){html.mf body h1.hero-title{font-size:60px!important;margin-right:-150px!important}}
+html.mf body section.value .value-track .value-card{box-shadow:0 18px 30px -20px var(--vglow),0 0 18px -8px var(--vglow),inset 0 1px 0 rgba(255,255,255,.4)!important}
+@media (min-width:1100px){html.mf body h1.hero-title{width:680px!important;max-width:680px!important;margin-right:0!important}}
