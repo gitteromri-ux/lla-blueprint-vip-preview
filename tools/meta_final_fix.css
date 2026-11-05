@@ -801,3 +801,24 @@ html.mf body .mfp-inc,html.mf body #cgm .cgm8-panel h3{font-size:30px!important}
   html.mf body ul.mfp-list li::before,html.mf body #cgm .cgm8-panel ul li::before{font-size:30px!important}
   html.mf body .mfp-inc,html.mf body #cgm .cgm8-panel h3{font-size:29px!important}
 }
+/* Round 16 (Omri: still the same size): clearly larger */
+html.mf body ul.mfp-list li,html.mf body #cgm .cgm8-panel ul li{font-size:26px!important;font-weight:500!important;line-height:1.36!important;grid-template-columns:52px minmax(0,1fr)!important;gap:12px!important;padding:16px 0!important}
+html.mf body ul.mfp-list li::before,html.mf body #cgm .cgm8-panel ul li::before{font-size:38px!important}
+html.mf body .mfp-inc,html.mf body #cgm .cgm8-panel h3{font-size:34px!important}
+html.mf body .mfp-title{font-size:44px!important}
+html.mf body .mfp-then{font-size:23px!important;white-space:normal!important}
+html.mf body .mfp-card .pk-btn{font-size:24px!important;min-height:70px!important}
+html.mf body .mfp-card .pk-foot{font-size:19px!important}
+html.mf body .mfp-tag,html.mf body .mfp-off{font-size:19px!important}
+html.mf body .mfp-side b{font-size:21px!important}
+@media (max-width:760px){
+  html.mf body ul.mfp-list li,html.mf body #cgm .cgm8-panel ul li{font-size:24px!important;grid-template-columns:44px minmax(0,1fr)!important;gap:8px!important;padding:15px 0!important}
+  html.mf body ul.mfp-list li::before,html.mf body #cgm .cgm8-panel ul li::before{font-size:36px!important}
+  html.mf body .mfp-inc,html.mf body #cgm .cgm8-panel h3{font-size:32px!important}
+  html.mf body .mfp-title{font-size:40px!important}
+  html.mf body .mfp-then{font-size:22px!important}
+  html.mf body .mfp-card .pk-btn{font-size:23px!important}
+  html.mf body .mfp-tag,html.mf body .mfp-off{font-size:18px!important}
+  html.mf body .mfp-card{padding:24px 18px 20px!important}
+  html.mf body #cgm .cgm8-panel{padding:22px 18px 14px!important}
+}
