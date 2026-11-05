@@ -117,6 +117,13 @@ def common(s):
     hero = must(hero, '<img src="assets/hero-cgm.jpg" alt="Continuous glucose monitor and personalized health protocol" class="hero-image" loading="eager" fetchpriority="high">',
                 '<video class="hero-image mf-cells" src="https://longevitylifeacademy.pages.dev/assets/cells-light.mp4" poster="https://longevitylifeacademy.pages.dev/assets/cells-poster.jpg" autoplay muted loop playsinline preload="auto" aria-hidden="true"></video>')
     film = re.search(r'<figure class="lla-film">.*?</figure>', DEV_HERO, flags=re.S).group(0)
+    # Trustpilot: no pill (Omri). One clean rating line.
+    tp = ('<div class="mf-tp" role="img" aria-label="Rated 4.6 out of 5 on Trustpilot, 600+ verified reviews">'
+          '<span class="mf-tp-logo"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#00B67A" d="M12 1.5l2.9 8.2H24l-7.1 5.2 2.7 8.6L12 18.3l-7.6 5.2 2.7-8.6L0 9.7h9.1z"/></svg><b>Trustpilot</b></span>'
+          '<span class="mf-tp-stars">' + ''.join('<i><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#fff" d="M12 3.6l2.3 6.1h6.4l-5.1 3.9 1.9 6.3L12 16l-5.5 3.9 1.9-6.3-5.1-3.9h6.4z"/></svg></i>' for _ in range(5)) + '</span>'
+          '<span class="mf-tp-score"><b>4.6</b> / 5</span><span class="mf-tp-count">600+ verified reviews</span></div>')
+    hero = re.sub(r'<div class="trustpilot trustpilot--top">.*?600\+ verified reviews</span>\s*</div>', tp, hero, count=1, flags=re.S)
+    assert 'mf-tp' in hero, 'trustpilot replace failed'
     hero = hero[:hero.rfind('</section>')] + '<div class="mf-hero-film">' + film + '</div>\n</section>'
     s = s[:a] + hero + s[b:]
     if stray:

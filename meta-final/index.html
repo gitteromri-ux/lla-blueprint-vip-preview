@@ -8965,6 +8965,117 @@ body section.topics .topic-v2-num{font-size:15px!important}
 }
 @media (prefers-reduced-motion:reduce){.cgm5-phone,.cgm5-sensor,.cgm5-ring,.cgm5-line,.cgm5-dot{animation:none!important;stroke-dashoffset:0}}
 
+/* ---- Trustpilot: no pill, one clean rating line ---- */
+.hero .mf-tp{display:flex;flex-wrap:wrap;align-items:center;gap:10px 16px;margin:0 0 22px;background:none;border:0;padding:0}
+.hero .mf-tp-logo{display:inline-flex;align-items:center;gap:6px}
+.hero .mf-tp-logo svg{width:28px;height:28px}
+.hero .mf-tp-logo b{font:800 22px/1 Inter,sans-serif;color:#fff;letter-spacing:-.01em}
+.hero .mf-tp-stars{display:inline-flex;gap:4px}
+.hero .mf-tp-stars i{width:30px;height:30px;display:grid;place-items:center;background:#00B67A;border-radius:3px;box-shadow:0 6px 16px -6px rgba(0,182,122,.8)}
+.hero .mf-tp-stars i:last-child{background:linear-gradient(90deg,#00B67A 60%,#5A6B85 60%)}
+.hero .mf-tp-stars svg{width:22px;height:22px}
+.hero .mf-tp-score{font:500 20px/1 Inter,sans-serif;color:#DCE8FF}
+.hero .mf-tp-score b{font-size:26px;font-weight:800;color:#fff}
+.hero .mf-tp-count{font:600 19px/1 Inter,sans-serif;color:#fff;padding-left:16px;border-left:1px solid rgba(255,255,255,.35)}
+@media (max-width:900px){
+  .hero .mf-tp{justify-content:center;gap:8px 12px}
+  .hero .mf-tp-logo b{font-size:20px}.hero .mf-tp-stars i{width:27px;height:27px}.hero .mf-tp-stars svg{width:19px;height:19px}
+  .hero .mf-tp-score b{font-size:23px}.hero .mf-tp-count{font-size:17.5px}
+}
+.hero .hero-sub{font-size:21px!important;line-height:1.55!important;color:#E8F1FF!important}
+@media (max-width:900px){.hero .hero-sub{font-size:19.5px!important}}
+
+/* ---- Pricing: bigger, clearer, the masterclass card ---- */
+.mc-pricing .pk-card{max-width:880px!important;padding:46px 52px 40px!important}
+.mc-pricing .pk-tier{font-family:'Codec Pro','Inter',sans-serif!important;font-size:30px!important;font-weight:700!important;letter-spacing:-.02em!important;text-transform:none!important}
+.mc-pricing .pk-tier em{font-family:'Instrument Serif','Playfair Display',Georgia,serif;font-style:italic;font-weight:400;color:#BFE3FF}
+.mc-pricing .pk-tier::before{display:none!important}
+.mc-pricing .pk-len{font-size:19px!important;padding:10px 18px!important}
+.mc-pricing .pk-pricerow{margin-top:26px!important;gap:6px 22px!important;align-items:flex-end!important}
+.mc-pricing .pk-price{font-size:clamp(110px,10vw,148px)!important}
+.mc-pricing .pk-pricemeta{padding-bottom:14px}
+.mc-pricing .pk-pricemeta s{font-size:34px!important}
+.mc-pricing .pk-pricemeta span{font-size:28px!important;font-weight:700!important}
+.mc-pricing .pk-spec{margin:30px 0 32px!important;display:grid!important}
+.mc-pricing .pk-spec>div{display:grid!important;grid-template-columns:150px 1fr!important;gap:20px!important;align-items:baseline!important;padding:18px 0!important;border-top:1px solid rgba(255,255,255,.22)!important}
+.mc-pricing .pk-spec>div:last-child{border-bottom:1px solid rgba(255,255,255,.22)!important}
+.mc-pricing .pk-spec dt{font:800 19px/1.2 Inter,sans-serif!important;color:#BFE3FF!important;text-transform:none!important;letter-spacing:0!important;margin:0!important}
+.mc-pricing .pk-spec dd{font:600 25px/1.4 Inter,sans-serif!important;color:#fff!important;margin:0!important}
+.mc-pricing .pk-spec>div:nth-child(1) dt{color:#9FE7DF!important}.mc-pricing .pk-spec>div:nth-child(2) dt{color:#BFE3FF!important}.mc-pricing .pk-spec>div:nth-child(3) dt{color:#D6CCFF!important}.mc-pricing .pk-spec>div:nth-child(4) dt{color:#FFFFFF!important}
+.mc-pricing .pk-btn{font-size:25px!important;min-height:76px!important}
+.mc-pricing .pk-refund{font-size:21px!important;font-weight:700!important;color:#fff!important}
+.mc-pricing .pk-foot{font-size:20px!important;color:#DCE8FF!important}
+.mc-pricing .pk-sub{font-size:22px!important;color:#DCE8FF!important}
+@media (max-width:760px){
+  .mc-pricing .pk-card{padding:28px 20px 24px!important}
+  .mc-pricing .pk-tier{font-size:26px!important}
+  .mc-pricing .pk-len{font-size:16px!important}
+  .mc-pricing .pk-price{font-size:112px!important}
+  .mc-pricing .pk-pricemeta s{font-size:28px!important}.mc-pricing .pk-pricemeta span{font-size:24px!important}
+  .mc-pricing .pk-spec>div{grid-template-columns:1fr!important;gap:4px!important;padding:14px 0!important}
+  .mc-pricing .pk-spec dt{font-size:17px!important}
+  .mc-pricing .pk-spec dd{font-size:22px!important}
+  .mc-pricing .pk-btn{font-size:23px!important}
+  .mc-pricing .pk-refund{font-size:19px!important}
+  .mc-pricing .pk-sub{font-size:20px!important}
+}
+
+/* ---- More colour on the cards (light .com folds): every card its own tint ---- */
+.nov-incl-card{background:linear-gradient(160deg,color-mix(in srgb,var(--c1,#006EFF) 20%,#fff) 0%,#fff 72%)!important;border:2px solid color-mix(in srgb,var(--c1,#006EFF) 40%,#fff)!important;border-radius:22px!important}
+.nov-incl-card .n{font-size:44px!important;color:var(--c1)!important}
+.nov-incl-card h3{font-size:24px!important;color:#0A1E3A!important}
+.nov-incl-card p{font-size:19.5px!important;line-height:1.5!important;color:#22385E!important}
+.testimonials .quote-card{background:linear-gradient(160deg,color-mix(in srgb,var(--acc,#006EFF) 22%,#fff) 0%,#fff 75%)!important;border:2px solid color-mix(in srgb,var(--acc,#006EFF) 40%,#fff)!important}
+.testimonials .quote-card .quote-text{font-size:21px!important;color:#0A1E3A!important}
+.instructors .teacher-card-live{background:linear-gradient(170deg,color-mix(in srgb,var(--acc,#006EFF) 20%,#fff) 0%,#fff 60%)!important;border:2px solid color-mix(in srgb,var(--acc,#006EFF) 38%,#fff)!important}
+.instructors .teacher-card-live-name{font-size:22px!important}
+.instructors .teacher-card-live-bio{font-size:18.5px!important;color:#22385E!important}
+.faq .faq-item{border-left:6px solid var(--fq,#006EFF)!important;background:linear-gradient(90deg,color-mix(in srgb,var(--fq,#006EFF) 10%,#fff),#fff 60%)!important}
+.faq .faq-item:nth-child(4n+1){--fq:#006EFF}.faq .faq-item:nth-child(4n+2){--fq:#14A89A}.faq .faq-item:nth-child(4n+3){--fq:#7A4DFF}.faq .faq-item:nth-child(4n+4){--fq:#3BA7FF}
+.faq .faq-q{font-size:21px!important}
+.faq .faq-a-inner{font-size:19.5px!important}
+
+/* ---- Larger text everywhere ---- */
+.section-subtitle{font-size:21px!important;line-height:1.55!important}
+@media (max-width:760px){.section-subtitle{font-size:19.5px!important}}
+.curriculum li,.curriculum .curriculum-flow,.curriculum .curriculum-work,.mf-learn .curriculum-goals li{font-size:19px!important}
+.mf-learn .phase-benefit{font-size:19.5px!important}
+.skills .skill-content p{font-size:19px!important}
+.nov-vip li,.mf-julie .jb-wide-body p{font-size:19.5px!important}
+.lead-gen-v2 .lead-gen-v2-sub{font-size:20.5px!important}.lead-gen-v2 .lead-gen-v2-bullets li{font-size:20px!important}
+.about p{font-size:21px!important}
+.footer a,.footer p{font-size:17px!important}
+
+/* ---- No small light text anywhere (measured list, 5 Nov) ---- */
+html body section .eyebrow,html body .lead-gen-v2-eyebrow{font-size:16.5px!important}
+.lla-float-cta .lla-cta-eyebrow{font-size:15px!important}.lla-float-cta .lla-cta-title{font-size:19px!important}
+@media (max-width:720px){.lla-float-cta .lla-cta-eyebrow{font-size:14px!important}.lla-float-cta .lla-cta-title{font-size:17.5px!important}}
+.lead-gen-v2 .lg-buy-sub{font-size:16px!important}
+.lead-gen-v2 .lg-buy-main{font-size:21px!important}
+.lead-gen-v2 a[href*="whatsapp"],.lead-gen-v2 a[href*="wa.me"]{font-size:17.5px!important}
+.mf-learn .curriculum-tab .curriculum-tab-meta{font-size:16px!important}.mf-learn .curriculum-tab .curriculum-tab-name{font-size:19px!important}
+.nov-incl-card .tag{font-size:16px!important}
+.skills .skill-eyebrow{font-size:15.5px!important}
+.about .hero-powered-stats li>span{font-size:16px!important}.about .about-powered-label{font-size:16.5px!important}
+.footer .brand-mark,.footer h4,.footer div,.footer .brand-name-codec{font-size:16px!important}
+.footer a,.footer p{font-size:18px!important}
+.mf-julie .jstats i{font-size:16.5px!important}.mf-julie .jstats span{font-size:18px!important}
+.mf-julie .jb-chips span{font-size:17px!important}.mf-julie .jb-kicker{font-size:16.5px!important}
+.mf-julie .jcta-note{font-size:19px!important}
+.mf-julie .jb-cap span{font-size:17.5px!important}.mf-julie .jb-cap b{font-size:21px!important}
+.hero .btn-ghost{font-size:18px!important;padding:14px 22px!important}
+.hero .btn-primary,.hero .btn-primary--lg{font-size:19.5px!important;padding:16px 28px!important}
+.hero .mf-hero-film figcaption{font-size:17px!important}.hero .mf-hero-film figcaption b{font-size:19px!important}
+.section-cta-btn,.btn-primary{font-size:19px!important}
+.cgm5-fine{font-size:18px!important}.cgm5-link{font-size:19px!important}
+.cgm5-head em{font-size:12.5px!important}.cgm5-value small{font-size:15px!important}
+body section.topics .topic-v2-desc{font-size:18.5px!important}
+@media (min-width:769px){.nav .nav-links a{font-size:17px!important}}
+@media (max-width:760px){.mc-pricing .pk-spec dt{font-size:18px!important}}
+html body section.hero a.btn-ghost{font-size:18px!important;padding:14px 22px!important}
+html body section.hero a.btn-primary,html body section.hero a.btn-primary--lg{font-size:19.5px!important;padding:16px 30px!important}
+html body section.lead-gen .lead-gen-v2-eyebrow{font-size:16.5px!important}
+
 
 </style>
 </head>
@@ -9038,16 +9149,7 @@ body section.topics .topic-v2-num{font-size:15px!important}
   <div class="hero-overlay"></div>
   <div class="hero-inner">
     <!-- IIBS-style trust pill ABOVE headline -->
-    <div class="trustpilot trustpilot--top">
-      <div class="trustpilot-stars">
-        <span class="trustpilot-star"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></span>
-        <span class="trustpilot-star"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></span>
-        <span class="trustpilot-star"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></span>
-        <span class="trustpilot-star"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></span>
-        <span class="trustpilot-star"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></span>
-      </div>
-      <span><span class="trustpilot-score">4.6 / 5</span> &middot; Trustpilot &middot; 600+ verified reviews</span>
-    </div>
+    <div class="mf-tp" role="img" aria-label="Rated 4.6 out of 5 on Trustpilot, 600+ verified reviews"><span class="mf-tp-logo"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#00B67A" d="M12 1.5l2.9 8.2H24l-7.1 5.2 2.7 8.6L12 18.3l-7.6 5.2 2.7-8.6L0 9.7h9.1z"/></svg><b>Trustpilot</b></span><span class="mf-tp-stars"><i><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#fff" d="M12 3.6l2.3 6.1h6.4l-5.1 3.9 1.9 6.3L12 16l-5.5 3.9 1.9-6.3-5.1-3.9h6.4z"/></svg></i><i><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#fff" d="M12 3.6l2.3 6.1h6.4l-5.1 3.9 1.9 6.3L12 16l-5.5 3.9 1.9-6.3-5.1-3.9h6.4z"/></svg></i><i><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#fff" d="M12 3.6l2.3 6.1h6.4l-5.1 3.9 1.9 6.3L12 16l-5.5 3.9 1.9-6.3-5.1-3.9h6.4z"/></svg></i><i><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#fff" d="M12 3.6l2.3 6.1h6.4l-5.1 3.9 1.9 6.3L12 16l-5.5 3.9 1.9-6.3-5.1-3.9h6.4z"/></svg></i><i><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#fff" d="M12 3.6l2.3 6.1h6.4l-5.1 3.9 1.9 6.3L12 16l-5.5 3.9 1.9-6.3-5.1-3.9h6.4z"/></svg></i></span><span class="mf-tp-score"><b>4.6</b> / 5</span><span class="mf-tp-count">600+ verified reviews</span></div>
     <!-- Hero brand: exact approved wordmark (no emblem) - identical fonts/colors -->
     <img src="https://www.longevitylifeacademy.com/assets/lla-wordmark-only-transparent@2x.png?v=10" alt="Longevity Life Academy by eTeacher Group" class="hero-wordmark-img" loading="eager" fetchpriority="high" width="397" height="253">
     <h1 class="hero-title">
@@ -9652,18 +9754,17 @@ body section.topics .topic-v2-num{font-size:15px!important}
       <p class="pk-sub">Live 18-week course, free Abbott Lingo CGM, $100 cash back. Online sign-ups in November only.</p>
     </header>
     <article class="pk-card pk-vip">
-      <div class="pk-top"><span class="pk-tier">November offer</span><span class="pk-len">55% off month one</span></div>
+      <div class="pk-top"><span class="pk-tier">The Longevity <em>Blueprint</em></span><span class="pk-len">55% off month one</span></div>
       <div class="pk-pricerow">
         <div class="pk-price"><sup>$</sup>79</div>
-        <div class="pk-pricemeta"><s>$169</s><span>Month 1</span></div>
-        <h3 class="pk-title">The Longevity <em>Blueprint</em></h3>
+        <div class="pk-pricemeta"><s>$169</s><span>first month</span></div>
       </div>
-      <ul class="pk-rows">
-        <li style="--dot:#8FE3FF">Then $169 a month for 4 months</li>
-        <li style="--dot:#7DE5C1">Free Abbott Lingo CGM, shipped to your home</li>
-        <li style="--dot:#FFB38A">Julie Gibson Clark's VIP Masterclass, Nov 14</li>
-        <li style="--dot:#D2C2FF">$100 cash back towards your next course</li>
-      </ul>
+      <dl class="pk-spec">
+        <div><dt>Then</dt><dd>$169 a month for 4 months</dd></div>
+        <div><dt>Course</dt><dd>18 live classes in small groups, top instructors</dd></div>
+        <div><dt>Included</dt><dd>Free Abbott Lingo CGM, shipped to your home, and $100 cash back on your next course</dd></div>
+        <div><dt>Bonus</dt><dd>Julie Gibson Clark's VIP Masterclass, live November 14</dd></div>
+      </dl>
       <a class="pk-btn" href="#pricing" data-preview-enroll><span>Enroll now</span><span class="pk-arr" aria-hidden="true">&rarr;</span></a>
       <p class="pk-previewnote" hidden>Preview. On longevitylifeacademy.com this button opens eTeacher's checkout, unchanged.</p><p class="pk-refund">14-day try-out refund on the course.</p>
     </article>
