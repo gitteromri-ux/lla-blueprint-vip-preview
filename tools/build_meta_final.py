@@ -63,23 +63,23 @@ assert AUTOPLAY_JS, 'pages.dev autoplay script not found'
 PRICING = open(os.path.join(HERE, 'meta_final_pricing.html'), encoding='utf-8').read()
 CGM = open(os.path.join(HERE, 'meta_final_cgm.html'), encoding='utf-8').read()
 
-ORDER = [  # Omri's review-file order (claude-selection.json); hero, pricing and CGM are replaced.
+ORDER = [  # Omri 5 Nov, 23:40: his order first (hero, six pillars, what you'll learn, CGM, Julie, pricing, how, about, logos, instructors, Six Systems, blog), then the folds he did not list, kept
     ('hero', '<section class="hero" id="hero">', None),
     ('topics', '<section class="topics">', None),
     ('syllabus', '<section class="curriculum" id="syllabus">', DEV_LEARN),
-    ('pricing', '<section class="nov-offer" id="offer">', PRICING),
-    ('julie', '<section class="nov-vip" id="vip">', JULIE),
-    ('included', '<section class="nov-incl" id="included">', None),
     ('cgm', '<section class="cgm-fold" id="cgm">', CGM),
+    ('julie', '<section class="nov-vip" id="vip">', JULIE),
+    ('pricing', '<section class="nov-offer" id="offer">', PRICING),
+    ('how', '<section class="how-v2" id="how">', None),
     ('about', '<section class="about" id="about">', None),
     ('trust', '<section class="trust-strip"', None),
     ('teachers', '<section class="instructors" id="teachers">', None),
-    ('how', '<section class="how-v2" id="how">', None),
-    ('news', '<section class="skills" id="skills">', None),
-    ('why', '<section class="value">', None),
     ('systems', '<section class="deepdive">', None),
-    ('quiz', '<section class="bioquiz">', None),
+    ('news', '<section class="skills" id="skills">', None),
     ('reviews', '<section class="testimonials">', None),
+    ('included', '<section class="nov-incl" id="included">', None),
+    ('why', '<section class="value">', None),
+    ('quiz', '<section class="bioquiz">', None),
     ('faq', '<section class="faq" id="faq">', None),
     ('form', '<section class="lead-gen lead-gen-v2" id="lead-gen">', None),  # Omri (latest): the form is huge, it can be at the end
     ('final', '<section class="final-cta" id="apply">', None),
@@ -246,6 +246,7 @@ def common(s):
     ]:
         if a in s: s = s.replace(a, b)
         else: print('note: review not found:', a[:50])
+    s = must(s, '<h2 class="section-title">Learn to Master<br><span class="mf-acc">Six Pillars of a Longer, Better Life.</span></h2>', '<h2 class="section-title">Learn to Master Six Pillars<br><span class="mf-acc">for a Longer, Better Life.</span></h2>')
     css = open(os.path.join(HERE, 'meta_final.css'), encoding='utf-8').read().replace('/*%%HERO_CSS%%*/', '').replace('/*%%NEW_FOLDS%%*/', open(os.path.join(HERE, 'meta_final_newfolds.css'), encoding='utf-8').read()).replace('/*%%JULIE_CSS%%*/', open(os.path.join(HERE, 'masterclass_julie.css'), encoding='utf-8').read()).replace('/*%%BRAND%%*/', open(os.path.join(HERE, 'meta_final_fix.css'), encoding='utf-8').read() + '\n' + open(os.path.join(HERE, 'meta_final_pricing_big.css'), encoding='utf-8').read())
     s = s.replace('</head>', '<style id="meta-final">\n' + css + '\n</style>\n</head>', 1)
     js = open(os.path.join(HERE, 'meta_final.js'), encoding='utf-8').read()
