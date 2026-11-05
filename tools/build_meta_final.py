@@ -55,7 +55,6 @@ for k, c in PH.items():
     DEV_LEARN = DEV_LEARN.replace(f'data-phase-tab="{k}"', f'data-phase-tab="{k}" style="--ph:{c}"')
     DEV_LEARN = re.sub(r'(<div class="phase-block[^"]*" data-phase="' + k + r'")', r'\1 style="--ph:' + c + '"', DEV_LEARN)
 DEV_LEARN = re.sub(r'href="#offer"', 'href="#lead-gen"', DEV_LEARN)
-JULIE = open(os.path.join(HERE, 'meta_final_julie.html'), encoding='utf-8').read()
 m = re.search(r'<script id="lla-r11-lazy-video">.*?</script>', dev, flags=re.S)
 AUTOPLAY_JS = m.group(0) if m else ''
 assert AUTOPLAY_JS, 'pages.dev autoplay script not found'
@@ -68,7 +67,7 @@ ORDER = [  # Omri's review-file order (claude-selection.json); hero, pricing and
     ('topics', '<section class="topics">', None),
     ('syllabus', '<section class="curriculum" id="syllabus">', DEV_LEARN),
     ('pricing', '<section class="nov-offer" id="offer">', PRICING),
-    ('julie', '<section class="nov-vip" id="vip">', JULIE),
+    ('julie', '<section class="nov-vip" id="vip">', None),  # Omri 5 Nov: the .com VIP Masterclass fold (banner portrait), not the masterclass bento
     ('included', '<section class="nov-incl" id="included">', None),
     ('cgm', '<section class="cgm-fold" id="cgm">', CGM),
     ('about', '<section class="about" id="about">', None),
@@ -142,6 +141,13 @@ def common(s):
         s = s[:m.start(2)] + logos + extra + extra + s[m.end(2):]
     s = s.replace('</head>', '<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">\n</head>', 1)
     s = must(s, '<span class="tag">$99 value, included</span>', '<span class="tag">Included</span>')
+    s = must(s, 'teaches her complete protocol live on Zoom. A $99 seat, free with the Blueprint when you enroll with your masterclass code.',
+             'teaches her complete protocol live on Zoom. Free with enrollment.')
+    s = must(s, '<li><b>How you get it.</b> Enroll in the Blueprint with code <span class="nov-code">JULIE249</span> or <span class="nov-code">MASTERCLASS-VIP</span>. The code is pre-filled in the coupon box above.</li>',
+             '<li><b>How you get it.</b> Free with enrollment.</li>')
+    s = must(s, 'data-nov-open>Reserve My Seat <svg', 'data-nov-open>Enroll now <svg')
+    s = must(s, '<figcaption><b>Julie Gibson Clark</b>Founding Faculty · 2nd slowest-aging woman on earth</figcaption>',
+             '<figcaption><b>Julie Gibson Clark</b>Founding Faculty, 2nd slowest-aging woman on earth</figcaption>')
     s = must(s, '<span style="color:#006EFF;">Doesn\'t Have Time to Teach You.</span>', '<span class="mf-lb">Doesn\'t Have Time to Teach You.</span>')
     s = must(s, 'In November, tuition is $79 for month 1 with code JULIE249 or MASTERCLASS-VIP, then four monthly payments of $169 '
                 '($755 total; regular plan $169 x 5). Tuition includes',
@@ -164,10 +170,40 @@ def common(s):
     s = must(s, '<img src="assets/lla-logo-exact-transparent@2x.png?v=9" alt="Longevity Life Academy" class="nav-logo-img" width="1314" height="596">',
              '<img src="assets/lla-logo-no-tagline@2x.png" alt="Longevity Life Academy" class="nav-logo-img" width="1268" height="397">')
     s = re.sub(r'<title>.*?</title>', '<title>The Longevity Blueprint | November offer: $79 first month</title>', s, count=1, flags=re.S)
-    css = open(os.path.join(HERE, 'meta_final.css'), encoding='utf-8').read().replace('/*%%HERO_CSS%%*/', '').replace('/*%%NEW_FOLDS%%*/', open(os.path.join(HERE, 'meta_final_newfolds.css'), encoding='utf-8').read()).replace('/*%%JULIE_CSS%%*/', open(os.path.join(HERE, 'masterclass_julie.css'), encoding='utf-8').read()).replace('/*%%BRAND%%*/', open(os.path.join(HERE, 'meta_final_fix.css'), encoding='utf-8').read())
+    s = nov5_text(s)
+    css = open(os.path.join(HERE, 'meta_final.css'), encoding='utf-8').read().replace('/*%%HERO_CSS%%*/', '').replace('/*%%NEW_FOLDS%%*/', open(os.path.join(HERE, 'meta_final_newfolds.css'), encoding='utf-8').read()).replace('/*%%JULIE_CSS%%*/', '').replace('/*%%BRAND%%*/', open(os.path.join(HERE, 'meta_final_fix.css'), encoding='utf-8').read() + '\n' + open(os.path.join(HERE, 'meta_final_nov5.css'), encoding='utf-8').read())
     s = s.replace('</head>', '<style id="meta-final">\n' + css + '\n</style>\n</head>', 1)
     js = open(os.path.join(HERE, 'meta_final.js'), encoding='utf-8').read()
     s = s.replace('</body>', AUTOPLAY_JS + '\n<script>\n' + js + '\n</script>\n</body>', 1)
+    return s
+
+
+# ---------------------------------------------------------------- 5 Nov: credibility audit (Omri). Text only, no new copy.
+def nov5_text(s):
+    import html as _h
+    # session ranges: "1-3" -> "1 to 3" (no dashes, plain words)
+    s = re.sub(r'(Sessions?) (\d+)[-–](\d+)', r'\1 \2 to \3', s)
+    s = re.sub(r'(<span class="phase-block-label">Phase \d), Sessions', r'\1, sessions', s)
+    s = must(s, 'a small class of 8–15 people', 'a small class of 8 to 15 people')
+    s = must(s, 'Small classes (8–15 students)', 'Small classes (8 to 15 students)')
+    # syllabus 50-minute flow: "A → B → C" becomes sentences
+    s = s.replace('(vegetable → protein → carb)', '(vegetable, then protein, then carb)')
+    def flow(m):
+        parts = [x.strip() for x in m.group(0).split('→')]
+        return '. '.join(p[:1].upper() + p[1:] if p else p for p in parts)
+    s = re.sub(r'[^<>\n]*→[^<>\n]*', lambda m: m.group(0) if m.group(0).strip() in ('→',) else flow(m), s)
+    # eTeacher form line
+    s = must(s, '<span class="lg-buy-sub">Register &rarr; Choose your dates &rarr; Pay online &middot; done in 2 minutes</span>',
+             '<span class="lg-buy-sub">Register, choose your dates, pay online. Done in 2 minutes.</span>')
+    # Six Systems detail texts (in the .com script)
+    s = s.replace(' \\u2014 and which numbers matter', ', and which numbers matter').replace('the cardio fitness \\u2014 the exercise', 'the cardio fitness, the exercise')
+    s = s.replace('behind them \\u2014 and which', 'behind them, and which').replace('and goals \\u2014 tested and', 'and goals, tested and')
+    # eyebrows in sentence case (.com sets them uppercase in CSS)
+    for a, b in [('>The Six Pillars<', '>The six pillars<'), ('>Your Instructors<', '>Your instructors<'), ('>About Us<', '>About us<'),
+                 ('>Deep Dives<', '>Deep dives<'), ('>Included in Your Course<', '>Included in your course<'), ('>Student Voices<', '>Student voices<'),
+                 ('>The Operating System<', '>The operating system<'), ('>What Makes This Different<', '>What makes this different<'),
+                 ('>Apply for the Next Class<', '>Apply for the next class<'), ('>Free · 2 Minutes<', '>Free, 2 minutes<'), ('>Your Bio-Age<', '>Your bio-age<')]:
+        s = re.sub(r'(<(span|p|div) class="[^"]*eyebrow[^"]*"[^>]*)' + re.escape(a), lambda m: m.group(1) + b, s)
     return s
 
 

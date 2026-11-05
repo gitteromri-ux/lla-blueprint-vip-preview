@@ -4111,7 +4111,7 @@ h2.section-title {
 }
 
 /* When FAQ item is open, the headline becomes a colorful brand gradient
-   (blue → light blue) instead of plain white, readable + on-brand */
+(blue. Light blue) instead of plain white, readable + on-brand */
 .faq-item.open .faq-q,
 .faq-item.open .faq-q span:not(.faq-num),
 .faq-item.open .faq-q-text {
@@ -7790,7 +7790,7 @@ section.topics .topic-v2-video video {
 
 /* ============================================
    FIXES, May 2026
-   1. How It Works subtitle visibility (dark text on dark bg → light)
+1. How It Works subtitle visibility (dark text on dark bg. Light)
    2. Lead-gen-v2 form input text color (was white-on-white from legacy .lead-gen rule)
    3. Universal Thank You state for every form on the site
    ============================================ */
@@ -8218,392 +8218,6 @@ body section.instructors,body section.testimonials,body section.faq,body section
 
 /* ======== Julie (masterclass fold, its own CSS below), dark royal background, no cream ======== */
 .mf-julie{--ph4:#3B3F91;--royal:#006EFF;--skytint:#E8F1FF;--surface2:#EEF1F6;--v7-ease:cubic-bezier(.22,1,.36,1);--v7-ice:#EEF4FC;--v7-md:#3E5A7C;--v7-td:#0A1E3A;--v7-shadow-light:0 1px 0 #fff inset,0 1px 2px rgba(10,30,58,.10),0 20px 44px -20px rgba(10,30,58,.30),0 60px 120px -50px rgba(0,110,255,.28);--v7-shadow-dark:0 1px 0 rgba(255,255,255,.07) inset,0 1px 2px rgba(0,0,0,.45),0 18px 40px -18px rgba(0,0,0,.7),0 60px 120px -50px rgba(0,110,255,.35)}
-#julie{background:
-    radial-gradient(60% 50% at 88% 0%,rgba(0,110,255,.16),transparent 60%),
-    radial-gradient(50% 40% at 0% 100%,rgba(124,196,255,.22),transparent 60%),
-    linear-gradient(180deg,#F4F8FE 0%,var(--v7-ice) 50%,#E6EFFB 100%);
-  color:var(--v7-md)}
-#julie::after{content:"";position:absolute;inset:0;z-index:0;pointer-events:none;background:radial-gradient(rgba(10,30,58,.07) 1px,transparent 1.2px) 0 0/26px 26px;-webkit-mask-image:radial-gradient(70% 60% at 50% 40%,#000,transparent);mask-image:radial-gradient(70% 60% at 50% 40%,#000,transparent)}
-#julie .anton{color:var(--v7-td)}
-#julie .anton .serif-i{background:linear-gradient(92deg,#0047B3,#006EFF 55%,#2F8BFF);-webkit-background-clip:text;background-clip:text}
-#julie .btn-ghost{background:linear-gradient(180deg,#4DA3FF 0%,#006EFF 58%,#0059D6 100%)!important;color:#fff!important;border:0!important;
-  box-shadow:0 1px 0 rgba(255,255,255,.45) inset,0 -1px 0 rgba(0,0,0,.25) inset,0 1px 2px rgba(0,20,60,.4),0 10px 24px -8px rgba(0,110,255,.75),0 26px 60px -24px rgba(0,110,255,.55)!important;
-  text-shadow:0 1px 0 rgba(0,30,90,.35);transition:transform .25s var(--v7-ease),box-shadow .25s var(--v7-ease),filter .25s}
-#julie .btn-ghost:hover{transform:translateY(-2px);filter:saturate(1.08) brightness(1.04);
-  box-shadow:0 1px 0 rgba(255,255,255,.5) inset,0 -1px 0 rgba(0,0,0,.25) inset,0 2px 3px rgba(0,20,60,.4),0 16px 34px -10px rgba(0,110,255,.85),0 40px 80px -30px rgba(0,110,255,.6)!important}
-#reveal .tcard{border-radius:26px;overflow:hidden;box-shadow:var(--v7-shadow-dark);
-  transition:transform .5s var(--v7-ease),box-shadow .5s var(--v7-ease);transform-style:preserve-3d}
-#reveal .tcard:nth-child(1){transform:rotateY(5deg) translateZ(0)}
-#reveal .tcard:nth-child(3){transform:rotateY(-5deg) translateZ(0)}
-#reveal .tcard:nth-child(2){transform:translateY(-14px)}
-#reveal .tcard:hover{transform:translateY(-10px) rotateY(0);box-shadow:0 1px 0 rgba(255,255,255,.1) inset,0 2px 4px rgba(0,0,0,.5),0 30px 60px -20px rgba(0,0,0,.75),0 80px 140px -50px rgba(0,110,255,.5)}
-#reveal .t-royal .tmedia::after{background:linear-gradient(180deg,transparent 40%,rgba(0,71,179,.75) 100%)}
-#reveal .tcard .tn{top:auto;bottom:22px;right:24px;font-size:150px;line-height:.8;opacity:1;
-  font-family:'Playfair Display','Instrument Serif',Georgia,serif;font-style:italic;font-weight:400;
-  color:transparent;-webkit-text-stroke:1px rgba(255,255,255,.28);
-  background:linear-gradient(180deg,rgba(255,255,255,.22),rgba(255,255,255,0));-webkit-background-clip:text;background-clip:text}
-#reveal .tcard h3{font-size:clamp(24px,1.85vw,30px);letter-spacing:-.02em;max-width:92%}
-#reveal .tcard .tlead{font-size:17px;line-height:1.6;margin-top:12px}
-#reveal .tcard hr{margin:20px 0;height:1px;background:linear-gradient(90deg,rgba(255,255,255,.35),rgba(255,255,255,.04))}
-#reveal .tcard li{font-size:16px;line-height:1.5;margin-bottom:11px;padding-left:24px}
-#reveal .tcard li::before{top:8px;width:8px;height:8px;box-shadow:0 0 0 3px rgba(124,196,255,.18),0 0 12px rgba(77,163,255,.9)}
-#reveal .t-royal{background:radial-gradient(90% 60% at 100% 0%,rgba(124,196,255,.45),transparent 55%),linear-gradient(165deg,#1273FF 0%,#0051CC 55%,#003A94 100%)}
-#reveal .t-navy{background:radial-gradient(80% 60% at 100% 100%,rgba(0,110,255,.28),transparent 60%),linear-gradient(165deg,#111C33 0%,#0A1324 100%);border:1px solid rgba(124,196,255,.22)}
-#julie{padding:112px 0 100px}
-#julie .jhero{align-items:center;gap:64px}
-#julie .jname{font-family:'Codec Pro','Inter',sans-serif!important;font-weight:700!important;font-size:clamp(54px,5.6vw,84px);letter-spacing:-.03em;line-height:1;color:var(--v7-td)}
-#julie .jname .serif-i{font-family:'Instrument Serif','Playfair Display',Georgia,serif;font-style:italic;font-weight:400;background:linear-gradient(92deg,#0047B3,#006EFF 55%,#2F8BFF);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
-#julie .jrole2{font-size:24px;color:#2B4B72}
-#julie .jbig b{background:linear-gradient(92deg,#0047B3 0%,#006EFF 55%,#4DA3FF 100%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;filter:drop-shadow(0 12px 28px rgba(0,110,255,.25))}
-#julie .jbig span{color:#3E5A7C}
-#julie .jline{color:#2B4B72}
-#julie .jcta{display:flex;align-items:center;gap:22px;flex-wrap:wrap;margin-top:34px}
-#julie .jcta-note{font-size:19px;color:#3E5A7C}
-#julie .jhero-media{position:relative;z-index:0;overflow:visible!important;margin:0;max-width:560px;transform:none;border-radius:0;box-shadow:none}
-#julie .jhero-media img{position:relative;z-index:1}
-#julie .jhero-tag{z-index:2}
-#julie .jhero-media::before{content:"";position:absolute;inset:6% -6% -6% 6%;border-radius:32px;z-index:-1;
-  background:linear-gradient(160deg,#4DA3FF 0%,#006EFF 45%,#0047B3 100%);
-  transform:rotate(-3.5deg);opacity:.95;
-  box-shadow:0 40px 90px -30px rgba(0,71,179,.6)}
-#julie .jhero-media::after{content:"";position:absolute;inset:-10% 10% 30% -10%;z-index:-2;border-radius:50%;background:radial-gradient(circle,rgba(124,196,255,.55),transparent 70%);filter:blur(30px)}
-#julie .jhero-media img{border-radius:28px;border:1px solid rgba(255,255,255,.9);aspect-ratio:4/4.6;
-  box-shadow:0 1px 0 #fff inset,0 2px 4px rgba(10,30,58,.2),0 30px 60px -20px rgba(10,30,58,.45),0 90px 160px -60px rgba(0,71,179,.5)}
-#julie .jhero-tag{left:22px;bottom:22px;top:auto;font-size:16px;font-weight:700;letter-spacing:.01em;color:var(--v7-td);
-  background:rgba(255,255,255,.72);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);
-  border:1px solid rgba(255,255,255,.9);border-radius:12px;padding:10px 16px;
-  box-shadow:0 1px 0 #fff inset,0 10px 30px -10px rgba(10,30,58,.35)}
-#julie .jhero-tag::before{content:"";display:inline-block;width:8px;height:8px;border-radius:50%;background:#12C36F;box-shadow:0 0 0 3px rgba(18,195,111,.2),0 0 10px rgba(18,195,111,.9);margin-right:10px;vertical-align:2px}
-#julie .jstats{margin-top:84px;max-width:1120px;gap:0;grid-template-columns:repeat(4,minmax(0,1fr));
-  background:rgba(255,255,255,.55);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);
-  border:1px solid rgba(255,255,255,.95);border-radius:24px;padding:10px;
-  box-shadow:var(--v7-shadow-light)}
-#julie .jstats>div{padding:26px 22px 24px;border-radius:16px;border-left:1px solid rgba(10,30,58,.08);text-align:center}
-#julie .jstats>div:first-child{border-left:0}
-#julie .jstats b{font-size:clamp(38px,3.2vw,52px);letter-spacing:-.03em;background:linear-gradient(180deg,#0A1E3A,#0047B3 60%,#006EFF);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
-#julie .jstats span{color:var(--v7-td);margin-top:12px;font-size:13.5px;letter-spacing:.1em}
-#julie .jstats i{color:#5C7597;margin-top:6px;font-size:13.5px}
-#julie .jproof{margin-top:84px;gap:64px}
-#julie .pvx{border-radius:26px;border:1px solid rgba(124,196,255,.45);
-  box-shadow:0 1px 0 rgba(255,255,255,.15) inset,0 2px 4px rgba(0,0,0,.35),0 40px 90px -30px rgba(10,30,58,.55),0 0 90px -20px rgba(0,110,255,.45);
-  transform:perspective(1400px) rotateY(4deg) rotateX(1.5deg);transition:transform .6s var(--v7-ease)}
-#julie .pvx:hover{transform:perspective(1400px) rotateY(0) rotateX(0) translateY(-6px)}
-#julie .jproof-copy h3{font-family:'Codec Pro','Inter',sans-serif;font-weight:700;font-size:clamp(34px,3vw,46px);letter-spacing:-.025em;color:var(--v7-td)}
-#julie .jproof-copy h3 .serif-i{font-family:'Instrument Serif','Playfair Display',Georgia,serif;font-style:italic;font-weight:400}
-#julie .jproof-copy p{color:#2B4B72;font-size:19px}
-@media (max-width:980px){#reveal .tcard:nth-child(1),#reveal .tcard:nth-child(3),#reveal .tcard:nth-child(2){transform:none}
-#julie .jstats{grid-template-columns:repeat(2,minmax(0,1fr));gap:6px}
-#julie .jstats>div{border-left:0}}
-@media (max-width:760px){#julie{padding:72px 0 64px}
-#julie .jhero{gap:40px}
-#julie .jhero-media{max-width:100%}
-#julie .jhero-media::before{inset:5% -4% -4% 5%}
-#julie .jstats{margin-top:52px;padding:6px}
-#julie .jstats>div{padding:20px 12px 18px}
-#julie .jproof{margin-top:56px;gap:32px}
-#julie .pvx{transform:none}
-#julie .pvx video{aspect-ratio:4/3}
-#julie .pvx figcaption{font-size:14.5px;padding:40px 18px 16px}
-#reveal .tcard .tn{font-size:110px;bottom:16px;right:18px}}
-@media (prefers-reduced-motion:reduce){#reveal .tcard,#julie .pvx{transition:none;transform:none}}
-.jcta-note{font-family:'Instrument Serif',Georgia,serif!important;font-style:italic;font-weight:400}
-#reveal .tcard:nth-child(1),#reveal .tcard:nth-child(2),#reveal .tcard:nth-child(3){transform:none}
-#reveal .tcard:hover{transform:translateY(-8px)}
-#reveal .tcard h3{font-size:clamp(28px,2.1vw,34px);max-width:94%}
-#reveal .tcard .tlead{font-size:19.5px;line-height:1.6;margin-top:14px}
-#reveal .tcard li{font-size:18px;line-height:1.55;margin-bottom:13px;padding-left:26px}
-#reveal .tcard li::before{top:10px}
-.v8-julie{padding:120px 0 104px}
-.v8-julie .shead{margin-bottom:0}
-.v8-julie .shead-sub{color:#33445e;margin-top:26px}
-.v8-julie .claims{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:32px;margin-top:64px}
-.v8-julie .claim{margin:0}
-.v8-julie .claim video{width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:22px;border:1px solid rgba(13,28,51,.14);box-shadow:0 2px 6px rgba(10,25,60,.08),0 30px 70px -20px rgba(10,25,60,.28);background:#03080f;display:block}
-.v8-julie .claim figcaption{padding:22px 8px 0}
-.v8-julie .claim b{display:block;font-family:'Codec Pro','Inter',sans-serif;font-size:clamp(26px,2vw,31px);font-weight:700;color:#0d1c33;letter-spacing:-.015em;line-height:1.15}
-.v8-julie .claim span{display:block;font-size:18.5px;color:#4a586e;margin-top:8px;line-height:1.6}
-.v8-julie .jsplit{display:grid;grid-template-columns:minmax(0,.86fr) minmax(0,1.14fr);gap:80px;align-items:center;margin-top:96px}
-.v8-julie .jsplit-media{position:relative;border-radius:28px;overflow:hidden;box-shadow:0 34px 84px rgba(10,30,70,.28),0 0 0 1px rgba(0,110,255,.14);line-height:0}
-.v8-julie .jsplit-media img{width:100%;aspect-ratio:3/4;object-fit:cover;object-position:50% 20%;display:block}
-.v8-julie .jsplit-tag{position:absolute;left:22px;bottom:22px;font-family:'Inter',sans-serif;font-size:14px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#fff;background:rgba(6,12,24,.62);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);padding:11px 16px;border-radius:999px;line-height:1;border:1px solid rgba(255,255,255,.18)}
-.v8-julie .jsplit-copy .eyebrow{color:#006EFF;margin-bottom:18px}
-.v8-julie .jsplit-copy h3.anton{font-size:clamp(42px,3.8vw,68px);color:#0d1c33;line-height:1.02;letter-spacing:-.025em}
-.v8-julie .jrole{font-size:clamp(23px,1.8vw,28px);color:#006EFF;margin-top:16px;line-height:1.35}
-.v8-julie .jbio{margin-top:24px;font-size:20px;line-height:1.75;color:#33445e;max-width:680px}
-.v8-julie .jbio+.jbio{margin-top:18px}
-.v8-julie .jquote{margin-top:30px;font-size:clamp(24px,2vw,30px);line-height:1.45;color:#0a1526;padding-left:22px;border-left:3px solid #006EFF}
-.v8-julie .jcta{display:flex;align-items:center;gap:22px;flex-wrap:wrap;margin-top:36px}
-.v8-julie .jcta-note{font-size:20px;color:#33445e}
-.v8-julie .jstats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:0;margin-top:96px;border:1px solid rgba(13,28,51,.12);border-radius:24px;overflow:hidden;background:linear-gradient(180deg,#fff,#f4f8ff);box-shadow:0 24px 60px -30px rgba(10,30,70,.25)}
-.v8-julie .jstats>div{padding:34px 28px;text-align:center;border-right:1px solid rgba(13,28,51,.1)}
-.v8-julie .jstats>div:last-child{border-right:0}
-.v8-julie .jstats b{display:block;font-family:'Codec Pro','Inter',sans-serif;font-size:clamp(44px,3.6vw,60px);font-weight:700;letter-spacing:-.03em;line-height:1;color:#0d1c33}
-.v8-julie .jstats span{display:block;margin-top:12px;font-size:17px;font-weight:700;letter-spacing:.02em;color:#0d1c33}
-.v8-julie .jstats i{display:block;margin-top:4px;font-style:normal;font-size:15.5px;color:#5a6a82}
-@media(max-width:1200px){.v8-julie .jsplit{gap:48px}}
-@media(max-width:1000px){.v8-julie .claims{grid-template-columns:minmax(0,1fr);gap:40px;max-width:680px;margin-left:auto;margin-right:auto}
-.v8-julie .jsplit{grid-template-columns:minmax(0,1fr);gap:40px;margin-top:72px}
-.v8-julie .jsplit-media{max-width:560px;margin:0 auto}
-.v8-julie .jstats{grid-template-columns:repeat(2,minmax(0,1fr))}
-.v8-julie .jstats>div:nth-child(2){border-right:0}
-.v8-julie .jstats>div:nth-child(-n+2){border-bottom:1px solid rgba(13,28,51,.1)}}
-@media(max-width:760px){#reveal .tcard h3{font-size:26px}
-#reveal .tcard .tlead{font-size:18px}
-#reveal .tcard li{font-size:17px}
-.v8-julie .claims{margin-top:44px;gap:32px}
-.v8-julie .claim b{font-size:25px}
-.v8-julie .claim span{font-size:17.5px}
-.v8-julie .jsplit-copy h3.anton{font-size:38px}
-.v8-julie .jrole{font-size:21px}
-.v8-julie .jbio{font-size:18.5px}
-.v8-julie .jquote{font-size:22px}
-.v8-julie .jstats{grid-template-columns:repeat(2,minmax(0,1fr));margin-top:56px}
-.v8-julie .jstats>div{padding:24px 14px}
-.v8-julie .jstats b{font-size:38px}
-.v8-julie .jstats span{font-size:15px}
-.v8-julie .jstats i{font-size:13.5px}
-.v8-julie .jcta{gap:14px}
-.v8-julie .jcta .btn{width:100%}}
-.v8-julie .jsplit-media img{height:auto!important}
-.v8-julie .jsplit-copy .eyebrow{display:block!important}
-.v8-julie .jstats{max-width:none!important}
-.v8-julie .claims{gap:28px;margin-top:72px}
-.v8-julie .claim video{aspect-ratio:16/10;border-radius:26px}
-.v8-julie .claim b{font-size:clamp(30px,2.4vw,38px)}
-.v8-julie .claim span{font-size:20px;margin-top:10px}
-.v8-julie .shead-sub{font-size:clamp(23px,1.8vw,27px)}
-.v8-julie .jsplit{grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:72px}
-.v8-julie .jsplit-copy h3.anton{font-size:clamp(48px,4.4vw,76px)}
-.v8-julie .jrole{font-size:clamp(25px,2vw,31px)}
-.v8-julie .jbio{font-size:21.5px;max-width:760px}
-.v8-julie .jquote{font-size:clamp(26px,2.2vw,34px);margin-top:32px}
-.v8-julie .jstats b{font-size:clamp(52px,4.2vw,72px)}
-.v8-julie .jstats span{font-size:19px}
-.v8-julie .jstats i{font-size:17px}
-.v8-julie .jstats>div{padding:40px 28px}
-@media(max-width:760px){.v8-julie .claim b{font-size:28px}
-.v8-julie .claim span{font-size:18px}
-.v8-julie .jbio{font-size:19px}
-.v8-julie .jstats b{font-size:42px}}
-.v8-julie .claims{display:grid;grid-template-columns:1fr;gap:56px;margin-top:80px}
-.v8-julie .claim{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,1fr);gap:56px;align-items:center}
-.v8-julie .claim:nth-child(even){direction:rtl}
-.v8-julie .claim:nth-child(even) figcaption{direction:ltr}
-.v8-julie .claim video{aspect-ratio:16/9;border-radius:30px;box-shadow:0 4px 10px rgba(10,25,60,.1),0 50px 110px -30px rgba(10,25,60,.35)}
-.v8-julie .claim figcaption{padding:0}
-.v8-julie .claim b{font-size:clamp(40px,3.8vw,60px);line-height:1.02;letter-spacing:-.025em}
-.v8-julie .claim span{font-size:clamp(22px,1.7vw,26px);margin-top:18px;line-height:1.5}
-.v8-julie .jsplit-media img{aspect-ratio:4/4.2}
-@media(max-width:1000px){.v8-julie .claim{grid-template-columns:1fr;gap:20px;direction:ltr}
-.v8-julie .claims{gap:44px}
-.v8-julie .claim b{font-size:34px}
-.v8-julie .claim span{font-size:19px}}
-.v9-julie .shead{margin-bottom:44px}
-.v9-julie .v8-jsub{max-width:900px}
-.jbento{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));grid-auto-rows:auto;gap:22px}
-.jb{position:relative;overflow:hidden;border-radius:28px}
-.jb-photo{grid-column:1/5;grid-row:1/3;display:flex;flex-direction:column;min-height:100%}
-.jb-photo img{width:100%;flex:1 1 0;min-height:0;height:auto!important;object-fit:cover;object-position:50% 20%;display:block;aspect-ratio:auto}
-.jb-photo-body{padding:26px 28px 30px;background:linear-gradient(180deg,rgba(10,19,36,0) 0%,#0A1324 30%);margin-top:-70px;position:relative}
-.jb-photo-body .eyebrow{color:#7CC4FF;font-size:12px;letter-spacing:.16em;margin-bottom:10px}
-.jb-photo-body h3{font-size:clamp(30px,2.3vw,36px);line-height:1.02;letter-spacing:-.02em;color:#fff;margin:0 0 10px}
-.jb-role{font-size:20px;line-height:1.35;color:rgba(255,255,255,.82);margin:0 0 18px}
-.jb-chips{display:flex;flex-wrap:wrap;gap:8px}
-.jb-chips span{font-size:13.5px;font-weight:600;letter-spacing:.02em;padding:8px 13px;border-radius:999px;background:rgba(255,255,255,.08);border:1px solid rgba(124,196,255,.3);color:#dfeeff}
-.jb-vid{display:flex;flex-direction:column}
-.jb-vid video{display:block;width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:0}
-.jb-vid:nth-child(2){grid-column:5/9}
-.jb-vid:nth-child(3){grid-column:9/13}
-.jb-cap{padding:22px 26px 26px}
-.jb-cap b{display:block;font-family:"Codec Pro","Inter",sans-serif;font-weight:700;font-size:clamp(22px,1.7vw,26px);letter-spacing:-.02em;line-height:1.1;color:#fff}
-.jb-cap span{display:block;margin-top:8px;font-size:16.5px;line-height:1.5;color:rgba(255,255,255,.74)}
-.jb-wide{grid-column:5/13;grid-row:2/3;display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);align-items:stretch}
-.jb-wide video{display:block;width:100%;height:100%;min-height:100%;object-fit:cover}
-.jb-wide-body{padding:30px 34px 32px;display:flex;flex-direction:column;justify-content:center;color:#fff}
-.jb-wide-body>b{display:block;font-size:clamp(30px,2.6vw,40px);line-height:1;letter-spacing:-.025em;margin-bottom:12px;color:#fff;font-weight:700}
-.jb-wide-body p{font-size:17px;line-height:1.55;color:rgba(255,255,255,.88);margin:0}
-.jb-quote{font-size:22px;line-height:1.3;margin:16px 0 0!important;color:#fff!important}
-.jb-wide .jcta{margin-top:20px;display:flex;align-items:center;gap:16px;flex-wrap:wrap}
-.jb-wide .jcta-note{color:rgba(255,255,255,.8);font-size:17px}
-.v9-julie .jstats{margin-top:26px}
-.v9-julie .jstats>div{padding:28px 22px}
-.v9-julie .jstats b{font-size:clamp(40px,3.2vw,52px)}
-@media(max-width:1000px){.jbento{grid-template-columns:1fr 1fr}
-.jb-photo{grid-column:1/3;grid-row:auto;min-height:0}
-.jb-photo img{aspect-ratio:16/11;flex:none}
-.jb-vid:nth-child(2),.jb-vid:nth-child(3){grid-column:auto}
-.jb-wide{grid-column:1/3;grid-row:auto;grid-template-columns:1fr}
-.jb-wide video{aspect-ratio:16/9;height:auto}}
-@media(max-width:760px){.jbento{grid-template-columns:1fr;gap:16px}
-.jb-photo,.jb-wide{grid-column:auto}
-.jb-photo img{aspect-ratio:4/4.4;object-position:50% 15%}
-.jb-cap b{font-size:24px}
-.jb-cap span{font-size:16px}
-.jb-wide-body{padding:24px 22px 26px}
-.jb-wide-body>b{font-size:32px}}
-.v9-julie .jb-photo-body h3.anton{color:#fff!important;font-size:clamp(30px,2.3vw,36px)!important}
-.v9-julie .jb-photo-body .eyebrow{display:block}
-.jb-photo{background:#0A1324}
-.jb-photo img{object-position:50% 12%}
-.jb-wide{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
-.jb-wide video{object-fit:contain;background:#020714;height:100%}
-.jb-wide-body{padding:28px 32px}
-.jb-wide-body p{font-size:16.5px}
-.jb-quote{font-size:21px;margin-top:14px!important}
-.jb-wide .jcta{margin-top:18px}
-.jb-wide .btn{padding:16px 26px;font-size:18px}
-.jb-wide .jcta-note{color:#fff!important;opacity:.9}
-.v9-julie .jb-photo-body h3.anton{display:block!important;visibility:visible!important;opacity:1!important;transform:none!important}
-@media(max-width:1000px){.jb-wide{grid-template-columns:1fr!important}
-.jb-wide video{aspect-ratio:16/9!important;height:auto!important;min-height:0!important;object-fit:cover!important}
-.jb-wide-body{padding:26px 24px 28px}
-.jb-wide .btn{width:100%;justify-content:center;text-align:center}}
-.v9-julie .jb-wide-body>b,.v9-julie .jb-cap b,.v9-julie .jb-photo-body h3{opacity:1!important;transform:none!important;color:#fff!important;transition:none!important}
-.jb-wide,.jb-wide-body,.jb,.jbento{min-width:0}
-@media(max-width:1000px){.jb-wide{grid-template-columns:minmax(0,1fr)!important}}
-@media(max-width:760px){#reveal .tcard{flex:0 0 84%!important;min-width:0;scroll-snap-align:center;transform:none!important}
-#reveal .tcard .tmedia img,#reveal .tcard .tmedia video{aspect-ratio:4/3;object-fit:cover;width:100%;height:auto}
-.jbento{display:flex!important;flex-wrap:nowrap!important;gap:14px!important;overflow-x:auto!important;scroll-snap-type:x mandatory;scrollbar-width:none;padding:4px 6px 22px!important;margin:0 -6px!important}
-.jbento::-webkit-scrollbar{display:none}
-.jb{flex:0 0 86%!important;min-width:0;scroll-snap-align:center;grid-column:auto!important;grid-row:auto!important}
-.jb-photo img{aspect-ratio:4/4.6!important;flex:none!important}
-.jb-vid video{aspect-ratio:16/10!important}
-.jb-wide video{aspect-ratio:16/10!important}
-.jb-wide-body p{font-size:16px}
-#reveal .tcard .tbadge,#reveal .tcard [class*=badge],#reveal .tcard [class*=popular]{right:14px!important;left:auto!important;max-width:calc(100% - 28px)}}
-@media(max-width:760px){.jbento{flex-direction:row!important}}
-@media(max-width:760px){#reveal .tcard h3{font-size:26px!important}
-#reveal .tcard .tlead{font-size:17.5px!important}
-#reveal .tcard li{font-size:16.5px!important;line-height:1.5}
-.jb-chips span{font-size:14.5px}
-.v9-julie .jstats b{font-size:40px!important}
-.v9-julie .jstats span{font-size:16px!important}
-.v9-julie .jstats i{font-size:14.5px!important}
-.jb-wide .jcta{flex-direction:column;align-items:stretch}
-.jb-wide .jcta-note{text-align:center}}
-@media(max-width:760px){.jb-wide-body p{font-size:18.5px!important;line-height:1.55}
-#reveal .tcard{flex:none!important;width:100%!important;max-width:none!important;border-radius:22px!important}
-#reveal .tcard .tmedia img,#reveal .tcard .tmedia video{aspect-ratio:16/10!important}
-#reveal .tcard .tbody{padding:24px 22px 26px!important}
-#reveal .tcard h3{font-size:31px!important;line-height:1.08!important;margin:10px 0 12px!important}
-#reveal .tcard .tlead{font-size:19.5px!important;line-height:1.45!important}
-#reveal .tcard hr{margin:16px 0!important}
-#reveal .tcard li{font-size:18.5px!important;line-height:1.45!important;margin:0 0 12px!important}
-#reveal .tcard li:last-child{margin-bottom:0!important}
-#reveal .tcard li{text-wrap:balance}
-#reveal .t-navy li:first-child{text-wrap:wrap;letter-spacing:-.01em}
-#reveal .tcard .tn{display:none!important}
-#reveal .t-navy .tmedia{overflow:hidden;aspect-ratio:4/3;position:relative}
-#reveal .t-navy .tmedia img{aspect-ratio:auto!important;height:118%!important;width:100%!important;object-fit:cover;object-position:32% 35%!important;display:block}}
-@media(max-width:760px){.v8-julie .shead-sub{color:#2A3A55!important}
-#reveal .tcard .tlead{font-size:20px!important}
-#reveal .tcard li{font-size:19.5px!important;line-height:1.42!important}
-#reveal .t-navy li,#reveal .t-royal li{color:#F2F7FF!important}
-#reveal .t-navy .tlead,#reveal .t-royal .tlead{color:#E6F0FF!important}
-.v8-julie .jbio{font-size:20px!important;line-height:1.6!important;color:#1E2C44!important}
-.jbento{display:grid!important;grid-template-columns:minmax(0,1fr)!important;gap:18px!important;overflow:visible!important;padding:0!important;margin:0!important;scroll-snap-type:none}
-.jb{flex:none!important;width:100%!important}
-.jb-photo img{aspect-ratio:4/4.2!important}
-.jb-vid video,.jb-wide video{aspect-ratio:16/10!important}
-.jb-cap,.jb-photo-body p,.jb-wide-body p{font-size:18.5px!important;line-height:1.5!important}
-.jb-chips span{font-size:15.5px!important}
-.v9-julie .jstats b{font-size:44px!important}
-.v9-julie .jstats span{font-size:17px!important;color:#1E2C44!important}
-.v9-julie .jstats i{font-size:15px!important;color:#4A5B78!important}}
-@media(max-width:760px){#reveal .t-navy li:first-child{font-size:19px!important;letter-spacing:-.02em!important;word-spacing:-1.5px!important;text-wrap:wrap}}
-@media(max-width:760px){#reveal .tcard h3{text-wrap:balance}}
-@media(max-width:760px){#reveal .tcard{flex:0 0 84%!important;width:84%!important;max-width:84%!important;min-width:0!important;scroll-snap-align:center!important;position:relative!important;align-self:stretch!important;height:auto!important;min-height:0!important}}
-@media(max-width:760px){#reveal .t-navy li:first-child{font-size:19.5px!important;letter-spacing:0!important;word-spacing:0!important;text-wrap:balance!important}}
-@media(max-width:760px){#reveal .tcard h3{font-size:33px!important}
-.v8-julie h3.anton{font-size:33px!important}}
-@media(max-width:760px){.jb-wide-body p,.jb-cap,.jb-photo-body p,.v8-julie .jbio{font-size:22px!important;line-height:1.5!important}
-#reveal .tcard h3{font-size:35px!important}
-#reveal .tcard .tlead{font-size:22px!important}
-#reveal .tcard li,#reveal .t-navy li:first-child{font-size:21.5px!important;line-height:1.42!important}
-.v8-julie h3.anton{font-size:35px!important}
-.jb-chips span{font-size:20px!important}}
-@media(max-width:760px){.v8-julie .btn,.jb .btn{background:linear-gradient(135deg,#2E91FF 0%,#0066FF 100%)!important;color:#fff!important;-webkit-text-fill-color:#fff!important;
-    border:1px solid rgba(140,200,255,.55)!important;border-radius:999px!important;font-weight:800!important;letter-spacing:.01em;
-    box-shadow:inset 0 1px 0 rgba(255,255,255,.30),inset 0 -1px 0 rgba(0,0,0,.18),0 10px 32px rgba(20,110,240,.55),0 2px 6px rgba(0,0,0,.35)!important}
-.v8-julie .btn{font-size:22px!important;min-height:66px!important}}
-@media (max-width:760px){body>#julie{order:5}
-html body #julie .btn-white{background:#FFFFFF!important;background-image:none!important;color:#0A1E3F!important;-webkit-text-fill-color:#0A1E3F!important;border:1px solid rgba(255,255,255,.9)!important;box-shadow:0 10px 28px rgba(0,0,0,.28)!important;text-shadow:none!important;font-weight:700!important}
-#julie .container{padding:0 18px!important;max-width:100%!important}
-html body .tcard p,html body .jb p{font-size:16px!important;line-height:1.5!important}
-html body .jstats i{font-size:14px!important}
-html body .jstats span{font-size:13px!important}
-html body #reveal .tcard{flex:0 0 78%!important;min-width:0!important;width:auto!important;scroll-snap-align:center;border-radius:18px!important;transform:none!important}
-.tcard .tn{font-size:48px!important;top:2px!important;right:14px!important;opacity:.3}
-html body #julie .jbento{display:flex!important;flex-wrap:nowrap!important;gap:12px!important;overflow-x:auto!important;scroll-snap-type:x mandatory;scrollbar-width:none;padding:4px 18px 14px!important;margin:0 -18px!important}
-html body #julie .jbento::-webkit-scrollbar{display:none}
-html body #julie .jb{flex:0 0 84%!important;min-width:0!important;width:auto!important;border-radius:18px!important;scroll-snap-align:center;grid-column:auto!important;grid-row:auto!important}
-html body #julie .jb-photo img{height:280px!important;object-fit:cover;object-position:50% 20%;aspect-ratio:auto!important}
-html body #julie .jb-photo-body,html body #julie .jb-wide-body{padding:18px!important}
-html body #julie .jb-photo-body h3,html body #julie .jb-wide-body h3{font-size:24px!important;line-height:1.12!important}
-html body #julie .jb-photo-body p,html body #julie .jb-wide-body p,html body #julie .jb-photo-body .serif-i,html body #julie .jb-photo-body em{font-size:17px!important;line-height:1.45!important}
-html body #julie .jb-wide-body p{margin:8px 0 0!important}
-html body #julie .jb-wide-body .jb-quote,html body #julie .jcta-note{display:none!important}
-html body #julie .jb-wide-body .anton{font-size:26px!important}
-html body #julie .jcta{margin-top:16px!important}
-.jb .btn,.jb-wide-body .btn{display:flex!important;justify-content:center;width:100%;white-space:normal!important;font-size:16px!important;padding:14px!important}
-.jstats{display:grid!important;grid-template-columns:1fr 1fr!important;gap:10px!important;margin:18px 0 0!important}
-.jstats>div{padding:16px 10px!important;border-radius:14px!important}
-.jstats b{font-size:28px!important}
-.jstats span{font-size:11.5px!important;margin-top:6px!important;letter-spacing:.06em!important}
-.jstats i{font-size:12px!important}
-html body #julie .jb-vid video,html body #julie .jb-wide video{width:100%!important;height:auto!important;display:block!important}
-html body .tcard p{font-size:18px!important;line-height:1.45!important}
-html body #julie .jb-photo-body h3,html body #julie .jb-wide-body h3{font-size:28px!important}
-html body #julie .jb-photo-body p,html body #julie .jb-wide-body p,html body #julie .jb-photo-body .serif-i,html body #julie .jb-photo-body em{font-size:19px!important;line-height:1.45!important}
-html body .jstats b{font-size:34px!important}
-html body .jstats span{font-size:14px!important}
-html body .jstats i{font-size:16px!important}}
-#julie::before{content:"";position:absolute;inset:-40px 0;pointer-events:none;z-index:-1}
-#julie::before{background:radial-gradient(820px 560px at 92% 5%,rgba(56,166,255,.13),transparent 70%),radial-gradient(700px 520px at 5% 45%,rgba(0,110,255,.12),transparent 70%),radial-gradient(640px 480px at 88% 84%,rgba(56,166,255,.10),transparent 70%)}
-.jbig{margin-top:34px}
-.jbig b{display:block;font-family:'Codec Pro','Inter',sans-serif;font-weight:800;font-size:clamp(84px,8vw,148px);line-height:.92;letter-spacing:-.03em;background:linear-gradient(92deg,#fff 10%,#8AD2FF 55%,#38A6FF 95%);-webkit-background-clip:text;background-clip:text;color:transparent;filter:drop-shadow(0 0 34px rgba(56,166,255,.35))}
-.jbig span{display:block;margin-top:10px;font-size:14.5px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:#8fa9cf}
-.jcta{display:flex;align-items:center;gap:22px;flex-wrap:wrap;margin-top:34px}
-.jcta-note{font-size:17px;color:#9fb3cf}
-.jstats{margin-top:76px}
-.tcard{position:relative;border-radius:24px;padding:0;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,.3),0 34px 84px rgba(0,0,0,.5)}
-.tcard .tn{position:absolute;top:6px;right:26px;font-size:118px;line-height:1;pointer-events:none}
-.tcard h3{font-family:'Codec Pro','Inter',sans-serif;font-weight:700;font-size:clamp(25px,1.95vw,32px);line-height:1.16;position:relative;max-width:88%}
-.tcard .tlead{margin-top:14px;font-size:17.5px;line-height:1.62;position:relative}
-.tcard hr{border:0;height:1px;margin:22px 0}
-.tcard ul{list-style:none;position:relative}
-.tcard li{position:relative;padding-left:22px;font-size:16.5px;line-height:1.55;margin-bottom:13px}
-.tcard li:last-child{margin-bottom:0}
-.tcard li::before{content:"";position:absolute;left:0;top:9px;width:7px;height:7px;border-radius:50%}
-.t-royal{background:linear-gradient(165deg,#0f5fe0 0%,#0051CC 50%,#003C97 100%);color:#fff}
-.t-royal .tlead{color:#dcebff}
-.t-royal hr{background:rgba(255,255,255,.28)}
-.t-royal li{color:#e6f1ff}
-.t-royal li::before{background:#9cc8ff}
-.t-royal .tn{color:#fff;opacity:.2}
-.t-navy{background:linear-gradient(165deg,#101c30 0%,#0A1424 100%);color:#fff;border:1px solid rgba(127,184,255,.3)}
-.t-navy .tlead{color:#c9d7ea}
-.t-navy hr{background:rgba(127,184,255,.24)}
-.t-navy li{color:#d5e2f4}
-.t-navy li::before{background:#5EB6FF}
-.t-navy .tn{color:#7FB8FF;opacity:.2}
-.st-royal{background:var(--skytint);color:#111}
-.st-royal b{color:var(--royal)}
-.st-royal span{color:#5A6472}
-.st-navy{background:var(--surface2);color:#111}
-.st-navy b{color:var(--ph4)}
-.st-navy span{color:#5A6472}
-.jstats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px;max-width:1020px;margin:0 auto}
-.jstats>div{background:linear-gradient(165deg,#0c1830,#070f1f);border:1px solid rgba(127,184,255,.2);border-radius:18px;padding:26px 18px;text-align:center}
-.jstats b{display:block;font-family:'Codec Pro','Inter',sans-serif;font-weight:800;font-size:clamp(34px,3vw,46px);color:#fff;line-height:1}
-.jstats span{display:block;margin-top:10px;font-size:14.5px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#cfe0f5}
-.jstats i{display:block;margin-top:4px;font-size:13px;font-style:normal;color:#8fa9cf}
-@media(max-width:1000px){.jstats{grid-template-columns:repeat(2,minmax(0,1fr))}}
-@media(max-width:760px){.jbridge{font-size:24px}}
-#ckScreen .ck-tcard{background:#F4F6F9;border:1px solid #E3E7EE;border-radius:9px;padding:17px;text-align:left}
-#ckScreen .ck-tcard .ck-stars{color:#00B67A;font-size:13px;letter-spacing:1px;margin-bottom:8px}
-#ckScreen .ck-tcard blockquote{font-size:13.5px;color:#2A2F36;line-height:1.6;font-style:italic;margin:0}
-#ckScreen .ck-tcard cite{display:block;margin-top:9px;font-size:12px;color:#5A6472;font-style:normal}
 
 .mf-julie{position:relative;padding:100px 0!important;background:radial-gradient(60% 50% at 85% 0%,rgba(0,110,255,.35),transparent 70%),radial-gradient(50% 50% at 0% 100%,rgba(124,92,255,.25),transparent 70%),linear-gradient(180deg,#071226 0%,#0A1A3A 100%)!important;color:#fff}
 .mf-julie .mf-head{text-align:center;max-width:900px;margin:0 auto 40px}
@@ -9132,6 +8746,387 @@ body section.value{background:linear-gradient(180deg,#F4F8FF 0%,#EAF2FF 100%)!im
 }
 @media (prefers-reduced-motion:reduce){.cgm6-panel,.cgm6-sensor,.cgm6-ring,.cgm6-line{animation:none!important;stroke-dashoffset:0}}
 
+/* ===== 5 Nov 2026 (new session): Omri's latest instructions. Loaded last. ===== */
+
+/* ---- 1. Julie fold: the .com VIP Masterclass fold with her banner portrait. Short. ---- */
+.nov-vip .eyebrow{text-transform:none!important;letter-spacing:0!important;font-size:18px!important;font-weight:600!important}
+.nov-vip .section-title{font-size:clamp(34px,3.6vw,54px)!important;line-height:1.08!important}
+.nov-vip-portrait figcaption{font-size:17px!important;padding:22px 24px 20px!important}
+.nov-vip-portrait figcaption b{font-size:24px!important}
+.nov-vip h3{font-size:28px!important}
+.nov-vip-cta{font-size:19px!important;height:60px!important}
+.nov-vip{padding:80px 0 84px!important}
+.nov-vip-grid{margin-top:36px!important}
+@media (max-width:640px){
+  .nov-vip{padding:40px 0 44px!important}
+  .nov-vip .eyebrow{font-size:17px!important;margin-bottom:6px!important}
+  .nov-vip .section-title{font-size:30px!important;line-height:1.1!important}
+  .nov-vip .section-subtitle{font-size:19px!important;line-height:1.5!important;margin-top:10px!important}
+  .nov-vip-grid{margin-top:20px!important;gap:18px!important}
+  .nov-vip-portrait img{height:auto!important;aspect-ratio:16/11!important;object-position:50% 24%!important}
+  .nov-vip-portrait figcaption{padding:12px 18px 14px!important;font-size:0!important}
+  .nov-vip-portrait figcaption b{font-size:22px!important;margin:0!important}
+  .nov-vip-bio{margin-bottom:18px!important}
+  .nov-vip h3{font-size:24px!important;margin-bottom:12px!important}
+  .nov-vip ul{gap:10px!important;margin-bottom:20px!important}
+  .nov-vip li:nth-child(3){display:none!important} /* the offer is in the pricing fold right above */
+  .nov-vip-after{font-size:17px!important;margin-top:12px!important}
+}
+
+/* ---- 2. Cards: each card its own allowed colour (blue, logo teal, light blue, navy). Large, readable text. ---- */
+html.mf{--c-blue:linear-gradient(155deg,#3A8DFF 0%,#006EFF 48%,#0052D4 100%);--c-teal:linear-gradient(155deg,#9BEADF 0%,#68D8C8 52%,#40C1AF 100%);
+  --c-lblue:linear-gradient(155deg,#C6E4FF 0%,#93CBFF 52%,#68B4FF 100%);--c-navy:linear-gradient(155deg,#1B3C78 0%,#0E2858 50%,#081A3D 100%);
+  --ink:#04173A;--card-shadow:0 1px 0 rgba(255,255,255,.4) inset,0 22px 44px -22px rgba(0,36,100,.6)}
+
+/* How It Works */
+html.mf .how-v2 .how-v2-card{backdrop-filter:none!important;-webkit-backdrop-filter:none!important;border:0!important;border-top:0!important;border-radius:22px!important;box-shadow:var(--card-shadow)!important;padding:30px 28px!important}
+html.mf .how-v2 .how-v2-card::before{display:none!important}
+html.mf .how-v2 .how-v2-card:nth-child(4n+1){background:var(--c-blue)!important}
+html.mf .how-v2 .how-v2-card:nth-child(4n+2){background:var(--c-teal)!important}
+html.mf .how-v2 .how-v2-card:nth-child(4n+3){background:var(--c-lblue)!important}
+html.mf .how-v2 .how-v2-card:nth-child(4n+4){background:var(--c-navy)!important;box-shadow:0 0 0 1px rgba(143,199,255,.45) inset,var(--card-shadow)!important}
+html.mf .how-v2 .how-v2-card .how-v2-num{font-size:44px!important;line-height:1!important;opacity:1!important;margin-bottom:14px!important}
+html.mf .how-v2 .how-v2-card .how-v2-card-title{font-size:25px!important;line-height:1.2!important;margin-bottom:10px!important}
+html.mf .how-v2 .how-v2-card .how-v2-card-desc{font-size:19px!important;line-height:1.5!important;margin-bottom:14px!important}
+html.mf .how-v2 .how-v2-card .how-v2-card-meta{font-size:16px!important;font-weight:700!important;letter-spacing:0!important}
+html.mf .how-v2 .how-v2-card:nth-child(4n+1) *,html.mf .how-v2 .how-v2-card:nth-child(4n+4) *{color:#fff!important}
+html.mf .how-v2 .how-v2-card:nth-child(4n+2) *,html.mf .how-v2 .how-v2-card:nth-child(4n+3) *{color:var(--ink)!important}
+html.mf .how-v2 .how-v2-card .how-v2-num{color:inherit!important}
+html.mf .how-v2 .how-v2-card:nth-child(4n+1) .how-v2-num,html.mf .how-v2 .how-v2-card:nth-child(4n+4) .how-v2-num{color:#BFE2FF!important}
+html.mf .how-v2 .how-v2-card:nth-child(4n+2) .how-v2-num,html.mf .how-v2 .how-v2-card:nth-child(4n+3) .how-v2-num{color:#0A3E8C!important}
+html.mf .how-v2 .how-v2-sub{font-size:19px!important;color:#D5E3FF!important}
+
+/* Why This Course Is Different */
+html.mf .value .value-card{border:0!important;border-radius:22px!important;box-shadow:var(--card-shadow)!important;padding:30px 28px!important}
+html.mf .value .value-card::before,html.mf .value .value-card::after{display:none!important}
+html.mf .value .value-card:nth-child(4n+1){background:var(--c-blue)!important}
+html.mf .value .value-card:nth-child(4n+2){background:var(--c-teal)!important}
+html.mf .value .value-card:nth-child(4n+3){background:var(--c-lblue)!important}
+html.mf .value .value-card:nth-child(4n+4){background:var(--c-navy)!important}
+html.mf .value .value-card .value-title{font-size:25px!important;line-height:1.2!important;margin-bottom:12px!important}
+html.mf .value .value-card .value-desc{font-size:19px!important;line-height:1.55!important}
+html.mf .value .value-card:nth-child(4n+1) *,html.mf .value .value-card:nth-child(4n+4) *{color:#fff!important}
+html.mf .value .value-card:nth-child(4n+2) *,html.mf .value .value-card:nth-child(4n+3) *{color:var(--ink)!important}
+
+/* Reviews */
+html.mf .testimonials .quote-card{border:0!important;border-radius:22px!important;box-shadow:var(--card-shadow)!important}
+html.mf .testimonials .quote-card::before,html.mf .testimonials .quote-card::after{display:none!important}
+html.mf .testimonials .quote-card:nth-child(4n+1){background:var(--c-blue)!important}
+html.mf .testimonials .quote-card:nth-child(4n+2){background:var(--c-teal)!important}
+html.mf .testimonials .quote-card:nth-child(4n+3){background:var(--c-navy)!important}
+html.mf .testimonials .quote-card:nth-child(4n+4){background:var(--c-lblue)!important}
+html.mf .testimonials .quote-card .quote-text{font-size:20px!important;line-height:1.55!important;font-weight:500!important}
+html.mf .testimonials .quote-card .quote-meta{font-size:16px!important;letter-spacing:0!important;border-top-color:rgba(255,255,255,.25)!important}
+html.mf .testimonials .quote-card:nth-child(4n+1) *,html.mf .testimonials .quote-card:nth-child(4n+3) *{color:#fff!important;fill:currentColor}
+html.mf .testimonials .quote-card:nth-child(4n+2) *,html.mf .testimonials .quote-card:nth-child(4n+4) *{color:var(--ink)!important}
+html.mf .testimonials .quote-card .quote-stars svg{fill:currentColor!important}
+html.mf .testimonials .quote-card .quote-mark{opacity:.55!important}
+
+/* Faculty */
+html.mf .instructors .teacher-card-live{border:0!important;border-radius:22px!important;box-shadow:var(--card-shadow)!important;overflow:hidden}
+html.mf .instructors .teacher-card-live:nth-child(4n+1){background:var(--c-blue)!important}
+html.mf .instructors .teacher-card-live:nth-child(4n+2){background:var(--c-navy)!important}
+html.mf .instructors .teacher-card-live:nth-child(4n+3){background:var(--c-teal)!important}
+html.mf .instructors .teacher-card-live:nth-child(4n+4){background:var(--c-lblue)!important}
+html.mf .instructors .teacher-card-live-body{background:transparent!important}
+html.mf .instructors .teacher-card-live-name{font-size:23px!important;line-height:1.2!important}
+html.mf .instructors .teacher-card-live-role{font-size:16px!important;text-transform:none!important;letter-spacing:0!important;font-weight:700!important;line-height:1.35!important}
+html.mf .instructors .teacher-card-live-bio{font-size:18px!important;line-height:1.5!important}
+html.mf .instructors .teacher-card-live:nth-child(4n+1) *,html.mf .instructors .teacher-card-live:nth-child(4n+2) *{color:#fff!important}
+html.mf .instructors .teacher-card-live:nth-child(4n+3) *,html.mf .instructors .teacher-card-live:nth-child(4n+4) *{color:var(--ink)!important}
+html.mf .instructors .teacher-card-live:nth-child(4n+1) .teacher-card-live-role,html.mf .instructors .teacher-card-live:nth-child(4n+2) .teacher-card-live-role{color:#CFE6FF!important}
+html.mf .instructors .teacher-card-live:nth-child(4n+3) .teacher-card-live-role,html.mf .instructors .teacher-card-live:nth-child(4n+4) .teacher-card-live-role{color:#0A3E8C!important}
+
+/* FAQ */
+html.mf .faq .faq-item{border:0!important;border-left:0!important;border-radius:20px!important;box-shadow:var(--card-shadow)!important;overflow:hidden}
+html.mf .faq .faq-item:nth-child(4n+1){background:var(--c-blue)!important}
+html.mf .faq .faq-item:nth-child(4n+2){background:var(--c-teal)!important}
+html.mf .faq .faq-item:nth-child(4n+3){background:var(--c-navy)!important}
+html.mf .faq .faq-item:nth-child(4n+4){background:var(--c-lblue)!important}
+html.mf .faq .faq-q{background:transparent!important;font-size:21px!important;line-height:1.3!important}
+html.mf .faq .faq-a-inner{font-size:19px!important;line-height:1.6!important}
+html.mf .faq .faq-num{font-size:16px!important;background:rgba(255,255,255,.22)!important;letter-spacing:0!important}
+html.mf .faq .faq-icon{background:rgba(255,255,255,.25)!important}
+html.mf .faq .faq-item:nth-child(4n+1) *,html.mf .faq .faq-item:nth-child(4n+3) *{color:#fff!important}
+html.mf .faq .faq-item:nth-child(4n+2) *,html.mf .faq .faq-item:nth-child(4n+4) *{color:var(--ink)!important}
+html.mf .faq .faq-icon svg{stroke:currentColor!important}
+
+/* Six Systems: nodes in the allowed colours, readable labels, detail card in solid blue */
+html.mf .deepdive .hex-node[data-hex]{backdrop-filter:none!important;-webkit-backdrop-filter:none!important;border:2px solid rgba(255,255,255,.35)!important;box-shadow:0 18px 40px -16px rgba(0,0,0,.6)!important}
+html.mf .deepdive .hex-node[data-hex="0"],html.mf .deepdive .hex-node[data-hex="4"]{background:var(--c-blue)!important}
+html.mf .deepdive .hex-node[data-hex="1"],html.mf .deepdive .hex-node[data-hex="5"]{background:var(--c-teal)!important}
+html.mf .deepdive .hex-node[data-hex="2"]{background:var(--c-lblue)!important}
+html.mf .deepdive .hex-node[data-hex="3"]{background:var(--c-navy)!important;border-color:rgba(143,199,255,.6)!important}
+html.mf .deepdive .hex-node .hex-node-label{font-size:16px!important;font-weight:800!important}
+html.mf .deepdive .hex-node[data-hex="1"] *,html.mf .deepdive .hex-node[data-hex="5"] *,html.mf .deepdive .hex-node[data-hex="2"] *{color:var(--ink)!important}
+html.mf .deepdive .hex-node[data-hex="0"] *,html.mf .deepdive .hex-node[data-hex="3"] *,html.mf .deepdive .hex-node[data-hex="4"] *{color:#fff!important}
+html.mf .deepdive .hex-detail{background:var(--c-blue)!important;border:0!important;box-shadow:var(--card-shadow)!important;backdrop-filter:none!important}
+html.mf .deepdive .hex-detail-tag{font-size:16px!important;text-transform:none!important;letter-spacing:0!important;color:#CFE6FF!important}
+html.mf .deepdive .hex-detail-title{font-size:32px!important;color:#fff!important}
+html.mf .deepdive .hex-detail-desc{font-size:19px!important;line-height:1.55!important;color:#fff!important}
+html.mf .deepdive .hex-detail-link{font-size:17px!important;color:#fff!important}
+html.mf .deepdive .section-subtitle{font-size:19px!important}
+@media (max-width:768px){
+  html.mf .deepdive .hex-layout{display:none!important}
+  html.mf .deepdive .deepdive-mobile-list{display:flex!important;padding:0!important;gap:12px!important}
+  html.mf .deepdive .deepdive-mobile-card{border:0!important;border-radius:18px!important;padding:18px 18px!important;box-shadow:var(--card-shadow)!important}
+  html.mf .deepdive .deepdive-mobile-card:nth-child(4n+1){background:var(--c-blue)!important}
+  html.mf .deepdive .deepdive-mobile-card:nth-child(4n+2){background:var(--c-teal)!important}
+  html.mf .deepdive .deepdive-mobile-card:nth-child(4n+3){background:var(--c-lblue)!important}
+  html.mf .deepdive .deepdive-mobile-card:nth-child(4n+4){background:var(--c-navy)!important}
+  html.mf .deepdive .deepdive-mobile-title{font-size:21px!important;margin-bottom:4px!important}
+  html.mf .deepdive .deepdive-mobile-desc{font-size:17px!important;line-height:1.4!important}
+  html.mf .deepdive .deepdive-mobile-icon{background:rgba(255,255,255,.22)!important;border:0!important}
+  html.mf .deepdive .deepdive-mobile-card:nth-child(4n+1) *,html.mf .deepdive .deepdive-mobile-card:nth-child(4n+4) *{color:#fff!important}
+  html.mf .deepdive .deepdive-mobile-card:nth-child(4n+2) *,html.mf .deepdive .deepdive-mobile-card:nth-child(4n+3) *{color:var(--ink)!important}
+}
+
+/* Bio-age quiz: large text, no pill */
+html.mf .bioquiz .bioquiz-eyebrow{background:none!important;border:0!important;padding:0!important;font-size:17px!important;letter-spacing:0!important;text-transform:none!important;color:#CFE6FF!important;font-weight:700!important}
+html.mf .bioquiz .bioquiz-title{font-size:clamp(32px,3.4vw,48px)!important;line-height:1.1!important}
+html.mf .bioquiz .bioquiz-body{font-size:19px!important;line-height:1.55!important;color:#fff!important;max-width:560px}
+html.mf .bioquiz .bioquiz-cta{font-size:18px!important}
+html.mf .bioquiz .bioquiz-badge-label{font-size:16px!important;letter-spacing:0!important;text-transform:none!important}
+
+/* Course includes: the Included tag as plain text, not a pill */
+html.mf .nov-incl .nov-incl-card .tag{background:none!important;border:0!important;padding:0!important;box-shadow:none!important;font-size:16px!important;letter-spacing:0!important;text-transform:none!important;font-weight:800!important;color:var(--c1,#006EFF)!important}
+html.mf .nov-incl .nov-incl-card p{font-size:19px!important;line-height:1.5!important}
+html.mf .nov-incl .nov-incl-card h3{font-size:23px!important}
+html.mf .faq .faq-q{text-align:left!important;justify-content:flex-start!important;gap:14px!important}
+html.mf .faq .faq-q .faq-icon{margin-left:auto!important}
+html.mf .faq .faq-num{background:none!important;padding:0!important;min-width:0!important;width:auto!important;height:auto!important;font-weight:800!important;opacity:.85}
+html.mf .faq .faq-item .faq-q,html.mf .faq .faq-item .faq-q *,html.mf .faq .faq-item:hover .faq-q,html.mf .faq .faq-item:hover .faq-q *,html.mf .faq .faq-item.open .faq-q,html.mf .faq .faq-item.open .faq-q *{background-image:none!important;-webkit-text-fill-color:currentColor!important}
+html.mf .faq .faq-item:nth-child(4n+1) .faq-q,html.mf .faq .faq-item:nth-child(4n+3) .faq-q,html.mf .faq .faq-item:nth-child(4n+1):hover .faq-q *,html.mf .faq .faq-item:nth-child(4n+3):hover .faq-q *{color:#fff!important}
+html.mf .faq .faq-item:nth-child(4n+2) .faq-q,html.mf .faq .faq-item:nth-child(4n+4) .faq-q,html.mf .faq .faq-item:nth-child(4n+2):hover .faq-q *,html.mf .faq .faq-item:nth-child(4n+4):hover .faq-q *{color:var(--ink)!important}
+html.mf .faq .faq-item .faq-icon{background:rgba(255,255,255,.25)!important}
+
+/* ---- 5. Credibility: no capital-letter labels, no pills, no small text ---- */
+html.mf body :is(section,footer,nav,#llaFloatCta,#et-bumpyard-widget) *{text-transform:none!important}
+html.mf .eyebrow,html.mf .phase-block-label,html.mf .about-powered-label,html.mf .about-readmore,html.mf .skill-eyebrow,html.mf .footer h4,
+html.mf .lla-cta-eyebrow,html.mf .hero-powered-stats *,html.mf .lg-or span,html.mf .curriculum-section-label,html.mf .how-v2-card-meta,
+html.mf .hex-detail-tag,html.mf .teacher-card-live-role,html.mf .bioquiz-eyebrow,html.mf .bioquiz-badge-label{letter-spacing:0!important}
+html.mf section .eyebrow{font-size:18px!important;font-weight:700!important}
+html.mf .about .eyebrow{background:none!important;border:0!important;box-shadow:none!important;padding:0!important;border-radius:0!important}
+html.mf .about .about-powered-label,html.mf .about .about-readmore{font-size:17px!important}
+html.mf .hero-powered-stats .unit{font-size:16px!important}
+html.mf .hero-powered-live-dot{background:#5EB6FF!important;box-shadow:0 0 0 4px rgba(94,182,255,.25)!important}
+html.mf .skills .skill-eyebrow{font-size:16px!important}
+html.mf .footer h4{font-size:18px!important}
+html.mf .curriculum .curriculum-section-label{font-size:16px!important;letter-spacing:0!important}
+html.mf .curriculum .phase-block-label{font-size:17px!important}
+html.mf .lead-gen-v2 .lead-gen-v2-trust{font-size:15px!important;line-height:1.45!important}
+html.mf .lead-gen-v2 .lg-or span{font-size:15px!important}
+html.mf .lead-gen-v2 .lg-buy-sub{font-size:16px!important}
+/* phase 4 accent: navy (allowed colours only) */
+html.mf .mf-learn .curriculum-tab[data-phase-tab="4"],html.mf .mf-learn .phase-block[data-phase="4"]{--ph:#16336B!important}
+
+/* ---- 4. WhatsApp button and the floating offer bar: same design, larger ---- */
+html.mf #et-bumpyard-widget .widget-trigger-btn{line-height:52px!important;padding:0 26px!important;font-size:18px!important}
+html.mf #et-bumpyard-widget .widget-trigger-btn img{height:26px!important;width:26px!important;margin-right:12px!important}
+html.mf #et-bumpyard-widget .widget-trigger-btn::after{width:12px!important;height:12px!important}
+html.mf .lla-float-cta{border-radius:20px!important}
+html.mf .lla-float-cta .lla-cta-text{padding:16px 22px 16px 24px!important;gap:6px!important}
+html.mf .lla-float-cta .lla-cta-eyebrow{font-size:17px!important}
+html.mf .lla-float-cta .lla-cta-eyebrow::before{width:8px!important;height:8px!important}
+html.mf .lla-float-cta .lla-cta-title{font-size:23px!important}
+html.mf .lla-float-cta .lla-cta-pill{padding:0 26px!important;margin:10px 10px 10px 6px!important;border-radius:14px!important;gap:10px!important}
+html.mf .lla-float-cta .lla-cta-pill .price{font-size:28px!important}
+html.mf .lla-float-cta .lla-cta-pill .mo{font-size:16px!important;letter-spacing:0!important}
+html.mf .lla-float-cta .lla-cta-arrow{width:20px!important;height:20px!important}
+@media (max-width:768px){
+  html.mf #et-bumpyard-widget .widget-trigger-btn{padding:18px!important;line-height:normal!important}
+  html.mf #et-bumpyard-widget .widget-trigger-btn img{height:34px!important;width:34px!important;margin:0!important}
+}
+@media (max-width:720px){
+  html.mf .lla-float-cta{left:8px!important;right:8px!important;border-radius:18px!important}
+  html.mf .lla-float-cta .lla-cta-text{padding:12px 8px 12px 14px!important;gap:4px!important}
+  html.mf .lla-float-cta .lla-cta-eyebrow{font-size:15px!important}
+  html.mf .lla-float-cta .lla-cta-title{font-size:18.5px!important;white-space:nowrap}
+  html.mf .lla-float-cta .lla-cta-pill{padding:0 12px!important;margin:8px 8px 8px 0!important;border-radius:12px!important;gap:5px!important;flex:none!important}
+  html.mf .lla-float-cta .lla-cta-pill .price{font-size:24px!important}
+  html.mf .lla-float-cta .lla-cta-pill .mo{font-size:14.5px!important;white-space:nowrap}
+  html.mf .lla-float-cta .lla-cta-arrow{width:17px!important;height:17px!important}
+}
+
+/* ---- 3. CGM fold: compact, authentic. Abbott's own Lingo photo; two 3D glass cards in the deck sugar-slide style ---- */
+.cgm7{position:relative;padding:72px 0 76px;color:#fff;overflow:hidden;
+  background:radial-gradient(60% 70% at 85% 30%,rgba(0,110,255,.28),transparent 65%),radial-gradient(50% 60% at 0% 0%,rgba(30,90,200,.35),transparent 60%),linear-gradient(180deg,#061024 0%,#0A1A3C 55%,#071229 100%)}
+.cgm7-wrap{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.05fr);gap:56px;align-items:center}
+.cgm7-copy .eyebrow{display:block;margin-bottom:12px;color:#8FC7FF!important}
+.cgm7-copy .section-title{color:#fff!important;font-size:clamp(34px,3.3vw,48px)!important;line-height:1.08!important;margin:0 0 16px!important;text-align:left!important}
+.cgm7-lead{font-size:19px;line-height:1.55;color:#D5E3FF;margin:0 0 18px}
+.cgm7-list{list-style:none;margin:0 0 14px;padding:0;display:grid;gap:10px}
+.cgm7-list li{position:relative;padding-left:28px;font-size:19px;line-height:1.45;color:#fff}
+.cgm7-list li::before{content:"";position:absolute;left:0;top:.42em;width:13px;height:13px;border-radius:50%;background:radial-gradient(circle at 35% 35%,#BFE2FF,#3D8BFF);box-shadow:0 0 12px rgba(94,182,255,.8)}
+.cgm7-fine{font-size:16px;line-height:1.5;color:#AFC6EA;margin:0 0 14px}
+.cgm7-link{display:inline-flex;align-items:center;gap:8px;font-size:18px;font-weight:700;color:#8FC7FF;text-decoration:none}
+.cgm7-link svg{width:20px;height:20px;stroke:currentColor;stroke-width:2.4;fill:none;stroke-linecap:round;stroke-linejoin:round}
+
+.cgm7-stage{position:relative;height:500px;perspective:1400px}
+.cgm7-photo{position:absolute;left:0;top:40px;width:380px;height:380px;margin:0;border-radius:28px;overflow:hidden;background:#fff;
+  box-shadow:0 40px 80px -30px rgba(0,0,0,.75),0 0 0 1px rgba(255,255,255,.12)}
+.cgm7-photo img{width:100%;height:100%;object-fit:cover;display:block}
+.cgm7-card{position:absolute;border-radius:24px;padding:20px 22px;color:#fff;transform-style:preserve-3d;
+  background:linear-gradient(160deg,rgba(28,58,120,.92) 0%,rgba(10,24,56,.94) 60%,rgba(7,17,42,.96) 100%);
+  border:1px solid rgba(160,205,255,.28);
+  box-shadow:0 1px 0 rgba(255,255,255,.22) inset,0 0 0 1px rgba(0,0,0,.2),0 30px 60px -20px rgba(0,0,0,.8),0 0 60px -10px rgba(60,140,255,.45);
+  backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px)}
+.cgm7-card::before{content:"";position:absolute;inset:0;border-radius:inherit;pointer-events:none;background:linear-gradient(135deg,rgba(255,255,255,.16),transparent 40%)}
+.cgm7-card p{margin:0}
+.cgm7-live{left:250px;top:0;width:250px;transform:rotateY(-16deg) rotateX(7deg) translateZ(40px);animation:cgm7float 7s ease-in-out infinite}
+.cgm7-k{font-size:16px;font-weight:600;color:#BFE2FF}
+.cgm7-v{display:flex;align-items:baseline;gap:8px;margin-top:2px!important}
+.cgm7-v b{font-size:62px;font-weight:800;line-height:1;letter-spacing:-.03em;text-shadow:0 0 24px rgba(126,200,255,.6)}
+.cgm7-v span{font-size:18px;font-weight:700;color:#D5E3FF}
+.cgm7-trend{width:26px;height:26px;stroke:#9AD4FF;stroke-width:2.6;fill:none;stroke-linecap:round;stroke-linejoin:round;filter:drop-shadow(0 0 6px rgba(126,200,255,.9));align-self:center}
+.cgm7-spark{display:block;width:100%;height:52px;margin:10px 0 6px;overflow:visible}
+.cgm7-spark .cgm7-line,.cgm7-chart .cgm7-line{filter:drop-shadow(0 0 6px rgba(126,200,255,.9))}
+.cgm7-chart .cgm7-line{filter:drop-shadow(0 0 7px rgba(255,127,176,.95))}
+.cgm7-dot{filter:drop-shadow(0 0 8px #7EC8FF);animation:cgm7pulse 2s ease-in-out infinite;transform-origin:214px 28px}
+.cgm7-note{font-size:15px;color:#AFC6EA}
+.cgm7-day{right:0;bottom:0;width:360px;transform:rotateY(-12deg) rotateX(5deg) translateZ(70px);animation:cgm7float 8s ease-in-out -2s infinite}
+.cgm7-day-h{display:flex;justify-content:space-between;align-items:baseline}
+.cgm7-day-h i{font-family:'Playfair Display',Georgia,serif;font-style:italic;font-size:34px;line-height:1;color:#FF8EC0;text-shadow:0 0 18px rgba(255,127,176,.55)}
+.cgm7-day-h span{font-family:'Playfair Display',Georgia,serif;font-style:italic;font-size:17px;color:#BFE2FF}
+.cgm7-chartwrap{position:relative;margin-top:6px}
+.cgm7-chart{display:block;width:100%;height:110px;overflow:visible}
+.cgm7-count{position:absolute;left:53.4%;top:50%;transform:translate(-50%,-50%);font-size:26px;font-weight:800;color:#fff;text-shadow:0 0 12px rgba(255,127,176,.9)}
+.cgm7-axis{display:flex;justify-content:space-between;font-size:15px;color:#AFC6EA;margin-top:4px}
+.cgm7-countlbl{font-size:16px;color:#FFC2DA;margin-top:6px!important}
+.cgm7-countlbl i{font-family:'Playfair Display',Georgia,serif;font-size:19px;color:#FF8EC0}
+.cgm7-total{margin-top:12px;padding-top:12px;border-top:1px solid rgba(160,205,255,.2)}
+.cgm7-total p{display:flex;align-items:baseline;gap:10px}
+.cgm7-total span{font-size:16px;font-weight:600;color:#BFE2FF;flex:1}
+.cgm7-total b{font-size:32px;font-weight:800;line-height:1}
+.cgm7-total em{font-family:'Playfair Display',Georgia,serif;font-size:18px;color:#BFE2FF}
+.cgm7-bar{height:10px;border-radius:6px;background:rgba(160,205,255,.18);margin-top:8px;overflow:hidden}
+.cgm7-bar i{display:block;height:100%;border-radius:6px;background:linear-gradient(90deg,#5EB6FF,#BFE2FF);box-shadow:0 0 12px rgba(126,200,255,.8)}
+.cgm7 .cgm7-line{stroke-dasharray:1;stroke-dashoffset:0}
+.cgm7.cgm7-anim .cgm7-line{animation:cgm7draw 2.2s cubic-bezier(.22,1,.36,1) both}
+@keyframes cgm7draw{from{stroke-dashoffset:1}to{stroke-dashoffset:0}}
+@keyframes cgm7float{0%,100%{translate:0 0}50%{translate:0 -8px}}
+@keyframes cgm7pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.55;transform:scale(1.35)}}
+@media (max-width:1100px){.cgm7-wrap{gap:32px}.cgm7-photo{width:330px;height:330px}.cgm7-live{left:200px}.cgm7-day{width:330px}}
+@media (max-width:900px){
+  .cgm7{padding:44px 0 48px}
+  .cgm7-wrap{grid-template-columns:1fr;gap:18px}
+  .cgm7-copy{display:contents}
+  .cgm7-copy .eyebrow{order:1;margin-bottom:0!important;font-size:17px!important}
+  .cgm7-copy .section-title{order:2;font-size:30px!important;margin:0!important}
+  .cgm7-lead{order:3;margin:0}
+  .cgm7-stage{order:4}
+  .cgm7-list{order:5;margin:0}
+  .cgm7-fine{order:6;margin:0;font-size:15px}
+  .cgm7-link{order:7}
+  .cgm7-stage{height:425px;margin:6px 0 4px}
+  .cgm7-photo{width:58%;height:auto;aspect-ratio:1;top:0;left:0;border-radius:22px}
+  .cgm7-live{left:auto;right:0;top:14px;width:58%;padding:14px 16px;border-radius:20px;transform:rotateY(-14deg) rotateX(6deg) translateZ(30px)}
+  .cgm7-v b{font-size:46px}
+  .cgm7-v span{font-size:16px}
+  .cgm7-live{display:flex;flex-direction:column}
+  .cgm7-note{order:2;margin-top:2px!important}
+  .cgm7-spark{order:3;height:34px;margin:6px 0 0}
+  .cgm7-day{right:auto;left:0;width:100%;padding:16px 18px;border-radius:20px;transform:rotateX(8deg) rotateY(-4deg) translateZ(40px)}
+  .cgm7-day-h i{font-size:28px}
+  .cgm7-chart{height:80px}
+  .cgm7-count{font-size:22px}
+  .cgm7-total b{font-size:28px}
+  .cgm7-list li{font-size:18.5px}
+}
+@media (prefers-reduced-motion:reduce){.cgm7-live,.cgm7-day,.cgm7-dot{animation:none!important}.cgm7.cgm7-anim .cgm7-line{animation:none!important}}
+
+/* ---- 2b. The 18 classes (syllabus): every phase card and session row in its own colour, large text ---- */
+html.mf .mf-learn .section-subtitle{font-size:20px!important;color:#1E3458!important;line-height:1.5!important}
+html.mf .mf-learn .curriculum-tab{border:0!important;box-shadow:var(--card-shadow)!important;transform:none;opacity:.9;transition:transform .25s,box-shadow .25s,opacity .25s}
+html.mf .mf-learn .curriculum-tab[data-phase-tab="1"]{background:var(--c-blue)!important}
+html.mf .mf-learn .curriculum-tab[data-phase-tab="2"]{background:var(--c-teal)!important}
+html.mf .mf-learn .curriculum-tab[data-phase-tab="3"]{background:var(--c-lblue)!important}
+html.mf .mf-learn .curriculum-tab[data-phase-tab="4"]{background:var(--c-navy)!important}
+html.mf .mf-learn .curriculum-tab.is-active{opacity:1;transform:translateY(-5px)!important;box-shadow:0 0 0 3px #fff,0 0 0 6px #5EB6FF,0 26px 50px -20px rgba(0,50,140,.7)!important}
+html.mf .mf-learn .curriculum-tab .curriculum-tab-num{font-size:30px!important}
+html.mf .mf-learn .curriculum-tab .curriculum-tab-name{font-size:21px!important}
+html.mf .mf-learn .curriculum-tab .curriculum-tab-meta{font-size:17px!important}
+html.mf .mf-learn .curriculum-tab[data-phase-tab="1"] *,html.mf .mf-learn .curriculum-tab[data-phase-tab="4"] *{color:#fff!important}
+html.mf .mf-learn .curriculum-tab[data-phase-tab="2"] *,html.mf .mf-learn .curriculum-tab[data-phase-tab="3"] *{color:var(--ink)!important}
+html.mf .mf-learn .phase-block[data-phase="1"]{--pg:var(--c-blue);--pf:#fff;--pf2:#CFE6FF}
+html.mf .mf-learn .phase-block[data-phase="2"]{--pg:var(--c-teal);--pf:var(--ink);--pf2:#0A3E8C}
+html.mf .mf-learn .phase-block[data-phase="3"]{--pg:var(--c-lblue);--pf:var(--ink);--pf2:#0A3E8C}
+html.mf .mf-learn .phase-block[data-phase="4"]{--pg:var(--c-navy);--pf:#fff;--pf2:#8FC7FF}
+html.mf .mf-learn .phase-block-header{background:var(--pg)!important;margin:0!important;padding:22px 26px 6px!important;border-radius:22px 22px 0 0!important;border:0!important;box-shadow:none!important}
+html.mf .mf-learn .phase-block-header::after,html.mf .mf-learn .phase-block-header::before{display:none!important}
+html.mf .mf-learn .phase-block-label{font-size:17px!important;color:var(--pf2)!important}
+html.mf .mf-learn .phase-block-name{font-size:38px!important;color:var(--pf)!important}
+html.mf .mf-learn .phase-benefit{background:var(--pg)!important;border:0!important;border-radius:0 0 22px 22px!important;padding:6px 26px 24px!important;margin:0 0 14px!important;font-size:20px!important;color:var(--pf)!important;box-shadow:var(--card-shadow)!important}
+html.mf .mf-learn .phase-benefit::before{display:none!important}
+html.mf .mf-learn .phase-benefit *{color:var(--pf)!important}
+html.mf .mf-learn .phase-benefit b{color:var(--pf)!important;text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:4px;text-decoration-color:currentColor}
+html.mf .mf-learn .curriculum-item{border:0!important;box-shadow:var(--card-shadow)!important}
+html.mf .mf-learn .phase-block-sessions .curriculum-item:nth-child(4n+1){background:var(--c-blue)!important}
+html.mf .mf-learn .phase-block-sessions .curriculum-item:nth-child(4n+2){background:var(--c-teal)!important}
+html.mf .mf-learn .phase-block-sessions .curriculum-item:nth-child(4n+3){background:var(--c-lblue)!important}
+html.mf .mf-learn .phase-block-sessions .curriculum-item:nth-child(4n+4){background:var(--c-navy)!important}
+html.mf .mf-learn .curriculum-item .curriculum-trigger h3{font-size:20px!important}
+html.mf .mf-learn .curriculum-item .curriculum-num{background:rgba(255,255,255,.22)!important;border:0!important;font-size:17px!important}
+html.mf .mf-learn .curriculum-item .curriculum-section-label{font-size:16px!important}
+html.mf .mf-learn .curriculum-item li,html.mf .mf-learn .curriculum-item p{font-size:18px!important;line-height:1.55!important}
+html.mf .mf-learn .phase-block-sessions .curriculum-item:nth-child(4n+1) *,html.mf .mf-learn .phase-block-sessions .curriculum-item:nth-child(4n+4) *{color:#fff!important;stroke:currentColor}
+html.mf .mf-learn .phase-block-sessions .curriculum-item:nth-child(4n+2) *,html.mf .mf-learn .phase-block-sessions .curriculum-item:nth-child(4n+3) *{color:var(--ink)!important;stroke:currentColor}
+@media (max-width:760px){
+  html.mf .mf-learn .curriculum-tab .curriculum-tab-num{font-size:24px!important}
+  html.mf .mf-learn .curriculum-tab .curriculum-tab-name{font-size:18px!important}
+  html.mf .mf-learn .curriculum-tab .curriculum-tab-meta{font-size:15.5px!important}
+  html.mf .mf-learn .section-subtitle{font-size:19px!important}
+  html.mf .mf-learn .phase-block-header{padding:18px 20px 4px!important}
+  html.mf .mf-learn .phase-block-name{font-size:32px!important}
+  html.mf .mf-learn .phase-benefit{padding:4px 20px 20px!important;font-size:19px!important}
+  html.mf .mf-learn .curriculum-item .curriculum-trigger h3{font-size:18.5px!important}
+}
+html.mf .mf-learn .phase-block-header{border-bottom:0!important}
+html.mf .lead-gen-v2 .lead-gen-v2-eyebrow{color:#8FC7FF!important}
+html.mf .lead-gen-v2 .lead-gen-v2-bullets li:nth-child(4) svg{color:#8FC7FF!important}
+/* footer: no small grey text on dark */
+html.mf .footer p,html.mf .footer a,html.mf .footer li{font-size:17px!important;color:#D5E3FF!important}
+html.mf .footer .footer-bottom *{font-size:16px!important;color:#AFC6EA!important}
+
+/* ---- 6. Every fold short on phones ---- */
+@media (max-width:760px){
+  html.mf section{scroll-margin-top:70px}
+  html.mf .topics,html.mf .curriculum,html.mf .nov-incl,html.mf .how-v2,html.mf .skills,html.mf .value,html.mf .about,html.mf .instructors,
+  html.mf .testimonials,html.mf .faq,html.mf .deepdive,html.mf .lead-gen-v2,html.mf .bioquiz,html.mf .final-cta{padding-top:40px!important;padding-bottom:40px!important}
+  html.mf section .section-title{margin-bottom:10px!important}
+  html.mf section .section-subtitle{margin-bottom:16px!important}
+  html.mf .fold-cta,html.mf .how-v2-cta,html.mf .section-cta,html.mf .curriculum-cta,html.mf .instructors-cta,html.mf .testimonials-cta,html.mf .faq-cta{margin-top:20px!important;padding-top:0!important}
+  /* syllabus: no empty band before the button */
+  html.mf .mf-learn .curriculum-phases{margin-bottom:0!important;padding-bottom:0!important;min-height:0!important}
+  /* bio-age quiz: the decorative "?" badge is dropped on phones */
+  html.mf .bioquiz .bioquiz-visual{display:none!important}
+  html.mf .bioquiz .bioquiz-card{padding:28px 22px!important;min-height:0!important}
+  /* Six Systems list */
+  html.mf .deepdive .deepdive-mobile-card{padding:14px 16px!important;gap:12px!important}
+  html.mf .deepdive .deepdive-mobile-card>svg:last-child{display:none!important}
+  html.mf .deepdive .deepdive-mobile-title{font-size:20px!important;margin-bottom:2px!important}
+  html.mf .deepdive .deepdive-mobile-desc{font-size:16.5px!important}
+  html.mf .deepdive .deepdive-header{margin-bottom:18px!important}
+  /* FAQ */
+  html.mf .faq .faq-item{margin-bottom:10px!important}
+  html.mf .faq .faq-q{padding:16px 18px!important;font-size:19.5px!important}
+  html.mf .faq .faq-header,html.mf .faq .faq-head{margin-bottom:18px!important}
+  /* lead form: names side by side, bullets compact */
+  html.mf .lead-gen-v2 .lead-gen-v2-form{display:grid!important;grid-template-columns:1fr 1fr;column-gap:12px}
+  html.mf .lead-gen-v2 .lead-gen-v2-form>*{grid-column:1/-1}
+  html.mf .lead-gen-v2 .lead-gen-v2-form>.lead-gen-v2-field:nth-of-type(1),html.mf .lead-gen-v2 .lead-gen-v2-form>.lead-gen-v2-field:nth-of-type(2){grid-column:auto}
+  html.mf .lead-gen-v2 .lead-gen-v2-form{padding:24px 18px!important}
+  html.mf .lead-gen-v2 .lead-gen-v2-field{margin-bottom:12px!important}
+  html.mf .lead-gen-v2 .lead-gen-v2-field label{font-size:15px!important}
+  html.mf .lead-gen-v2 .lead-gen-v2-bullets{margin:14px 0 22px!important;display:grid!important;gap:8px!important;text-align:left!important}
+  html.mf .lead-gen-v2 .lead-gen-v2-bullets li{font-size:18.5px!important;justify-content:flex-start!important;text-align:left!important;margin:0!important}
+  html.mf .lead-gen-v2 .lead-gen-v2-form-title{margin-bottom:4px!important}
+  /* footer */
+  html.mf .footer{padding-top:36px!important;padding-bottom:28px!important}
+  html.mf .footer .footer-top{gap:22px!important}
+}
+html.mf .faq .faq-item .faq-num{background:none!important;border:0!important;box-shadow:none!important}
+
 
 </style>
 </head>
@@ -9237,7 +9232,7 @@ body section.value{background:linear-gradient(180deg,#F4F8FF 0%,#EAF2FF 100%)!im
 <section class="topics"><span class="lla-neon-top" aria-hidden="true"></span><span class="lla-neon-glow" aria-hidden="true"></span>
   <div class="container">
     <div class="topics-header reveal">
-      <span class="eyebrow">The Six Pillars</span>
+      <span class="eyebrow">The six pillars</span>
       <h2 class="section-title">Learn to Master<br>Six Pillars of a Longer, Better Life.</h2>
       <p class="section-subtitle" style="margin:0 auto;">The interconnected systems, nutrition, sleep, movement, supplements and wearables, stress, and your personal protocol, that compound a longer, better life across every decade.</p>
     </div>
@@ -9319,29 +9314,29 @@ body section.value{background:linear-gradient(180deg,#F4F8FF 0%,#EAF2FF 100%)!im
       <button class="curriculum-tab is-active" data-phase-tab="1" style="--ph:#1F6BFF" role="tab" aria-selected="true">
         <span class="curriculum-tab-num">01</span>
         <span class="curriculum-tab-name">Foundation</span>
-        <span class="curriculum-tab-meta">Sessions 1-3</span>
+        <span class="curriculum-tab-meta">Sessions 1 to 3</span>
       </button>
       <button class="curriculum-tab" data-phase-tab="2" style="--ph:#0FA58A" role="tab" aria-selected="false">
         <span class="curriculum-tab-num">02</span>
         <span class="curriculum-tab-name">Data and Discovery</span>
-        <span class="curriculum-tab-meta">Sessions 4-7</span>
+        <span class="curriculum-tab-meta">Sessions 4 to 7</span>
       </button>
       <button class="curriculum-tab" data-phase-tab="3" style="--ph:#F2662B" role="tab" aria-selected="false">
         <span class="curriculum-tab-num">03</span>
         <span class="curriculum-tab-name">Lifestyle Systems</span>
-        <span class="curriculum-tab-meta">Sessions 8-13</span>
+        <span class="curriculum-tab-meta">Sessions 8 to 13</span>
       </button>
       <button class="curriculum-tab" data-phase-tab="4" style="--ph:#7A4DFF" role="tab" aria-selected="false">
         <span class="curriculum-tab-num">04</span>
         <span class="curriculum-tab-name">Integration and Blueprint</span>
-        <span class="curriculum-tab-meta">Sessions 14-18</span>
+        <span class="curriculum-tab-meta">Sessions 14 to 18</span>
       </button>
     </div>
     <div class="curriculum-phases">
       <!-- PHASE 1: Foundation -->
       <div class="phase-block reveal is-active" data-phase="1" style="--ph:#1F6BFF">
         <div class="phase-block-header">
-          <span class="phase-block-label">Phase 1, Sessions 1-3</span>
+          <span class="phase-block-label">Phase 1, sessions 1 to 3</span>
           <span class="phase-block-name">Foundation</span>
         </div>
         <p class="phase-benefit"><span><b>You leave Phase 1 with</b> your baseline: a self-assessment of where you stand today and the one signal, blood sugar, that the rest of the course is built on.</span></p>
@@ -9363,7 +9358,7 @@ body section.value{background:linear-gradient(180deg,#F4F8FF 0%,#EAF2FF 100%)!im
                   <li>Articulate a personal reason this course matters</li>
                 </ul>
                 <div class="curriculum-section-label">50-Minute Flow</div>
-                <p class="curriculum-flow">Welcome and group norms → Mini-lecture on healthspan, Medicine 3.0, and aging trajectories → Guided exercise visualizing your 80-year curve → Breakout on the default last decade → Group synthesis and shared course language → Intent-setting close with Longevity Lens preview</p>
+                <p class="curriculum-flow">Welcome and group norms. Mini-lecture on healthspan, Medicine 3.0, and aging trajectories. Guided exercise visualizing your 80-year curve. Breakout on the default last decade. Group synthesis and shared course language. Intent-setting close with Longevity Lens preview</p>
                 <div class="curriculum-section-label">Between-Session Work</div>
                 <p class="curriculum-work">Three-day lifestyle awareness log, sleep, movement, meals, energy. Descriptive only, no judgment.</p>
               </div>
@@ -9386,7 +9381,7 @@ body section.value{background:linear-gradient(180deg,#F4F8FF 0%,#EAF2FF 100%)!im
                   <li>Know three field-ready self-assessments with evidence behind them</li>
                 </ul>
                 <div class="curriculum-section-label">50-Minute Flow</div>
-                <p class="curriculum-flow">Recap from Session 1 → Lens demo across the 4-domain frame → Live baseline assessment (cardio fitness estimate, grip strength as a mortality proxy, sit-to-stand, subjective scale) → Pair share on which domain surprised you → Choose one priority domain</p>
+                <p class="curriculum-flow">Recap from Session 1. Lens demo across the 4-domain frame. Live baseline assessment (cardio fitness estimate, grip strength as a mortality proxy, sit-to-stand, subjective scale). Pair share on which domain surprised you. Choose one priority domain</p>
                 <div class="curriculum-section-label">Between-Session Work</div>
                 <p class="curriculum-work">Record three data points, resting HR (7-day average), grip-strength estimate, sit-to-stand count.</p>
               </div>
@@ -9409,7 +9404,7 @@ body section.value{background:linear-gradient(180deg,#F4F8FF 0%,#EAF2FF 100%)!im
                   <li>Know why fasting glucose alone misses most of the picture</li>
                 </ul>
                 <div class="curriculum-section-label">50-Minute Flow</div>
-                <p class="curriculum-flow">Log review → Glucose-as-signal mini-lecture (Snyder, Hall 2018, PREDICT 1) → Three-trace case comparison (healthy vs subclinical vs diabetic) → Breakout on which markers to trust → Group synthesis reframing blood sugar from villain to information</p>
+                <p class="curriculum-flow">Log review. Glucose-as-signal mini-lecture (Snyder, Hall 2018, PREDICT 1). Three-trace case comparison (healthy vs subclinical vs diabetic). Breakout on which markers to trust. Group synthesis reframing blood sugar from villain to information</p>
                 <div class="curriculum-section-label">Between-Session Work</div>
                 <p class="curriculum-work">One fasted-morning mood and energy log, pre- and post-breakfast, three days.</p>
               </div>
@@ -9420,7 +9415,7 @@ body section.value{background:linear-gradient(180deg,#F4F8FF 0%,#EAF2FF 100%)!im
       <!-- PHASE 2: Data & Discovery -->
       <div class="phase-block reveal" data-phase="2" style="--ph:#0FA58A">
         <div class="phase-block-header">
-          <span class="phase-block-label">Phase 2, Sessions 4-7</span>
+          <span class="phase-block-label">Phase 2, sessions 4 to 7</span>
           <span class="phase-block-name">Data &amp; Discovery</span>
         </div>
         <p class="phase-benefit"><span><b>You leave Phase 2 with</b> two weeks of your own glucose data and the ability to read it, so you know which meals, food orders and timings work for your body.</span></p>
@@ -9442,7 +9437,7 @@ body section.value{background:linear-gradient(180deg,#F4F8FF 0%,#EAF2FF 100%)!im
                   <li>Identify what drives spikes and what drives recovery</li>
                 </ul>
                 <div class="curriculum-section-label">50-Minute Flow</div>
-                <p class="curriculum-flow">Recap of glucose-as-signal → Mechanics of variability (SD, time-in-range, MAGE) → Case studies on metabolic flexibility → Breakout to map your suspected drivers → Synthesis previewing the continuous glucose monitor lab</p>
+                <p class="curriculum-flow">Recap of glucose-as-signal. Mechanics of variability (SD, time-in-range, MAGE). Case studies on metabolic flexibility. Breakout to map your suspected drivers. Synthesis previewing the continuous glucose monitor lab</p>
                 <div class="curriculum-section-label">Between-Session Work</div>
                 <p class="curriculum-work">Predict your top three glucose triggers before the continuous glucose monitor arrives, food, stress, sleep, or movement.</p>
               </div>
@@ -9465,7 +9460,7 @@ body section.value{background:linear-gradient(180deg,#F4F8FF 0%,#EAF2FF 100%)!im
                   <li>Understand what continuous glucose monitor data can, and cannot, tell you</li>
                 </ul>
                 <div class="curriculum-section-label">50-Minute Flow</div>
-                <p class="curriculum-flow">continuous glucose monitor applied live with the class → App walkthrough and trace anatomy → Review three real participant traces from prior classes → Build your personal protocol for the next 14 days of observation</p>
+                <p class="curriculum-flow">Continuous glucose monitor applied live with the class. App walkthrough and trace anatomy. Review three real participant traces from prior classes. Build your personal protocol for the next 14 days of observation</p>
                 <div class="curriculum-section-label">Between-Session Work</div>
                 <p class="curriculum-work">Two weeks of blind observation, wear the continuous glucose monitor, log meals and movement, draw no conclusions yet.</p>
               </div>
@@ -9488,7 +9483,7 @@ body section.value{background:linear-gradient(180deg,#F4F8FF 0%,#EAF2FF 100%)!im
                   <li>Identify your three biggest glucose-driving foods</li>
                 </ul>
                 <div class="curriculum-section-label">50-Minute Flow</div>
-                <p class="curriculum-flow">continuous glucose monitor data review → Mini-lecture on inputs vs responses → Guided exercise to map your personal response map → Breakout pairs share top triggers and surprises → Synthesis sets up plate architecture</p>
+                <p class="curriculum-flow">Continuous glucose monitor data review. Mini-lecture on inputs vs responses. Guided exercise to map your personal response map. Breakout pairs share top triggers and surprises. Synthesis sets up plate architecture</p>
                 <div class="curriculum-section-label">Between-Session Work</div>
                 <p class="curriculum-work">Build your personal glucose-response map, three foods that spike you, three that don't, three to test.</p>
               </div>
@@ -9511,7 +9506,7 @@ body section.value{background:linear-gradient(180deg,#F4F8FF 0%,#EAF2FF 100%)!im
                   <li>Recognize ultra-processed food as a glucose multiplier</li>
                 </ul>
                 <div class="curriculum-section-label">50-Minute Flow</div>
-                <p class="curriculum-flow">Plate architecture mini-lecture (protein floor, fiber lever, processing penalty) → Food-order experiment walkthrough (vegetable → protein → carb) → Live build of three plates from your kitchen → Pair coaching to redesign one weekly meal you've already tested on the continuous glucose monitor</p>
+                <p class="curriculum-flow">Plate architecture mini-lecture (protein floor, fiber lever, processing penalty). Food-order experiment walkthrough (vegetable, then protein, then carb). Live build of three plates from your kitchen. Pair coaching to redesign one weekly meal you've already tested on the continuous glucose monitor</p>
                 <div class="curriculum-section-label">Between-Session Work</div>
                 <p class="curriculum-work">Run the food-order experiment for three days. Same meal, different order. Capture the continuous glucose monitor trace.</p>
               </div>
@@ -9522,7 +9517,7 @@ body section.value{background:linear-gradient(180deg,#F4F8FF 0%,#EAF2FF 100%)!im
       <!-- PHASE 3: Lifestyle Systems -->
       <div class="phase-block reveal" data-phase="3" style="--ph:#F2662B">
         <div class="phase-block-header">
-          <span class="phase-block-label">Phase 3, Sessions 8-13</span>
+          <span class="phase-block-label">Phase 3, sessions 8 to 13</span>
           <span class="phase-block-name">Lifestyle Systems</span>
         </div>
         <p class="phase-benefit"><span><b>You leave Phase 3 with</b> tested answers on meal timing, movement, sleep and stress, each tried for a week on your own numbers, so you keep only what works for you.</span></p>
@@ -9544,7 +9539,7 @@ body section.value{background:linear-gradient(180deg,#F4F8FF 0%,#EAF2FF 100%)!im
                   <li>Choose a fasting window that fits your life and your data</li>
                 </ul>
                 <div class="curriculum-section-label">50-Minute Flow</div>
-                <p class="curriculum-flow">Evidence review, what TRE actually shows in human RCTs, where rodent autophagy data does and doesn't translate → Case studies on women, athletes, and disordered-eating histories → Design a 4-week trial window matched to your continuous glucose monitor and sleep data</p>
+                <p class="curriculum-flow">Evidence review, what TRE actually shows in human RCTs, where rodent autophagy data does and doesn't translate. Case studies on women, athletes, and disordered-eating histories. Design a 4-week trial window matched to your continuous glucose monitor and sleep data</p>
                 <div class="curriculum-section-label">Between-Session Work</div>
                 <p class="curriculum-work">Test one meal-timing window for the week. Track continuous glucose monitor, energy, sleep, and adherence.</p>
               </div>
@@ -9567,7 +9562,7 @@ body section.value{background:linear-gradient(180deg,#F4F8FF 0%,#EAF2FF 100%)!im
                   <li>Recognize gut-symptom patterns worth investigating</li>
                 </ul>
                 <div class="curriculum-section-label">50-Minute Flow</div>
-                <p class="curriculum-flow">Mini-lecture on the gut-brain-glucose axis (vagal tone, SCFA, postbiotics) → Case studies linking dysbiosis to glucose variability and mood → Self-assessment of fiber diversity (30-plants-per-week) → Breakout on what to add before what to remove</p>
+                <p class="curriculum-flow">Mini-lecture on the gut-brain-glucose axis (vagal tone, SCFA, postbiotics). Case studies linking dysbiosis to glucose variability and mood. Self-assessment of fiber diversity (30-plants-per-week). Breakout on what to add before what to remove</p>
                 <div class="curriculum-section-label">Between-Session Work</div>
                 <p class="curriculum-work">Track plant diversity for one week, target 30 distinct plants. Note any symptom or energy correlations.</p>
               </div>
@@ -9590,7 +9585,7 @@ body section.value{background:linear-gradient(180deg,#F4F8FF 0%,#EAF2FF 100%)!im
                   <li>Build a minimum-effective movement plan you'll actually keep</li>
                 </ul>
                 <div class="curriculum-section-label">50-Minute Flow</div>
-                <p class="curriculum-flow">Centenarian decathlon framing → Movement hierarchy (steady cardio base, cardio fitness ceiling, strength pillar) → Live demo of post-meal walks and how they affect blood sugar → Design a weekly movement floor → Breakout pairs commit to a 2-week trial</p>
+                <p class="curriculum-flow">Centenarian decathlon framing. Movement hierarchy (steady cardio base, cardio fitness ceiling, strength pillar). Live demo of post-meal walks and how they affect blood sugar. Design a weekly movement floor. Breakout pairs commit to a 2-week trial</p>
                 <div class="curriculum-section-label">Between-Session Work</div>
                 <p class="curriculum-work">Test a 10-minute post-meal walk after your highest-glucose meal of the day. Capture the continuous glucose monitor delta.</p>
               </div>
@@ -9613,7 +9608,7 @@ body section.value{background:linear-gradient(180deg,#F4F8FF 0%,#EAF2FF 100%)!im
                   <li>Identify your two highest-leverage sleep changes</li>
                 </ul>
                 <div class="curriculum-section-label">50-Minute Flow</div>
-                <p class="curriculum-flow">Sleep architecture and the metabolic cost of one bad night → Overnight glucose signatures (dawn phenomenon vs disrupted sleep vs late eating) → Self-assessment across light, temperature, timing, alcohol, caffeine → Commit to a 1-week sleep protocol</p>
+                <p class="curriculum-flow">Sleep architecture and the metabolic cost of one bad night. Overnight glucose signatures (dawn phenomenon vs disrupted sleep vs late eating). Self-assessment across light, temperature, timing, alcohol, caffeine. Commit to a 1-week sleep protocol</p>
                 <div class="curriculum-section-label">Between-Session Work</div>
                 <p class="curriculum-work">Run a one-week sleep protocol, fixed wake time, morning light, last meal three hours before bed.</p>
               </div>
@@ -9636,7 +9631,7 @@ body section.value{background:linear-gradient(180deg,#F4F8FF 0%,#EAF2FF 100%)!im
                   <li>Build a regulation toolkit ranked by evidence and convenience</li>
                 </ul>
                 <div class="curriculum-section-label">50-Minute Flow</div>
-                <p class="curriculum-flow">The stress-glucose loop and your body's recovery signal → Case review of non-food spikes → Live practice of three regulation tools (slow exhale, box breath, body reset) → Map your top two stressors and choose your default tool</p>
+                <p class="curriculum-flow">The stress-glucose loop and your body's recovery signal. Case review of non-food spikes. Live practice of three regulation tools (slow exhale, box breath, body reset). Map your top two stressors and choose your default tool</p>
                 <div class="curriculum-section-label">Between-Session Work</div>
                 <p class="curriculum-work">Catch one non-food spike during the week. Use a regulation tool inside ten minutes and log the continuous glucose monitor response.</p>
               </div>
@@ -9659,7 +9654,7 @@ body section.value{background:linear-gradient(180deg,#F4F8FF 0%,#EAF2FF 100%)!im
                   <li>Treat cardio fitness as a longevity predictor, not just a fitness number</li>
                 </ul>
                 <div class="curriculum-section-label">50-Minute Flow</div>
-                <p class="curriculum-flow">Four Horsemen framing (heart disease, cancer, brain decline, metabolic disease) → The cholesterol numbers that actually matter, Lp(a) tested once in your life → Prevention timeline that starts decades before the event → Cardio fitness norms by age and sex → Set a personal cardiovascular target</p>
+                <p class="curriculum-flow">Four Horsemen framing (heart disease, cancer, brain decline, metabolic disease). The cholesterol numbers that actually matter, Lp(a) tested once in your life. Prevention timeline that starts decades before the event. Cardio fitness norms by age and sex. Set a personal cardiovascular target</p>
                 <div class="curriculum-section-label">Between-Session Work</div>
                 <p class="curriculum-work">Order the right cholesterol panel and Lp(a) on your next blood draw. Estimate your current cardio fitness and write your 12-month target.</p>
               </div>
@@ -9670,7 +9665,7 @@ body section.value{background:linear-gradient(180deg,#F4F8FF 0%,#EAF2FF 100%)!im
       <!-- PHASE 4: Integration & Blueprint -->
       <div class="phase-block reveal" data-phase="4" style="--ph:#7A4DFF">
         <div class="phase-block-header">
-          <span class="phase-block-label">Phase 4, Sessions 14-18</span>
+          <span class="phase-block-label">Phase 4, sessions 14 to 18</span>
           <span class="phase-block-name">Integration &amp; Blueprint</span>
         </div>
         <p class="phase-benefit"><span><b>You leave Phase 4 with</b> your written Personal Longevity Blueprint, built on your blood work and 18 weeks of your data, plus a 90-day plan to keep it going.</span></p>
@@ -9692,7 +9687,7 @@ body section.value{background:linear-gradient(180deg,#F4F8FF 0%,#EAF2FF 100%)!im
                   <li>Build a personal panel and cadence you'll actually run</li>
                 </ul>
                 <div class="curriculum-section-label">50-Minute Flow</div>
-                <p class="curriculum-flow">Longevity panel walkthrough (the cholesterol picture, fasting insulin, insulin sensitivity, inflammation, blood sugar, lipid subfractions, hormones, micronutrients) → Optimal vs reference ranges → Live read-through of a sample panel → Build your panel and cadence</p>
+                <p class="curriculum-flow">Longevity panel walkthrough (the cholesterol picture, fasting insulin, insulin sensitivity, inflammation, blood sugar, lipid subfractions, hormones, micronutrients). Optimal vs reference ranges. Live read-through of a sample panel. Build your panel and cadence</p>
                 <div class="curriculum-section-label">Between-Session Work</div>
                 <p class="curriculum-work">Build your personal blood panel. Compare against your last labs. Identify three markers you want to move.</p>
               </div>
@@ -9715,7 +9710,7 @@ body section.value{background:linear-gradient(180deg,#F4F8FF 0%,#EAF2FF 100%)!im
                   <li>Know when wearable data changes a decision and when it's just data</li>
                 </ul>
                 <div class="curriculum-section-label">50-Minute Flow</div>
-                <p class="curriculum-flow">Evidence hierarchy and the foundation set (vitamin D3, omega-3, magnesium, creatine) → Context for longevity therapy candidates → Wearable triage (recovery, sleep, cardio fitness) → Audit your own stack and devices</p>
+                <p class="curriculum-flow">Evidence hierarchy and the foundation set (vitamin D3, omega-3, magnesium, creatine). Context for longevity therapy candidates. Wearable triage (recovery, sleep, cardio fitness). Audit your own stack and devices</p>
                 <div class="curriculum-section-label">Between-Session Work</div>
                 <p class="curriculum-work">Audit your current supplement stack against the evidence hierarchy. Cut what doesn't earn its place. Pick one to test for four weeks.</p>
               </div>
@@ -9738,7 +9733,7 @@ body section.value{background:linear-gradient(180deg,#F4F8FF 0%,#EAF2FF 100%)!im
                   <li>Identify one relationship and one purpose practice to invest in</li>
                 </ul>
                 <div class="curriculum-section-label">50-Minute Flow</div>
-                <p class="curriculum-flow">Harvard Study, Blue Zones, and meta-analyses ranking social connection alongside smoking → Self-assessment of your social architecture (close ties, weak ties, community) → Breakout on purpose, ikigai, and the second-half-of-life question → Commit to one relationship and one purpose practice</p>
+                <p class="curriculum-flow">Harvard Study, Blue Zones, and meta-analyses ranking social connection alongside smoking. Self-assessment of your social architecture (close ties, weak ties, community). Breakout on purpose, ikigai, and the second-half-of-life question. Commit to one relationship and one purpose practice</p>
                 <div class="curriculum-section-label">Between-Session Work</div>
                 <p class="curriculum-work">Initiate one social ritual, weekly call, monthly dinner, weekly walk. Schedule the next four occurrences.</p>
               </div>
@@ -9761,7 +9756,7 @@ body section.value{background:linear-gradient(180deg,#F4F8FF 0%,#EAF2FF 100%)!im
                   <li>Identify the minimum effective dose across nutrition, movement, sleep, stress, and your body's signals</li>
                 </ul>
                 <div class="curriculum-section-label">50-Minute Flow</div>
-                <p class="curriculum-flow">Workshop session, draft your blueprint live across nutrition, movement, sleep, stress, and your body's signals → Pair review checking for honesty, specificity, and minimum effective dose → Closing peer-coaching round on the one habit you'll defend first</p>
+                <p class="curriculum-flow">Workshop session, draft your blueprint live across nutrition, movement, sleep, stress, and your body's signals. Pair review checking for honesty, specificity, and minimum effective dose. Closing peer-coaching round on the one habit you'll defend first</p>
                 <div class="curriculum-section-label">Between-Session Work</div>
                 <p class="curriculum-work">Finalize your written blueprint. Print it. Share it with one person who will hold you to it.</p>
               </div>
@@ -9784,7 +9779,7 @@ body section.value{background:linear-gradient(180deg,#F4F8FF 0%,#EAF2FF 100%)!im
                   <li>Leave with a peer accountability structure for the year ahead</li>
                 </ul>
                 <div class="curriculum-section-label">50-Minute Flow</div>
-                <p class="curriculum-flow">Reflection on the 18 weeks, what changed, what didn't, what surprised you → Identity-based change and environment design → Build the continuation plan (one habit to defend, one experiment, one number to retest) → Class closes with peer-accountability commitment</p>
+                <p class="curriculum-flow">Reflection on the 18 weeks, what changed, what didn't, what surprised you. Identity-based change and environment design. Build the continuation plan (one habit to defend, one experiment, one number to retest). Class closes with peer-accountability commitment</p>
                 <div class="curriculum-section-label">Between-Session Work</div>
                 <p class="curriculum-work">Execute the continuation plan. Schedule the class check-in. Re-run your priority blood marker at day 90.</p>
               </div>
@@ -9824,50 +9819,30 @@ body section.value{background:linear-gradient(180deg,#F4F8FF 0%,#EAF2FF 100%)!im
   </div>
 </section>
 
-<section class="mf-julie v8-julie v9-julie" id="julie">
+<section class="nov-vip" id="vip">
   <div class="container">
-    <div class="mf-head">
-      <span class="eyebrow">About Julie · VIP Masterclass included</span>
-      <h2 class="section-title">Ten years pass. <em>She ages six.</em></h2>
-      <p class="section-subtitle">Julie Gibson Clark. 56. A single mom and recruiter from Phoenix with the second slowest measured pace of aging on Earth. No lab. No team of doctors. No millions.</p>
-    </div>
-    <div class="jbento">
-      <article class="jb jb-photo tcard t-navy">
-        <img src="https://gitteromri-ux.github.io/lla-blueprint-vip-preview/meta-final/assets/julie-goldenhour-crop.jpg" alt="Julie Gibson Clark" loading="lazy">
-        <div class="jb-photo-body">
-          <p class="jb-kicker">Founding Faculty &middot; Longevity Life Academy</p>
-          <h3>Julie Gibson Clark</h3>
-          <p class="serif-i jb-role">The 2nd slowest-aging human ever measured. She teaches the masterclass live.</p>
-          <div class="jb-chips"><span>56 &middot; Phoenix, AZ</span><span>~$100 / month</span><span>5:00 am &middot; 9:00 pm</span></div>
-        </div>
-      </article>
-      <article class="jb jb-vid tcard t-navy">
-        <video src="https://gitteromri-ux.github.io/lla-blueprint-vip-preview/meta-final/assets/anim/ANIM_PACE_1080.mp4" poster="https://gitteromri-ux.github.io/lla-blueprint-vip-preview/meta-final/assets/anim/pace-poster.jpg" autoplay muted loop playsinline preload="metadata"></video>
-        <div class="jb-cap"><b>She ages 8 months a year.</b><span>DunedinPACE 0.665, proven by verified epigenetic testing.</span></div>
-      </article>
-      <article class="jb jb-vid tcard t-navy">
-        <video src="https://gitteromri-ux.github.io/lla-blueprint-vip-preview/meta-final/assets/anim/ANIM_CURVE_1080.mp4" poster="https://gitteromri-ux.github.io/lla-blueprint-vip-preview/meta-final/assets/anim/curve-poster.jpg" autoplay muted loop playsinline preload="metadata"></video>
-        <div class="jb-cap"><b>34% slower than average.</b><span>Most people age one full year, every year. She doesn&rsquo;t.</span></div>
-      </article>
-      <article class="jb jb-wide tcard t-royal">
-        <video src="https://gitteromri-ux.github.io/lla-blueprint-vip-preview/meta-final/assets/anim/PLAY_V6_LLA_RANK.mp4" autoplay muted loop playsinline preload="metadata"></video>
-        <div class="jb-wide-body">
-          <b class="jb-big">No.2 on Earth.</b>
-          <p>Rejuvenation Olympics leaderboard, ahead of Bryan Johnson&rsquo;s $2M-a-year program. Her protocol: a sleep system, plate architecture, a lean supplement stack, daily movement, and a testing loop that proves it works.</p>
-          <p class="serif-i jb-quote">&ldquo;We don&rsquo;t need millions of dollars to live long, vibrant lives.&rdquo;</p>
-          <div class="jcta"><a class="mf-jbtn" href="#pricing">Enroll now</a><span class="jcta-note serif-i">VIP Masterclass free with enrollment &middot; Saturday, November 14 at 12:00 PM ET, live on Zoom</span></div>
-        </div>
-      </article>
-    </div>
-    <div class="jstats">
-      <div><b>#2</b><span>Reported ranking</span><i>Rejuvenation Olympics</i></div>
-      <div><b>0.665</b><span>Pace of aging</span><i>DunedinPACE, verified</i></div>
-      <div><b>~8 mo</b><span>Biological aging</span><i>Per calendar year</i></div>
-      <div><b>~$100</b><span>Monthly stack</span><i>vs $2M-a-year rivals</i></div>
+    <span class="eyebrow">Included in November</span>
+    <h2 class="section-title">Julie Gibson Clark's VIP Masterclass, live on November 14.</h2>
+    <p class="section-subtitle">The 2nd slowest-aging woman on earth teaches her complete protocol live on Zoom. Free with enrollment.</p>
+    <div class="nov-vip-grid">
+      <figure class="nov-vip-portrait">
+        <img src="https://www.longevitylifeacademy.com/assets/instructors/julie-gibson-clark.jpg" alt="Julie Gibson Clark, Founding Faculty at Longevity Life Academy" width="800" height="800" loading="lazy" decoding="async">
+        <figcaption><b>Julie Gibson Clark</b>Founding Faculty, 2nd slowest-aging woman on earth</figcaption>
+      </figure>
+      <div class="nov-vip-copy">
+        <p class="nov-vip-bio">Verified epigenetic testing puts Julie's pace of aging at <b>0.665</b>: she ages about eight months for every calendar year. She teaches the Blueprint faculty's approach from her own protocol.</p>
+        <h3>What your VIP seat includes</h3>
+        <ul>
+          <li><b>Saturday, November 14 at 12:00 PM ET, live on Zoom.</b> 60 minutes with Julie, then a 30-minute private Q&amp;A reserved for VIP participants.</li>
+          <li><b>How you get it.</b> Free with enrollment.</li>
+          <li><b>The November offer.</b> $79 for month 1 instead of $169, then four monthly payments of $169. Your VIP seat and your class start date are confirmed by email.</li>
+        </ul>
+        <a href="#pricing" class="nov-vip-cta">Enroll now <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"></path></svg></a>
+        <p class="nov-vip-after">Online sign-ups in November only. Full refund within 14 days of registration.</p>
+      </div>
     </div>
   </div>
 </section>
-
 <section class="nov-incl" id="included">
   <div class="container">
     <span class="eyebrow">Everything in the course</span>
@@ -9881,44 +9856,54 @@ body section.value{background:linear-gradient(180deg,#F4F8FF 0%,#EAF2FF 100%)!im
     </div>
   </div>
 </section>
-<section class="cgm6" id="cgm">
-  <div class="container cgm6-wrap">
-    <div class="cgm6-stage" aria-hidden="true">
-      <div class="cgm6-floor"></div>
-      <div class="cgm6-panel cgm6-p1">
-        <span class="cgm6-tag">sugar, simple carbs</span>
-        <svg viewBox="0 0 240 120" preserveAspectRatio="none"><defs><linearGradient id="g6a" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FF7FB0" stop-opacity=".55"/><stop offset="1" stop-color="#FF7FB0" stop-opacity="0"/></linearGradient></defs>
-          <path d="M0,100 C30,98 46,90 64,60 C80,30 92,12 108,12 C126,12 140,50 156,78 C172,100 196,102 240,100 L240,120 L0,120 Z" fill="url(#g6a)"/>
-          <path class="cgm6-line" pathLength="1" d="M0,100 C30,98 46,90 64,60 C80,30 92,12 108,12 C126,12 140,50 156,78 C172,100 196,102 240,100" fill="none" stroke="#FF8EC0" stroke-width="4" stroke-linecap="round"/></svg>
-      </div>
-      <div class="cgm6-panel cgm6-p2">
-        <span class="cgm6-tag">a balanced plate</span>
-        <svg viewBox="0 0 240 120" preserveAspectRatio="none"><defs><linearGradient id="g6b" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#5EB6FF" stop-opacity=".5"/><stop offset="1" stop-color="#5EB6FF" stop-opacity="0"/></linearGradient></defs>
-          <path d="M0,96 C40,94 64,80 96,72 C128,64 150,70 176,84 C200,96 220,96 240,95 L240,120 L0,120 Z" fill="url(#g6b)"/>
-          <path class="cgm6-line" pathLength="1" d="M0,96 C40,94 64,80 96,72 C128,64 150,70 176,84 C200,96 220,96 240,95" fill="none" stroke="#7EC8FF" stroke-width="4" stroke-linecap="round"/></svg>
-      </div>
-      <div class="cgm6-panel cgm6-p3">
-        <svg viewBox="0 0 240 120" preserveAspectRatio="none"><defs><linearGradient id="g6c" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2EC4B6" stop-opacity=".45"/><stop offset="1" stop-color="#2EC4B6" stop-opacity="0"/></linearGradient></defs>
-          <path d="M0,88 C30,86 52,70 74,52 C92,38 104,34 118,42 C136,52 150,74 172,84 C196,94 220,90 240,88 L240,120 L0,120 Z" fill="url(#g6c)"/>
-          <path class="cgm6-line" pathLength="1" d="M0,88 C30,86 52,70 74,52 C92,38 104,34 118,42 C136,52 150,74 172,84 C196,94 220,90 240,88" fill="none" stroke="#5ED6C8" stroke-width="4" stroke-linecap="round"/></svg>
-        <div class="cgm6-axis"><span>meal</span><span>1 h</span><span>2 h</span><span>3 h</span></div>
-      </div>
-      <div class="cgm6-sensor">
-        <div class="cgm6-ring"></div><div class="cgm6-ring r2"></div>
-        <div class="cgm6-disc"><div class="cgm6-dome"></div></div>
-      </div>
-    </div>
-    <div class="cgm6-copy">
-      <span class="eyebrow">Included in Your Course</span>
+<section class="cgm7" id="cgm">
+  <div class="container cgm7-wrap">
+    <div class="cgm7-copy">
+      <span class="eyebrow">Included in your course</span>
       <h2 class="section-title">Continuous Glucose Monitoring, <span class="mf-lb">Included in Your Course</span></h2>
-      <p class="cgm6-lead">Every student receives an Abbott Lingo continuous glucose monitor plus full Lingo app access, included with the course. Track your body's real-time response to food, sleep, and movement.</p>
-      <ul class="cgm6-list">
+      <p class="cgm7-lead">Every student receives an Abbott Lingo continuous glucose monitor plus full Lingo app access, included with the course. Track your body's real-time response to food, sleep, and movement.</p>
+      <ul class="cgm7-list">
         <li>14-day Abbott Lingo biosensor, water-resistant, painless application</li>
         <li>Full Lingo app access included, iOS and Android, Apple Health and Health Connect</li>
         <li>One unit per student, shipped to U.S. addresses</li>
       </ul>
-      <p class="cgm6-fine">FSA/HSA prescription not needed. For students 18+. Not for insulin users. Not for medical diagnosis.</p>
-      <a class="cgm6-link" href="https://www.longevitylifeacademy.com/cgm.html">Learn more about the device <span aria-hidden="true">&rarr;</span></a>
+      <p class="cgm7-fine">FSA/HSA prescription not needed. For students 18+. Not for insulin users. Not for medical diagnosis.</p>
+      <a class="cgm7-link" href="https://www.longevitylifeacademy.com/cgm.html">Learn more about the device <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+    </div>
+
+    <div class="cgm7-stage">
+      <figure class="cgm7-photo"><img src="https://www.longevitylifeacademy.com/assets/cgm/lingo-1.jpg" alt="Abbott Lingo biosensor and the Lingo app" loading="lazy" width="900" height="900"></figure>
+
+      <div class="cgm7-card cgm7-live" role="img" aria-label="Sample Lingo app reading: current glucose 110 mg/dL, steady, updated every minute">
+        <p class="cgm7-k">Your current glucose</p>
+        <p class="cgm7-v"><b>110</b><span>mg/dL</span><svg class="cgm7-trend" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg></p>
+        <svg class="cgm7-spark" viewBox="0 0 220 56" preserveAspectRatio="none" aria-hidden="true">
+          <defs><linearGradient id="c7a" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#7EC8FF" stop-opacity=".45"/><stop offset="1" stop-color="#7EC8FF" stop-opacity="0"/></linearGradient></defs>
+          <path d="M0,40 C18,38 30,30 46,32 C62,34 74,22 92,24 C110,26 122,36 140,33 C158,30 170,26 188,28 C200,29 210,28 214,28 L214,56 L0,56 Z" fill="url(#c7a)"/>
+          <path class="cgm7-line" pathLength="1" d="M0,40 C18,38 30,30 46,32 C62,34 74,22 92,24 C110,26 122,36 140,33 C158,30 170,26 188,28 C200,29 210,28 214,28" fill="none" stroke="#9AD4FF" stroke-width="3.5" stroke-linecap="round"/>
+          <circle class="cgm7-dot" cx="214" cy="28" r="5.5" fill="#fff"/>
+        </svg>
+        <p class="cgm7-note">Updated every minute</p>
+      </div>
+
+      <div class="cgm7-card cgm7-day" role="img" aria-label="Sample day in the Lingo app: one spike after lunch with a Lingo Count of 14; daily Lingo Count 38 against a target of 50">
+        <p class="cgm7-day-h"><i>Spike</i><span>Sample day</span></p>
+        <div class="cgm7-chartwrap">
+        <svg class="cgm7-chart" viewBox="0 0 320 120" preserveAspectRatio="none" aria-hidden="true">
+          <defs><linearGradient id="c7b" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FF7FB0" stop-opacity=".6"/><stop offset="1" stop-color="#FF7FB0" stop-opacity=".05"/></linearGradient></defs>
+          <line x1="0" y1="78" x2="320" y2="78" stroke="rgba(190,220,255,.28)" stroke-width="1.5" stroke-dasharray="4 6"/>
+          <path d="M132,78 C142,48 152,16 168,16 C186,16 196,52 210,78 Z" fill="url(#c7b)"/>
+          <path class="cgm7-line" pathLength="1" d="M0,86 C30,84 50,88 80,84 C104,81 120,82 132,78 C142,48 152,16 168,16 C186,16 196,52 210,78 C226,92 250,88 280,86 C300,85 312,86 320,86" fill="none" stroke="#FF8EC0" stroke-width="4" stroke-linecap="round"/>
+        </svg>
+        <b class="cgm7-count">14</b>
+        </div>
+        <div class="cgm7-axis"><span>6 am</span><span>12 pm</span><span>6 pm</span></div>
+        <p class="cgm7-countlbl"><i>Lingo Count</i> in the shaded area</p>
+        <div class="cgm7-total">
+          <p><span>Daily Lingo Count</span><b>38</b><em>target 50</em></p>
+          <div class="cgm7-bar"><i style="width:76%"></i></div>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -9928,7 +9913,7 @@ body section.value{background:linear-gradient(180deg,#F4F8FF 0%,#EAF2FF 100%)!im
   <div class="container">
     <div class="about-inner reveal">
       <div class="about-header">
-        <span class="eyebrow">About Us</span>
+        <span class="eyebrow">About us</span>
         <h1 class="about-mainhead">About Longevity <span class="life-blue">Life</span> Academy</h1>
       </div>
 
@@ -10070,7 +10055,7 @@ body section.value{background:linear-gradient(180deg,#F4F8FF 0%,#EAF2FF 100%)!im
 <section class="instructors" id="teachers">
   <div class="container">
     <div class="instructors-header reveal" style="text-align: center; margin-bottom: 48px;">
-      <span class="eyebrow" style="margin-bottom: 12px; display: block;">Your Instructors</span>
+      <span class="eyebrow" style="margin-bottom: 12px; display: block;">Your instructors</span>
       <h2 class="section-title" style="margin-bottom: 16px;">Taught by Leading Voices<br>in Longevity Medicine</h2>
       <p class="section-subtitle" style="margin: 0 auto; max-width: 720px;">A faculty of certified specialists, researchers, and protocol designers backed by the most recognized credentialing bodies in the field.</p>
     </div>
@@ -10141,7 +10126,7 @@ body section.value{background:linear-gradient(180deg,#F4F8FF 0%,#EAF2FF 100%)!im
           <div class="how-v2-card" style="border-top: 3px solid #006EFF;">
             <span class="how-v2-num">01</span>
             <h3 class="how-v2-card-title">Apply &amp; Match</h3>
-            <p class="how-v2-card-desc">Submit a short application. We review your background and goals, then place you in a small class of 8–15 people with compatible interests and schedules.</p>
+            <p class="how-v2-card-desc">Submit a short application. We review your background and goals, then place you in a small class of 8 to 15 people with compatible interests and schedules.</p>
             <span class="how-v2-card-meta">Takes about 5 minutes</span>
           </div>
           <div class="how-v2-card" style="border-top: 3px solid #338BFF;">
@@ -10187,7 +10172,7 @@ body section.value{background:linear-gradient(180deg,#F4F8FF 0%,#EAF2FF 100%)!im
 <section class="skills" id="skills">
   <div class="container">
     <div class="skills-header reveal">
-      <span class="eyebrow">Deep Dives</span>
+      <span class="eyebrow">Deep dives</span>
       <h2 class="section-title">What Your Doctor<br><span class="mf-lb">Doesn't Have Time to Teach You.</span></h2>
       <p class="section-subtitle">Deep-dive lectures on the science, the daily habits, and the real-world results behind a longer, better life.</p>
     </div>
@@ -10239,7 +10224,7 @@ body section.value{background:linear-gradient(180deg,#F4F8FF 0%,#EAF2FF 100%)!im
   <div class="container">
     <div class="value-header reveal">
       <div>
-        <span class="eyebrow">What Makes This Different</span>
+        <span class="eyebrow">What makes this different</span>
         <h2 class="section-title">Why This Course<br>Is Different</h2>
       </div>
       <div class="value-nav">
@@ -10276,7 +10261,7 @@ body section.value{background:linear-gradient(180deg,#F4F8FF 0%,#EAF2FF 100%)!im
 <section class="deepdive"><span class="lla-neon-top" aria-hidden="true"></span><span class="lla-neon-glow" aria-hidden="true"></span>
   <div class="container">
     <div class="deepdive-header reveal">
-      <span class="eyebrow">The Operating System</span>
+      <span class="eyebrow">The operating system</span>
       <h2 class="section-title">Six Systems. One<br>Healthspan Engine.</h2>
       <p class="section-subtitle">The interconnected systems that govern how you age, the framework Medicine 3.0 is built on. Hover to explore each domain.</p>
     </div>
@@ -10396,12 +10381,12 @@ body section.value{background:linear-gradient(180deg,#F4F8FF 0%,#EAF2FF 100%)!im
   <div class="container">
     <div class="lead-gen-v2-grid reveal">
       <div class="lead-gen-v2-left">
-        <span class="eyebrow lead-gen-v2-eyebrow">Apply for the Next Class</span>
+        <span class="eyebrow lead-gen-v2-eyebrow">Apply for the next class</span>
         <h2 class="lead-gen-v2-headline">Enroll Now in <span>Longevity Life Academy</span></h2>
         <p class="lead-gen-v2-sub">Classes are small. Seats are limited. Tell us a little about yourself and our admissions team will reach out personally with the next class dates and program details.</p>
         <ul class="lead-gen-v2-bullets">
           <li><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg> Live, instructor-led 18-week program</li>
-          <li><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg> Small classes (8–15 students)</li>
+          <li><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg> Small classes (8 to 15 students)</li>
           <li><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg> Personal longevity protocol included</li>
           <li><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg> 1:1 admissions consultation</li>
         </ul>
@@ -10496,7 +10481,7 @@ body section.value{background:linear-gradient(180deg,#F4F8FF 0%,#EAF2FF 100%)!im
 <div class="lg-or" aria-hidden="true"><span>or</span></div>
           <a href="#" class="lg-buy">
             <span class="lg-buy-main"><svg viewBox="0 0 24 24" width="21" height="21" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="21" r="1.6"/><circle cx="19" cy="21" r="1.6"/><path d="M2.5 3h3l2.6 12.5a2 2 0 0 0 2 1.5h7.9a2 2 0 0 0 2-1.6L21.5 8H6.2"/></svg> Enroll Online Now &middot; $79 month 1/mo</span>
-            <span class="lg-buy-sub">Register &rarr; Choose your dates &rarr; Pay online &middot; done in 2 minutes</span>
+            <span class="lg-buy-sub">Register, choose your dates, pay online. Done in 2 minutes.</span>
           </a>
         </form>
         <div class="form-thankyou" id="leadGenV2ThankYou" role="status" aria-live="polite">
@@ -10518,7 +10503,7 @@ body section.value{background:linear-gradient(180deg,#F4F8FF 0%,#EAF2FF 100%)!im
   <div class="container">
     <div class="bioquiz-card reveal">
       <div class="bioquiz-text">
-        <span class="bioquiz-eyebrow">Free · 2 Minutes</span>
+        <span class="bioquiz-eyebrow">Free, 2 minutes</span>
         <h2 class="bioquiz-title">What's your true<br>biological age?</h2>
         <p class="bioquiz-body">Your birthday is one number. Your body tells a different story. Answer twelve questions about your sleep, energy, and habits, get an estimate of how your biology compares to your calendar age.</p>
         <a href="https://www.longevitylifeacademy.com/biological-age-light.html" class="bioquiz-cta">
@@ -10538,7 +10523,7 @@ body section.value{background:linear-gradient(180deg,#F4F8FF 0%,#EAF2FF 100%)!im
 <section class="testimonials">
   <div class="container">
     <div class="testimonials-header reveal">
-      <span class="eyebrow">Student Voices</span>
+      <span class="eyebrow">Student voices</span>
       <h2 class="section-title">What our<br>students say.</h2>
     </div>
     <div class="testimonials-grid">
@@ -10922,12 +10907,12 @@ function toggleCurriculum(btn) {
   const detailLink = document.getElementById('hexDetailLink');
 
   const data = [
-    { tag: 'Metabolic Health', title: 'Read your own blood work.', desc: 'Learn to interpret glucose, lipids, and inflammation markers. Understand what your labs actually mean \u2014 and which numbers matter most for longevity.', link: 'topics/metabolic-health-blood-sugar.html' },
-    { tag: 'Exercise & Movement', title: 'Train for the next forty years.', desc: 'Strength, steady cardio, stability, and the cardio fitness \u2014 the exercise patterns that extend a strong life, not just fitness.', link: 'topics/exercise-movement.html' },
+    { tag: 'Metabolic Health', title: 'Read your own blood work.', desc: 'Learn to interpret glucose, lipids, and inflammation markers. Understand what your labs actually mean, and which numbers matter most for longevity.', link: 'topics/metabolic-health-blood-sugar.html' },
+    { tag: 'Exercise & Movement', title: 'Train for the next forty years.', desc: 'Strength, steady cardio, stability, and the cardio fitness, the exercise patterns that extend a strong life, not just fitness.', link: 'topics/exercise-movement.html' },
     { tag: 'Sleep & Circadian', title: 'Circadian rhythm, decoded.', desc: 'How sleep architecture, light exposure, and timing reshape your recovery, cognition, and hormone regulation.', link: 'topics/sleep-circadian-health.html' },
     { tag: 'Stress & Emotions', title: 'Regulate the cortisol loop.', desc: 'Chronic stress accelerates biological aging. Learn evidence-based techniques to interrupt the cycle and build resilience.', link: 'topics/mental-emotional-health.html' },
-    { tag: 'Supplements & Tools', title: 'Evidence over hype.', desc: 'Cut through marketing noise. Learn which supplements have real data behind them \u2014 and which are just packaging.', link: 'topics/supplements-health-tech.html' },
-    { tag: 'Protocols & Habits', title: 'Build a blueprint that sticks.', desc: 'Design a personalized longevity protocol grounded in your own data, habits, and goals \u2014 tested and peer-reviewed by your class.', link: 'topics/protocols-habits.html' }
+    { tag: 'Supplements & Tools', title: 'Evidence over hype.', desc: 'Cut through marketing noise. Learn which supplements have real data behind them, and which are just packaging.', link: 'topics/supplements-health-tech.html' },
+    { tag: 'Protocols & Habits', title: 'Build a blueprint that sticks.', desc: 'Design a personalized longevity protocol grounded in your own data, habits, and goals, tested and peer-reviewed by your class.', link: 'topics/protocols-habits.html' }
   ];
 
   const cx = 340, cy = 340, radius = 240;
@@ -11817,6 +11802,13 @@ a.lg-buy:hover{transform:translateY(-2px);box-shadow:0 18px 46px rgba(16,185,129
   function go(){ try{ if(v.preload==='none') v.preload='auto'; var p=v.play(); if(p&&p.catch) p.catch(function(){}); }catch(e){} }
   if(document.readyState!=='loading') go(); else document.addEventListener('DOMContentLoaded',go);
   addEventListener('load',go); addEventListener('touchstart',go,{once:true,passive:true}); addEventListener('scroll',go,{once:true,passive:true});
+})();
+
+(function(){
+  /* CGM fold: draw the glowing curves when the fold comes into view */
+  var f=document.getElementById('cgm'); if(!f||!('IntersectionObserver' in window)) return;
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){f.classList.remove('cgm7-anim');void f.offsetWidth;f.classList.add('cgm7-anim');io.disconnect();}});},{threshold:.25});
+  io.observe(f);
 })();
 
 </script>

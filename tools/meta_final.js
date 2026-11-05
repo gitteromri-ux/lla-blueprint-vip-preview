@@ -21,3 +21,10 @@
   if(document.readyState!=='loading') go(); else document.addEventListener('DOMContentLoaded',go);
   addEventListener('load',go); addEventListener('touchstart',go,{once:true,passive:true}); addEventListener('scroll',go,{once:true,passive:true});
 })();
+
+(function(){
+  /* CGM fold: draw the glowing curves when the fold comes into view */
+  var f=document.getElementById('cgm'); if(!f||!('IntersectionObserver' in window)) return;
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){f.classList.remove('cgm7-anim');void f.offsetWidth;f.classList.add('cgm7-anim');io.disconnect();}});},{threshold:.25});
+  io.observe(f);
+})();
