@@ -84,3 +84,13 @@ html.mf body .mfp-inc{font-size:34px!important}
   html.mf body .mfp-inc{font-size:32px!important}
 }
 @media (max-width:760px){html.mf body .mfp-top{flex-wrap:wrap!important;justify-content:flex-start!important;gap:4px 14px!important}}
+/* Round 17 (Omri): new order; the Julie bonus row in lit blue glass with a light sweep */
+html.mf body ul.mfp-list li.mfp-bonus{position:relative;overflow:hidden;margin:10px -12px;padding:18px 16px 18px 12px!important;border:1px solid rgba(160,205,255,.65)!important;border-radius:18px;color:#FFFFFF!important;background:radial-gradient(70% 80% at 90% 0%,rgba(255,255,255,.32),transparent 60%),linear-gradient(160deg,#2C7BFF 0%,#0A4FD8 100%);box-shadow:0 18px 36px -16px rgba(0,60,200,.9),0 0 36px -6px rgba(0,110,255,.75),inset 0 1px 0 rgba(255,255,255,.45)}
+html.mf body ul.mfp-list li.mfp-bonus::before{color:#CFE8FF!important;-webkit-text-fill-color:#CFE8FF!important;position:relative;z-index:1}
+html.mf body ul.mfp-list li.mfp-bonus span{position:relative;z-index:1;color:#FFFFFF!important}
+html.mf body ul.mfp-list li.mfp-bonus b{display:block;margin:0 0 4px;font:italic 500 28px/1.1 'Playfair Display',Georgia,serif;color:#CFE8FF;text-shadow:0 0 16px rgba(160,210,255,.8)}
+html.mf body ul.mfp-list li.mfp-bonus::after{content:'';position:absolute;top:0;bottom:0;left:-60%;width:45%;background:linear-gradient(105deg,transparent 0%,rgba(255,255,255,.38) 50%,transparent 100%);transform:skewX(-12deg);animation:mfpShine 3.6s ease-in-out infinite;pointer-events:none}
+@keyframes mfpShine{0%{left:-60%}55%,100%{left:130%}}
+@media (prefers-reduced-motion:reduce){html.mf body ul.mfp-list li.mfp-bonus::after{animation:none;display:none}}
+html.mf body ul.mfp-list li.mfp-bonus + li{border-top:0}
+@media (max-width:760px){html.mf body ul.mfp-list li.mfp-bonus{margin:10px -8px;padding:16px 12px 16px 8px!important}html.mf body ul.mfp-list li.mfp-bonus b{font-size:26px}}
