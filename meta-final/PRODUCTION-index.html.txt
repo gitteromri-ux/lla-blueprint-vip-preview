@@ -9680,6 +9680,15 @@ html.mf body ul.mfp-list li span,html.mf body #cgm .cgm8-panel ul li span{font:i
   html.mf body ul.mfp-list li,html.mf body #cgm .cgm8-panel ul li{font-size:18.5px!important;grid-template-columns:36px minmax(0,1fr)!important}
   html.mf body ul.mfp-list li::before,html.mf body #cgm .cgm8-panel ul li::before{font-size:24px!important}
 }
+/* Round 15 (Omri: larger): list text and numerals larger in the pricing and Lingo cards */
+html.mf body ul.mfp-list li,html.mf body #cgm .cgm8-panel ul li{font-size:22px!important;line-height:1.42!important;grid-template-columns:44px minmax(0,1fr)!important}
+html.mf body ul.mfp-list li::before,html.mf body #cgm .cgm8-panel ul li::before{font-size:32px!important}
+html.mf body .mfp-inc,html.mf body #cgm .cgm8-panel h3{font-size:30px!important}
+@media (max-width:760px){
+  html.mf body ul.mfp-list li,html.mf body #cgm .cgm8-panel ul li{font-size:21px!important;grid-template-columns:40px minmax(0,1fr)!important;gap:10px!important}
+  html.mf body ul.mfp-list li::before,html.mf body #cgm .cgm8-panel ul li::before{font-size:30px!important}
+  html.mf body .mfp-inc,html.mf body #cgm .cgm8-panel h3{font-size:29px!important}
+}
 
 /* Round 12 (Omri): pricing card in the masterclass card language. White glass card, blue halo, left-aligned, Playfair title and price, label rows instead of check bullets */
 html.mf body section.mfp{position:relative;padding:72px 0 64px;background:radial-gradient(60% 45% at 50% 38%,rgba(0,110,255,.30),transparent 70%),radial-gradient(40% 30% at 85% 90%,rgba(59,167,255,.14),transparent 70%),linear-gradient(180deg,#040B1E 0%,#071433 100%)}
