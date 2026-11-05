@@ -998,3 +998,104 @@ html.mf body section.final-cta .final-cta-overlay{background:linear-gradient(180
   html.mf body #julie .jb-photo img{height:220px!important}
 }
 @media (max-width:900px){html.mf body #teachers .teacher-card-live-photo,html.mf body #teachers .teacher-card-live-photo--square{height:170px!important}html.mf body .skills .skill-card .skill-bg{height:180px!important}}
+/* ===== Round 27 (Omri: short folds; Julie half size; teachers short; Lingo 3D with less text; includes and Six Systems colouring; form at the end and smaller) ===== */
+/* Julie: one row, who she is and the masterclass included */
+html.mf body #julie.mf-julie{padding:56px 0 52px!important}
+html.mf body #julie .mf-head{margin-bottom:26px!important}
+html.mf body #julie .jb-incl{margin:12px 0 16px!important;padding:12px 14px!important;border:1.5px solid #9AD8FF;border-radius:14px;background:rgba(5,13,36,.45);box-shadow:0 0 6px rgba(154,216,255,.9),0 0 22px rgba(59,167,255,.6),inset 0 0 14px rgba(124,200,255,.25);font:600 19px/1.4 Inter,sans-serif!important;color:#FFFFFF!important}
+html.mf body #julie .jb-quote{display:none!important}
+@media (min-width:1025px){
+  html.mf body #julie .jbento{display:grid!important;grid-template-columns:1fr 1fr 1.3fr!important;grid-template-rows:auto!important;grid-auto-rows:auto!important;gap:18px!important;align-items:stretch!important}
+  html.mf body #julie .jbento > .jb{grid-column:auto!important;grid-row:auto!important;min-height:0!important}
+  html.mf body #julie .jb-photo img{height:300px!important;flex:none!important;aspect-ratio:auto!important;object-fit:cover!important;object-position:50% 20%!important}
+  html.mf body #julie .jb-wide{display:flex!important;flex-direction:column!important}
+}
+@media (max-width:900px){html.mf body #julie .jb-photo img{height:230px!important;object-position:50% 20%!important}}
+/* Instructors: short fold. Desktop one row of five; phones a slider of short cards */
+html.mf body #teachers.instructors,html.mf body section.instructors{padding:56px 0 48px!important}
+html.mf body #teachers .teachers-row2{display:contents!important}
+@media (min-width:1025px){
+  html.mf body #teachers .teachers-grid-live{display:grid!important;grid-template-columns:repeat(5,1fr)!important;gap:16px!important;align-items:stretch!important}
+  html.mf body #teachers .teacher-card-live{padding:18px 16px 20px!important;transform:none!important}
+  html.mf body #teachers .teacher-card-live-photo,html.mf body #teachers .teacher-card-live-photo--square{width:110px!important;height:110px!important;border-radius:50%!important;overflow:hidden!important;margin:0 auto 12px!important}
+  html.mf body #teachers .teacher-card-live-photo img{width:100%!important;height:100%!important;object-fit:cover!important}
+  html.mf body #teachers .teacher-card-live-body{text-align:center!important}
+  html.mf body #teachers .teacher-card-live-bio{font-size:17px!important}
+}
+@media (max-width:900px){
+  html.mf body #teachers .section-subtitle{display:none!important}
+  html.mf body #teachers .teachers-grid-live{display:flex!important;overflow-x:auto!important;scroll-snap-type:x mandatory;gap:12px!important;padding:6px 2px 18px!important;-webkit-overflow-scrolling:touch}
+  html.mf body #teachers .teacher-card-live{flex:0 0 82vw!important;width:82vw!important;min-width:82vw!important;max-width:82vw!important;scroll-snap-align:start;display:grid!important;grid-template-columns:84px minmax(0,1fr)!important;column-gap:14px!important;align-items:center!important;padding:16px!important;transform:none!important}
+  html.mf body #teachers .teacher-card-live-photo,html.mf body #teachers .teacher-card-live-photo--square{grid-row:1;width:84px!important;height:84px!important;border-radius:50%!important;overflow:hidden!important;margin:0!important}
+  html.mf body #teachers .teacher-card-live-photo img{width:100%!important;height:100%!important;object-fit:cover!important;object-position:50% 20%!important}
+  html.mf body #teachers .teacher-card-live-body{display:contents!important}
+  html.mf body #teachers .teacher-card-live-name{grid-column:2;grid-row:1;align-self:start;margin:4px 0 0!important;font-size:21px!important}
+  html.mf body #teachers .teacher-card-live-role{grid-column:2;grid-row:1;align-self:end;margin:0 0 6px!important}
+  html.mf body #teachers .teacher-card-live-bio{grid-column:1/-1;margin:12px 0 0!important;font-size:18px!important}
+}
+/* Lingo: deck-style neon glass tiles instead of the white list */
+html.mf body #cgm .cgm8-tiles{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+html.mf body #cgm .cgm8-tile{position:relative;padding:20px 18px 18px;border-radius:20px;background:linear-gradient(160deg,rgba(255,255,255,.11) 0%,rgba(255,255,255,.03) 100%);border:1px solid rgba(160,210,255,.35);box-shadow:0 24px 50px -24px rgba(0,20,70,.9),0 0 34px -10px rgba(0,110,255,.55),inset 0 1px 0 rgba(255,255,255,.25);overflow:hidden}
+html.mf body #cgm .cgm8-tile::before{content:'';position:absolute;left:18px;right:18px;top:0;height:2px;border-radius:2px;background:linear-gradient(90deg,transparent,#9AD8FF,transparent);box-shadow:0 0 12px rgba(154,216,255,.9)}
+html.mf body #cgm .cgm8-tile b{display:block;font:italic 500 32px/1.05 'Playfair Display',Georgia,serif;background:linear-gradient(180deg,#E3F2FF 0%,#7CC0FF 100%);-webkit-background-clip:text;background-clip:text;color:transparent;text-shadow:none;filter:drop-shadow(0 0 10px rgba(124,192,255,.45))}
+html.mf body #cgm .cgm8-tile span{display:block;margin-top:8px;font:500 18px/1.35 Inter,sans-serif;color:#FFFFFF}
+html.mf body #cgm .cgm8-wrap{grid-template-columns:300px minmax(0,1fr)!important}
+@media (max-width:900px){
+  html.mf body #cgm .cgm8-wrap{grid-template-columns:minmax(0,1fr)!important}
+  html.mf body #cgm .cgm8-tiles{gap:10px}
+  html.mf body #cgm .cgm8-tile{padding:16px 14px 14px}
+  html.mf body #cgm .cgm8-tile b{font-size:26px}
+  html.mf body #cgm .cgm8-tile span{font-size:17px}
+}
+/* What the course includes: the masterclass card language, navy fold, white and blue glass, large text */
+html.mf body section.nov-incl{background:radial-gradient(55% 45% at 70% 30%,rgba(0,110,255,.28),transparent 70%),linear-gradient(180deg,#040B1E 0%,#071433 100%)!important}
+html.mf body section.nov-incl :is(.section-title){color:#FFFFFF!important}
+html.mf body section.nov-incl .section-title :is(span,em){background:linear-gradient(180deg,#CFE8FF 0%,#7CC0FF 100%)!important;-webkit-background-clip:text!important;background-clip:text!important;color:transparent!important;-webkit-text-fill-color:transparent!important}
+html.mf body section.nov-incl .eyebrow{color:#7CC0FF!important;-webkit-text-fill-color:#7CC0FF!important}
+html.mf body section.nov-incl .nov-incl-card{border-radius:22px!important;padding:24px 22px!important}
+html.mf body section.nov-incl .nov-incl-card:nth-child(odd){background:linear-gradient(165deg,#FFFFFF 0%,#F4F8FF 55%,#E4EFFF 100%)!important;border:1px solid rgba(255,255,255,.85)!important;box-shadow:0 0 0 1px rgba(0,110,255,.18),0 30px 60px -30px rgba(0,20,70,.9),0 0 50px -14px rgba(0,110,255,.55)!important}
+html.mf body section.nov-incl .nov-incl-card:nth-child(even){background:radial-gradient(70% 55% at 88% 8%,rgba(255,255,255,.28),transparent 62%),linear-gradient(160deg,#2C7BFF 0%,#0A4FD8 100%)!important;border:1px solid rgba(160,205,255,.55)!important;box-shadow:0 30px 60px -30px rgba(0,20,70,.9),0 0 50px -12px rgba(0,110,255,.7)!important}
+html.mf body section.nov-incl .nov-incl-card:nth-child(odd) :is(h3,.n){color:#0A1E3A!important;-webkit-text-fill-color:#0A1E3A!important}
+html.mf body section.nov-incl .nov-incl-card:nth-child(odd) .n{color:#006EFF!important;-webkit-text-fill-color:#006EFF!important}
+html.mf body section.nov-incl .nov-incl-card:nth-child(odd) p{color:#22385E!important}
+html.mf body section.nov-incl .nov-incl-card:nth-child(odd) .tag{color:#006EFF!important}
+html.mf body section.nov-incl .nov-incl-card:nth-child(even) :is(h3,p,.tag){color:#FFFFFF!important;-webkit-text-fill-color:#FFFFFF!important}
+html.mf body section.nov-incl .nov-incl-card:nth-child(even) .n{color:#CFE8FF!important;-webkit-text-fill-color:#CFE8FF!important}
+html.mf body section.nov-incl .nov-incl-card h3{font:700 23px/1.25 Inter,sans-serif!important}
+html.mf body section.nov-incl .nov-incl-card p{font:500 20px/1.45 Inter,sans-serif!important}
+html.mf body section.nov-incl .nov-incl-card .tag{font:700 17px/1 Inter,sans-serif!important;background:none!important;padding:0!important}
+html.mf body section.nov-incl .nov-incl-card::before,html.mf body section.nov-incl .nov-incl-card::after{display:none!important}
+/* Six Systems: one clean language. Navy glass tiles with light blue lines, white glass detail card */
+html.mf body section.deepdive .hex-node,html.mf body section.deepdive .hex-node:is([data-hex="0"],[data-hex="1"],[data-hex="2"],[data-hex="3"],[data-hex="4"],[data-hex="5"]){background:linear-gradient(160deg,rgba(255,255,255,.10),rgba(255,255,255,.03))!important;border:1px solid rgba(160,210,255,.45)!important;box-shadow:0 0 22px -6px rgba(0,110,255,.55),inset 0 1px 0 rgba(255,255,255,.2)!important}
+html.mf body section.deepdive .hex-node.active,html.mf body section.deepdive .hex-node.is-active,html.mf body section.deepdive .hex-node[aria-selected="true"]{background:linear-gradient(160deg,#2C7BFF,#0A4FD8)!important;border-color:#9AD8FF!important;box-shadow:0 0 8px rgba(154,216,255,.9),0 0 30px rgba(0,110,255,.7)!important}
+html.mf body section.deepdive .hex-node .hex-node-icon{background:none!important;border:0!important;color:#BFE2FF!important}
+html.mf body section.deepdive .hex-node-label{color:#FFFFFF!important}
+html.mf body section.deepdive #hexDetail,html.mf body section.deepdive .hex-detail{background:linear-gradient(165deg,#FFFFFF 0%,#F4F8FF 55%,#E4EFFF 100%)!important;border:1px solid rgba(255,255,255,.85)!important;box-shadow:0 0 0 1px rgba(0,110,255,.18),0 34px 70px -32px rgba(0,20,70,.9),0 0 60px -14px rgba(0,110,255,.6)!important;-webkit-backdrop-filter:none!important;backdrop-filter:none!important}
+html.mf body section.deepdive :is(#hexDetailTitle,.hex-detail-title){color:#0A1E3A!important;-webkit-text-fill-color:#0A1E3A!important}
+html.mf body section.deepdive :is(#hexDetailTag,.hex-detail-tag){color:#006EFF!important;-webkit-text-fill-color:#006EFF!important}
+/* Form near the end, much shorter on phones */
+@media (max-width:900px){
+  html.mf body #lead-gen .lead-gen-v2-bullets,html.mf body #lead-gen .lead-gen-v2-sub,html.mf body #lead-gen .lg-wa,html.mf body #lead-gen .et-bump-btn,html.mf body #lead-gen .bump-whatsapp{display:none!important}
+  html.mf body section.lead-gen{padding:44px 0 40px!important}
+  html.mf body #lead-gen .lead-gen-v2-form{padding:22px 18px!important}
+  html.mf body #lead-gen .lead-gen-v2-form label{margin-bottom:4px!important}
+  html.mf body #lead-gen .lead-gen-v2-form :is(input,select){height:50px!important;margin-bottom:12px!important}
+}
+/* Round 27b: fixes after the check */
+html.mf body #julie .jb-wide{display:flex!important;flex-direction:column!important}
+html.mf body #julie .jb-wide video{position:relative!important;inset:auto!important;width:100%!important;height:220px!important;flex:none!important;object-fit:cover!important}
+html.mf body #julie .jb-wide .jb-wide-body{position:relative!important;inset:auto!important}
+@media (max-width:900px){
+  html.mf body #julie .jb-photo img{height:190px!important}
+  html.mf body #julie .jb-photo .jb-kicker,html.mf body #julie .jb-photo .jb-chips{display:none!important}
+  html.mf body #julie .jb-wide video{height:170px!important}
+  html.mf body #julie.mf-julie{padding:40px 0 36px!important}
+  html.mf body #teachers .teacher-card-live{grid-template-rows:auto auto auto!important}
+  html.mf body #teachers .teacher-card-live-photo,html.mf body #teachers .teacher-card-live-photo--square{grid-row:1 / span 2!important}
+  html.mf body #teachers .teacher-card-live-name{grid-row:1!important;align-self:end!important;margin:0!important;line-height:1.15!important}
+  html.mf body #teachers .teacher-card-live-role{grid-row:2!important;align-self:start!important;margin:4px 0 0!important}
+  html.mf body #teachers .teacher-card-live-bio{grid-row:3!important}
+}
+@media (min-width:1025px){html.mf body #teachers .teacher-card-live-bio{display:none!important}html.mf body #teachers .section-subtitle{max-width:760px;margin-left:auto;margin-right:auto}}
+html.mf body #julie .jb-wide video{min-height:0!important;max-height:240px!important}
+@media (max-width:900px){html.mf body #julie .mf-head .section-subtitle{display:none!important}html.mf body #julie .mf-head{margin-bottom:18px!important}}
