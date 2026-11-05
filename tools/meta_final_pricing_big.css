@@ -185,3 +185,14 @@ html.mf body .mfp-lock svg{width:18px;height:18px;fill:none;stroke:#0A1E3A;strok
 html.mf body .mfp-pay{display:inline-flex;align-items:center;gap:6px}
 html.mf body .mfp-pay img{height:26px;width:auto;display:block}
 html.mf body .mfp-card .pk-foot{margin:10px 0 10px!important}
+/* Round 29 (Omri: the pricing boxes need the VIP design): each box its own brand colour, depth and a neon edge */
+html.mf body .mfp-tiles{gap:10px!important;border-top:0!important;margin-top:8px!important}
+html.mf body .mfp-t,html.mf body .mfp-t:nth-child(odd):not(.mfp-twide),html.mf body .mfp-t:nth-child(even){position:relative;padding:16px 14px 16px!important;border-radius:18px!important;border:1.5px solid rgba(154,216,255,.75)!important;border-right:1.5px solid rgba(154,216,255,.75)!important;border-bottom:1.5px solid rgba(154,216,255,.75)!important;box-shadow:0 14px 28px -14px rgba(0,30,100,.9),0 0 18px -4px rgba(59,167,255,.65),inset 0 1px 0 rgba(255,255,255,.4)!important;overflow:hidden}
+html.mf body .mfp-t::after{content:'';position:absolute;left:-30%;top:-70%;width:90%;height:130%;background:radial-gradient(closest-side,rgba(255,255,255,.28),transparent);pointer-events:none}
+html.mf body .mfp-t:nth-child(1){background:linear-gradient(160deg,#2C7BFF 0%,#0A4FD8 100%)!important}
+html.mf body .mfp-t:nth-child(2){background:linear-gradient(160deg,#16408F 0%,#071A44 100%)!important}
+html.mf body .mfp-t:nth-child(3){background:linear-gradient(160deg,#4BB0FF 0%,#1A6BE8 100%)!important}
+html.mf body .mfp-t:nth-child(4){background:linear-gradient(160deg,#1B4FD8 0%,#0B2A6B 100%)!important}
+html.mf body .mfp-t:not(.mfp-tbonus) b,html.mf body .mfp-t:not(.mfp-tbonus):nth-child(2) b{position:relative;z-index:1;color:#FFFFFF!important;-webkit-text-fill-color:#FFFFFF!important;text-shadow:0 0 14px rgba(160,210,255,.45)!important}
+html.mf body .mfp-t:not(.mfp-tbonus) span{position:relative;z-index:1;color:#EAF4FF!important}
+html.mf body .mfp-tbonus.mfp-twide{margin:4px 0 0!important}
