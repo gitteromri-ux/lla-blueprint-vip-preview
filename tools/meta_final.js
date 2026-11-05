@@ -21,7 +21,7 @@
 })();
 (function(){
   /* the hero cells motion always plays (muted, inline), on phones too */
-  var v=document.querySelector('#hero .hero-sales-video'); if(!v) return;
+  var v=document.querySelector('#hero video.mf-cells'); if(!v) return;
   v.muted=true; v.setAttribute('muted',''); v.setAttribute('playsinline',''); v.loop=true;
   function go(){ try{ if(v.preload==='none') v.preload='auto'; var p=v.play(); if(p&&p.catch) p.catch(function(){}); }catch(e){} }
   if(document.readyState!=='loading') go(); else document.addEventListener('DOMContentLoaded',go);

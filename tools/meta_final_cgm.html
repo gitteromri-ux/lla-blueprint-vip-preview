@@ -1,18 +1,46 @@
-<section class="cgm4" id="cgm">
-  <div class="cgm4-wrap">
-    <div class="cgm4-photo">
-      <img src="mfasset:cgm-man.jpg" alt="A student wearing the Abbott Lingo sensor on his arm, reading his glucose on his phone" loading="lazy">
-      <div class="cgm4-callout"><i></i><b>Your CGM</b><span>live glucose sensor</span></div>
+<section class="cgm5" id="cgm">
+  <div class="cgm5-light" aria-hidden="true"></div>
+  <div class="container cgm5-wrap">
+    <div class="cgm5-stage" aria-hidden="true">
+      <div class="cgm5-floor"></div>
+      <div class="cgm5-phone">
+        <div class="cgm5-screen">
+          <div class="cgm5-status"><span>9:41</span><i></i></div>
+          <div class="cgm5-head"><span>Glucose</span><em><i></i>In range</em></div>
+          <div class="cgm5-value"><b>98</b><small>mg/dL</small></div>
+          <svg class="cgm5-chart" viewBox="0 0 300 150" preserveAspectRatio="none">
+            <defs>
+              <linearGradient id="cgm5stroke" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#2EC4B6"/><stop offset=".55" stop-color="#3D7BFF"/><stop offset="1" stop-color="#8A6CFF"/></linearGradient>
+              <linearGradient id="cgm5fill" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#3D7BFF" stop-opacity=".45"/><stop offset="1" stop-color="#3D7BFF" stop-opacity="0"/></linearGradient>
+              <filter id="cgm5glow" x="-20%" y="-50%" width="140%" height="200%"><feGaussianBlur stdDeviation="3.2" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+            </defs>
+            <rect x="0" y="48" width="300" height="56" fill="rgba(46,196,182,.12)"/>
+            <line x1="0" y1="48" x2="300" y2="48" stroke="rgba(46,196,182,.45)" stroke-dasharray="3 5"/>
+            <line x1="0" y1="104" x2="300" y2="104" stroke="rgba(46,196,182,.45)" stroke-dasharray="3 5"/>
+            <path d="M0,90 C26,88 44,84 64,82 C84,80 98,78 114,70 C128,62 136,32 152,26 C168,20 178,46 192,64 C206,82 216,90 234,88 C252,86 264,76 278,74 C288,73 295,75 300,76 L300,150 L0,150 Z" fill="url(#cgm5fill)"/>
+            <path class="cgm5-line" pathLength="1" d="M0,90 C26,88 44,84 64,82 C84,80 98,78 114,70 C128,62 136,32 152,26 C168,20 178,46 192,64 C206,82 216,90 234,88 C252,86 264,76 278,74 C288,73 295,75 300,76" fill="none" stroke="url(#cgm5stroke)" stroke-width="3.6" stroke-linecap="round" filter="url(#cgm5glow)"/>
+          </svg>
+          <span class="cgm5-dot"></span>
+          <div class="cgm5-axis"><span>6a</span><span>9a</span><span>12p</span><span>3p</span><span>6p</span></div>
+          <div class="cgm5-tabs"><i></i><i class="on"></i><i></i></div>
+        </div>
+      </div>
+      <div class="cgm5-sensor">
+        <div class="cgm5-ring"></div>
+        <div class="cgm5-disc"><div class="cgm5-dome"></div></div>
+      </div>
     </div>
-    <div class="cgm4-copy">
-      <span class="cgm4-eyebrow">Included in your course</span>
-      <h2 class="cgm4-title">Free Abbott Lingo CGM, <em>shipped to your home.</em></h2>
-      <ul class="cgm4-facts">
-        <li><b>14 days</b><span>per Abbott Lingo biosensor. Water-resistant, painless to apply.</span></li>
-        <li><b>Live</b><span>glucose on your phone. Lingo app for iOS and Android.</span></li>
-        <li><b>Lesson 5</b><span>it arrives before you start reading your own data.</span></li>
+    <div class="cgm5-copy">
+      <span class="eyebrow">Included in Your Course</span>
+      <h2 class="section-title">Continuous Glucose Monitoring, <span>Included in Your Course</span></h2>
+      <p class="cgm5-lead">Every student receives an Abbott Lingo continuous glucose monitor plus full Lingo app access, included with the course. Track your body's real-time response to food, sleep, and movement.</p>
+      <ul class="cgm5-list">
+        <li>14-day Abbott Lingo biosensor, water-resistant, painless application</li>
+        <li>Full Lingo app access included, iOS and Android, Apple Health and Health Connect</li>
+        <li>One unit per student, shipped to U.S. addresses</li>
       </ul>
-      <p class="cgm4-fine">No prescription needed. For students 18+, not for insulin users, not for medical diagnosis.</p>
+      <p class="cgm5-fine">FSA/HSA prescription not needed. For students 18+. Not for insulin users. Not for medical diagnosis.</p>
+      <a class="cgm5-link" href="cgm.html">Learn more about the device <span aria-hidden="true">&rarr;</span></a>
     </div>
   </div>
 </section>

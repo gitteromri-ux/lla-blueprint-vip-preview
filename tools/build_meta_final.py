@@ -64,7 +64,7 @@ PRICING = open(os.path.join(HERE, 'meta_final_pricing.html'), encoding='utf-8').
 CGM = open(os.path.join(HERE, 'meta_final_cgm.html'), encoding='utf-8').read()
 
 ORDER = [  # Omri's review-file order (claude-selection.json); hero, pricing and CGM are replaced.
-    ('hero', '<section class="hero" id="hero">', DEV_HERO),
+    ('hero', '<section class="hero" id="hero">', None),
     ('topics', '<section class="topics">', None),
     ('syllabus', '<section class="curriculum" id="syllabus">', DEV_LEARN),
     ('pricing', '<section class="nov-offer" id="offer">', PRICING),
@@ -112,6 +112,13 @@ def common(s):
     s = re.sub(r'<div id="novStrip".*?</div>\s*', '', s, count=1, flags=re.S)  # promo strip out
     s = re.sub(r'<html\b([^>]*)>', lambda m: '<html' + (m.group(1).replace('class="', 'class="mf ') if 'class="' in m.group(1) else m.group(1) + ' class="mf"') + '>', s, count=1)
     s, stray = assemble(s)
+    a, b = bounds(s, '<section class="hero" id="hero">')
+    hero = s[a:b]
+    hero = must(hero, '<img src="assets/hero-cgm.jpg" alt="Continuous glucose monitor and personalized health protocol" class="hero-image" loading="eager" fetchpriority="high">',
+                '<video class="hero-image mf-cells" src="https://longevitylifeacademy.pages.dev/assets/cells-light.mp4" poster="https://longevitylifeacademy.pages.dev/assets/cells-poster.jpg" autoplay muted loop playsinline preload="auto" aria-hidden="true"></video>')
+    film = re.search(r'<figure class="lla-film">.*?</figure>', DEV_HERO, flags=re.S).group(0)
+    hero = hero[:hero.rfind('</section>')] + '<div class="mf-hero-film">' + film + '</div>\n</section>'
+    s = s[:a] + hero + s[b:]
     if stray:
         print('note: non-fold markup between folds kept after the folds:', stray[:200])
     # client logos: three more sets so the coloured logos run as a continuous band
@@ -143,7 +150,7 @@ def common(s):
     s = must(s, '<img src="assets/lla-logo-exact-transparent@2x.png?v=9" alt="Longevity Life Academy" class="nav-logo-img" width="1314" height="596">',
              '<img src="assets/lla-logo-no-tagline@2x.png" alt="Longevity Life Academy" class="nav-logo-img" width="1268" height="397">')
     s = re.sub(r'<title>.*?</title>', '<title>The Longevity Blueprint | November offer: $79 first month</title>', s, count=1, flags=re.S)
-    css = open(os.path.join(HERE, 'meta_final.css'), encoding='utf-8').read().replace('/*%%HERO_CSS%%*/', hero_css).replace('/*%%NEW_FOLDS%%*/', open(os.path.join(HERE, 'meta_final_newfolds.css'), encoding='utf-8').read()).replace('/*%%JULIE_CSS%%*/', open(os.path.join(HERE, 'masterclass_julie.css'), encoding='utf-8').read()).replace('/*%%BRAND%%*/', open(os.path.join(HERE, 'meta_final_brand.css'), encoding='utf-8').read()).replace('/*%%REFCOLOR%%*/', open(os.path.join(HERE, 'meta_final_ref.scoped.css'), encoding='utf-8').read())
+    css = open(os.path.join(HERE, 'meta_final.css'), encoding='utf-8').read().replace('/*%%HERO_CSS%%*/', '').replace('/*%%NEW_FOLDS%%*/', open(os.path.join(HERE, 'meta_final_newfolds.css'), encoding='utf-8').read()).replace('/*%%JULIE_CSS%%*/', open(os.path.join(HERE, 'masterclass_julie.css'), encoding='utf-8').read()).replace('/*%%BRAND%%*/', open(os.path.join(HERE, 'meta_final_fix.css'), encoding='utf-8').read())
     s = s.replace('</head>', '<style id="meta-final">\n' + css + '\n</style>\n</head>', 1)
     js = open(os.path.join(HERE, 'meta_final.js'), encoding='utf-8').read()
     s = s.replace('</body>', AUTOPLAY_JS + '\n<script>\n' + js + '\n</script>\n</body>', 1)
