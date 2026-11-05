@@ -50,7 +50,7 @@ assert 'mf-hero-sub' in DEV_HERO and 'Live It Well' in DEV_HERO
 a, b = bounds(dev, '<section class="curriculum pr-light lp-white lp-numbered is-light"')
 DEV_LEARN = dev[a:b]
 DEV_LEARN = DEV_LEARN.replace('<section class="curriculum pr-light lp-white lp-numbered is-light"', '<section class="curriculum mf-learn"', 1)
-PH = {'1': '#1F6BFF', '2': '#0FA58A', '3': '#F2662B', '4': '#7A4DFF'}
+PH = {'1': '#006EFF', '2': '#0A1E3A', '3': '#3BA7FF', '4': '#1B4FD8'}
 for k, c in PH.items():
     DEV_LEARN = DEV_LEARN.replace(f'data-phase-tab="{k}"', f'data-phase-tab="{k}" style="--ph:{c}"')
     DEV_LEARN = re.sub(r'(<div class="phase-block[^"]*" data-phase="' + k + r'")', r'\1 style="--ph:' + c + '"', DEV_LEARN)
