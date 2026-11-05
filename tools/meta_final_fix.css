@@ -1099,3 +1099,61 @@ html.mf body #julie .jb-wide .jb-wide-body{position:relative!important;inset:aut
 @media (min-width:1025px){html.mf body #teachers .teacher-card-live-bio{display:none!important}html.mf body #teachers .section-subtitle{max-width:760px;margin-left:auto;margin-right:auto}}
 html.mf body #julie .jb-wide video{min-height:0!important;max-height:240px!important}
 @media (max-width:900px){html.mf body #julie .mf-head .section-subtitle{display:none!important}html.mf body #julie .mf-head{margin-bottom:18px!important}}
+/* ===== Round 28 (Omri): larger headlines; Julie fold = the VIP Masterclass, every card visible, each animation's meaning in large type; Lingo = the real Abbott shot with three large lines; instructors one row slider with large faces ===== */
+html.mf body :is(.section-title,.how-v2-title,.about-mainhead,.lead-gen-v2-headline,.bioquiz-title,.final-cta-title){font-size:clamp(40px,4.3vw,62px)!important}
+@media (max-width:900px){html.mf body :is(.section-title,.how-v2-title,.about-mainhead,.lead-gen-v2-headline,.bioquiz-title,.final-cta-title){font-size:40px!important}}
+/* Julie */
+html.mf body #julie .mf-head .section-subtitle{display:block!important;font-size:22px!important;max-width:760px;margin:14px auto 0!important}
+html.mf body #julie .jgrid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:18px;margin-top:6px}
+html.mf body #julie .jg{position:relative;display:flex;flex-direction:column;border-radius:24px;overflow:hidden;background:linear-gradient(180deg,#0B1A3C 0%,#060F26 100%);border:1px solid rgba(160,210,255,.32);box-shadow:0 30px 60px -28px rgba(0,20,70,.9),0 0 46px -14px rgba(0,110,255,.6)}
+html.mf body #julie .jg img,html.mf body #julie .jg video{display:block;width:100%;height:240px;object-fit:cover}
+html.mf body #julie .jg-photo img{object-position:50% 30%}
+html.mf body #julie .jg-body{padding:20px 22px 24px}
+html.mf body #julie .jg-body h3{margin:0 0 8px;font:italic 500 30px/1.1 'Playfair Display',Georgia,serif;color:#FFFFFF}
+html.mf body #julie .jg-body b{display:block;margin:0 0 8px;font:italic 500 30px/1.12 'Playfair Display',Georgia,serif;background:linear-gradient(180deg,#E3F2FF 0%,#7CC0FF 100%);-webkit-background-clip:text;background-clip:text;color:transparent}
+html.mf body #julie .jg-body p{margin:0;font:500 19px/1.45 Inter,sans-serif;color:#FFFFFF}
+html.mf body #julie .jg-cta{display:flex;justify-content:center;margin-top:26px}
+@media (max-width:900px){
+  html.mf body #julie .jgrid{grid-template-columns:1fr 1fr;gap:10px}
+  html.mf body #julie .jg-photo{grid-column:1/-1;display:grid;grid-template-columns:42% minmax(0,1fr);align-items:center}
+  html.mf body #julie .jg-photo img{height:100%;min-height:200px}
+  html.mf body #julie .jg-body{padding:14px 14px 16px}
+  html.mf body #julie .jg-photo .jg-body h3{font-size:25px}
+  html.mf body #julie .jg-photo .jg-body p{font-size:18px}
+  html.mf body #julie .jg-vid video{height:110px}
+  html.mf body #julie .jg-vid .jg-body b{font-size:23px}
+  html.mf body #julie .jg-vid .jg-body p{font-size:17px}
+  html.mf body #julie .mf-head .section-subtitle{font-size:20px!important}
+}
+/* Lingo */
+html.mf body #cgm .cgm9{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:48px;align-items:center;max-width:1060px;margin:0 auto}
+html.mf body #cgm .cgm9-shot{margin:0;border-radius:28px;overflow:hidden;background:#FFFFFF;box-shadow:0 0 0 1px rgba(255,255,255,.85),0 46px 90px -34px rgba(0,20,70,.95),0 0 90px -10px rgba(0,110,255,.65)}
+html.mf body #cgm .cgm9-shot img{display:block;width:100%;height:auto}
+html.mf body #cgm .cgm9-list{list-style:none;margin:0;padding:0;counter-reset:c9}
+html.mf body #cgm .cgm9-list li{counter-increment:c9;display:grid;grid-template-columns:56px minmax(0,1fr);column-gap:14px;padding:22px 0;border-bottom:1px solid rgba(160,210,255,.22)}
+html.mf body #cgm .cgm9-list li:last-child{border-bottom:0}
+html.mf body #cgm .cgm9-list li::before{content:counter(c9,decimal-leading-zero);grid-row:1/3;font:italic 400 40px/1 'Playfair Display',Georgia,serif;color:#7CC0FF;text-shadow:0 0 16px rgba(124,192,255,.6)}
+html.mf body #cgm .cgm9-list b{font:600 26px/1.2 Inter,sans-serif;color:#FFFFFF}
+html.mf body #cgm .cgm9-list span{margin-top:6px;font:500 19px/1.4 Inter,sans-serif;color:#CFE8FF}
+@media (max-width:900px){
+  html.mf body #cgm .cgm9{grid-template-columns:minmax(0,1fr);gap:18px}
+  html.mf body #cgm .cgm9-shot{max-width:320px;margin:0 auto;border-radius:22px}
+  html.mf body #cgm .cgm9-list li{grid-template-columns:46px minmax(0,1fr);padding:14px 0}
+  html.mf body #cgm .cgm9-list li::before{font-size:32px}
+  html.mf body #cgm .cgm9-list b{font-size:22px}
+  html.mf body #cgm .cgm9-list span{font-size:18px}
+}
+/* Instructors: one row slider, large faces, room for the text (desktop and phones) */
+html.mf body #teachers .teachers-grid-live{display:flex!important;flex-wrap:nowrap!important;overflow-x:auto!important;scroll-snap-type:x mandatory;gap:18px!important;padding:8px 4px 22px!important;-webkit-overflow-scrolling:touch;grid-template-columns:none!important}
+html.mf body #teachers .teacher-card-live{flex:0 0 300px!important;width:300px!important;min-width:300px!important;max-width:300px!important;display:flex!important;flex-direction:column!important;scroll-snap-align:start;padding:16px 16px 20px!important;transform:none!important;grid-template-columns:none!important}
+html.mf body #teachers .teacher-card-live-photo,html.mf body #teachers .teacher-card-live-photo--square{width:100%!important;height:300px!important;border-radius:18px!important;overflow:hidden!important;margin:0 0 14px!important;grid-row:auto!important}
+html.mf body #teachers .teacher-card-live-photo img{width:100%!important;height:100%!important;object-fit:cover!important;object-position:50% 22%!important}
+html.mf body #teachers .teacher-card-live-body{display:block!important;text-align:left!important}
+html.mf body #teachers .teacher-card-live-name{font-size:24px!important;margin:0 0 4px!important;grid-row:auto!important;grid-column:auto!important}
+html.mf body #teachers .teacher-card-live-role{display:block!important;font-size:17px!important;margin:0 0 10px!important;grid-row:auto!important;grid-column:auto!important}
+html.mf body #teachers .teacher-card-live-bio{display:block!important;font-size:18px!important;line-height:1.45!important;margin:0!important;grid-row:auto!important;grid-column:auto!important}
+@media (min-width:1025px){html.mf body #teachers .teachers-grid-live{justify-content:flex-start}}
+@media (max-width:900px){
+  html.mf body #teachers .teacher-card-live{flex:0 0 80vw!important;width:80vw!important;min-width:80vw!important;max-width:80vw!important}
+  html.mf body #teachers .teacher-card-live-photo,html.mf body #teachers .teacher-card-live-photo--square{height:270px!important}
+}
