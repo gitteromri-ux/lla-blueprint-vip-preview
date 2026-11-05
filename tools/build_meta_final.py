@@ -71,16 +71,20 @@ ORDER = [  # Omri's review-file order (claude-selection.json); hero, pricing and
     ('julie', '<section class="nov-vip" id="vip">', JULIE),
     ('included', '<section class="nov-incl" id="included">', None),
     ('cgm', '<section class="cgm-fold" id="cgm">', CGM),
-    ('news', '<section class="skills" id="skills">', None),
-    ('form', '<section class="lead-gen lead-gen-v2" id="lead-gen">', None),
     ('about', '<section class="about" id="about">', None),
     ('trust', '<section class="trust-strip"', None),
     ('teachers', '<section class="instructors" id="teachers">', None),
+    ('how', '<section class="how-v2" id="how">', None),
+    ('news', '<section class="skills" id="skills">', None),
+    ('why', '<section class="value">', None),
+    ('systems', '<section class="deepdive">', None),
+    ('form', '<section class="lead-gen lead-gen-v2" id="lead-gen">', None),
+    ('quiz', '<section class="bioquiz">', None),
     ('reviews', '<section class="testimonials">', None),
     ('faq', '<section class="faq" id="faq">', None),
     ('final', '<section class="final-cta" id="apply">', None),
 ]
-DROPPED = ['<section class="deepdive">', '<section class="bioquiz">', '<section class="how-v2" id="how">', '<section class="value">']
+DROPPED = []
 
 
 def assemble(s):
@@ -117,6 +121,8 @@ def common(s):
     hero = must(hero, '<img src="assets/hero-cgm.jpg" alt="Continuous glucose monitor and personalized health protocol" class="hero-image" loading="eager" fetchpriority="high">',
                 '<video class="hero-image mf-cells" src="https://longevitylifeacademy.pages.dev/assets/cells-light.mp4" poster="https://longevitylifeacademy.pages.dev/assets/cells-poster.jpg" autoplay muted loop playsinline preload="auto" aria-hidden="true"></video>')
     film = re.search(r'<figure class="lla-film">.*?</figure>', DEV_HERO, flags=re.S).group(0)
+    hero = re.sub(r'<h1 class="hero-title">.*?</h1>', '<h1 class="hero-title">Your personal longevity protocol,<br><span class="life-blue">built in 18 weeks.</span></h1>', hero, count=1, flags=re.S)
+    hero = re.sub(r'<p class="hero-sub">.*?</p>', '<p class="hero-sub">Live small-group classes with certified longevity instructors. A free Abbott Lingo glucose sensor shipped to your home. You finish with a written protocol built on your own numbers.</p>', hero, count=1, flags=re.S)
     # Trustpilot: no pill (Omri). One clean rating line.
     tp = ('<div class="mf-tp" role="img" aria-label="Rated 4.6 out of 5 on Trustpilot, 600+ verified reviews">'
           '<span class="mf-tp-logo"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#00B67A" d="M12 1.5l2.9 8.2H24l-7.1 5.2 2.7 8.6L12 18.3l-7.6 5.2 2.7-8.6L0 9.7h9.1z"/></svg><b>Trustpilot</b></span>'
@@ -136,6 +142,7 @@ def common(s):
         s = s[:m.start(2)] + logos + extra + extra + s[m.end(2):]
     s = s.replace('</head>', '<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">\n</head>', 1)
     s = must(s, '<span class="tag">$99 value, included</span>', '<span class="tag">Included</span>')
+    s = must(s, '<span style="color:#006EFF;">Doesn\'t Have Time to Teach You.</span>', '<span class="mf-lb">Doesn\'t Have Time to Teach You.</span>')
     s = must(s, 'In November, tuition is $79 for month 1 with code JULIE249 or MASTERCLASS-VIP, then four monthly payments of $169 '
                 '($755 total; regular plan $169 x 5). Tuition includes',
              "November offer: $79 first month, then $169 a month for four months. Course, Lingo CGM, $100 cash back and "

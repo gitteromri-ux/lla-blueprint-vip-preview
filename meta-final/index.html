@@ -9076,6 +9076,62 @@ html body section.hero a.btn-ghost{font-size:18px!important;padding:14px 22px!im
 html body section.hero a.btn-primary,html body section.hero a.btn-primary--lg{font-size:19.5px!important;padding:16px 30px!important}
 html body section.lead-gen .lead-gen-v2-eyebrow{font-size:16.5px!important}
 
+/* ---- The hero's light blue, reused where Omri asked (blog headline, CGM headline) ---- */
+.mf-lb{background:linear-gradient(180deg,#BFE2FF 0%,#6FB6FF 100%);-webkit-background-clip:text;background-clip:text;color:transparent!important;-webkit-text-fill-color:transparent!important;font-family:'Instrument Serif',Georgia,serif!important;font-style:italic!important;font-weight:400!important}
+/* .com "Why this course is different" fold: no beige (Omri) */
+body section.value{background:linear-gradient(180deg,#F4F8FF 0%,#EAF2FF 100%)!important}
+
+/* ---- CGM: the Lingo device with three glowing 3D glucose curves, no phone ---- */
+.cgm6{position:relative;overflow:hidden;padding:80px 0;color:#fff;background:radial-gradient(45% 70% at 28% 50%,rgba(61,123,255,.40),transparent 70%),radial-gradient(35% 50% at 10% 90%,rgba(46,196,182,.26),transparent 70%),radial-gradient(35% 50% at 55% 5%,rgba(255,127,176,.16),transparent 70%),linear-gradient(180deg,#040B1E,#081638)}
+.cgm6-wrap{display:grid;grid-template-columns:1.05fr 1fr;gap:56px;align-items:center}
+.cgm6-stage{position:relative;height:440px;perspective:1300px;transform-style:preserve-3d}
+.cgm6-floor{position:absolute;left:12%;right:12%;bottom:0;height:80px;border-radius:50%;background:radial-gradient(closest-side,rgba(126,200,255,.5),rgba(61,123,255,.15) 55%,transparent);filter:blur(10px)}
+.cgm6-panel{position:absolute;width:300px;height:170px;padding:14px 16px 10px;border-radius:20px;background:linear-gradient(160deg,rgba(255,255,255,.16),rgba(255,255,255,.04));border:1px solid rgba(255,255,255,.22);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);box-shadow:inset 0 1px 0 rgba(255,255,255,.35),0 30px 60px -24px rgba(0,0,0,.85),0 0 50px -16px var(--glow);transform-style:preserve-3d}
+.cgm6-panel svg{display:block;width:100%;height:118px;overflow:visible;filter:drop-shadow(0 0 8px var(--glow)) drop-shadow(0 0 18px var(--glow))}
+.cgm6-tag{display:block;font:italic 400 22px/1 'Instrument Serif',Georgia,serif;color:#fff;margin-bottom:4px;text-shadow:0 0 14px var(--glow)}
+.cgm6-p1{--glow:rgba(255,127,176,.85);left:0;top:12px;transform:rotateY(22deg) rotateX(8deg) translateZ(-40px);animation:cgm6a 9s ease-in-out infinite}
+.cgm6-p2{--glow:rgba(126,200,255,.9);left:12%;top:232px;transform:rotateY(18deg) rotateX(-6deg) translateZ(30px);animation:cgm6b 10s ease-in-out infinite}
+.cgm6-p3{--glow:rgba(94,214,200,.85);right:0;top:60px;width:260px;height:160px;transform:rotateY(-24deg) rotateX(6deg) translateZ(-80px);opacity:.92;animation:cgm6c 11s ease-in-out infinite}
+.cgm6-axis{display:flex;justify-content:space-between;font:600 14px/1 Inter,sans-serif;color:#CFE2FF;margin-top:4px}
+.cgm6-line{stroke-dasharray:1;stroke-dashoffset:1;animation:cgm6draw 6s cubic-bezier(.22,1,.36,1) infinite}
+.cgm6-p2 .cgm6-line{animation-delay:.6s}.cgm6-p3 .cgm6-line{animation-delay:1.2s}
+.cgm6-sensor{position:absolute;left:56%;top:42%;width:190px;height:190px;margin:-95px 0 0 -95px;transform-style:preserve-3d;animation:cgm6sensor 7s ease-in-out infinite;z-index:3}
+.cgm6-ring{position:absolute;inset:-22px;border-radius:50%;border:2px solid rgba(126,200,255,.7);box-shadow:0 0 30px rgba(126,200,255,.6),inset 0 0 24px rgba(126,200,255,.3);transform:rotateX(60deg) rotateZ(-12deg);animation:cgm6ring 3.4s ease-out infinite}
+.cgm6-ring.r2{animation-delay:1.7s;border-color:rgba(94,214,200,.7);box-shadow:0 0 30px rgba(94,214,200,.6)}
+.cgm6-disc{position:absolute;inset:0;border-radius:50%;background:radial-gradient(circle at 32% 26%,#FFFFFF 0%,#F5F8FC 30%,#DDE4EE 62%,#B6C1D2 100%);box-shadow:inset 0 3px 2px rgba(255,255,255,.95),inset 0 -12px 20px rgba(80,100,135,.35),0 2px 0 #D3D9E3,0 4px 0 #C4CCD8,0 6px 0 #B5BFCD,0 8px 0 #A7B2C2,0 10px 0 #9AA6B8,0 50px 70px -16px rgba(0,0,0,.8),0 0 70px -10px rgba(126,200,255,.75);transform:rotateX(52deg) rotateZ(-14deg)}
+.cgm6-dome{position:absolute;left:31%;top:31%;width:38%;height:38%;border-radius:50%;background:radial-gradient(circle at 38% 32%,#FFFFFF,#E7EBF2 55%,#C2CAD6);box-shadow:inset 0 2px 1px #fff,0 3px 0 #BCC5D1,0 10px 14px rgba(0,0,0,.25)}
+.cgm6-dome::after{content:'';position:absolute;left:41%;top:41%;width:18%;height:18%;border-radius:50%;background:#20365E;box-shadow:inset 0 1px 1px rgba(255,255,255,.4)}
+@keyframes cgm6a{0%,100%{transform:rotateY(22deg) rotateX(8deg) translateZ(-40px) translateY(0)}50%{transform:rotateY(18deg) rotateX(6deg) translateZ(-30px) translateY(-10px)}}
+@keyframes cgm6b{0%,100%{transform:rotateY(18deg) rotateX(-6deg) translateZ(30px) translateY(0)}50%{transform:rotateY(14deg) rotateX(-4deg) translateZ(40px) translateY(8px)}}
+@keyframes cgm6c{0%,100%{transform:rotateY(-24deg) rotateX(6deg) translateZ(-80px) translateY(0)}50%{transform:rotateY(-20deg) rotateX(4deg) translateZ(-70px) translateY(-8px)}}
+@keyframes cgm6sensor{0%,100%{transform:translate3d(0,0,90px)}50%{transform:translate3d(-8px,-14px,120px)}}
+@keyframes cgm6ring{0%{opacity:.95;transform:rotateX(60deg) rotateZ(-12deg) scale(.85)}100%{opacity:0;transform:rotateX(60deg) rotateZ(-12deg) scale(1.35)}}
+@keyframes cgm6draw{0%{stroke-dashoffset:1}45%,100%{stroke-dashoffset:0}}
+.cgm6-copy .eyebrow{display:block;margin-bottom:12px}
+.cgm6-copy .section-title{color:#fff!important;text-align:left!important;margin:0!important;font-size:clamp(38px,3.8vw,56px)!important;line-height:1.08!important}
+.cgm6-lead{margin:18px 0 0;font-size:20.5px;line-height:1.6;color:#E3EEFF}
+.cgm6-list{list-style:none;margin:22px 0 0;padding:0;display:grid;gap:12px}
+.cgm6-list li{position:relative;padding:14px 18px 14px 50px;border-radius:16px;font:500 19.5px/1.45 Inter,sans-serif;color:#fff;background:linear-gradient(160deg,rgba(255,255,255,.11),rgba(255,255,255,.035));border:1px solid rgba(255,255,255,.16);box-shadow:inset 0 1px 0 rgba(255,255,255,.16),0 20px 40px -26px rgba(0,0,0,.9)}
+.cgm6-list li::before{content:'';position:absolute;left:18px;top:50%;width:16px;height:16px;margin-top:-8px;border-radius:50%;background:radial-gradient(circle at 35% 30%,#fff,#9FD4FF 45%,#3D7BFF);box-shadow:0 0 14px #3D7BFF}
+.cgm6-fine{margin:14px 0 0;font-size:18px;line-height:1.5;color:#CFE0FA}
+.cgm6-link{display:inline-flex;gap:8px;margin-top:16px;font:700 19px/1 Inter,sans-serif;color:#9FD4FF;text-decoration:none}
+@media (max-width:900px){
+  .cgm6{padding:56px 0}
+  .cgm6-wrap{grid-template-columns:1fr;gap:22px}
+  .cgm6-stage{height:380px;margin:0 -8px}
+  .cgm6-panel{width:220px;height:136px;padding:10px 12px 8px;border-radius:16px}
+  .cgm6-panel svg{height:88px}
+  .cgm6-tag{font-size:19px}
+  .cgm6-p1{left:0;top:4px}
+  .cgm6-p2{left:4%;top:236px}
+  .cgm6-p3{right:0;top:96px;width:190px;height:128px}
+  .cgm6-axis{font-size:13px}
+  .cgm6-sensor{left:60%;top:50%;width:140px;height:140px;margin:-70px 0 0 -70px}
+  .cgm6-lead{font-size:19px}
+  .cgm6-list li{font-size:18.5px;padding:12px 14px 12px 44px}
+}
+@media (prefers-reduced-motion:reduce){.cgm6-panel,.cgm6-sensor,.cgm6-ring,.cgm6-line{animation:none!important;stroke-dashoffset:0}}
+
 
 </style>
 </head>
@@ -9152,12 +9208,8 @@ html body section.lead-gen .lead-gen-v2-eyebrow{font-size:16.5px!important}
     <div class="mf-tp" role="img" aria-label="Rated 4.6 out of 5 on Trustpilot, 600+ verified reviews"><span class="mf-tp-logo"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#00B67A" d="M12 1.5l2.9 8.2H24l-7.1 5.2 2.7 8.6L12 18.3l-7.6 5.2 2.7-8.6L0 9.7h9.1z"/></svg><b>Trustpilot</b></span><span class="mf-tp-stars"><i><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#fff" d="M12 3.6l2.3 6.1h6.4l-5.1 3.9 1.9 6.3L12 16l-5.5 3.9 1.9-6.3-5.1-3.9h6.4z"/></svg></i><i><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#fff" d="M12 3.6l2.3 6.1h6.4l-5.1 3.9 1.9 6.3L12 16l-5.5 3.9 1.9-6.3-5.1-3.9h6.4z"/></svg></i><i><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#fff" d="M12 3.6l2.3 6.1h6.4l-5.1 3.9 1.9 6.3L12 16l-5.5 3.9 1.9-6.3-5.1-3.9h6.4z"/></svg></i><i><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#fff" d="M12 3.6l2.3 6.1h6.4l-5.1 3.9 1.9 6.3L12 16l-5.5 3.9 1.9-6.3-5.1-3.9h6.4z"/></svg></i><i><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#fff" d="M12 3.6l2.3 6.1h6.4l-5.1 3.9 1.9 6.3L12 16l-5.5 3.9 1.9-6.3-5.1-3.9h6.4z"/></svg></i></span><span class="mf-tp-score"><b>4.6</b> / 5</span><span class="mf-tp-count">600+ verified reviews</span></div>
     <!-- Hero brand: exact approved wordmark (no emblem) - identical fonts/colors -->
     <img src="https://www.longevitylifeacademy.com/assets/lla-wordmark-only-transparent@2x.png?v=10" alt="Longevity Life Academy by eTeacher Group" class="hero-wordmark-img" loading="eager" fetchpriority="high" width="397" height="253">
-    <h1 class="hero-title">
-      It's Your Life.<br><span class="life-blue">Live It Well.</span>
-    </h1>
-    <p class="hero-sub">
-      <strong>The longevity course</strong>, a guided protocol built around your biology, your numbers, and the daily practice that turns the next decades into your strongest.
-    </p>
+    <h1 class="hero-title">Your personal longevity protocol,<br><span class="life-blue">built in 18 weeks.</span></h1>
+    <p class="hero-sub">Live small-group classes with certified longevity instructors. A free Abbott Lingo glucose sensor shipped to your home. You finish with a written protocol built on your own numbers.</p>
     <div class="hero-cta-row">
       <div class="hero-cta-wrap">
         <div class="hero-cta-glow" aria-hidden="true"></div>
@@ -9829,227 +9881,48 @@ html body section.lead-gen .lead-gen-v2-eyebrow{font-size:16.5px!important}
     </div>
   </div>
 </section>
-<section class="cgm5" id="cgm">
-  <div class="cgm5-light" aria-hidden="true"></div>
-  <div class="container cgm5-wrap">
-    <div class="cgm5-stage" aria-hidden="true">
-      <div class="cgm5-floor"></div>
-      <div class="cgm5-phone">
-        <div class="cgm5-screen">
-          <div class="cgm5-status"><span>9:41</span><i></i></div>
-          <div class="cgm5-head"><span>Glucose</span><em><i></i>In range</em></div>
-          <div class="cgm5-value"><b>98</b><small>mg/dL</small></div>
-          <svg class="cgm5-chart" viewBox="0 0 300 150" preserveAspectRatio="none">
-            <defs>
-              <linearGradient id="cgm5stroke" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#2EC4B6"/><stop offset=".55" stop-color="#3D7BFF"/><stop offset="1" stop-color="#8A6CFF"/></linearGradient>
-              <linearGradient id="cgm5fill" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#3D7BFF" stop-opacity=".45"/><stop offset="1" stop-color="#3D7BFF" stop-opacity="0"/></linearGradient>
-              <filter id="cgm5glow" x="-20%" y="-50%" width="140%" height="200%"><feGaussianBlur stdDeviation="3.2" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
-            </defs>
-            <rect x="0" y="48" width="300" height="56" fill="rgba(46,196,182,.12)"/>
-            <line x1="0" y1="48" x2="300" y2="48" stroke="rgba(46,196,182,.45)" stroke-dasharray="3 5"/>
-            <line x1="0" y1="104" x2="300" y2="104" stroke="rgba(46,196,182,.45)" stroke-dasharray="3 5"/>
-            <path d="M0,90 C26,88 44,84 64,82 C84,80 98,78 114,70 C128,62 136,32 152,26 C168,20 178,46 192,64 C206,82 216,90 234,88 C252,86 264,76 278,74 C288,73 295,75 300,76 L300,150 L0,150 Z" fill="url(#cgm5fill)"/>
-            <path class="cgm5-line" pathLength="1" d="M0,90 C26,88 44,84 64,82 C84,80 98,78 114,70 C128,62 136,32 152,26 C168,20 178,46 192,64 C206,82 216,90 234,88 C252,86 264,76 278,74 C288,73 295,75 300,76" fill="none" stroke="url(#cgm5stroke)" stroke-width="3.6" stroke-linecap="round" filter="url(#cgm5glow)"/>
-          </svg>
-          <span class="cgm5-dot"></span>
-          <div class="cgm5-axis"><span>6a</span><span>9a</span><span>12p</span><span>3p</span><span>6p</span></div>
-          <div class="cgm5-tabs"><i></i><i class="on"></i><i></i></div>
-        </div>
+<section class="cgm6" id="cgm">
+  <div class="container cgm6-wrap">
+    <div class="cgm6-stage" aria-hidden="true">
+      <div class="cgm6-floor"></div>
+      <div class="cgm6-panel cgm6-p1">
+        <span class="cgm6-tag">sugar, simple carbs</span>
+        <svg viewBox="0 0 240 120" preserveAspectRatio="none"><defs><linearGradient id="g6a" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FF7FB0" stop-opacity=".55"/><stop offset="1" stop-color="#FF7FB0" stop-opacity="0"/></linearGradient></defs>
+          <path d="M0,100 C30,98 46,90 64,60 C80,30 92,12 108,12 C126,12 140,50 156,78 C172,100 196,102 240,100 L240,120 L0,120 Z" fill="url(#g6a)"/>
+          <path class="cgm6-line" pathLength="1" d="M0,100 C30,98 46,90 64,60 C80,30 92,12 108,12 C126,12 140,50 156,78 C172,100 196,102 240,100" fill="none" stroke="#FF8EC0" stroke-width="4" stroke-linecap="round"/></svg>
       </div>
-      <div class="cgm5-sensor">
-        <div class="cgm5-ring"></div>
-        <div class="cgm5-disc"><div class="cgm5-dome"></div></div>
+      <div class="cgm6-panel cgm6-p2">
+        <span class="cgm6-tag">a balanced plate</span>
+        <svg viewBox="0 0 240 120" preserveAspectRatio="none"><defs><linearGradient id="g6b" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#5EB6FF" stop-opacity=".5"/><stop offset="1" stop-color="#5EB6FF" stop-opacity="0"/></linearGradient></defs>
+          <path d="M0,96 C40,94 64,80 96,72 C128,64 150,70 176,84 C200,96 220,96 240,95 L240,120 L0,120 Z" fill="url(#g6b)"/>
+          <path class="cgm6-line" pathLength="1" d="M0,96 C40,94 64,80 96,72 C128,64 150,70 176,84 C200,96 220,96 240,95" fill="none" stroke="#7EC8FF" stroke-width="4" stroke-linecap="round"/></svg>
+      </div>
+      <div class="cgm6-panel cgm6-p3">
+        <svg viewBox="0 0 240 120" preserveAspectRatio="none"><defs><linearGradient id="g6c" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2EC4B6" stop-opacity=".45"/><stop offset="1" stop-color="#2EC4B6" stop-opacity="0"/></linearGradient></defs>
+          <path d="M0,88 C30,86 52,70 74,52 C92,38 104,34 118,42 C136,52 150,74 172,84 C196,94 220,90 240,88 L240,120 L0,120 Z" fill="url(#g6c)"/>
+          <path class="cgm6-line" pathLength="1" d="M0,88 C30,86 52,70 74,52 C92,38 104,34 118,42 C136,52 150,74 172,84 C196,94 220,90 240,88" fill="none" stroke="#5ED6C8" stroke-width="4" stroke-linecap="round"/></svg>
+        <div class="cgm6-axis"><span>meal</span><span>1 h</span><span>2 h</span><span>3 h</span></div>
+      </div>
+      <div class="cgm6-sensor">
+        <div class="cgm6-ring"></div><div class="cgm6-ring r2"></div>
+        <div class="cgm6-disc"><div class="cgm6-dome"></div></div>
       </div>
     </div>
-    <div class="cgm5-copy">
+    <div class="cgm6-copy">
       <span class="eyebrow">Included in Your Course</span>
-      <h2 class="section-title">Continuous Glucose Monitoring, <span>Included in Your Course</span></h2>
-      <p class="cgm5-lead">Every student receives an Abbott Lingo continuous glucose monitor plus full Lingo app access, included with the course. Track your body's real-time response to food, sleep, and movement.</p>
-      <ul class="cgm5-list">
+      <h2 class="section-title">Continuous Glucose Monitoring, <span class="mf-lb">Included in Your Course</span></h2>
+      <p class="cgm6-lead">Every student receives an Abbott Lingo continuous glucose monitor plus full Lingo app access, included with the course. Track your body's real-time response to food, sleep, and movement.</p>
+      <ul class="cgm6-list">
         <li>14-day Abbott Lingo biosensor, water-resistant, painless application</li>
         <li>Full Lingo app access included, iOS and Android, Apple Health and Health Connect</li>
         <li>One unit per student, shipped to U.S. addresses</li>
       </ul>
-      <p class="cgm5-fine">FSA/HSA prescription not needed. For students 18+. Not for insulin users. Not for medical diagnosis.</p>
-      <a class="cgm5-link" href="https://www.longevitylifeacademy.com/cgm.html">Learn more about the device <span aria-hidden="true">&rarr;</span></a>
+      <p class="cgm6-fine">FSA/HSA prescription not needed. For students 18+. Not for insulin users. Not for medical diagnosis.</p>
+      <a class="cgm6-link" href="https://www.longevitylifeacademy.com/cgm.html">Learn more about the device <span aria-hidden="true">&rarr;</span></a>
     </div>
   </div>
 </section>
 
-<section class="skills" id="skills">
-  <div class="container">
-    <div class="skills-header reveal">
-      <span class="eyebrow">Deep Dives</span>
-      <h2 class="section-title">What Your Doctor<br><span style="color:#006EFF;">Doesn't Have Time to Teach You.</span></h2>
-      <p class="section-subtitle">Deep-dive lectures on the science, the daily habits, and the real-world results behind a longer, better life.</p>
-    </div>
-    <div class="skills-grid skills-grid-3up">
-      <a class="skill-card reveal" href="https://www.longevitylifeacademy.com/topics/supplements-health-tech.html" aria-label="Supplements and longevity therapies that have real data">
-        <div class="skill-bg supplements"><video preload="metadata" autoplay muted loop playsinline><source src="https://www.longevitylifeacademy.com/assets/v2-supplements-meds.mp4" type="video/mp4"></video></div>
-        <div class="skill-overlay"></div>
-        <span class="skill-arrow" aria-hidden="true">
-          <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M9 7h8v8"/></svg>
-        </span>
-        <div class="skill-content">
-          <div class="skill-eyebrow">Supplements &amp; Therapies</div>
-          <h3 class="skill-title">Know What You're Actually Taking</h3>
-          <p class="skill-sub">NAD precursors, Vitamin D, omega-3s, creatine, senolytics, the short list of supplements with real human data, and the long list of marketing dressed up as science.</p>
-        </div>
-      </a>
-      <a class="skill-card reveal" href="https://www.longevitylifeacademy.com/topics/mental-emotional-health.html" aria-label="The longevity toolkit, the habits that move the needle">
-        <div class="skill-bg mindset"><video preload="metadata" autoplay muted loop playsinline><source src="https://www.longevitylifeacademy.com/assets/v2-mental-bubbles.mp4" type="video/mp4"></video></div>
-        <div class="skill-overlay"></div>
-        <span class="skill-arrow" aria-hidden="true">
-          <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M9 7h8v8"/></svg>
-        </span>
-        <div class="skill-content">
-          <div class="skill-eyebrow">The Longevity Toolkit</div>
-          <h3 class="skill-title">Five Habits That Move the Needle</h3>
-          <p class="skill-sub">Zone 2 cardio for mitochondrial health, VO2 max as the strongest predictor of all-cause mortality, CGM-driven metabolic tracking, ApoB management, and the sleep architecture that drives recovery.</p>
-        </div>
-      </a>
-      <a class="skill-card reveal" href="https://www.longevitylifeacademy.com/topics/protocols-habits.html" aria-label="Skin and the visible markers of aging">
-        <div class="skill-bg skin"><video preload="metadata" autoplay muted loop playsinline><source src="https://www.longevitylifeacademy.com/assets/skill-skin.mp4" type="video/mp4"></video></div>
-        <div class="skill-overlay"></div>
-        <span class="skill-arrow" aria-hidden="true">
-          <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M9 7h8v8"/></svg>
-        </span>
-        <div class="skill-content">
-          <div class="skill-eyebrow">Aging on the Outside</div>
-          <h3 class="skill-title">The Visible Edge of Aging</h3>
-          <p class="skill-sub">Skin as a real-time biomarker of systemic aging, collagen turnover, oxidative stress, glycation, UV damage, and the topical and oral interventions with actual clinical evidence behind them.</p>
-        </div>
-      </a>
-    </div>
-    <div class="fold-cta reveal" style="text-align:center; margin-top:72px;">
-      <p style="font-size:18px; color:rgba(10,22,40,0.7); margin:0 0 20px; max-width:560px; margin-left:auto; margin-right:auto;">Go deeper than your annual physical ever will.</p>
-      <a href="#pricing" class="section-cta-btn">Enroll Now <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
-    </div>
-  </div>
-</section>
-<section class="lead-gen lead-gen-v2" id="lead-gen">
-  <div class="lead-gen-v2-bg" aria-hidden="true"></div>
-  <div class="container">
-    <div class="lead-gen-v2-grid reveal">
-      <div class="lead-gen-v2-left">
-        <span class="eyebrow lead-gen-v2-eyebrow">Apply for the Next Class</span>
-        <h2 class="lead-gen-v2-headline">Enroll Now in <span>Longevity Life Academy</span></h2>
-        <p class="lead-gen-v2-sub">Classes are small. Seats are limited. Tell us a little about yourself and our admissions team will reach out personally with the next class dates and program details.</p>
-        <ul class="lead-gen-v2-bullets">
-          <li><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg> Live, instructor-led 18-week program</li>
-          <li><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg> Small classes (8–15 students)</li>
-          <li><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg> Personal longevity protocol included</li>
-          <li><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg> 1:1 admissions consultation</li>
-        </ul>
-      </div>
-      <div class="lead-gen-v2-right">
-        <form class="lead-gen-v2-form form-with-thankyou" id="leadGenV2Form" data-thankyou-target="leadGenV2ThankYou">
-          <h3 class="lead-gen-v2-form-title">Apply Now</h3>
-          <p class="lead-gen-v2-form-sub">Our admissions team replies within 24 hours.</p>
-          <div class="lead-gen-v2-field">
-            <label for="lg-fname">First Name</label>
-            <input id="lg-fname" type="text" placeholder="Your first name" required autocomplete="given-name">
-          </div>
-          <div class="lead-gen-v2-field">
-            <label for="lg-lname">Last Name</label>
-            <input id="lg-lname" type="text" placeholder="Your last name" required autocomplete="family-name">
-          </div>
-          <div class="lead-gen-v2-field">
-            <label for="lg-email">Email Address</label>
-            <input id="lg-email" type="email" placeholder="you@example.com" required autocomplete="email">
-          </div>
-          <div class="lead-gen-v2-field">
-            <label for="lg-phone">Phone Number</label>
-            <input id="lg-phone" type="tel" placeholder="Mobile number" required autocomplete="tel" inputmode="tel" maxlength="20" pattern="[0-9()+\-.\s]{6,20}">
-          </div>
-          <div class="lead-gen-v2-field">
-            <label for="lg-country">State</label>
-                        <select id="lg-country" name="country" required>
-              <option value="" disabled selected>Select your state</option>
-              <option value="AL">Alabama</option>
-              <option value="AK">Alaska</option>
-              <option value="AZ">Arizona</option>
-              <option value="AR">Arkansas</option>
-              <option value="CA">California</option>
-              <option value="CO">Colorado</option>
-              <option value="CT">Connecticut</option>
-              <option value="DE">Delaware</option>
-              <option value="DC">District of Columbia</option>
-              <option value="FL">Florida</option>
-              <option value="GA">Georgia</option>
-              <option value="HI">Hawaii</option>
-              <option value="ID">Idaho</option>
-              <option value="IL">Illinois</option>
-              <option value="IN">Indiana</option>
-              <option value="IA">Iowa</option>
-              <option value="KS">Kansas</option>
-              <option value="KY">Kentucky</option>
-              <option value="LA">Louisiana</option>
-              <option value="ME">Maine</option>
-              <option value="MD">Maryland</option>
-              <option value="MA">Massachusetts</option>
-              <option value="MI">Michigan</option>
-              <option value="MN">Minnesota</option>
-              <option value="MS">Mississippi</option>
-              <option value="MO">Missouri</option>
-              <option value="MT">Montana</option>
-              <option value="NE">Nebraska</option>
-              <option value="NV">Nevada</option>
-              <option value="NH">New Hampshire</option>
-              <option value="NJ">New Jersey</option>
-              <option value="NM">New Mexico</option>
-              <option value="NY">New York</option>
-              <option value="NC">North Carolina</option>
-              <option value="ND">North Dakota</option>
-              <option value="OH">Ohio</option>
-              <option value="OK">Oklahoma</option>
-              <option value="OR">Oregon</option>
-              <option value="PA">Pennsylvania</option>
-              <option value="RI">Rhode Island</option>
-              <option value="SC">South Carolina</option>
-              <option value="SD">South Dakota</option>
-              <option value="TN">Tennessee</option>
-              <option value="TX">Texas</option>
-              <option value="UT">Utah</option>
-              <option value="VT">Vermont</option>
-              <option value="VA">Virginia</option>
-              <option value="WA">Washington</option>
-              <option value="WV">West Virginia</option>
-              <option value="WI">Wisconsin</option>
-              <option value="WY">Wyoming</option>
-            </select>
-          </div>
-          <button type="submit" class="lead-gen-v2-submit">
-            Submit Application
-            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
-          </button>
-          <p class="lead-gen-v2-trust">
-            <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-            Your information is secure. We'll never share your details.
-          </p>
-          
-<a class="et-bump-btn bump-whatsapp lla-wa-inline" href="https://wa.me/12015023701" target="_blank" rel="noopener"><img src="https://www.longevitylifeacademy.com/assets/wa/wapp.png" alt="whatsapp"> <span>Start Chat on WhatsApp</span></a>
-<div class="lg-or" aria-hidden="true"><span>or</span></div>
-          <a href="#" class="lg-buy">
-            <span class="lg-buy-main"><svg viewBox="0 0 24 24" width="21" height="21" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="21" r="1.6"/><circle cx="19" cy="21" r="1.6"/><path d="M2.5 3h3l2.6 12.5a2 2 0 0 0 2 1.5h7.9a2 2 0 0 0 2-1.6L21.5 8H6.2"/></svg> Enroll Online Now &middot; $79 month 1/mo</span>
-            <span class="lg-buy-sub">Register &rarr; Choose your dates &rarr; Pay online &middot; done in 2 minutes</span>
-          </a>
-        </form>
-        <div class="form-thankyou" id="leadGenV2ThankYou" role="status" aria-live="polite">
-          <div class="form-thankyou-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg>
-          </div>
-          <h3 class="form-thankyou-headline">Thank You!</h3>
-          <p class="form-thankyou-text">We have received your details. One of our team members will be in touch with you shortly. We look forward to welcoming you to Longevity Life Academy.</p>
-          <a class="form-thankyou-cta" href="https://www.longevitylifeacademy.com/">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
-            Back to Home
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
 <section class="about" id="about">
   <a class="about-link-wrap" href="https://www.longevitylifeacademy.com/about.html" aria-label="Read more about Longevity Life Academy and eTeacher Group">
   <div class="container">
@@ -10254,6 +10127,414 @@ html body section.lead-gen .lead-gen-v2-eyebrow{font-size:16.5px!important}
       <a href="#pricing" class="section-cta-btn">Enroll Now <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
     </div>
   </section>
+<section class="how-v2" id="how"><span class="lla-neon-top" aria-hidden="true"></span><span class="lla-neon-glow" aria-hidden="true"></span>
+  <div class="container">
+    <div class="how-v2-header reveal">
+      <img loading="lazy" decoding="async" src="https://www.longevitylifeacademy.com/assets/e-teacher-logo.png" alt="eTeacher Group" class="how-v2-logo">
+      <h2 class="how-v2-title">How It Works</h2>
+      <p class="how-v2-sub">Six clear steps from enrollment to your personal longevity protocol.</p>
+    </div>
+    <div class="how-v2-slider-wrap reveal">
+      <button class="how-v2-arrow how-v2-prev" aria-label="Previous"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M15 18l-6-6 6-6"/></svg></button>
+      <div class="how-v2-track-container">
+        <div class="how-v2-track" id="howTrack">
+          <div class="how-v2-card" style="border-top: 3px solid #006EFF;">
+            <span class="how-v2-num">01</span>
+            <h3 class="how-v2-card-title">Apply &amp; Match</h3>
+            <p class="how-v2-card-desc">Submit a short application. We review your background and goals, then place you in a small class of 8–15 people with compatible interests and schedules.</p>
+            <span class="how-v2-card-meta">Takes about 5 minutes</span>
+          </div>
+          <div class="how-v2-card" style="border-top: 3px solid #338BFF;">
+            <span class="how-v2-num">02</span>
+            <h3 class="how-v2-card-title">Baseline Assessment</h3>
+            <p class="how-v2-card-desc">Complete a health intake questionnaire and share any existing lab work. This becomes your personal starting point, the data you'll track against over 18 weeks.</p>
+            <span class="how-v2-card-meta">Health data + lab review</span>
+          </div>
+          <div class="how-v2-card" style="border-top: 3px solid #4DA6FF;">
+            <span class="how-v2-num">03</span>
+            <h3 class="how-v2-card-title">Meet Your Class</h3>
+            <p class="how-v2-card-desc">Join a live orientation call with your instructor and classmates. Set expectations, learn the platform, and build the group dynamic that carries you through 18 weeks.</p>
+            <span class="how-v2-card-meta">Live kickoff session</span>
+          </div>
+          <div class="how-v2-card" style="border-top: 3px solid #0099FF;">
+            <span class="how-v2-num">04</span>
+            <h3 class="how-v2-card-title">Learn Live Weekly</h3>
+            <p class="how-v2-card-desc">Attend 50-minute live online sessions with your class and instructor. Each week covers a new longevity topic, with real data, case studies, and hands-on exercises.</p>
+            <span class="how-v2-card-meta">18 weeks · 50 min each</span>
+          </div>
+          <div class="how-v2-card" style="border-top: 3px solid #006EFF;">
+            <span class="how-v2-num">05</span>
+            <h3 class="how-v2-card-title">Experiment Between Sessions</h3>
+            <p class="how-v2-card-desc">Apply what you learn each week with guided experiments, food logs, sleep tracking, movement challenges. Real change comes from practice, not just theory.</p>
+            <span class="how-v2-card-meta">Hands-on weekly protocols</span>
+          </div>
+          <div class="how-v2-card" style="border-top: 3px solid #338BFF;">
+            <span class="how-v2-num">06</span>
+            <h3 class="how-v2-card-title">Build Your Protocol</h3>
+            <p class="how-v2-card-desc">In the final phase, you assemble everything you've learned into a written, personalized longevity protocol, tested, peer-reviewed by your class, and yours to keep.</p>
+            <span class="how-v2-card-meta">Your personal blueprint</span>
+          </div>
+        </div>
+      </div>
+      <button class="how-v2-arrow how-v2-next" aria-label="Next"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M9 18l6-6-6-6"/></svg></button>
+    </div>
+    <div class="how-v2-dots" id="howDots"></div>
+  </div>
+    <div class="how-v2-cta reveal" style="text-align:center; margin-top:48px;">
+      <a href="#pricing" class="section-cta-btn">Enroll Now <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+    </div>
+  </section>
+<section class="skills" id="skills">
+  <div class="container">
+    <div class="skills-header reveal">
+      <span class="eyebrow">Deep Dives</span>
+      <h2 class="section-title">What Your Doctor<br><span class="mf-lb">Doesn't Have Time to Teach You.</span></h2>
+      <p class="section-subtitle">Deep-dive lectures on the science, the daily habits, and the real-world results behind a longer, better life.</p>
+    </div>
+    <div class="skills-grid skills-grid-3up">
+      <a class="skill-card reveal" href="https://www.longevitylifeacademy.com/topics/supplements-health-tech.html" aria-label="Supplements and longevity therapies that have real data">
+        <div class="skill-bg supplements"><video preload="metadata" autoplay muted loop playsinline><source src="https://www.longevitylifeacademy.com/assets/v2-supplements-meds.mp4" type="video/mp4"></video></div>
+        <div class="skill-overlay"></div>
+        <span class="skill-arrow" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M9 7h8v8"/></svg>
+        </span>
+        <div class="skill-content">
+          <div class="skill-eyebrow">Supplements &amp; Therapies</div>
+          <h3 class="skill-title">Know What You're Actually Taking</h3>
+          <p class="skill-sub">NAD precursors, Vitamin D, omega-3s, creatine, senolytics, the short list of supplements with real human data, and the long list of marketing dressed up as science.</p>
+        </div>
+      </a>
+      <a class="skill-card reveal" href="https://www.longevitylifeacademy.com/topics/mental-emotional-health.html" aria-label="The longevity toolkit, the habits that move the needle">
+        <div class="skill-bg mindset"><video preload="metadata" autoplay muted loop playsinline><source src="https://www.longevitylifeacademy.com/assets/v2-mental-bubbles.mp4" type="video/mp4"></video></div>
+        <div class="skill-overlay"></div>
+        <span class="skill-arrow" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M9 7h8v8"/></svg>
+        </span>
+        <div class="skill-content">
+          <div class="skill-eyebrow">The Longevity Toolkit</div>
+          <h3 class="skill-title">Five Habits That Move the Needle</h3>
+          <p class="skill-sub">Zone 2 cardio for mitochondrial health, VO2 max as the strongest predictor of all-cause mortality, CGM-driven metabolic tracking, ApoB management, and the sleep architecture that drives recovery.</p>
+        </div>
+      </a>
+      <a class="skill-card reveal" href="https://www.longevitylifeacademy.com/topics/protocols-habits.html" aria-label="Skin and the visible markers of aging">
+        <div class="skill-bg skin"><video preload="metadata" autoplay muted loop playsinline><source src="https://www.longevitylifeacademy.com/assets/skill-skin.mp4" type="video/mp4"></video></div>
+        <div class="skill-overlay"></div>
+        <span class="skill-arrow" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M9 7h8v8"/></svg>
+        </span>
+        <div class="skill-content">
+          <div class="skill-eyebrow">Aging on the Outside</div>
+          <h3 class="skill-title">The Visible Edge of Aging</h3>
+          <p class="skill-sub">Skin as a real-time biomarker of systemic aging, collagen turnover, oxidative stress, glycation, UV damage, and the topical and oral interventions with actual clinical evidence behind them.</p>
+        </div>
+      </a>
+    </div>
+    <div class="fold-cta reveal" style="text-align:center; margin-top:72px;">
+      <p style="font-size:18px; color:rgba(10,22,40,0.7); margin:0 0 20px; max-width:560px; margin-left:auto; margin-right:auto;">Go deeper than your annual physical ever will.</p>
+      <a href="#pricing" class="section-cta-btn">Enroll Now <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+    </div>
+  </div>
+</section>
+<section class="value">
+  <div class="container">
+    <div class="value-header reveal">
+      <div>
+        <span class="eyebrow">What Makes This Different</span>
+        <h2 class="section-title">Why This Course<br>Is Different</h2>
+      </div>
+      <div class="value-nav">
+        <button class="value-arrow" id="valPrev" aria-label="Previous">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M15 18l-6-6 6-6"/></svg>
+        </button>
+        <button class="value-arrow" id="valNext" aria-label="Next">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M9 18l6-6-6-6"/></svg>
+        </button>
+      </div>
+    </div>
+    <div class="value-track-wrap">
+      <div class="value-track" id="valTrack">
+        <div class="value-card reveal" data-accent="1">
+          <h3 class="value-title">Live, not recorded.</h3>
+          <p class="value-desc">Every session is live with a certified instructor and your classmates. You ask questions in real time. You get real answers. Recordings are available if you miss one, but the live room is where the learning happens.</p>
+        </div>
+        <div class="value-card reveal" data-accent="2">
+          <h3 class="value-title">Your data, your curriculum.</h3>
+          <p class="value-desc">You don't memorize facts about glucose or sleep, you watch them move in your own body. CGM readings, lifestyle logs, and food experiments shape every session you attend.</p>
+        </div>
+        <div class="value-card reveal" data-accent="3">
+          <h3 class="value-title">Small classes, real accountability.</h3>
+          <p class="value-desc">Eight to fifteen people. You'll know your classmates' names and they'll know yours. Peer coaching in the final weeks builds the accountability that keeps the protocol alive.</p>
+        </div>
+        <div class="value-card reveal" data-accent="4">
+          <h3 class="value-title">A written protocol you'll keep.</h3>
+          <p class="value-desc">The course ends with a document, your personal longevity blueprint, tested against your body over 18 weeks. It's the one deliverable designed to outlast the course itself.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="deepdive"><span class="lla-neon-top" aria-hidden="true"></span><span class="lla-neon-glow" aria-hidden="true"></span>
+  <div class="container">
+    <div class="deepdive-header reveal">
+      <span class="eyebrow">The Operating System</span>
+      <h2 class="section-title">Six Systems. One<br>Healthspan Engine.</h2>
+      <p class="section-subtitle">The interconnected systems that govern how you age, the framework Medicine 3.0 is built on. Hover to explore each domain.</p>
+    </div>
+    <div class="hex-layout">
+    <div class="hex-chart reveal" id="hexChart">
+      <!-- Orbit ring -->
+      <div class="hex-orbit"></div>
+      <!-- Center hub -->
+      <div class="hex-center">
+        <div class="hex-center-label">Your<br>Protocol</div>
+        <div class="hex-center-sub">12 sessions</div>
+      </div>
+      <!-- Connector lines (JS positions them) -->
+      <div class="hex-line" data-line="0"></div>
+      <div class="hex-line" data-line="1"></div>
+      <div class="hex-line" data-line="2"></div>
+      <div class="hex-line" data-line="3"></div>
+      <div class="hex-line" data-line="4"></div>
+      <div class="hex-line" data-line="5"></div>
+      <!-- 6 orbital nodes -->
+      <div class="hex-node" data-hex="0">
+        <div class="hex-node-icon"><svg viewBox="0 0 24 24" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h4l3-9 4 18 3-9h4"/></svg></div>
+        <div class="hex-node-label">Metabolic<br>Health</div>
+      </div>
+      <div class="hex-node" data-hex="1">
+        <div class="hex-node-icon"><svg viewBox="0 0 24 24" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 20V10M12 20V4M6 20v-6"/></svg></div>
+        <div class="hex-node-label">Exercise &amp;<br>Movement</div>
+      </div>
+      <div class="hex-node" data-hex="2">
+        <div class="hex-node-icon"><svg viewBox="0 0 24 24" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3a7 7 0 0 0 9.79 9.79z"/></svg></div>
+        <div class="hex-node-label">Sleep &amp;<br>Circadian</div>
+      </div>
+      <div class="hex-node" data-hex="3">
+        <div class="hex-node-icon"><svg viewBox="0 0 24 24" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a10 10 0 0 1 0 20 10 10 0 0 1 0-20z"/><path d="M12 8v4l3 3"/></svg></div>
+        <div class="hex-node-label">Stress &amp;<br>Emotions</div>
+      </div>
+      <div class="hex-node" data-hex="4">
+        <div class="hex-node-icon"><svg viewBox="0 0 24 24" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+        <div class="hex-node-label">Supplements<br>&amp; Tools</div>
+      </div>
+      <div class="hex-node" data-hex="5">
+        <div class="hex-node-icon"><svg viewBox="0 0 24 24" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg></div>
+        <div class="hex-node-label">Protocols<br>&amp; Habits</div>
+      </div>
+    </div>
+    <!-- Detail panel (side panel, right of hex chart) -->
+    <div class="hex-detail reveal" id="hexDetail">
+      <div class="hex-detail-tag" id="hexDetailTag"></div>
+      <h3 class="hex-detail-title" id="hexDetailTitle"></h3>
+      <p class="hex-detail-desc" id="hexDetailDesc"></p>
+      <a class="hex-detail-link" id="hexDetailLink" href="#">
+        Explore topic
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+      </a>
+    </div>
+    </div><!-- end hex-layout -->
+
+    <!-- Mobile hex replacement, vertical card list -->
+    <div class="deepdive-mobile-list">
+      <a class="deepdive-mobile-card" href="https://www.longevitylifeacademy.com/topics/metabolic-health-blood-sugar.html">
+        <div class="deepdive-mobile-icon"><svg viewBox="0 0 24 24"><path d="M3 12h3l3-8 4 16 3-8h5"/></svg></div>
+        <div class="deepdive-mobile-text">
+          <div class="deepdive-mobile-title">Metabolic Health</div>
+          <div class="deepdive-mobile-desc">Glucose, lipids, and inflammation markers decoded.</div>
+        </div>
+        <svg class="deepdive-mobile-arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+      </a>
+      <a class="deepdive-mobile-card" href="https://www.longevitylifeacademy.com/topics/exercise-movement.html">
+        <div class="deepdive-mobile-icon"><svg viewBox="0 0 24 24"><path d="M6 8v8M18 8v8M2 10v4M22 10v4M6 12h12"/></svg></div>
+        <div class="deepdive-mobile-text">
+          <div class="deepdive-mobile-title">Exercise &amp; Movement</div>
+          <div class="deepdive-mobile-desc">Strength, steady cardio, stability, and the cardio fitness that extends healthspan.</div>
+        </div>
+        <svg class="deepdive-mobile-arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+      </a>
+      <a class="deepdive-mobile-card" href="https://www.longevitylifeacademy.com/topics/sleep-circadian-health.html">
+        <div class="deepdive-mobile-icon"><svg viewBox="0 0 24 24"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg></div>
+        <div class="deepdive-mobile-text">
+          <div class="deepdive-mobile-title">Sleep &amp; Circadian</div>
+          <div class="deepdive-mobile-desc">Sleep architecture, light exposure, and recovery.</div>
+        </div>
+        <svg class="deepdive-mobile-arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+      </a>
+      <a class="deepdive-mobile-card" href="https://www.longevitylifeacademy.com/topics/mental-emotional-health.html">
+        <div class="deepdive-mobile-icon"><svg viewBox="0 0 24 24"><path d="M12 21s-7-4.5-7-10a5 5 0 0 1 9-3 5 5 0 0 1 9 3c0 5.5-7 10-7 10Z"/></svg></div>
+        <div class="deepdive-mobile-text">
+          <div class="deepdive-mobile-title">Stress &amp; Emotions</div>
+          <div class="deepdive-mobile-desc">Chronic stress, cortisol, and resilience building.</div>
+        </div>
+        <svg class="deepdive-mobile-arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+      </a>
+      <a class="deepdive-mobile-card" href="https://www.longevitylifeacademy.com/topics/supplements-health-tech.html">
+        <div class="deepdive-mobile-icon"><svg viewBox="0 0 24 24"><rect x="3" y="8" width="18" height="8" rx="4"/><path d="M12 8v8"/></svg></div>
+        <div class="deepdive-mobile-text">
+          <div class="deepdive-mobile-title">Supplements &amp; Tools</div>
+          <div class="deepdive-mobile-desc">Evidence-based compounds and real data.</div>
+        </div>
+        <svg class="deepdive-mobile-arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+      </a>
+      <a class="deepdive-mobile-card" href="https://www.longevitylifeacademy.com/topics/protocols-habits.html">
+        <div class="deepdive-mobile-icon"><svg viewBox="0 0 24 24"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg></div>
+        <div class="deepdive-mobile-text">
+          <div class="deepdive-mobile-title">Protocols &amp; Habits</div>
+          <div class="deepdive-mobile-desc">Daily systems that compound into lasting change.</div>
+        </div>
+        <svg class="deepdive-mobile-arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+      </a>
+    </div>
+
+  </div>
+    <div class="deepdive-cta reveal" style="text-align:center; margin-top:48px;">
+      <a href="#pricing" class="section-cta-btn deepdive-cta-btn">Enroll Now <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+    </div>
+  </section>
+<section class="lead-gen lead-gen-v2" id="lead-gen">
+  <div class="lead-gen-v2-bg" aria-hidden="true"></div>
+  <div class="container">
+    <div class="lead-gen-v2-grid reveal">
+      <div class="lead-gen-v2-left">
+        <span class="eyebrow lead-gen-v2-eyebrow">Apply for the Next Class</span>
+        <h2 class="lead-gen-v2-headline">Enroll Now in <span>Longevity Life Academy</span></h2>
+        <p class="lead-gen-v2-sub">Classes are small. Seats are limited. Tell us a little about yourself and our admissions team will reach out personally with the next class dates and program details.</p>
+        <ul class="lead-gen-v2-bullets">
+          <li><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg> Live, instructor-led 18-week program</li>
+          <li><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg> Small classes (8–15 students)</li>
+          <li><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg> Personal longevity protocol included</li>
+          <li><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg> 1:1 admissions consultation</li>
+        </ul>
+      </div>
+      <div class="lead-gen-v2-right">
+        <form class="lead-gen-v2-form form-with-thankyou" id="leadGenV2Form" data-thankyou-target="leadGenV2ThankYou">
+          <h3 class="lead-gen-v2-form-title">Apply Now</h3>
+          <p class="lead-gen-v2-form-sub">Our admissions team replies within 24 hours.</p>
+          <div class="lead-gen-v2-field">
+            <label for="lg-fname">First Name</label>
+            <input id="lg-fname" type="text" placeholder="Your first name" required autocomplete="given-name">
+          </div>
+          <div class="lead-gen-v2-field">
+            <label for="lg-lname">Last Name</label>
+            <input id="lg-lname" type="text" placeholder="Your last name" required autocomplete="family-name">
+          </div>
+          <div class="lead-gen-v2-field">
+            <label for="lg-email">Email Address</label>
+            <input id="lg-email" type="email" placeholder="you@example.com" required autocomplete="email">
+          </div>
+          <div class="lead-gen-v2-field">
+            <label for="lg-phone">Phone Number</label>
+            <input id="lg-phone" type="tel" placeholder="Mobile number" required autocomplete="tel" inputmode="tel" maxlength="20" pattern="[0-9()+\-.\s]{6,20}">
+          </div>
+          <div class="lead-gen-v2-field">
+            <label for="lg-country">State</label>
+                        <select id="lg-country" name="country" required>
+              <option value="" disabled selected>Select your state</option>
+              <option value="AL">Alabama</option>
+              <option value="AK">Alaska</option>
+              <option value="AZ">Arizona</option>
+              <option value="AR">Arkansas</option>
+              <option value="CA">California</option>
+              <option value="CO">Colorado</option>
+              <option value="CT">Connecticut</option>
+              <option value="DE">Delaware</option>
+              <option value="DC">District of Columbia</option>
+              <option value="FL">Florida</option>
+              <option value="GA">Georgia</option>
+              <option value="HI">Hawaii</option>
+              <option value="ID">Idaho</option>
+              <option value="IL">Illinois</option>
+              <option value="IN">Indiana</option>
+              <option value="IA">Iowa</option>
+              <option value="KS">Kansas</option>
+              <option value="KY">Kentucky</option>
+              <option value="LA">Louisiana</option>
+              <option value="ME">Maine</option>
+              <option value="MD">Maryland</option>
+              <option value="MA">Massachusetts</option>
+              <option value="MI">Michigan</option>
+              <option value="MN">Minnesota</option>
+              <option value="MS">Mississippi</option>
+              <option value="MO">Missouri</option>
+              <option value="MT">Montana</option>
+              <option value="NE">Nebraska</option>
+              <option value="NV">Nevada</option>
+              <option value="NH">New Hampshire</option>
+              <option value="NJ">New Jersey</option>
+              <option value="NM">New Mexico</option>
+              <option value="NY">New York</option>
+              <option value="NC">North Carolina</option>
+              <option value="ND">North Dakota</option>
+              <option value="OH">Ohio</option>
+              <option value="OK">Oklahoma</option>
+              <option value="OR">Oregon</option>
+              <option value="PA">Pennsylvania</option>
+              <option value="RI">Rhode Island</option>
+              <option value="SC">South Carolina</option>
+              <option value="SD">South Dakota</option>
+              <option value="TN">Tennessee</option>
+              <option value="TX">Texas</option>
+              <option value="UT">Utah</option>
+              <option value="VT">Vermont</option>
+              <option value="VA">Virginia</option>
+              <option value="WA">Washington</option>
+              <option value="WV">West Virginia</option>
+              <option value="WI">Wisconsin</option>
+              <option value="WY">Wyoming</option>
+            </select>
+          </div>
+          <button type="submit" class="lead-gen-v2-submit">
+            Submit Application
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+          </button>
+          <p class="lead-gen-v2-trust">
+            <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            Your information is secure. We'll never share your details.
+          </p>
+          
+<a class="et-bump-btn bump-whatsapp lla-wa-inline" href="https://wa.me/12015023701" target="_blank" rel="noopener"><img src="https://www.longevitylifeacademy.com/assets/wa/wapp.png" alt="whatsapp"> <span>Start Chat on WhatsApp</span></a>
+<div class="lg-or" aria-hidden="true"><span>or</span></div>
+          <a href="#" class="lg-buy">
+            <span class="lg-buy-main"><svg viewBox="0 0 24 24" width="21" height="21" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="21" r="1.6"/><circle cx="19" cy="21" r="1.6"/><path d="M2.5 3h3l2.6 12.5a2 2 0 0 0 2 1.5h7.9a2 2 0 0 0 2-1.6L21.5 8H6.2"/></svg> Enroll Online Now &middot; $79 month 1/mo</span>
+            <span class="lg-buy-sub">Register &rarr; Choose your dates &rarr; Pay online &middot; done in 2 minutes</span>
+          </a>
+        </form>
+        <div class="form-thankyou" id="leadGenV2ThankYou" role="status" aria-live="polite">
+          <div class="form-thankyou-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg>
+          </div>
+          <h3 class="form-thankyou-headline">Thank You!</h3>
+          <p class="form-thankyou-text">We have received your details. One of our team members will be in touch with you shortly. We look forward to welcoming you to Longevity Life Academy.</p>
+          <a class="form-thankyou-cta" href="https://www.longevitylifeacademy.com/">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+            Back to Home
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="bioquiz">
+  <div class="container">
+    <div class="bioquiz-card reveal">
+      <div class="bioquiz-text">
+        <span class="bioquiz-eyebrow">Free · 2 Minutes</span>
+        <h2 class="bioquiz-title">What's your true<br>biological age?</h2>
+        <p class="bioquiz-body">Your birthday is one number. Your body tells a different story. Answer twelve questions about your sleep, energy, and habits, get an estimate of how your biology compares to your calendar age.</p>
+        <a href="https://www.longevitylifeacademy.com/biological-age-light.html" class="bioquiz-cta">
+          Take the 2-Minute Quiz
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+      <div class="bioquiz-visual">
+        <div class="bioquiz-badge">
+          <div class="bioquiz-badge-num">?</div>
+          <div class="bioquiz-badge-label">Your Bio-Age</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 <section class="testimonials">
   <div class="container">
     <div class="testimonials-header reveal">
@@ -11528,13 +11809,7 @@ a.lg-buy:hover{transform:translateY(-2px);box-shadow:0 18px 46px rgba(16,185,129
   document.addEventListener('DOMContentLoaded',function(){setTimeout(pillCase,0);});addEventListener('lla:pricing',function(){setTimeout(pillCase,0);});addEventListener('load',pillCase);
   document.querySelectorAll('[data-preview-enroll]').forEach(function(a){a.addEventListener('click',function(e){e.preventDefault();var n=a.parentNode.querySelector('.pk-previewnote');if(n)n.hidden=false;});});
 })();
-(function(){
-  if(!window.matchMedia||!matchMedia('(max-width:760px)').matches) return;
-  var sets=document.querySelectorAll('.topic-grid-v2,.nov-incl-grid,.skills-grid,.teachers-grid-live');
-  var extra=[document.querySelector('.value .value-card'),document.querySelector('.testimonials .quote-card')];
-  extra.forEach(function(c){if(c&&c.parentNode)sets=Array.prototype.concat.call([],Array.prototype.slice.call(sets),[c.parentNode]);});
-  Array.prototype.forEach.call(sets,function(g){if(!g||g.nextElementSibling&&g.nextElementSibling.classList.contains('mf-swipe'))return;var p=document.createElement('p');p.className='mf-swipe';p.textContent='Swipe for more';g.insertAdjacentElement('afterend',p);});
-})();
+
 (function(){
   /* the hero cells motion always plays (muted, inline), on phones too */
   var v=document.querySelector('#hero video.mf-cells'); if(!v) return;

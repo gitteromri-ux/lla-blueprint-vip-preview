@@ -12,13 +12,7 @@
   document.addEventListener('DOMContentLoaded',function(){setTimeout(pillCase,0);});addEventListener('lla:pricing',function(){setTimeout(pillCase,0);});addEventListener('load',pillCase);
   document.querySelectorAll('[data-preview-enroll]').forEach(function(a){a.addEventListener('click',function(e){e.preventDefault();var n=a.parentNode.querySelector('.pk-previewnote');if(n)n.hidden=false;});});
 })();
-(function(){
-  if(!window.matchMedia||!matchMedia('(max-width:760px)').matches) return;
-  var sets=document.querySelectorAll('.topic-grid-v2,.nov-incl-grid,.skills-grid,.teachers-grid-live');
-  var extra=[document.querySelector('.value .value-card'),document.querySelector('.testimonials .quote-card')];
-  extra.forEach(function(c){if(c&&c.parentNode)sets=Array.prototype.concat.call([],Array.prototype.slice.call(sets),[c.parentNode]);});
-  Array.prototype.forEach.call(sets,function(g){if(!g||g.nextElementSibling&&g.nextElementSibling.classList.contains('mf-swipe'))return;var p=document.createElement('p');p.className='mf-swipe';p.textContent='Swipe for more';g.insertAdjacentElement('afterend',p);});
-})();
+
 (function(){
   /* the hero cells motion always plays (muted, inline), on phones too */
   var v=document.querySelector('#hero video.mf-cells'); if(!v) return;
