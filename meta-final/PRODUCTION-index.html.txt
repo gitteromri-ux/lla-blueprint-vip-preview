@@ -9807,6 +9807,36 @@ html.mf body ul.mfp-list li.mfp-bonus::after{content:'';position:absolute;top:0;
 @media (prefers-reduced-motion:reduce){html.mf body ul.mfp-list li.mfp-bonus::after{animation:none;display:none}}
 html.mf body ul.mfp-list li.mfp-bonus + li{border-top:0}
 @media (max-width:760px){html.mf body ul.mfp-list li.mfp-bonus{margin:10px -8px;padding:16px 12px 16px 8px!important}html.mf body ul.mfp-list li.mfp-bonus b{font-size:26px}}
+/* Round 18 (Omri: shiny means neon lighting on dark navy): the bonus row as a navy box with a light-blue neon outline */
+html.mf body ul.mfp-list li.mfp-bonus{background:radial-gradient(80% 90% at 50% 0%,rgba(0,110,255,.22),transparent 70%),linear-gradient(180deg,#0A1A40 0%,#050D24 100%)!important;border:1.5px solid #7CC8FF!important;box-shadow:0 0 6px rgba(124,200,255,.95),0 0 18px rgba(59,167,255,.75),0 0 42px rgba(0,110,255,.55),inset 0 0 14px rgba(124,200,255,.35),inset 0 0 34px rgba(0,110,255,.25)!important;animation:mfpNeon 3.2s ease-in-out infinite}
+html.mf body ul.mfp-list li.mfp-bonus::after{display:none!important;animation:none!important}
+html.mf body ul.mfp-list li.mfp-bonus::before{color:#9FD6FF!important;-webkit-text-fill-color:#9FD6FF!important;text-shadow:0 0 10px rgba(124,200,255,.9),0 0 22px rgba(0,110,255,.7)}
+html.mf body ul.mfp-list li.mfp-bonus b{color:#BFE6FF!important;text-shadow:0 0 8px rgba(124,200,255,1),0 0 20px rgba(59,167,255,.85),0 0 40px rgba(0,110,255,.6)!important}
+html.mf body ul.mfp-list li.mfp-bonus span{color:#FFFFFF!important}
+@keyframes mfpNeon{0%,100%{box-shadow:0 0 6px rgba(124,200,255,.95),0 0 18px rgba(59,167,255,.75),0 0 42px rgba(0,110,255,.55),inset 0 0 14px rgba(124,200,255,.35),inset 0 0 34px rgba(0,110,255,.25)}50%{box-shadow:0 0 8px rgba(124,200,255,1),0 0 26px rgba(59,167,255,.9),0 0 60px rgba(0,110,255,.7),inset 0 0 18px rgba(124,200,255,.45),inset 0 0 40px rgba(0,110,255,.3)}}
+@media (prefers-reduced-motion:reduce){html.mf body ul.mfp-list li.mfp-bonus{animation:none}}
+/* Round 19 (Omri: far too long on mobile): compact tiles in his order, neon navy bonus tile */
+html.mf body .mfp-card .pk-foot{margin:10px 0 18px!important}
+html.mf body .mfp-tiles{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:6px}
+html.mf body .mfp-t{display:flex;flex-direction:column;justify-content:flex-start;gap:6px;padding:16px 14px 16px;border-radius:18px;background:linear-gradient(165deg,#FFFFFF 0%,#EEF5FF 100%);border:1px solid rgba(0,110,255,.16);box-shadow:0 12px 24px -16px rgba(0,40,120,.45),inset 0 1px 0 #fff}
+html.mf body .mfp-t b{font:italic 500 40px/1 'Playfair Display',Georgia,serif;color:#006EFF;letter-spacing:-.01em}
+html.mf body .mfp-t span{font:500 19px/1.3 Inter,sans-serif;color:#0A1E3A}
+html.mf body .mfp-t:nth-child(2) b{font-size:32px;line-height:1.25}
+html.mf body .mfp-twide{grid-column:1/-1;flex-direction:row;align-items:center;gap:14px}
+html.mf body .mfp-tbonus{background:radial-gradient(80% 90% at 50% 0%,rgba(0,110,255,.24),transparent 70%),linear-gradient(180deg,#0A1A40 0%,#050D24 100%);border:1.5px solid #7CC8FF;box-shadow:0 0 6px rgba(124,200,255,.95),0 0 18px rgba(59,167,255,.75),0 0 40px rgba(0,110,255,.55),inset 0 0 14px rgba(124,200,255,.35),inset 0 0 30px rgba(0,110,255,.25);animation:mfpNeon 3.2s ease-in-out infinite}
+html.mf body .mfp-tbonus b{color:#BFE6FF;text-shadow:0 0 8px rgba(124,200,255,1),0 0 20px rgba(59,167,255,.85),0 0 40px rgba(0,110,255,.6)}
+html.mf body .mfp-tbonus span{color:#FFFFFF}
+@media (prefers-reduced-motion:reduce){html.mf body .mfp-tbonus{animation:none}}
+@media (max-width:760px){
+  html.mf body .mfp-tag{font-size:18px!important;margin-bottom:10px!important}
+  html.mf body .mfp-title{font-size:36px!important;margin-bottom:12px!important}
+  html.mf body .mfp-then{font-size:20px!important;margin:10px 0 18px!important;white-space:nowrap!important}
+  html.mf body .mfp-card .pk-foot{font-size:17px!important;white-space:nowrap}
+  html.mf body .mfp-t{padding:14px 12px}
+  html.mf body .mfp-t b{font-size:36px}
+  html.mf body .mfp-t:nth-child(2) b{font-size:27px}
+  html.mf body .mfp-t span{font-size:18px}
+}
 
 
 </style>
@@ -10484,7 +10514,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <p class="section-subtitle">Online sign-ups in November only.</p>
     </header>
     <article class="mfp-card">
-      <div class="mfp-top"><p class="mfp-tag"><i aria-hidden="true"></i>November offer</p><p class="mfp-off">55% off month one</p></div>
+      <p class="mfp-tag"><i aria-hidden="true"></i>55% off month one</p>
       <h3 class="mfp-title">The Longevity <em>Blueprint</em></h3>
       <div class="mfp-price">
         <span class="mfp-now"><sup>$</sup>79</span>
@@ -10493,14 +10523,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <p class="mfp-then">Then $169 a month for 4 months</p>
       <a class="pk-btn" href="#lead-gen"><span>Enroll now</span><span class="pk-arr" aria-hidden="true">&rarr;</span></a>
       <p class="pk-foot">14-day try-out refund on the course.</p>
-      <h4 class="mfp-inc">What's included</h4>
-      <ul class="mfp-list">
-        <li><span>18 live, online weekly classes</span></li>
-        <li><span>Your personal longevity protocol, built on your own numbers</span></li>
-        <li><span>Free Abbott Lingo CGM, shipped home</span></li>
-        <li class="mfp-bonus"><span><b>Bonus</b>Free VIP access to Julie Gibson Clark's 90-minute VIP Masterclass</span></li>
-        <li><span>$100 cash back on your next course</span></li>
-      </ul>
+      <div class="mfp-tiles">
+        <div class="mfp-t"><b>18</b><span>live, online weekly classes</span></div>
+        <div class="mfp-t"><b>Protocol</b><span>yours, built on your own numbers</span></div>
+        <div class="mfp-t"><b>Free</b><span>Abbott Lingo CGM, shipped home</span></div>
+        <div class="mfp-t mfp-tbonus"><b>Bonus</b><span>Julie Gibson Clark's 90-minute VIP Masterclass</span></div>
+        <div class="mfp-t mfp-twide"><b>$100</b><span>cash back on your next course</span></div>
+      </div>
     </article>
   </div>
 </section>
