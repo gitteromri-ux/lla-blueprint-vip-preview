@@ -145,7 +145,7 @@ def common(s):
     s = must(s, '<span style="color:#006EFF;">Doesn\'t Have Time to Teach You.</span>', '<span class="mf-lb">Doesn\'t Have Time to Teach You.</span>')
     s = must(s, 'In November, tuition is $79 for month 1 with code JULIE249 or MASTERCLASS-VIP, then four monthly payments of $169 '
                 '($755 total; regular plan $169 x 5). Tuition includes',
-             "November offer: $79 first month, then $169 a month for four months. Course, Lingo CGM, $100 cash back and "
+             "November offer: $79 first month, then $169 a month for four months. Course, Lingo CGM, $100 in credits towards your next course and "
              "Julie's VIP Masterclass included. Tuition includes")
     s = must(s, 'Applications are open for the next class. Your personal longevity protocol starts here.',
              'Online sign-ups in November only. Your personal longevity protocol starts here.')
