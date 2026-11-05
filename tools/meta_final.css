@@ -1,0 +1,185 @@
+/* ===== Final website for Meta: additions on top of the longevitylifeacademy.com homepage ===== */
+
+/* Nav logo: crisp emblem and wordmark, no blur filter */
+.nav-logo-img{height:46px!important;width:auto!important;max-width:none!important;filter:none!important}
+@media (max-width:768px){.nav-logo-img{height:36px!important}}
+
+/* ---- pages.dev cinematic hero (rules copied from the pages.dev stylesheets) ---- */
+.pdp-hero{--cyan:#7DE5FF;--ease:cubic-bezier(.22,1,.36,1);--font:'Playfair Display',Georgia,'Times New Roman',serif;--font-ui:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;--glow-blue:0 18px 44px -14px rgba(0,110,255,.7);--gutter:clamp(20px,4vw,64px);--nav-h:72px;--navy-ink:#040D24;--r-lg:30px;--shadow-dark:0 1px 0 rgba(255,255,255,.14) inset,0 40px 90px -40px rgba(0,0,0,.8),0 0 0 1px rgba(125,229,255,.12);--wrap:1280px}
+/*%%HERO_CSS%%*/
+
+/* ---- Pricing: masterclass pk-card (blue VIP card), 4 large rows ---- */
+.mc-pricing{position:relative;padding:110px 0 100px;background:radial-gradient(70% 50% at 50% 0%,rgba(0,110,255,.22),transparent 70%),linear-gradient(180deg,#050B18 0%,#081633 55%,#050B18 100%);color:#fff;overflow:hidden}
+.mc-pricing .pk-shell{position:relative;z-index:1;max-width:980px;margin:0 auto;padding:0 40px}
+.mc-pricing .pk-head{text-align:center;max-width:860px;margin:0 auto 40px}
+.mc-pricing .pk-head .eyebrow{display:block;margin-bottom:14px;color:#7CC4FF}
+.mc-pricing .pk-head .section-title{color:#fff;margin:0}
+.mc-pricing .pk-accent{color:#4DA3FF}
+.mc-pricing .pk-sub{margin:18px auto 0;font-size:clamp(20px,1.6vw,23px);line-height:1.55;color:#C9D7EE;max-width:52ch}
+.mc-pricing .pk-card{position:relative;display:flex;flex-direction:column;padding:40px 46px 36px;border-radius:32px;isolation:isolate;overflow:hidden;max-width:760px;margin:0 auto}
+.mc-pricing .pk-card::before{content:"";position:absolute;inset:0;border-radius:inherit;padding:1px;pointer-events:none;z-index:2;-webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask-composite:exclude;background:linear-gradient(160deg,rgba(255,255,255,.95),rgba(124,196,255,.35) 45%,rgba(143,227,255,.9))}
+.mc-pricing .pk-vip{background:radial-gradient(90% 70% at 100% 0%,rgba(124,196,255,.55),transparent 55%),radial-gradient(70% 50% at 0% 100%,rgba(143,227,255,.28),transparent 60%),linear-gradient(160deg,#0B3B8F 0%,#0A56D8 48%,#006EFF 100%);color:#fff;box-shadow:0 1px 0 rgba(255,255,255,.35) inset,0 2px 4px rgba(0,20,60,.5),0 24px 50px -20px rgba(0,71,179,.8),0 70px 140px -50px rgba(0,110,255,.75)}
+.mc-pricing .pk-vip::after{content:"";position:absolute;right:-120px;top:-120px;width:420px;height:420px;border-radius:50%;z-index:0;pointer-events:none;background:radial-gradient(circle,rgba(255,255,255,.35),transparent 65%);filter:blur(18px)}
+.mc-pricing .pk-card>*{position:relative;z-index:1}
+.mc-pricing .pk-top{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
+.mc-pricing .pk-tier{font-size:17px;font-weight:800;letter-spacing:.04em;color:#fff;display:inline-flex;align-items:center;gap:10px}
+.mc-pricing .pk-tier::before{content:"";width:10px;height:10px;border-radius:50%;background:#8FE3FF;box-shadow:0 0 0 3px rgba(143,227,255,.25),0 0 12px rgba(143,227,255,1)}
+.mc-pricing .pk-len{font-size:17px;font-weight:800;padding:9px 16px;border-radius:999px;background:#FFE08A;color:#4A2A00;border:0;box-shadow:0 6px 18px -8px rgba(255,200,80,.8)}
+.mc-pricing .pk-pricerow{display:flex;align-items:center;gap:10px 18px;flex-wrap:wrap;margin-top:22px}
+.mc-pricing .pk-price{font-family:'Codec Pro','Inter',sans-serif;font-weight:800;font-size:clamp(96px,8vw,120px);line-height:.88;letter-spacing:-.05em;color:#fff;display:flex;align-items:flex-start;text-shadow:0 2px 0 rgba(0,40,120,.35),0 12px 40px rgba(0,0,0,.35)}
+.mc-pricing .pk-price sup{font-size:.4em;line-height:1;margin-top:.2em;margin-right:.05em;font-weight:700;letter-spacing:0}
+.mc-pricing .pk-pricemeta{display:flex;flex-direction:column;gap:2px;font-family:'Codec Pro','Inter',sans-serif}
+.mc-pricing .pk-pricemeta s{font-size:28px;font-weight:700;color:#BFD7F7;text-decoration-thickness:3px}
+.mc-pricing .pk-pricemeta span{font-size:22px;font-weight:700;color:#fff}
+.mc-pricing .pk-title{flex:1 1 240px;margin:0;font-family:'Codec Pro','Inter',sans-serif;font-weight:700;font-size:clamp(30px,2.6vw,38px);line-height:1.12;letter-spacing:-.02em;color:#fff;text-align:right}
+.mc-pricing .pk-title em{font-family:'Instrument Serif',Georgia,serif;font-style:italic;font-weight:400;color:#BFE3FF}
+.mc-pricing .pk-rows{list-style:none;margin:26px 0 28px;padding:0}
+.mc-pricing .pk-rows li{position:relative;padding:16px 0 16px 34px;border-top:1px solid rgba(255,255,255,.2);font:600 24px/1.35 Inter,sans-serif;color:#fff}
+.mc-pricing .pk-rows li:last-child{border-bottom:1px solid rgba(255,255,255,.2)}
+.mc-pricing .pk-rows li::before{content:'';position:absolute;left:2px;top:50%;margin-top:-7px;width:14px;height:14px;border-radius:50%;background:var(--dot,#8FE3FF);box-shadow:0 0 12px var(--dot,#8FE3FF)}
+.mc-pricing .pk-btn{display:flex;justify-content:space-between;align-items:center;gap:14px;padding:22px 34px;min-height:70px;border-radius:18px;font-family:'Inter',sans-serif;font-weight:800;font-size:23px;text-decoration:none;background:linear-gradient(180deg,#FFFFFF 0%,#EAF3FF 100%);color:#0047B3;box-shadow:0 1px 0 #fff inset,0 -1px 0 rgba(0,40,120,.15) inset,0 2px 3px rgba(0,20,60,.35),0 14px 30px -10px rgba(0,20,60,.6),0 0 40px -6px rgba(143,227,255,.55);transition:transform .25s cubic-bezier(.22,1,.36,1)}
+.mc-pricing .pk-btn:hover{transform:translateY(-2px)}
+.mc-pricing .pk-btn .pk-arr{font-size:26px;line-height:1}
+.mc-pricing .pk-refund{margin:16px 0 0;font-size:19px;font-weight:600;color:#E3F0FF;text-align:center}
+.mc-pricing .pk-previewnote{margin:14px 0 0;font-size:17px;color:#FFE08A;text-align:center}
+.mc-pricing .pk-foot{text-align:center;margin:26px auto 0;font-size:19px;line-height:1.6;color:#B7C7E3}
+.mc-pricing .pk-foot a{color:#fff;text-decoration:underline}
+@media (max-width:760px){
+  .mc-pricing{padding:76px 0 68px}
+  .mc-pricing .pk-shell{padding:0 16px}
+  .mc-pricing .pk-head{margin-bottom:26px}
+  .mc-pricing .pk-sub{font-size:19px}
+  .mc-pricing .pk-card{padding:26px 20px 24px;border-radius:24px}
+  .mc-pricing .pk-tier,.mc-pricing .pk-len{font-size:16px}
+  .mc-pricing .pk-price{font-size:96px}
+  .mc-pricing .pk-title{font-size:32px;flex-basis:100%;text-align:left}
+  .mc-pricing .pk-rows{margin:20px 0 22px}
+  .mc-pricing .pk-rows li{font-size:22px;padding:14px 0 14px 30px}
+  .mc-pricing .pk-btn{font-size:22px;padding:19px 24px;min-height:66px}
+  .mc-pricing .pk-refund{font-size:18px}
+  .mc-pricing .pk-foot{font-size:18px}
+}
+
+/*%%NEW_FOLDS%%*/
+
+/* ---- Floating bar: the .com component, larger type; bottom of the screen on desktop so it never covers headings ---- */
+.lla-float-cta .lla-cta-eyebrow{font-size:13px!important;letter-spacing:.08em!important}
+.lla-float-cta .lla-cta-title{font-size:18px!important}
+.lla-float-cta .lla-cta-pill .price{font-size:22px!important}
+.lla-float-cta .lla-cta-pill .mo{font-size:13px!important}
+.lla-float-cta.mf-hide{opacity:0!important;pointer-events:none!important}
+@media (min-width:721px){.lla-float-cta{top:auto!important;bottom:24px!important;left:0!important;right:0!important;margin:0 auto!important;width:max-content!important;max-width:calc(100% - 48px)!important}}
+@media (max-width:720px){
+  .lla-float-cta .lla-cta-eyebrow{font-size:12px!important}
+  .lla-float-cta .lla-cta-title{font-size:16px!important}
+  .lla-float-cta .lla-cta-pill .price{font-size:20px!important}
+  .lla-float-cta .lla-cta-pill .mo{font-size:12px!important}
+}
+
+/* ---- Jordan Lattimore: face higher in the card ---- */
+.teacher-card-live-photo img[alt="Jordan Lattimore"]{object-position:50% 22%!important;transform:scale(1.18);transform-origin:50% 80%}
+
+/* ---- More than one colour: every card in a set gets its own accent ---- */
+.topic-v2--green{--acc:#22B27A}.topic-v2--blue{--acc:#3B8BFF}.topic-v2--cyan{--acc:#12B5CB}.topic-v2--indigo{--acc:#7C5CFF}.topic-v2--orange{--acc:#FF7A45}.topic-v2--violet{--acc:#C25CFF}
+.topic-v2{box-shadow:inset 0 3px 0 var(--acc,#3B8BFF),0 20px 50px -30px rgba(0,0,0,.8)!important}
+.topic-v2 .topic-v2-num{color:var(--acc,#7CC4FF)!important;font-weight:800!important}
+.topic-v2 h3{text-shadow:0 2px 12px rgba(0,0,0,.6)}
+.topic-v2 h3::after{content:'';display:block;width:42px;height:3px;border-radius:3px;margin-top:8px;background:var(--acc,#3B8BFF)}
+.skills .skill-card:nth-child(1){--acc:#5EB6FF}.skills .skill-card:nth-child(2){--acc:#7DE5C1}.skills .skill-card:nth-child(3){--acc:#FFB38A}
+.skills .skill-card .skill-eyebrow{color:var(--acc)!important}
+.skills .skill-card{box-shadow:inset 0 3px 0 var(--acc)!important}
+.value .value-card:nth-child(4n+1){--acc:#006EFF}.value .value-card:nth-child(4n+2){--acc:#22B27A}.value .value-card:nth-child(4n+3){--acc:#FF7A45}.value .value-card:nth-child(4n+4){--acc:#7C5CFF}
+.value .value-card{border-top:4px solid var(--acc)!important}
+.value .value-card h3{color:var(--acc)!important}
+.testimonials .quote-card:nth-child(3n+1){--acc:#006EFF}.testimonials .quote-card:nth-child(3n+2){--acc:#22B27A}.testimonials .quote-card:nth-child(3n+3){--acc:#FF7A45}
+.testimonials .quote-card{border-top:4px solid var(--acc)!important}
+.testimonials .quote-card .quote-mark{color:var(--acc)!important}
+.instructors .teacher-card-live:nth-child(5n+1){--acc:#006EFF}.instructors .teacher-card-live:nth-child(5n+2){--acc:#7C5CFF}.instructors .teacher-card-live:nth-child(5n+3){--acc:#22B27A}.instructors .teacher-card-live:nth-child(5n+4){--acc:#FF7A45}.instructors .teacher-card-live:nth-child(5n+5){--acc:#12B5CB}
+.instructors .teacher-card-live{border-top:4px solid var(--acc)!important}
+.instructors .teacher-card-live .teacher-card-live-role{color:var(--acc)!important}
+.faq .faq-item:nth-child(4n+1) .faq-num{background:#E6F0FF!important;color:#0047B3!important}
+.faq .faq-item:nth-child(4n+2) .faq-num{background:#E3F7EE!important;color:#127A52!important}
+.faq .faq-item:nth-child(4n+3) .faq-num{background:#FFEDE4!important;color:#B4471A!important}
+.faq .faq-item:nth-child(4n+4) .faq-num{background:#EFEAFF!important;color:#5A3DD6!important}
+
+/* ---- Phones: card sets swipe sideways (short page, one card and a peek of the next) ---- */
+@media (max-width:760px){
+  .topic-grid-v2,.nov-incl-grid,.skills-grid,.teachers-grid-live,.value div:has(> .value-card),.testimonials div:has(> .quote-card){
+    display:flex!important;flex-wrap:nowrap!important;overflow-x:auto!important;overflow-y:hidden!important;scroll-snap-type:x mandatory;gap:14px!important;
+    padding:6px 16px 22px!important;margin:0 -16px!important;grid-template-columns:none!important;-webkit-overflow-scrolling:touch;scrollbar-width:none;max-width:none!important}
+  .topic-grid-v2::-webkit-scrollbar,.nov-incl-grid::-webkit-scrollbar,.skills-grid::-webkit-scrollbar,.teachers-grid-live::-webkit-scrollbar{display:none}
+  .topic-grid-v2>*,.nov-incl-grid>*,.skills-grid>*,.teachers-grid-live>*,.value .value-card,.testimonials .quote-card{
+    flex:0 0 84%!important;width:84%!important;max-width:none!important;min-width:0!important;scroll-snap-align:center;margin:0!important;transform:none!important;opacity:1!important}
+  .teachers-grid-live>*{flex-basis:66%!important;width:66%!important}
+  .mf-swipe{display:flex;align-items:center;justify-content:center;gap:8px;margin:2px 0 0;font:600 15px/1 Inter,sans-serif;color:#7C8DB0}
+  .mf-swipe::after{content:'';width:22px;height:2px;background:currentColor;border-radius:2px;box-shadow:6px 0 0 currentColor}
+}
+@media (min-width:761px){.mf-swipe{display:none}}
+
+/* ---- Type: reading text 18px or more, labels 14px or more (Omri: tiny text everywhere) ---- */
+section .eyebrow{font-size:15px!important}
+body section.topics .topic-v2-desc{font-size:17.5px!important;line-height:1.5!important}
+body section.topics .topic-v2-num{font-size:15px!important}
+.topics .section-subtitle,.curriculum .section-subtitle,.nov-incl .section-title+p,.skills .section-subtitle,.instructors .section-subtitle{font-size:19px!important;line-height:1.6!important}
+.curriculum .curriculum-section-label{font-size:14px!important}
+.curriculum li,.curriculum .curriculum-flow,.curriculum .curriculum-work{font-size:18px!important;line-height:1.55!important}
+.curriculum h3{font-size:19px!important}
+.curriculum .curriculum-tab-meta{font-size:14px!important}
+.curriculum .curriculum-tab-num{font-size:14px!important}
+.curriculum .curriculum-tab-name{font-size:16.5px!important}
+.curriculum .phase-block-label{font-size:16px!important}
+.nov-incl .tag{font-size:14px!important}
+.nov-incl-card p{font-size:18px!important;line-height:1.55!important}
+.nov-incl-card h3{font-size:21px!important}
+.nov-vip .section-subtitle{font-size:20px!important}
+.nov-vip figcaption{font-size:16px!important}
+.nov-vip .nov-vip-after{font-size:17px!important}
+.nov-vip li,.nov-vip .nov-vip-bio{font-size:19px!important;line-height:1.6!important}
+.how-v2 p,.how-v2-card p{font-size:18px!important;line-height:1.55!important}
+.how-v2 h3,.how-v2-card h3{font-size:21px!important}
+.skills .skill-content p{font-size:18px!important;line-height:1.5!important}
+.skills .skill-eyebrow{font-size:14px!important}
+.skills h3{font-size:23px!important}
+.value .value-card p{font-size:18px!important;line-height:1.55!important}
+.value .value-card h3{font-size:22px!important}
+.about p{font-size:20px!important;line-height:1.65!important}
+.about .about-powered-label{font-size:15px!important}
+.about .about-powered-desc{font-size:19px!important;line-height:1.6!important}
+.about .hero-powered-stats li>span{font-size:14px!important}
+.about .hero-powered-stats strong{font-size:28px!important}
+.instructors .teacher-card-live-bio{font-size:17px!important;line-height:1.55!important}
+.instructors .teacher-card-live-role{font-size:14px!important}
+.testimonials .quote-meta{font-size:15px!important}
+.testimonials p,.testimonials blockquote{font-size:18px!important;line-height:1.6!important}
+.faq .faq-num{font-size:15px!important}
+.faq .faq-q{font-size:19px!important}
+.faq .faq-a-inner{font-size:18px!important;line-height:1.65!important}
+.final-cta .final-cta-sub{font-size:20px!important}
+.footer a,.footer p{font-size:16px!important}
+.footer h4,.footer div,.footer .brand-name-codec{font-size:14px!important}
+@media (min-width:769px){.nav .nav-links a{font-size:16px!important}}
+
+/* ---- Phones: shorter page (tighter fold spacing, smaller portrait, clamped bios, compact FAQ) ---- */
+@media (max-width:760px){
+  .topics,.curriculum,.mc-pricing,.nov-vip,.nov-incl,.cgm2,.how-v2,.skills,.value,.about,.instructors,.testimonials,.faq,.final-cta{padding-top:52px!important;padding-bottom:52px!important}
+  .section-title{margin-bottom:12px!important}
+  .faq .faq-q{font-size:17.5px!important;line-height:1.3!important}
+  .faq-list,.faq .faq-items{gap:8px!important}
+  .nov-vip-portrait img{height:300px!important;width:100%!important;object-fit:cover!important;object-position:50% 18%!important}
+  .nov-vip-grid{gap:20px!important}
+  .instructors .teacher-card-live-bio{display:-webkit-box!important;-webkit-line-clamp:5;-webkit-box-orient:vertical;overflow:hidden}
+  .instructors-header{margin-bottom:24px!important}
+  .faq .faq-item{margin-bottom:10px!important}
+  .faq .faq-q{padding:14px 16px!important;min-height:0!important}
+  .about .about-powered-desc{display:-webkit-box!important;-webkit-line-clamp:4;-webkit-box-orient:vertical;overflow:hidden}
+  .how-v2 .section-subtitle,.skills .section-subtitle{margin-bottom:18px!important}
+  .curriculum .curriculum-intro,.curriculum .section-subtitle{margin-bottom:18px!important}
+}
+@media (max-width:760px){
+  .teachers-grid-live{align-items:flex-start!important}
+  .teachers-grid-live .teachers-row2{display:contents!important}
+  .teachers-grid-live .teachers-row2>*{flex:0 0 66%!important;width:66%!important;scroll-snap-align:center;margin:0!important}
+  .topic-grid-v2,.nov-incl-grid,.skills-grid,.value div:has(> .value-card),.testimonials div:has(> .quote-card){align-items:stretch!important}
+}
+
+/*%%BRAND%%*/

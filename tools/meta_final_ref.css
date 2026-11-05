@@ -1,0 +1,79 @@
+/* =====================================================================
+   REFERENCE PALETTE AND 3D, from the five deck slides Omri sent (stress, sugar, sleep, food, testing):
+   deep navy, glass cards with a coloured top bar (teal, blue, violet, magenta), glowing curves.
+   ===================================================================== */
+:root{--r-teal:#2EC4B6;--r-blue:#3D7BFF;--r-violet:#8A6CFF;--r-magenta:#D46BD8;--r-pink:#FF7FA8;--r-sky:#8FC7FF;--r-lav:#B9C3FF;--r-ink:#D9E3FF}
+/* deep navy folds with soft glows */
+body section.mf-learn,body section.nov-incl,body section.instructors,body section#teachers,body section.testimonials,body section.faq,body section.skills{
+  background:radial-gradient(55% 45% at 8% 0%,rgba(61,123,255,.26),transparent 70%),radial-gradient(50% 45% at 100% 100%,rgba(138,108,255,.22),transparent 70%),linear-gradient(180deg,#050C22 0%,#081638 100%)!important;background-color:#050C22!important;color:#fff!important}
+body section.mf-learn .section-title,body section.nov-incl .section-title,body section.instructors .section-title,body section.testimonials .section-title,body section.faq .section-title,body section.skills .section-title{color:#fff!important}
+body section .section-title em,body section .section-title span{color:var(--r-lav)!important}
+body section.mf-learn .section-subtitle,body section.instructors .section-subtitle,body section.skills .section-subtitle,body section.nov-incl .section-subtitle{color:var(--r-ink)!important}
+.eyebrow,.cgm4-eyebrow{color:var(--r-sky)!important}
+
+/* the glass card: coloured gradient fill and top bar, like the food and testing slides */
+.nov-incl-card,.mf-learn .curriculum-tab,.quote-card,.faq-item,.teacher-card-live,.cgm4-facts li,.mf-learn .curriculum-item,.mf-learn .phase-benefit{
+  background:linear-gradient(90deg,var(--c,#3D7BFF),color-mix(in srgb,var(--c,#3D7BFF) 55%,#fff)) 18px 14px/calc(100% - 36px) 4px no-repeat,
+             linear-gradient(165deg,color-mix(in srgb,var(--c,#3D7BFF) 36%,#0A1633) 0%,color-mix(in srgb,var(--c,#3D7BFF) 10%,#0A1633) 100%)!important;
+  border:1px solid color-mix(in srgb,var(--c,#3D7BFF) 42%,transparent)!important;border-radius:18px!important;
+  box-shadow:0 1px 0 rgba(255,255,255,.14) inset,0 26px 50px -26px rgba(0,0,0,.9),0 0 44px -20px var(--c,#3D7BFF)!important;color:#fff!important}
+.nov-incl-card,.quote-card,.teacher-card-live,.cgm4-facts li{padding-top:34px!important}
+/* colour order teal, blue, violet, magenta, as in the deck */
+.nov-incl-card:nth-child(4n+1),.quote-card:nth-child(4n+1),.faq-item:nth-child(4n+1),.teacher-card-live:nth-child(4n+1),.cgm4-facts li:nth-child(1){--c:#2EC4B6}
+.nov-incl-card:nth-child(4n+2),.quote-card:nth-child(4n+2),.faq-item:nth-child(4n+2),.teacher-card-live:nth-child(4n+2),.cgm4-facts li:nth-child(2){--c:#3D7BFF}
+.nov-incl-card:nth-child(4n+3),.quote-card:nth-child(4n+3),.faq-item:nth-child(4n+3),.teacher-card-live:nth-child(4n+3),.cgm4-facts li:nth-child(3){--c:#8A6CFF}
+.nov-incl-card:nth-child(4n+4),.quote-card:nth-child(4n+4),.faq-item:nth-child(4n+4),.teacher-card-live:nth-child(4n+4){--c:#D46BD8}
+.teachers-row2 .teacher-card-live:nth-child(1){--c:#D46BD8}.teachers-row2 .teacher-card-live:nth-child(2){--c:#2EC4B6}
+.mf-learn .curriculum-tab[data-phase-tab="1"],.mf-learn .phase-block[data-phase="1"]{--ph:#2EC4B6!important;--c:#2EC4B6}
+.mf-learn .curriculum-tab[data-phase-tab="2"],.mf-learn .phase-block[data-phase="2"]{--ph:#3D7BFF!important;--c:#3D7BFF}
+.mf-learn .curriculum-tab[data-phase-tab="3"],.mf-learn .phase-block[data-phase="3"]{--ph:#8A6CFF!important;--c:#8A6CFF}
+.mf-learn .curriculum-tab[data-phase-tab="4"],.mf-learn .phase-block[data-phase="4"]{--ph:#D46BD8!important;--c:#D46BD8}
+.mf-learn .phase-block .curriculum-item,.mf-learn .phase-block .phase-benefit{--c:var(--ph)}
+.topic-v2--green,.topic-v2--cyan{--acc:#2EC4B6}.topic-v2--blue{--acc:#3D7BFF}.topic-v2--indigo,.topic-v2--violet{--acc:#8A6CFF}.topic-v2--orange{--acc:#D46BD8}
+.skills .skill-card:nth-child(1){--acc:#2EC4B6}.skills .skill-card:nth-child(2){--acc:#3D7BFF}.skills .skill-card:nth-child(3){--acc:#8A6CFF}
+.skills .skill-card{box-shadow:inset 0 4px 0 var(--acc),0 26px 50px -26px rgba(0,0,0,.9),0 0 44px -20px var(--acc)!important}
+
+/* text inside glass cards: large, white and light lavender, never small grey */
+.nov-incl-card .n{color:color-mix(in srgb,var(--c) 55%,#fff)!important;font:600 15px/1 Inter,sans-serif!important;letter-spacing:.18em!important;font-style:normal!important}
+.nov-incl-card h3{font-size:26px!important;color:#fff!important;font-style:normal!important;margin-top:8px!important}
+.nov-incl-card p{font-family:'Playfair Display',Georgia,serif!important;font-style:italic!important;font-size:19px!important;line-height:1.45!important;color:var(--r-ink)!important}
+.nov-incl-card .tag{background:color-mix(in srgb,var(--c) 30%,transparent)!important;color:#fff!important;border:1px solid color-mix(in srgb,var(--c) 60%,transparent)!important;font-size:14px!important}
+.mf-learn .curriculum-tab{background-position:16px 12px,0 0!important;background-size:calc(100% - 32px) 4px,auto!important;padding-top:28px!important}
+.mf-learn .curriculum-tab .curriculum-tab-num{color:color-mix(in srgb,var(--ph) 55%,#fff)!important;font:600 14px/1 Inter,sans-serif!important;letter-spacing:.18em!important;font-style:normal!important}
+.mf-learn .curriculum-tab .curriculum-tab-name{font-family:'Playfair Display',Georgia,serif!important;font-weight:500!important;font-size:22px!important;color:#fff!important}
+.mf-learn .curriculum-tab .curriculum-tab-meta{color:var(--r-ink)!important;font-size:15px!important}
+.mf-learn .curriculum-tab.is-active{background:linear-gradient(90deg,#fff,#fff) 16px 12px/calc(100% - 32px) 4px no-repeat,linear-gradient(160deg,var(--ph),color-mix(in srgb,var(--ph) 45%,#0A1633))!important;transform:translateY(-4px)}
+.mf-learn .phase-block-label{color:color-mix(in srgb,var(--ph) 60%,#fff)!important}
+.mf-learn .phase-block-name{color:#fff!important;font-size:34px!important}
+.mf-learn .phase-benefit{font-size:19px!important;color:#fff!important;padding:30px 22px 18px!important}
+.mf-learn .phase-benefit b{color:color-mix(in srgb,var(--ph) 50%,#fff)!important}
+.mf-learn .phase-benefit::before{display:none!important}
+.mf-learn .curriculum-item{background-image:linear-gradient(165deg,color-mix(in srgb,var(--ph) 18%,#0A1633),#0A1633)!important;background-size:auto!important}
+.mf-learn .curriculum-num{background:color-mix(in srgb,var(--ph) 30%,transparent)!important;color:#fff!important}
+.mf-learn .curriculum-trigger h3{color:#fff!important;font-size:20px!important;font-family:'Playfair Display',Georgia,serif!important;font-weight:500!important}
+.mf-learn .curriculum-body-inner,.mf-learn .curriculum-goals li,.mf-learn .curriculum-flow,.mf-learn .curriculum-work{color:var(--r-ink)!important;font-size:18px!important}
+.mf-learn .curriculum-section-label{color:color-mix(in srgb,var(--ph) 55%,#fff)!important}
+.mf-learn .syl-benefit{color:#fff!important}
+.quote-card .quote-text{font-family:'Playfair Display',Georgia,serif!important;font-style:italic!important;font-size:22px!important;line-height:1.45!important;color:#fff!important;font-weight:400!important}
+.quote-card .quote-mark{color:color-mix(in srgb,var(--c) 60%,#fff)!important}
+.quote-card .quote-stars svg{color:#fff!important;fill:#fff!important}
+.quote-card .quote-meta{color:color-mix(in srgb,var(--c) 55%,#fff)!important;font-size:15px!important}
+.faq-item{padding-top:10px!important;background-position:18px 10px,0 0!important}
+.faq .faq-q{color:#fff!important;font-size:21px!important;font-weight:500!important}
+.faq .faq-num{background:color-mix(in srgb,var(--c) 30%,transparent)!important;color:#fff!important}
+.faq .faq-icon{color:#fff!important}
+.faq .faq-a-inner{color:var(--r-ink)!important;font-size:18.5px!important}
+.teacher-card-live{overflow:hidden}
+.teacher-card-live .teacher-card-live-name{color:#fff!important;font-size:23px!important;font-weight:500!important}
+.teacher-card-live .teacher-card-live-role{color:color-mix(in srgb,var(--c) 55%,#fff)!important;font-size:14px!important}
+.teacher-card-live .teacher-card-live-bio{color:var(--r-ink)!important;font-size:17.5px!important}
+.cgm4-facts b{color:#fff!important}
+.cgm4-facts li:nth-child(1) b{color:#7FE3D8!important}.cgm4-facts li:nth-child(2) b{color:#A9C4FF!important}.cgm4-facts li:nth-child(3) b{color:#C7B8FF!important}
+.mc-pricing .pk-rows li:nth-child(1){--dot:#2EC4B6}.mc-pricing .pk-rows li:nth-child(2){--dot:#8FC7FF}.mc-pricing .pk-rows li:nth-child(3){--dot:#B9A8FF}.mc-pricing .pk-rows li:nth-child(4){--dot:#F09BEA}
+.mc-pricing .pk-len{background:linear-gradient(90deg,#2EC4B6,#3D7BFF)!important;color:#fff!important}
+.mf-julie .jstats>div:nth-child(1) b{color:#7FE3D8!important}.mf-julie .jstats>div:nth-child(2) b{color:#A9C4FF!important}.mf-julie .jstats>div:nth-child(3) b{color:#C7B8FF!important}.mf-julie .jstats>div:nth-child(4) b{color:#F09BEA!important}
+.lead-gen-v2 .lead-gen-v2-bullets li:nth-child(1) svg{color:#2EC4B6!important}.lead-gen-v2 .lead-gen-v2-bullets li:nth-child(2) svg{color:#3D7BFF!important}.lead-gen-v2 .lead-gen-v2-bullets li:nth-child(3) svg{color:#8A6CFF!important}.lead-gen-v2 .lead-gen-v2-bullets li:nth-child(4) svg{color:#D46BD8!important}
+.lead-gen-v2 .lead-gen-v2-eyebrow{color:var(--r-sky)!important}
+.skills .skill-card .skill-eyebrow{color:color-mix(in srgb,var(--acc) 55%,#fff)!important}
+.instructors .btn-primary,.testimonials .btn-primary,.faq .btn-primary{box-shadow:0 18px 40px -12px rgba(61,123,255,.8)!important}
+.mf-swipe{color:var(--r-ink)!important}
