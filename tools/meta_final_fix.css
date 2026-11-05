@@ -782,3 +782,13 @@ html.mf body :is(.mfp-ic,#cgm .cgm8-ic) svg{width:28px!important;height:28px!imp
 html.mf body ul.mfp-list li{grid-template-columns:30px minmax(0,1fr)!important;gap:16px!important}
 html.mf body #cgm .cgm8-panel li{grid-template-columns:30px minmax(0,1fr)!important;gap:16px!important}
 @media (max-width:900px){html.mf body .hero .mf-tp-count{border-left:0!important;padding-left:0!important;flex-basis:100%;text-align:center}}
+/* ===== Round 14 (Omri: list fonts and icons cheap, pricing and Lingo): the .com Playfair italic numerals instead of icons, lighter Inter text ===== */
+html.mf body ul.mfp-list,html.mf body #cgm .cgm8-panel ul{counter-reset:inc!important}
+html.mf body :is(.mfp-ic,#cgm .cgm8-ic){display:none!important}
+html.mf body ul.mfp-list li,html.mf body #cgm .cgm8-panel ul li{grid-template-columns:40px minmax(0,1fr)!important;gap:12px!important;align-items:baseline!important;padding:14px 0!important;font:400 19px/1.45 Inter,sans-serif!important;letter-spacing:-.003em!important;color:#1C2E4F!important}
+html.mf body ul.mfp-list li::before,html.mf body #cgm .cgm8-panel ul li::before{counter-increment:inc!important;content:counter(inc,decimal-leading-zero)!important;display:block!important;position:static!important;width:auto!important;height:auto!important;background:none!important;box-shadow:none!important;border-radius:0!important;font:italic 400 26px/1 'Playfair Display',Georgia,serif!important;color:#006EFF!important;-webkit-text-fill-color:#006EFF!important}
+html.mf body ul.mfp-list li span,html.mf body #cgm .cgm8-panel ul li span{font:inherit!important;color:inherit!important}
+@media (max-width:760px){
+  html.mf body ul.mfp-list li,html.mf body #cgm .cgm8-panel ul li{font-size:18.5px!important;grid-template-columns:36px minmax(0,1fr)!important}
+  html.mf body ul.mfp-list li::before,html.mf body #cgm .cgm8-panel ul li::before{font-size:24px!important}
+}
