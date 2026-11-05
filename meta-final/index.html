@@ -10079,6 +10079,50 @@ html.mf body #julie .jher-proof img{display:block;width:100%;height:auto}
 /* Round 33 (Omri: you can't show her decks): no slide; photo and three facts */
 @media (min-width:901px){html.mf body #julie .jher{grid-template-columns:minmax(0,400px) minmax(0,1fr)!important;grid-template-areas:"photo facts"!important;align-items:center!important}html.mf body #julie .jher-photo img{aspect-ratio:1/1;height:auto}html.mf body #julie .jher-facts{display:block!important}html.mf body #julie .jher-facts li,html.mf body #julie .jher-facts li:first-child{padding:18px 0!important;border-left:0!important;border-bottom:1px solid rgba(160,210,255,.22)!important}html.mf body #julie .jher-facts li:last-child{border-bottom:0!important}html.mf body #julie .jher-facts li:first-child{padding-top:0!important}}
 @media (max-width:900px){html.mf body #julie .jher-facts li:nth-child(2){display:block!important}}
+/* ===== Round 34 (Omri: look at the masterclass, shorten it): the masterclass Julie bento on its light ice background, no stats band, all cards visible on phones ===== */
+html.mf body #julie.mf-julie-light{background:radial-gradient(60% 50% at 85% 0%,rgba(0,110,255,.16),transparent 70%),linear-gradient(180deg,#F2F7FF 0%,#E4EEFB 100%)!important;padding:64px 0 60px!important}
+html.mf body #julie.mf-julie-light .mf-head .section-title{color:#0D1C33!important;-webkit-text-fill-color:#0D1C33!important}
+html.mf body #julie.mf-julie-light .mf-head .section-title :is(em,span){background:none!important;color:#006EFF!important;-webkit-text-fill-color:#006EFF!important}
+html.mf body #julie.mf-julie-light .mf-head :is(.eyebrow){color:#006EFF!important;-webkit-text-fill-color:#006EFF!important}
+html.mf body #julie.mf-julie-light .mf-head .section-subtitle{display:block!important;color:#0A1E3A!important;-webkit-text-fill-color:#0A1E3A!important;font-size:21px!important}
+@media (min-width:901px){
+  html.mf body #julie.mf-julie-light .jbento{display:grid!important;grid-template-columns:repeat(12,minmax(0,1fr))!important;grid-template-rows:auto auto!important;gap:16px!important;align-items:stretch!important;max-width:1180px;margin:0 auto}
+  html.mf body #julie.mf-julie-light .jbento > .jb.jb-photo{grid-column:1/5!important;grid-row:1/3!important;display:flex!important;flex-direction:column!important}
+  html.mf body #julie.mf-julie-light .jbento > .jb.jb-vid:nth-child(2){grid-column:5/9!important;grid-row:1!important}
+  html.mf body #julie.mf-julie-light .jbento > .jb.jb-vid:nth-child(3){grid-column:9/13!important;grid-row:1!important}
+  html.mf body #julie.mf-julie-light .jbento > .jb.jb-wide{grid-column:5/13!important;grid-row:2!important;display:grid!important;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr)!important}
+  html.mf body #julie.mf-julie-light .jb-photo img{height:auto!important;flex:1 1 0!important;min-height:0!important;object-fit:cover!important;object-position:50% 22%!important}
+  html.mf body #julie.mf-julie-light .jb-vid video{height:170px!important;width:100%!important;object-fit:cover!important}
+  html.mf body #julie.mf-julie-light .jb-wide video{height:100%!important;max-height:none!important;min-height:0!important;object-fit:cover!important}
+  html.mf body #julie.mf-julie-light .jb-wide .jb-wide-body{padding:24px 26px!important;justify-content:center!important}
+  html.mf body #julie.mf-julie-light .jb-cap b{font-size:23px!important}
+  html.mf body #julie.mf-julie-light .jb-cap span{font-size:18px!important}
+}
+@media (max-width:900px){
+  html.mf body #julie.mf-julie-light{padding:44px 0 40px!important}
+  html.mf body #julie.mf-julie-light .jbento{display:grid!important;grid-template-columns:1fr 1fr!important;gap:10px!important;overflow:visible!important;padding:0!important}
+  html.mf body #julie.mf-julie-light .jbento > .jb{width:auto!important;min-width:0!important;max-width:none!important;flex:none!important;grid-column:auto!important;grid-row:auto!important}
+  html.mf body #julie.mf-julie-light .jbento > .jb.jb-photo{grid-column:1/-1!important;display:grid!important;grid-template-columns:42% minmax(0,1fr)!important;align-items:center}
+  html.mf body #julie.mf-julie-light .jb-photo img{height:100%!important;min-height:200px;object-fit:cover!important;object-position:50% 22%!important}
+  html.mf body #julie.mf-julie-light .jb-photo-body{padding:14px!important}
+  html.mf body #julie.mf-julie-light .jb-photo-body h3{font-size:24px!important}
+  html.mf body #julie.mf-julie-light .jb-role{font-size:17px!important}
+  html.mf body #julie.mf-julie-light .jb-vid video{height:105px!important;width:100%!important;object-fit:cover!important}
+  html.mf body #julie.mf-julie-light .jb-cap{padding:12px 12px 14px!important}
+  html.mf body #julie.mf-julie-light .jb-cap b{font-size:19px!important;line-height:1.2!important}
+  html.mf body #julie.mf-julie-light .jb-cap span{font-size:17px!important}
+  html.mf body #julie.mf-julie-light .jbento > .jb.jb-wide{grid-column:1/-1!important;display:flex!important;flex-direction:column!important}
+  html.mf body #julie.mf-julie-light .jb-wide video{height:160px!important;max-height:none!important;width:100%!important;object-fit:cover!important}
+}
+html.mf body #julie.mf-julie-light .mf-head h2.section-title em,html.mf body #julie.mf-julie-light .mf-head h2.section-title span{background:none!important;-webkit-background-clip:border-box!important;background-clip:border-box!important;color:#006EFF!important;-webkit-text-fill-color:#006EFF!important;filter:none!important}
+@media (max-width:900px){
+  html.mf body #julie.mf-julie-light .jbento{margin:0!important;width:auto!important}
+  html.mf body #julie.mf-julie-light .jb-photo-body{position:static!important;margin:0!important;transform:none!important;background:none!important}
+  html.mf body #julie.mf-julie-light .jb-wide video{display:none!important}
+  html.mf body #julie.mf-julie-light .jb-wide .jb-wide-body{padding:18px 16px 20px!important}
+}
+html.mf body #julie.mf-julie-light .jb-role{font:500 19px/1.45 Inter,sans-serif!important;color:#FFFFFF!important;-webkit-text-fill-color:#FFFFFF!important}
+@media (max-width:900px){html.mf body #julie.mf-julie-light .jb-role{font-size:18px!important}}
 
 /* Round 12 (Omri): pricing card in the masterclass card language. White glass card, blue halo, left-aligned, Playfair title and price, label rows instead of check bullets */
 html.mf body section.mfp{position:relative;padding:72px 0 64px;background:radial-gradient(60% 45% at 50% 38%,rgba(0,110,255,.30),transparent 70%),radial-gradient(40% 30% at 85% 90%,rgba(59,167,255,.14),transparent 70%),linear-gradient(180deg,#040B1E 0%,#071433 100%)}
@@ -10963,25 +11007,39 @@ html.mf body .mfp-tbonus.mfp-twide{margin:4px 0 0!important}
   </div>
 </section>
 
-<section class="mf-julie v8-julie v9-julie" id="julie">
+<section class="mf-julie v8-julie v9-julie mf-julie-light" id="julie">
   <div class="container">
     <div class="mf-head">
       <span class="eyebrow">Included with enrollment</span>
       <h2 class="section-title">Your VIP Masterclass with <em>Julie Gibson Clark.</em></h2>
       <p class="section-subtitle">Exclusive access to her 90-minute live masterclass, Q&amp;A included. Saturday, November&nbsp;14.</p>
     </div>
-    <div class="jher">
-      <figure class="jher-photo">
-        <img src="https://gitteromri-ux.github.io/lla-blueprint-vip-preview/meta-final/assets/julie-face.jpg" alt="Julie Gibson Clark" loading="lazy" width="600" height="600">
-        <figcaption><b>Julie Gibson Clark</b><span>The 2nd slowest-aging woman on Earth</span></figcaption>
-      </figure>
-      <ol class="jher-facts">
-        <li><b>No. 2 on Earth</b><span>Rejuvenation Olympics, ahead of Bryan Johnson&rsquo;s $2M-a-year program.</span></li>
-        <li><b>8 months a year</b><span>Her pace of aging. DunedinPACE 0.665, verified by epigenetic testing.</span></li>
-        <li><b>VIP access included</b><span>Her 90-minute live masterclass, Q&amp;A included, Nov&nbsp;14.</span></li>
-      </ol>
+    <div class="jbento">
+      <article class="jb jb-photo tcard t-navy">
+        <img src="https://gitteromri-ux.github.io/lla-blueprint-vip-preview/meta-final/assets/julie-face.jpg" alt="Julie Gibson Clark" loading="lazy">
+        <div class="jb-photo-body">
+          <h3>Julie Gibson Clark</h3>
+          <p class="serif-i jb-role">The 2nd slowest-aging human ever measured. She teaches the masterclass live.</p>
+        </div>
+      </article>
+      <article class="jb jb-vid tcard t-navy">
+        <video src="https://gitteromri-ux.github.io/lla-blueprint-vip-preview/meta-final/assets/anim/ANIM_PACE_1080.mp4" poster="https://gitteromri-ux.github.io/lla-blueprint-vip-preview/meta-final/assets/anim/pace-poster.jpg" autoplay muted loop playsinline preload="metadata"></video>
+        <div class="jb-cap"><b>She ages 8 months a year.</b><span>DunedinPACE 0.665, proven by verified epigenetic testing.</span></div>
+      </article>
+      <article class="jb jb-vid tcard t-navy">
+        <video src="https://gitteromri-ux.github.io/lla-blueprint-vip-preview/meta-final/assets/anim/ANIM_CURVE_1080.mp4" poster="https://gitteromri-ux.github.io/lla-blueprint-vip-preview/meta-final/assets/anim/curve-poster.jpg" autoplay muted loop playsinline preload="metadata"></video>
+        <div class="jb-cap"><b>34% slower than average.</b><span>Most people age one full year, every year. She doesn&rsquo;t.</span></div>
+      </article>
+      <article class="jb jb-wide tcard t-royal">
+        <video src="https://gitteromri-ux.github.io/lla-blueprint-vip-preview/meta-final/assets/anim/PLAY_V6_LLA_RANK.mp4" poster="https://gitteromri-ux.github.io/lla-blueprint-vip-preview/meta-final/assets/anim/rank-poster.jpg" autoplay muted loop playsinline preload="metadata"></video>
+        <div class="jb-wide-body">
+          <b class="jb-big">No. 2 on Earth.</b>
+          <p>Rejuvenation Olympics leaderboard, ahead of Bryan Johnson&rsquo;s $2M-a-year program.</p>
+          <p class="jb-incl">VIP Masterclass access included: 90&nbsp;min, live&nbsp;Q&amp;A, Nov&nbsp;14.</p>
+          <div class="jcta"><a class="mf-jbtn" href="#pricing">Enroll Now</a></div>
+        </div>
+      </article>
     </div>
-    <div class="jg-cta"><a class="mf-jbtn" href="#pricing">Enroll Now</a></div>
   </div>
 </section>
 
