@@ -9612,6 +9612,24 @@ html.mf body #cgm .cgm8-stagebox{margin-bottom:58px!important}
   html.mf body #cgm .cgm8-ic{width:42px;height:42px;border-radius:12px}
 }
 @media (max-width:900px){html.mf body #cgm .cgm8-stagebox{transform:translateX(-66px)!important}html.mf body #cgm .cgm8-callout{left:calc(100% - 6px)!important}}
+/* ===== Round 13 (Omri: Trustpilot too large and flashy; icons robotic): calm Trustpilot line, thin line icons with no tiles ===== */
+html.mf body .hero .mf-tp{transform:none!important;margin:0 0 18px!important;gap:6px 12px!important;align-items:center!important}
+html.mf body .hero .mf-tp-logo{gap:5px!important}
+html.mf body .hero .mf-tp-logo svg{width:17px!important;height:17px!important}
+html.mf body .hero .mf-tp-logo b{font:600 16px/1 Inter,sans-serif!important;color:#E8F1FF!important;letter-spacing:0!important}
+html.mf body .hero .mf-tp-stars{gap:1px!important}
+html.mf body .hero .mf-tp-stars i,html.mf body .hero .mf-tp-stars i:last-child{width:15px!important;height:15px!important;background:none!important;box-shadow:none!important;border-radius:0!important}
+html.mf body .hero .mf-tp-stars svg{width:15px!important;height:15px!important}
+html.mf body .hero .mf-tp-stars i:last-child svg{opacity:.55}
+html.mf body .hero .mf-tp-score{font:500 16px/1 Inter,sans-serif!important;color:#E8F1FF!important}
+html.mf body .hero .mf-tp-score b{font-size:16px!important;font-weight:700!important;color:#FFFFFF!important}
+html.mf body .hero .mf-tp-count{font:500 16px/1 Inter,sans-serif!important;color:#C9DCF7!important;padding-left:12px!important;border-left:1px solid rgba(255,255,255,.25)!important}
+/* thin line icons, no tiles, in the pricing card and the Lingo panel */
+html.mf body :is(.mfp-ic,#cgm .cgm8-ic){width:30px!important;height:30px!important;border-radius:0!important;background:none!important;box-shadow:none!important}
+html.mf body :is(.mfp-ic,#cgm .cgm8-ic) svg{width:28px!important;height:28px!important;stroke:#006EFF!important;stroke-width:1.4!important}
+html.mf body ul.mfp-list li{grid-template-columns:30px minmax(0,1fr)!important;gap:16px!important}
+html.mf body #cgm .cgm8-panel li{grid-template-columns:30px minmax(0,1fr)!important;gap:16px!important}
+@media (max-width:900px){html.mf body .hero .mf-tp-count{border-left:0!important;padding-left:0!important;flex-basis:100%;text-align:center}}
 
 /* Round 12 (Omri): pricing card in the masterclass card language. White glass card, blue halo, left-aligned, Playfair title and price, label rows instead of check bullets */
 html.mf body section.mfp{position:relative;padding:72px 0 64px;background:radial-gradient(60% 45% at 50% 38%,rgba(0,110,255,.30),transparent 70%),radial-gradient(40% 30% at 85% 90%,rgba(59,167,255,.14),transparent 70%),linear-gradient(180deg,#040B1E 0%,#071433 100%)}
