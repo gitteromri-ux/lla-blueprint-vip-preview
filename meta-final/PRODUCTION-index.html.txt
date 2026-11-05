@@ -9416,6 +9416,9 @@ html body section.value .value-card .value-title{color:color-mix(in srgb,var(--v
   .cgm8-panel li::before{left:11px;top:13px;width:13px;height:13px}
   .cgm8-fine{font-size:15.5px;margin-top:12px}
 }
+/* Six Systems: no orange nodes (Omri: no orange) */
+html body .deepdive .hex-node[data-hex="3"]{border-color:rgba(46,196,182,.75)!important;box-shadow:0 0 30px rgba(46,196,182,.35),inset 0 0 30px rgba(46,196,182,.1)!important}
+html body .deepdive .hex-node[data-hex="5"]{border-color:rgba(126,200,255,.75)!important;box-shadow:0 0 30px rgba(126,200,255,.35),inset 0 0 30px rgba(126,200,255,.1)!important}
 
 
 </style>
