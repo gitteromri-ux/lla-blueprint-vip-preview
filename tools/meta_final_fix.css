@@ -863,3 +863,117 @@ html.mf body footer.footer{padding-bottom:190px !important}
 html.mf body #faq .faq-a-inner{color:#0A1E3A !important}
 html.mf body #mobileNavOverlay{background:#000B1F !important}
 html.mf body #nav{background:#040B1E !important}
+/* ===== Round 25: top-folds and desktop/tablet review ===== */
+/* syllabus: phase colours stay brand when tabs are tapped; dark readable session titles */
+html.mf body #syllabus .phase-block .phase-block-label{color:var(--ph,#0047B8)!important}
+html.mf body #syllabus .phase-block .phase-block-name{color:var(--ph,#006EFF)!important;-webkit-text-fill-color:var(--ph,#006EFF)!important;font-weight:600!important}
+html.mf body #syllabus .phase-block .phase-block-header{background:linear-gradient(135deg,color-mix(in srgb,var(--ph,#006EFF) 8%,transparent),transparent)!important;border-bottom-color:color-mix(in srgb,var(--ph,#006EFF) 40%,transparent)!important}
+html.mf body #syllabus .phase-block .curriculum-num{color:var(--ph,#006EFF)!important;background:color-mix(in srgb,var(--ph,#006EFF) 10%,#fff)!important;border-color:color-mix(in srgb,var(--ph,#006EFF) 22%,#fff)!important}
+html.mf body #syllabus .phase-block :is(h3,.curriculum-trigger-text h3){color:#0A1E3A!important;-webkit-text-fill-color:#0A1E3A!important}
+html.mf body #syllabus .phase-block .phase-benefit{background:color-mix(in srgb,var(--ph,#006EFF) 8%,#fff)!important;border-color:color-mix(in srgb,var(--ph,#006EFF) 30%,#fff)!important}
+html.mf body #syllabus .phase-block .phase-benefit::before{background:var(--ph,#006EFF)!important}
+html.mf body #syllabus .phase-block .phase-benefit b{color:var(--ph,#006EFF)!important}
+html.mf body #syllabus :is(.section-subtitle,.phase-benefit){text-wrap:pretty!important}
+/* Julie: readable stats, kicker and chips; wide video card fills its frame */
+html.mf body #julie .jstats{background:transparent!important;border-color:rgba(124,192,255,.35)!important}
+html.mf body #julie .jstats b{background:none!important;-webkit-text-fill-color:#BFE2FF!important;color:#BFE2FF!important}
+html.mf body #julie .jstats span{text-transform:none!important;letter-spacing:0!important}
+html.mf body #julie .jstats i{color:#fff!important}
+html.mf body #julie .jb-kicker{color:#fff!important;text-shadow:0 1px 10px rgba(4,11,30,.95)!important}
+html.mf body #julie .jb-chips span{display:block!important;white-space:nowrap!important}
+html.mf body #julie .jb-chips span::before{content:none!important}
+@media (min-width:1025px){html.mf body #julie .jb-wide{grid-template-columns:1fr!important}html.mf body #julie .jb-wide video{width:100%!important;height:auto!important;aspect-ratio:16/9;object-fit:cover!important}}
+/* hero: film caption below the video controls; Trustpilot 17px white; tablet centred */
+html.mf body #hero .lla-film figcaption{position:static!important;background:none!important;padding:14px 4px 4px!important}
+html.mf body #hero .mf-tp :is(b,span){font-size:17px!important}
+html.mf body #hero .mf-tp-count{color:#fff!important}
+@media (min-width:768px) and (max-width:1024px){html.mf body #hero .hero-inner{width:100%!important;max-width:760px!important;margin:0 auto!important}}
+@media (min-width:1025px){html.mf body #hero .hero-sub{margin-left:0!important;padding-left:0!important}}
+/* six pillars: full short text, number and title tidy */
+html.mf body section.topics .topic-v2-desc{-webkit-line-clamp:unset!important;line-clamp:unset!important;max-height:none!important;overflow:visible!important;display:block!important}
+html.mf body section.topics .topic-v2-title{flex-direction:column!important;align-items:flex-start!important;gap:10px!important}
+html.mf body section.topics .topic-v2-num{font-size:17px!important}
+/* no Codec Pro anywhere visible; Inter instead */
+html.mf body :is(.topic-v2-num,.topic-v2-title,.btn-ghost,.section-cta-btn,.how-v2-num,.how-v2-card-title,.skill-title,.hex-center-label,.hex-node-label,.hex-detail-title,.hero-powered-stats *,.lead-gen-v2-form label,.lead-gen-v2-submit,.lg-buy-main,.lla-cta-title,.bioquiz-badge-num,footer h4,#julie .jb-cap b,.brand-name-codec){font-family:Inter,system-ui,sans-serif!important}
+/* course includes: no grey cards, sentence-case tag, no orphan card */
+html.mf body .nov-incl-card:nth-child(3n+1){--c1:#006EFF!important;--c2:#7EC8FF!important}
+html.mf body .nov-incl-card:nth-child(3n+2){--c1:#3BA7FF!important;--c2:#BFE2FF!important}
+html.mf body .nov-incl-card:nth-child(3n+3){--c1:#1B4FD8!important;--c2:#6FB6FF!important}
+html.mf body #included .nov-incl-card .tag{text-transform:none!important;letter-spacing:0!important}
+@media (min-width:1025px){html.mf body #included .nov-incl-grid{grid-template-columns:repeat(6,1fr)!important}html.mf body #included .nov-incl-card{grid-column:span 2!important}html.mf body #included .nov-incl-card:nth-child(n+4){grid-column:span 3!important}}
+@media (min-width:768px) and (max-width:1024px){html.mf body #included .nov-incl-card:nth-child(5),html.mf body #skills .skill-card:nth-child(3){grid-column:1/-1!important}html.mf body #teachers .teacher-card-live.is-founding{grid-column:1/-1!important;order:-1;justify-self:center}}
+/* Lingo: no repeated eyebrow; callout readable and visible on desktop */
+html.mf body #cgm .cgm8-head .eyebrow{display:none!important}
+html.mf body #cgm .cgm8-callout span{font-size:18px!important}
+@media (min-width:901px){html.mf body #cgm .cgm8-callout{left:50%!important;transform:translateX(-50%);top:100%!important;margin-top:14px!important;text-align:center}}
+@media (min-width:768px) and (max-width:1024px){html.mf body #cgm .mf-lb{display:block}}
+/* pricing */
+html.mf body #pricing .mfp-side s{color:#33456B!important}
+html.mf body #pricing .mfp-head .section-subtitle{margin-left:auto!important;margin-right:auto!important}
+@media (min-width:761px){html.mf body .mfp-card{max-width:720px!important}}
+/* Six Systems detail card readable */
+html.mf body section.deepdive .hex-detail-desc{color:#0A1E3A!important;-webkit-text-fill-color:#0A1E3A!important;font-size:20px!important}
+html.mf body section.deepdive .hex-detail-tag{text-transform:none!important;letter-spacing:0!important;color:#0A1E3A!important;font-size:17px!important;opacity:1!important}
+@media (min-width:768px) and (max-width:1024px){html.mf body section.deepdive .hex-node{width:128px!important;height:128px!important}}
+/* form: not tilted, readable */
+html.mf body #lead-gen .lead-gen-v2-form{transform:none!important}
+html.mf body #lead-gen .lg-or span{text-transform:none!important;font-size:17px!important;color:#33456B!important}
+html.mf body #lead-gen .lead-gen-v2-trust{font-size:17px!important;color:#33456B!important;opacity:1!important}
+@media (min-width:1025px){html.mf body #lead-gen .lead-gen-v2-grid{align-items:start!important}}
+/* no all-caps labels, no translucent text on dark folds */
+html.mf body :is(#included .tag,#about .about-readmore,section.bioquiz .bioquiz-badge-label,footer h4){text-transform:none!important;letter-spacing:0!important;opacity:1!important}
+html.mf body :is(footer p,footer a,footer .footer-bottom div,#about .about-powered-label,#about .hero-powered-stats span,section.deepdive .hex-center-sub,section.bioquiz .bioquiz-eyebrow){color:#fff!important;opacity:1!important}
+/* desktop reading text 20px; dark-on-light bodies solid */
+@media (min-width:1025px){html.mf body :is(.topic-v2-desc,.mfp-t span,#julie .jb span,#julie .jstats i,.about-powered-desc,.teacher-card-live-bio,.how-v2-card-desc,.lead-gen-v2-form-sub,.faq-a-inner,.nov-incl-card p){font-size:20px!important}}
+html.mf body :is(.teacher-card-live-bio,.faq-a-inner){color:#0A1E3A!important}
+/* tablet headers larger */
+@media (min-width:768px) and (max-width:1024px){html.mf body :is(.section-title,.how-v2-title,.lead-gen-v2-headline,.bioquiz-title,.final-cta-title,.about-mainhead){font-size:46px!important}}
+/* ===== Round 25b: middle-folds review (tested CSS from the reviewer). Six Systems grid and edge-to-edge tracks on phones only ===== */
+html.mf body #about .about-powered-desc,html.mf body #lead-gen .lead-gen-v2-sub,html.mf body #teachers .teacher-card-live-bio{-webkit-line-clamp:unset !important;line-clamp:unset !important;display:block !important;overflow:visible !important;max-height:none !important;height:auto !important}
+html.mf body #about .about-powered-label,html.mf body #about .hero-powered-stats li > span{color:#fff !important}
+html.mf body #about .hero-powered-stats{gap:1px !important;background:rgba(255,255,255,.12) !important;border-radius:0 0 22px 22px !important;overflow:hidden !important}
+html.mf body #about .hero-powered-stats > li{border:0 !important;background:#0E2142 !important}
+html.mf body #about .about-readmore{text-transform:none !important;letter-spacing:0 !important}
+html.mf body #about .about-powered img,html.mf body #how .how-v2-logo{height:44px !important;width:auto !important}
+html.mf body #teachers h2.section-title,html.mf body section.value h2.section-title{text-wrap:balance !important}
+html.mf body #teachers .teacher-card-live-bio{color:#0A1E3A !important}
+html.mf body #teachers .teacher-card-live-photo img[src*="jordan"]{transform:scale(1.12) translateY(-3%) !important}
+html.mf body #teachers .teacher-card-live.is-founding,html.mf body #teachers .teachers-row2 > .teacher-card-live:first-child{background:linear-gradient(165deg,#F2F8FF 0%,#D9E9FF 100%) !important}
+html.mf body #how .how-v2-card{border-top-width:1px !important}
+html.mf body #how .how-v2-card:nth-child(3){background:linear-gradient(165deg,#1E5BD0 0%,#0C2A6B 100%) !important}
+html.mf body section.value .value-track-wrap{overflow:visible !important}
+html.mf body section.value .value-header{flex-direction:column !important;align-items:center !important;gap:24px !important}
+html.mf body section.value .value-header > div{width:100% !important}
+html.mf body #skills .skill-card:nth-child(2){background:linear-gradient(165deg,#0F4AB8 0%,#0A2463 100%) !important}
+html.mf body section.deepdive #hexDetailDesc,html.mf body section.deepdive #hexDetailTag{color:#0A1E3A !important}
+html.mf body section.deepdive #hexDetailTag{text-transform:none !important;letter-spacing:0 !important;font-size:17px !important}
+html.mf body section.deepdive .hex-center-sub{color:#fff !important}
+html.mf body #lead-gen .lead-gen-v2-bullets{display:block !important;width:fit-content !important;max-width:100% !important;margin:0 auto 28px !important}
+html.mf body #lead-gen .lead-gen-v2-bullets li{text-align:left !important;justify-content:flex-start !important;padding:6px 0 !important}
+html.mf body #lead-gen .lead-gen-v2-trust,html.mf body #lead-gen .lead-gen-v2-form-sub{color:#22385E !important;font-size:17px !important}
+html.mf body #lead-gen .lg-or span{font-size:17px !important;text-transform:none !important;letter-spacing:0 !important;color:#22385E !important}
+html.mf body #about .about-powered-logo-img,html.mf body #how .how-v2-logo{height:64px !important;width:auto !important;margin-top:-10px !important;margin-bottom:-10px !important}
+html.mf body #about .hero-powered-stats{gap:1px !important;background:rgba(255,255,255,.12) !important;align-items:stretch !important;border-radius:0 0 22px 22px !important;overflow:hidden !important}
+html.mf body #about .hero-powered-stats > li{border:0 !important;background:#0E2142 !important;margin:0 !important;align-self:stretch !important;height:auto !important;justify-content:center !important}
+html.mf body section.value .value-nav{align-self:center !important;justify-content:center !important;margin:0 auto !important}
+html.mf body #teachers .teacher-card-live-photo img[src*="jordan"]{transform:scale(1.12) translateY(-3%) !important}
+html.mf body section.deepdive #hexDetail{opacity:1 !important;transform:none !important}
+html.mf body section.deepdive #hexDetailDesc,html.mf body section.deepdive #hexDetailTag{color:#0A1E3A !important;-webkit-text-fill-color:#0A1E3A !important}
+html.mf body section.deepdive #hexDetailTag{text-transform:none !important;letter-spacing:0 !important;font-size:17px !important}
+html.mf body #teachers .teachers-grid-live{align-items:stretch !important}
+html.mf body #about .about-powered .about-powered-logo-img{height:64px !important}
+@media (max-width:900px){
+html.mf body #how .how-v2-track-container{margin:0 -20px !important;padding:0 20px 24px !important;border-radius:0 !important;scroll-padding-inline:20px !important}
+html.mf body section.value #valTrack{margin:0 -20px !important;padding:6px 20px 28px !important;scroll-padding-inline:20px !important}
+html.mf body section.deepdive #hexChart{transform:none !important;height:auto !important;min-height:0 !important;width:100% !important;display:grid !important;grid-template-columns:1fr 1fr !important;gap:12px !important;margin:0 0 20px !important}
+html.mf body section.deepdive #hexChart .hex-node{position:relative !important;left:auto !important;top:auto !important;width:auto !important;height:auto !important;min-height:112px !important;border-radius:22px !important;animation:none !important;transform:none !important;padding:16px 10px !important}
+html.mf body section.deepdive #hexChart .hex-center,html.mf body section.deepdive #hexChart .hex-orbit,html.mf body section.deepdive #hexChart .hex-line{display:none !important}
+html.mf body section.deepdive #hexChart{min-width:0 !important;max-width:100% !important}
+}
+html.mf body #how .how-v2-card:nth-child(odd){background:linear-gradient(165deg,#12357F 0%,#071A44 100%)!important}
+html.mf body #how .how-v2-card:nth-child(even){background:linear-gradient(165deg,#1E5BD0 0%,#0C2A6B 100%)!important}
+html.mf body :is(.section-title,.how-v2-title,.lead-gen-v2-headline,.bioquiz-title,.final-cta-title,.about-mainhead){text-wrap:balance!important}
+html.mf body section.trust-strip .trust-logo-img{mix-blend-mode:lighten!important}
+html.mf body :is(#hexDetailTitle,.bump-whatsapp,.et-bump-btn){font-family:Inter,system-ui,sans-serif!important}
+html.mf body section.value .value-header h2.section-title :is(span,em){background:linear-gradient(180deg,#CFE8FF 0%,#7CC0FF 100%)!important;-webkit-background-clip:text!important;background-clip:text!important;color:transparent!important;-webkit-text-fill-color:transparent!important}
+html.mf body #lead-gen .lead-gen-v2-trust svg{display:none!important}

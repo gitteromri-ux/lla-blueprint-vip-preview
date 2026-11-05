@@ -202,6 +202,39 @@ def common(s):
     s = s.replace('Trustpilot · 5 stars · Sept 2025', 'Trustpilot · 5 stars · September 2025')
     s = must(s, 'energy, and habits, get an estimate of how', 'energy, and habits, and get an estimate of how')
     s = must(s, '>Privacy</a> · <a href="support/"', '>Privacy</a>\n        <a href="support/"')
+    # Round 25: top-folds and desktop review copy fixes (Omri: shorten texts if needed; .com wording trimmed)
+    for a, b in [
+        ('Incorporate a daily routine that transforms your kitchen into a medicine cabinet by adopting plant-forward, nutrient-dense food patterns that combat inflammation and promote cellular rejuvenation.',
+         'Transform your kitchen into a medicine cabinet with plant-forward, nutrient-dense food patterns that combat inflammation.'),
+        ('Actionable, science-backed protocols to optimize your sleep architecture and activate cellular repair, reduce inflammation, and reverse biological aging. Sleep is the most underutilized longevity lever, regulating cortisol rhythm, HGH secretion, glymphatic clearance, and metabolic repair. Your protocol starts here.',
+         'Science-backed protocols to optimize your sleep architecture and activate cellular repair. Sleep is the most underutilized longevity lever.'),
+        ('Transform your approach to aging by building a resilient body, focusing on functional strength, Zone 2 endurance, and stability to maximize both your lifespan and healthspan.',
+         'Build a resilient body with functional strength, Zone 2 endurance, and stability to maximize your healthspan.'),
+        ('Targeted compounds, NAD+ precursors (NMN/NR), omega-3s, D3 + K2, magnesium, rapamycin, metformin, berberine, deployed against specific biomarker gaps, not stacked by trend. CGM, HRV, and sleep data turn every protocol into a feedback loop.',
+         'Targeted compounds deployed against specific biomarker gaps, not stacked by trend. Your data turns every protocol into a feedback loop.'),
+        ('Chronic stress drives cortisol dysregulation, HPA-axis dysfunction, accelerated telomere attrition, and rising allostatic load, measurable upstream contributors to cardiovascular and metabolic disease. The protocol uses autonomic nervous system regulation, structured breathwork, deliberate cold exposure, vagal tone training, and social connection as a validated mortality predictor, to keep biology resilient, not relaxed.',
+         'Structured breathwork, deliberate cold exposure, vagal tone training, and social connection keep your biology resilient, not just relaxed.'),
+        ('Generic health advice ends here: your protocol is built from your own bloodwork, lipid sub-particles, ApoB, fasting insulin, inflammatory markers, body composition, and continuous wearable data. This is Medicine 3.0 in practice, a proactive, individualized plan that iterates against your biomarkers and risk profile, so every intervention is measured, owned, and adjusted to your biology.',
+         'Generic health advice ends here. Your protocol is built from your own bloodwork, biomarkers, and wearable data.'),
+        ('<h3>continuous glucose monitor: Seeing the Invisible</h3>', '<h3>Continuous Glucose Monitor: Seeing the Invisible</h3>'),
+        ('<p class="curriculum-flow">continuous glucose monitor applied live', '<p class="curriculum-flow">Continuous glucose monitor applied live'),
+        ('<p class="curriculum-flow">continuous glucose monitor data review', '<p class="curriculum-flow">Continuous glucose monitor data review'),
+        ('<span class="phase-block-name">Data &amp; Discovery</span>', '<span class="phase-block-name">Data and Discovery</span>'),
+        ('<span class="phase-block-name">Integration &amp; Blueprint</span>', '<span class="phase-block-name">Integration and Blueprint</span>'),
+        ('Baseline Self-Assessment', 'Baseline Self&#8209;Assessment'), ('the Gut-Brain-Glucose Axis', 'the Gut&#8209;Brain&#8209;Glucose Axis'), ('Intent-setting close', 'Intent&#8209;setting close'),
+        ('certified longevity instructors. A free Abbott Lingo', 'certified longevity instructors. A&nbsp;free Abbott Lingo'),
+        ('A live session with the 2nd slowest-aging woman on earth.', 'A live session with the 2nd slowest-aging woman on Earth.'),
+        ('<div class="hex-center-sub">12 sessions</div>', '<div class="hex-center-sub">18 live classes</div>'),
+        ('Rejuvenation Olympics + A leading voice', 'Rejuvenation Olympics. A leading voice'),
+        ('Enroll Online Now &middot; $79 month 1/mo', 'Enroll Online Now &middot; $79 first month'),
+        ('<h2 class="how-v2-title">How It Works</h2>', '<h2 class="how-v2-title">How It <em class="mf-acc">Works</em></h2>'),
+    ]:
+        if a in s:
+            s = s.replace(a, b)
+        else:
+            print('note: not found:', a[:60])
+    s = s.replace(' \\u2014 ', ', ')
+    s = re.sub(r'(<a [^>]*class="section-cta-btn[^"]*"[^>]*>)Enroll now', r'\1Enroll Now', s)
     css = open(os.path.join(HERE, 'meta_final.css'), encoding='utf-8').read().replace('/*%%HERO_CSS%%*/', '').replace('/*%%NEW_FOLDS%%*/', open(os.path.join(HERE, 'meta_final_newfolds.css'), encoding='utf-8').read()).replace('/*%%JULIE_CSS%%*/', open(os.path.join(HERE, 'masterclass_julie.css'), encoding='utf-8').read()).replace('/*%%BRAND%%*/', open(os.path.join(HERE, 'meta_final_fix.css'), encoding='utf-8').read() + '\n' + open(os.path.join(HERE, 'meta_final_pricing_big.css'), encoding='utf-8').read())
     s = s.replace('</head>', '<style id="meta-final">\n' + css + '\n</style>\n</head>', 1)
     js = open(os.path.join(HERE, 'meta_final.js'), encoding='utf-8').read()

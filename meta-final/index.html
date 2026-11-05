@@ -9711,6 +9711,120 @@ html.mf body footer.footer{padding-bottom:190px !important}
 html.mf body #faq .faq-a-inner{color:#0A1E3A !important}
 html.mf body #mobileNavOverlay{background:#000B1F !important}
 html.mf body #nav{background:#040B1E !important}
+/* ===== Round 25: top-folds and desktop/tablet review ===== */
+/* syllabus: phase colours stay brand when tabs are tapped; dark readable session titles */
+html.mf body #syllabus .phase-block .phase-block-label{color:var(--ph,#0047B8)!important}
+html.mf body #syllabus .phase-block .phase-block-name{color:var(--ph,#006EFF)!important;-webkit-text-fill-color:var(--ph,#006EFF)!important;font-weight:600!important}
+html.mf body #syllabus .phase-block .phase-block-header{background:linear-gradient(135deg,color-mix(in srgb,var(--ph,#006EFF) 8%,transparent),transparent)!important;border-bottom-color:color-mix(in srgb,var(--ph,#006EFF) 40%,transparent)!important}
+html.mf body #syllabus .phase-block .curriculum-num{color:var(--ph,#006EFF)!important;background:color-mix(in srgb,var(--ph,#006EFF) 10%,#fff)!important;border-color:color-mix(in srgb,var(--ph,#006EFF) 22%,#fff)!important}
+html.mf body #syllabus .phase-block :is(h3,.curriculum-trigger-text h3){color:#0A1E3A!important;-webkit-text-fill-color:#0A1E3A!important}
+html.mf body #syllabus .phase-block .phase-benefit{background:color-mix(in srgb,var(--ph,#006EFF) 8%,#fff)!important;border-color:color-mix(in srgb,var(--ph,#006EFF) 30%,#fff)!important}
+html.mf body #syllabus .phase-block .phase-benefit::before{background:var(--ph,#006EFF)!important}
+html.mf body #syllabus .phase-block .phase-benefit b{color:var(--ph,#006EFF)!important}
+html.mf body #syllabus :is(.section-subtitle,.phase-benefit){text-wrap:pretty!important}
+/* Julie: readable stats, kicker and chips; wide video card fills its frame */
+html.mf body #julie .jstats{background:transparent!important;border-color:rgba(124,192,255,.35)!important}
+html.mf body #julie .jstats b{background:none!important;-webkit-text-fill-color:#BFE2FF!important;color:#BFE2FF!important}
+html.mf body #julie .jstats span{text-transform:none!important;letter-spacing:0!important}
+html.mf body #julie .jstats i{color:#fff!important}
+html.mf body #julie .jb-kicker{color:#fff!important;text-shadow:0 1px 10px rgba(4,11,30,.95)!important}
+html.mf body #julie .jb-chips span{display:block!important;white-space:nowrap!important}
+html.mf body #julie .jb-chips span::before{content:none!important}
+@media (min-width:1025px){html.mf body #julie .jb-wide{grid-template-columns:1fr!important}html.mf body #julie .jb-wide video{width:100%!important;height:auto!important;aspect-ratio:16/9;object-fit:cover!important}}
+/* hero: film caption below the video controls; Trustpilot 17px white; tablet centred */
+html.mf body #hero .lla-film figcaption{position:static!important;background:none!important;padding:14px 4px 4px!important}
+html.mf body #hero .mf-tp :is(b,span){font-size:17px!important}
+html.mf body #hero .mf-tp-count{color:#fff!important}
+@media (min-width:768px) and (max-width:1024px){html.mf body #hero .hero-inner{width:100%!important;max-width:760px!important;margin:0 auto!important}}
+@media (min-width:1025px){html.mf body #hero .hero-sub{margin-left:0!important;padding-left:0!important}}
+/* six pillars: full short text, number and title tidy */
+html.mf body section.topics .topic-v2-desc{-webkit-line-clamp:unset!important;line-clamp:unset!important;max-height:none!important;overflow:visible!important;display:block!important}
+html.mf body section.topics .topic-v2-title{flex-direction:column!important;align-items:flex-start!important;gap:10px!important}
+html.mf body section.topics .topic-v2-num{font-size:17px!important}
+/* no Codec Pro anywhere visible; Inter instead */
+html.mf body :is(.topic-v2-num,.topic-v2-title,.btn-ghost,.section-cta-btn,.how-v2-num,.how-v2-card-title,.skill-title,.hex-center-label,.hex-node-label,.hex-detail-title,.hero-powered-stats *,.lead-gen-v2-form label,.lead-gen-v2-submit,.lg-buy-main,.lla-cta-title,.bioquiz-badge-num,footer h4,#julie .jb-cap b,.brand-name-codec){font-family:Inter,system-ui,sans-serif!important}
+/* course includes: no grey cards, sentence-case tag, no orphan card */
+html.mf body .nov-incl-card:nth-child(3n+1){--c1:#006EFF!important;--c2:#7EC8FF!important}
+html.mf body .nov-incl-card:nth-child(3n+2){--c1:#3BA7FF!important;--c2:#BFE2FF!important}
+html.mf body .nov-incl-card:nth-child(3n+3){--c1:#1B4FD8!important;--c2:#6FB6FF!important}
+html.mf body #included .nov-incl-card .tag{text-transform:none!important;letter-spacing:0!important}
+@media (min-width:1025px){html.mf body #included .nov-incl-grid{grid-template-columns:repeat(6,1fr)!important}html.mf body #included .nov-incl-card{grid-column:span 2!important}html.mf body #included .nov-incl-card:nth-child(n+4){grid-column:span 3!important}}
+@media (min-width:768px) and (max-width:1024px){html.mf body #included .nov-incl-card:nth-child(5),html.mf body #skills .skill-card:nth-child(3){grid-column:1/-1!important}html.mf body #teachers .teacher-card-live.is-founding{grid-column:1/-1!important;order:-1;justify-self:center}}
+/* Lingo: no repeated eyebrow; callout readable and visible on desktop */
+html.mf body #cgm .cgm8-head .eyebrow{display:none!important}
+html.mf body #cgm .cgm8-callout span{font-size:18px!important}
+@media (min-width:901px){html.mf body #cgm .cgm8-callout{left:50%!important;transform:translateX(-50%);top:100%!important;margin-top:14px!important;text-align:center}}
+@media (min-width:768px) and (max-width:1024px){html.mf body #cgm .mf-lb{display:block}}
+/* pricing */
+html.mf body #pricing .mfp-side s{color:#33456B!important}
+html.mf body #pricing .mfp-head .section-subtitle{margin-left:auto!important;margin-right:auto!important}
+@media (min-width:761px){html.mf body .mfp-card{max-width:720px!important}}
+/* Six Systems detail card readable */
+html.mf body section.deepdive .hex-detail-desc{color:#0A1E3A!important;-webkit-text-fill-color:#0A1E3A!important;font-size:20px!important}
+html.mf body section.deepdive .hex-detail-tag{text-transform:none!important;letter-spacing:0!important;color:#0A1E3A!important;font-size:17px!important;opacity:1!important}
+@media (min-width:768px) and (max-width:1024px){html.mf body section.deepdive .hex-node{width:128px!important;height:128px!important}}
+/* form: not tilted, readable */
+html.mf body #lead-gen .lead-gen-v2-form{transform:none!important}
+html.mf body #lead-gen .lg-or span{text-transform:none!important;font-size:17px!important;color:#33456B!important}
+html.mf body #lead-gen .lead-gen-v2-trust{font-size:17px!important;color:#33456B!important;opacity:1!important}
+@media (min-width:1025px){html.mf body #lead-gen .lead-gen-v2-grid{align-items:start!important}}
+/* no all-caps labels, no translucent text on dark folds */
+html.mf body :is(#included .tag,#about .about-readmore,section.bioquiz .bioquiz-badge-label,footer h4){text-transform:none!important;letter-spacing:0!important;opacity:1!important}
+html.mf body :is(footer p,footer a,footer .footer-bottom div,#about .about-powered-label,#about .hero-powered-stats span,section.deepdive .hex-center-sub,section.bioquiz .bioquiz-eyebrow){color:#fff!important;opacity:1!important}
+/* desktop reading text 20px; dark-on-light bodies solid */
+@media (min-width:1025px){html.mf body :is(.topic-v2-desc,.mfp-t span,#julie .jb span,#julie .jstats i,.about-powered-desc,.teacher-card-live-bio,.how-v2-card-desc,.lead-gen-v2-form-sub,.faq-a-inner,.nov-incl-card p){font-size:20px!important}}
+html.mf body :is(.teacher-card-live-bio,.faq-a-inner){color:#0A1E3A!important}
+/* tablet headers larger */
+@media (min-width:768px) and (max-width:1024px){html.mf body :is(.section-title,.how-v2-title,.lead-gen-v2-headline,.bioquiz-title,.final-cta-title,.about-mainhead){font-size:46px!important}}
+/* ===== Round 25b: middle-folds review (tested CSS from the reviewer). Six Systems grid and edge-to-edge tracks on phones only ===== */
+html.mf body #about .about-powered-desc,html.mf body #lead-gen .lead-gen-v2-sub,html.mf body #teachers .teacher-card-live-bio{-webkit-line-clamp:unset !important;line-clamp:unset !important;display:block !important;overflow:visible !important;max-height:none !important;height:auto !important}
+html.mf body #about .about-powered-label,html.mf body #about .hero-powered-stats li > span{color:#fff !important}
+html.mf body #about .hero-powered-stats{gap:1px !important;background:rgba(255,255,255,.12) !important;border-radius:0 0 22px 22px !important;overflow:hidden !important}
+html.mf body #about .hero-powered-stats > li{border:0 !important;background:#0E2142 !important}
+html.mf body #about .about-readmore{text-transform:none !important;letter-spacing:0 !important}
+html.mf body #about .about-powered img,html.mf body #how .how-v2-logo{height:44px !important;width:auto !important}
+html.mf body #teachers h2.section-title,html.mf body section.value h2.section-title{text-wrap:balance !important}
+html.mf body #teachers .teacher-card-live-bio{color:#0A1E3A !important}
+html.mf body #teachers .teacher-card-live-photo img[src*="jordan"]{transform:scale(1.12) translateY(-3%) !important}
+html.mf body #teachers .teacher-card-live.is-founding,html.mf body #teachers .teachers-row2 > .teacher-card-live:first-child{background:linear-gradient(165deg,#F2F8FF 0%,#D9E9FF 100%) !important}
+html.mf body #how .how-v2-card{border-top-width:1px !important}
+html.mf body #how .how-v2-card:nth-child(3){background:linear-gradient(165deg,#1E5BD0 0%,#0C2A6B 100%) !important}
+html.mf body section.value .value-track-wrap{overflow:visible !important}
+html.mf body section.value .value-header{flex-direction:column !important;align-items:center !important;gap:24px !important}
+html.mf body section.value .value-header > div{width:100% !important}
+html.mf body #skills .skill-card:nth-child(2){background:linear-gradient(165deg,#0F4AB8 0%,#0A2463 100%) !important}
+html.mf body section.deepdive #hexDetailDesc,html.mf body section.deepdive #hexDetailTag{color:#0A1E3A !important}
+html.mf body section.deepdive #hexDetailTag{text-transform:none !important;letter-spacing:0 !important;font-size:17px !important}
+html.mf body section.deepdive .hex-center-sub{color:#fff !important}
+html.mf body #lead-gen .lead-gen-v2-bullets{display:block !important;width:fit-content !important;max-width:100% !important;margin:0 auto 28px !important}
+html.mf body #lead-gen .lead-gen-v2-bullets li{text-align:left !important;justify-content:flex-start !important;padding:6px 0 !important}
+html.mf body #lead-gen .lead-gen-v2-trust,html.mf body #lead-gen .lead-gen-v2-form-sub{color:#22385E !important;font-size:17px !important}
+html.mf body #lead-gen .lg-or span{font-size:17px !important;text-transform:none !important;letter-spacing:0 !important;color:#22385E !important}
+html.mf body #about .about-powered-logo-img,html.mf body #how .how-v2-logo{height:64px !important;width:auto !important;margin-top:-10px !important;margin-bottom:-10px !important}
+html.mf body #about .hero-powered-stats{gap:1px !important;background:rgba(255,255,255,.12) !important;align-items:stretch !important;border-radius:0 0 22px 22px !important;overflow:hidden !important}
+html.mf body #about .hero-powered-stats > li{border:0 !important;background:#0E2142 !important;margin:0 !important;align-self:stretch !important;height:auto !important;justify-content:center !important}
+html.mf body section.value .value-nav{align-self:center !important;justify-content:center !important;margin:0 auto !important}
+html.mf body #teachers .teacher-card-live-photo img[src*="jordan"]{transform:scale(1.12) translateY(-3%) !important}
+html.mf body section.deepdive #hexDetail{opacity:1 !important;transform:none !important}
+html.mf body section.deepdive #hexDetailDesc,html.mf body section.deepdive #hexDetailTag{color:#0A1E3A !important;-webkit-text-fill-color:#0A1E3A !important}
+html.mf body section.deepdive #hexDetailTag{text-transform:none !important;letter-spacing:0 !important;font-size:17px !important}
+html.mf body #teachers .teachers-grid-live{align-items:stretch !important}
+html.mf body #about .about-powered .about-powered-logo-img{height:64px !important}
+@media (max-width:900px){
+html.mf body #how .how-v2-track-container{margin:0 -20px !important;padding:0 20px 24px !important;border-radius:0 !important;scroll-padding-inline:20px !important}
+html.mf body section.value #valTrack{margin:0 -20px !important;padding:6px 20px 28px !important;scroll-padding-inline:20px !important}
+html.mf body section.deepdive #hexChart{transform:none !important;height:auto !important;min-height:0 !important;width:100% !important;display:grid !important;grid-template-columns:1fr 1fr !important;gap:12px !important;margin:0 0 20px !important}
+html.mf body section.deepdive #hexChart .hex-node{position:relative !important;left:auto !important;top:auto !important;width:auto !important;height:auto !important;min-height:112px !important;border-radius:22px !important;animation:none !important;transform:none !important;padding:16px 10px !important}
+html.mf body section.deepdive #hexChart .hex-center,html.mf body section.deepdive #hexChart .hex-orbit,html.mf body section.deepdive #hexChart .hex-line{display:none !important}
+html.mf body section.deepdive #hexChart{min-width:0 !important;max-width:100% !important}
+}
+html.mf body #how .how-v2-card:nth-child(odd){background:linear-gradient(165deg,#12357F 0%,#071A44 100%)!important}
+html.mf body #how .how-v2-card:nth-child(even){background:linear-gradient(165deg,#1E5BD0 0%,#0C2A6B 100%)!important}
+html.mf body :is(.section-title,.how-v2-title,.lead-gen-v2-headline,.bioquiz-title,.final-cta-title,.about-mainhead){text-wrap:balance!important}
+html.mf body section.trust-strip .trust-logo-img{mix-blend-mode:lighten!important}
+html.mf body :is(#hexDetailTitle,.bump-whatsapp,.et-bump-btn){font-family:Inter,system-ui,sans-serif!important}
+html.mf body section.value .value-header h2.section-title :is(span,em){background:linear-gradient(180deg,#CFE8FF 0%,#7CC0FF 100%)!important;-webkit-background-clip:text!important;background-clip:text!important;color:transparent!important;-webkit-text-fill-color:transparent!important}
+html.mf body #lead-gen .lead-gen-v2-trust svg{display:none!important}
 
 /* Round 12 (Omri): pricing card in the masterclass card language. White glass card, blue halo, left-aligned, Playfair title and price, label rows instead of check bullets */
 html.mf body section.mfp{position:relative;padding:72px 0 64px;background:radial-gradient(60% 45% at 50% 38%,rgba(0,110,255,.30),transparent 70%),radial-gradient(40% 30% at 85% 90%,rgba(59,167,255,.14),transparent 70%),linear-gradient(180deg,#040B1E 0%,#071433 100%)}
@@ -9970,7 +10084,7 @@ html.mf body .mfp-tbonus.mfp-twide .mfp-bhead b{white-space:nowrap}
     <!-- Hero brand: exact approved wordmark (no emblem) - identical fonts/colors -->
     <img src="https://www.longevitylifeacademy.com/assets/lla-wordmark-only-transparent@2x.png?v=10" alt="Longevity Life Academy by eTeacher Group" class="hero-wordmark-img" loading="eager" fetchpriority="high" width="397" height="253">
     <h1 class="hero-title">Your personal <span class="life-blue">longevity protocol,</span><br>built in 18 weeks.</h1>
-    <p class="hero-sub">Live small-group classes with certified longevity instructors. A free Abbott Lingo glucose sensor shipped to your home. You finish with a written protocol built on your own numbers.</p>
+    <p class="hero-sub">Live small-group classes with certified longevity instructors. A&nbsp;free Abbott Lingo glucose sensor shipped to your home. You finish with a written protocol built on your own numbers.</p>
     <div class="hero-cta-row">
       <div class="hero-cta-wrap">
         <div class="hero-cta-glow" aria-hidden="true"></div>
@@ -10009,7 +10123,7 @@ html.mf body .mfp-tbonus.mfp-twide .mfp-bhead b{white-space:nowrap}
         <div class="topic-v2-content">
           <span class="topic-v2-num">01</span>
           <h3 class="topic-v2-title">Nutrition</h3>
-          <p class="topic-v2-desc">Incorporate a daily routine that transforms your kitchen into a medicine cabinet by adopting plant-forward, nutrient-dense food patterns that combat inflammation and promote cellular rejuvenation.</p>
+          <p class="topic-v2-desc">Transform your kitchen into a medicine cabinet with plant-forward, nutrient-dense food patterns that combat inflammation.</p>
         </div>
         <div class="topic-v2-arrow"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg></div>
       </a>
@@ -10019,7 +10133,7 @@ html.mf body .mfp-tbonus.mfp-twide .mfp-bhead b{white-space:nowrap}
         <div class="topic-v2-content">
           <span class="topic-v2-num">02</span>
           <h3 class="topic-v2-title">Sleep</h3>
-          <p class="topic-v2-desc">Actionable, science-backed protocols to optimize your sleep architecture and activate cellular repair, reduce inflammation, and reverse biological aging. Sleep is the most underutilized longevity lever, regulating cortisol rhythm, HGH secretion, glymphatic clearance, and metabolic repair. Your protocol starts here.</p>
+          <p class="topic-v2-desc">Science-backed protocols to optimize your sleep architecture and activate cellular repair. Sleep is the most underutilized longevity lever.</p>
         </div>
         <div class="topic-v2-arrow"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg></div>
       </a>
@@ -10029,7 +10143,7 @@ html.mf body .mfp-tbonus.mfp-twide .mfp-bhead b{white-space:nowrap}
         <div class="topic-v2-content">
           <span class="topic-v2-num">03</span>
           <h3 class="topic-v2-title">Exercise &amp; Movement</h3>
-          <p class="topic-v2-desc">Transform your approach to aging by building a resilient body, focusing on functional strength, Zone 2 endurance, and stability to maximize both your lifespan and healthspan.</p>
+          <p class="topic-v2-desc">Build a resilient body with functional strength, Zone 2 endurance, and stability to maximize your healthspan.</p>
         </div>
         <div class="topic-v2-arrow"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg></div>
       </a>
@@ -10039,7 +10153,7 @@ html.mf body .mfp-tbonus.mfp-twide .mfp-bhead b{white-space:nowrap}
         <div class="topic-v2-content">
           <span class="topic-v2-num">04</span>
           <h3 class="topic-v2-title">Supplements &amp; Wearables</h3>
-          <p class="topic-v2-desc">Targeted compounds, NAD+ precursors (NMN/NR), omega-3s, D3 + K2, magnesium, rapamycin, metformin, berberine, deployed against specific biomarker gaps, not stacked by trend. CGM, HRV, and sleep data turn every protocol into a feedback loop.</p>
+          <p class="topic-v2-desc">Targeted compounds deployed against specific biomarker gaps, not stacked by trend. Your data turns every protocol into a feedback loop.</p>
         </div>
         <div class="topic-v2-arrow"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg></div>
       </a>
@@ -10049,7 +10163,7 @@ html.mf body .mfp-tbonus.mfp-twide .mfp-bhead b{white-space:nowrap}
         <div class="topic-v2-content">
           <span class="topic-v2-num">05</span>
           <h3 class="topic-v2-title">Stress Management</h3>
-          <p class="topic-v2-desc">Chronic stress drives cortisol dysregulation, HPA-axis dysfunction, accelerated telomere attrition, and rising allostatic load, measurable upstream contributors to cardiovascular and metabolic disease. The protocol uses autonomic nervous system regulation, structured breathwork, deliberate cold exposure, vagal tone training, and social connection as a validated mortality predictor, to keep biology resilient, not relaxed.</p>
+          <p class="topic-v2-desc">Structured breathwork, deliberate cold exposure, vagal tone training, and social connection keep your biology resilient, not just relaxed.</p>
         </div>
         <div class="topic-v2-arrow"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg></div>
       </a>
@@ -10059,7 +10173,7 @@ html.mf body .mfp-tbonus.mfp-twide .mfp-bhead b{white-space:nowrap}
         <div class="topic-v2-content">
           <span class="topic-v2-num">06</span>
           <h3 class="topic-v2-title">Your Longevity Protocol</h3>
-          <p class="topic-v2-desc">Generic health advice ends here: your protocol is built from your own bloodwork, lipid sub-particles, ApoB, fasting insulin, inflammatory markers, body composition, and continuous wearable data. This is Medicine 3.0 in practice, a proactive, individualized plan that iterates against your biomarkers and risk profile, so every intervention is measured, owned, and adjusted to your biology.</p>
+          <p class="topic-v2-desc">Generic health advice ends here. Your protocol is built from your own bloodwork, biomarkers, and wearable data.</p>
         </div>
         <div class="topic-v2-arrow"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg></div>
       </a>
@@ -10124,7 +10238,7 @@ html.mf body .mfp-tbonus.mfp-twide .mfp-bhead b{white-space:nowrap}
                   <li>Articulate a personal reason this course matters</li>
                 </ul>
                 <div class="curriculum-section-label">50-Minute Flow</div>
-                <p class="curriculum-flow">Welcome and group norms, Mini-lecture on healthspan, Medicine 3.0, and aging trajectories, Guided exercise visualizing your 80-year curve, Breakout on the default last decade, Group synthesis and shared course language, Intent-setting close with Longevity Lens preview</p>
+                <p class="curriculum-flow">Welcome and group norms, Mini-lecture on healthspan, Medicine 3.0, and aging trajectories, Guided exercise visualizing your 80-year curve, Breakout on the default last decade, Group synthesis and shared course language, Intent&#8209;setting close with Longevity Lens preview</p>
                 <div class="curriculum-section-label">Between-Session Work</div>
                 <p class="curriculum-work">Three-day lifestyle awareness log, sleep, movement, meals, energy. Descriptive only, no judgment.</p>
               </div>
@@ -10134,7 +10248,7 @@ html.mf body .mfp-tbonus.mfp-twide .mfp-bhead b{white-space:nowrap}
             <button class="curriculum-trigger" onclick="toggleCurriculum(this)">
               <span class="curriculum-num">02</span>
               <div class="curriculum-trigger-text">
-                <h3>The Longevity Lens and Baseline Self-Assessment</h3>
+                <h3>The Longevity Lens and Baseline Self&#8209;Assessment</h3>
               </div>
               <svg class="curriculum-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
             </button>
@@ -10182,7 +10296,7 @@ html.mf body .mfp-tbonus.mfp-twide .mfp-bhead b{white-space:nowrap}
       <div class="phase-block reveal" data-phase="2" style="--ph:#0A1E3A">
         <div class="phase-block-header">
           <span class="phase-block-label">Phase 2, Sessions 4 to 7</span>
-          <span class="phase-block-name">Data &amp; Discovery</span>
+          <span class="phase-block-name">Data and Discovery</span>
         </div>
         <p class="phase-benefit"><span><b>You leave Phase 2 with</b> two weeks of your own glucose data and the ability to read it, so you know which meals, food orders and timings work for your body.</span></p>
         <div class="phase-block-sessions">
@@ -10213,7 +10327,7 @@ html.mf body .mfp-tbonus.mfp-twide .mfp-bhead b{white-space:nowrap}
             <button class="curriculum-trigger" onclick="toggleCurriculum(this)">
               <span class="curriculum-num">05</span>
               <div class="curriculum-trigger-text">
-                <h3>continuous glucose monitor: Seeing the Invisible</h3>
+                <h3>Continuous Glucose Monitor: Seeing the Invisible</h3>
               </div>
               <svg class="curriculum-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
             </button>
@@ -10226,7 +10340,7 @@ html.mf body .mfp-tbonus.mfp-twide .mfp-bhead b{white-space:nowrap}
                   <li>Understand what continuous glucose monitor data can, and cannot, tell you</li>
                 </ul>
                 <div class="curriculum-section-label">50-Minute Flow</div>
-                <p class="curriculum-flow">continuous glucose monitor applied live with the class, App walkthrough and trace anatomy, Review three real participant traces from prior classes, Build your personal protocol for the next 14 days of observation</p>
+                <p class="curriculum-flow">Continuous glucose monitor applied live with the class, App walkthrough and trace anatomy, Review three real participant traces from prior classes, Build your personal protocol for the next 14 days of observation</p>
                 <div class="curriculum-section-label">Between-Session Work</div>
                 <p class="curriculum-work">Two weeks of blind observation, wear the continuous glucose monitor, log meals and movement, draw no conclusions yet.</p>
               </div>
@@ -10249,7 +10363,7 @@ html.mf body .mfp-tbonus.mfp-twide .mfp-bhead b{white-space:nowrap}
                   <li>Identify your three biggest glucose-driving foods</li>
                 </ul>
                 <div class="curriculum-section-label">50-Minute Flow</div>
-                <p class="curriculum-flow">continuous glucose monitor data review, Mini-lecture on inputs vs responses, Guided exercise to map your personal response map, Breakout pairs share top triggers and surprises, Synthesis sets up plate architecture</p>
+                <p class="curriculum-flow">Continuous glucose monitor data review, Mini-lecture on inputs vs responses, Guided exercise to map your personal response map, Breakout pairs share top triggers and surprises, Synthesis sets up plate architecture</p>
                 <div class="curriculum-section-label">Between-Session Work</div>
                 <p class="curriculum-work">Build your personal glucose-response map, three foods that spike you, three that don't, three to test.</p>
               </div>
@@ -10315,7 +10429,7 @@ html.mf body .mfp-tbonus.mfp-twide .mfp-bhead b{white-space:nowrap}
             <button class="curriculum-trigger" onclick="toggleCurriculum(this)">
               <span class="curriculum-num">09</span>
               <div class="curriculum-trigger-text">
-                <h3>Gut Health &amp; the Gut-Brain-Glucose Axis</h3>
+                <h3>Gut Health &amp; the Gut&#8209;Brain&#8209;Glucose Axis</h3>
               </div>
               <svg class="curriculum-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
             </button>
@@ -10432,7 +10546,7 @@ html.mf body .mfp-tbonus.mfp-twide .mfp-bhead b{white-space:nowrap}
       <div class="phase-block reveal" data-phase="4" style="--ph:#1B4FD8">
         <div class="phase-block-header">
           <span class="phase-block-label">Phase 4, Sessions 14 to 18</span>
-          <span class="phase-block-name">Integration &amp; Blueprint</span>
+          <span class="phase-block-name">Integration and Blueprint</span>
         </div>
         <p class="phase-benefit"><span><b>You leave Phase 4 with</b> your written Personal Longevity Blueprint, built on your blood work and 18 weeks of your data, plus a 90-day plan to keep it going.</span></p>
         <div class="phase-block-sessions">
@@ -10556,7 +10670,7 @@ html.mf body .mfp-tbonus.mfp-twide .mfp-bhead b{white-space:nowrap}
     </div>
   </div>
     <div class="curriculum-cta reveal" style="text-align:center; margin-top:64px;">
-      <a href="#pricing" class="section-cta-btn" data-fn-cta="section">Enroll now <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"></path></svg></a>
+      <a href="#pricing" class="section-cta-btn" data-fn-cta="section">Enroll Now <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"></path></svg></a>
     </div>
   </section>
 <section class="mfp" id="pricing">
@@ -10573,7 +10687,7 @@ html.mf body .mfp-tbonus.mfp-twide .mfp-bhead b{white-space:nowrap}
         <span class="mfp-side"><s>$169</s><b>first month</b></span>
       </div>
       <p class="mfp-then">Then $169 a month for 4 months</p>
-      <a class="pk-btn" href="#pricing" data-preview-enroll><span>Enroll now</span><span class="pk-arr" aria-hidden="true">&rarr;</span></a>
+      <a class="pk-btn" href="#pricing" data-preview-enroll><span>Enroll Now</span><span class="pk-arr" aria-hidden="true">&rarr;</span></a>
       <p class="pk-previewnote" hidden>Preview. On longevitylifeacademy.com this button opens eTeacher's checkout, unchanged.</p><p class="pk-foot">14-day try-out refund on the course.</p>
       <div class="mfp-tiles">
         <div class="mfp-t"><b>18 live classes<br>18 weeks</b><span>Small groups, top longevity experts</span></div>
@@ -10612,12 +10726,12 @@ html.mf body .mfp-tbonus.mfp-twide .mfp-bhead b{white-space:nowrap}
         <div class="jb-cap"><b>34% slower than average.</b><span>Most people age one full year, every year. She doesn&rsquo;t.</span></div>
       </article>
       <article class="jb jb-wide tcard t-royal">
-        <video src="https://gitteromri-ux.github.io/lla-blueprint-vip-preview/meta-final/assets/anim/PLAY_V6_LLA_RANK.mp4" autoplay muted loop playsinline preload="metadata"></video>
+        <video src="https://gitteromri-ux.github.io/lla-blueprint-vip-preview/meta-final/assets/anim/PLAY_V6_LLA_RANK.mp4" poster="https://gitteromri-ux.github.io/lla-blueprint-vip-preview/meta-final/assets/anim/rank-poster.jpg" autoplay muted loop playsinline preload="metadata"></video>
         <div class="jb-wide-body">
-          <b class="jb-big">No.2 on Earth.</b>
+          <b class="jb-big">No. 2 on Earth.</b>
           <p>Rejuvenation Olympics leaderboard, ahead of Bryan Johnson&rsquo;s $2M-a-year program. Her protocol: a sleep system, plate architecture, a lean supplement stack, daily movement, and a testing loop that proves it works.</p>
           <p class="serif-i jb-quote">&ldquo;We don&rsquo;t need millions of dollars to live long, vibrant lives.&rdquo;</p>
-          <div class="jcta"><a class="mf-jbtn" href="#pricing">Enroll now</a></div>
+          <div class="jcta"><a class="mf-jbtn" href="#pricing">Enroll Now</a></div>
         </div>
       </article>
     </div>
@@ -10638,7 +10752,7 @@ html.mf body .mfp-tbonus.mfp-twide .mfp-bhead b{white-space:nowrap}
       <article class="nov-incl-card" style="--c1:#006EFF;--c2:#5EB6FF"><div class="n">01</div><h3>18 live classes, one a week</h3><p>50 minutes on Zoom with a certified longevity instructor. Every class is recorded and stays yours.</p><span class="tag">Included</span></article>
       <article class="nov-incl-card" style="--c1:#22B27A;--c2:#7DE5C1"><div class="n">02</div><h3>The six pillars of longevity</h3><p>Nutrition, sleep, movement, supplements and wearables, stress, and your own protocol.</p><span class="tag">Included</span></article>
       <article class="nov-incl-card" style="--c1:#FF7A45;--c2:#FFB38A"><div class="n">03</div><h3>Abbott Lingo glucose sensor and app</h3><p>Shipped to your door. Read your own biomarkers by lesson 5 and build your protocol on them.</p><span class="tag">Included</span></article>
-      <article class="nov-incl-card" style="--c1:#7C5CFF;--c2:#B79DFF"><div class="n">04</div><h3>Julie Gibson Clark's live Masterclass</h3><p>A live session with the 2nd slowest-aging woman on earth. Free for Blueprint students.</p><span class="tag">Included</span></article>
+      <article class="nov-incl-card" style="--c1:#7C5CFF;--c2:#B79DFF"><div class="n">04</div><h3>Julie Gibson Clark's live Masterclass</h3><p>A live session with the 2nd slowest-aging woman on Earth. Free for Blueprint students.</p><span class="tag">Included</span></article>
       <article class="nov-incl-card" style="--c1:#12B5CB;--c2:#7DE5F2"><div class="n">05</div><h3>Your personal Longevity Blueprint</h3><p>Built on your own numbers by week 18. A protocol you can actually live with.</p><span class="tag">Included</span></article>
     </div>
   </div>
@@ -10869,7 +10983,7 @@ html.mf body .mfp-tbonus.mfp-twide .mfp-bhead b{white-space:nowrap}
         <div class="teacher-card-live-body">
           <h4 class="teacher-card-live-name">Julie Gibson Clark</h4>
           <span class="teacher-card-live-role">Ranked #2 &middot; Rejuvenation Olympics</span>
-          <p class="teacher-card-live-bio">#2 slowest-aging person in the world on the Rejuvenation Olympics + A leading voice in accessible, evidence-based longevity, and Founding Faculty at Longevity Life Academy.</p>
+          <p class="teacher-card-live-bio">#2 slowest-aging person in the world on the Rejuvenation Olympics. A leading voice in accessible, evidence-based longevity, and Founding Faculty at Longevity Life Academy.</p>
         </div>
       </a>
       <a class="teacher-card-live teacher-card-link" href="https://www.longevitylifeacademy.com/teachers/courtney.html">
@@ -10910,7 +11024,7 @@ html.mf body .mfp-tbonus.mfp-twide .mfp-bhead b{white-space:nowrap}
   <div class="container">
     <div class="how-v2-header reveal">
       <img loading="lazy" decoding="async" src="https://www.longevitylifeacademy.com/assets/e-teacher-logo.png" alt="eTeacher Group" class="how-v2-logo">
-      <h2 class="how-v2-title">How It Works</h2>
+      <h2 class="how-v2-title">How It <em class="mf-acc">Works</em></h2>
       <p class="how-v2-sub">Six clear steps from enrollment to your personal longevity protocol.</p>
     </div>
     <div class="how-v2-slider-wrap reveal">
@@ -11118,7 +11232,7 @@ html.mf body .mfp-tbonus.mfp-twide .mfp-bhead b{white-space:nowrap}
 <a class="et-bump-btn bump-whatsapp lla-wa-inline" href="https://wa.me/12015023701" target="_blank" rel="noopener"><img src="https://www.longevitylifeacademy.com/assets/wa/wapp.png" alt="whatsapp"> <span>Start Chat on WhatsApp</span></a>
 <div class="lg-or" aria-hidden="true"><span>or</span></div>
           <a href="#" class="lg-buy">
-            <span class="lg-buy-main"><svg viewBox="0 0 24 24" width="21" height="21" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="21" r="1.6"/><circle cx="19" cy="21" r="1.6"/><path d="M2.5 3h3l2.6 12.5a2 2 0 0 0 2 1.5h7.9a2 2 0 0 0 2-1.6L21.5 8H6.2"/></svg> Enroll Online Now &middot; $79 month 1/mo</span>
+            <span class="lg-buy-main"><svg viewBox="0 0 24 24" width="21" height="21" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="21" r="1.6"/><circle cx="19" cy="21" r="1.6"/><path d="M2.5 3h3l2.6 12.5a2 2 0 0 0 2 1.5h7.9a2 2 0 0 0 2-1.6L21.5 8H6.2"/></svg> Enroll Online Now &middot; $79 first month</span>
             <span class="lg-buy-sub">Register, choose your dates, pay online, done in 2 minutes</span>
           </a>
         </form>
@@ -11189,7 +11303,7 @@ html.mf body .mfp-tbonus.mfp-twide .mfp-bhead b{white-space:nowrap}
       <!-- Center hub -->
       <div class="hex-center">
         <div class="hex-center-label">Your<br>Protocol</div>
-        <div class="hex-center-sub">12 sessions</div>
+        <div class="hex-center-sub">18 live classes</div>
       </div>
       <!-- Connector lines (JS positions them) -->
       <div class="hex-line" data-line="0"></div>
@@ -11702,12 +11816,12 @@ function toggleCurriculum(btn) {
   const detailLink = document.getElementById('hexDetailLink');
 
   const data = [
-    { tag: 'Metabolic Health', title: 'Read your own blood work.', desc: 'Learn to interpret glucose, lipids, and inflammation markers. Understand what your labs actually mean \u2014 and which numbers matter most for longevity.', link: 'topics/metabolic-health-blood-sugar.html' },
-    { tag: 'Exercise & Movement', title: 'Train for the next forty years.', desc: 'Strength, steady cardio, stability, and the cardio fitness \u2014 the exercise patterns that extend a strong life, not just fitness.', link: 'topics/exercise-movement.html' },
+    { tag: 'Metabolic Health', title: 'Read your own blood work.', desc: 'Learn to interpret glucose, lipids, and inflammation markers. Understand what your labs actually mean, and which numbers matter most for longevity.', link: 'topics/metabolic-health-blood-sugar.html' },
+    { tag: 'Exercise & Movement', title: 'Train for the next forty years.', desc: 'Strength, steady cardio, stability, and the cardio fitness, the exercise patterns that extend a strong life, not just fitness.', link: 'topics/exercise-movement.html' },
     { tag: 'Sleep & Circadian', title: 'Circadian rhythm, decoded.', desc: 'How sleep architecture, light exposure, and timing reshape your recovery, cognition, and hormone regulation.', link: 'topics/sleep-circadian-health.html' },
     { tag: 'Stress & Emotions', title: 'Regulate the cortisol loop.', desc: 'Chronic stress accelerates biological aging. Learn evidence-based techniques to interrupt the cycle and build resilience.', link: 'topics/mental-emotional-health.html' },
-    { tag: 'Supplements & Tools', title: 'Evidence over hype.', desc: 'Cut through marketing noise. Learn which supplements have real data behind them \u2014 and which are just packaging.', link: 'topics/supplements-health-tech.html' },
-    { tag: 'Protocols & Habits', title: 'Build a blueprint that sticks.', desc: 'Design a personalized longevity protocol grounded in your own data, habits, and goals \u2014 tested and peer-reviewed by your class.', link: 'topics/protocols-habits.html' }
+    { tag: 'Supplements & Tools', title: 'Evidence over hype.', desc: 'Cut through marketing noise. Learn which supplements have real data behind them, and which are just packaging.', link: 'topics/supplements-health-tech.html' },
+    { tag: 'Protocols & Habits', title: 'Build a blueprint that sticks.', desc: 'Design a personalized longevity protocol grounded in your own data, habits, and goals, tested and peer-reviewed by your class.', link: 'topics/protocols-habits.html' }
   ];
 
   const cx = 340, cy = 340, radius = 240;
