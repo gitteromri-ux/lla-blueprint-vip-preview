@@ -1213,3 +1213,18 @@ html.mf body #julie .jher-facts li:last-child b{background:linear-gradient(180de
   html.mf body #julie .jher-facts span{font-size:18.5px}
 }
 @media (max-width:900px){html.mf body #julie .jher-photo{max-width:250px}html.mf body #julie .jher-photo figcaption{padding:44px 14px 12px}html.mf body #julie .jher-photo figcaption b{font-size:24px}html.mf body #julie .jher-photo figcaption span{font-size:17px}html.mf body #julie .jher-facts b{font-size:28px}html.mf body #julie .jher-facts li{padding:12px 0}}
+/* ===== Round 32 (Omri): her pace-of-aging slide as one proof card; no hour-by-hour routine slide ===== */
+html.mf body #julie .jher-proof{margin:0;border-radius:24px;overflow:hidden;border:1.5px solid rgba(154,216,255,.75);box-shadow:0 0 10px rgba(154,216,255,.7),0 0 30px rgba(59,167,255,.55),0 40px 80px -34px rgba(0,20,70,.95);background:#050B19}
+html.mf body #julie .jher-proof img{display:block;width:100%;height:auto}
+@media (min-width:901px){
+  html.mf body #julie .jher{grid-template-columns:minmax(0,360px) minmax(0,1fr)!important;grid-template-areas:"photo proof" "facts facts";gap:26px 26px!important;max-width:1120px!important;align-items:stretch!important}
+  html.mf body #julie .jher-photo{grid-area:photo}
+  html.mf body #julie .jher-photo img{height:100%;aspect-ratio:auto}
+  html.mf body #julie .jher-proof{grid-area:proof}
+  html.mf body #julie .jher-facts{grid-area:facts;display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  html.mf body #julie .jher-facts li,html.mf body #julie .jher-facts li:first-child{padding:0 0 0 18px!important;border-bottom:0!important;border-left:2px solid rgba(124,192,255,.55)}
+  html.mf body #julie .jher-facts b{font-size:32px!important}
+  html.mf body #julie .jher-facts span{font-size:19px!important}
+}
+@media (max-width:900px){html.mf body #julie .jher-proof{border-radius:18px}}
+@media (max-width:900px){html.mf body #julie .jher-facts li:nth-child(2){display:none!important}html.mf body #julie .jher-photo{max-width:220px}html.mf body #julie .jher{gap:16px!important}}
