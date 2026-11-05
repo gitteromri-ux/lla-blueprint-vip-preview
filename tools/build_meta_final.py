@@ -123,12 +123,15 @@ def common(s):
     film = re.search(r'<figure class="lla-film">.*?</figure>', DEV_HERO, flags=re.S).group(0)
     hero = re.sub(r'<h1 class="hero-title">.*?</h1>', '<h1 class="hero-title">Your personal <span class="life-blue">longevity protocol,</span><br>built in 18 weeks.</h1>', hero, count=1, flags=re.S)
     hero = re.sub(r'<p class="hero-sub">.*?</p>', '<p class="hero-sub">Live small-group classes with certified longevity instructors. A free Abbott Lingo glucose sensor shipped to your home. You finish with a written protocol built on your own numbers.</p>', hero, count=1, flags=re.S)
-    # Trustpilot: no pill (Omri). One clean rating line.
-    tp = ('<div class="mf-tp" role="img" aria-label="Rated 4.6 out of 5 on Trustpilot, 600+ verified reviews">'
+    # Trustpilot (Omri, 5 Nov late): next to the CTA, not on top. Standard Trustpilot mini layout: logo, green star boxes, score and review count.
+    star = '<svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#fff" d="M12 3.6l2.3 6.1h6.4l-5.1 3.9 1.9 6.3L12 16l-5.5 3.9 1.9-6.3-5.1-3.9h6.4z"/></svg>'
+    tp = ('<div class="mf-tp" role="img" aria-label="Rated 4.6 out of 5 on Trustpilot, based on 600+ reviews">'
           '<span class="mf-tp-logo"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#00B67A" d="M12 1.5l2.9 8.2H24l-7.1 5.2 2.7 8.6L12 18.3l-7.6 5.2 2.7-8.6L0 9.7h9.1z"/></svg><b>Trustpilot</b></span>'
-          '<span class="mf-tp-stars">' + ''.join('<i><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#fff" d="M12 3.6l2.3 6.1h6.4l-5.1 3.9 1.9 6.3L12 16l-5.5 3.9 1.9-6.3-5.1-3.9h6.4z"/></svg></i>' for _ in range(5)) + '</span>'
-          '<span class="mf-tp-score"><b>4.6</b> / 5</span><span class="mf-tp-count">600+ verified reviews</span></div>')
-    hero = re.sub(r'<div class="trustpilot trustpilot--top">.*?600\+ verified reviews</span>\s*</div>', tp, hero, count=1, flags=re.S)
+          '<span class="mf-tp-stars">' + ''.join('<i>' + star + '</i>' for _ in range(4)) + '<i class="mf-tp-half">' + star + '</i></span>'
+          '<span class="mf-tp-score"><b>4.6</b><em>|</em>600+ reviews</span></div>')
+    hero = re.sub(r'\s*<!--[^>]*trust pill[^>]*-->', '', hero, count=1)
+    hero = re.sub(r'<div class="trustpilot trustpilot--top">.*?600\+ verified reviews</span>\s*</div>\s*', '', hero, count=1, flags=re.S)
+    hero = re.sub(r'(<a href="#syllabus" class="btn-ghost">.*?</a>)', lambda m: m.group(1) + '\n      ' + tp, hero, count=1, flags=re.S)
     assert 'mf-tp' in hero, 'trustpilot replace failed'
     hero = hero[:hero.rfind('</section>')] + '<div class="mf-hero-film">' + film + '</div>\n</section>'
     s = s[:a] + hero + s[b:]
@@ -198,6 +201,10 @@ def common(s):
     s = must(s, ' Hover to explore each domain.</p>', '</p>')
     s = must(s, '<h3 class="form-thankyou-headline">Thank You!</h3>', '<h3 class="form-thankyou-headline">Thank you.</h3>')
     s = must(s, '<li><a href="#lead-gen">Apply</a></li>', '<li><a href="#lead-gen">Enroll</a></li>')
+    # About, eTeacher paragraph: two unimportant words out for fewer lines (Omri, 5 Nov late)
+    s, n1 = re.subn(r'with a dynamic,\s+personalized', 'with a personalized', s, count=1)
+    s, n2 = re.subn(r'Our proven,\s+teacher-led', 'Our teacher-led', s, count=1)
+    assert n1 == 1 and n2 == 1, 'eTeacher paragraph trim failed'
     s = must(s, 'our Continuous Glucose Monitor (CGM) is included with enrollment', 'Our continuous glucose monitor (CGM) is included with enrollment')
     s = s.replace('Trustpilot · 5 stars · Sept 2025', 'Trustpilot · 5 stars · September 2025')
     s = must(s, 'energy, and habits, get an estimate of how', 'energy, and habits, and get an estimate of how')
