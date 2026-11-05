@@ -2,6 +2,36 @@
 
 Omri wants this continued in a new session. Read this file fully before touching anything. He has corrected the same things many times; the list of what he approved and rejected below is the source of truth.
 
+## Omri's latest instructions (5 Nov, end of session): do these first
+0. **Pick up exactly from the last version.** Branch `meta-final-wip` of gitteromri-ux/lla-blueprint-vip-preview (build commit 1821551 and later). Do not start over. Read all of Omri's comments in the old session before building, and do not repeat any rejected item.
+1. **Julie photo**
+   - In the Julie fold, replace the photo with her other photo, the one used in our banners. Not the standing-up one.
+   - Look in gitteromri-ux/julie-meta-banners and gitteromri-ux/julie-onset-banners for the banner image, and show Omri which one you picked.
+2. **Same-colour cards and small text**
+   - Fix every fold like How It Works that has same-coloured cards and small, unreadable text. He has asked about 90 times.
+   - Give each card its own allowed colour (blue, light blue, logo teal, navy; no orange or green) and make the text large and readable.
+   - He also saw another white fold like that. Check Why This Course Is Different, Six Systems, the bio-age quiz, FAQ, faculty and reviews, and fix it.
+3. **CGM fold: rebuild, authentic**
+   - Compact, not a tall or long fold.
+   - At least two 3D cards popping out, carrying real Lingo app data: the live glucose reading (mg/dL, updated every minute), a spike with its Lingo Count in the shaded area, and the daily Lingo Count against its target. Label the data as a sample day if it is not real user data.
+   - Style: Julie's deck sugar slide (n11-sugar): navy glass card, glowing curves, large italic labels.
+   - Next to the cards: either a human wearing the CGM, or the best image of the Abbott Lingo device and a phone.
+     - A human is OK now, but not the earlier "sugar-man" photo he rejected.
+     - Prefer authentic Abbott and Lingo imagery already on longevitylifeacademy.com: assets/cgm/lingo-1.jpg (sensor and app), assets/cgm/lingo-6.jpg (woman with phone, "My glucose, my insights").
+   - Nothing drawn that looks fake.
+4. **WhatsApp and floater:** both buttons are a bit small. Make them larger, same design.
+5. **Authenticity and credibility audit of the whole site**
+   - Check headers, footers and every trust area. Fix anything that looks AI-made or less than a reputable company.
+   - No em or en dashes anywhere. Remaining examples:
+     - "FSA/HSA Prescription — Not needed";
+     - "Sessions 1–3";
+     - "Small classes (8–15 students)";
+     - the "→" arrows in the syllabus flow text.
+   - No pills or chips. No capital-letter headlines, eyebrows or notes; .com eyebrows are uppercase in CSS, so make them sentence case.
+   - No AI tells such as "Swipe for more" or decorative labels.
+   - Report what you changed per item.
+6. **Folds short on phones:** keep every fold as short as possible on phones, for mobile conversions.
+
 ## The goal
 - One final homepage for Meta ads, mobile first and perfect on desktop, in one link.
 - Base: the longevitylifeacademy.com homepage.
@@ -48,7 +78,7 @@ Omri wants this continued in a new session. Read this file fully before touching
     - food and activity logging, with Apple Health sync.
   - Sources: Abbott press release https://abbott.mediaroom.com/2024-09-05-Abbotts-Lingo-TM-Continuous-Glucose-Monitor-for-Health-and-Wellness-Now-Available-in-the-U-S , NBC/CNBC launch coverage https://www.nbcdfw.com/news/business/money-report/abbott-launches-its-first-over-the-counter-continuous-glucose-monitor-in-the-u-s/3637581/ , App Store listing https://apps.appfollow.io/ios/lingo-by-abbott/1670445335?country=us , Android launch https://www.nasdaq.com/press-release/abbotts-lingotm-now-androidtm-expanding-access-real-time-glucose-data-2025-12-08 .
   - No phone, unless shown as an app-launch moment with the real metrics popping out of it in 3D.
-  - No man photo, no box, no pill or chip labels, nothing drawn that is not real.
+  - No box, no pill or chip labels, nothing drawn that is not real. A human wearing the CGM is now OK (latest instructions, item 3), but not the rejected "sugar-man" photo.
   - Text: longevitylifeacademy.com CGM fold wording only.
 - **Blog fold:** the .com "Deep Dives / What Your Doctor Doesn't Have Time to Teach You" (this is his "Longevity news"). The accent must be the hero's light blue (Instrument Serif italic, gradient #BFE2FF to #6FB6FF), not bright #006EFF.
 - **About:** the .com "About Longevity Life Academy" with the eTeacher block (eTeacher's; leave it) and the client logos (.com logos only) in full colour and moving.
@@ -57,6 +87,7 @@ Omri wants this continued in a new session. Read this file fully before touching
 - **Other folds:** How It Works, Why This Course Is Different, Six Systems, bio-age quiz, FAQ and final banner all stay, in .com design. **No beige** anywhere.
 - **Colours:** blue, navy/black, light blue, white, logo teal. Cards may differ in colour. **No orange, no green, no gold, no beige.** The deck colouring is for the CGM fold only.
 - **Fonts:** .com fonts, with the italic accent as in the .com hero. He also said "our own Playfair italic"; ask once if unclear.
+- **Julie fold photo:** replace with her banner photo (see the latest instructions, item 1).
 - **Logo and photos:** crisp nav logo (lla-logo-no-tagline@2x.png, no blur filter). Jordan Lattimore's photo cropped so his face sits higher.
 
 ## Rejected (never reuse)
