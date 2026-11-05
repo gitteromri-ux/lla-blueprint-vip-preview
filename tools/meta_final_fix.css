@@ -822,3 +822,44 @@ html.mf body .mfp-side b{font-size:21px!important}
   html.mf body .mfp-card{padding:24px 18px 20px!important}
   html.mf body #cgm .cgm8-panel{padding:22px 18px 14px!important}
 }
+/* ===== Round 24: bottom-folds review (FAQ answers not cut, nav visible, floater at the bottom on phones, WhatsApp clear of buttons, footer readable, final banner navy, quiz and reviews cleaned) ===== */
+html.mf body #mobileMenuBtn, html.mf body #mobileMenuBtn svg{color:#fff !important;stroke:#fff !important}
+html.mf body #llaFloatCta{top:auto !important;bottom:12px !important}
+html.mf body #et-bumpyard-widget{z-index:9990 !important;bottom:96px !important;padding:0 12px 0 0 !important}
+html.mf body #et-bumpyard-widget .widget-trigger-btn{width:56px !important;height:56px !important;padding:12px !important;background:#25D366 !important}
+html.mf body #et-bumpyard-widget .widget-trigger-btn::after{display:none !important}
+html.mf body #llaFloatCta .lla-cta-eyebrow{font-size:17px !important;color:#fff !important;letter-spacing:0 !important}
+html.mf body #llaFloatCta .lla-cta-title{font-size:17px !important;white-space:nowrap !important}
+html.mf body #llaFloatCta .lla-cta-pill{padding:0 10px !important;gap:6px !important}
+html.mf body #llaFloatCta .lla-cta-text{padding:8px 8px 8px 12px !important}
+html.mf body #llaFloatCta .lla-cta-eyebrow::before{display:none !important}
+html.mf body #llaFloatCta .lla-cta-pill .mo{font-size:17px !important;opacity:1 !important;letter-spacing:0 !important}
+html.mf body #faq .faq-item.open .faq-a{max-height:1600px !important}
+html.mf body section.faq .faq-item .faq-q, html.mf body section.faq .faq-item .faq-q span:not(.faq-num), html.mf body section.faq .faq-item:hover .faq-q, html.mf body section.faq .faq-item:hover .faq-q span:not(.faq-num), html.mf body section.faq .faq-item.open .faq-q, html.mf body section.faq .faq-item.open .faq-q span:not(.faq-num){color:#0A1E3A !important;-webkit-text-fill-color:#0A1E3A !important;background:none !important;-webkit-background-clip:border-box !important;background-clip:border-box !important}
+html.mf body section.faq .faq-item .faq-num{background:none !important;padding:0 !important;color:#006EFF !important;-webkit-text-fill-color:#006EFF !important}
+html.mf body section.faq .faq-num{margin-right:12px !important}
+html.mf body section.faq .faq-icon{margin-left:12px !important}
+html.mf body section.faq .faq-item{padding:14px 12px !important}
+html.mf body .bioquiz .bioquiz-cta{justify-content:center !important;white-space:nowrap !important;padding:18px 20px !important}
+html.mf body .bioquiz .bioquiz-eyebrow{color:#fff !important}
+html.mf body .bioquiz .bioquiz-badge-label{text-transform:none !important;letter-spacing:0 !important;opacity:1 !important;font-size:18px !important}
+html.mf body .bioquiz .bioquiz-visual{height:auto !important}
+html.mf body .bioquiz .bioquiz-badge{width:150px !important;height:150px !important}
+html.mf body .bioquiz .bioquiz-card{gap:24px !important}
+html.mf body section.testimonials .quote-card .quote-stars svg{color:#006EFF !important;fill:#006EFF !important}
+html.mf body .testimonials .testimonials-header{margin-bottom:32px !important}
+html.mf body .testimonials .quote-card{flex-basis:86vw !important;width:86vw !important;min-width:86vw !important;padding:26px 22px !important}
+html.mf body section.final-cta .lla-neon-glow, html.mf body section.final-cta .lla-neon-top{display:none !important}
+html.mf body section.final-cta{padding:0 !important}
+html.mf body section.final-cta .final-cta-video{filter:grayscale(1) brightness(.75) !important}
+html.mf body section.final-cta .final-cta-overlay{background:linear-gradient(180deg,rgba(0,58,153,.55) 0%,rgba(0,18,51,.8) 100%) !important}
+html.mf body footer.footer .footer-top{grid-template-columns:1fr 1fr !important;gap:36px 24px !important}
+html.mf body footer.footer .footer-brand{grid-column:1 / -1 !important}
+html.mf body footer.footer h4{text-transform:none !important;letter-spacing:0 !important;font-size:19px !important}
+html.mf body footer.footer, html.mf body footer.footer p, html.mf body footer.footer a, html.mf body footer.footer .footer-bottom, html.mf body footer.footer .footer-bottom *{color:#fff !important;opacity:1 !important}
+html.mf body footer.footer p, html.mf body footer.footer a{font-size:19px !important}
+html.mf body footer.footer .footer-bottom, html.mf body footer.footer .footer-bottom div{font-size:18px !important}
+html.mf body footer.footer{padding-bottom:190px !important}
+html.mf body #faq .faq-a-inner{color:#0A1E3A !important}
+html.mf body #mobileNavOverlay{background:#000B1F !important}
+html.mf body #nav{background:#040B1E !important}
