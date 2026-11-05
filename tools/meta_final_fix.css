@@ -1312,3 +1312,29 @@ html.mf body #julie .jbonus .mf-jbtn{display:inline-flex}
   html.mf body #julie .jbonus-facts b{font-size:21px}
   html.mf body #julie .jbonus .mf-jbtn{display:none!important}
 }
+/* ===== Round 36 (Omri: symmetrical, no wasted space, shine, no plain white text): centred bonus card, photo between two equal facts ===== */
+html.mf body #julie.mf-julie-bonus{background:linear-gradient(180deg,#071433 0%,#040B1E 100%)!important;padding:28px 0!important}
+html.mf body #julie .jb2{max-width:760px;margin:0 auto;padding:20px 22px 18px;text-align:center;border-radius:26px;background:radial-gradient(70% 80% at 50% 0%,rgba(0,110,255,.30),transparent 70%),linear-gradient(180deg,#0A1A40 0%,#050D24 100%);border:2px solid #9AD8FF;box-shadow:0 0 10px rgba(154,216,255,1),0 0 30px rgba(59,167,255,.85),0 0 70px rgba(0,110,255,.6),inset 0 0 20px rgba(124,200,255,.35);animation:mfpNeon 3.2s ease-in-out infinite}
+html.mf body #julie .jb2-tag{margin:0;font:italic 500 20px/1.2 'Playfair Display',Georgia,serif;color:#CFEBFF;text-shadow:0 0 10px rgba(124,200,255,1),0 0 22px rgba(59,167,255,.8)}
+html.mf body #julie .jb2-title{margin:4px 0 14px;font:500 30px/1.15 'Playfair Display',Georgia,serif!important;background:linear-gradient(180deg,#FFFFFF 0%,#BFE2FF 100%);-webkit-background-clip:text;background-clip:text;color:transparent!important;-webkit-text-fill-color:transparent!important}
+html.mf body #julie .jb2-title em{font-style:italic;font-weight:400;background:linear-gradient(180deg,#E3F2FF 0%,#7CC0FF 100%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+html.mf body #julie .jb2-row{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:16px}
+html.mf body #julie .jb2-photo{width:112px;height:112px;border-radius:50%;object-fit:cover;object-position:50% 22%;border:2px solid #CFEBFF;box-shadow:0 0 0 4px rgba(0,110,255,.35),0 0 18px rgba(154,216,255,1),0 0 40px rgba(59,167,255,.8)}
+html.mf body #julie .jb2-fact{padding:12px 8px;border-radius:16px;background:linear-gradient(160deg,rgba(44,123,255,.35),rgba(10,79,216,.18));border:1.5px solid rgba(154,216,255,.6);box-shadow:0 0 16px -4px rgba(59,167,255,.8),inset 0 1px 0 rgba(255,255,255,.25)}
+html.mf body #julie .jb2-fact b{display:block;font:italic 500 30px/1.05 'Playfair Display',Georgia,serif;background:linear-gradient(180deg,#FFFFFF 0%,#9FD6FF 100%);-webkit-background-clip:text;background-clip:text;color:transparent;filter:drop-shadow(0 0 8px rgba(124,192,255,.7))}
+html.mf body #julie .jb2-fact span{display:block;margin-top:4px;font:600 17px/1.25 Inter,sans-serif;color:#BFE2FF}
+html.mf body #julie .jb2-line{margin:14px 0 0;font:600 19px/1.4 Inter,sans-serif;color:#9FD6FF;text-shadow:0 0 12px rgba(59,167,255,.5)}
+@media (max-width:900px){
+  html.mf body #julie.mf-julie-bonus{padding:20px 0!important}
+  html.mf body #julie .jb2{padding:16px 12px 14px}
+  html.mf body #julie .jb2-tag{font-size:18px}
+  html.mf body #julie .jb2-title{font-size:23px!important;margin:2px 0 12px}
+  html.mf body #julie .jb2-row{gap:10px}
+  html.mf body #julie .jb2-photo{width:84px;height:84px}
+  html.mf body #julie .jb2-fact{padding:10px 6px}
+  html.mf body #julie .jb2-fact b{font-size:24px}
+  html.mf body #julie .jb2-fact span{font-size:15.5px}
+  html.mf body #julie .jb2-line{font-size:17px;margin-top:12px}
+}
+html.mf body #julie .jb2-fact span{font-size:18px!important;white-space:nowrap}
+@media (max-width:900px){html.mf body #julie .jb2-fact b{font-size:26px}html.mf body #julie .jb2-fact span{font-size:17px!important}html.mf body #julie .jb2-line{font-size:18px}}

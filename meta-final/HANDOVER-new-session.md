@@ -1,147 +1,86 @@
-# Handover: Final website for Meta (Longevity Life Academy), 5 Nov 2026
+# Handover: Final website for Meta (Longevity Life Academy), updated 5 Nov 2026, late
 
-Omri wants this continued in a new session. Read this file fully before touching anything. He has corrected the same things many times; the list of what he approved and rejected below is the source of truth.
+Read this file fully before touching anything. Omri has corrected the same things many times; the approved and rejected lists below are the source of truth. Latest wins.
 
-## Omri's latest instructions (5 Nov, end of session): do these first
-0. **Pick up exactly from the last version.** Branch `meta-final-wip` of gitteromri-ux/lla-blueprint-vip-preview (build commit 1821551 and later). Do not start over. Read all of Omri's comments in the old session before building, and do not repeat any rejected item.
-1. **Julie photo**
-   - In the Julie fold, replace the photo with her other photo, the one used in our banners. Not the standing-up one.
-   - Look in gitteromri-ux/julie-meta-banners and gitteromri-ux/julie-onset-banners for the banner image, and show Omri which one you picked.
-2. **Same-colour cards and small text**
-   - Fix every fold like How It Works that has same-coloured cards and small, unreadable text. He has asked about 90 times.
-   - Give each card its own allowed colour (blue, light blue, logo teal, navy; no orange or green) and make the text large and readable.
-   - He also saw another white fold like that. Check Why This Course Is Different, Six Systems, the bio-age quiz, FAQ, faculty and reviews, and fix it.
-3. **CGM fold: rebuild, authentic**
-   - Compact, not a tall or long fold.
-   - At least two 3D cards popping out, carrying real Lingo app data: the live glucose reading (mg/dL, updated every minute), a spike with its Lingo Count in the shaded area, and the daily Lingo Count against its target. Label the data as a sample day if it is not real user data.
-   - Style: Julie's deck sugar slide (n11-sugar): navy glass card, glowing curves, large italic labels.
-   - Next to the cards: either a human wearing the CGM, or the best image of the Abbott Lingo device and a phone.
-     - A human is OK now, but not the earlier "sugar-man" photo he rejected.
-     - Prefer authentic Abbott and Lingo imagery already on longevitylifeacademy.com: assets/cgm/lingo-1.jpg (sensor and app), assets/cgm/lingo-6.jpg (woman with phone, "My glucose, my insights").
-   - Nothing drawn that looks fake.
-4. **WhatsApp and floater:** both buttons are a bit small. Make them larger, same design.
-5. **Authenticity and credibility audit of the whole site**
-   - Check headers, footers and every trust area. Fix anything that looks AI-made or less than a reputable company.
-   - No em or en dashes anywhere. Remaining examples:
-     - "FSA/HSA Prescription — Not needed";
-     - "Sessions 1–3";
-     - "Small classes (8–15 students)";
-     - the "→" arrows in the syllabus flow text.
-   - No pills or chips. No capital-letter headlines, eyebrows or notes; .com eyebrows are uppercase in CSS, so make them sentence case.
-   - No AI tells such as "Swipe for more" or decorative labels.
-   - Report what you changed per item.
-6. **Folds short on phones:** keep every fold as short as possible on phones, for mobile conversions.
-
-## The goal
-- One final homepage for Meta ads, mobile first and perfect on desktop, in one link.
-- Base: the longevitylifeacademy.com homepage.
-- Approval comes from Omri on screenshots.
-- After he approves, Perplexity only checks tracking and puts it live.
+## Where it stands
+- **Current build:** branch `meta-final-wip` of gitteromri-ux/lla-blueprint-vip-preview, published to the preview link (main branch): https://gitteromri-ux.github.io/lla-blueprint-vip-preview/meta-final/
+- **Not live on .com.** Production go-live waits for Omri's word, then the pull request for Perplexity (see `GO-LIVE-for-Perplexity.md`).
 
 ## How Omri wants you to work (his words, repeated many times)
-1. **Base is longevitylifeacademy.com exactly as it is.** Do not change the design of any fold he did not ask about. Do not remove folds.
-2. **Only apply what he writes.** No redesigns of your own, no new colours, no new graphics.
-3. **No copy he did not give.** Use his wording, longevitylifeacademy.com wording, or the approved promo text only.
-4. **Show before upload.** Before and after screenshots of each fold you touch, phone and desktop. Nothing goes live without his word.
-5. **Don't stop to ask; work.** He gets angry when you send a message and stop. Ask only when you truly cannot proceed (the pricing content is one such case).
-6. **No small text anywhere.** Never small white text on a dark background, never long white paragraphs. Reading text 19px or more, labels 15px or more.
-7. **Folds must be short.** He said: "Your folds in general are too high. It's going to hurt mobile conversions." The CGM fold must be compact, not a tall fold.
-8. **Read the repo rules.** See CLAUDE.md in gitteromri-ux/lla-blueprint-vip-preview (numbered checklist reading, DONE / NOT DONE / ASSUMED report, mark UNAPPROVED copy, verify on the deployed URL, never touch tracking, never submit forms).
+1. Follow CLAUDE.md in this repo: numbered reading of his checklist, DONE / NOT DONE / ASSUMED report per item, mark any wording you wrote as UNAPPROVED, verify on the deployed URL, never write "nothing is pending".
+2. Copy the longevitylifeacademy.com and Julie masterclass designs; do not invent designs or copy.
+3. Look at the whole site on a phone, not fold by fold. "No code can have this type of design on mobile with huge, long cards with tiny text where you scroll a million years."
+4. Short folds on phones. Card groups are sideways sliders on phones, not long stacks.
+5. Large, readable text everywhere. Nothing small, nothing grey, nothing cramped, no plain white paragraphs.
+6. Cards in each group in different brand colours, with depth, gradient and neon lighting on navy.
+7. Symmetrical layouts, nothing wasting space, it must shine.
+
+## Fold order (Omri's order, set 5 Nov)
+1. Hero
+2. Six pillars, headline "Learn to Master Six Pillars *for a Longer, Better Life.*"
+3. What you'll learn (the 4-phase, 18-class syllabus)
+4. CGM (Abbott Lingo)
+5. Julie: VIP Masterclass bonus card
+6. Pricing ("Enroll Now" opens eTeacher's ecomm checkout)
+7. How It Works
+8. About Longevity Life Academy
+9. Client logos
+10. Instructors
+11. Six Systems
+12. Blog (Deep Dives)
+
+Kept after these, pending his keep or remove answer: reviews, what the course includes, Why This Course Is Different, bio-age quiz, FAQ, application form, final banner, footer.
 
 ## Approved decisions (latest wins)
-- **Hero**
-  - The longevitylifeacademy.com hero layout: wordmark with "by eTeacher Group", the two buttons.
-  - Headline: "Your personal longevity protocol, built in 18 weeks."
-  - Line under it: "Live small-group classes with certified longevity instructors. A free Abbott Lingo glucose sensor shipped to your home. You finish with a written protocol built on your own numbers."
-  - Trustpilot as a clean line, **no pill** (logo, five green stars, 4.6 / 5, 600+ verified reviews).
-  - Motion background: the pages.dev cells video. Julie's approved film beside the copy on desktop, below it on phones.
-  - Contrast must be strong.
-  - Rejected: "Slow down your pace of aging", the pages.dev italic sub, "It's Your Life. Live It Well." as the headline (he said the correct wording is the protocol-in-18-weeks line).
-- **Promo strip:** removed. The offer lives in the .com floating bar (same design): "November offer", "55% off month one", "$79 Month 1".
-- **Keep:** the WhatsApp button and the floater. He said both look good.
-- **Six pillars:** the .com fold with its motion videos. Large on phones: each card about 72% of the screen, swipe sideways.
-- **What you'll learn:** the pages.dev syllabus ("The 18 classes, week by week"), improved, a different colour per phase. No orange or green.
-- **Pricing**
-  - He hates every version so far: small text, weird wording, empty space, "10 million bullets".
-  - His requirements: the monthly price with the big discount ($79 first month, $169 struck, 55% off month one), then $169 a month for 4 months, and everything included, in the **masterclass pricing card design, exactly** (Julie masterclass site, `#pricing` .pk-card).
-  - Large text and no empty space. Never show $755, $845, $799, coupon codes or "you pay" lines.
-  - **Ask him for the exact content before building it.**
-- **Julie fold:** the masterclass "About Julie / VIP Masterclass included" fold with its animations ("Ten years pass. She ages six." bento with the pace and curve animations and the No.2 card). No cream background.
-- **Course includes:** the .com fold, cards each a different colour (allowed colours only). The $99 tag becomes "Included".
-- **CGM (Abbott Lingo)**
-  - Compact, not tall, in the 3D, lighting and colour style of the deck reference slides **only** (see below).
-  - Show the **real Abbott Lingo app metrics**:
-    - the live glucose reading, updated every minute;
-    - the day graph with spikes, and a Lingo Count number in the shaded area under each spike;
-    - the daily Lingo Count total, which you aim to keep below a daily target;
-    - trends over time, including the time of day with the biggest spikes;
-    - food and activity logging, with Apple Health sync.
-  - Sources: Abbott press release https://abbott.mediaroom.com/2024-09-05-Abbotts-Lingo-TM-Continuous-Glucose-Monitor-for-Health-and-Wellness-Now-Available-in-the-U-S , NBC/CNBC launch coverage https://www.nbcdfw.com/news/business/money-report/abbott-launches-its-first-over-the-counter-continuous-glucose-monitor-in-the-u-s/3637581/ , App Store listing https://apps.appfollow.io/ios/lingo-by-abbott/1670445335?country=us , Android launch https://www.nasdaq.com/press-release/abbotts-lingotm-now-androidtm-expanding-access-real-time-glucose-data-2025-12-08 .
-  - No phone, unless shown as an app-launch moment with the real metrics popping out of it in 3D.
-  - No box, no pill or chip labels, nothing drawn that is not real. A human wearing the CGM is now OK (latest instructions, item 3), but not the rejected "sugar-man" photo.
-  - Text: longevitylifeacademy.com CGM fold wording only.
-- **Blog fold:** the .com "Deep Dives / What Your Doctor Doesn't Have Time to Teach You" (this is his "Longevity news"). The accent must be the hero's light blue (Instrument Serif italic, gradient #BFE2FF to #6FB6FF), not bright #006EFF.
-- **About:** the .com "About Longevity Life Academy" with the eTeacher block (eTeacher's; leave it) and the client logos (.com logos only) in full colour and moving.
-- **Enroll form:** the .com lead form moved up two folds from its .com position, made cleaner. eTeacher's checkout itself is left unchanged.
-- **Reviews:** the .com reviews, larger text, a colour per card, more depth.
-- **Other folds:** How It Works, Why This Course Is Different, Six Systems, bio-age quiz, FAQ and final banner all stay, in .com design. **No beige** anywhere.
-- **Colours:** blue, navy/black, light blue, white, logo teal. Cards may differ in colour. **No orange, no green, no gold, no beige.** The deck colouring is for the CGM fold only.
-- **Fonts:** .com fonts, with the italic accent as in the .com hero. He also said "our own Playfair italic"; ask once if unclear.
-- **Julie fold photo:** replace with her banner photo (see the latest instructions, item 1).
-- **Logo and photos:** crisp nav logo (lla-logo-no-tagline@2x.png, no blur filter). Jordan Lattimore's photo cropped so his face sits higher.
+- **Colours:** blue, navy/black, light blue, white only. No green, teal, violet, orange, gold or beige. Trustpilot and WhatsApp keep their own green.
+- **Fonts:** Playfair Display for every header; the accent words in Playfair Display italic (light blue). No Instrument Serif, no Codec Pro.
+- **Copy rules:** no em or en dashes, no all-caps words or caps labels, no pills or chips, no exclamation points, no AI-looking notes. "$100 credits back", never "cash back".
+- **Hero:** .com hero layout, wordmark with "by eTeacher Group", headline "Your personal *longevity protocol,* built in 18 weeks.", calm Trustpilot line, Julie's film beside the copy on desktop and below it on phones. Logos are the .com files (nav lla-logo-no-tagline@2x.png, hero lla-wordmark-only-transparent@2x.png), unchanged.
+- **CGM:** the real Abbott Lingo product shot (assets/cgm/lingo-1.jpg from .com) plus three large lines: "Minute-by-minute glucose, tracked for 2 weeks", "Lingo coaching, to build habits and adjust your nutrition", "Free, shipped to your home, full app access on iOS and Android". Fine print kept.
+- **Julie fold:** a compact, symmetrical neon card about the VIP Masterclass, not about her.
+  - Title "VIP Masterclass with *Julie Gibson Clark*", tag "Bonus, included".
+  - Her photo (julie-face.jpg, the julie-gibson-clark.jpg image Omri sent) in a neon ring between two fact tiles: "No. 2 on Earth" and "8 months aging a year".
+  - Line: "90-minute live masterclass, Q&A included, Nov 14."
+  - About half a phone screen. Never her deck slides.
+- **Pricing:** headline "One price. *Everything included.*" (Omri may pick one of: "Simple pricing. Everything included." / "Everything you need for 18 weeks." / "One plan for your whole protocol.").
+  - Card: "55% off month one", "The Longevity *Blueprint*", $79 with $169 struck, "first month", "Then $169 a month for 4 months", "Enroll Now", "14-day try-out refund on the course.", secure checkout row with lock and card logos.
+  - Tiles in this order, each a different brand gradient with neon: "18 live classes / 18 weeks, Small groups, top longevity experts"; "Your longevity protocol, Tailored to your biomarkers"; "Abbott Lingo CGM, Free, shipped to your home"; "$100 credits back, Towards your next course".
+  - Then the wide neon bonus row: "Bonus VIP Masterclass. Learn to age slower from the 2nd slowest-aging human on earth. 90 min, live Q&A, Nov 14."
+  - Never show $755, $845, $799, coupon codes or "you pay" lines.
+- **Instructors:** one-row slider with large faces and room for text.
+- **Six Systems:** each node its own brand gradient with neon; two columns on phones.
+- **Blog:** videos on top of each card, text below, motion intact.
+- **WhatsApp and floater:** kept, larger.
 
 ## Rejected (never reuse)
-- My first custom "final-meta" design.
-- The site-wide deck restyle (navy glass everywhere).
-- The photo of the man with the sensor.
-- The cartoon phone app with orange and green chips.
-- The Lingo box image.
-- Pills and chips as decoration.
-- The masterclass "Julie in the press" cards as Longevity news.
-- "Swipe for more" hints.
-- Removing folds.
-
-## Deck reference (look, never edit)
-- **Deck:** gitteromri-ux/lla-masterclass-syllabus, slide-canvas/v46 (the deck Julie presented at the masterclass event). Live: https://gitteromri-ux.github.io/lla-masterclass-syllabus/slide-canvas/v46/
-- **Use only for the CGM fold's 3D and colour:**
-  - n15-stress (cortisol curve, glass);
-  - n11-sugar (spike, signal, scar glass chart);
-  - n08-sleep (glowing timeline);
-  - n09-food (four glass cards with coloured top bars);
-  - n18-testing (three glass cards).
+- My first custom "final-meta" design; the site-wide deck restyle.
+- Julie: deck slides of any kind ("U cant show her dwcks"), the big photo, a whole-phone-long fold, the non-symmetrical strip with white text, the bento with animations on phones.
+- CGM: flat white list on phones, the drawn phone app, the Lingo box image, the man-with-sensor photo, the cartoon chips.
+- Pricing: hairline grid tiles, check-bullet lists, icon tiles ("robotic"), small fonts under the price.
+- Compact circle teacher cards ("too small"); same-colour card groups; grey subheaders; long phone folds.
+- Green, teal, violet, orange, gold, beige; Instrument Serif; Codec Pro.
+- "Swipe for more" hints, pills, chips, caps eyebrows.
 
 ## Where things are
-- **Build tool:** gitteromri-ux/lla-blueprint-vip-preview, branch `meta-final-wip`.
-  - Run: `python3 tools/build_meta_final.py <Longevity-Academy.github.io/index.html> nov14/index.html tools/pagesdev_hero.css meta-final`.
-  - It writes `meta-final/index.html` (preview: tracking, CRM and checkout stripped, .com assets absolute to https://www.longevitylifeacademy.com/) and `meta-final/PRODUCTION-index.html.txt` (same page with .com tracking and eTeacher checkout intact).
-  - Pieces:
-    - `tools/meta_final_pricing.html`, `tools/meta_final_cgm.html`, `tools/meta_final_julie.html`;
-    - CSS: `tools/meta_final.css` plus `meta_final_newfolds.css` plus `meta_final_fix.css` (latest fixes);
-    - JS: `tools/meta_final.js`.
-  - The `meta_final_brand.css` and `meta_final_ref*.css` files are the rejected deck restyle and are no longer injected.
-- **Preview link:** https://gitteromri-ux.github.io/lla-blueprint-vip-preview/meta-final/ (main branch). Main still holds an older, rejected version; the current build is only on `meta-final-wip`.
-- **Local preview** (the sandbox cannot reach .com or pages.dev): rewrite `https://www.longevitylifeacademy.com/` to the local clone of Longevity-Academy.github.io and `https://longevitylifeacademy.pages.dev/assets/` to a local lla-course-checkout checkout, then screenshot with Playwright (Chromium is preinstalled).
-- **Device check:** gitteromri-ux/lla-julie-letter, branch `ccr-fb60a687-apnfd5`, workflow `.github/workflows/meta-final-shots.yml` with `audit/meta-final.js`.
-  - It injects `audit/fixtures/preview.html` and `production.html` with mocks, and adds an /etc/hosts block for Meta, Google, the Worker and Vercel.
-  - Last result: every Enroll button opens eTeacher's checkout, the FAQ is 8 of 8, step 1 to step 2 works, zero tracking from the preview, no sideways scroll.
-- **Omri's review board:** gitteromri-ux/longevity-website-review-20261105.
-  - Fold screenshots of the three sites, plus `claude-selection.json` (my fold picks and comments, loaded by "Load Claude's selection").
-  - His own comments there were never submitted, so ask him for them.
-- **Go-live path (fastest):**
-  - This account can push to Longevity-Academy/Longevity-Academy.github.io.
-  - After Omri approves, open a pull request there: replace index.html with the production file and add `meta-final/assets/*` as `assets/mf/` (Julie animations, Julie photo).
-  - The production file widens the CSP for the pages.dev hero video and film.
-  - Perplexity checks tracking on the pull request, merges, and the site is live in about a minute.
-  - See `meta-final/GO-LIVE-for-Perplexity.md`.
+- **Build:** `python3 tools/build_meta_final.py /home/user/longevity-academy/Longevity-Academy.github.io/index.html nov14/index.html tools/pagesdev_hero.css meta-final` on `meta-final-wip`.
+  - Writes `meta-final/index.html` (preview: tracking, CRM and checkout stripped, assets absolute) and `meta-final/PRODUCTION-index.html.txt` (same page with .com tracking and eTeacher checkout intact).
+  - Pieces: `tools/meta_final_pricing.html`, `tools/meta_final_cgm.html`, `tools/meta_final_julie.html`.
+  - CSS, in load order: `meta_final.css`, `meta_final_newfolds.css`, `masterclass_julie.css`, `meta_final_fix.css`, `meta_final_pricing_big.css` (loads last).
+  - `mfasset:` in the pieces resolves to the github.io meta-final/assets URL in the preview and to `assets/mf/` in production.
+- **Publishing the preview:** check out `meta-final/index.html` and `meta-final/assets` from `meta-final-wip` onto main, commit, push main. GitHub Pages redeploys in about a minute.
+- **Local render:** rewrite `https://www.longevitylifeacademy.com/` to the local clone of Longevity-Academy.github.io and the github.io meta-final assets URL to the local `meta-final/assets/`, then screenshot with Playwright.
+- **Device check:** gitteromri-ux/lla-julie-letter, branch `ccr-fb60a687-apnfd5`, workflow `meta-final-shots.yml` with `audit/meta-final.js`. Copy the build to `audit/fixtures/preview.html` and `production.html`, push, read `audit/out-mf/report.json`.
+- **Deck slide files:** removed from the site; they remain in `meta-final-wip` history (commits c39609c, ea563bc). Purge only on Omri's word.
 
-## Hard rules (owner handover, still binding)
-- **Tracking and money systems:** no Meta changes, and no production tracking, CAPI, payment or CRM changes, without approval. Never submit the checkout or enroll forms. Never create CRM leads. Never use Vercel sandbox commands.
-- **Copy:** no em dashes or en dashes, no all-caps words, no exclamation points, no emojis. Never imply Julie teaches the course (she hosts the masterclass). Masterclass: Saturday, November 14, 12:00 PM ET.
-- **eTeacher's checkout:** its modal still says "Masterclass credit JULIE249 applied" and "$755 total". Omri said leave it.
+## Hard rules (still binding)
+- No Meta, production tracking, CAPI, payment or CRM changes. Never echo the CAPI token. Never create CRM leads or AC objects. Never submit the checkout or enroll forms. Never use Vercel sandbox commands. Never spend paid credits without his word.
+- No automatic mass checks that show up in the Worker.
+- Never imply Julie teaches the course; she hosts the masterclass (Saturday, November 14, 12:00 PM ET).
+- eTeacher's checkout is left unchanged: its step 2 still says "Masterclass credit JULIE249 applied" and "$755 total". Omri said leave it.
 
-## Open items right now
-1. Pricing fold: get the exact content from Omri, then build it in the masterclass card design.
-2. CGM fold: rebuild compact, with the real Lingo metrics above in the deck 3D style.
-3. Make all folds shorter on phones; mobile conversions matter.
-4. Omri's list of about 50 other mistakes: ask him to send it, then fix only those.
-5. Re-run the device check on the final build. Publish to the preview link only on his word, then the pull request to .com for Perplexity.
+## Open items
+1. Omri's review of the published preview, fold by fold, on his phone.
+2. Keep or remove the unlisted folds (reviews, course includes, Why Different, quiz, FAQ, application form, final banner).
+3. Pricing headline: keep "One price. Everything included." or pick one of the three offered.
+4. Purge the deck slide files from git history, if he wants.
+5. On his word only: the go-live pull request to Longevity-Academy/Longevity-Academy.github.io for Perplexity.
