@@ -1275,3 +1275,40 @@ html.mf body #julie.mf-julie-light .mf-head h2.section-title em,html.mf body #ju
 }
 html.mf body #julie.mf-julie-light .jb-role{font:500 19px/1.45 Inter,sans-serif!important;color:#FFFFFF!important;-webkit-text-fill-color:#FFFFFF!important}
 @media (max-width:900px){html.mf body #julie.mf-julie-light .jb-role{font-size:18px!important}}
+/* ===== Round 35 (Omri: she is not the thing, the image is too large): Julie as one compact bonus card ===== */
+html.mf body #julie.mf-julie-bonus{background:linear-gradient(180deg,#071433 0%,#040B1E 100%)!important;padding:36px 0!important}
+html.mf body #julie .jbonus{display:grid;grid-template-columns:150px minmax(0,1fr);gap:24px;align-items:center;max-width:900px;margin:0 auto;padding:22px 24px;border-radius:24px;background:radial-gradient(80% 90% at 50% 0%,rgba(0,110,255,.22),transparent 70%),linear-gradient(180deg,#0A1A40 0%,#050D24 100%);border:1.5px solid #9AD8FF;box-shadow:0 0 8px rgba(154,216,255,.9),0 0 24px rgba(59,167,255,.7),0 0 54px rgba(0,110,255,.5),inset 0 0 16px rgba(124,200,255,.3)}
+html.mf body #julie .jbonus-photo{width:150px;height:150px;border-radius:18px;object-fit:cover;object-position:50% 25%;border:1.5px solid rgba(154,216,255,.7)}
+html.mf body #julie .jbonus-tag{margin:0 0 6px;font:italic 500 20px/1.2 'Playfair Display',Georgia,serif;color:#BFE6FF;text-shadow:0 0 10px rgba(124,200,255,.8)}
+html.mf body #julie .jbonus-title{margin:0 0 8px;font:500 30px/1.15 'Playfair Display',Georgia,serif!important;color:#FFFFFF!important;-webkit-text-fill-color:#FFFFFF!important;letter-spacing:-.01em}
+html.mf body #julie .jbonus-title em{font-style:italic;font-weight:400;background:linear-gradient(180deg,#E3F2FF,#7CC0FF);-webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-fill-color:transparent}
+html.mf body #julie .jbonus-text{margin:0 0 12px;font:500 19px/1.45 Inter,sans-serif;color:#FFFFFF}
+html.mf body #julie .jbonus-facts{display:flex;flex-wrap:wrap;gap:8px 22px;margin:0 0 16px}
+html.mf body #julie .jbonus-facts span{font:500 18px/1.3 Inter,sans-serif;color:#CFE8FF}
+html.mf body #julie .jbonus-facts b{font:italic 500 24px/1 'Playfair Display',Georgia,serif;color:#FFFFFF;margin-right:4px}
+html.mf body #julie .jbonus .mf-jbtn{display:inline-flex}
+@media (max-width:900px){
+  html.mf body #julie.mf-julie-bonus{padding:28px 0!important}
+  html.mf body #julie .jbonus{grid-template-columns:96px minmax(0,1fr);gap:14px;padding:16px;align-items:start}
+  html.mf body #julie .jbonus-photo{width:96px;height:96px;border-radius:14px}
+  html.mf body #julie .jbonus-tag{font-size:18px}
+  html.mf body #julie .jbonus-title{font-size:25px!important}
+  html.mf body #julie .jbonus-text,html.mf body #julie .jbonus-facts,html.mf body #julie .jbonus .mf-jbtn{grid-column:1/-1}
+  html.mf body #julie .jbonus-body{display:contents}
+  html.mf body #julie .jbonus-tag,html.mf body #julie .jbonus-title{grid-column:2}
+  html.mf body #julie .jbonus-text{font-size:18px}
+  html.mf body #julie .jbonus .mf-jbtn{justify-self:start}
+}
+/* Round 35b (Omri: not a whole phone long fold): a slim bonus strip on phones */
+@media (max-width:900px){
+  html.mf body #julie.mf-julie-bonus{padding:20px 0!important}
+  html.mf body #julie .jbonus{grid-template-columns:72px minmax(0,1fr);gap:6px 12px;padding:14px 14px 12px;align-items:center}
+  html.mf body #julie .jbonus-photo{width:72px;height:72px;border-radius:12px;grid-row:1/3}
+  html.mf body #julie .jbonus-tag{grid-column:2;grid-row:1;margin:0;font-size:17px}
+  html.mf body #julie .jbonus-title{grid-column:2;grid-row:2;margin:0;font-size:22px!important;line-height:1.12!important}
+  html.mf body #julie .jbonus-text{grid-column:1/-1;margin:8px 0 6px;font-size:18px}
+  html.mf body #julie .jbonus-facts{grid-column:1/-1;margin:0;gap:4px 14px}
+  html.mf body #julie .jbonus-facts span{font-size:17px}
+  html.mf body #julie .jbonus-facts b{font-size:21px}
+  html.mf body #julie .jbonus .mf-jbtn{display:none!important}
+}
