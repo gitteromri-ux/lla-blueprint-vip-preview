@@ -682,3 +682,85 @@ html.mf body section :is(.container,div) p:is(.section-subtitle,.how-v2-sub){fon
 html.mf body section.how-v2 p.how-v2-sub{color:#FFFFFF!important;-webkit-text-fill-color:#FFFFFF!important}
 @media (min-width:901px){html.mf body section :is(.container,div) p:is(.section-subtitle,.how-v2-sub){font-size:22px!important}}
 html.mf body .mc-pricing .pk-tier em{font-family:'Playfair Display',Georgia,serif!important;font-style:italic!important;font-weight:400!important}
+/* Round 11 (Omri): keep the agreed Lingo design on phones. The 3D What's included panel with coloured item cards, small phone above it */
+@media (max-width:900px){
+  html.mf body #cgm .cgm8-wrap{grid-template-columns:minmax(0,1fr)!important;gap:14px!important}
+  html.mf body #cgm .cgm8-stagebox{width:180px!important;height:235px!important;margin:0 auto!important}
+  html.mf body #cgm .cgm8-stage{transform:scale(.5)!important}
+  html.mf body #cgm .cgm8-panel{padding:18px 16px 16px!important;border-radius:22px!important;background:linear-gradient(160deg,rgba(255,255,255,.95),rgba(232,242,255,.92))!important;box-shadow:0 30px 60px -24px rgba(0,40,120,.7),0 0 40px -10px rgba(59,167,255,.55),0 0 0 1px rgba(255,255,255,.7)!important;color:#0A1E3A!important}
+  html.mf body #cgm .cgm8-panel h3{display:block!important;font:600 25px/1.15 'Playfair Display',Georgia,serif!important;color:#0A1E3A!important;margin:0 0 12px!important}
+  html.mf body #cgm .cgm8-panel ul{gap:9px!important}
+  html.mf body #cgm .cgm8-panel li{font:600 18px/1.38 Inter,sans-serif!important;padding:10px 12px 10px 40px!important;border-radius:14px!important;color:#0A1E3A!important;background:color-mix(in srgb,var(--c) 13%,#fff)!important;border:1px solid color-mix(in srgb,var(--c) 34%,#fff)!important}
+  html.mf body #cgm .cgm8-panel li::before{left:13px!important;top:15px!important;width:15px!important;height:15px!important;background:var(--c)!important;box-shadow:0 0 0 4px color-mix(in srgb,var(--c) 22%,#fff)!important}
+}
+/* ===== Round 12 (Omri): hero on phones. Headline wider and higher, smaller Trustpilot and logo, larger lead ===== */
+html.mf body h1.hero-title{text-wrap:balance}
+@media (max-width:900px){
+  html.mf body section.hero{padding-top:92px!important}
+  html.mf body .hero .hero-inner{padding:0 16px!important}
+  html.mf body .hero .mf-tp{transform:scale(.84);transform-origin:50% 0;margin-bottom:-8px!important}
+  html.mf body .hero .hero-wordmark-img{width:126px!important;height:auto!important;margin:6px auto 10px!important}
+  html.mf body h1.hero-title{width:100%!important;max-width:none!important;font-size:44px!important;line-height:1.06!important;margin:4px 0 16px!important}
+  html.mf body .hero .hero-sub{font-size:22px!important;line-height:1.45!important}
+}
+/* ===== Round 12: blog cards. Text fits inside the card, stronger contrast, larger ===== */
+@media (max-width:900px){
+  html.mf body .skills .skill-card{height:auto!important;min-height:440px!important;display:flex!important;flex-direction:column!important;justify-content:flex-end!important}
+  html.mf body .skills .skill-card .skill-content{position:relative!important;inset:auto!important;padding:120px 22px 26px!important;z-index:2}
+}
+html.mf body .skills .skill-card .skill-overlay{background:linear-gradient(180deg,rgba(4,11,30,.10) 0%,rgba(4,11,30,.62) 38%,rgba(4,11,30,.94) 72%,rgba(4,11,30,.98) 100%)!important}
+html.mf body .skills .skill-card .skill-title{font-size:27px!important;line-height:1.15!important;color:#FFFFFF!important;text-shadow:0 2px 14px rgba(0,0,0,.6)}
+html.mf body .skills .skill-card .skill-sub{font-size:20px!important;line-height:1.45!important;font-weight:500!important;color:#FFFFFF!important;text-shadow:0 1px 10px rgba(0,0,0,.55)}
+html.mf body .skills .skill-card .skill-eyebrow{font-size:17px!important;font-weight:700!important;color:#9FD0FF!important}
+/* ===== Round 12 (Omri: Why Different completely off brand): the masterclass card language. Dark navy fold, white glass and blue glass cards, blue halo ===== */
+html.mf body section.value{background:radial-gradient(55% 45% at 28% 42%,rgba(0,110,255,.30),transparent 70%),radial-gradient(40% 35% at 90% 85%,rgba(59,167,255,.14),transparent 70%),linear-gradient(180deg,#040B1E 0%,#071433 100%)!important}
+html.mf body section.value .section-title{color:#FFFFFF!important}
+html.mf body section.value .section-title :is(span,em){background:linear-gradient(180deg,#CFE8FF 0%,#7CC0FF 100%)!important;-webkit-background-clip:text!important;background-clip:text!important;color:transparent!important;-webkit-text-fill-color:transparent!important}
+html.mf body section.value .eyebrow{color:#7CC0FF!important}
+html.mf body section.value .value-arrow{background:rgba(255,255,255,.08)!important;border:1px solid rgba(255,255,255,.28)!important;color:#FFFFFF!important}
+html.mf body section.value .value-track .value-card:nth-child(odd){background:linear-gradient(165deg,#FFFFFF 0%,#F4F8FF 55%,#E4EFFF 100%)!important;border:1px solid rgba(255,255,255,.85)!important;box-shadow:0 0 0 1px rgba(0,110,255,.18),0 34px 70px -32px rgba(0,20,70,.9),0 0 60px -14px rgba(0,110,255,.6),inset 0 1px 0 #fff!important}
+html.mf body section.value .value-track .value-card:nth-child(even){background:radial-gradient(70% 55% at 88% 8%,rgba(255,255,255,.30),transparent 62%),linear-gradient(160deg,#2C7BFF 0%,#0A4FD8 100%)!important;border:1px solid rgba(160,205,255,.55)!important;box-shadow:0 34px 70px -32px rgba(0,20,70,.9),0 0 60px -12px rgba(0,110,255,.75),inset 0 1px 0 rgba(255,255,255,.45)!important}
+html.mf body section.value .value-track .value-card:nth-child(n)::after{display:none!important}
+html.mf body section.value .value-track .value-card:nth-child(odd) .value-title{color:#0A1E3A!important;-webkit-text-fill-color:#0A1E3A!important}
+html.mf body section.value .value-track .value-card:nth-child(odd) .value-desc{color:#22385E!important}
+html.mf body section.value .value-track .value-card:nth-child(even) .value-title{color:#FFFFFF!important;-webkit-text-fill-color:#FFFFFF!important}
+html.mf body section.value .value-track .value-card:nth-child(even) .value-desc{color:#EAF3FF!important}
+html.mf body section.value .value-track .value-card .value-title{font:500 30px/1.15 'Playfair Display',Georgia,serif!important}
+html.mf body section.value .value-track .value-card .value-desc{font:500 20px/1.5 Inter,sans-serif!important}
+/* Round 12: eyebrows light blue on dark folds; the line under the blog cards readable; Why Different accent light blue */
+html.mf body :is(#hero,section.topics,#pricing,#julie,#cgm,#about,#how,#skills,section.value,section.deepdive,#lead-gen,section.bioquiz,section.final-cta) :is(.eyebrow,.lead-gen-v2-eyebrow,.bioquiz-eyebrow){color:#7CC0FF!important;-webkit-text-fill-color:#7CC0FF!important}
+html.mf body #skills .container > p,html.mf body #skills .skills-footer p,html.mf body #skills p:not(.section-subtitle):not(.skill-sub){color:#FFFFFF!important;-webkit-text-fill-color:#FFFFFF!important;opacity:1!important;font-size:20px!important}
+html.mf body :is(section.value) :is(.section-title) :is(span,em):not(.lla-cta-pill):not(.price){background:linear-gradient(180deg,#CFE8FF 0%,#7CC0FF 100%)!important;-webkit-background-clip:text!important;background-clip:text!important;color:transparent!important;-webkit-text-fill-color:transparent!important}
+/* ===== Round 12b (Omri: texts on top ruined the motion footage): footage clean on top, no overlay; text in its own panel below ===== */
+html.mf body .skills .skill-card{height:auto!important;min-height:0!important;display:flex!important;flex-direction:column!important;justify-content:flex-start!important;overflow:hidden!important;background:linear-gradient(180deg,#0B1A3C 0%,#060F26 100%)!important;border:1px solid rgba(140,200,255,.22)!important;box-shadow:0 30px 60px -28px rgba(0,20,70,.9),0 0 50px -16px rgba(0,110,255,.55)!important}
+html.mf body .skills .skill-card .skill-bg{position:relative!important;inset:auto!important;width:100%!important;height:280px!important;flex:none!important;overflow:hidden!important}
+html.mf body .skills .skill-card .skill-bg video{position:absolute!important;inset:0!important;width:100%!important;height:100%!important;object-fit:cover!important;filter:none!important;opacity:1!important}
+html.mf body .skills .skill-card .skill-overlay{display:none!important}
+html.mf body .skills .skill-card .skill-content{position:relative!important;inset:auto!important;transform:none!important;padding:22px 24px 26px!important;background:none!important;z-index:2}
+html.mf body .skills .skill-card .skill-title,html.mf body .skills .skill-card .skill-sub{text-shadow:none!important}
+html.mf body .skills .skill-card .skill-arrow{z-index:3}
+@media (max-width:900px){html.mf body .skills .skill-card .skill-bg{height:230px!important}html.mf body .skills .skill-card .skill-content{padding:20px 20px 24px!important}}
+/* ===== Round 12c (Omri: Lingo still cheap): the pricing card language. White glass panel with blue halo, rows with hairlines and lit icon tiles, the deck's sensor callout ===== */
+html.mf body #cgm .cgm8-panel{position:relative!important;padding:28px 28px 22px!important;border-radius:26px!important;color:#0A1E3A!important;background:linear-gradient(165deg,#FFFFFF 0%,#F4F8FF 55%,#E4EFFF 100%)!important;border:1px solid rgba(255,255,255,.85)!important;box-shadow:0 0 0 1px rgba(0,110,255,.18),0 46px 90px -34px rgba(0,20,70,.9),0 0 80px -12px rgba(0,110,255,.6),inset 0 1px 0 #fff!important}
+html.mf body #cgm .cgm8-panel h3{display:block!important;font:italic 500 28px/1.15 'Playfair Display',Georgia,serif!important;color:#0A1E3A!important;margin:0 0 6px!important}
+html.mf body #cgm .cgm8-panel ul{display:block!important;margin:0!important;padding:0!important}
+html.mf body #cgm .cgm8-panel li{display:grid!important;grid-template-columns:46px minmax(0,1fr)!important;gap:16px!important;align-items:center!important;padding:14px 0!important;border:0!important;border-bottom:1px solid rgba(10,30,58,.1)!important;border-radius:0!important;background:none!important;font:600 19px/1.4 Inter,sans-serif!important;color:#0A1E3A!important}
+html.mf body #cgm .cgm8-panel li:last-child{border-bottom:0!important;padding-bottom:4px!important}
+html.mf body #cgm .cgm8-panel li::before{display:none!important;content:none!important}
+html.mf body #cgm .cgm8-ic{display:grid;place-items:center;width:46px;height:46px;border-radius:14px;background:linear-gradient(160deg,#3B93FF 0%,#0057E0 100%);box-shadow:0 10px 22px -8px rgba(0,87,224,.85),0 0 18px -4px rgba(0,110,255,.6),inset 0 1px 0 rgba(255,255,255,.4)}
+html.mf body #cgm .cgm8-ic svg{width:24px;height:24px;fill:none;stroke:#FFFFFF;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+html.mf body #cgm .cgm8-callout{position:absolute;left:66%;top:100%;margin-top:8px;white-space:nowrap;pointer-events:none}
+html.mf body #cgm .cgm8-callout b{display:block;font:italic 500 28px/1 'Playfair Display',Georgia,serif;color:#BFE2FF;text-shadow:0 0 18px rgba(111,182,255,.7)}
+html.mf body #cgm .cgm8-callout span{display:block;margin-top:4px;font:500 17px/1.2 Inter,sans-serif;color:#FFFFFF}
+html.mf body #cgm .cgm8-stagebox{margin-bottom:58px!important}
+@media (max-width:900px){
+  html.mf body #cgm .cgm8-stagebox{margin:0 auto 6px!important;transform:translateX(-46px)}
+  html.mf body #cgm .cgm8-callout{left:calc(100% + 4px);top:52%;margin-top:0}
+  html.mf body #cgm .cgm8-callout b{font-size:25px}
+  html.mf body #cgm .cgm8-callout span{font-size:16px}
+  html.mf body #cgm .cgm8-panel{padding:22px 20px 16px!important}
+  html.mf body #cgm .cgm8-panel h3{font-size:26px!important}
+  html.mf body #cgm .cgm8-panel li{grid-template-columns:42px minmax(0,1fr)!important;gap:14px!important;font-size:18px!important;padding:13px 0!important}
+  html.mf body #cgm .cgm8-ic{width:42px;height:42px;border-radius:12px}
+}
+@media (max-width:900px){html.mf body #cgm .cgm8-stagebox{transform:translateX(-66px)!important}html.mf body #cgm .cgm8-callout{left:calc(100% - 6px)!important}}

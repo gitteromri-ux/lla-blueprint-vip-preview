@@ -1,0 +1,65 @@
+/* Round 12 (Omri): pricing card in the masterclass card language. White glass card, blue halo, left-aligned, Playfair title and price, label rows instead of check bullets */
+html.mf body section.mfp{position:relative;padding:72px 0 64px;background:radial-gradient(60% 45% at 50% 38%,rgba(0,110,255,.30),transparent 70%),radial-gradient(40% 30% at 85% 90%,rgba(59,167,255,.14),transparent 70%),linear-gradient(180deg,#040B1E 0%,#071433 100%)}
+html.mf body .mfp-head{text-align:center;max-width:820px;margin:0 auto 34px}
+html.mf body .mfp-head .section-title{color:#fff!important;margin:0 0 14px!important}
+html.mf body .mfp-card{position:relative;max-width:620px;margin:0 auto;padding:34px 34px 30px;border-radius:28px;text-align:left;color:#0A1E3A;background:linear-gradient(165deg,#FFFFFF 0%,#F4F8FF 55%,#E4EFFF 100%);border:1px solid rgba(255,255,255,.85);box-shadow:0 0 0 1px rgba(0,110,255,.18),0 46px 90px -34px rgba(0,20,70,.9),0 0 80px -12px rgba(0,110,255,.6),inset 0 1px 0 #fff}
+html.mf body .mfp-card::before{content:'';position:absolute;inset:-1px;border-radius:28px;padding:1px;background:linear-gradient(160deg,#FFFFFF,rgba(255,255,255,.35) 40%,rgba(0,110,255,.5));-webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask-composite:exclude;pointer-events:none}
+html.mf body .mfp-tag{display:flex;align-items:center;gap:10px;margin:0 0 16px;font:700 18px/1.2 Inter,sans-serif;color:#0047B8}
+html.mf body .mfp-tag i{width:10px;height:10px;border-radius:50%;background:#006EFF;box-shadow:0 0 0 4px rgba(0,110,255,.16),0 0 12px rgba(0,110,255,.8)}
+html.mf body .mfp-title{margin:0 0 10px;font:500 40px/1.08 'Playfair Display',Georgia,serif!important;letter-spacing:-.01em;color:#0A1E3A}
+html.mf body .mfp-title em{font-style:italic;font-weight:400;color:#006EFF}
+html.mf body .mfp-lead{margin:0 0 22px;font:500 20px/1.45 Inter,sans-serif;color:#22385E}
+html.mf body .mfp-price{display:flex;align-items:flex-end;gap:16px;line-height:1}
+html.mf body .mfp-now{font:700 96px/.9 'Playfair Display',Georgia,serif;letter-spacing:-.03em;background:linear-gradient(180deg,#0A1E3A 35%,#0047B8);-webkit-background-clip:text;background-clip:text;color:transparent}
+html.mf body .mfp-now sup{font-size:38px;vertical-align:top;position:relative;top:10px;margin-right:2px}
+html.mf body .mfp-was{margin-bottom:12px;font:500 28px/1 'Playfair Display',Georgia,serif;color:#7A88A6;text-decoration:line-through;text-decoration-thickness:2px}
+html.mf body .mfp-term{margin:10px 0 2px;font:700 20px/1.3 Inter,sans-serif;color:#0A1E3A}
+html.mf body .mfp-then{margin:0 0 24px;font:500 20px/1.4 Inter,sans-serif;color:#22385E}
+html.mf body .mfp-card .pk-btn{display:flex;align-items:center;justify-content:space-between;width:100%;min-height:66px;padding:0 26px;border-radius:16px;font:700 22px/1 Inter,sans-serif;color:#fff!important;text-decoration:none;background:linear-gradient(180deg,#2A86FF 0%,#0057E0 100%);box-shadow:0 18px 34px -14px rgba(0,87,224,.9),0 0 30px -6px rgba(0,110,255,.7),inset 0 1px 0 rgba(255,255,255,.35)}
+html.mf body .mfp-card .pk-foot{margin:12px 0 0;text-align:center;font:500 17px/1.4 Inter,sans-serif;color:#33456B}
+html.mf body .mfp-inc{margin:28px 0 4px;padding-top:24px;border-top:1px solid rgba(10,30,58,.12);font:italic 500 26px/1.2 'Playfair Display',Georgia,serif;color:#0A1E3A}
+html.mf body .mfp-list{margin:0}
+html.mf body .mfp-list>div{display:grid;grid-template-columns:120px minmax(0,1fr);gap:16px;padding:14px 0;border-bottom:1px solid rgba(10,30,58,.1)}
+html.mf body .mfp-list>div:last-child{border-bottom:0;padding-bottom:0}
+html.mf body .mfp-list dt{font:700 17px/1.5 Inter,sans-serif!important;color:#006EFF!important;margin:0}
+html.mf body .mfp-list dd{font:500 20px/1.45 Inter,sans-serif!important;color:#0A1E3A!important;margin:0}
+@media (max-width:760px){
+  html.mf body section.mfp{padding:44px 0 40px}
+  html.mf body .mfp-head{margin-bottom:24px}
+  html.mf body .mfp-card{padding:26px 22px 24px;border-radius:24px}
+  html.mf body .mfp-title{font-size:36px!important}
+  html.mf body .mfp-now{font-size:88px}
+  html.mf body .mfp-list>div{grid-template-columns:minmax(0,1fr);gap:4px;padding:13px 0}
+}
+html.mf body .mfp-now{font-variant-numeric:lining-nums!important;font-feature-settings:"lnum" 1!important}
+html.mf body .mfp-now sup{top:14px!important;margin-right:6px!important;font-size:34px!important}
+html.mf body .mfp-was{font-variant-numeric:lining-nums;font-feature-settings:"lnum" 1}
+/* Round 12d (Omri: the most important fold): compact card, one-line rows with lit icon tiles */
+html.mf body .mfp-top{display:flex;align-items:center;justify-content:space-between;gap:12px;margin:0 0 14px}
+html.mf body .mfp-top .mfp-tag{margin:0!important;white-space:nowrap}
+html.mf body .mfp-off{margin:0;font:800 18px/1.2 Inter,sans-serif;color:#006EFF;white-space:nowrap}
+html.mf body .mfp-title{margin:0 0 18px!important}
+html.mf body .mfp-price{display:flex!important;align-items:center!important;gap:16px!important}
+html.mf body .mfp-side{display:flex;flex-direction:column;gap:6px}
+html.mf body .mfp-side s{font:500 26px/1 'Playfair Display',Georgia,serif;color:#7A88A6;text-decoration-thickness:2px;font-variant-numeric:lining-nums;font-feature-settings:"lnum" 1}
+html.mf body .mfp-side b{font:700 19px/1.1 Inter,sans-serif;color:#0A1E3A}
+html.mf body .mfp-then{margin:14px 0 22px!important;font:600 20px/1.35 Inter,sans-serif!important;color:#22385E!important;white-space:nowrap}
+html.mf body .mfp-inc{margin:24px 0 2px!important;padding-top:22px!important}
+html.mf body ul.mfp-list{list-style:none;margin:0;padding:0}
+html.mf body ul.mfp-list li{display:grid;grid-template-columns:42px minmax(0,1fr);gap:14px;align-items:center;padding:11px 0;border-bottom:1px solid rgba(10,30,58,.09);font:600 19px/1.3 Inter,sans-serif;color:#0A1E3A}
+html.mf body ul.mfp-list li:last-child{border-bottom:0;padding-bottom:2px}
+html.mf body .mfp-ic{display:grid;place-items:center;width:42px;height:42px;border-radius:12px;background:linear-gradient(160deg,#3B93FF 0%,#0057E0 100%);box-shadow:0 10px 22px -8px rgba(0,87,224,.85),0 0 18px -4px rgba(0,110,255,.6),inset 0 1px 0 rgba(255,255,255,.4)}
+html.mf body .mfp-ic svg{width:22px;height:22px;fill:none;stroke:#FFFFFF;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+@media (max-width:760px){
+  html.mf body .mfp-card{padding:24px 20px 20px!important}
+  html.mf body .mfp-tag,html.mf body .mfp-off{font-size:17px!important}
+  html.mf body .mfp-title{font-size:34px!important;margin-bottom:14px!important}
+  html.mf body .mfp-now{font-size:84px!important}
+  html.mf body .mfp-then{font-size:19px!important}
+  html.mf body ul.mfp-list li{font-size:18px;gap:12px;grid-template-columns:40px minmax(0,1fr)}
+  html.mf body .mfp-ic{width:40px;height:40px}
+}
+html.mf body .mfp-now{font:800 96px/.9 Inter,sans-serif!important;letter-spacing:-.05em!important}
+html.mf body .mfp-now sup{font:700 34px/1 Inter,sans-serif!important;top:12px!important;margin-right:4px!important;letter-spacing:0!important}
+html.mf body .mfp-side s{font:600 26px/1 Inter,sans-serif!important}
+@media (max-width:760px){html.mf body .mfp-now{font-size:86px!important}}

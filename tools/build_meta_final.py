@@ -121,7 +121,7 @@ def common(s):
     hero = must(hero, '<img src="assets/hero-cgm.jpg" alt="Continuous glucose monitor and personalized health protocol" class="hero-image" loading="eager" fetchpriority="high">',
                 '<video class="hero-image mf-cells" src="https://longevitylifeacademy.pages.dev/assets/cells-light.mp4" poster="https://longevitylifeacademy.pages.dev/assets/cells-poster.jpg" autoplay muted loop playsinline preload="auto" aria-hidden="true"></video>')
     film = re.search(r'<figure class="lla-film">.*?</figure>', DEV_HERO, flags=re.S).group(0)
-    hero = re.sub(r'<h1 class="hero-title">.*?</h1>', '<h1 class="hero-title">Your personal longevity protocol,<br><span class="life-blue">built in 18 weeks.</span></h1>', hero, count=1, flags=re.S)
+    hero = re.sub(r'<h1 class="hero-title">.*?</h1>', '<h1 class="hero-title">Your personal <span class="life-blue">longevity protocol,</span><br>built in 18 weeks.</h1>', hero, count=1, flags=re.S)
     hero = re.sub(r'<p class="hero-sub">.*?</p>', '<p class="hero-sub">Live small-group classes with certified longevity instructors. A free Abbott Lingo glucose sensor shipped to your home. You finish with a written protocol built on your own numbers.</p>', hero, count=1, flags=re.S)
     # Trustpilot: no pill (Omri). One clean rating line.
     tp = ('<div class="mf-tp" role="img" aria-label="Rated 4.6 out of 5 on Trustpilot, 600+ verified reviews">'
@@ -187,7 +187,13 @@ def common(s):
         a, b = inner.split('<br>', 1)
         return m.group(1) + a + '<br><span class="mf-acc">' + b + '</span>' + m.group(4)
     s = re.sub(r'(<h2 class="(section-title|bioquiz-title|how-v2-title)[^"]*"[^>]*>)(.*?)(</h2>)', _acc, s, flags=re.S)
-    css = open(os.path.join(HERE, 'meta_final.css'), encoding='utf-8').read().replace('/*%%HERO_CSS%%*/', '').replace('/*%%NEW_FOLDS%%*/', open(os.path.join(HERE, 'meta_final_newfolds.css'), encoding='utf-8').read()).replace('/*%%JULIE_CSS%%*/', open(os.path.join(HERE, 'masterclass_julie.css'), encoding='utf-8').read()).replace('/*%%BRAND%%*/', open(os.path.join(HERE, 'meta_final_fix.css'), encoding='utf-8').read())
+    s = must(s, 'NAD precursors, Vitamin D, omega-3s, creatine, senolytics, the short list of supplements with real human data, and the long list of marketing dressed up as science.',
+             'The short list of supplements with real human data, and the long list of marketing dressed up as science.')
+    s = must(s, 'Zone 2 cardio for mitochondrial health, VO2 max as the strongest predictor of all-cause mortality, CGM-driven metabolic tracking, ApoB management, and the sleep architecture that drives recovery.',
+             'Zone 2 cardio, VO2 max, CGM-driven metabolic tracking, ApoB management, and the sleep that drives recovery.')
+    s = must(s, 'Skin as a real-time biomarker of systemic aging, collagen turnover, oxidative stress, glycation, UV damage, and the topical and oral interventions with actual clinical evidence behind them.',
+             'Skin as a real-time biomarker of aging, and the treatments with actual clinical evidence behind them.')
+    css = open(os.path.join(HERE, 'meta_final.css'), encoding='utf-8').read().replace('/*%%HERO_CSS%%*/', '').replace('/*%%NEW_FOLDS%%*/', open(os.path.join(HERE, 'meta_final_newfolds.css'), encoding='utf-8').read()).replace('/*%%JULIE_CSS%%*/', open(os.path.join(HERE, 'masterclass_julie.css'), encoding='utf-8').read()).replace('/*%%BRAND%%*/', open(os.path.join(HERE, 'meta_final_fix.css'), encoding='utf-8').read() + '\n' + open(os.path.join(HERE, 'meta_final_pricing_big.css'), encoding='utf-8').read())
     s = s.replace('</head>', '<style id="meta-final">\n' + css + '\n</style>\n</head>', 1)
     js = open(os.path.join(HERE, 'meta_final.js'), encoding='utf-8').read()
     s = s.replace('</body>', AUTOPLAY_JS + '\n<script>\n' + js + '\n</script>\n</body>', 1)
@@ -213,7 +219,7 @@ def preview(s):
     s = re.sub(r'\sdata-nov-open(="[^"]*")?', '', s)
     s = s.replace('</body>', '<script>document.querySelectorAll("#lead-gen form").forEach(function(f){f.addEventListener("submit",function(e){e.preventDefault();e.stopImmediatePropagation();var n=f.querySelector(".mf-formnote");if(!n){n=document.createElement("p");n.className="mf-formnote";n.textContent="Preview. On longevitylifeacademy.com this form goes to the admissions team, unchanged.";f.appendChild(n);}},true);});</script>\n</body>', 1)
     s = must(s, '<a class="pk-btn" href="#pricing">', '<a class="pk-btn" href="#pricing" data-preview-enroll>')
-    s = must(s, '<p class="pk-refund">', '<p class="pk-previewnote" hidden>Preview. On longevitylifeacademy.com this button opens eTeacher\'s checkout, unchanged.</p><p class="pk-refund">')
+    s = must(s, '<p class="pk-foot">', '<p class="pk-previewnote" hidden>Preview. On longevitylifeacademy.com this button opens eTeacher\'s checkout, unchanged.</p><p class="pk-foot">')
 
     def absu(u):
         if re.match(r'^(https?:|data:|#|mailto:|tel:|javascript:)', u) or u == '':
