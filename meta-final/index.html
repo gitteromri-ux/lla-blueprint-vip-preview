@@ -9842,6 +9842,15 @@ html.mf body .mfp-tbonus .mfp-meta{display:block;margin-top:8px;font:600 18px/1.
 }
 html.mf body .mfp-t :is(b,span){text-wrap:balance}
 html.mf body .mfp-tbonus .mfp-meta{white-space:nowrap}
+/* Round 23 (Omri: Julie bonus half the height, shine more, wider lines) */
+html.mf body .mfp-tbonus.mfp-twide{margin:12px 0 2px!important;padding:12px 14px 13px!important;gap:4px!important;border:2.5px solid #9AD8FF!important;border-right:2.5px solid #9AD8FF!important;border-bottom:2.5px solid #9AD8FF!important;box-shadow:0 0 8px rgba(154,216,255,1),0 0 22px rgba(59,167,255,.9),0 0 54px rgba(0,110,255,.7),inset 0 0 16px rgba(124,200,255,.45),inset 0 0 36px rgba(0,110,255,.3)!important}
+html.mf body .mfp-bhead{display:flex;align-items:baseline;gap:10px;margin:0;white-space:nowrap}
+html.mf body .mfp-bhead em{font:italic 500 21px/1 'Playfair Display',Georgia,serif;color:#BFE6FF;text-shadow:0 0 8px rgba(124,200,255,1),0 0 18px rgba(59,167,255,.85)}
+html.mf body .mfp-tbonus.mfp-twide .mfp-bhead b{font:500 22px/1.1 'Playfair Display',Georgia,serif!important;min-height:0!important;color:#FFFFFF!important;text-shadow:0 0 14px rgba(124,200,255,.7)!important}
+html.mf body .mfp-tbonus.mfp-twide span{font:500 17px/1.38 Inter,sans-serif!important;min-height:0!important;color:#EAF4FF!important;text-wrap:pretty}
+@keyframes mfpNeon{0%,100%{box-shadow:0 0 8px rgba(154,216,255,1),0 0 22px rgba(59,167,255,.9),0 0 54px rgba(0,110,255,.7),inset 0 0 16px rgba(124,200,255,.45),inset 0 0 36px rgba(0,110,255,.3)}50%{box-shadow:0 0 10px rgba(154,216,255,1),0 0 30px rgba(59,167,255,1),0 0 72px rgba(0,110,255,.85),inset 0 0 20px rgba(124,200,255,.55),inset 0 0 42px rgba(0,110,255,.35)}}
+@media (min-width:761px){html.mf body .mfp-tbonus.mfp-twide .mfp-bhead b{font-size:24px!important}html.mf body .mfp-bhead em{font-size:22px}html.mf body .mfp-tbonus.mfp-twide span{font-size:18px!important}}
+html.mf body .mfp-tbonus.mfp-twide .mfp-bhead b{white-space:nowrap}
 
 
 </style>
@@ -10530,7 +10539,7 @@ html.mf body .mfp-tbonus .mfp-meta{white-space:nowrap}
         <div class="mfp-t"><b>Your longevity protocol</b><span>Tailored to your biomarkers</span></div>
         <div class="mfp-t"><b>Abbott Lingo CGM</b><span>Free, shipped to your home</span></div>
         <div class="mfp-t"><b>$100 credits back</b><span>Towards your next course</span></div>
-        <div class="mfp-t mfp-tbonus mfp-twide"><em>Bonus</em><b>VIP Masterclass access</b><span>Learn to age slower from the 2nd slowest&#8209;aging human on earth.</span><i class="mfp-meta">90 minutes, live Q&amp;A, Nov 14</i></div>
+        <div class="mfp-t mfp-tbonus mfp-twide"><p class="mfp-bhead"><em>Bonus</em><b>VIP Masterclass</b></p><span>Learn to age slower from the 2nd slowest&#8209;aging human on earth. 90&nbsp;min, live&nbsp;Q&amp;A, Nov&nbsp;14.</span></div>
       </div>
     </article>
   </div>
