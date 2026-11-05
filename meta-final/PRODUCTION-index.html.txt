@@ -9857,6 +9857,13 @@ html.mf body .mfp-tbonus span{color:#E3F0FF!important}
   html.mf body .mfp-t:nth-child(odd):not(.mfp-twide){padding-right:12px!important}
   html.mf body .mfp-tbonus{margin:10px 0 10px 10px!important;padding:14px 12px!important}
 }
+/* Round 21 (Omri): Julie bonus last, as the full-width neon row */
+html.mf body .mfp-t:nth-child(3){border-bottom:0!important}
+html.mf body .mfp-t:nth-child(4){border-bottom:0!important}
+html.mf body .mfp-tbonus.mfp-twide{grid-column:1/-1!important;margin:14px 0 2px!important;padding:18px 18px!important;border-right:1.5px solid #7CC8FF!important;border-bottom:1.5px solid #7CC8FF!important}
+html.mf body .mfp-tbonus.mfp-twide b{font-size:26px!important}
+html.mf body .mfp-tbonus.mfp-twide span{font-size:18px!important}
+@media (max-width:760px){html.mf body .mfp-tbonus.mfp-twide{padding:16px 16px!important}html.mf body .mfp-tbonus.mfp-twide b{font-size:25px!important}}
 
 
 </style>
@@ -10545,10 +10552,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <p class="pk-foot">14-day try-out refund on the course.</p>
       <div class="mfp-tiles">
         <div class="mfp-t"><b>18 live classes</b><span>Online, weekly, in small groups</span></div>
-        <div class="mfp-t"><b>Your protocol</b><span>Tailored to you in 18 weeks</span></div>
+        <div class="mfp-t"><b>Your longevity protocol</b><span>Tailored to you in 18 weeks</span></div>
         <div class="mfp-t"><b>Abbott Lingo CGM</b><span>Free, shipped to your home</span></div>
-        <div class="mfp-t mfp-tbonus"><em>Bonus</em><b>VIP Masterclass</b><span>Free, 90 minutes with Julie Gibson Clark</span></div>
-        <div class="mfp-t mfp-twide"><b>$100 cash back</b><span>Towards your next course</span></div>
+        <div class="mfp-t"><b>$100 cash back</b><span>Towards your next course</span></div>
+        <div class="mfp-t mfp-tbonus mfp-twide"><em>Bonus</em><b>VIP Masterclass</b><span>Free, 90 minutes with Julie Gibson Clark</span></div>
       </div>
     </article>
   </div>
