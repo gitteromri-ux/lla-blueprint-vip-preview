@@ -888,3 +888,54 @@ html.mf body #cgm.cgm12 .cgm13-stage{height:400px}
   html.mf body #cgm.cgm12 .cgm13-stage{height:282px!important}
   html.mf body section#syllabus .curriculum-phases .phase-block[data-phase]:not(.mf-x):not(.mf-y) .phase-block-name:not(.mf-x){font-size:22px!important}
 }
+
+/* ===== Round 45: Lingo, drawn finely in vector (sharp at any size), smaller, subtle 3D ===== */
+html.mf body section#cgm.cgm12{padding:56px 0 52px!important}
+html.mf body #cgm.cgm12 .cgm12-grid{grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:40px;max-width:1080px}
+html.mf body #cgm.cgm12 h2.section-title:not(.mf-x){font-size:clamp(36px,3vw,44px)!important;margin-bottom:18px!important}
+html.mf body #cgm.cgm12 .cgm12-words{gap:12px}
+html.mf body #cgm.cgm12 .cgm12-words b{font-size:25px;font-weight:400;letter-spacing:.005em}
+html.mf body #cgm.cgm12 .cgm12-words span{font-size:18px;color:#DCE8FA}
+html.mf body #cgm.cgm12 .cgm8-fine{font-size:17px!important;margin-top:18px!important}
+html.mf body #cgm.cgm12 .cgm14-stage{position:relative;height:330px;perspective:1400px}
+html.mf body #cgm.cgm12 .cgm14-phone{position:absolute;left:2%;top:8px;width:150px;height:auto;transform:perspective(1000px) rotateY(16deg) rotateZ(-2deg);filter:drop-shadow(0 26px 30px rgba(0,0,0,.55));z-index:1}
+html.mf body #cgm.cgm12 .cgm14-card{position:absolute;z-index:2;padding:14px 16px 12px;border-radius:18px;background:linear-gradient(155deg,rgba(255,255,255,.10) 0%,rgba(255,255,255,.02) 40%),linear-gradient(160deg,rgba(20,38,82,.92),rgba(8,17,42,.95));border:1px solid rgba(207,235,255,.28);box-shadow:inset 0 1px 0 rgba(255,255,255,.18),0 1px 0 rgba(255,255,255,.04),0 30px 50px -26px rgba(0,0,0,.9),0 10px 20px -12px rgba(0,0,0,.6)}
+html.mf body #cgm.cgm12 .cgm14-live{left:28%;top:0;width:230px;transform:perspective(900px) rotateY(-14deg) rotateX(5deg)}
+html.mf body #cgm.cgm12 .cgm14-meal{left:36%;top:150px;width:300px;transform:perspective(900px) rotateY(-12deg) rotateX(5deg)}
+html.mf body #cgm.cgm12 .cgm14-k{margin:0;font:italic 400 17px/1.2 'Playfair Display',Georgia,serif;color:#CFE6FF;letter-spacing:.01em}
+html.mf body #cgm.cgm12 .cgm14-num{margin:2px 0 4px;font:200 40px/1 Inter,sans-serif;color:#FFFFFF;letter-spacing:-.02em}
+html.mf body #cgm.cgm12 .cgm14-num span{font:400 17px/1 Inter,sans-serif;color:#BFD6F2;margin-left:6px;letter-spacing:0}
+html.mf body #cgm.cgm12 .cgm14-trace{display:block;width:100%;height:56px;overflow:visible}
+html.mf body #cgm.cgm12 .cgm14-curves{display:block;width:100%;height:96px;margin-top:6px;overflow:visible}
+html.mf body #cgm.cgm12 .cgm14-legend{display:flex;gap:14px;margin:8px 0 0;font:400 17px/1.2 Inter,sans-serif;color:#DCE8FA;white-space:nowrap}
+html.mf body #cgm.cgm12 .cgm14-legend span{display:inline-flex;align-items:center;gap:6px}
+html.mf body #cgm.cgm12 .cgm14-legend i{width:14px;height:2px;border-radius:2px;display:inline-block}
+html.mf body #cgm.cgm12 .cgm14-legend i.p{background:#FF9CC0;box-shadow:0 0 6px #FF9CC0}
+html.mf body #cgm.cgm12 .cgm14-legend i.b{background:#AEDCFF;box-shadow:0 0 6px #AEDCFF}
+html.mf body #cgm.cgm12 .cgm14-tag{position:absolute;left:62px;top:-14px;padding:5px 11px;border-radius:10px;font:italic 400 17px/1 'Playfair Display',Georgia,serif;color:#FFE3EC;background:linear-gradient(160deg,rgba(255,156,192,.22),rgba(255,156,192,.08)),rgba(30,16,40,.85);border:1px solid rgba(255,194,214,.55);box-shadow:0 12px 22px -12px rgba(0,0,0,.9),0 0 12px -4px rgba(255,143,181,.6);transform:translateZ(30px)}
+@media (max-width:900px){
+  html.mf body section#cgm.cgm12{padding:38px 0 34px!important}
+  html.mf body #cgm.cgm12 h2.section-title:not(.mf-x){font-size:32px!important;margin-bottom:14px!important}
+  html.mf body #cgm.cgm12 .cgm14-stage{height:250px!important;margin:0 0 18px!important;order:2}
+  html.mf body #cgm.cgm12 .cgm14-phone{left:0;top:4px;width:112px}
+  html.mf body #cgm.cgm12 .cgm14-card{padding:11px 12px 10px;border-radius:15px}
+  html.mf body #cgm.cgm12 .cgm14-live{left:auto;right:10px;top:0;width:196px}
+  html.mf body #cgm.cgm12 .cgm14-num{font-size:34px}
+  html.mf body #cgm.cgm12 .cgm14-trace{height:44px}
+  html.mf body #cgm.cgm12 .cgm14-meal{left:auto;right:0;top:118px;width:250px}
+  html.mf body #cgm.cgm12 .cgm14-curves{height:70px}
+  html.mf body #cgm.cgm12 .cgm14-legend{gap:10px;font-size:17px}
+  html.mf body #cgm.cgm12 .cgm14-legend span:nth-child(2){display:none}
+  html.mf body #cgm.cgm12 .cgm14-tag{left:44px;top:-12px}
+  html.mf body #cgm.cgm12 .cgm12-words b{font-size:23px}
+  html.mf body #cgm.cgm12 .cgm12-words span{font-size:18px}
+}
+html.mf body #cgm.cgm12 .cgm14-legend{flex-direction:column;gap:5px;white-space:normal}
+html.mf body #cgm.cgm12 .cgm14-legend span:nth-child(2){display:inline-flex!important}
+@media (max-width:900px){
+  html.mf body #cgm.cgm12 .cgm12-grid{gap:0!important}
+  html.mf body #cgm.cgm12 .cgm14-stage{height:318px!important;margin-bottom:20px!important}
+  html.mf body #cgm.cgm12 .cgm14-meal{top:146px}
+  html.mf body #cgm.cgm12 .cgm14-tag{left:auto;right:16px;top:-14px}
+}
+html.mf body #cgm.cgm12 .cgm14-tag{left:auto;right:18px}
