@@ -384,6 +384,7 @@ def port_pagesdev_checkout(s):
     PDC = os.path.join(HERE, 'pagesdev_checkout')
     modal = open(os.path.join(PDC, 'modal.html'), encoding='utf-8').read()
     css = open(os.path.join(PDC, 'modal.css'), encoding='utf-8').read()
+    css += '\n' + open(os.path.join(PDC, 'r67.css'), encoding='utf-8').read()
     scripts = json.load(open(os.path.join(PDC, 'modal-scripts.json'), encoding='utf-8'))
 
     def element(t, i):
