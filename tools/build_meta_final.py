@@ -342,6 +342,7 @@ def common(s):
     s = re.sub(r'(<span class="phase-block-name">[^<]*?)&nbsp;([^<]*</span>)', r'\1 \2', s)  # phase names may wrap freely
     css = open(os.path.join(HERE, 'meta_final.css'), encoding='utf-8').read().replace('/*%%HERO_CSS%%*/', '').replace('/*%%NEW_FOLDS%%*/', open(os.path.join(HERE, 'meta_final_newfolds.css'), encoding='utf-8').read()).replace('/*%%JULIE_CSS%%*/', open(os.path.join(HERE, 'masterclass_julie.css'), encoding='utf-8').read()).replace('/*%%BRAND%%*/', open(os.path.join(HERE, 'meta_final_fix.css'), encoding='utf-8').read() + '\n' + open(os.path.join(HERE, 'meta_final_pricing_big.css'), encoding='utf-8').read() + '\n' + open(os.path.join(HERE, 'meta_final_r39.css'), encoding='utf-8').read().replace('#syllabus', '#mf-retired-syllabus') + '\n' + open(os.path.join(HERE, 'meta_final_syllabus_com.css'), encoding='utf-8').read())
     css += '\n' + open(os.path.join(HERE, 'meta_final_r57.css'), encoding='utf-8').read()
+    css = widen_palette(css)
     s = s.replace('</head>', '<style id="meta-final">\n' + css + '\n</style>\n</head>', 1)
     s = no_royal_blue(s)
     # Omri 6 Nov (real Android phone at about 320px wide: text outside buttons, broken folds): phones narrower than 390px
@@ -352,6 +353,18 @@ def common(s):
     s = s.replace('</body>', AUTOPLAY_JS + '\n<script>\n' + js + '\n</script>\n</body>', 1)
     return s
 
+
+
+def widen_palette(css):
+    """Omri 6 Nov: card colours too similar. Five clearly different brand steps for every card group:
+    clean white, bright sky, steel, navy, black-navy (with its light-blue neon edge)."""
+    for a, b in [('#E4F3FF 0%,#BBDEFF 100%', '#FFFFFF 0%,#E2EFFF 100%'),
+                 ('#AEDAFF 0%,#7BBEF6 100%', '#9ED8FF 0%,#58A8E8 100%'),
+                 ('#1A3A75 0%,#0C2150 100%', '#2A4E8A 0%,#122A5A 100%'),
+                 ('#0C1733 0%,#040A1B 100%', '#070C1A 0%,#000207 100%'),
+                 ('#4C84CA 0%,#2C61A4 100%', '#5A86BE 0%,#2F5487 100%')]:
+        css = css.replace(a, b)
+    return css
 
 FIT_VIEWPORT_JS = """<script>(function(){var m=document.querySelector('meta[name="viewport"]');if(!m)return;var D='width=device-width, initial-scale=1.0',cur=D;function fit(){var a=screen.width,b=screen.height,land=window.matchMedia&&window.matchMedia('(orientation: landscape)').matches,w=land?Math.max(a,b):Math.min(a,b),want=(w&&w<390)?'width=390':D;if(want!==cur){m.setAttribute('content',want);cur=want;}}fit();window.addEventListener('orientationchange',function(){setTimeout(fit,250);});})();</script>"""
 

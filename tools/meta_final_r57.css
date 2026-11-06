@@ -61,3 +61,14 @@ html.mf body:not(#mf-x) #cgm.cgm12 .cgm14-stage::after{background:radial-gradien
   html.mf body:not(#mf-x) #cgm.cgm12 .cgm14-live{top:22px!important;width:128px!important}
   html.mf body:not(#mf-x) #cgm.cgm12 .cgm14-meal{width:150px!important}
 }
+
+/* ===== Round 59 (Omri: "14 day try out and credit cards too tight together") ===== */
+html.mf body:not(#mf-x) #pricing .pk-foot{margin:14px 0 0!important;padding:0!important}
+html.mf body:not(#mf-x) #pricing .mfp-secure{margin:16px 0 22px!important;padding-top:16px!important;border-top:1px solid rgba(10,26,64,.12)!important;row-gap:14px!important}
+
+/* ===== Round 59 (Omri: "colors too similar, widen the range"): edges that separate the steps ===== */
+html.mf body:not(#mf-x) :is(#how .how-v2-card.mf-how4,#included .nov-incl-card:nth-of-type(4),section.value .value-card[data-accent="4"],section.deepdive .hex-node[data-hex="3"]){border:1.5px solid #9AD8FF!important;box-shadow:0 0 0 1px rgba(154,216,255,.25),0 0 30px -4px rgba(154,216,255,.65),0 24px 40px -22px rgba(0,0,0,.9)!important}
+html.mf body:not(#mf-x) :is(#how .how-v2-card.mf-how1,#included .nov-incl-card:nth-of-type(1),section.value .value-card[data-accent="1"],section.deepdive .hex-node[data-hex="0"]){border:1.5px solid #FFFFFF!important;box-shadow:inset 0 -3px 0 #9FD6FF,0 0 26px -6px rgba(191,226,255,.8),0 24px 40px -22px rgba(0,0,0,.8)!important}
+html.mf body:not(#mf-x) section#pricing .mfp-tiles .mfp-t:nth-child(1){border:1.5px solid #BFE2FF!important;box-shadow:inset 0 -3px 0 #9FD6FF,0 14px 28px -16px rgba(10,26,64,.45)!important}
+html.mf body:not(#mf-x) section#pricing .mfp-tiles .mfp-t:nth-child(4){background:radial-gradient(120% 90% at 0% 0%,rgba(255,255,255,.14),transparent 55%),linear-gradient(160deg,#070C1A 0%,#000207 100%)!important;border:1.5px solid #9AD8FF!important;box-shadow:0 0 26px -6px rgba(154,216,255,.75),0 16px 30px -16px rgba(10,26,64,.6)!important}
+html.mf body:not(#mf-x) section#pricing .mfp-tiles .mfp-t:nth-child(4) :is(b,span,p,.mfp-th){color:#FFFFFF!important;-webkit-text-fill-color:#FFFFFF!important}
