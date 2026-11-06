@@ -1,0 +1,4 @@
+pages.dev source: gitteromri-ux/lla-course-checkout master 8921037 dist/
+Popup taken from dist/blueprint/index.html (where pages.dev Enroll buttons lead: /blueprint/?enroll=1).
+modal.css = every CSS rule the browser applies to the popup on that page (CSSOM, all stylesheets in order: inline, r15-sheet.css, guest-mobile.css, attendee-pricing.css, launch-flow.css).
+modal-scripts.json = its popup scripts (dial code, date picker, plan, controller, desktop sizing, iOS keyboard). Held out: the real-time funnel counter (pings lla-rt-*.gitter-omri.workers.dev).

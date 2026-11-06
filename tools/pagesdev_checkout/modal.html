@@ -1,0 +1,186 @@
+<div id="enrollModal" role="dialog" aria-modal="true" aria-label="Enroll">
+  <div class="em-backdrop" data-em-close></div>
+  <div class="em-dialog">
+    <button class="em-x" type="button" data-em-close aria-label="Close">&times;</button>
+
+    <div class="em-steps">
+      <div class="em-st active" id="emS1"><span class="em-dot">1</span><span class="em-lbl">Your details</span></div>
+      <span class="em-bar" id="emB1"></span>
+      <div class="em-st" id="emS2"><span class="em-dot">2</span><span class="em-lbl">Plan &amp; date</span></div>
+      <span class="em-bar" id="emB2"></span>
+      <div class="em-st" id="emS3"><span class="em-dot">3</span><span class="em-lbl">Pay</span></div>
+    </div>
+
+    <h2 class="em-h2-sober" id="emTitle">Reserve your seat. Two minutes.</h2>
+
+    <!-- DETAILS SCREEN (shown second since 2026-09-19; DOM id kept so nothing downstream changes) -->
+    <div class="em-screen on" id="emStep1">
+      <label class="em-lb" for="emName">Full Name*</label>
+      <input class="em-in" id="emName" type="text" placeholder="Full Name" autocomplete="name" />
+
+      <label class="em-lb" for="emEmail">Email*</label>
+      <input class="em-in" id="emEmail" type="email" placeholder="Email" autocomplete="email" />
+
+      <label class="em-lb" for="emPhone">Mobile Number*</label>
+      <div class="em-phone">
+        <div class="em-cc" id="emCc"><span id="emCcIso">US</span><span id="emCcDial">+1</span></div>
+        <select class="em-in" id="emCountry" data-lla-country="1" aria-label="Country"></select>
+      </div>
+      <script>
+      /* Dial-code badge follows the selected country (was hardcoded "US +1"). */
+      (function(){
+        var DIAL = {};
+        function build(){
+          try{
+            var src = (window.LLA_COUNTRY && window.LLA_COUNTRY.list) ? (typeof window.LLA_COUNTRY.list === 'function' ? window.LLA_COUNTRY.list() : window.LLA_COUNTRY.list) : null;
+            if (src && src.length) { src.forEach(function(c){ DIAL[c.iso] = c.dial; }); return true; }
+          }catch(e){}
+          return false;
+        }
+        function sync(){
+          var sel = document.getElementById('emCountry'), iso = document.getElementById('emCcIso'), dial = document.getElementById('emCcDial');
+          if (!sel || !iso || !dial) return;
+          var v = (sel.value || 'US').toUpperCase();
+          if (!Object.keys(DIAL).length) build();
+          var d = DIAL[v];
+          if (!d) {
+            var opt = sel.options[sel.selectedIndex];
+            d = opt && opt.getAttribute('data-dial');
+          }
+          iso.textContent = v;
+          dial.textContent = '+' + (d || '1');
+        }
+        document.addEventListener('change', function(e){ if (e.target && e.target.id === 'emCountry') sync(); });
+        document.addEventListener('DOMContentLoaded', function(){ setTimeout(sync, 0); setTimeout(sync, 400); });
+        window.addEventListener('load', sync);
+        window.LLA_SYNC_DIAL = sync;
+      })();
+      </script>
+      <div class="em-row">
+        <input class="em-in" id="emPhone" type="tel" placeholder="Mobile" autocomplete="tel" />
+      </div>
+
+      <div class="em-err" id="emErr" role="alert"></div>
+      <button class="em-go" type="button" id="emGo1">Continue</button>
+      <p class="em-refund">Fully refundable within 14 days from registration.</p>
+
+
+      <div class="em-consent">
+        <input type="checkbox" id="emSms" checked />
+        <label for="emSms">By subscribing, you agree to receive SMS messages from Longevity Life Academy. Message frequency varies. Message &amp; Data rates may apply.</label>
+      </div>
+    </div>
+
+    <!-- PLAN & DATE SCREEN (shown first since 2026-09-19; DOM id kept so nothing downstream changes) -->
+    <div class="em-screen" id="emStep2">
+      <label class="em-lb" for="emDate">Starting Date*</label>
+      <div class="dp" id="dp">
+        <div class="dp-tabs" role="tablist" id="dpTabs"></div>
+        <div class="dp-list" id="dpList" role="radiogroup" aria-label="Start date"></div>
+      </div>
+      <select class="em-in dp-native" id="emDate" required tabindex="-1" aria-hidden="true">
+        <option value="" disabled selected>Select a starting date</option>
+          <option value="Mon Nov 23, 2026 · 8:00 PM EST · 5:00 PM PST · weekly (2026-11-23)" data-start="2026-11-23" data-course-id="170275" data-semester-id="2395" data-month="November" data-wd="Mon" data-day="23" data-mon="Nov" data-et="8:00 PM" data-ct="7:00 PM" data-pt="5:00 PM">Mon Nov 23 · 8:00 PM ET</option>
+<option value="Wed Nov 25, 2026 · 12:00 PM EST · 9:00 AM PST · weekly (2026-11-25)" data-start="2026-11-25" data-course-id="170277" data-semester-id="2395" data-month="November" data-wd="Wed" data-day="25" data-mon="Nov" data-et="12:00 PM" data-ct="11:00 AM" data-pt="9:00 AM">Wed Nov 25 · 12:00 PM ET</option>
+      </select>
+      <script>
+      (function(){try{
+        var sel=document.getElementById('emDate'),tabs=document.getElementById('dpTabs'),list=document.getElementById('dpList'),tv=document.getElementById('emTimeVal');
+        var t=new Date(),today=t.getFullYear()+'-'+String(t.getMonth()+1).padStart(2,'0')+'-'+String(t.getDate()).padStart(2,'0');
+        /* Late join allowed: a start date stays open until 7 days after the first lesson (start + 6 days inclusive). */
+        var MN=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+        function iso(d){return d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0');}
+        Array.prototype.slice.call(sel.querySelectorAll('option[data-start]')).forEach(function(o){if(o.hasAttribute('data-soldout'))return;var p=o.getAttribute('data-start').split('-');var last=new Date(+p[0],+p[1]-1,+p[2]+6);o.setAttribute('data-lastlabel',MN[last.getMonth()]+' '+last.getDate());if(today>iso(last))o.remove();});
+        var opts=Array.prototype.slice.call(sel.querySelectorAll('option[data-start]'));
+        var months=[];opts.forEach(function(o){var m=o.getAttribute('data-month');if(months.indexOf(m)<0)months.push(m);});
+        var cur=months.indexOf('October')>=0?'October':months[0];
+        var MONTHS=['January','February','March','April','May','June','July','August','September','October','November','December'],DAYS={Sun:'Sunday',Mon:'Monday',Tue:'Tuesday',Wed:'Wednesday',Thu:'Thursday',Fri:'Friday',Sat:'Saturday'};
+        function endTime(et){var m=/(\d+):(\d+)\s*(AM|PM)/i.exec(et||'');if(!m)return '';var h=+m[1]%12+(m[3].toUpperCase()==='PM'?12:0),mi=+m[2]+50;h+=Math.floor(mi/60);mi%=60;var ap=h>=12?'pm':'am';var hh=h%12||12;return hh+':'+String(mi).padStart(2,'0')+ap;}
+        function fmt(d){return MONTHS[d.getMonth()]+' '+d.getDate()+', '+d.getFullYear();}
+        function syncCard(){var o=sel.options[sel.selectedIndex];tv=tv||document.getElementById('emTimeVal');var sv=document.getElementById('emSchedVal');if(!tv)return;
+          if(o&&o.value&&!o.disabled){var q=o.getAttribute('data-start').split('-');var st=new Date(+q[0],+q[1]-1,+q[2]);var en=new Date(+q[0],+q[1]-1,+q[2]+7*17);var et=o.getAttribute('data-et');
+            if(sv) sv.textContent=fmt(st)+' - '+fmt(en)+'; every '+DAYS[o.getAttribute('data-wd')];
+            tv.textContent=et.replace(/\s*(AM|PM)/i,function(_,x){return x.toLowerCase();})+' - '+endTime(et)+' ET';tv.className='on';}
+          else{if(sv) sv.textContent='Select a starting date';tv.textContent='Select a starting date';tv.className='';}}
+        /* Dropdown option labels retain the existing time-range format. */
+        Array.prototype.slice.call(sel.querySelectorAll('option[data-start]')).forEach(function(o){var et=o.getAttribute('data-et');o.textContent=o.getAttribute('data-mon')+' '+o.getAttribute('data-day')+', '+et.replace(/\s*(AM|PM)/i,function(_,x){return x.toLowerCase();})+' - '+endTime(et)+' | ET'+(o.hasAttribute('data-soldout')?' · SOLD OUT':'');});
+        sel.addEventListener('change',syncCard);
+        function render(){
+          tabs.innerHTML='';months.forEach(function(m){var b=document.createElement('button');b.type='button';b.className='dp-tab'+(m===cur?' on':'');b.setAttribute('role','tab');b.textContent=m;b.addEventListener('click',function(){cur=m;render();});tabs.appendChild(b);});
+          list.innerHTML='';
+          opts.filter(function(o){return o.getAttribute('data-month')===cur;}).forEach(function(o){
+            var soldout=o.hasAttribute('data-soldout'),on=!o.disabled&&sel.value===o.value;var c=document.createElement('button');c.type='button';c.className='dp-card'+(on?' on':'');c.disabled=o.disabled;c.setAttribute('role','radio');c.setAttribute('aria-checked',on?'true':'false');if(o.disabled)c.setAttribute('aria-disabled','true');
+            var _h=parseInt(o.getAttribute('data-et'),10),evening=/PM/.test(o.getAttribute('data-et'))&&_h!==12&&_h>=5;
+            c.innerHTML='<span class="dp-date"><span class="dp-wd">'+o.getAttribute('data-wd')+'</span><span class="dp-day">'+o.getAttribute('data-mon')+' '+o.getAttribute('data-day')+'</span></span>'
+              +'<span class="dp-times"><span class="dp-et">'+o.getAttribute('data-et').replace(/\s*(AM|PM)/i,function(_,x){return x.toLowerCase();})+' - '+endTime(o.getAttribute('data-et'))+' <small>EST</small></span><span class="dp-alt">'+o.getAttribute('data-pt')+' PST</span></span>'
+              +(soldout?'<span class="dp-seats">SOLD OUT</span>':(o.getAttribute('data-start')<today?'<span class="dp-late">Started · join by '+o.getAttribute('data-lastlabel')+'</span>':''))+'<span class="dp-check" aria-hidden="true"></span>';
+            if(!o.disabled)c.addEventListener('click',function(){sel.value=o.value;sel.dispatchEvent(new Event('change',{bubbles:true}));render();});
+            list.appendChild(c);
+          });
+          syncCard();
+        }
+        render();
+        if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',syncCard);}else{syncCard();}
+      }catch(e){}})();
+      </script>
+
+      <label class="em-lb">Payment plan</label>
+      <div class="pp" id="pp" role="radiogroup" aria-label="Payment plan">
+        <button type="button" class="pp-card" data-pl="monthly" role="radio" aria-checked="true">
+          <span class="pp-name">Monthly</span>
+          <span class="pp-price">$179 <small>USD x 5 months</small></span>
+          <span class="pp-sub">Total $895 USD</span>
+          <span class="pp-check" aria-hidden="true"></span>
+        </button>
+        <button type="button" class="pp-card" data-pl="upfront" role="radio" aria-checked="false">
+          <span class="pp-name">One payment</span>
+          <span class="pp-price">$799 <small>USD</small></span>
+          <span class="pp-sub">Total $799 USD, save $96</span>
+          <span class="pp-check" aria-hidden="true"></span>
+        </button>
+      </div>
+      <script>
+      /* Plan is chosen here, BEFORE the CRM order is created on the payment screen, so FirstPayment/NumberOfPayments are right the first time. Writes lla_plan exactly as the offer buttons do; emGo2 already appends ?plan= from it. */
+      (function(){try{
+        var wrap=document.getElementById('pp'); if(!wrap) return;
+        function cur(){var p='';try{p=sessionStorage.getItem('lla_plan')||localStorage.getItem('lla_plan')||''}catch(e){} return (p==='upfront')?'upfront':'monthly';}
+        function paint(){var p=cur();wrap.querySelectorAll('.pp-card').forEach(function(c){var on=c.getAttribute('data-pl')===p;c.classList.toggle('on',on);c.setAttribute('aria-checked',on?'true':'false');});
+          var bv=document.querySelector('#emStep2 .em-band .b-v'); if(bv){var promoOn=false;try{promoOn=!!(window.LLA_PROMO&&window.LLA_PROMO.active);}catch(e){} /* 2026-09-24 audit: the band must match the applied promo ($149 x 5, $745), not always the list price. */ bv.innerHTML=(p==='upfront')?'<s style="opacity:.5;font-weight:500;margin-right:6px">$1,395.00</s>$799.00 <small>USD one payment</small>':(promoOn?'<s data-no-promo style="opacity:.5;font-weight:500;margin-right:6px">$179.00</s>$149.00 <small>USD a month, 5 payments, $745 total</small>':'<s style="opacity:.5;font-weight:500;margin-right:6px">$279.00</s>$179.00 <small>USD a month, 5 payments, $895 total</small>');}}
+        wrap.querySelectorAll('.pp-card').forEach(function(c){c.addEventListener('click',function(){var p=c.getAttribute('data-pl');try{sessionStorage.setItem('lla_plan',p);localStorage.setItem('lla_plan',p)}catch(e){}paint();});});
+        /* 2026-09-21 audit fix #1/#2: expose the painter so the popup opener can sync the card with the CTA's plan, and tell the promo script which plan is on. */
+        var _paint0=paint; paint=function(){ _paint0(); var p=cur(); try{ var mm=document.getElementById('enrollModal'); if(mm) mm.classList.toggle('lla-pl-upfront',p==='upfront'); }catch(e){} try{ document.dispatchEvent(new CustomEvent('lla:plan',{detail:{plan:p}})); }catch(e){} };
+        window.__llaPaintPlan=paint;
+        paint(); document.addEventListener('DOMContentLoaded',paint);
+      }catch(e){}})();
+      </script>
+      <div class="em-card">
+        <div class="em-card-b">
+          <div class="em-cname">The Longevity Blueprint</div>
+          <div class="em-cl"><b>Schedule:</b> <span id="emSchedVal">Select a starting date</span></div>
+          <div class="em-cl"><b>Time:</b> <span id="emTimeVal">Select a starting date</span></div>
+          <div class="em-cl"><b>Lesson duration:</b> 50 min</div>
+          <div class="em-cl gap"><b>Period:</b> 18 weeks</div>
+        </div>
+        <div class="em-band">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#8FC1FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10 12 5 2 10l10 5 10-5Z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+          <div>
+            <div class="b-l">Course tuition</div>
+            <div class="b-v"><s style="opacity:.5;font-weight:500;margin-right:6px">$279.00</s>$179.00 <small>USD monthly for 5 months</small></div>
+          </div>
+        </div>
+      </div>
+
+      <label class="em-lb" for="emPromo">I have promo code</label>
+      <div class="em-promo">
+        <input class="em-in" id="emPromo" type="text" placeholder="Enter promo code" />
+        <button class="em-apply" type="button" id="emApply">Apply</button>
+      </div>
+      <div class="em-promo-msg" id="emPromoMsg" role="status" aria-live="polite"></div>
+
+      <div class="em-err" id="emErr2" role="alert"></div>
+      <button class="em-go" type="button" id="emGo2">Continue</button>
+      <p class="em-secure"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="4" y="10" width="16" height="10" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg> Secure Checkout</p>
+      <p class="em-refund">Fully refundable within 14 days from registration. To see our full cancellation policy <a href="cancellation.html" target="_blank" rel="noopener">click here</a>.</p>
+    </div>
+  </div>
+</div>

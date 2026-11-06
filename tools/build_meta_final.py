@@ -372,6 +372,88 @@ def widen_palette(css):
         css = css.replace(a, b)
     return css
 
+
+def port_pagesdev_checkout(s):
+    """Omri 6 Nov: "copy exact dot dev screens checkout exactly copy paste. Dont change a thing or ruin anything."
+    The pages.dev enrollment popup (markup, its CSS rules, its six popup scripts, its phone-sheet, state and tracking
+    helpers) replaces the .com popup in the production file. Kept from the .com on purpose: eteacher-ecomm.js (it has
+    the campaign-id fix pages.dev lacks), the ecommerce config (no ?env=staging switch on a live site), lla-country.js
+    (all .com forms use it), the .com tracking, and checkout.html (same code as pages.dev's payment page).
+    Source: the /blueprint/ page, where pages.dev Enroll buttons lead; its popup already opens checkout.html."""
+    import json
+    PDC = os.path.join(HERE, 'pagesdev_checkout')
+    modal = open(os.path.join(PDC, 'modal.html'), encoding='utf-8').read()
+    css = open(os.path.join(PDC, 'modal.css'), encoding='utf-8').read()
+    scripts = json.load(open(os.path.join(PDC, 'modal-scripts.json'), encoding='utf-8'))
+
+    def element(t, i):
+        tag = re.match(r'<(\w+)', t[i:]).group(1); depth = 0
+        for m in re.finditer(r'<(/?)%s\b[^>]*>' % tag, t[i:]):
+            depth += -1 if m.group(1) else 1
+            if depth == 0: return t[i:i + m.end()]
+    i = s.find('id="enrollModal"'); st = s.rfind('<', 0, i)
+    old = element(s, st); assert old and len(old) < 12000, 'unexpected .com modal'
+    s = s.replace(old, modal, 1)
+    # the .com popup controller and its dial-code sync (replaced by the pages.dev ones)
+    blocks = list(re.finditer(r'<script\b[^>]*>(.*?)</script>', s, flags=re.S))
+    ctrl = [m for m in blocks if "getElementById('enrollModal')" in m.group(1) and 'emGo1' in m.group(1) and 'data-checkout-open' in m.group(1) and '__llaOpenEnroll' not in m.group(1)]
+    dial = [m for m in blocks if "getElementById('emCcDial')" in m.group(1) and 'function sync()' in m.group(1)]
+    assert len(ctrl) == 1 and len(dial) == 1, (len(ctrl), len(dial))
+    bridge = """/* .com Enroll buttons ([data-checkout-open], set by nov-offer.js) open the pages.dev popup through its own opener,
+   with the fold as cta_location, the way pages.dev's data-fn-cta links do. */
+(function(){
+  var F={hero:'hero',syllabus:'learn',julie:'vip',pricing:'offer-monthly',teachers:'teachers',how:'section',skills:'section',faq:'section',apply:'section','lead-gen':'section'};
+  document.addEventListener('click',function(ev){
+    var a=ev.target&&ev.target.closest?ev.target.closest('[data-checkout-open]'):null;
+    if(!a||!window.__llaOpenEnroll) return;
+    ev.preventDefault();
+    if(!a.getAttribute('data-fn-cta')){ var s=a.closest('section'); a.setAttribute('data-fn-cta', a.closest('#llaFloatCta')?'floater':(a.closest('nav,.nav,.mobile-nav')?'nav':(s&&F[s.id])||'section')); }
+    window.__llaOpenEnroll(a);
+  },true);
+})();"""
+    pd_js = '\n'.join('<script>\n' + x + '\n</script>' for x in scripts)
+    assert "var href='checkout.html'" in pd_js, 'pages.dev /blueprint/ popup must open checkout.html'
+    new_ctrl = (pd_js + '\n<script src="assets/mf/pd/r15-sheet.js"></script>\n<script src="assets/mf/pd/guest-mobile.js"></script>'
+                '\n<script src="assets/mf/pd/attendee-pricing.js"></script>\n<script>\n' + bridge + '\n</script>'
+                '\n<script>\n' + open(os.path.join(PDC, 'footer.js'), encoding='utf-8').read() + '\n</script>')
+    s = s[:ctrl[0].start()] + new_ctrl + s[ctrl[0].end():]
+    m = [x for x in re.finditer(r'<script\b[^>]*>(.*?)</script>', s, flags=re.S) if "getElementById('emCcDial')" in x.group(1) and 'function sync()' in x.group(1)][0]
+    s = s[:m.start()] + s[m.end():]
+    # .com popup CSS rules out, the rest of that style block (form button styles) stays
+    MOD = re.compile(r'\.em-|#enrollModal|#em[A-Z]|lla-em-open')
+    def strip_modal_rules(css_text):
+        out, i = [], 0
+        while i < len(css_text):
+            j = css_text.find('{', i)
+            if j < 0: out.append(css_text[i:]); break
+            pre = css_text[i:j]; depth = 0; k = j
+            while k < len(css_text):
+                if css_text[k] == '{': depth += 1
+                elif css_text[k] == '}':
+                    depth -= 1
+                    if depth == 0: break
+                k += 1
+            body = css_text[j + 1:k]
+            if pre.strip().startswith('@media'):
+                inner = strip_modal_rules(body)
+                if inner.strip(): out.append(pre + '{' + inner + '}')
+            elif not MOD.search(re.sub(r'/\*.*?\*/', '', pre, flags=re.S)):
+                out.append(pre + '{' + body + '}')
+            i = k + 1
+        return ''.join(out)
+    st_blocks = [x for x in re.finditer(r'(<style\b[^>]*>)(.*?)(</style>)', s, flags=re.S) if len(re.findall(r'\.em-', x.group(2))) > 40 and 'pd-checkout' not in x.group(1)]
+    assert len(st_blocks) == 1, len(st_blocks)
+    x = st_blocks[0]
+    s = s[:x.start()] + x.group(1) + strip_modal_rules(x.group(2)) + x.group(3) + s[x.end():]
+    # pages.dev popup CSS, tracking helpers (click-id handoff, relay receipts) and the state repair
+    s = s.replace('</head>', '<style id="pd-checkout">\n' + css + '\n</style>\n<script src="assets/mf/pd/lla-clickid-v20260922.js"></script>\n<script src="assets/mf/pd/lla-relay-receipts.js"></script>\n</head>', 1)
+    s = s.replace('</body>', '<script src="assets/mf/pd/november-zones.js"></script>\n<script src="assets/mf/pd/blueprint-hotfix-state.js" defer></script>\n</body>', 1)
+    # pages.dev's phone sheet rules are scoped to its body id (body#lpRoot); the .com body has no id
+    assert s.count('<body>') == 1, 'expected a plain <body>'
+    s = s.replace('<body>', '<body id="lpRoot">', 1)
+    s = s.replace('<html lang="en" class="', '<html lang="en" class="js ', 1) if '<html lang="en" class="' in s else s.replace('<html lang="en"', '<html lang="en" class="js"', 1)
+    return s
+
 FIT_VIEWPORT_JS = """<script>(function(){var m=document.querySelector('meta[name="viewport"]');if(!m)return;var D='width=device-width, initial-scale=1.0',cur=D;function fit(){var a=screen.width,b=screen.height,land=window.matchMedia&&window.matchMedia('(orientation: landscape)').matches,w=land?Math.max(a,b):Math.min(a,b),want=(w&&w<390)?'width=390':D;if(want!==cur){m.setAttribute('content',want);cur=want;}}fit();window.addEventListener('orientationchange',function(){setTimeout(fit,250);});})();</script>"""
 
 
@@ -468,6 +550,7 @@ def production(s):
         c = c.replace("media-src 'self'", f"media-src 'self' {pd} blob:", 1)
         return f'<meta http-equiv="Content-Security-Policy" content="{c}">'
     s = s.replace('mfasset:', 'assets/mf/')
+    s = port_pagesdev_checkout(s)
     # Omri 6 Nov: "all dot dev tracking". The pages.dev CTA events the .com lacked (Enroll_CTA_Click, Clicked_on_Enroll_Pricing,
     # Clicked_on_Enroll, Clicked_on_curriculum), production file only, live .com homepage only (LLA_PAGE_META gate).
     s = s.replace('</body>', '<script>\n' + open(os.path.join(HERE, 'lla_cta_events.js'), encoding='utf-8').read() + '\n</script>\n</body>', 1)
