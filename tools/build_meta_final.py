@@ -63,35 +63,34 @@ assert AUTOPLAY_JS, 'pages.dev autoplay script not found'
 PRICING = open(os.path.join(HERE, 'meta_final_pricing.html'), encoding='utf-8').read()
 CGM = open(os.path.join(HERE, 'meta_final_cgm.html'), encoding='utf-8').read()
 
-ORDER = [  # Omri 5 Nov, 23:40: his order first (hero, six pillars, what you'll learn, CGM, Julie, pricing, how, about, logos, instructors, Six Systems, blog), then the folds he did not list, kept
+ORDER = [  # Omri 6 Nov (latest): hero, six pillars, syllabus, Julie, pricing, CGM, instructors, how it works, about, logos, reviews, blog, Six Systems, why different, quiz, form, FAQ
     ('hero', '<section class="hero" id="hero">', None),
     ('topics', '<section class="topics">', None),
     ('syllabus', '<section class="curriculum" id="syllabus">', None),  # Omri 6 Nov: the longevitylifeacademy.com fold itself, colours and fonts optimized
-    ('cgm', '<section class="cgm-fold" id="cgm">', CGM),
     ('julie', '<section class="nov-vip" id="vip">', JULIE),
     ('pricing', '<section class="nov-offer" id="offer">', PRICING),
+    ('cgm', '<section class="cgm-fold" id="cgm">', CGM),
+    ('teachers', '<section class="instructors" id="teachers">', None),
     ('how', '<section class="how-v2" id="how">', None),
     ('about', '<section class="about" id="about">', None),
     ('trust', '<section class="trust-strip"', None),
-    ('teachers', '<section class="instructors" id="teachers">', None),
-    ('systems', '<section class="deepdive">', None),
-    ('news', '<section class="skills" id="skills">', None),
     ('reviews', '<section class="testimonials">', None),
-    ('included', '<section class="nov-incl" id="included">', None),
+    ('news', '<section class="skills" id="skills">', None),
+    ('systems', '<section class="deepdive">', None),
     ('why', '<section class="value">', None),
     ('quiz', '<section class="bioquiz">', None),
-    ('faq', '<section class="faq" id="faq">', None),
     ('form', '<section class="lead-gen lead-gen-v2" id="lead-gen">', None),  # Omri (latest): the form is huge, it can be at the end
-    ('final', '<section class="final-cta" id="apply">', None),
+    ('faq', '<section class="faq" id="faq">', None),
 ]
-DROPPED = []
+DROPPED = ['<section class="nov-incl" id="included">', '<section class="final-cta" id="apply">']  # Omri 6 Nov: course includes and the final banner are not in his order
 
 
 def assemble(s):
     spans = {name: bounds(s, marker) for name, marker, _ in ORDER}
-    first = min(x[0] for x in spans.values())
-    last = max(x[1] for x in spans.values())
-    ranges = sorted(list(spans.values()) + [bounds(s, d) for d in DROPPED])
+    dropped = [bounds(s, d) for d in DROPPED]
+    first = min(x[0] for x in list(spans.values()) + dropped)
+    last = max(x[1] for x in list(spans.values()) + dropped)
+    ranges = sorted(list(spans.values()) + dropped)
     leftovers, pos = [], first
     for x, y in ranges:
         leftovers.append(s[pos:x])
@@ -102,6 +101,11 @@ def assemble(s):
     # keep any non-fold markup that sat between folds (scripts, widgets) after the folds
     keep = re.sub(r'<!--.*?-->', '', extra, flags=re.S) if stray else ''
     return s[:first] + body + '\n' + keep + s[last:], stray
+
+
+def opt(s, old, new):
+    """Like must(), for text inside a fold that may be dropped from the page."""
+    return s.replace(old, new, 1) if old in s else s
 
 
 def must(s, old, new, count=1):
@@ -174,7 +178,7 @@ def r39(s):
                    lambda m: '<p class="about-statement">' + re.sub(r'\s+', ' ', m.group(1)) + '</p>\n        <p class="about-lead about-lead--gal">' + re.sub(r'\s+', ' ', m.group(2)).strip() + '</p>', s, count=1, flags=re.S)
     assert n == 1, 'about statement'
     # Final banner: the November-only line is out
-    s = must(s, '<p class="final-cta-sub">Online sign-ups in November only. Your personal longevity protocol starts here.</p>', '<p class="final-cta-sub">Your personal longevity protocol starts here.</p>')
+    s = opt(s, '<p class="final-cta-sub">Online sign-ups in November only. Your personal longevity protocol starts here.</p>', '<p class="final-cta-sub">Your personal longevity protocol starts here.</p>')
     return s
 
 
@@ -219,13 +223,13 @@ def common(s):
         extra = re.sub(r'alt="[^"]*"', 'alt=""', logos).replace('title="', 'aria-hidden="true" data-title="')
         s = s[:m.start(2)] + logos + extra + extra + s[m.end(2):]
     s = s.replace('</head>', '<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">\n</head>', 1)
-    s = must(s, '<span class="tag">$99 value, included</span>', '<span class="tag">Included</span>')
+    s = opt(s, '<span class="tag">$99 value, included</span>', '<span class="tag">Included</span>')
     s = must(s, '<span style="color:#006EFF;">Doesn\'t Have Time to Teach You.</span>', '<span class="mf-lb">Doesn\'t Have Time to Teach You.</span>')
     s = must(s, 'In November, tuition is $79 for month 1 with code JULIE249 or MASTERCLASS-VIP, then four monthly payments of $169 '
                 '($755 total; regular plan $169 x 5). Tuition includes',
              "November offer: $79 first month, then $169 a month for four months. Course, Lingo CGM, $100 credits back towards your next course and "
              "Julie's VIP Masterclass included. Tuition includes")
-    s = must(s, 'Applications are open for the next class. Your personal longevity protocol starts here.',
+    s = opt(s, 'Applications are open for the next class. Your personal longevity protocol starts here.',
              'Online sign-ups in November only. Your personal longevity protocol starts here.')
     s = re.sub(r'(<a href="#lead-gen" class="btn-primary">\s*)Apply Now', r'\1Enroll Now', s)
     s = s.replace('<a href="#lead-gen" class="nav-cta">Apply Now</a>', '<a href="#lead-gen" class="nav-cta">Enroll Now</a>')
