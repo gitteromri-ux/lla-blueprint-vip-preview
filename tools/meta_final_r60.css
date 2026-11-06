@@ -149,3 +149,13 @@ html.mf body:not(#mf-x):not(#mf-t) section#pricing .mfp-after{margin:18px 0 22px
   html.mf body:not(#mf-x):not(#mf-t) section#pricing .mfp-course span{font-size:18px}
   html.mf body:not(#mf-x):not(#mf-t) section#pricing .mfp-after{font-size:17px;margin:14px 6px 18px}
 }
+/* Round 68b: right-of-price course facts, quiet and in the card's own type (no bold serif). */
+html.mf body:not(#mf-x):not(#mf-t) section#pricing .mfp-course{gap:4px;padding-left:22px;border-left:1px solid rgba(10,30,58,.14)}
+html.mf body:not(#mf-x):not(#mf-t) section#pricing .mfp-course b,html.mf body:not(#mf-x):not(#mf-t) section#pricing .mfp-course span{font:500 19px/1.45 Inter,sans-serif!important;color:#3A5078!important;letter-spacing:0}
+html.mf body:not(#mf-x):not(#mf-t) section#pricing .mfp-after{font:500 19px/1.4 Inter,sans-serif;color:#3A5078}
+@media (max-width:640px){
+  html.mf body:not(#mf-x):not(#mf-t) section#pricing .mfp-course{gap:0 8px;padding-left:0;border-left:0}
+  html.mf body:not(#mf-x):not(#mf-t) section#pricing .mfp-course b,html.mf body:not(#mf-x):not(#mf-t) section#pricing .mfp-course span{font-size:17px!important}
+  html.mf body:not(#mf-x):not(#mf-t) section#pricing .mfp-course span::before{content:"\00B7";margin-right:8px}
+  html.mf body:not(#mf-x):not(#mf-t) section#pricing .mfp-after{font-size:17px}
+}
