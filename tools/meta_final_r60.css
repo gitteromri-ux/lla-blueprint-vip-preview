@@ -160,3 +160,10 @@ html.mf body:not(#mf-x):not(#mf-t) section#pricing .mfp-after{font:500 19px/1.4 
   html.mf body:not(#mf-x):not(#mf-t) section#pricing .mfp-after{font-size:17px}
 }
 @media (max-width:640px){html.mf body:not(#mf-x):not(#mf-t) section#pricing .mfp-course{display:none!important}}
+/* Round 68c: more air under the headline; slim course facts aligned with "first month". */
+html.mf body:not(#mf-x):not(#mf-t) section#pricing .mfp-title{margin-bottom:30px!important}
+html.mf body:not(#mf-x):not(#mf-t) section#pricing .mfp-course{align-self:flex-end;margin-bottom:4px;gap:2px;padding-left:18px;border-left:1px solid rgba(10,30,58,.12)}
+html.mf body:not(#mf-x):not(#mf-t) section#pricing .mfp-course b,html.mf body:not(#mf-x):not(#mf-t) section#pricing .mfp-course span{font:400 16px/1.5 Inter,sans-serif!important;color:#5A6E92!important}
+@media (max-width:640px){html.mf body:not(#mf-x):not(#mf-t) section#pricing .mfp-title{margin-bottom:20px!important}}
+html.mf body:not(#mf-x):not(#mf-t) section#pricing .mfp-course b,html.mf body:not(#mf-x):not(#mf-t) section#pricing .mfp-course span{font:400 18px/1.5 Inter,sans-serif!important;color:#2A4370!important}
+html.mf body:not(#mf-x):not(#mf-t) section#pricing .mfp-after{color:#2A4370}
