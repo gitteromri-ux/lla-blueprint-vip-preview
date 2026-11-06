@@ -20,6 +20,7 @@
     p.FirstPayment = 0; p.NumberOfPayments = 0; p.LeftToPay = 0;
     p.DynamicParameters = (typeof p.DynamicParameters === 'string' && p.DynamicParameters ? p.DynamicParameters.replace(/(^|&)plan=[a-z]+/g, '') + '&' : '') +
       'plan=vipmasterclass&bporder=' + String(ids.orderid).replace(/[^0-9A-Za-z]/g, '');
+    p.DynamicParameters = p.DynamicParameters.replace(/(^|&)message=[^&]*/g, '') + '&message=' + encodeURIComponent('VIP Masterclass with Julie Gibson Clark Sat Nov 14 12PM ET included free with Blueprint order ' + String(ids.orderid).replace(/[^0-9A-Za-z]/g, ''));
     p.DynamicParameters = p.DynamicParameters.replace(/^&+/, '').replace(/&&+/g, '&').slice(0, 4000);
     var url = String(cfg.workerBase || '').replace(/\/$/, '') + (cfg.env === 'staging' ? '/staging' : '') + '/api/lead/ecomm';
     if (!/^https:\/\//.test(url)) return;
