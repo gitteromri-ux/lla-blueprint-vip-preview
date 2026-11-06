@@ -66,7 +66,7 @@ CGM = open(os.path.join(HERE, 'meta_final_cgm.html'), encoding='utf-8').read()
 ORDER = [  # Omri 5 Nov, 23:40: his order first (hero, six pillars, what you'll learn, CGM, Julie, pricing, how, about, logos, instructors, Six Systems, blog), then the folds he did not list, kept
     ('hero', '<section class="hero" id="hero">', None),
     ('topics', '<section class="topics">', None),
-    ('syllabus', '<section class="curriculum" id="syllabus">', DEV_LEARN),
+    ('syllabus', '<section class="curriculum" id="syllabus">', None),  # Omri 6 Nov: the longevitylifeacademy.com fold itself, colours and fonts optimized
     ('cgm', '<section class="cgm-fold" id="cgm">', CGM),
     ('julie', '<section class="nov-vip" id="vip">', JULIE),
     ('pricing', '<section class="nov-offer" id="offer">', PRICING),
@@ -157,7 +157,15 @@ def r39(s):
     # Syllabus phase cards: one hierarchy in every card (number, name, sessions)
     s, n = re.subn(r'<span class="phase-block-label">Phase (\d),\s*(Sessions [^<]*)</span>\s*<span class="phase-block-name">([^<]*)</span>',
                    lambda m: '<span class="phase-block-num">0' + m.group(1) + '</span><span class="phase-block-name">' + m.group(3) + '</span><span class="phase-block-label">' + m.group(2) + '</span>', s)
-    assert n == 4, 'phase headers %d' % n
+    # .com syllabus: ranges in words (no en dashes), middle dot to comma
+    a = s.find('<section class="curriculum" id="syllabus">'); b = s.find('</section>', a)
+    if a > 0:
+        sec = s[a:b]
+        sec = re.sub(r'(\d+)\s*[\u2013\u2014]\s*(\d+)', r'\1 to \2', sec)
+        sec = sec.replace('Phase 1 \u00b7 ', 'Phase 1, ').replace('Phase 2 \u00b7 ', 'Phase 2, ').replace('Phase 3 \u00b7 ', 'Phase 3, ').replace('Phase 4 \u00b7 ', 'Phase 4, ')
+        sec = sec.replace(' \u00b7 ', ', ')
+        sec = re.sub(r'([A-Za-z])\s*[\u2013\u2014]\s*([A-Za-z])', r'\1-\2', sec)
+        s = s[:a] + sec + s[b:]
     # Application form: shorter placeholders so they fit the two-column phone layout
     s = must(s, 'placeholder="Your first name"', 'placeholder="First name"')
     s = must(s, 'placeholder="Your last name"', 'placeholder="Last name"')
@@ -244,6 +252,16 @@ def common(s):
         t = re.sub(r'\s*(?:—|&mdash;)\s*', ', ', t)
         return t
 
+    # Syllabus "50-Minute Flow": the .com arrows between steps become full stops (not commas), each step starts with a capital
+    def _flow(m):
+        steps = [x.strip() for x in re.split(r'\s*(?:→|&rarr;)\s*', m.group(2)) if x.strip()]
+        steps = [x[0].upper() + x[1:] for x in steps]
+        t = '. '.join(steps)
+        if t and t[-1] not in '.?!':
+            t += '.'
+        return m.group(1) + t + m.group(3)
+    s = re.sub(r'(<p class="curriculum-flow">)(.*?)(</p>)', _flow, s, flags=re.S)
+
     head_end = s.find('<body')
     parts = re.split(r'(<script\b.*?</script>|<style\b.*?</style>)', s[head_end:], flags=re.S)
     parts = [p if p.startswith('<script') or p.startswith('<style') else re.sub(r'>[^<]+<', clean_text, p) for p in parts]
@@ -324,7 +342,7 @@ def common(s):
     s = r39(s)
     s = no_orphans(s)
     s = re.sub(r'(<span class="phase-block-name">[^<]*?)&nbsp;([^<]*</span>)', r'\1 \2', s)  # phase names may wrap freely
-    css = open(os.path.join(HERE, 'meta_final.css'), encoding='utf-8').read().replace('/*%%HERO_CSS%%*/', '').replace('/*%%NEW_FOLDS%%*/', open(os.path.join(HERE, 'meta_final_newfolds.css'), encoding='utf-8').read()).replace('/*%%JULIE_CSS%%*/', open(os.path.join(HERE, 'masterclass_julie.css'), encoding='utf-8').read()).replace('/*%%BRAND%%*/', open(os.path.join(HERE, 'meta_final_fix.css'), encoding='utf-8').read() + '\n' + open(os.path.join(HERE, 'meta_final_pricing_big.css'), encoding='utf-8').read() + '\n' + open(os.path.join(HERE, 'meta_final_r39.css'), encoding='utf-8').read())
+    css = open(os.path.join(HERE, 'meta_final.css'), encoding='utf-8').read().replace('/*%%HERO_CSS%%*/', '').replace('/*%%NEW_FOLDS%%*/', open(os.path.join(HERE, 'meta_final_newfolds.css'), encoding='utf-8').read()).replace('/*%%JULIE_CSS%%*/', open(os.path.join(HERE, 'masterclass_julie.css'), encoding='utf-8').read()).replace('/*%%BRAND%%*/', open(os.path.join(HERE, 'meta_final_fix.css'), encoding='utf-8').read() + '\n' + open(os.path.join(HERE, 'meta_final_pricing_big.css'), encoding='utf-8').read() + '\n' + open(os.path.join(HERE, 'meta_final_r39.css'), encoding='utf-8').read().replace('#syllabus', '#mf-retired-syllabus') + '\n' + open(os.path.join(HERE, 'meta_final_syllabus_com.css'), encoding='utf-8').read())
     s = s.replace('</head>', '<style id="meta-final">\n' + css + '\n</style>\n</head>', 1)
     js = open(os.path.join(HERE, 'meta_final.js'), encoding='utf-8').read()
     s = s.replace('</body>', AUTOPLAY_JS + '\n<script>\n' + js + '\n</script>\n</body>', 1)

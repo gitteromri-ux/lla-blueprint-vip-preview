@@ -1156,3 +1156,56 @@ html.mf body #cgm.cgm12 .cgm14-legend i{flex:0 0 auto!important}
   html.mf body section#syllabus .phase-block{padding:16px 12px!important}
   html.mf body section#syllabus .curriculum-phases .phase-block[data-phase]:not(.mf-x):not(.mf-y) .phase-block-label:not(.mf-x){font-size:18px!important;white-space:nowrap!important;letter-spacing:-.005em!important}
 }
+
+/* ===== Round 54: CGM recomposed. Large phone centre-stage, large sensor in front, two small floating cards ===== */
+html.mf body #cgm.cgm12 .cgm12-grid{grid-template-columns:minmax(0,5fr) minmax(0,6fr)!important;gap:56px!important;align-items:center!important;max-width:1160px!important}
+html.mf body #cgm.cgm12 .cgm14-stage{position:relative!important;height:540px!important;perspective:1400px}
+html.mf body #cgm.cgm12 .cgm14-stage::before{content:'';position:absolute;left:50%;top:46%;width:520px;height:520px;transform:translate(-50%,-50%);border-radius:50%;background:radial-gradient(closest-side,rgba(124,192,255,.30),rgba(124,192,255,.10) 55%,transparent 72%);pointer-events:none;z-index:0}
+html.mf body #cgm.cgm12 .cgm14-stage::after{content:'';position:absolute;left:50%;bottom:22px;width:440px;height:60px;transform:translateX(-50%);border-radius:50%;background:radial-gradient(closest-side,rgba(0,4,14,.75),transparent);filter:blur(6px);pointer-events:none;z-index:0}
+html.mf body #cgm.cgm12 .cgm14-phone{position:absolute!important;left:50%!important;top:6px!important;width:290px!important;transform:translateX(-50%) perspective(1200px) rotateY(-10deg) rotateZ(2deg)!important;z-index:1!important;filter:drop-shadow(0 40px 46px rgba(0,0,0,.6))!important}
+html.mf body #cgm.cgm12 svg.cgm14-sensor{position:absolute!important;left:calc(50% - 300px)!important;top:368px!important;width:250px!important;z-index:4!important;filter:drop-shadow(0 22px 22px rgba(0,0,0,.55))!important}
+html.mf body #cgm.cgm12 .cgm14-card{padding:9px 11px 8px!important;border-radius:13px!important;z-index:3!important;background:linear-gradient(155deg,rgba(255,255,255,.14) 0%,rgba(255,255,255,.03) 45%),linear-gradient(160deg,rgba(22,42,90,.94),rgba(8,17,42,.96))!important;border:1px solid rgba(207,235,255,.4)!important;box-shadow:inset 0 1px 0 rgba(255,255,255,.22),0 24px 40px -20px rgba(0,0,0,.9),0 0 18px -6px rgba(159,212,255,.55)!important}
+html.mf body #cgm.cgm12 .cgm14-live{left:calc(50% - 250px)!important;right:auto!important;top:92px!important;width:150px!important;transform:perspective(800px) rotateY(14deg) rotateX(4deg)!important}
+html.mf body #cgm.cgm12 .cgm14-meal{left:calc(50% + 110px)!important;right:auto!important;top:230px!important;width:178px!important;transform:perspective(800px) rotateY(-14deg) rotateX(4deg)!important}
+html.mf body #cgm.cgm12 .cgm14-k{font-size:17px!important;margin:0!important}
+html.mf body #cgm.cgm12 .cgm14-num{font-size:30px!important;margin:1px 0 2px!important}
+html.mf body #cgm.cgm12 .cgm14-num span{font-size:17px!important;margin-left:4px!important}
+html.mf body #cgm.cgm12 .cgm14-trace{height:28px!important}
+html.mf body #cgm.cgm12 .cgm14-curves{height:48px!important;margin-top:4px!important}
+html.mf body #cgm.cgm12 .cgm14-legend{font-size:17px!important;gap:2px!important;margin-top:5px!important}
+html.mf body #cgm.cgm12 .cgm14-legend span{white-space:nowrap!important}
+html.mf body #cgm.cgm12 .cgm14-legend i{width:12px!important;height:2px!important;flex:0 0 auto!important}
+html.mf body #cgm.cgm12 .cgm14-tag{font-size:17px!important;padding:3px 9px!important;top:-13px!important;right:8px!important;left:auto!important}
+@media (max-width:900px){
+  html.mf body #cgm.cgm12 .cgm14-stage{height:420px!important;margin:4px 0 22px!important}
+  html.mf body #cgm.cgm12 .cgm14-stage::before{width:360px;height:360px;top:44%}
+  html.mf body #cgm.cgm12 .cgm14-stage::after{width:300px;height:44px;bottom:12px}
+  html.mf body #cgm.cgm12 .cgm14-phone{width:212px!important;top:2px!important}
+  html.mf body #cgm.cgm12 svg.cgm14-sensor{left:0!important;top:286px!important;width:170px!important}
+  html.mf body #cgm.cgm12 .cgm14-live{left:0!important;top:64px!important;width:132px!important}
+  html.mf body #cgm.cgm12 .cgm14-meal{left:auto!important;right:0!important;top:178px!important;width:158px!important}
+  html.mf body #cgm.cgm12 .cgm14-num{font-size:26px!important}
+  html.mf body #cgm.cgm12 .cgm14-trace{height:24px!important}
+  html.mf body #cgm.cgm12 .cgm14-curves{height:40px!important}
+}
+/* ===== Round 56: CGM, phone and sensor larger, cards small and tidy, no empty gaps on phones ===== */
+html.mf body #cgm.cgm12 .cgm14-stage{height:580px!important}
+html.mf body #cgm.cgm12 .cgm14-phone{width:320px!important;top:4px!important}
+html.mf body #cgm.cgm12 svg.cgm14-sensor{left:calc(50% - 318px)!important;top:392px!important;width:270px!important}
+html.mf body #cgm.cgm12 .cgm14-live{left:calc(50% - 268px)!important;top:96px!important;width:150px!important}
+html.mf body #cgm.cgm12 .cgm14-meal{left:calc(50% + 122px)!important;top:250px!important;width:172px!important}
+html.mf body #cgm.cgm12 .cgm14-legend span{white-space:nowrap!important}
+@media (max-width:900px){
+  html.mf body #cgm.cgm12 .cgm12-grid{gap:0!important}
+  html.mf body #cgm.cgm12 .cgm12-copy h2.section-title{margin-bottom:6px!important}
+  html.mf body #cgm.cgm12 .cgm14-stage{height:372px!important;margin:6px auto 14px!important;max-width:380px!important;width:100%!important}
+  html.mf body #cgm.cgm12 .cgm14-stage::before{width:320px;height:320px;top:46%}
+  html.mf body #cgm.cgm12 .cgm14-stage::after{width:260px;height:40px;bottom:6px}
+  html.mf body #cgm.cgm12 .cgm14-phone{width:226px!important;top:0!important;left:54%!important}
+  html.mf body #cgm.cgm12 svg.cgm14-sensor{left:2px!important;top:250px!important;width:176px!important}
+  html.mf body #cgm.cgm12 .cgm14-live{left:0!important;top:40px!important;width:136px!important}
+  html.mf body #cgm.cgm12 .cgm14-meal{left:auto!important;right:0!important;top:176px!important;width:160px!important}
+  html.mf body #cgm.cgm12 .cgm12-words{text-align:center!important;align-items:center!important;gap:14px!important}
+  html.mf body #cgm.cgm12 .cgm12-words li{text-align:center!important;align-items:center!important}
+  html.mf body #cgm.cgm12 .cgm8-fine{margin-top:16px!important}
+}
