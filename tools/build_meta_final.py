@@ -153,6 +153,9 @@ def r39(s):
     # Application form: one clean ecommerce button
     s, n = re.subn(r'(<a href="#"[^>]*class="lg-buy">)\s*<span class="lg-buy-main">.*?</span>\s*<span class="lg-buy-sub">.*?</span>\s*(</a>)', r'\1<span class="lg-buy-main">Enroll Online Now</span><span class="lg-buy-arr" aria-hidden="true">&rarr;</span>\2', s, count=1, flags=re.S)
     assert n == 1, 'lg-buy'
+    # Application form: shorter placeholders so they fit the two-column phone layout
+    s = must(s, 'placeholder="Your first name"', 'placeholder="First name"')
+    s = must(s, 'placeholder="Your last name"', 'placeholder="Last name"')
     # Final banner: the November-only line is out
     s = must(s, '<p class="final-cta-sub">Online sign-ups in November only. Your personal longevity protocol starts here.</p>', '<p class="final-cta-sub">Your personal longevity protocol starts here.</p>')
     return s
