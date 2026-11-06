@@ -153,6 +153,9 @@ def r39(s):
     # Application form: one clean ecommerce button
     s, n = re.subn(r'(<a href="#"[^>]*class="lg-buy">)\s*<span class="lg-buy-main">.*?</span>\s*<span class="lg-buy-sub">.*?</span>\s*(</a>)', r'\1<span class="lg-buy-main">Enroll Online Now</span><span class="lg-buy-arr" aria-hidden="true">&rarr;</span>\2', s, count=1, flags=re.S)
     assert n == 1, 'lg-buy'
+    # Syllabus: the phase label breaks after the phase number on phones
+    s, n = re.subn(r'(<span class="phase-block-label">Phase \d),\s*(Sessions [^<]*</span>)', r'\1,<br class="mf-mbr"> \2', s)
+    assert n == 4, 'phase labels %d' % n
     # Application form: shorter placeholders so they fit the two-column phone layout
     s = must(s, 'placeholder="Your first name"', 'placeholder="First name"')
     s = must(s, 'placeholder="Your last name"', 'placeholder="Last name"')
