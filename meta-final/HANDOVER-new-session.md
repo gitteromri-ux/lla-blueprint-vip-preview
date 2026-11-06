@@ -78,6 +78,11 @@ Kept after these, pending his keep or remove answer: reviews, what the course in
 - Never imply Julie teaches the course; she hosts the masterclass (Saturday, November 14, 12:00 PM ET).
 - eTeacher's checkout is left unchanged: its step 2 still says "Masterclass credit JULIE249 applied" and "$755 total". Omri said leave it.
 
+## Round 39 (6 Nov), from Omri's review board
+- Built all 18 commented folds in one pass; Blog and FAQ approved and untouched; footer not reviewed.
+- New: CSS in `tools/meta_final_r39.css` (loads last), copy changes in `r39()` and a no-one-word-last-line pass `no_orphans()` in `tools/build_meta_final.py`, the cut-out Lingo phone `meta-final/assets/lingo-phone.png`.
+- Review board: https://gitteromri-ux.github.io/longevity-website-review-20261105/round39/
+
 ## Open items
 1. Omri's review of the published preview, fold by fold, on his phone.
 2. Keep or remove the unlisted folds (reviews, course includes, Why Different, quiz, FAQ, application form, final banner).

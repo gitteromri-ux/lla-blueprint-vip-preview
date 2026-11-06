@@ -112,6 +112,61 @@ def must(s, old, new, count=1):
 
 
 # ---------------------------------------------------------------- common edits (both outputs)
+def r39(s):
+    """Round 39 (Omri's review board, round 38). Copy and markup changes only; styles live in meta_final_r39.css."""
+    # Hero: the last headline line is set a little smaller
+    s = must(s, '<br>built in 18 weeks.</h1>', '<br><span class="mf-h1-last">built in 18 weeks.</span></h1>')
+    # Six pillars: each card title starts with Master
+    a = s.find('<section class="topics'); b = s.find('</section>', a)
+    sec = s[a:b]; sec, n = re.subn(r'(<h3 class="topic-v2-title">)(.*?)(</h3>)', r'\1Master \2\3', sec)
+    assert n == 6, 'pillar titles'
+    s = s[:a] + sec + s[b:]
+    # How It Works: the ecommerce flow from our pages.dev site ("How it works, start to finish"); class times left out (pages.dev and the checkout differ)
+    steps = [
+        ('Day one', 'Enroll in three clicks', 'Register, pick your class, pay. Your platform login arrives straight away.'),
+        ('Week one', 'Your first live session', '50 minutes live with your instructor and your classmates, weekly at the time you choose at checkout.'),
+        ('Before lesson five', 'Your Abbott Lingo arrives', 'Shipped free to your address. You start reading your own glucose data in class.'),
+        ('Weeks one to eighteen', 'Learn it, then live it', 'Eighteen live sessions across four phases. Each week you practice the protocol on your own body.'),
+        ('Week eighteen', 'Your Personal Longevity Blueprint', 'You finish with a written protocol built on your numbers. It stays yours.'),
+    ]
+    cards = ''.join(f'\n          <div class="how-v2-card mf-how{i+1}"><span class="how-v2-num">{i+1:02d}</span><span class="how-v2-card-meta">{t}</span><h3 class="how-v2-card-title">{h}</h3><p class="how-v2-card-desc">{d}</p></div>' for i, (t, h, d) in enumerate(steps))
+    a = s.find('<div class="how-v2-track" id="howTrack">'); assert a > 0
+    b = s.find('</div>\n      </div>', a)
+    first = s.find('<div class="how-v2-card"', a)
+    last_end = s.rfind('</div>', a, b)
+    seg = s[a:b]
+    seg2, n = re.subn(r'\s*<div class="how-v2-card"[^>]*>.*?</div>', '', seg, flags=re.S)
+    assert n == 6, 'how cards'
+    seg2 = seg2.replace('<div class="how-v2-track" id="howTrack">', '<div class="how-v2-track" id="howTrack">' + cards, 1)
+    s = s[:a] + seg2 + s[b:]
+    s = must(s, '<p class="how-v2-sub">Six clear steps from enrollment to your personal longevity protocol.</p>', '<p class="how-v2-sub">How it works, start to finish. Enroll today. Sensor at your door by week five. Your Blueprint by week 18.</p>')
+    # Why different: the shorter card texts from our pages.dev site
+    why = {
+        '1': 'Every session is live with a certified instructor and your classmates. You ask questions in real time and get real answers. Recordings are there if you miss one.',
+        '2': 'You do not memorize facts about glucose or sleep. You watch them move in your own body. CGM readings and lifestyle logs shape every session.',
+        '3': 'You will know your classmates by name and they will know yours. Peer coaching in the final weeks builds the accountability that keeps the protocol alive.',
+        '4': 'The course ends with your personal longevity blueprint, tested against your body over 18 weeks. The one deliverable designed to outlast the course.',
+    }
+    for k, txt in why.items():
+        s, n = re.subn(r'(<div class="value-card reveal" data-accent="' + k + r'">\s*<h3 class="value-title">.*?</h3>\s*<p class="value-desc">).*?(</p>)', lambda m: m.group(1) + txt + m.group(2), s, count=1, flags=re.S)
+        assert n == 1, 'why ' + k
+    # Application form: one clean ecommerce button
+    s, n = re.subn(r'(<a href="#"[^>]*class="lg-buy">)\s*<span class="lg-buy-main">.*?</span>\s*<span class="lg-buy-sub">.*?</span>\s*(</a>)', r'\1<span class="lg-buy-main">Enroll Online Now</span><span class="lg-buy-arr" aria-hidden="true">&rarr;</span>\2', s, count=1, flags=re.S)
+    assert n == 1, 'lg-buy'
+    # Final banner: the November-only line is out
+    s = must(s, '<p class="final-cta-sub">Online sign-ups in November only. Your personal longevity protocol starts here.</p>', '<p class="final-cta-sub">Your personal longevity protocol starts here.</p>')
+    return s
+
+
+def no_orphans(s):
+    """No one-word last lines: join the last two words of short text blocks with a non-breaking space (outside scripts and styles)."""
+    parts = re.split(r'(<script\b.*?</script>|<style\b.*?</style>)', s, flags=re.S)
+    pat = re.compile(r'(\w[\w,\'\u2019.&;$%+-]*) ([\w\'\u2019$%+.,!?&;-]{1,14}?)(</(?:p|h1|h2|h3|h4|li|b|em|strong|span|a|div|figcaption)>)')
+    for i in range(0, len(parts), 2):
+        parts[i] = pat.sub(lambda m: m.group(1) + '&nbsp;' + m.group(2) + m.group(3), parts[i])
+    return ''.join(parts)
+
+
 def common(s):
     s = re.sub(r'<div id="novStrip".*?</div>\s*', '', s, count=1, flags=re.S)  # promo strip out
     s = re.sub(r'<html\b([^>]*)>', lambda m: '<html' + (m.group(1).replace('class="', 'class="mf ') if 'class="' in m.group(1) else m.group(1) + ' class="mf"') + '>', s, count=1)
@@ -253,8 +308,10 @@ def common(s):
     ]:
         if a in s: s = s.replace(a, b)
         else: print('note: review not found:', a[:50])
-    s = must(s, '<h2 class="section-title">Learn to Master<br><span class="mf-acc">Six Pillars of a Longer, Better Life.</span></h2>', '<h2 class="section-title">Learn to Master Six Pillars<br><span class="mf-acc">for a Longer, Better Life.</span></h2>')
-    css = open(os.path.join(HERE, 'meta_final.css'), encoding='utf-8').read().replace('/*%%HERO_CSS%%*/', '').replace('/*%%NEW_FOLDS%%*/', open(os.path.join(HERE, 'meta_final_newfolds.css'), encoding='utf-8').read()).replace('/*%%JULIE_CSS%%*/', open(os.path.join(HERE, 'masterclass_julie.css'), encoding='utf-8').read()).replace('/*%%BRAND%%*/', open(os.path.join(HERE, 'meta_final_fix.css'), encoding='utf-8').read() + '\n' + open(os.path.join(HERE, 'meta_final_pricing_big.css'), encoding='utf-8').read())
+    s = must(s, '<h2 class="section-title">Learn to Master<br><span class="mf-acc">Six Pillars of a Longer, Better Life.</span></h2>', '<h2 class="section-title">Learn to Master<br class="mf-mbr"> <span class="mf-acc">Six Pillars</span><br>for a Longer, Better Life.</h2>')
+    s = r39(s)
+    s = no_orphans(s)
+    css = open(os.path.join(HERE, 'meta_final.css'), encoding='utf-8').read().replace('/*%%HERO_CSS%%*/', '').replace('/*%%NEW_FOLDS%%*/', open(os.path.join(HERE, 'meta_final_newfolds.css'), encoding='utf-8').read()).replace('/*%%JULIE_CSS%%*/', open(os.path.join(HERE, 'masterclass_julie.css'), encoding='utf-8').read()).replace('/*%%BRAND%%*/', open(os.path.join(HERE, 'meta_final_fix.css'), encoding='utf-8').read() + '\n' + open(os.path.join(HERE, 'meta_final_pricing_big.css'), encoding='utf-8').read() + '\n' + open(os.path.join(HERE, 'meta_final_r39.css'), encoding='utf-8').read())
     s = s.replace('</head>', '<style id="meta-final">\n' + css + '\n</style>\n</head>', 1)
     js = open(os.path.join(HERE, 'meta_final.js'), encoding='utf-8').read()
     s = s.replace('</body>', AUTOPLAY_JS + '\n<script>\n' + js + '\n</script>\n</body>', 1)
