@@ -1,7 +1,7 @@
 /* VIP Masterclass enrollment (Omri, 6 Nov 2026). Same student, same ProductID 26 (Longevity), second product:
  * after the Blueprint order is created, send one $0 order for the Julie VIP Masterclass, Sat Nov 14, to the same
  * CRM endpoint. Course and class IDs are the ones the live masterclass page uses (julie-masterclass, VP Ops):
- * MainAbroadCourseId 283 / AbroadCourseId 1823, Nov 14 1:00 PM ET -> CourseID 170142, SemesterID 2394.
+ * MainAbroadCourseId 283 / AbroadCourseId 1823, the Nov 14 (12:00 PM ET) class -> CourseID 170142, SemesterID 2394.
  * Fire and forget: it never changes the Blueprint order, its ids, the payment page or tracking. Once per order. */
 (function () {
   'use strict';
