@@ -37,16 +37,13 @@ must('        <hr />\n        <p>Your seat and start date are confirmed instantl
 
 # 2. Pricing-card wording, no "then".
 must("(Number(expectedQuote.leftToPay)===0?'':'; then '+Number(expectedQuote.numberOfPayments)+' monthly payments of $'+Number(expectedQuote.paymentPerMonth).toFixed(2));",
-     "(Number(expectedQuote.leftToPay)===0?'':'. Months 2 to '+(Number(expectedQuote.numberOfPayments)+1)+': $'+Number(expectedQuote.paymentPerMonth).toFixed(2)+'/mo');")
-must("      if (rows[1]) rows[1].style.display = '';\n",
-     "      if (rows[1]) rows[1].style.display = '';\n"
-     "      if (ks[1]) ks[1].firstChild.nodeValue = 'Months 2 to ' + (num + 1) + ' ';\n")
-must("vs[1].innerHTML = (Number(expectedQuote.paymentPerMonth)<LIST_PER_MONTH ? strike(rest + ' x $' + LIST_PER_MONTH + '.00') : '') + rest + ' x $' + Number(expectedQuote.paymentPerMonth).toFixed(2);",
-     "vs[1].innerHTML = (Number(expectedQuote.paymentPerMonth)<LIST_PER_MONTH ? strike('$' + LIST_PER_MONTH + '.00') : '') + '$' + Number(expectedQuote.paymentPerMonth).toFixed(2) + '/mo';")
+     "(Number(expectedQuote.leftToPay)===0?'':', '+Number(expectedQuote.numberOfPayments)+' monthly payments of $'+Number(expectedQuote.paymentPerMonth).toFixed(2));")
+must("      if (ks[0]) ks[0].firstChild.nodeValue = 'Month 1 ';",
+     "      if (ks[0]) ks[0].firstChild.nodeValue = 'Due today ';")
 must("' <small>Month 1 · then '+num+' × $'+Number(expectedQuote.paymentPerMonth).toFixed(2)+' · $'+Number(expectedQuote.total).toFixed(2)+' total</small>';",
-     "' <small>Month 1 · Months 2 to '+(num+1)+': $'+Number(expectedQuote.paymentPerMonth).toFixed(2)+'/mo · $'+Number(expectedQuote.total).toFixed(2)+' total</small>';")
+     "' <small>today · '+num+' monthly payments of $'+Number(expectedQuote.paymentPerMonth).toFixed(2)+' · $'+Number(expectedQuote.total).toFixed(2)+' total</small>';")
 
-for bad in ('; then ', 'Month 1 · then', " x $' + LIST_PER_MONTH"):
+for bad in ('; then ', 'Month 1 · then', "'Month 1 '", 'Months 2 to'):
     if bad in s:
         sys.exit('patch_checkout: leftover wording: ' + bad)
 open(out, 'w', encoding='utf-8').write(s)

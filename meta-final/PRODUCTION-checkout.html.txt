@@ -1046,7 +1046,7 @@ async function initAirwallex(){
       verifiedBand.setAttribute('data-no-promo','');
       document.getElementById('heroTuitionVal').textContent='$'+Number(amount).toFixed(2)+(Number(expectedQuote.leftToPay)===0?' one payment':' today');
       document.getElementById('heroTuitionSub').textContent='$'+Number(expectedQuote.total).toFixed(2)+' total'+
-        (Number(expectedQuote.leftToPay)===0?'':'. Months 2 to '+(Number(expectedQuote.numberOfPayments)+1)+': $'+Number(expectedQuote.paymentPerMonth).toFixed(2)+'/mo');
+        (Number(expectedQuote.leftToPay)===0?'':', '+Number(expectedQuote.numberOfPayments)+' monthly payments of $'+Number(expectedQuote.paymentPerMonth).toFixed(2));
     }
     var num  = Number(d.NumOfPayments);
     document.documentElement.classList.toggle('lla-vip-eligible',
@@ -1059,9 +1059,8 @@ async function initAirwallex(){
       if (notes[0]) notes[0].textContent = 'Single payment. Full refund inside 14 days from registration.';
       if (notes[1]) notes[1].style.display = 'none';
     } else {
-      if (ks[0]) ks[0].firstChild.nodeValue = 'Month 1 ';
+      if (ks[0]) ks[0].firstChild.nodeValue = 'Due today ';
       if (rows[1]) rows[1].style.display = '';
-      if (ks[1]) ks[1].firstChild.nodeValue = 'Months 2 to ' + (num + 1) + ' ';
       var monthlyNotes = document.querySelectorAll('.sum-note');
       if (monthlyNotes[0]) monthlyNotes[0].textContent = 'Fully refundable within 14 days from registration.';
       if (monthlyNotes[1]) monthlyNotes[1].style.display = '';
@@ -1069,13 +1068,13 @@ async function initAirwallex(){
       if (vs[0]) vs[0].innerHTML = (discounted ? strike('$' + LIST_PER_MONTH + '.00') : '') + '$' + amount.toFixed(2);
       if (vs[1]) {
         var rest = num;
-        vs[1].innerHTML = (Number(expectedQuote.paymentPerMonth)<LIST_PER_MONTH ? strike('$' + LIST_PER_MONTH + '.00') : '') + '$' + Number(expectedQuote.paymentPerMonth).toFixed(2) + '/mo';
+        vs[1].innerHTML = (Number(expectedQuote.paymentPerMonth)<LIST_PER_MONTH ? strike(rest + ' x $' + LIST_PER_MONTH + '.00') : '') + rest + ' x $' + Number(expectedQuote.paymentPerMonth).toFixed(2);
       }
     }
     var totalNote = document.querySelector('.sum-note');
     if (totalNote) totalNote.textContent += ' Total tuition: $' + Number(expectedQuote.total).toFixed(2) + ' USD.';
     var planLabel=document.querySelector('#planSummary .ps-v');
-    if(planLabel)planLabel.innerHTML=plan==='upfront'?'$'+Number(amount).toFixed(2)+' <small>One payment</small>':'$'+Number(amount).toFixed(2)+' <small>Month 1 · Months 2 to '+(num+1)+': $'+Number(expectedQuote.paymentPerMonth).toFixed(2)+'/mo · $'+Number(expectedQuote.total).toFixed(2)+' total</small>';
+    if(planLabel)planLabel.innerHTML=plan==='upfront'?'$'+Number(amount).toFixed(2)+' <small>One payment</small>':'$'+Number(amount).toFixed(2)+' <small>today · '+num+' monthly payments of $'+Number(expectedQuote.paymentPerMonth).toFixed(2)+' · $'+Number(expectedQuote.total).toFixed(2)+' total</small>';
 
     // The elements.bundle.min.js from checkout.airwallex.com attaches window.Airwallex directly.
     var awx = window.Airwallex;

@@ -37,13 +37,13 @@
    if(strip){const markup='<span class="t lg">Masterclass credit</span><span class="t sm"><a href="#offer" data-credit-code="JULIE249">JULIE249</a><span>or</span><a href="#offer" data-credit-code="MASTERCLASS-VIP">MASTERCLASS-VIP</a></span><a class="code" href="#offer" data-credit-code="JULIE249">JULIE249</a><a class="code" href="#offer" data-credit-code="MASTERCLASS-VIP">MASTERCLASS-VIP</a>';if(strip.innerHTML!==markup)strip.innerHTML=markup;}
    text('#mockBar .l b','$79 month 1');
    const band=$('#emStep2 .em-band .b-v');
-   if(band){band.setAttribute('data-no-promo','');html('#emStep2 .em-band .b-v',upfront?'$799 <small>USD one payment</small>':'<span class="lla-tu"><span class="lla-tu-r"><span>Month 1</span><b>'+(active?'<s>$169</s>':'')+'$'+first+'</b></span><span class="lla-tu-r"><span>Months 2 to 5</span><b>$169<small>/mo</small></b></span>'+(active?'<span class="lla-tu-r lla-tu-vip"><span>Bonus VIP Masterclass</span><b>Free</b></span>':'')+'</span>');}
-   html('#pp [data-pl="monthly"] .pp-price','$'+first+' <small>Month 1</small>');
-   html('#pp [data-pl="monthly"] .pp-sub','Months 2 to 5: $169/mo');
+   if(band){band.setAttribute('data-no-promo','');html('#emStep2 .em-band .b-v',upfront?'$799 <small>USD one payment</small>':'<span class="lla-tu"><span class="lla-tu-r"><span>Due today</span><b>'+(active?'<s>$169</s>':'')+'$'+first+'</b></span>'+(active?'<span class="lla-tu-r lla-tu-vip"><span>Bonus VIP Masterclass</span><b>Free</b></span>':'')+'</span>');}
+   html('#pp [data-pl="monthly"] .pp-price','$'+first+' <small>today</small>');
+   html('#pp [data-pl="monthly"] .pp-sub','');
    const sum=$('#emSum');
    if(sum){
     sum.classList.add('credit-summary');sum.setAttribute('data-no-promo','');
-    const content='<p class="credit-heading">'+(active?'Masterclass credit':'Regular plan')+'</p><div class="credit-first">'+(active?'<s>$169</s>':'')+'<strong>$'+first+'</strong><span>Month 1</span></div><div class="credit-line"><span>Months 2 to 5</span><b>$169/mo</b></div>'+(active?'<div class="credit-line"><span>Bonus VIP Masterclass</span><b>Free</b></div>':'');
+    const content='<p class="credit-heading">'+(active?'Masterclass credit':'Regular plan')+'</p><div class="credit-first">'+(active?'<s>$169</s>':'')+'<strong>$'+first+'</strong><span>Due today</span></div>'+(active?'<div class="credit-line"><span>Bonus VIP Masterclass</span><b>Free</b></div>':'');
     if(sum.innerHTML!==content)sum.innerHTML=content;
    }
    const msg=$('#emPromoMsg');
