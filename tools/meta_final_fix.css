@@ -894,7 +894,7 @@ html.mf body section.topics .topic-v2-desc{-webkit-line-clamp:unset!important;li
 html.mf body section.topics .topic-v2-title{flex-direction:column!important;align-items:flex-start!important;gap:10px!important}
 html.mf body section.topics .topic-v2-num{font-size:17px!important}
 /* no Codec Pro anywhere visible; Inter instead */
-html.mf body :is(.topic-v2-num,.topic-v2-title,.btn-ghost,.section-cta-btn,.how-v2-num,.how-v2-card-title,.skill-title,.hex-center-label,.hex-node-label,.hex-detail-title,.hero-powered-stats *,.lead-gen-v2-form label,.lead-gen-v2-submit,.lg-buy-main,.lla-cta-title,.bioquiz-badge-num,footer h4,#julie .jb-cap b,.brand-name-codec){font-family:Inter,system-ui,sans-serif!important}
+html.mf body :is(.btn-ghost,.section-cta-btn,.skill-title,.hex-center-label,.hex-node-label,.hero-powered-stats *,.lead-gen-v2-form label,.lead-gen-v2-submit,.lg-buy-main,.lla-cta-title,.bioquiz-badge-num,footer h4,#julie .jb-cap b,.brand-name-codec){font-family:Inter,system-ui,sans-serif!important}
 /* course includes: no grey cards, sentence-case tag, no orphan card */
 html.mf body .nov-incl-card:nth-child(3n+1){--c1:#006EFF!important;--c2:#7EC8FF!important}
 html.mf body .nov-incl-card:nth-child(3n+2){--c1:#3BA7FF!important;--c2:#BFE2FF!important}

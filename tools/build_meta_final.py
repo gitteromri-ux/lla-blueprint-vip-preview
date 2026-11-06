@@ -156,6 +156,10 @@ def r39(s):
     # Application form: shorter placeholders so they fit the two-column phone layout
     s = must(s, 'placeholder="Your first name"', 'placeholder="First name"')
     s = must(s, 'placeholder="Your last name"', 'placeholder="Last name"')
+    # About: the first sentence becomes a large statement, the rest a wider paragraph (Omri, round 40 board)
+    s, n = re.subn(r'<p class="about-lead about-lead--gal">\s*(Longevity Life Academy was built on a simple belief, that everyone\s+deserves a science-backed protocol for a longer, healthier life\.)\s*(We assembled.*?)</p>',
+                   lambda m: '<p class="about-statement">' + re.sub(r'\s+', ' ', m.group(1)) + '</p>\n        <p class="about-lead about-lead--gal">' + re.sub(r'\s+', ' ', m.group(2)).strip() + '</p>', s, count=1, flags=re.S)
+    assert n == 1, 'about statement'
     # Final banner: the November-only line is out
     s = must(s, '<p class="final-cta-sub">Online sign-ups in November only. Your personal longevity protocol starts here.</p>', '<p class="final-cta-sub">Your personal longevity protocol starts here.</p>')
     return s
