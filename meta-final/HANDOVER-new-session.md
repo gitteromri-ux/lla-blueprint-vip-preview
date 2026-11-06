@@ -1,4 +1,4 @@
-# Handover: Final website for Meta (Longevity Life Academy), updated 5 Nov 2026, late
+# Handover: Final website for Meta (Longevity Life Academy), updated 6 Nov 2026 (round 56)
 
 Read this file fully before touching anything. Omri has corrected the same things many times; the approved and rejected lists below are the source of truth. Latest wins.
 
@@ -82,6 +82,19 @@ Kept after these, pending his keep or remove answer: reviews, what the course in
 - Built all 18 commented folds in one pass; Blog and FAQ approved and untouched; footer not reviewed.
 - New: CSS in `tools/meta_final_r39.css` (loads last), copy changes in `r39()` and a no-one-word-last-line pass `no_orphans()` in `tools/build_meta_final.py`, the cut-out Lingo phone `meta-final/assets/lingo-phone.png`.
 - Review board: https://gitteromri-ux.github.io/longevity-website-review-20261105/round39/
+
+## Rounds 40 to 56 (6 Nov), latest wins
+- **Approved as is (round 40 board):** Hero (later amended: the cells motion background is back, as on pages.dev), Blog, Reviews, FAQ, Final banner. Footer not reviewed.
+- **Syllabus (round 56):** the longevitylifeacademy.com section itself (`<section class="curriculum" id="syllabus">`), with only colours and fonts optimized: "I just wanted their version in optimized coloring and fonts. That's it."
+  - .com structure kept: centred phase tabs, a phase header box, one card per session that opens to Learning Goals, 50-Minute Flow and Between-Session Work.
+  - Styles: `tools/meta_final_syllabus_com.css` (loads last). The old round 39 to 53 syllabus rules in `meta_final_r39.css` are switched off at build time (`#syllabus` renamed); the tap-panel JS is gone from `meta_final.js`.
+  - The arrows in the 50-minute flow become full stops (the site-wide pass would make them commas).
+  - Rejected for the syllabus: the pages.dev tabs restyle, stacked phases ("5 miles long"), cards of different sizes, the tap panel, the cramped desktop class list.
+- **CGM (round 56):** Lingo version. Real phone cut-out `assets/lingo-phone.png` (from the .com lingo-1.jpg; 462x688 is the largest source there is), drawn 3D white sensor in front, two small dark cards with drawn graphs ("Live glucose", "After a meal").
+  - Phone and sensor large, cards small ("phone and monitor larger, cards much smaller").
+  - Rejected: glass or white cards, made-up looking graphs, blurry photo crops, the real sensor photo.
+- **Julie (round 41):** her photo large on the left; two cards on the right: "Learn to age slower / from the 2nd slowest-aging woman on Earth" and "Sat, Nov 14 / 12:00 PM ET, 90 min with live Q&A" with "Join us" (`data-checkout-open`).
+- **Device check:** `audit/live-check.js` now opens every syllabus phase and its first session on WebKit iPhone and desktop.
 
 ## Open items
 1. Omri's review of the published preview, fold by fold, on his phone.
