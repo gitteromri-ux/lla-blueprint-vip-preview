@@ -228,7 +228,7 @@ def common(s):
     s = must(s, '<span style="color:#006EFF;">Doesn\'t Have Time to Teach You.</span>', '<span class="mf-lb">Doesn\'t Have Time to Teach You.</span>')
     s = must(s, 'In November, tuition is $79 for month 1 with code JULIE249 or MASTERCLASS-VIP, then four monthly payments of $169 '
                 '($755 total; regular plan $169 x 5). Tuition includes',
-             "November offer: $79 first month, then $169 a month for four months. Course, Lingo CGM, $100 credits back towards your next course and "
+             "November offer: $79 for the first month and $169 a month for the following four months. Course, Lingo CGM, $100 credits back towards your next course and "
              "Julie's VIP Masterclass included. Tuition includes")
     s = opt(s, 'Applications are open for the next class. Your personal longevity protocol starts here.',
              'Online sign-ups in November only. Your personal longevity protocol starts here.')
@@ -246,7 +246,7 @@ def common(s):
     s = must(s, '<span class="mo">MONTH 1</span>', '<span class="mo">Month 1</span>')
     s = must(s, '<img src="assets/lla-logo-exact-transparent@2x.png?v=9" alt="Longevity Life Academy" class="nav-logo-img" width="1314" height="596">',
              '<img src="assets/lla-logo-no-tagline@2x.png" alt="Longevity Life Academy" class="nav-logo-img" width="1268" height="397">')
-    s = re.sub(r'<title>.*?</title>', '<title>The Longevity Blueprint | November offer: $79 first month</title>', s, count=1, flags=re.S)
+    s = re.sub(r'<title>.*?</title>', '<title>Longevity Life Academy, Design the Life Ahead of You</title>', s, count=1, flags=re.S)
     # Credibility audit: no dashes or arrows in running text (buttons keep their arrow icons)
     s = s.replace('Register &rarr; Choose your dates &rarr; Pay online &middot; done in 2 minutes', 'Register, choose your dates, pay online, done in 2 minutes')
 
