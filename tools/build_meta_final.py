@@ -447,7 +447,7 @@ def port_pagesdev_checkout(s):
     s = s[:x.start()] + x.group(1) + strip_modal_rules(x.group(2)) + x.group(3) + s[x.end():]
     # pages.dev popup CSS, tracking helpers (click-id handoff, relay receipts) and the state repair
     s = s.replace('</head>', '<style id="pd-checkout">\n' + css + '\n</style>\n<script src="assets/mf/pd/lla-clickid-v20260922.js"></script>\n<script src="assets/mf/pd/lla-relay-receipts.js"></script>\n</head>', 1)
-    s = s.replace('</body>', '<script src="assets/mf/pd/november-zones.js"></script>\n<script src="assets/mf/pd/blueprint-hotfix-state.js" defer></script>\n</body>', 1)
+    s = s.replace('</body>', '<script src="assets/mf/pd/november-zones.js"></script>\n</body>', 1)
     # pages.dev's phone sheet rules are scoped to its body id (body#lpRoot); the .com body has no id
     assert s.count('<body>') == 1, 'expected a plain <body>'
     s = s.replace('<body>', '<body id="lpRoot">', 1)

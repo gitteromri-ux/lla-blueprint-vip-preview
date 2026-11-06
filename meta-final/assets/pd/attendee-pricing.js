@@ -37,13 +37,13 @@
    if(strip){const markup='<span class="t lg">Masterclass credit</span><span class="t sm"><a href="#offer" data-credit-code="JULIE249">JULIE249</a><span>or</span><a href="#offer" data-credit-code="MASTERCLASS-VIP">MASTERCLASS-VIP</a></span><a class="code" href="#offer" data-credit-code="JULIE249">JULIE249</a><a class="code" href="#offer" data-credit-code="MASTERCLASS-VIP">MASTERCLASS-VIP</a>';if(strip.innerHTML!==markup)strip.innerHTML=markup;}
    text('#mockBar .l b','$79 month 1');
    const band=$('#emStep2 .em-band .b-v');
-   if(band){band.setAttribute('data-no-promo','');html('#emStep2 .em-band .b-v',upfront?'$799 <small>USD one payment</small>':(active?'<s style="opacity:.65;margin-right:8px">$169</s>':'')+'$'+first+' <small>Month 1 · then 4 × $169<br>$'+total+' total</small>');}
+   if(band){band.setAttribute('data-no-promo','');html('#emStep2 .em-band .b-v',upfront?'$799 <small>USD one payment</small>':(active?'<s style="opacity:.65;margin-right:8px">$169</s>':'')+'$'+first+' <small>Month 1<br>Months 2 to 5: $169/mo'+(active?'<br>Bonus VIP Masterclass: Free':'')+'</small>');}
    html('#pp [data-pl="monthly"] .pp-price','$'+first+' <small>Month 1</small>');
-   html('#pp [data-pl="monthly"] .pp-sub','Then 4 × $169 · $'+total+' total');
+   html('#pp [data-pl="monthly"] .pp-sub','Months 2 to 5: $169/mo');
    const sum=$('#emSum');
    if(sum){
     sum.classList.add('credit-summary');sum.setAttribute('data-no-promo','');
-    const content='<p class="credit-heading">'+(active?'Masterclass credit':'Regular plan')+'</p><div class="credit-first">'+(active?'<s>$169</s>':'')+'<strong>$'+first+'</strong><span>Month 1</span></div><div class="credit-line"><span>Months 2–5</span><b>4 × $169</b></div><div class="credit-line"><span>Total tuition</span><b>$'+total+'</b></div>';
+    const content='<p class="credit-heading">'+(active?'Masterclass credit':'Regular plan')+'</p><div class="credit-first">'+(active?'<s>$169</s>':'')+'<strong>$'+first+'</strong><span>Month 1</span></div><div class="credit-line"><span>Months 2 to 5</span><b>$169/mo</b></div>'+(active?'<div class="credit-line"><span>Bonus VIP Masterclass</span><b>Free</b></div>':'');
     if(sum.innerHTML!==content)sum.innerHTML=content;
    }
    const msg=$('#emPromoMsg');
