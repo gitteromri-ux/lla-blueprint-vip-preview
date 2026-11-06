@@ -343,9 +343,56 @@ def common(s):
     s = no_orphans(s)
     s = re.sub(r'(<span class="phase-block-name">[^<]*?)&nbsp;([^<]*</span>)', r'\1 \2', s)  # phase names may wrap freely
     css = open(os.path.join(HERE, 'meta_final.css'), encoding='utf-8').read().replace('/*%%HERO_CSS%%*/', '').replace('/*%%NEW_FOLDS%%*/', open(os.path.join(HERE, 'meta_final_newfolds.css'), encoding='utf-8').read()).replace('/*%%JULIE_CSS%%*/', open(os.path.join(HERE, 'masterclass_julie.css'), encoding='utf-8').read()).replace('/*%%BRAND%%*/', open(os.path.join(HERE, 'meta_final_fix.css'), encoding='utf-8').read() + '\n' + open(os.path.join(HERE, 'meta_final_pricing_big.css'), encoding='utf-8').read() + '\n' + open(os.path.join(HERE, 'meta_final_r39.css'), encoding='utf-8').read().replace('#syllabus', '#mf-retired-syllabus') + '\n' + open(os.path.join(HERE, 'meta_final_syllabus_com.css'), encoding='utf-8').read())
+    css += '\n' + open(os.path.join(HERE, 'meta_final_r57.css'), encoding='utf-8').read()
     s = s.replace('</head>', '<style id="meta-final">\n' + css + '\n</style>\n</head>', 1)
+    s = no_royal_blue(s)
+    # Omri 6 Nov (real Android phone at about 320px wide: text outside buttons, broken folds): phones narrower than 390px
+    # get the checked 390px layout scaled to fit their screen, so nothing spills out of a box.
+    s = must(s, '<meta name="viewport" content="width=device-width, initial-scale=1.0">',
+             '<meta name="viewport" content="width=device-width, initial-scale=1.0">\n' + FIT_VIEWPORT_JS)
     js = open(os.path.join(HERE, 'meta_final.js'), encoding='utf-8').read()
     s = s.replace('</body>', AUTOPLAY_JS + '\n<script>\n' + js + '\n</script>\n</body>', 1)
+    return s
+
+
+FIT_VIEWPORT_JS = """<script>(function(){var m=document.querySelector('meta[name="viewport"]');if(!m)return;var D='width=device-width, initial-scale=1.0',cur=D;function fit(){var a=screen.width,b=screen.height,land=window.matchMedia&&window.matchMedia('(orientation: landscape)').matches,w=land?Math.max(a,b):Math.min(a,b),want=(w&&w<390)?'width=390':D;if(want!==cur){m.setAttribute('content',want);cur=want;}}fit();window.addEventListener('orientationchange',function(){setTimeout(fit,250);});})();</script>"""
+
+
+def _royal_fix(r, g, b):
+    """Omri: no royal blue. Saturated mid blues become brand steel (darker) or light blue (lighter)."""
+    import colorsys
+    h, l, sat = colorsys.rgb_to_hls(r / 255, g / 255, b / 255)
+    hd = h * 360
+    if not (205 <= hd <= 235 and sat >= .55 and .32 <= l <= .62):
+        return None
+    if l >= .55:
+        sat, l = min(sat, .75), max(l, .74)
+    else:
+        sat, l = min(sat, .42), l * .82
+    rr, gg, bb = colorsys.hls_to_rgb(h, l, sat)
+    return round(rr * 255), round(gg * 255), round(bb * 255)
+
+
+def no_royal_blue(s):
+    def hexsub(m):
+        hx = m.group(1)
+        if len(hx) == 3:
+            hx = ''.join(c * 2 for c in hx)
+        f = _royal_fix(int(hx[0:2], 16), int(hx[2:4], 16), int(hx[4:6], 16))
+        return m.group(0) if f is None else '#%02X%02X%02X' % f
+
+    def rgbsub(m):
+        f = _royal_fix(float(m.group(2)), float(m.group(3)), float(m.group(4)))
+        if f is None:
+            return m.group(0)
+        return '%s(%d,%d,%d%s)' % (m.group(1), f[0], f[1], f[2], m.group(5) or '')
+
+    def fix(css):
+        css = re.sub(r'#([0-9a-fA-F]{6}|[0-9a-fA-F]{3})\b', hexsub, css)
+        return re.sub(r'\b(rgba?)\(\s*([\d.]+)\s*,\s*([\d.]+)\s*,\s*([\d.]+)\s*(,\s*[\d.]+%?\s*)?\)', rgbsub, css)
+    s = re.sub(r'(<style\b[^>]*>)(.*?)(</style>)', lambda m: m.group(1) + fix(m.group(2)) + m.group(3), s, flags=re.S)
+    s = re.sub(r'(\sstyle=")([^"]*)(")', lambda m: m.group(1) + fix(m.group(2)) + m.group(3), s)
+    s = re.sub(r'(\s(?:fill|stroke|stop-color)=")(#[0-9a-fA-F]{3,6})(")', lambda m: m.group(1) + fix(m.group(2)) + m.group(3), s)
     return s
 
 

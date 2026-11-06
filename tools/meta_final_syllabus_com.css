@@ -70,3 +70,43 @@ html.mf body:not(#mf-x) section#syllabus.curriculum .curriculum-goals li::before
   html.mf body:not(#mf-x) section#syllabus.curriculum .curriculum-trigger-text h3{font-size:20px!important}
   html.mf body:not(#mf-x) section#syllabus.curriculum .curriculum-body-inner{padding:0 18px 20px!important}
 }
+
+/* ===== Round 57 (Omri: "Texts are blacked out", "I dont approve royal blue"): the .com dark cards, white and light-blue text, brand shades per phase ===== */
+html.mf body:not(#mf-x) section#syllabus.curriculum .curriculum-tab[data-phase-tab="1"],html.mf body:not(#mf-x) section#syllabus.curriculum .phase-block[data-phase="1"] .phase-block-header{background:linear-gradient(160deg,#4A74AA 0%,#2A4D80 100%)!important}
+html.mf body:not(#mf-x) section#syllabus.curriculum .curriculum-tab[data-phase-tab="2"],html.mf body:not(#mf-x) section#syllabus.curriculum .phase-block[data-phase="2"] .phase-block-header{background:linear-gradient(160deg,#2F5389 0%,#1A3563 100%)!important}
+html.mf body:not(#mf-x) section#syllabus.curriculum .curriculum-tab[data-phase-tab="3"],html.mf body:not(#mf-x) section#syllabus.curriculum .phase-block[data-phase="3"] .phase-block-header{background:linear-gradient(160deg,#1C3767 0%,#0F2147 100%)!important}
+html.mf body:not(#mf-x) section#syllabus.curriculum .curriculum-tab[data-phase-tab="4"],html.mf body:not(#mf-x) section#syllabus.curriculum .phase-block[data-phase="4"] .phase-block-header{background:linear-gradient(160deg,#0F1D3F 0%,#050C20 100%)!important}
+html.mf body:not(#mf-x) section#syllabus.curriculum .curriculum-tab,html.mf body:not(#mf-x) section#syllabus.curriculum .phase-block .phase-block-header{border:1px solid rgba(191,226,255,.45)!important;box-shadow:inset 0 1px 0 rgba(255,255,255,.28),0 0 22px -8px rgba(159,212,255,.55),0 18px 34px -20px rgba(0,0,0,.85)!important}
+html.mf body:not(#mf-x) section#syllabus.curriculum .phase-block .phase-block-header{border-bottom:3px solid #9FD6FF!important}
+html.mf body:not(#mf-x) section#syllabus.curriculum .curriculum-tab .curriculum-tab-num,html.mf body:not(#mf-x) section#syllabus.curriculum .curriculum-tab:is([data-phase-tab="3"],[data-phase-tab="4"]) .curriculum-tab-num{color:#9FD6FF!important;-webkit-text-fill-color:#9FD6FF!important}
+html.mf body:not(#mf-x) section#syllabus.curriculum .curriculum-tab .curriculum-tab-name,html.mf body:not(#mf-x) section#syllabus.curriculum .curriculum-tab:is([data-phase-tab="3"],[data-phase-tab="4"]) .curriculum-tab-name{color:#FFFFFF!important;-webkit-text-fill-color:#FFFFFF!important}
+html.mf body:not(#mf-x) section#syllabus.curriculum .curriculum-tab .curriculum-tab-meta,html.mf body:not(#mf-x) section#syllabus.curriculum .curriculum-tab:is([data-phase-tab="3"],[data-phase-tab="4"]) .curriculum-tab-meta{color:#CFE6FF!important;-webkit-text-fill-color:#CFE6FF!important}
+html.mf body:not(#mf-x) section#syllabus.curriculum .curriculum-tab.is-active{outline:2px solid #EAF6FF!important;outline-offset:3px!important;box-shadow:0 0 28px rgba(159,212,255,.8),0 22px 40px -20px rgba(0,0,0,.9)!important}
+html.mf body:not(#mf-x) section#syllabus.curriculum .phase-block .phase-block-label,html.mf body:not(#mf-x) section#syllabus.curriculum .phase-block:is([data-phase="3"],[data-phase="4"]) .phase-block-label{color:#BFE2FF!important;-webkit-text-fill-color:#BFE2FF!important}
+html.mf body:not(#mf-x) section#syllabus.curriculum .phase-block .phase-block-name,html.mf body:not(#mf-x) section#syllabus.curriculum .phase-block:is([data-phase="3"],[data-phase="4"]) .phase-block-name{color:#FFFFFF!important;-webkit-text-fill-color:#FFFFFF!important}
+html.mf body:not(#mf-x) section#syllabus.curriculum .curriculum-item,html.mf body:not(#mf-x) section#syllabus.curriculum .phase-block:is([data-phase="2"],[data-phase="3"],[data-phase="4"]) .curriculum-item{background:radial-gradient(120% 140% at 0% 0%,rgba(159,212,255,.16),transparent 55%),linear-gradient(160deg,#16305C 0%,#0C1C3E 100%)!important;border:1px solid rgba(191,226,255,.38)!important;box-shadow:inset 0 1px 0 rgba(255,255,255,.18),0 16px 30px -20px rgba(0,0,0,.9)!important}
+html.mf body:not(#mf-x) section#syllabus.curriculum .curriculum-item.active{box-shadow:inset 0 1px 0 rgba(255,255,255,.22),0 0 0 2px #9FD6FF,0 0 26px -4px rgba(159,212,255,.7),0 20px 36px -20px rgba(0,0,0,.9)!important}
+html.mf body:not(#mf-x) section#syllabus.curriculum .curriculum-num,html.mf body:not(#mf-x) section#syllabus.curriculum .phase-block:is([data-phase="2"],[data-phase="3"],[data-phase="4"]) .curriculum-num{border:1px solid rgba(191,226,255,.5)!important;color:#FFFFFF!important;-webkit-text-fill-color:#FFFFFF!important}
+html.mf body:not(#mf-x) section#syllabus.curriculum .phase-block[data-phase="1"] .curriculum-num{background:linear-gradient(160deg,#4A74AA,#2A4D80)!important}
+html.mf body:not(#mf-x) section#syllabus.curriculum .phase-block[data-phase="2"] .curriculum-num{background:linear-gradient(160deg,#2F5389,#1A3563)!important}
+html.mf body:not(#mf-x) section#syllabus.curriculum .phase-block[data-phase="3"] .curriculum-num{background:linear-gradient(160deg,#1C3767,#0F2147)!important}
+html.mf body:not(#mf-x) section#syllabus.curriculum .phase-block[data-phase="4"] .curriculum-num{background:linear-gradient(160deg,#0F1D3F,#050C20)!important;color:#9FD6FF!important;-webkit-text-fill-color:#9FD6FF!important}
+html.mf body:not(#mf-x) section#syllabus.curriculum .curriculum-trigger-text h3{color:#FFFFFF!important;-webkit-text-fill-color:#FFFFFF!important}
+html.mf body:not(#mf-x) section#syllabus.curriculum .curriculum-trigger > svg{color:#9FD6FF!important;stroke:#9FD6FF!important}
+html.mf body:not(#mf-x) section#syllabus.curriculum .curriculum-body-inner{color:#E6F1FF!important}
+html.mf body:not(#mf-x) section#syllabus.curriculum .curriculum-section-label{color:#9FD6FF!important;-webkit-text-fill-color:#9FD6FF!important}
+html.mf body:not(#mf-x) section#syllabus.curriculum :is(.curriculum-goals li,.curriculum-flow,.curriculum-work){color:#E6F1FF!important;-webkit-text-fill-color:#E6F1FF!important}
+html.mf body:not(#mf-x) section#syllabus.curriculum .curriculum-goals li::before{background:#9FD6FF!important}
+html.mf body:not(#mf-x) section#syllabus.curriculum .curriculum-work{background:rgba(159,214,255,.10)!important;border-left:3px solid #9FD6FF!important}
+@media (max-width:900px){
+  html.mf body:not(#mf-x) section#syllabus.curriculum .curriculum-header{margin-bottom:22px!important}
+  html.mf body:not(#mf-x) section#syllabus.curriculum .curriculum-bridge{font-size:18px!important}
+  html.mf body:not(#mf-x) section#syllabus.curriculum h2.section-title{font-size:38px!important;margin-bottom:12px!important}
+  html.mf body:not(#mf-x) section#syllabus.curriculum .curriculum-header .section-subtitle{font-size:19px!important}
+  html.mf body:not(#mf-x) section#syllabus.curriculum .curriculum-tabs{margin-bottom:20px!important}
+  html.mf body:not(#mf-x) section#syllabus.curriculum .curriculum-tab{min-height:96px!important;padding:12px 8px!important}
+  html.mf body:not(#mf-x) section#syllabus.curriculum .phase-block .phase-block-header{padding:14px 18px!important;margin-bottom:12px!important}
+  html.mf body:not(#mf-x) section#syllabus.curriculum .phase-block .phase-block-name{font-size:32px!important}
+  html.mf body:not(#mf-x) section#syllabus.curriculum .phase-block-sessions{gap:10px!important}
+  html.mf body:not(#mf-x) section#syllabus.curriculum .curriculum-trigger{padding:12px 14px!important}
+}

@@ -1,0 +1,5 @@
+/* ===== Round 57 (Omri 6 Nov: "Inconsistent fonts everywhere"): one system. Playfair Display for headers and their italic accent; Inter for every paragraph ===== */
+html.mf body:not(#mf-x) :is(.topic-v2-desc,#included p,.nov-incl-card p,section.value .value-desc,.bioquiz-body,#about .about-statement){font-family:Inter,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif!important;font-style:normal!important;letter-spacing:0!important}
+html.mf body:not(#mf-x) #about .about-statement{font-weight:500!important;line-height:1.5!important}
+html.mf body:not(#mf-x) :is(.topic-v2-desc,#included p,.nov-incl-card p,section.value .value-desc){font-weight:400!important;line-height:1.5!important}
+html.mf body:not(#mf-x) .bioquiz-body{font-weight:400!important;line-height:1.5!important}
