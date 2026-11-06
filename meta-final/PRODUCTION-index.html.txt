@@ -13247,7 +13247,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <span class="mfp-side"><s>$169</s><b>first&nbsp;month</b></span>
         <span class="mfp-course"><b>18 live&nbsp;sessions</b><span>18-week&nbsp;course</span></span>
       </div>
-      <p class="mfp-after">$169/month after your first<p class="mfp-after">$169/month after your first month &middot; 5 payments&nbsp;total</p>nbsp;month<p class="mfp-after">$169/month after your first month &middot; 5 payments&nbsp;total</p>nbsp;&middot; 5&nbsp;payments&nbsp;total</p>
+      <p class="mfp-after">$169/month after your first&nbsp;month&nbsp;&middot; 5&nbsp;payments&nbsp;total</p>
       <a class="pk-btn" href="#lead-gen"><span>Enroll&nbsp;Now</span><span class="pk-arr" aria-hidden="true">&rarr;</span></a>
       <p class="pk-foot">14-day try-out refund on the&nbsp;course.</p>
       <div class="mfp-secure"><span class="mfp-lock"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="10.5" width="14" height="10" rx="2.2"/><path d="M8.2 10.5V7.8a3.8 3.8 0 0 1 7.6 0v2.7"/></svg>Secure&nbsp;checkout</span><span class="mfp-pay"><img src="assets/pay/visa.svg" alt="Visa" width="44" height="28"><img src="assets/pay/mastercard.svg" alt="Mastercard" width="44" height="28"><img src="assets/pay/amex.svg" alt="American Express" width="44" height="28"><img src="assets/pay/paypal.svg" alt="PayPal" width="62" height="28"></span></div>
