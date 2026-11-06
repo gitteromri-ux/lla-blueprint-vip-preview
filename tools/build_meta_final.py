@@ -81,8 +81,9 @@ ORDER = [  # Omri 6 Nov (latest): hero, six pillars, syllabus, Julie, pricing, C
     ('quiz', '<section class="bioquiz">', None),
     ('form', '<section class="lead-gen lead-gen-v2" id="lead-gen">', None),  # Omri (latest): the form is huge, it can be at the end
     ('faq', '<section class="faq" id="faq">', None),
+    ('final', '<section class="final-cta" id="apply">', None),  # Omri 6 Nov: "19 after faq"
 ]
-DROPPED = ['<section class="nov-incl" id="included">', '<section class="final-cta" id="apply">']  # Omri 6 Nov: course includes and the final banner are not in his order
+DROPPED = ['<section class="nov-incl" id="included">']  # Omri 6 Nov: course includes is not in his order
 
 
 def assemble(s):
