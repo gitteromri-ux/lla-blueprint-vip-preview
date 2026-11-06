@@ -858,3 +858,33 @@ html.mf body #cgm.cgm12 .cgm12-chart .l-blue{top:116px}
   html.mf body section#syllabus .phase-block{overflow:visible!important}
   html.mf body section#syllabus .curriculum-phases .phase-block[data-phase]:not(.mf-x):not(.mf-y) .phase-block-name:not(.mf-x){font-size:23px!important}
 }
+
+/* ===== Round 44: Lingo with real app screens only (cut from Abbott's own photo), popping out of the phone ===== */
+html.mf body #cgm.cgm12 .cgm13-stage{position:relative;height:420px;perspective:1300px}
+html.mf body #cgm.cgm12 .cgm13-stage .cgm12-phone{left:4%;top:0;width:250px;transform:perspective(1100px) rotateY(12deg);z-index:1}
+html.mf body #cgm.cgm12 .cgm13-pop{position:absolute;display:block;height:auto;border-radius:18px;border:1px solid rgba(255,255,255,.55);box-shadow:0 0 0 6px rgba(255,255,255,.06),0 34px 60px -24px rgba(0,0,0,.9),0 0 26px -6px rgba(159,212,255,.55);z-index:3}
+html.mf body #cgm.cgm12 .cgm13-pop-a{left:43%;top:38px;width:250px;transform:perspective(900px) rotateY(-14deg) rotateX(3deg)}
+html.mf body #cgm.cgm12 .cgm13-pop-b{left:34%;top:196px;width:370px;transform:perspective(900px) rotateY(-12deg) rotateX(3deg)}
+@media (max-width:900px){
+  html.mf body #cgm.cgm12 .cgm13-stage{height:296px!important;margin-bottom:22px!important}
+  html.mf body #cgm.cgm12 .cgm13-stage .cgm12-phone{left:0;width:150px}
+  html.mf body #cgm.cgm12 .cgm13-pop{border-radius:14px}
+  html.mf body #cgm.cgm12 .cgm13-pop-a{left:auto;right:0;top:20px;width:196px}
+  html.mf body #cgm.cgm12 .cgm13-pop-b{left:auto;right:0;top:142px;width:250px}
+}
+
+/* ===== Round 44: syllabus phase cards all the same size on phones ===== */
+@media (max-width:900px){
+  html.mf body section#syllabus .curriculum-phases{grid-auto-rows:1fr!important;align-items:stretch!important}
+  html.mf body section#syllabus .curriculum-phases .phase-block[data-phase]{height:100%!important;justify-content:flex-start!important}
+}
+@media (max-width:900px){html.mf body section#syllabus .curriculum-phases{grid-template-columns:minmax(0,1fr) minmax(0,1fr)!important}html.mf body section#syllabus .curriculum-phases .phase-block[data-phase]{min-width:0!important;width:auto!important}}
+html.mf body #cgm.cgm12 .cgm13-pop-a{left:46%;top:56px;width:220px}
+html.mf body #cgm.cgm12 .cgm13-pop-b{left:40%;top:206px;width:300px}
+html.mf body #cgm.cgm12 .cgm13-stage{height:400px}
+@media (max-width:900px){
+  html.mf body #cgm.cgm12 .cgm13-pop-a{left:auto;right:6px;top:22px;width:176px}
+  html.mf body #cgm.cgm12 .cgm13-pop-b{left:auto;right:0;top:140px;width:226px}
+  html.mf body #cgm.cgm12 .cgm13-stage{height:282px!important}
+  html.mf body section#syllabus .curriculum-phases .phase-block[data-phase]:not(.mf-x):not(.mf-y) .phase-block-name:not(.mf-x){font-size:22px!important}
+}
