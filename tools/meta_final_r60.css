@@ -167,3 +167,17 @@ html.mf body:not(#mf-x):not(#mf-t) section#pricing .mfp-course b,html.mf body:no
 @media (max-width:640px){html.mf body:not(#mf-x):not(#mf-t) section#pricing .mfp-title{margin-bottom:20px!important}}
 html.mf body:not(#mf-x):not(#mf-t) section#pricing .mfp-course b,html.mf body:not(#mf-x):not(#mf-t) section#pricing .mfp-course span{font:400 18px/1.5 Inter,sans-serif!important;color:#2A4370!important}
 html.mf body:not(#mf-x):not(#mf-t) section#pricing .mfp-after{color:#2A4370}
+/* Round 68d (Omri: font inconsistencies): ONE type system for the pricing card.
+   Titles: Playfair Display 500, one size. Every supporting line: Inter 500, one size. */
+html.mf body:not(#mf-x):not(#mf-t):not(#mf-p) section#pricing .mfp-tag{font:600 17px/1.3 Inter,sans-serif!important}
+html.mf body:not(#mf-x):not(#mf-t):not(#mf-p) section#pricing .mfp-side s{font:500 20px/1.2 Inter,sans-serif!important;color:#6A7C9C!important}
+html.mf body:not(#mf-x):not(#mf-t):not(#mf-p) section#pricing .mfp-side b{font:500 20px/1.25 Inter,sans-serif!important;color:#0A1A40!important}
+html.mf body:not(#mf-x):not(#mf-t):not(#mf-p) section#pricing :is(.mfp-after,.pk-foot,.mfp-lock,.mfp-course b,.mfp-course span){font:500 18px/1.45 Inter,sans-serif!important;color:#22385E!important;letter-spacing:0!important}
+html.mf body:not(#mf-x):not(#mf-t):not(#mf-p) section#pricing :is(.mfp-t > b,.mfp-bhead b){font:500 23px/1.2 'Playfair Display',Georgia,serif!important;letter-spacing:0!important}
+html.mf body:not(#mf-x):not(#mf-t):not(#mf-p) section#pricing .mfp-bhead b em{font:italic 500 23px/1.2 'Playfair Display',Georgia,serif!important}
+html.mf body:not(#mf-x):not(#mf-t):not(#mf-p) section#pricing .mfp-t > span{font:500 18px/1.4 Inter,sans-serif!important;letter-spacing:0!important}
+@media (max-width:640px){
+  html.mf body:not(#mf-x):not(#mf-t):not(#mf-p) section#pricing :is(.mfp-after,.pk-foot,.mfp-lock,.mfp-t > span,.mfp-side s,.mfp-side b){font-size:17px!important}
+  html.mf body:not(#mf-x):not(#mf-t):not(#mf-p) section#pricing :is(.mfp-t > b,.mfp-bhead b,.mfp-bhead b em){font-size:21px!important}
+}
+@media (max-width:640px){html.mf body:not(#mf-x):not(#mf-t):not(#mf-p) section#pricing :is(.mfp-side s,.mfp-side b){font-size:20px!important}}
