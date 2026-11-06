@@ -23,3 +23,33 @@
 })();
 
 
+
+/* Round 60 (Omri: "too long scrolling" in an opened session on phones): the three parts of a session
+   (Learning Goals, 50-Minute Flow, Between-Session Work) become three tabs on phones and three columns on desktop. */
+(function () {
+  var inners = document.querySelectorAll('#syllabus .curriculum-body-inner');
+  [].forEach.call(inners, function (inner) {
+    var labels = [].filter.call(inner.children, function (c) { return c.classList.contains('curriculum-section-label'); });
+    if (labels.length < 2) return;
+    var tabs = document.createElement('div'); tabs.className = 'mf-sess-tabs'; tabs.setAttribute('role', 'tablist');
+    var wrap = document.createElement('div'); wrap.className = 'mf-sess-panels';
+    labels.forEach(function (lab, i) {
+      var panel = document.createElement('div'); panel.className = 'mf-sess-panel' + (i === 0 ? ' is-on' : '');
+      var n = lab.nextElementSibling; panel.appendChild(lab);
+      while (n && !n.classList.contains('curriculum-section-label')) { var nx = n.nextElementSibling; panel.appendChild(n); n = nx; }
+      wrap.appendChild(panel);
+      var b = document.createElement('button'); b.type = 'button'; b.className = 'mf-sess-tab' + (i === 0 ? ' is-on' : '');
+      b.setAttribute('role', 'tab'); b.setAttribute('aria-selected', i === 0 ? 'true' : 'false'); var tx = lab.textContent.replace(/\u00a0/g, ' ').trim(), sp = tx.lastIndexOf(' '); b.textContent = sp > 0 ? tx.slice(0, sp) + '\n' + tx.slice(sp + 1) : tx;
+      b.addEventListener('click', function (e) {
+        e.stopPropagation();
+        [].forEach.call(tabs.children, function (x, j) { x.classList.toggle('is-on', j === i); x.setAttribute('aria-selected', j === i ? 'true' : 'false'); });
+        [].forEach.call(wrap.children, function (x, j) { x.classList.toggle('is-on', j === i); });
+        var body = inner.closest('.curriculum-body');
+        if (body && body.style.maxHeight && body.style.maxHeight !== '0px') body.style.maxHeight = body.scrollHeight + 'px';
+      });
+      tabs.appendChild(b);
+    });
+    while (inner.firstChild) inner.removeChild(inner.firstChild);
+    inner.appendChild(tabs); inner.appendChild(wrap);
+  });
+})();
