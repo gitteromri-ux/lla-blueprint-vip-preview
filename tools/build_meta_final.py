@@ -468,6 +468,9 @@ def production(s):
         c = c.replace("media-src 'self'", f"media-src 'self' {pd} blob:", 1)
         return f'<meta http-equiv="Content-Security-Policy" content="{c}">'
     s = s.replace('mfasset:', 'assets/mf/')
+    # Omri 6 Nov: "all dot dev tracking". The pages.dev CTA events the .com lacked (Enroll_CTA_Click, Clicked_on_Enroll_Pricing,
+    # Clicked_on_Enroll, Clicked_on_curriculum), production file only, live .com homepage only (LLA_PAGE_META gate).
+    s = s.replace('</body>', '<script>\n' + open(os.path.join(HERE, 'lla_cta_events.js'), encoding='utf-8').read() + '\n</script>\n</body>', 1)
     return re.sub(r'<meta http-equiv="Content-Security-Policy" content="([^"]*)">', csp, s, count=1)
 
 
