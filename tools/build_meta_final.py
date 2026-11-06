@@ -556,6 +556,12 @@ def production(s):
     # Clicked_on_Enroll, Clicked_on_curriculum), production file only, live .com homepage only (LLA_PAGE_META gate).
     s = s.replace('</body>', '<script>\n' + open(os.path.join(HERE, 'lla_cta_events.js'), encoding='utf-8').read() + '\n</script>\n</body>', 1)
     s = s.replace('</body>', '<script>\n' + open(os.path.join(HERE, 'lla_vip_enroll.js'), encoding='utf-8').read() + '\n</script>\n</body>', 1)
+    # Perplexity live fix 7341974 (Omri emergency 6 Nov): cancel video downloads before checkout; below-fold pillar videos preload=metadata.
+    import json as _json
+    _fx = _json.load(open(os.path.join(HERE, 'perplexity_speedfix.json'), encoding='utf-8'))
+    if s.count(_fx['old']) != 1: raise SystemExit('speedfix: anchor not found once')
+    s = s.replace(_fx['old'], _fx['new'])
+    s = re.sub(r'(<div class="topic-v2-media"><video) preload="auto"', r'\1 preload="metadata"', s)
     return re.sub(r'<meta http-equiv="Content-Security-Policy" content="([^"]*)">', csp, s, count=1)
 
 
