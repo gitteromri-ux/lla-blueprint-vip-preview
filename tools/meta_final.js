@@ -53,3 +53,20 @@
     inner.appendChild(tabs); inner.appendChild(wrap);
   });
 })();
+
+/* Hero film sound button: the pages.dev page binds it in its own script, which was not carried over (6 Nov fix, copied from pages.dev). */
+(function () {
+  function bind() {
+    document.querySelectorAll('.film-sound').forEach(function (btn) {
+      if (btn.__llaSound) return; btn.__llaSound = true;
+      var v = btn.parentElement.querySelector('video'); if (!v) return;
+      btn.addEventListener('click', function (e) {
+        e.preventDefault(); e.stopPropagation();
+        v.muted = !v.muted;
+        if (!v.muted) { if (v._julieRequestPlay) v._julieRequestPlay(); else { var p = v.play(); if (p && p.catch) p.catch(function () {}); } }
+        btn.setAttribute('aria-pressed', v.muted ? 'false' : 'true'); btn.classList.toggle('is-on', !v.muted);
+      });
+    });
+  }
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', bind); else bind();
+})();
