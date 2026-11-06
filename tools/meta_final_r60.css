@@ -136,3 +136,16 @@ html.mf body #et-bumpyard-widget .widget-trigger-btn .label{display:none!importa
 /* Round 67 (QA): six pillars titles were clipped by 4px on desktop (2-line clamp with a fixed box). Show the full title. */
 html.mf body:not(#mf-x):not(#mf-t) section.topics .topic-v2-title{-webkit-line-clamp:unset!important;line-clamp:unset!important;overflow:visible!important;max-height:none!important;height:auto!important}
 @media (min-width:901px){html.mf body:not(#mf-x):not(#mf-t) section.topics .topic-v2-title{min-height:62px!important}}
+
+/* Round 68 (Omri, 6 Nov): course facts fill the space right of the price; one quiet payment line replaces the Month 1 / Months 2 to 5 table. */
+html.mf body:not(#mf-x):not(#mf-t) section#pricing .mfp-price{width:100%;flex-wrap:wrap}
+html.mf body:not(#mf-x):not(#mf-t) section#pricing .mfp-course{margin-left:auto;align-self:center;display:flex;flex-direction:column;align-items:flex-start;gap:6px;padding-left:24px;border-left:1px solid rgba(10,30,58,.16)}
+html.mf body:not(#mf-x):not(#mf-t) section#pricing .mfp-course b{font:600 27px/1.1 'Playfair Display',Georgia,serif;color:#0A1A40}
+html.mf body:not(#mf-x):not(#mf-t) section#pricing .mfp-course span{font:600 20px/1.2 Inter,sans-serif;color:#22385E}
+html.mf body:not(#mf-x):not(#mf-t) section#pricing .mfp-after{margin:18px 0 22px;padding:14px 2px;border-top:1px solid rgba(10,30,58,.14);border-bottom:1px solid rgba(10,30,58,.14);font:500 19px/1.4 Inter,sans-serif;color:#22385E}
+@media (max-width:640px){
+  html.mf body:not(#mf-x):not(#mf-t) section#pricing .mfp-course{margin:14px 0 0;width:100%;flex-direction:row;align-items:baseline;flex-wrap:wrap;gap:4px 10px;padding:12px 0 0;border-left:0;border-top:1px solid rgba(10,30,58,.14)}
+  html.mf body:not(#mf-x):not(#mf-t) section#pricing .mfp-course b{font-size:23px}
+  html.mf body:not(#mf-x):not(#mf-t) section#pricing .mfp-course span{font-size:18px}
+  html.mf body:not(#mf-x):not(#mf-t) section#pricing .mfp-after{font-size:17px;margin:14px 6px 18px}
+}

@@ -12144,6 +12144,19 @@ html.mf body #et-bumpyard-widget .widget-trigger-btn .label{display:none!importa
 html.mf body:not(#mf-x):not(#mf-t) section.topics .topic-v2-title{-webkit-line-clamp:unset!important;line-clamp:unset!important;overflow:visible!important;max-height:none!important;height:auto!important}
 @media (min-width:901px){html.mf body:not(#mf-x):not(#mf-t) section.topics .topic-v2-title{min-height:62px!important}}
 
+/* Round 68 (Omri, 6 Nov): course facts fill the space right of the price; one quiet payment line replaces the Month 1 / Months 2 to 5 table. */
+html.mf body:not(#mf-x):not(#mf-t) section#pricing .mfp-price{width:100%;flex-wrap:wrap}
+html.mf body:not(#mf-x):not(#mf-t) section#pricing .mfp-course{margin-left:auto;align-self:center;display:flex;flex-direction:column;align-items:flex-start;gap:6px;padding-left:24px;border-left:1px solid rgba(10,30,58,.16)}
+html.mf body:not(#mf-x):not(#mf-t) section#pricing .mfp-course b{font:600 27px/1.1 'Playfair Display',Georgia,serif;color:#0A1A40}
+html.mf body:not(#mf-x):not(#mf-t) section#pricing .mfp-course span{font:600 20px/1.2 Inter,sans-serif;color:#22385E}
+html.mf body:not(#mf-x):not(#mf-t) section#pricing .mfp-after{margin:18px 0 22px;padding:14px 2px;border-top:1px solid rgba(10,30,58,.14);border-bottom:1px solid rgba(10,30,58,.14);font:500 19px/1.4 Inter,sans-serif;color:#22385E}
+@media (max-width:640px){
+  html.mf body:not(#mf-x):not(#mf-t) section#pricing .mfp-course{margin:14px 0 0;width:100%;flex-direction:row;align-items:baseline;flex-wrap:wrap;gap:4px 10px;padding:12px 0 0;border-left:0;border-top:1px solid rgba(10,30,58,.14)}
+  html.mf body:not(#mf-x):not(#mf-t) section#pricing .mfp-course b{font-size:23px}
+  html.mf body:not(#mf-x):not(#mf-t) section#pricing .mfp-course span{font-size:18px}
+  html.mf body:not(#mf-x):not(#mf-t) section#pricing .mfp-after{font-size:17px;margin:14px 6px 18px}
+}
+
 </style>
 <style id="pd-checkout">
 #enrollModal{--blue:#006EFF;--font:'Playfair Display', Georgia, 'Times New Roman', serif;--font-ui:'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;--glow-blue:0 18px 44px -14px rgba(0,110,255,.7);--ink:#0B1B33;--ink-2:#29385A;--ink-3:#5B6B8C;--r-lg:30px;--r-md:22px;--r-sm:14px;--shadow-card:0 1px 0 rgba(255,255,255,.7) inset, 0 30px 70px -34px rgba(10,34,64,.4), 0 2px 8px -2px rgba(10,34,64,.08);--silver:#F3F6FB}
@@ -13232,8 +13245,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <div class="mfp-price">
         <span class="mfp-now"><sup>$</sup>79</span>
         <span class="mfp-side"><s>$169</s><b>first&nbsp;month</b></span>
+        <span class="mfp-course"><b>18 live&nbsp;sessions</b><span>18-week&nbsp;course</span></span>
       </div>
-      <dl class="mfp-plan"><div><dt>Month 1</dt><dd>$79</dd></div><div><dt>Months 2 to 5</dt><dd>$169<small>/mo</small></dd></div></dl>
+      <p class="mfp-after">$169/month after your first<p class="mfp-after">$169/month after your first month &middot; 5 payments&nbsp;total</p>nbsp;month<p class="mfp-after">$169/month after your first month &middot; 5 payments&nbsp;total</p>nbsp;&middot; 5&nbsp;payments&nbsp;total</p>
       <a class="pk-btn" href="#lead-gen"><span>Enroll&nbsp;Now</span><span class="pk-arr" aria-hidden="true">&rarr;</span></a>
       <p class="pk-foot">14-day try-out refund on the&nbsp;course.</p>
       <div class="mfp-secure"><span class="mfp-lock"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="10.5" width="14" height="10" rx="2.2"/><path d="M8.2 10.5V7.8a3.8 3.8 0 0 1 7.6 0v2.7"/></svg>Secure&nbsp;checkout</span><span class="mfp-pay"><img src="assets/pay/visa.svg" alt="Visa" width="44" height="28"><img src="assets/pay/mastercard.svg" alt="Mastercard" width="44" height="28"><img src="assets/pay/amex.svg" alt="American Express" width="44" height="28"><img src="assets/pay/paypal.svg" alt="PayPal" width="62" height="28"></span></div>
