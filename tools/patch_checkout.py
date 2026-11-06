@@ -43,6 +43,13 @@ must("      if (ks[0]) ks[0].firstChild.nodeValue = 'Month 1 ';",
 must("' <small>Month 1 · then '+num+' × $'+Number(expectedQuote.paymentPerMonth).toFixed(2)+' · $'+Number(expectedQuote.total).toFixed(2)+' total</small>';",
      "' <small>today · '+num+' monthly payments of $'+Number(expectedQuote.paymentPerMonth).toFixed(2)+' · $'+Number(expectedQuote.total).toFixed(2)+' total</small>';")
 
+# 3. Trust signals on the payment step (Omri, 6 Nov: "looks shady with no secure payment lock").
+must("'Secure payment ready (card or PayPal). This is a live payment of $' + amount.toFixed(2) + ' USD.'",
+     "''")
+# Airwallex Drop-in default brand colour is purple (#612FFF); use the site's blue. Appearance only.
+must("      appearance: { locale: 'en' }\n",
+     "      appearance: { locale: 'en', mode: 'light', variables: { colorBrand: '#006EFF' } }\n")
+
 for bad in ('; then ', 'Month 1 · then', "'Month 1 '", 'Months 2 to'):
     if bad in s:
         sys.exit('patch_checkout: leftover wording: ' + bad)
