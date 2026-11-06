@@ -7,7 +7,7 @@ Your job: check tracking, then put it live on longevitylifeacademy.com once Omri
 1. **Page.** `meta-final/PRODUCTION-index.html.txt` in gitteromri-ux/lla-blueprint-vip-preview.
    - It is the approved preview page with .com's own tracking and eTeacher's checkout left exactly as on the live .com homepage: Meta pixel, GTM, lla-funnel.js, lla-page-meta.js, ai-attribution.js, the CAPI relay calls, lla-promo.js, eteacher-ecomm.js (/nov/), nov-offer.js and the enroll modal.
    - Rename it to `index.html` and replace the .com homepage with it.
-2. **Asset files.** Upload `meta-final/assets/julie-face.jpg` and `lingo-phone.png` to the .com repo under `assets/mf/` with the same names. They are the only new assets the page uses; everything else (pricing card logos in assets/pay/, the Lingo shot in assets/cgm/) is already on .com.
+2. **Asset file.** Upload `meta-final/assets/julie-face.jpg` to the .com repo as `assets/mf/julie-face.jpg`. It is the only new asset the page uses; the CGM fold uses .com's own assets/cgm photos and the pricing card logos are in assets/pay/.
 3. **Hero video.** The hero video, poster and Julie's film load from https://longevitylifeacademy.pages.dev, the same files pages.dev serves. The page's CSP meta already adds pages.dev to script-src and media-src (plus blob: for the film player). No other CSP change.
 
 ## What was checked before handing over (GitHub runner, mocked, nothing real sent)

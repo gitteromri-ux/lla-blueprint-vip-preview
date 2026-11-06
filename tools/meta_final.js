@@ -21,3 +21,29 @@
   if(document.readyState!=='loading') go(); else document.addEventListener('DOMContentLoaded',go);
   addEventListener('load',go); addEventListener('touchstart',go,{once:true,passive:true}); addEventListener('scroll',go,{once:true,passive:true});
 })();
+
+/* Syllabus: tapping a phase card opens a panel under the cards with that phase's classes (one at a time) */
+(function(){
+  var wrap=document.querySelector('#syllabus .curriculum-phases'); if(!wrap) return;
+  var blocks=[].slice.call(wrap.querySelectorAll('.phase-block'));
+  var panel=document.createElement('div'); panel.className='mf-phase-panel'; panel.hidden=true; panel.setAttribute('aria-live','polite');
+  wrap.parentNode.insertBefore(panel, wrap.nextSibling);
+  function txt(el,sel){ var x=el.querySelector(sel); return x?x.innerHTML:''; }
+  function show(b){
+    blocks.forEach(function(x){ x.classList.remove('mf-open'); x.setAttribute('aria-expanded','false'); });
+    if(!b){ panel.hidden=true; panel.innerHTML=''; return; }
+    b.classList.add('mf-open'); b.setAttribute('aria-expanded','true');
+    var items=[].slice.call(b.querySelectorAll('.curriculum-item')).map(function(it){ return '<li><i>'+txt(it,'.curriculum-num')+'</i><span>'+txt(it,'h3')+'</span></li>'; }).join('');
+    var ben=b.querySelector('.phase-benefit');
+    panel.setAttribute('data-phase', b.getAttribute('data-phase'));
+    panel.innerHTML='<div class="mf-pp-head"><span class="mf-pp-num">'+txt(b,'.phase-block-num')+'</span><span class="mf-pp-name">'+txt(b,'.phase-block-name')+'</span><span class="mf-pp-label">'+txt(b,'.phase-block-label')+'</span></div>'+(ben?'<p class="mf-pp-ben">'+ben.innerHTML+'</p>':'')+'<ol class="mf-pp-list">'+items+'</ol>';
+    panel.hidden=false;
+    if(window.innerWidth<901){ setTimeout(function(){ panel.scrollIntoView({behavior:'smooth',block:'nearest'}); },60); }
+  }
+  blocks.forEach(function(b){
+    b.setAttribute('role','button'); b.setAttribute('tabindex','0'); b.setAttribute('aria-expanded','false');
+    function toggle(){ show(b.classList.contains('mf-open')?null:b); }
+    b.addEventListener('click',function(e){ if(e.target.closest('a')) return; toggle(); });
+    b.addEventListener('keydown',function(e){ if(e.key==='Enter'||e.key===' '){ e.preventDefault(); toggle(); } });
+  });
+})();

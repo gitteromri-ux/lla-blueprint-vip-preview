@@ -972,3 +972,64 @@ html.mf body section#syllabus .curriculum-phases .phase-block[data-phase]:not(.m
   html.mf body section#syllabus .curriculum-phases .phase-block[data-phase]:not(.mf-x):not(.mf-y) .phase-block-name:not(.mf-x){min-height:0!important;display:block!important;font-size:26px!important}
   html.mf body section#syllabus .curriculum-phases .phase-block[data-phase]:not(.mf-x):not(.mf-y) .phase-block-label:not(.mf-x){margin-top:auto!important;padding-top:10px!important;font-size:18px!important}
 }
+
+/* ===== Round 50: CGM back to the longevitylifeacademy.com fold, optimized ===== */
+html.mf body section#cgm.cgm-com{background:radial-gradient(900px 520px at 50% 0%,rgba(124,192,255,.14),transparent 70%),linear-gradient(180deg,#081633 0%,#050D24 100%)!important;padding:64px 0 56px!important}
+html.mf body #cgm.cgm-com .cgm-fold-header{max-width:900px;margin:0 auto 30px;text-align:center}
+html.mf body #cgm.cgm-com .cgm-fold-eyebrow{display:none!important}
+html.mf body #cgm.cgm-com h2.cgm-fold-title{font:500 clamp(40px,4vw,56px)/1.08 'Playfair Display',Georgia,serif!important;color:#FFFFFF!important;-webkit-text-fill-color:#FFFFFF!important;letter-spacing:-.005em!important;margin:0 0 16px!important;text-wrap:balance}
+html.mf body #cgm.cgm-com h2.cgm-fold-title .mf-lb{font-style:italic!important;font-weight:400!important;background:linear-gradient(180deg,#E3F2FF 0%,#8CCBFF 100%)!important;-webkit-background-clip:text!important;background-clip:text!important;color:transparent!important;-webkit-text-fill-color:transparent!important}
+html.mf body #cgm.cgm-com .cgm-fold-sub{font:400 22px/1.5 Inter,sans-serif!important;color:#E6F0FF!important;max-width:800px;margin:0 auto!important;text-wrap:pretty}
+html.mf body #cgm.cgm-com .cgm-fold-images{display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr))!important;gap:18px!important;max-width:1080px;margin:0 auto 34px!important}
+html.mf body #cgm.cgm-com .cgm-fold-img{border-radius:20px!important;overflow:hidden!important;aspect-ratio:4/3;box-shadow:0 28px 50px -28px rgba(0,0,0,.85),0 0 0 1px rgba(255,255,255,.08)!important}
+html.mf body #cgm.cgm-com .cgm-fold-img img{width:100%!important;height:100%!important;object-fit:cover!important;display:block}
+html.mf body #cgm.cgm-com .cgm-fold-bullets{display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:16px 40px!important;max-width:1000px;margin:0 auto 34px!important}
+html.mf body #cgm.cgm-com .cgm-fold-bullet{display:flex!important;align-items:flex-start!important;gap:12px!important}
+html.mf body #cgm.cgm-com .cgm-fold-bullet svg{flex:0 0 24px!important;width:24px!important;height:24px!important;margin-top:2px!important;color:#9FD6FF!important;stroke:#9FD6FF!important}
+html.mf body #cgm.cgm-com .cgm-fold-bullet span{font:500 21px/1.45 Inter,sans-serif!important;color:#FFFFFF!important}
+html.mf body #cgm.cgm-com .cgm-fold-cta-wrap{text-align:center}
+html.mf body #cgm.cgm-com a.cgm-fold-cta{display:inline-flex!important;align-items:center;gap:10px;padding:15px 28px!important;border-radius:999px!important;border:1.5px solid #9FD6FF!important;background:rgba(159,214,255,.08)!important;color:#FFFFFF!important;font:600 19px/1 Inter,sans-serif!important;text-decoration:none!important}
+html.mf body #cgm.cgm-com a.cgm-fold-cta svg{width:18px;height:18px;color:#9FD6FF;stroke:#9FD6FF}
+@media (max-width:900px){
+  html.mf body section#cgm.cgm-com{padding:44px 0 40px!important}
+  html.mf body #cgm.cgm-com .container{padding-left:16px!important;padding-right:16px!important}
+  html.mf body #cgm.cgm-com h2.cgm-fold-title{font-size:36px!important}
+  html.mf body #cgm.cgm-com .cgm-fold-sub{font-size:20px!important}
+  html.mf body #cgm.cgm-com .cgm-fold-header{margin-bottom:22px}
+  html.mf body #cgm.cgm-com .cgm-fold-images{display:grid!important;grid-template-columns:none!important;grid-auto-flow:column!important;grid-auto-columns:80%!important;overflow-x:auto!important;scroll-snap-type:x mandatory!important;gap:12px!important;margin:0 -16px 26px!important;padding:0 16px 6px!important;scrollbar-width:none}
+  html.mf body #cgm.cgm-com .cgm-fold-images::-webkit-scrollbar{display:none}
+  html.mf body #cgm.cgm-com .cgm-fold-img{scroll-snap-align:center}
+  html.mf body #cgm.cgm-com .cgm-fold-bullets{grid-template-columns:1fr!important;gap:14px!important;margin-bottom:28px!important}
+  html.mf body #cgm.cgm-com .cgm-fold-bullet span{font-size:20px!important}
+}
+
+/* ===== Round 50: syllabus phase cards open on tap and show their classes ===== */
+html.mf body section#syllabus .phase-block{cursor:pointer}
+html.mf body section#syllabus .phase-block::after{content:'+';position:absolute;top:14px;right:16px;font:300 30px/1 Inter,sans-serif;opacity:.75;pointer-events:none}
+html.mf body section#syllabus .phase-block[data-phase="1"]::after,html.mf body section#syllabus .phase-block[data-phase="2"]::after{color:#0A1A40}
+html.mf body section#syllabus .phase-block[data-phase="3"]::after,html.mf body section#syllabus .phase-block[data-phase="4"]::after{color:#FFFFFF}
+html.mf body section#syllabus .phase-block.mf-open::after{content:'\2212'}
+html.mf body section#syllabus .curriculum-phases .phase-block.mf-open{outline:2px solid #CFEBFF;outline-offset:3px;box-shadow:0 0 22px rgba(159,212,255,.6),0 28px 50px -28px rgba(0,0,0,.85)!important}
+html.mf body section#syllabus .mf-phase-panel{max-width:1180px;margin:18px auto 0;padding:24px 26px;border-radius:24px;border:1px solid rgba(207,235,255,.5);box-shadow:inset 0 1px 0 rgba(255,255,255,.3),0 30px 60px -30px rgba(0,0,0,.9)}
+html.mf body section#syllabus .mf-phase-panel[hidden]{display:none}
+html.mf body section#syllabus .mf-phase-panel[data-phase="1"]{background:radial-gradient(120% 90% at 0% 0%,rgba(255,255,255,.2),transparent 55%),linear-gradient(160deg,#E4F3FF,#BBDEFF);color:#0A1A40}
+html.mf body section#syllabus .mf-phase-panel[data-phase="2"]{background:radial-gradient(120% 90% at 0% 0%,rgba(255,255,255,.2),transparent 55%),linear-gradient(160deg,#AEDAFF,#7BBEF6);color:#06142E}
+html.mf body section#syllabus .mf-phase-panel[data-phase="3"]{background:radial-gradient(120% 90% at 0% 0%,rgba(255,255,255,.14),transparent 55%),linear-gradient(160deg,#1A3A75,#0C2150);color:#FFFFFF}
+html.mf body section#syllabus .mf-phase-panel[data-phase="4"]{background:radial-gradient(120% 90% at 0% 0%,rgba(255,255,255,.12),transparent 55%),linear-gradient(160deg,#0C1733,#040A1B);color:#FFFFFF;border-color:#9AD8FF}
+html.mf body section#syllabus .mf-pp-head{display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 14px;margin:0 0 8px}
+html.mf body section#syllabus .mf-pp-num{font:italic 400 32px/1 'Playfair Display',Georgia,serif}
+html.mf body section#syllabus .mf-pp-name{font:500 28px/1.15 'Playfair Display',Georgia,serif}
+html.mf body section#syllabus .mf-pp-label{font:500 18px/1.3 Inter,sans-serif;opacity:.85}
+html.mf body section#syllabus .mf-pp-ben{margin:0 0 14px;font:italic 400 20px/1.45 'Playfair Display',Georgia,serif;opacity:.95}
+html.mf body section#syllabus .mf-pp-ben b{font-weight:600}
+html.mf body section#syllabus .mf-pp-list{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 28px}
+html.mf body section#syllabus .mf-pp-list li{display:flex;align-items:baseline;gap:12px;padding:11px 0;border-top:1px solid currentColor;border-top-color:rgba(127,160,200,.35)}
+html.mf body section#syllabus .mf-pp-list li i{font:italic 400 22px/1 'Playfair Display',Georgia,serif;min-width:30px}
+html.mf body section#syllabus .mf-pp-list li span{font:500 20px/1.35 'Playfair Display',Georgia,serif}
+@media (max-width:900px){
+  html.mf body section#syllabus .mf-phase-panel{margin-top:12px;padding:18px 16px}
+  html.mf body section#syllabus .mf-pp-name{font-size:24px}
+  html.mf body section#syllabus .mf-pp-ben{font-size:19px}
+  html.mf body section#syllabus .mf-pp-list{grid-template-columns:1fr}
+  html.mf body section#syllabus .mf-pp-list li span{font-size:19px}
+}
