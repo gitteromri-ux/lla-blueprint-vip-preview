@@ -154,8 +154,10 @@ def r39(s):
     s, n = re.subn(r'(<a href="#"[^>]*class="lg-buy">)\s*<span class="lg-buy-main">.*?</span>\s*<span class="lg-buy-sub">.*?</span>\s*(</a>)', r'\1<span class="lg-buy-main">Enroll Online Now</span><span class="lg-buy-arr" aria-hidden="true">&rarr;</span>\2', s, count=1, flags=re.S)
     assert n == 1, 'lg-buy'
     # Syllabus: the phase label breaks after the phase number on phones
-    s, n = re.subn(r'(<span class="phase-block-label">Phase \d),\s*(Sessions [^<]*</span>)', r'\1,<br class="mf-mbr"> \2', s)
-    assert n == 4, 'phase labels %d' % n
+    # Syllabus phase cards: one hierarchy in every card (number, name, sessions)
+    s, n = re.subn(r'<span class="phase-block-label">Phase (\d),\s*(Sessions [^<]*)</span>\s*<span class="phase-block-name">([^<]*)</span>',
+                   lambda m: '<span class="phase-block-num">0' + m.group(1) + '</span><span class="phase-block-name">' + m.group(3) + '</span><span class="phase-block-label">' + m.group(2) + '</span>', s)
+    assert n == 4, 'phase headers %d' % n
     # Application form: shorter placeholders so they fit the two-column phone layout
     s = must(s, 'placeholder="Your first name"', 'placeholder="First name"')
     s = must(s, 'placeholder="Your last name"', 'placeholder="Last name"')
@@ -321,6 +323,7 @@ def common(s):
     s = must(s, '<h2 class="section-title">Learn to Master<br><span class="mf-acc">Six Pillars of a Longer, Better Life.</span></h2>', '<h2 class="section-title">Learn to Master<br class="mf-mbr"> <span class="mf-acc">Six Pillars</span><br>for a Longer, Better Life.</h2>')
     s = r39(s)
     s = no_orphans(s)
+    s = re.sub(r'(<span class="phase-block-name">[^<]*?)&nbsp;([^<]*</span>)', r'\1 \2', s)  # phase names may wrap freely
     css = open(os.path.join(HERE, 'meta_final.css'), encoding='utf-8').read().replace('/*%%HERO_CSS%%*/', '').replace('/*%%NEW_FOLDS%%*/', open(os.path.join(HERE, 'meta_final_newfolds.css'), encoding='utf-8').read()).replace('/*%%JULIE_CSS%%*/', open(os.path.join(HERE, 'masterclass_julie.css'), encoding='utf-8').read()).replace('/*%%BRAND%%*/', open(os.path.join(HERE, 'meta_final_fix.css'), encoding='utf-8').read() + '\n' + open(os.path.join(HERE, 'meta_final_pricing_big.css'), encoding='utf-8').read() + '\n' + open(os.path.join(HERE, 'meta_final_r39.css'), encoding='utf-8').read())
     s = s.replace('</head>', '<style id="meta-final">\n' + css + '\n</style>\n</head>', 1)
     js = open(os.path.join(HERE, 'meta_final.js'), encoding='utf-8').read()
