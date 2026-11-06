@@ -256,10 +256,8 @@ def common(s):
     def _flow(m):
         steps = [x.strip() for x in re.split(r'\s*(?:→|&rarr;)\s*', m.group(2)) if x.strip()]
         steps = [x[0].upper() + x[1:] for x in steps]
-        t = '. '.join(steps)
-        if t and t[-1] not in '.?!':
-            t += '.'
-        return m.group(1) + t + m.group(3)
+        # Omri 6 Nov: "not run on texts". Each step of the flow is its own numbered line.
+        return '<ol class="curriculum-flow mf-steps">' + ''.join('<li>' + x + '</li>' for x in steps) + '</ol>'
     s = re.sub(r'(<p class="curriculum-flow">)(.*?)(</p>)', _flow, s, flags=re.S)
 
     head_end = s.find('<body')

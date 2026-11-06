@@ -110,3 +110,32 @@ html.mf body:not(#mf-x) section#syllabus.curriculum .curriculum-work{background:
   html.mf body:not(#mf-x) section#syllabus.curriculum .phase-block-sessions{gap:10px!important}
   html.mf body:not(#mf-x) section#syllabus.curriculum .curriculum-trigger{padding:12px 14px!important}
 }
+
+/* ===== Round 58 (Omri: "session cards per phase in the same colour as the phase card", "add line separators, not only white text, not run on texts") ===== */
+html.mf body:not(#mf-x) section#syllabus.curriculum .phase-block[data-phase="1"] .curriculum-item{background:linear-gradient(160deg,#4A74AA 0%,#2A4D80 100%)!important}
+html.mf body:not(#mf-x) section#syllabus.curriculum .phase-block[data-phase="2"] .curriculum-item{background:linear-gradient(160deg,#2F5389 0%,#1A3563 100%)!important}
+html.mf body:not(#mf-x) section#syllabus.curriculum .phase-block[data-phase="3"] .curriculum-item{background:linear-gradient(160deg,#1C3767 0%,#0F2147 100%)!important}
+html.mf body:not(#mf-x) section#syllabus.curriculum .phase-block[data-phase="4"] .curriculum-item{background:linear-gradient(160deg,#0F1D3F 0%,#050C20 100%)!important}
+html.mf body:not(#mf-x) section#syllabus.curriculum .phase-block .curriculum-num{background:rgba(255,255,255,.14)!important;border:1px solid rgba(234,246,255,.55)!important;color:#FFFFFF!important;-webkit-text-fill-color:#FFFFFF!important}
+html.mf body:not(#mf-x) section#syllabus.curriculum .curriculum-body-inner{margin:0 16px 16px!important;padding:6px 22px 20px!important;border-radius:14px!important;background:rgba(3,10,30,.42)!important;border:1px solid rgba(191,226,255,.18)!important}
+html.mf body:not(#mf-x) section#syllabus.curriculum .curriculum-section-label{font:italic 500 21px/1.25 'Playfair Display',Georgia,serif!important;color:#9FD6FF!important;-webkit-text-fill-color:#9FD6FF!important;margin:0!important;padding:16px 0 8px!important;border-top:1px solid rgba(191,226,255,.28)!important}
+html.mf body:not(#mf-x) section#syllabus.curriculum .curriculum-section-label:first-child{border-top:0!important}
+html.mf body:not(#mf-x) section#syllabus.curriculum .curriculum-goals{margin:0 0 6px!important;padding:0!important;list-style:none!important}
+html.mf body:not(#mf-x) section#syllabus.curriculum .curriculum-goals li{position:relative!important;padding:0 0 8px 26px!important;color:#EAF4FF!important;-webkit-text-fill-color:#EAF4FF!important}
+html.mf body:not(#mf-x) section#syllabus.curriculum .curriculum-goals li::before{content:''!important;position:absolute!important;left:2px!important;top:.62em!important;width:12px!important;height:2px!important;border-radius:2px!important;background:#9FD6FF!important}
+html.mf body:not(#mf-x) section#syllabus.curriculum ol.mf-steps{counter-reset:mfstep!important;list-style:none!important;margin:0 0 8px!important;padding:0!important}
+html.mf body:not(#mf-x) section#syllabus.curriculum ol.mf-steps li{counter-increment:mfstep!important;display:grid!important;grid-template-columns:34px minmax(0,1fr)!important;gap:10px!important;align-items:baseline!important;padding:9px 0!important;border-top:1px solid rgba(191,226,255,.16)!important;font:400 19px/1.45 Inter,sans-serif!important;color:#FFFFFF!important;-webkit-text-fill-color:#FFFFFF!important}
+html.mf body:not(#mf-x) section#syllabus.curriculum ol.mf-steps li:first-child{border-top:0!important}
+html.mf body:not(#mf-x) section#syllabus.curriculum ol.mf-steps li::before{content:counter(mfstep)!important;font:italic 500 22px/1 'Playfair Display',Georgia,serif!important;color:#9FD6FF!important;-webkit-text-fill-color:#9FD6FF!important}
+html.mf body:not(#mf-x) section#syllabus.curriculum .curriculum-work{margin:2px 0 0!important;padding:14px 16px!important;border-radius:12px!important;border:0!important;border-left:0!important;background:linear-gradient(160deg,#EAF6FF,#C9E5FF)!important;color:#0A1A40!important;-webkit-text-fill-color:#0A1A40!important;font:500 19px/1.45 Inter,sans-serif!important;box-shadow:0 10px 24px -14px rgba(0,0,0,.7)!important}
+@media (min-width:901px){
+  html.mf body:not(#mf-x) section#syllabus.curriculum .curriculum-body-inner{margin:0 22px 22px 90px!important}
+}
+@media (max-width:900px){
+  html.mf body:not(#mf-x) section#syllabus.curriculum .curriculum-body-inner{margin:0 10px 12px!important;padding:4px 14px 16px!important}
+  html.mf body:not(#mf-x) section#syllabus.curriculum ol.mf-steps li{grid-template-columns:26px minmax(0,1fr)!important;font-size:18px!important}
+  html.mf body:not(#mf-x) section#syllabus.curriculum .curriculum-goals li,html.mf body:not(#mf-x) section#syllabus.curriculum .curriculum-work{font-size:18px!important}
+}
+
+html.mf body:not(#mf-x) section#syllabus.curriculum .curriculum-body-inner p.curriculum-work{color:#0A1A40!important;-webkit-text-fill-color:#0A1A40!important}
+html.mf body:not(#mf-x) section#syllabus.curriculum .curriculum-body-inner ol.mf-steps li{color:#FFFFFF!important;-webkit-text-fill-color:#FFFFFF!important}

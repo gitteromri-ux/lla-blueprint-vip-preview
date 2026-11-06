@@ -3,3 +3,61 @@ html.mf body:not(#mf-x) :is(.topic-v2-desc,#included p,.nov-incl-card p,section.
 html.mf body:not(#mf-x) #about .about-statement{font-weight:500!important;line-height:1.5!important}
 html.mf body:not(#mf-x) :is(.topic-v2-desc,#included p,.nov-incl-card p,section.value .value-desc){font-weight:400!important;line-height:1.5!important}
 html.mf body:not(#mf-x) .bioquiz-body{font-weight:400!important;line-height:1.5!important}
+
+/* ===== Round 58 (Omri: "about us texts", "eTeacher fold"): fewer rows, separator lines, compact stats on phones ===== */
+html.mf body:not(#mf-x) #about .about-statement{position:relative!important;padding-bottom:18px!important;margin-bottom:18px!important}
+html.mf body:not(#mf-x) #about .about-statement::after{content:''!important;position:absolute!important;left:50%!important;bottom:0!important;width:64px!important;height:2px!important;margin-left:-32px!important;border-radius:2px!important;background:linear-gradient(90deg,#9FD6FF,#2A5288)!important}
+html.mf body:not(#mf-x) #about .about-powered-desc{padding-bottom:20px!important;margin-bottom:0!important;border-bottom:1px solid rgba(191,226,255,.22)!important}
+@media (max-width:900px){
+  html.mf body:not(#mf-x) #about .container{padding-left:18px!important;padding-right:18px!important}
+  html.mf body:not(#mf-x) #about .about-statement{font-size:21px!important;line-height:1.45!important;text-align:left!important;text-wrap:pretty!important}
+  html.mf body:not(#mf-x) #about .about-statement::after{left:0!important;margin-left:0!important}
+  html.mf body:not(#mf-x) #about .about-lead{font-size:19px!important;line-height:1.5!important;text-align:left!important;color:#1F3560!important;-webkit-text-fill-color:#1F3560!important}
+  html.mf body:not(#mf-x) #about .about-powered{padding:22px 0 0!important}
+  html.mf body:not(#mf-x) #about .about-powered-desc{font-size:19px!important;line-height:1.5!important;text-align:left!important;padding:0 20px 18px!important;color:#EAF4FF!important;-webkit-text-fill-color:#EAF4FF!important}
+  html.mf body:not(#mf-x) #about .hero-powered-stats li{padding:12px 6px!important;min-height:0!important}
+  html.mf body:not(#mf-x) #about .hero-powered-stats li > span{font-size:16px!important}
+  html.mf body:not(#mf-x) #about .hero-powered-stats li strong{font-size:30px!important;line-height:1.1!important}
+}
+
+/* ===== Round 58 (Omri: "VIP Julie still in black card. It must shine. Strong brand colour or see-through glass 3D") ===== */
+html.mf body:not(#mf-x) #pricing .mfp-t.mfp-tbonus{position:relative!important;overflow:hidden!important;background:radial-gradient(120% 90% at 0% 0%,rgba(255,255,255,.95),rgba(255,255,255,0) 55%),linear-gradient(135deg,rgba(234,246,255,.92) 0%,rgba(191,228,255,.88) 45%,rgba(127,192,240,.9) 100%)!important;border:1.5px solid #FFFFFF!important;box-shadow:inset 0 2px 0 #FFFFFF,inset 0 -14px 28px -14px rgba(42,82,136,.45),0 0 0 2px rgba(127,192,240,.65),0 0 38px -4px rgba(127,192,240,.95),0 20px 36px -16px rgba(10,26,64,.55)!important}
+html.mf body:not(#mf-x) #pricing .mfp-t.mfp-tbonus::after{content:''!important;position:absolute!important;top:-20%!important;bottom:-20%!important;left:-40%!important;width:34%!important;background:linear-gradient(100deg,rgba(255,255,255,0),rgba(255,255,255,.75),rgba(255,255,255,0))!important;transform:skewX(-18deg)!important;animation:mfVipSheen 4.6s ease-in-out infinite!important;pointer-events:none!important}
+@keyframes mfVipSheen{0%,55%{left:-40%}100%{left:125%}}
+@media (prefers-reduced-motion:reduce){html.mf body:not(#mf-x) #pricing .mfp-t.mfp-tbonus::after{animation:none!important;display:none!important}}
+html.mf body:not(#mf-x) #pricing .mfp-t.mfp-tbonus :is(.mfp-bhead,.mfp-bhead b,span){color:#0A1A40!important;-webkit-text-fill-color:#0A1A40!important;text-shadow:none!important;position:relative;z-index:1}
+html.mf body:not(#mf-x) #pricing .mfp-t.mfp-tbonus .mfp-bhead em{color:#2A5288!important;-webkit-text-fill-color:#2A5288!important;background:none!important}
+
+/* ===== Round 58 (Omri: "CGM still looks cheap, design it professionally"): upright product stage, straight glass cards, brand blues only, separators ===== */
+html.mf body:not(#mf-x) #cgm.cgm12 .cgm12-words{gap:0!important}
+html.mf body:not(#mf-x) #cgm.cgm12 .cgm12-words li{padding:16px 0!important;border-top:1px solid rgba(191,226,255,.22)!important}
+html.mf body:not(#mf-x) #cgm.cgm12 .cgm12-words li:first-child{border-top:0!important;padding-top:4px!important}
+html.mf body:not(#mf-x) #cgm.cgm12 .cgm12-words :is(.w1,.w2,.w3) b{color:#9FD6FF!important;-webkit-text-fill-color:#9FD6FF!important}
+html.mf body:not(#mf-x) #cgm.cgm12 .cgm12-words li span{color:#FFFFFF!important;-webkit-text-fill-color:#FFFFFF!important}
+html.mf body:not(#mf-x) #cgm.cgm12 .cgm14-stage::before{width:560px!important;height:560px!important;top:44%!important;background:radial-gradient(closest-side,rgba(159,214,255,.34),rgba(124,192,255,.10) 58%,transparent 74%)!important}
+html.mf body:not(#mf-x) #cgm.cgm12 .cgm14-stage::after{bottom:30px!important;width:470px!important;height:74px!important;background:radial-gradient(closest-side,rgba(159,214,255,.20),rgba(0,4,14,.55) 70%,transparent)!important;border:1px solid rgba(159,214,255,.35)!important;box-shadow:0 0 30px -6px rgba(159,214,255,.55)!important;filter:none!important}
+html.mf body:not(#mf-x) #cgm.cgm12 .cgm14-phone{transform:translateX(-50%)!important;top:0!important;width:300px!important;filter:drop-shadow(0 34px 34px rgba(0,0,0,.6))!important}
+html.mf body:not(#mf-x) #cgm.cgm12 svg.cgm14-sensor{left:calc(50% - 250px)!important;top:400px!important;width:230px!important;transform:none!important}
+html.mf body:not(#mf-x) #cgm.cgm12 .cgm14-card{transform:none!important;padding:12px 14px 12px!important;border-radius:16px!important;background:linear-gradient(160deg,rgba(28,55,103,.94),rgba(10,22,52,.96))!important;border:1px solid rgba(191,226,255,.45)!important;box-shadow:inset 0 1px 0 rgba(255,255,255,.22),0 0 22px -6px rgba(159,212,255,.6),0 22px 40px -18px rgba(0,0,0,.9)!important}
+html.mf body:not(#mf-x) #cgm.cgm12 .cgm14-live{left:calc(50% - 300px)!important;top:70px!important;width:172px!important}
+html.mf body:not(#mf-x) #cgm.cgm12 .cgm14-meal{left:calc(50% + 110px)!important;top:236px!important;width:196px!important}
+html.mf body:not(#mf-x) #cgm.cgm12 .cgm14-k{font:italic 500 18px/1.2 'Playfair Display',Georgia,serif!important;color:#9FD6FF!important;-webkit-text-fill-color:#9FD6FF!important}
+html.mf body:not(#mf-x) #cgm.cgm12 .cgm14-legend i.p{background:#FFFFFF!important;box-shadow:0 0 6px #FFFFFF!important}
+html.mf body:not(#mf-x) #cgm.cgm12 .cgm14-legend i.b{background:#9FD6FF!important;box-shadow:0 0 6px #9FD6FF!important}
+html.mf body:not(#mf-x) #cgm.cgm12 .cgm14-legend span{color:#EAF4FF!important;-webkit-text-fill-color:#EAF4FF!important}
+@media (max-width:900px){
+  html.mf body:not(#mf-x) #cgm.cgm12 .cgm14-stage{height:384px!important}
+  html.mf body:not(#mf-x) #cgm.cgm12 .cgm14-stage::before{width:340px!important;height:340px!important}
+  html.mf body:not(#mf-x) #cgm.cgm12 .cgm14-stage::after{width:300px!important;height:50px!important;bottom:14px!important}
+  html.mf body:not(#mf-x) #cgm.cgm12 .cgm14-phone{width:206px!important;left:50%!important}
+  html.mf body:not(#mf-x) #cgm.cgm12 svg.cgm14-sensor{left:4px!important;top:258px!important;width:160px!important}
+  html.mf body:not(#mf-x) #cgm.cgm12 .cgm14-live{left:0!important;top:36px!important;width:140px!important}
+  html.mf body:not(#mf-x) #cgm.cgm12 .cgm14-meal{left:auto!important;right:0!important;top:170px!important;width:160px!important}
+  html.mf body:not(#mf-x) #cgm.cgm12 .cgm12-words li{padding:12px 0!important}
+}
+html.mf body:not(#mf-x) #cgm.cgm12 .cgm14-stage::after{background:radial-gradient(closest-side,rgba(159,214,255,.22),rgba(159,214,255,.06) 70%,transparent)!important;border:1px solid rgba(159,214,255,.3)!important;box-shadow:0 0 26px -8px rgba(159,214,255,.6),inset 0 0 22px -8px rgba(159,214,255,.5)!important;width:400px!important}
+@media (max-width:900px){
+  html.mf body:not(#mf-x) #cgm.cgm12 .cgm14-stage::after{width:270px!important}
+  html.mf body:not(#mf-x) #cgm.cgm12 .cgm14-live{top:22px!important;width:128px!important}
+  html.mf body:not(#mf-x) #cgm.cgm12 .cgm14-meal{width:150px!important}
+}
