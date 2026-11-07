@@ -119,3 +119,16 @@ html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) sec
 html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec .jv5-when span{font-size:16px!important}
 html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec a.jv5-btn{padding:14px 18px!important;font-size:18px!important}
 }
+
+/* v5 phone hierarchy (Omri: "Learn to age tiny, hierarchy wrong"): 1 headline 32px full width, 2 message 23px beside the photo, 3 captions 17px, labels 16px */
+@media (max-width:640px){
+html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec .jv5{grid-template-columns:100px minmax(0,1fr)!important;grid-template-areas:"kick kick" "title title" "avatar msg" "stage stage" "ticket ticket"!important;gap:14px 16px!important;padding:20px 16px 16px!important}
+html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec .jv5-kick{font-size:16px!important}
+html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec h2.jv5-title{grid-area:title!important;font-size:32px!important;line-height:1.06!important}
+html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec h2.jv5-title em{font-size:32px!important;white-space:nowrap!important;margin-top:6px}
+html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec .jv5-avatar{grid-area:avatar!important;width:100px!important;align-self:center!important}
+html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec .jv5-msg{grid-area:msg!important;align-self:center!important}
+html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec .jv5-msg, html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec .jv5-msg b{font-size:23px!important;line-height:1.28!important}
+html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec .jb4-animation-title, html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec .jb4-animation-title em{font-size:17px!important;line-height:1.22!important}
+}
+@media (max-width:640px){html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec .jv5-msg b{white-space:nowrap!important;display:inline-block}}
