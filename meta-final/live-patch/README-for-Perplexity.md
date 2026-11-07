@@ -4,7 +4,7 @@ Built on top of live main **6ddcb65**. Two changes only, presentation only (no t
 
 1. `index.html`: replace with `meta-final/live-patch/index.html.txt`.
    - Diff vs live must show only (a) the `<section ... id="julie">` block and (b) one new line after the `lla-julie-vip-motion.css` link:
-     `<link rel="stylesheet" href="assets/lla-julie-vip-glass.css?v=20261107-2">`
+     `<link rel="stylesheet" href="assets/lla-julie-vip-glass.css?v=20261107-3">`
    - Same copy as live. Same animation markup and classes (`jb4-motion`, `jb4-motion-track`, `jb4-animation`, `jb4-clip`, `jb4-motion-toggle`), so `assets/lla-julie-vip-motion.js` keeps working. "Join us" keeps `data-checkout-open`.
 2. Upload `meta-final/live-patch/lla-julie-vip-glass.css` to `assets/lla-julie-vip-glass.css`.
 
