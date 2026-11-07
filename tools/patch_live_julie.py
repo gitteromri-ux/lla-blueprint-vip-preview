@@ -41,6 +41,6 @@ new = '''<section class="mf-julie mf-julie-bonus jv5-sec" id="julie">
 s = s[:i] + new + s[j:]
 link = re.search(r'<link rel="stylesheet" href="assets/lla-julie-vip-motion\.css\?v=[^"]*">', s)
 if not link: sys.exit('motion css link not found')
-s = s[:link.end()] + '\n<link rel="stylesheet" href="assets/lla-julie-vip-glass.css?v=20261107-6">' + s[link.end():]
+s = s[:link.end()] + '\n<link rel="stylesheet" href="assets/lla-julie-vip-glass.css?v=20261107-7">' + s[link.end():]
 open(out, 'w', encoding='utf-8').write(s)
 print('patched', out)
