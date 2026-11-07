@@ -165,3 +165,19 @@ html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) sec
 html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec .jv5-avatar{width:96px!important}
 }
 @media (max-width:640px){html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec .jv5{grid-template-columns:86px minmax(0,1fr)!important;column-gap:12px!important}html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec .jv5-avatar{width:86px!important}html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec .jv5-msg,html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec .jv5-msg b{font-size:25px!important}}
+
+/* v8: smaller name in the headline, larger message */
+@media (min-width:981px){
+html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec h2.jv5-title em{font-size:50px!important;margin-top:6px}
+html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec .jv5-msg, html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec .jv5-msg b{font-size:54px!important;line-height:1.14!important}
+html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec .jv5-msg{max-width:1040px!important}
+}
+@media (max-width:640px){
+html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec .jv5{grid-template-columns:96px minmax(0,1fr)!important;grid-template-areas:"kick kick" "avatar title" "msg msg" "stage stage" "ticket ticket"!important;column-gap:14px!important}
+html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec .jv5-avatar{width:96px!important}
+html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec h2.jv5-title{grid-area:title!important;font-size:30px!important}
+html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec h2.jv5-title em{font-size:24px!important;white-space:nowrap!important;margin-top:6px}
+html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec .jv5-msg{grid-area:msg!important}
+html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec .jv5-msg, html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec .jv5-msg b{font-size:29px!important;line-height:1.18!important}
+}
+@media (max-width:640px){html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec .jv5-msg{text-wrap:balance}html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec .jv5-msg b{display:inline!important}}
