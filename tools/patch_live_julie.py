@@ -27,33 +27,25 @@ if not track_old: sys.exit('track not found')
 stage = motion[:track_old.start(2)] + '\n        ' + curve + '\n        ' + photo + '\n        ' + pace + '\n      ' + motion[track_old.end(2):]
 stage = stage.replace('<div class="jb4-motion"', '<div class="jb4-motion jv5-stage"', 1)
 VARIANT = ' jv5-black' if '--black' in sys.argv else ''
-new = """<section class="mf-julie mf-julie-bonus jv5-sec""" + VARIANT + """" id="julie">
+cal = '<svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="5" width="17" height="15" rx="3"/><path d="M3.5 10h17M8 3v4M16 3v4"/></svg>'
+chk = '<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.6 2.6L16 9.8"/></svg>'
+new = """<section class="mf-julie mf-julie-bonus jv5-sec jv12""" + VARIANT + """" id="julie">
   <div class="container">
-    <article class="jv5">
-      <span class="jv5-sheen" aria-hidden="true"></span>
-      <span class="jv5-spot" aria-hidden="true"></span>
-      <aside class="jv5-access">
-        <p class="jv5-access-t">Exclusive VIP Access <b>Included</b></p>
-        <p class="jv5-access-s">90&nbsp;min live Masterclass + Q&amp;A</p>
-        <p class="jv5-access-d">Nov 14<sup>th</sup>, 12:00&nbsp;PM&nbsp;(EST)</p>
-      </aside>
-      <header class="jv5-head">
-        <h2 class="jb4-title jv5-title"><span class="jb4-masterclass">The Longevity Masterclass</span> <em>with Julie Gibson&nbsp;Clark</em></h2>
-        <p class="jv5-msg">Learn to age 33% slower from the 2<sup>nd</sup> <b>slowest aging woman on&nbsp;Earth</b></p>
+    <div class="jv12-wrap">
+      <header class="jv12-copy">
+        <p class="jv12-kick">Exclusive VIP Access <span>&middot;</span> <b>Included in enrollment</b></p>
+        <h2 class="jb4-title jv12-title"><span class="jb4-masterclass">The Longevity Masterclass</span> <em>with Julie Gibson&nbsp;Clark</em></h2>
+        <p class="jv12-msg">Learn to age 33% slower from the 2<sup>nd</sup> <b>slowest aging woman on&nbsp;Earth</b></p>
+        <p class="jv12-when">""" + cal + """<b>Nov 14<sup>th</sup>, 12:00&nbsp;PM (EST)</b><span>90&nbsp;min live Masterclass + Q&amp;A</span></p>
+        <div class="jv12-cta"><a class="jv12-btn" href="#lead-gen" data-checkout-open>Join&nbsp;us<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a><p class="jv12-incl">""" + chk + """<span><b>Included</b> in enrollment</span></p></div>
       </header>
       """ + stage + """
-      <div class="jv5-ticket">
-        <p class="jv5-date"><span>Sat</span><b>Nov&nbsp;14</b></p>
-        <p class="jv5-when"><b>12:00 PM ET</b><span>90&nbsp;min with live&nbsp;Q&amp;A</span></p>
-        <p class="jv5-incl"><b>Included</b><span>in enrollment</span></p>
-        <a class="jv5-btn" href="#lead-gen" data-checkout-open>Join&nbsp;us<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
-      </div>
-    </article>
+    </div>
   </div>
 </section>"""
 s = s[:i] + new + s[j:]
 link = re.search(r'<link rel="stylesheet" href="assets/lla-julie-vip-motion\.css\?v=[^"]*">', s)
 if not link: sys.exit('motion css link not found')
-s = s[:link.end()] + '\n<link rel="stylesheet" href="assets/lla-julie-vip-glass.css?v=20261107-11">' + s[link.end():]
+s = s[:link.end()] + '\n<link rel="stylesheet" href="assets/lla-julie-vip-glass.css?v=20261107-12">' + s[link.end():]
 open(out, 'w', encoding='utf-8').write(s)
 print('patched', out)
