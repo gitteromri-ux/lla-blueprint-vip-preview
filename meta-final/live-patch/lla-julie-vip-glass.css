@@ -181,3 +181,46 @@ html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) sec
 html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec .jv5-msg, html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec .jv5-msg b{font-size:29px!important;line-height:1.18!important}
 }
 @media (max-width:640px){html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec .jv5-msg{text-wrap:balance}html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec .jv5-msg b{display:inline!important}}
+
+/* v9 (Omri: smaller animations, larger Julie photo) */
+@media (min-width:981px){
+html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec .jb4-motion-track{grid-template-columns:250px 400px 250px!important;justify-content:center!important;gap:56px!important}
+html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec .jb4-animation{max-width:250px!important}
+html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec .jb4-animation-title, html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec .jb4-animation-title em{font-size:23px!important}
+html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec .jv5-halo{inset:-10% -18% 25%}
+html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec{padding:56px 0!important}
+html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec .jv5{padding:36px 44px 36px!important;gap:26px!important}
+}
+@media (max-width:640px){
+html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec .jv5{grid-template-columns:1fr!important;grid-template-areas:"kick" "title" "msg" "stage" "ticket"!important;row-gap:14px!important}
+html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec .jv5-avatar{display:none!important}
+html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec h2.jv5-title{font-size:31px!important}
+html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec h2.jv5-title em{font-size:25px!important}
+html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec .jv5-msg, html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec .jv5-msg b{font-size:27px!important;line-height:1.18!important}
+html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec .jb4-motion-track{grid-template-columns:58% minmax(0,1fr)!important;grid-template-areas:"photo a1" "photo a2"!important;gap:14px 12px!important;align-items:center!important}
+html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec .jb4-motion-track .jv5-photo{display:block!important;grid-area:photo!important;width:100%!important;order:0!important;border-radius:120px 120px 20px 20px!important;align-self:center!important}
+html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec .jb4-motion-track > .jb4-animation:first-of-type{grid-area:a1!important}
+html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec .jb4-motion-track > .jb4-animation:last-of-type{grid-area:a2!important}
+html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec .jb4-animation{flex-direction:column!important;gap:5px!important}
+html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec .jb4-clip{order:1!important;border-radius:10px!important}
+html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec .jb4-animation-title{order:2!important}
+html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec .jb4-animation-title, html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec .jb4-animation-title em{font-size:15px!important;line-height:1.2!important}
+html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec .jv5-rim{box-shadow:0 0 0 5px rgba(158,216,255,.10),0 0 30px rgba(158,216,255,.55)}
+}
+
+/* v10 text hierarchy: 1 headline, 2 message, 3 name byline */
+html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec h2.jv5-title .jb4-masterclass{color:#FFFFFF!important}
+html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec .jv5-msg{font-weight:400!important;color:#DCE7F7!important}
+html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec .jv5-msg b{font-style:italic!important;font-weight:600!important;color:#9ED8FF!important}
+@media (min-width:981px){
+html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec h2.jv5-title{font-size:66px!important;line-height:1.04!important;margin-bottom:22px!important}
+html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec h2.jv5-title em{font-size:30px!important;line-height:1.2!important;margin-top:10px!important;letter-spacing:.01em}
+html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec .jv5-msg, html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec .jv5-msg b{font-size:38px!important;line-height:1.22!important}
+html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec .jv5-msg{max-width:860px!important}
+}
+@media (max-width:640px){
+html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec h2.jv5-title{font-size:32px!important;line-height:1.06!important}
+html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec h2.jv5-title em{font-size:21px!important;margin-top:8px!important}
+html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec .jv5-msg, html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec .jv5-msg b{font-size:24px!important;line-height:1.25!important}
+html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec .jv5-msg{margin-top:4px!important}
+}
