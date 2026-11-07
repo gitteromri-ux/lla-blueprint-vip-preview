@@ -1,226 +1,129 @@
-/* LLA Julie VIP Masterclass fold, v3 one composition (round 71, Omri 7 Nov): headline centred, Julie between her two animations, ticket centred.
-   Presentation only: no tracking, CRM, checkout or network code. Loads after lla-julie-vip-motion.css; keeps its script and classes. */
-html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec{position:relative!important;overflow:hidden!important;padding:96px 0!important;background:radial-gradient(55% 60% at 50% 0%,rgba(88,168,232,.28),transparent 70%),radial-gradient(45% 55% at 0% 80%,rgba(42,78,138,.55),transparent 72%),radial-gradient(45% 55% at 100% 80%,rgba(42,78,138,.55),transparent 72%),linear-gradient(180deg,#040A1A 0%,#0A1A40 50%,#050B1C 100%)!important}
+/* LLA Julie VIP Masterclass fold, v11 (Omri slide comments 7 Nov): access box top right, wider message, 3D animations with larger headlines,
+   spotlight lighting, "Included in enrollment" in the ticket. Optional black background: add class jv5-black to the section.
+   Presentation only: no tracking, CRM, checkout or network code. Keeps lla-julie-vip-motion.js classes. */
+html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec{position:relative!important;overflow:hidden!important;padding:64px 0!important;background:radial-gradient(42% 55% at 50% 58%,rgba(158,216,255,.30),transparent 70%),radial-gradient(60% 50% at 50% 0%,rgba(88,168,232,.30),transparent 70%),radial-gradient(40% 50% at 8% 70%,rgba(88,168,232,.22),transparent 70%),radial-gradient(40% 50% at 92% 70%,rgba(88,168,232,.22),transparent 70%),linear-gradient(180deg,#0A1A40 0%,#16336B 50%,#0A1A40 100%)!important}
 html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec::before,html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec::after{display:none!important}
-html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec .jv5{position:relative!important;display:flex!important;flex-direction:column!important;align-items:center!important;gap:40px!important;max-width:1180px!important;margin:0 auto!important;padding:56px 48px 52px!important;border-radius:36px!important;isolation:isolate;text-align:center!important;background:radial-gradient(60% 45% at 50% 52%,rgba(88,168,232,.26),transparent 70%),linear-gradient(160deg,rgba(30,62,120,.72) 0%,rgba(14,34,78,.80) 45%,rgba(8,20,52,.90) 100%)!important;border:1px solid rgba(158,216,255,.42)!important;-webkit-backdrop-filter:blur(18px);backdrop-filter:blur(18px);box-shadow:0 60px 140px -60px rgba(0,0,0,.95),0 0 90px -20px rgba(88,168,232,.55),inset 0 1px 0 rgba(255,255,255,.30)!important}
+html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec .jv5{position:relative!important;display:flex!important;flex-direction:column!important;align-items:center!important;gap:26px!important;max-width:1280px!important;margin:0 auto!important;padding:44px 44px 40px!important;border-radius:36px!important;isolation:isolate;text-align:center!important;background:linear-gradient(160deg,rgba(42,78,138,.55) 0%,rgba(18,42,90,.62) 50%,rgba(10,26,64,.75) 100%)!important;border:1px solid rgba(158,216,255,.45)!important;-webkit-backdrop-filter:blur(18px);backdrop-filter:blur(18px);box-shadow:0 60px 140px -60px rgba(0,0,0,.9),0 0 100px -20px rgba(88,168,232,.6),inset 0 1px 0 rgba(255,255,255,.32)!important}
 html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec .jv5::before{content:"";position:absolute;inset:-1px;border-radius:inherit;padding:1.5px;background:linear-gradient(120deg,#FFFFFF,rgba(158,216,255,.35) 28%,transparent 52%,rgba(88,168,232,.7) 85%,#9ED8FF);-webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask-composite:exclude;pointer-events:none;z-index:2}
 html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec .jv5-sheen{position:absolute;inset:0;border-radius:inherit;overflow:hidden;pointer-events:none;z-index:-1}
 html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec .jv5-sheen::after{content:"";position:absolute;top:-40%;left:-30%;width:40%;height:180%;transform:rotate(18deg);background:linear-gradient(90deg,transparent,rgba(255,255,255,.10),transparent);animation:jv5sheen 8s ease-in-out infinite}
-html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec .jv5-head{max-width:900px;display:flex!important;flex-direction:column!important;align-items:center!important}
-html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec .jv5-kick{display:block!important;margin:0 0 16px!important;font:600 19px/1.25 Inter,sans-serif!important;color:#9ED8FF!important;letter-spacing:.01em!important;text-align:center!important}
-html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec .jv5-kick::before{content:"";display:inline-block;vertical-align:middle;width:10px;height:10px;margin:-3px 12px 0 0;border-radius:50%;background:#9ED8FF;box-shadow:0 0 0 4px rgba(158,216,255,.18),0 0 16px #9ED8FF}
-html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec .jv5-kick strong{color:#FFFFFF!important;font-weight:700!important}
-html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec h2.jv5-title{margin:0 0 18px!important;font:500 60px/1.04 'Playfair Display',Georgia,serif!important;color:#fff!important;letter-spacing:-.012em!important;text-align:center!important}
-html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec h2.jv5-title .jb4-masterclass{display:block!important;font:inherit!important;font-style:normal!important;color:#fff!important}
-html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec h2.jv5-title em{display:block!important;font:italic 500 60px/1.1 'Playfair Display',Georgia,serif!important;color:transparent!important;background:linear-gradient(100deg,#FFFFFF 0%,#BFE5FF 35%,#9ED8FF 60%,#58A8E8 100%)!important;-webkit-background-clip:text!important;background-clip:text!important;padding-bottom:4px}
-html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec .jv5-msg{margin:0!important;font:500 23px/1.45 Inter,sans-serif!important;color:#E4EEFA!important;text-align:center!important}
-html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec .jv5-msg b{color:#fff!important;font-weight:700!important}
-html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec .jb4-motion{position:relative!important;width:100%!important;max-width:none!important;margin:0!important;padding:0!important;display:flex!important;flex-direction:column!important;align-items:center!important}
-html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec .jb4-motion-track{display:grid!important;grid-template-columns:minmax(0,1fr) 250px minmax(0,1fr)!important;align-items:center!important;gap:36px!important;width:100%!important;overflow:visible!important;padding:0!important;margin:0!important}
+html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec .jv5-spot{position:absolute;left:50%;top:28%;width:720px;height:620px;transform:translateX(-50%);background:conic-gradient(from 180deg at 50% 0%,transparent 160deg,rgba(158,216,255,.22) 175deg,rgba(255,255,255,.28) 180deg,rgba(158,216,255,.22) 185deg,transparent 200deg);filter:blur(10px);pointer-events:none;z-index:-1;opacity:.9}
+html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec .jv5-access{position:absolute!important;top:34px;right:40px;z-index:3;text-align:left!important;margin:0!important;padding:12px 16px 12px 18px;border-left:2px solid rgba(158,216,255,.7);background:linear-gradient(90deg,rgba(158,216,255,.12),rgba(158,216,255,0))}
+html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec .jv5-access p{margin:0!important;text-align:left!important}
+html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec .jv5-access-t{font:italic 600 21px/1.25 'Playfair Display',Georgia,serif!important;color:#FFFFFF!important}
+html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec .jv5-access-t b{font-weight:600!important;color:#9ED8FF!important}
+html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec .jv5-access-s{font:500 17px/1.4 'Playfair Display',Georgia,serif!important;color:#DCE7F7!important;margin-top:4px!important}
+html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec .jv5-access-d{font:700 18px/1.35 'Playfair Display',Georgia,serif!important;color:#FFFFFF!important}
+html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec .jv5-access-d sup,html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec .jv5-msg sup{font-size:.55em;vertical-align:super;line-height:0}
+html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec .jv5-head{display:flex!important;flex-direction:column!important;align-items:center!important;max-width:1000px;margin:0 auto!important}
+html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec h2.jv5-title{margin:0 0 18px!important;text-align:center!important;align-self:center!important}
+html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec h2.jv5-title .jb4-masterclass{display:block!important;font:italic 600 58px/1.05 'Playfair Display',Georgia,serif!important;color:#FFFFFF!important;text-shadow:0 0 40px rgba(158,216,255,.35)}
+html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec h2.jv5-title em{display:block!important;margin-top:6px!important;font:italic 600 32px/1.2 'Playfair Display',Georgia,serif!important;color:transparent!important;background:linear-gradient(100deg,#BFE5FF 0%,#9ED8FF 50%,#58A8E8 100%)!important;-webkit-background-clip:text!important;background-clip:text!important}
+html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec .jv5-msg{margin:0!important;max-width:980px!important;font:500 40px/1.22 'Playfair Display',Georgia,serif!important;color:#FFFFFF!important;text-align:center!important;text-wrap:balance}
+html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec .jv5-msg b{font:inherit!important;font-weight:500!important;color:#9ED8FF!important}
+html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec .jb4-motion{position:relative!important;width:100%!important;max-width:none!important;margin:6px 0 0!important;padding:0!important;display:flex!important;flex-direction:column!important;align-items:center!important}
+html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec .jb4-motion-track{display:grid!important;grid-template-columns:330px 340px 330px!important;justify-content:center!important;align-items:center!important;gap:48px!important;width:100%!important;overflow:visible!important;padding:0!important;margin:0!important;perspective:1100px}
 html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec .jv5-photo{position:relative!important;margin:0!important;aspect-ratio:4/5;width:100%!important;border-radius:200px 200px 28px 28px!important}
-html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec .jv5-halo{position:absolute;inset:-14% -22% 20%;background:radial-gradient(closest-side,rgba(158,216,255,.7),rgba(88,168,232,.25) 60%,transparent);filter:blur(22px);z-index:0}
-html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec .jv5-photo img{position:relative!important;z-index:1;display:block!important;width:100%!important;height:100%!important;object-fit:cover!important;object-position:50% 20%!important;border-radius:inherit!important;filter:saturate(.95) contrast(1.04);box-shadow:none!important;border:0!important}
-html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec .jv5-rim{position:absolute;inset:0;z-index:2;border-radius:inherit;border:2px solid rgba(158,216,255,.9);box-shadow:0 0 0 7px rgba(158,216,255,.10),0 0 44px rgba(158,216,255,.6),inset 0 -60px 60px -30px rgba(10,26,64,.5);pointer-events:none}
-html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec .jb4-animation{margin:0!important;padding:0!important;display:flex!important;flex-direction:column-reverse!important;gap:16px!important;width:auto!important;max-width:none!important;min-width:0!important}
-html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec .jb4-clip{position:relative!important;aspect-ratio:16/9!important;width:100%!important;border-radius:20px!important;overflow:hidden!important;border:1.5px solid rgba(158,216,255,.55)!important;box-shadow:0 30px 70px -35px rgba(0,0,0,.95),0 0 50px -12px rgba(88,168,232,.75)!important;background:#040A1C!important}
+html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec .jv5-halo{position:absolute;inset:-16% -26% 18%;background:radial-gradient(closest-side,rgba(190,230,255,.85),rgba(88,168,232,.30) 60%,transparent);filter:blur(24px);z-index:0}
+html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec .jv5-photo img{position:relative!important;z-index:1;display:block!important;width:100%!important;height:100%!important;object-fit:cover!important;object-position:50% 20%!important;border-radius:inherit!important;filter:saturate(.96) contrast(1.05);box-shadow:none!important;border:0!important}
+html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec .jv5-rim{position:absolute;inset:0;z-index:2;border-radius:inherit;border:2px solid rgba(190,230,255,.95);box-shadow:0 0 0 7px rgba(158,216,255,.12),0 0 60px rgba(158,216,255,.7),0 40px 80px -30px rgba(0,0,0,.8);pointer-events:none}
+html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec .jb4-animation{margin:0!important;padding:0!important;display:flex!important;flex-direction:column!important;gap:18px!important;width:100%!important;max-width:none!important;min-width:0!important}
+html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec .jb4-animation-title{order:1!important;margin:0!important;min-height:2.4em;display:flex!important;flex-wrap:wrap;align-items:flex-end!important;justify-content:center!important;column-gap:.26em;font:italic 600 28px/1.2 'Playfair Display',Georgia,serif!important;color:#FFFFFF!important;text-align:center!important;text-shadow:0 0 24px rgba(158,216,255,.35)}
+html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec .jb4-animation-title em{font:italic 600 28px/1.2 'Playfair Display',Georgia,serif!important;color:#9ED8FF!important}
+html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec .jb4-clip{order:2!important;position:relative!important;aspect-ratio:16/9!important;width:100%!important;border-radius:18px!important;overflow:hidden!important;border:2px solid rgba(190,230,255,.75)!important;background:#040A1C!important;box-shadow:0 0 0 6px rgba(158,216,255,.10),0 0 54px -6px rgba(88,168,232,.85),0 40px 60px -30px rgba(0,0,0,.9)!important;transition:transform .5s;-webkit-box-reflect:below 8px linear-gradient(transparent 62%,rgba(255,255,255,.16))}
+html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec .jb4-motion-track > .jb4-animation:first-of-type .jb4-clip{transform:rotateY(16deg) translateZ(0)}
+html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec .jb4-motion-track > .jb4-animation:last-of-type .jb4-clip{transform:rotateY(-16deg) translateZ(0)}
 html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec .jb4-clip :is(img,video){position:absolute!important;inset:0!important;width:100%!important;height:100%!important;object-fit:cover!important;border-radius:0!important}
-html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec .jb4-animation-title{margin:0!important;min-height:2.45em!important;display:flex!important;flex-wrap:wrap;align-items:flex-start!important;justify-content:center!important;column-gap:.26em;font:500 24px/1.2 'Playfair Display',Georgia,serif!important;color:#fff!important;text-align:center!important;font-style:normal!important}
-html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec .jb4-animation-title em{font:italic 600 24px/1.2 'Playfair Display',Georgia,serif!important;color:#9ED8FF!important}
 html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec .jb4-motion-hint{display:none!important}
-html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec .jb4-motion-toggle{position:static!important;display:block!important;width:max-content!important;margin:6px auto 0!important;padding:6px 2px!important;background:none!important;border:0!important;font:500 15px/1 Inter,sans-serif!important;color:#9ED8FF!important;text-decoration:underline!important;text-underline-offset:3px;cursor:pointer}
-html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec .jv5-ticket{position:relative;display:grid!important;grid-template-columns:auto 1fr auto;align-items:center;gap:24px;width:100%;max-width:760px;padding:18px 18px 18px 26px!important;margin:0!important;border-radius:22px!important;text-align:left!important;background:linear-gradient(120deg,#FFFFFF 0%,#E8F4FF 45%,#BFE5FF 75%,#9ED8FF 100%)!important;border:0!important;box-shadow:0 24px 60px -24px rgba(158,216,255,.75),inset 0 1px 0 #fff!important}
-html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec .jv5-date{position:relative;margin:0!important;padding-right:24px;display:flex!important;flex-direction:column;line-height:1}
+html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec .jb4-motion-toggle{position:static!important;display:block!important;width:max-content!important;margin:14px auto 0!important;padding:6px 2px!important;background:none!important;border:0!important;font:500 15px/1 Inter,sans-serif!important;color:#9ED8FF!important;text-decoration:underline!important;text-underline-offset:3px;cursor:pointer}
+html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec .jv5-ticket{position:relative;display:grid!important;grid-template-columns:auto auto 1fr auto;align-items:center;gap:26px;width:100%;max-width:900px;padding:18px 18px 18px 28px!important;margin:4px 0 0!important;border-radius:22px!important;text-align:left!important;background:linear-gradient(120deg,#FFFFFF 0%,#E8F4FF 45%,#BFE5FF 75%,#9ED8FF 100%)!important;border:0!important;box-shadow:0 24px 70px -20px rgba(158,216,255,.85),inset 0 1px 0 #fff!important}
+html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec .jv5-date{position:relative;margin:0!important;padding-right:26px;display:flex!important;flex-direction:column;line-height:1}
 html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec .jv5-date::after{content:"";position:absolute;right:0;top:-8px;bottom:-8px;border-right:2px dashed rgba(10,26,64,.25)}
-html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec .jv5-date span{font:700 17px/1 Inter,sans-serif!important;color:#2A4E8A!important;margin-bottom:6px}
-html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec .jv5-date b{font:600 34px/1 'Playfair Display',Georgia,serif!important;color:#0A1A40!important;white-space:nowrap}
+html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec .jv5-date span{font:700 18px/1 Inter,sans-serif!important;color:#2A4E8A!important;margin-bottom:6px}
+html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec .jv5-date b{font:600 36px/1 'Playfair Display',Georgia,serif!important;color:#0A1A40!important;white-space:nowrap}
 html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec .jv5-when{margin:0!important;display:flex!important;flex-direction:column;gap:4px;min-width:0}
-html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec .jv5-when b{font:800 21px/1.2 Inter,sans-serif!important;color:#0A1A40!important}
-html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec .jv5-when span{font:500 18px/1.3 Inter,sans-serif!important;color:#22385E!important}
-html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec a.jv5-btn{display:inline-flex!important;align-items:center;justify-content:center;gap:10px;padding:18px 30px!important;margin:0!important;border-radius:999px!important;text-decoration:none!important;white-space:nowrap;font:700 20px/1 Inter,sans-serif!important;color:#FFFFFF!important;background:linear-gradient(180deg,#2A4E8A 0%,#122A5A 55%,#0A1A40 100%)!important;border:0!important;box-shadow:0 14px 30px -10px rgba(10,26,64,.8),inset 0 1px 0 rgba(255,255,255,.25)!important;transition:transform .2s;min-width:0!important;width:auto!important}
+html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec .jv5-when b{font:800 22px/1.2 Inter,sans-serif!important;color:#0A1A40!important;white-space:nowrap}
+html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec .jv5-when span{font:500 18px/1.3 Inter,sans-serif!important;color:#22385E!important;white-space:nowrap}
+html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec .jv5-incl{margin:0!important;justify-self:center;display:flex!important;flex-direction:column;align-items:center;padding:8px 18px;border-radius:14px;background:rgba(10,26,64,.07);border:1.5px solid rgba(10,26,64,.18)}
+html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec .jv5-incl b{font:italic 700 24px/1.1 'Playfair Display',Georgia,serif!important;color:#0A1A40!important}
+html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec .jv5-incl span{font:600 16px/1.2 Inter,sans-serif!important;color:#2A4E8A!important}
+html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec a.jv5-btn{display:inline-flex!important;align-items:center;justify-content:center;gap:10px;padding:18px 30px!important;margin:0!important;border-radius:999px!important;text-decoration:none!important;white-space:nowrap;font:700 21px/1 Inter,sans-serif!important;color:#FFFFFF!important;background:linear-gradient(180deg,#2A4E8A 0%,#122A5A 55%,#0A1A40 100%)!important;border:0!important;box-shadow:0 14px 30px -10px rgba(10,26,64,.8),inset 0 1px 0 rgba(255,255,255,.25)!important;min-width:0!important;width:auto!important}
 html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec a.jv5-btn svg{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round}
-html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec a.jv5-btn:hover{transform:translateY(-2px)}
+html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec .jv5-avatar{display:none!important}
+html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec.jv5-black{background:radial-gradient(40% 55% at 50% 60%,rgba(88,168,232,.32),transparent 70%),radial-gradient(55% 40% at 50% 0%,rgba(158,216,255,.16),transparent 70%),radial-gradient(35% 45% at 10% 75%,rgba(88,168,232,.18),transparent 70%),radial-gradient(35% 45% at 90% 75%,rgba(88,168,232,.18),transparent 70%),#000000!important}
+html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec.jv5-black .jv5{background:transparent!important;border-color:transparent!important;box-shadow:none!important;-webkit-backdrop-filter:none;backdrop-filter:none}
+html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec.jv5-black .jv5::before{display:none}
 @keyframes jv5sheen{0%{left:-40%}55%,100%{left:120%}}
 @media (max-width:980px){
-html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec .jv5{padding:40px 30px!important;gap:32px!important}
-html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec h2.jv5-title,html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec h2.jv5-title em{font-size:44px!important}
-html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec .jb4-motion-track{grid-template-columns:minmax(0,1fr) 190px minmax(0,1fr)!important;gap:22px!important}
-html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec .jb4-animation-title,html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec .jb4-animation-title em{font-size:20px!important}
+html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec .jv5-access{position:static!important;order:-1;margin:0 auto 4px!important;border-left:0;background:none;padding:0;text-align:center!important}
+html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec .jv5-access p{text-align:center!important}
+html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec .jb4-motion-track{grid-template-columns:minmax(0,1fr) 240px minmax(0,1fr)!important;gap:24px!important}
+html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec h2.jv5-title .jb4-masterclass{font-size:46px!important}
+html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec .jv5-msg{font-size:32px!important}
+html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec .jb4-animation-title,html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec .jb4-animation-title em{font-size:22px!important}
+html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec .jv5-ticket{grid-template-columns:auto 1fr auto;}
+html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec .jv5-incl{grid-column:1/-1;order:5}
 }
 @media (max-width:640px){
-html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec{padding:34px 0!important}
-html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec .jv5{padding:26px 16px 18px!important;gap:22px!important;border-radius:26px!important;margin:0 4px!important}
+html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec{padding:22px 0!important}
+html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec .jv5{padding:22px 14px 16px!important;gap:16px!important;border-radius:26px!important;margin:0 4px!important}
 html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec .jv5-sheen::after{animation:none;display:none}
-html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec .jv5-kick{font-size:16px!important;margin-bottom:12px!important}
-html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec .jv5-kick::before{width:8px;height:8px;margin-right:9px}
-html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec h2.jv5-title{font-size:32px!important;line-height:1.08!important;margin-bottom:12px!important}
-html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec h2.jv5-title em{font-size:32px!important;white-space:nowrap;margin-top:2px}
-html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec .jv5-msg{font-size:19px!important;line-height:1.42!important}
-html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec .jb4-motion-track{grid-template-columns:1fr 1fr!important;gap:18px 12px!important;align-items:start!important}
-html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec .jv5-photo{grid-column:1/-1;order:-1;width:170px!important;justify-self:center;border-radius:110px 110px 20px 20px!important}
-html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec .jv5-rim{box-shadow:0 0 0 5px rgba(158,216,255,.10),0 0 30px rgba(158,216,255,.55)}
-html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec .jb4-animation{gap:8px!important}
-html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec .jb4-clip{border-radius:14px!important}
-html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec .jb4-animation-title,html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec .jb4-animation-title em{font-size:17px!important;line-height:1.25!important}
-html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec .jb4-animation-title{min-height:0!important}
+html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec .jv5-spot{width:420px;height:520px;top:34%}
+html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec .jv5-access-t{font-size:18px!important}
+html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec .jv5-access-s{font-size:15px!important;margin-top:2px!important}
+html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec .jv5-access-d{font-size:16px!important}
+html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec h2.jv5-title{margin-bottom:10px!important}
+html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec h2.jv5-title .jb4-masterclass{font-size:34px!important;line-height:1.06!important}
+html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec h2.jv5-title em{font-size:21px!important;margin-top:6px!important}
+html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec .jv5-msg{font-size:24px!important;line-height:1.24!important}
+html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec .jb4-motion-track{grid-template-columns:56% minmax(0,1fr)!important;grid-template-areas:"photo a1" "photo a2"!important;gap:14px 12px!important;perspective:700px}
+html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec .jb4-motion-track .jv5-photo{grid-area:photo!important;border-radius:120px 120px 20px 20px!important}
+html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec .jb4-motion-track > .jb4-animation:first-of-type{grid-area:a1!important}
+html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec .jb4-motion-track > .jb4-animation:last-of-type{grid-area:a2!important}
+html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec .jb4-animation{gap:6px!important}
+html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec .jb4-animation-title{order:2!important;min-height:0;align-items:flex-start!important}
+html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec .jb4-clip{order:1!important;border-radius:10px!important;-webkit-box-reflect:none;box-shadow:0 0 0 3px rgba(158,216,255,.10),0 0 26px -4px rgba(88,168,232,.8)!important}
+html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec .jb4-motion-track > .jb4-animation:first-of-type .jb4-clip,html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec .jb4-motion-track > .jb4-animation:last-of-type .jb4-clip{transform:rotateY(-12deg)}
+html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec .jb4-animation-title,html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec .jb4-animation-title em{font-size:16px!important;line-height:1.2!important}
 html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec .jb4-motion-toggle{margin-top:10px!important}
-html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec .jv5-ticket{grid-template-columns:auto 1fr;gap:12px 16px;padding:14px 14px 14px 18px!important;border-radius:20px!important}
-html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec .jv5-date{padding-right:16px}
+html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec .jv5-ticket{grid-template-columns:auto 1fr!important;gap:12px 14px!important;padding:14px 14px 14px 18px!important;border-radius:20px!important}
+html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec .jv5-date{padding-right:14px}
 html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec .jv5-date span{font-size:16px!important;margin-bottom:4px}
-html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec .jv5-date b{font-size:27px!important}
+html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec .jv5-date b{font-size:26px!important}
 html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec .jv5-when b{font-size:19px!important}
-html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec .jv5-when span{font-size:17px!important}
-html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec a.jv5-btn{grid-column:1/-1;padding:16px 18px!important;font-size:19px!important}
+html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec .jv5-when span{font-size:16px!important;white-space:normal}
+html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec .jv5-incl{grid-column:1/-1;flex-direction:row;gap:8px;justify-content:center;padding:8px 12px}
+html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec .jv5-incl b{font-size:21px!important}
+html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec .jv5-incl span{font-size:16px!important}
+html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec a.jv5-btn{grid-column:1/-1;padding:15px 18px!important;font-size:19px!important}
+html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec.jv5-black .jv5{padding-left:8px!important;padding-right:8px!important}
 }
 @media (prefers-reduced-motion:reduce){html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec .jv5-sheen::after{animation:none}}
 
-html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec .jv5-msg{font:500 30px/1.3 'Playfair Display',Georgia,serif!important;color:#FFFFFF!important}
-html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec .jv5-msg b{font:italic 600 30px/1.3 'Playfair Display',Georgia,serif!important;color:#9ED8FF!important}
-@media (max-width:980px){
-html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec .jv5-msg, html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec .jv5-msg b{font-size:26px!important}
+@media (min-width:981px){
+html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec h2.jv5-title .jb4-masterclass{font-size:52px!important}
+html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec h2.jv5-title em{font-size:30px!important}
+html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec .jv5-access{top:26px;right:26px;max-width:250px;padding:10px 14px 10px 16px}
+html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec .jv5-access-t{font-size:18px!important}
+html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec .jv5-access-s{font-size:15px!important}
+html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec .jv5-access-d{font-size:16px!important}
+html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec .jv5-head{padding-top:6px}
 }
+html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec .jb4-animation{perspective:850px}
+html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec .jb4-motion-track > .jb4-animation:first-of-type .jb4-clip{transform:rotateY(24deg) scale(.97)}
+html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec .jb4-motion-track > .jb4-animation:last-of-type .jb4-clip{transform:rotateY(-24deg) scale(.97)}
+html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec.jv5-black .jv5-sheen{display:none!important}
 @media (max-width:640px){
-html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec .jv5-msg, html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec .jv5-msg b{font-size:22px!important;line-height:1.3!important}
-html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec .jb4-animation{flex-direction:column!important}
-html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec .jb4-clip{order:1!important}
-html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec .jb4-animation-title{order:2!important;align-items:flex-start!important}
+html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec .jb4-motion-track > .jb4-animation:first-of-type .jb4-clip, html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec .jb4-motion-track > .jb4-animation:last-of-type .jb4-clip{transform:rotateY(-16deg) scale(.96)}
 }
 
-html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec h2.jv5-title, html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec .jv5-kick, html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec .jv5-msg{align-self:center!important;max-width:none!important;width:auto!important;margin-left:auto!important;margin-right:auto!important;float:none!important;transform:none!important}
-
-/* v4 (Omri: too tall): tighter desktop, compact phone. The animation group keeps a real box so its IntersectionObserver fires. */
-html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec{padding:64px 0!important}
-html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec .jv5{padding:40px 44px 40px!important;gap:28px!important}
-html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec h2.jv5-title{margin-bottom:12px!important}
-html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec .jv5-kick{margin-bottom:12px!important}
-html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec .jb4-motion-track{grid-template-columns:minmax(0,1fr) 210px minmax(0,1fr)!important;gap:30px!important}
-html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec .jb4-motion-toggle{margin-top:2px!important}
-html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec .jv5-avatar{display:none!important}
 @media (max-width:640px){
-html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec{padding:24px 0!important}
-html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec .jv5{display:grid!important;grid-template-columns:92px minmax(0,1fr)!important;grid-template-areas:"kick kick" "avatar title" "msg msg" "stage stage" "ticket ticket"!important;gap:12px 14px!important;padding:18px 14px 14px!important;text-align:left!important;align-items:center!important}
-html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec .jv5-head{display:contents!important}
-html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec .jv5-avatar{grid-area:avatar!important;display:block!important;position:relative;margin:0!important;width:92px;aspect-ratio:4/5;border-radius:54px 54px 14px 14px;border:2px solid rgba(158,216,255,.9);box-shadow:0 0 0 4px rgba(158,216,255,.10),0 0 26px rgba(158,216,255,.55);overflow:hidden}
-html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec .jv5-avatar img{display:block!important;width:100%!important;height:100%!important;object-fit:cover!important;object-position:50% 20%!important}
-html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec .jv5-kick{grid-area:kick!important;margin:0!important;font-size:15px!important;text-align:left!important;justify-self:start!important}
-html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec h2.jv5-title{grid-area:title!important;justify-self:start!important;align-self:center!important;margin:0!important;text-align:left!important;font-size:26px!important;line-height:1.08!important}
-html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec h2.jv5-title em{font-size:26px!important;white-space:normal!important;margin-top:4px}
-html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec .jv5-msg{grid-area:msg!important;justify-self:start!important;text-align:left!important;margin:0!important}
-html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec .jv5-msg, html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec .jv5-msg b{font-size:19px!important;line-height:1.3!important}
-html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec .jb4-motion{grid-area:stage!important;display:block!important;width:100%!important}
-html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec .jb4-motion-track{display:grid!important;grid-template-columns:1fr 1fr!important;gap:10px!important;align-items:start!important}
-html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec .jb4-motion-track .jv5-photo{display:none!important}
-html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec .jb4-animation-title, html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec .jb4-animation-title em{font-size:16px!important;line-height:1.22!important}
-html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec .jb4-animation{gap:6px!important}
-html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec .jb4-clip{border-radius:12px!important}
+html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec .jb4-clip{-webkit-box-reflect:unset!important}
+html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec .jv5-incl{order:0!important}
+html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec a.jv5-btn{order:1!important}
 html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec .jb4-motion-toggle{position:absolute!important;width:1px!important;height:1px!important;overflow:hidden!important;clip:rect(0 0 0 0)!important;white-space:nowrap!important;margin:0!important;padding:0!important}
-html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec .jv5-ticket{grid-area:ticket!important;grid-template-columns:auto 1fr!important;gap:10px 14px!important;padding:12px 12px 12px 16px!important;max-width:none!important}
-html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec .jv5-date b{font-size:24px!important}
-html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec .jv5-when b{font-size:18px!important}
-html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec .jv5-when span{font-size:16px!important}
-html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec a.jv5-btn{padding:14px 18px!important;font-size:18px!important}
-}
-
-/* v5 phone hierarchy (Omri: "Learn to age tiny, hierarchy wrong"): 1 headline 32px full width, 2 message 23px beside the photo, 3 captions 17px, labels 16px */
-@media (max-width:640px){
-html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec .jv5{grid-template-columns:100px minmax(0,1fr)!important;grid-template-areas:"kick kick" "title title" "avatar msg" "stage stage" "ticket ticket"!important;gap:14px 16px!important;padding:20px 16px 16px!important}
-html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec .jv5-kick{font-size:16px!important}
-html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec h2.jv5-title{grid-area:title!important;font-size:32px!important;line-height:1.06!important}
-html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec h2.jv5-title em{font-size:32px!important;white-space:nowrap!important;margin-top:6px}
-html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec .jv5-avatar{grid-area:avatar!important;width:100px!important;align-self:center!important}
-html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec .jv5-msg{grid-area:msg!important;align-self:center!important}
-html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec .jv5-msg, html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec .jv5-msg b{font-size:23px!important;line-height:1.28!important}
-html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec .jb4-animation-title, html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec .jb4-animation-title em{font-size:17px!important;line-height:1.22!important}
-}
-@media (max-width:640px){html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec .jv5-msg b{white-space:nowrap!important;display:inline-block}}
-
-/* v6 desktop (Omri: texts small, larger Julie image, larger subheader, smaller animations) */
-@media (min-width:981px){
-html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec .jv5-kick{font-size:22px!important}
-html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec .jv5-kick::before{width:11px;height:11px}
-html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec h2.jv5-title{font-size:68px!important}
-html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec h2.jv5-title em{font-size:68px!important}
-html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec .jv5-msg, html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec .jv5-msg b{font-size:36px!important;line-height:1.25!important}
-html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec .jb4-motion-track{grid-template-columns:minmax(0,1fr) 310px minmax(0,1fr)!important;gap:40px!important}
-html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec .jb4-animation{width:100%!important;max-width:320px!important;justify-self:center!important}
-html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec .jb4-animation-title, html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec .jb4-animation-title em{font-size:27px!important;line-height:1.2!important}
-html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec .jv5-ticket{max-width:820px!important;padding:20px 20px 20px 30px!important}
-html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec .jv5-date span{font-size:19px!important}
-html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec .jv5-date b{font-size:40px!important}
-html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec .jv5-when b{font-size:24px!important}
-html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec .jv5-when span{font-size:20px!important}
-html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec a.jv5-btn{font-size:22px!important;padding:20px 34px!important}
-html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec .jb4-motion-toggle{font-size:16px!important}
-}
-@media (min-width:981px){html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec .jv5-head{max-width:1080px!important;width:100%!important}}
-
-/* v7: "Learn to age slower" line larger */
-@media (min-width:981px){
-html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec .jv5-msg, html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec .jv5-msg b{font-size:46px!important;line-height:1.18!important}
-html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec .jv5-msg{max-width:920px!important;text-wrap:balance}
-html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec h2.jv5-title{margin-bottom:16px!important}
-}
-@media (max-width:640px){
-html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec .jv5-msg, html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec .jv5-msg b{font-size:26px!important;line-height:1.2!important}
-html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec .jv5{grid-template-columns:96px minmax(0,1fr)!important}
-html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec .jv5-avatar{width:96px!important}
-}
-@media (max-width:640px){html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec .jv5{grid-template-columns:86px minmax(0,1fr)!important;column-gap:12px!important}html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec .jv5-avatar{width:86px!important}html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec .jv5-msg,html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec .jv5-msg b{font-size:25px!important}}
-
-/* v8: smaller name in the headline, larger message */
-@media (min-width:981px){
-html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec h2.jv5-title em{font-size:50px!important;margin-top:6px}
-html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec .jv5-msg, html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec .jv5-msg b{font-size:54px!important;line-height:1.14!important}
-html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec .jv5-msg{max-width:1040px!important}
-}
-@media (max-width:640px){
-html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec .jv5{grid-template-columns:96px minmax(0,1fr)!important;grid-template-areas:"kick kick" "avatar title" "msg msg" "stage stage" "ticket ticket"!important;column-gap:14px!important}
-html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec .jv5-avatar{width:96px!important}
-html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec h2.jv5-title{grid-area:title!important;font-size:30px!important}
-html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec h2.jv5-title em{font-size:24px!important;white-space:nowrap!important;margin-top:6px}
-html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec .jv5-msg{grid-area:msg!important}
-html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec .jv5-msg, html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec .jv5-msg b{font-size:29px!important;line-height:1.18!important}
-}
-@media (max-width:640px){html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec .jv5-msg{text-wrap:balance}html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec .jv5-msg b{display:inline!important}}
-
-/* v9 (Omri: smaller animations, larger Julie photo) */
-@media (min-width:981px){
-html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec .jb4-motion-track{grid-template-columns:250px 400px 250px!important;justify-content:center!important;gap:56px!important}
-html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec .jb4-animation{max-width:250px!important}
-html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec .jb4-animation-title, html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec .jb4-animation-title em{font-size:23px!important}
-html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec .jv5-halo{inset:-10% -18% 25%}
-html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec{padding:56px 0!important}
-html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec .jv5{padding:36px 44px 36px!important;gap:26px!important}
-}
-@media (max-width:640px){
-html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec .jv5{grid-template-columns:1fr!important;grid-template-areas:"kick" "title" "msg" "stage" "ticket"!important;row-gap:14px!important}
-html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec .jv5-avatar{display:none!important}
-html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec h2.jv5-title{font-size:31px!important}
-html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec h2.jv5-title em{font-size:25px!important}
-html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec .jv5-msg, html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec .jv5-msg b{font-size:27px!important;line-height:1.18!important}
-html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec .jb4-motion-track{grid-template-columns:58% minmax(0,1fr)!important;grid-template-areas:"photo a1" "photo a2"!important;gap:14px 12px!important;align-items:center!important}
-html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec .jb4-motion-track .jv5-photo{display:block!important;grid-area:photo!important;width:100%!important;order:0!important;border-radius:120px 120px 20px 20px!important;align-self:center!important}
-html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec .jb4-motion-track > .jb4-animation:first-of-type{grid-area:a1!important}
-html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec .jb4-motion-track > .jb4-animation:last-of-type{grid-area:a2!important}
-html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec .jb4-animation{flex-direction:column!important;gap:5px!important}
-html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec .jb4-clip{order:1!important;border-radius:10px!important}
-html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec .jb4-animation-title{order:2!important}
-html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec .jb4-animation-title, html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec .jb4-animation-title em{font-size:15px!important;line-height:1.2!important}
-html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec .jv5-rim{box-shadow:0 0 0 5px rgba(158,216,255,.10),0 0 30px rgba(158,216,255,.55)}
-}
-
-/* v10 text hierarchy: 1 headline, 2 message, 3 name byline */
-html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec h2.jv5-title .jb4-masterclass{color:#FFFFFF!important}
-html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec .jv5-msg{font-weight:400!important;color:#DCE7F7!important}
-html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec .jv5-msg b{font-style:italic!important;font-weight:600!important;color:#9ED8FF!important}
-@media (min-width:981px){
-html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec h2.jv5-title{font-size:66px!important;line-height:1.04!important;margin-bottom:22px!important}
-html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec h2.jv5-title em{font-size:30px!important;line-height:1.2!important;margin-top:10px!important;letter-spacing:.01em}
-html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec .jv5-msg, html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec .jv5-msg b{font-size:38px!important;line-height:1.22!important}
-html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec .jv5-msg{max-width:860px!important}
-}
-@media (max-width:640px){
-html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec h2.jv5-title{font-size:32px!important;line-height:1.06!important}
-html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec h2.jv5-title em{font-size:21px!important;margin-top:8px!important}
-html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec .jv5-msg, html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec .jv5-msg b{font-size:24px!important;line-height:1.25!important}
-html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec .jv5-msg{margin-top:4px!important}
+html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec .jb4-motion-track{grid-template-columns:52% minmax(0,1fr)!important}
+html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec h2.jv5-title .jb4-masterclass{font-size:32px!important}
+html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec .jv5-msg{font-size:23px!important}
+html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv5-sec .jv5{gap:14px!important}
 }
