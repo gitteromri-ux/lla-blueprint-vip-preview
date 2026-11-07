@@ -348,6 +348,7 @@ def common(s):
     css = open(os.path.join(HERE, 'meta_final.css'), encoding='utf-8').read().replace('/*%%HERO_CSS%%*/', '').replace('/*%%NEW_FOLDS%%*/', open(os.path.join(HERE, 'meta_final_newfolds.css'), encoding='utf-8').read()).replace('/*%%JULIE_CSS%%*/', open(os.path.join(HERE, 'masterclass_julie.css'), encoding='utf-8').read()).replace('/*%%BRAND%%*/', open(os.path.join(HERE, 'meta_final_fix.css'), encoding='utf-8').read() + '\n' + open(os.path.join(HERE, 'meta_final_pricing_big.css'), encoding='utf-8').read() + '\n' + open(os.path.join(HERE, 'meta_final_r39.css'), encoding='utf-8').read().replace('#syllabus', '#mf-retired-syllabus') + '\n' + open(os.path.join(HERE, 'meta_final_syllabus_com.css'), encoding='utf-8').read())
     css += '\n' + open(os.path.join(HERE, 'meta_final_r57.css'), encoding='utf-8').read()
     css += '\n' + open(os.path.join(HERE, 'meta_final_r60.css'), encoding='utf-8').read()
+    css += '\n' + open(os.path.join(HERE, 'meta_final_julie5.css'), encoding='utf-8').read()
     css = widen_palette(css)
     s = s.replace('</head>', '<style id="meta-final">\n' + css + '\n</style>\n</head>', 1)
     s = no_royal_blue(s)

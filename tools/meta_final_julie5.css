@@ -1,0 +1,92 @@
+/* Julie VIP Masterclass fold, round 69 (Omri, 7 Nov: "the most gorgeous design"). Brand blues, navy, white only.
+   Glass card on a navy stage, arch portrait with a light-blue rim, two stats, an event ticket with the CTA. */
+html.mf body:not(#mf-x):not(#mf-t):not(#mf-j):not(#mf-v) section#julie.jv5-sec{position:relative;overflow:hidden;padding:96px 0!important;background:
+  radial-gradient(60% 70% at 18% 30%,rgba(88,168,232,.22),transparent 70%),
+  radial-gradient(50% 60% at 85% 75%,rgba(42,78,138,.55),transparent 72%),
+  linear-gradient(180deg,#050B1C 0%,#0A1A40 55%,#050B1C 100%)!important}
+html.mf body:not(#mf-x):not(#mf-t):not(#mf-j):not(#mf-v) section#julie.jv5-sec::before,html.mf body:not(#mf-x):not(#mf-t):not(#mf-j):not(#mf-v) section#julie.jv5-sec::after{display:none!important}
+html.mf body section#julie .jv5{position:relative;display:grid;grid-template-columns:minmax(0,400px) minmax(0,1fr);gap:56px;align-items:center;max-width:1120px;margin:0 auto;padding:44px;border-radius:32px;isolation:isolate;
+  background:linear-gradient(140deg,rgba(158,216,255,.16) 0%,rgba(255,255,255,.05) 38%,rgba(42,78,138,.18) 100%);
+  border:1px solid rgba(158,216,255,.38);-webkit-backdrop-filter:blur(16px);backdrop-filter:blur(16px);
+  box-shadow:0 50px 120px -50px rgba(0,0,0,.9),0 0 80px -20px rgba(88,168,232,.45),inset 0 1px 0 rgba(255,255,255,.28),inset 0 -1px 0 rgba(158,216,255,.12)}
+html.mf body section#julie .jv5::before{content:"";position:absolute;inset:-1px;border-radius:inherit;padding:1px;background:linear-gradient(120deg,rgba(255,255,255,.9),rgba(158,216,255,.2) 30%,transparent 55%,rgba(158,216,255,.55));-webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask-composite:exclude;pointer-events:none;z-index:2}
+html.mf body section#julie .jv5-sheen{position:absolute;inset:0;border-radius:inherit;overflow:hidden;pointer-events:none;z-index:-1}
+html.mf body section#julie .jv5-sheen::after{content:"";position:absolute;top:-40%;left:-30%;width:45%;height:180%;transform:rotate(18deg);background:linear-gradient(90deg,transparent,rgba(255,255,255,.10),transparent);animation:jv5sheen 7s ease-in-out infinite}
+@keyframes jv5sheen{0%{left:-40%}55%,100%{left:120%}}
+/* portrait */
+html.mf body section#julie .jv5-photo{position:relative;margin:0;aspect-ratio:4/5;border-radius:220px 220px 26px 26px}
+html.mf body section#julie .jv5-halo{position:absolute;inset:-14% -12% 30%;background:radial-gradient(closest-side,rgba(158,216,255,.55),rgba(88,168,232,.18) 60%,transparent);filter:blur(18px);z-index:0}
+html.mf body section#julie .jv5-photo img{position:relative;z-index:1;display:block;width:100%;height:100%;object-fit:cover;object-position:50% 22%;border-radius:inherit;filter:saturate(.92) contrast(1.03);
+  -webkit-mask-image:linear-gradient(180deg,#000 72%,rgba(0,0,0,.35) 100%);mask-image:linear-gradient(180deg,#000 72%,rgba(0,0,0,.35) 100%)}
+html.mf body section#julie .jv5-rim{position:absolute;inset:0;z-index:2;border-radius:inherit;border:1.5px solid rgba(158,216,255,.75);box-shadow:0 0 0 6px rgba(158,216,255,.08),0 0 34px rgba(158,216,255,.45),inset 0 0 40px rgba(10,26,64,.35);pointer-events:none}
+/* copy */
+html.mf body section#julie .jv5-body{min-width:0}
+html.mf body section#julie .jv5-kick{display:flex;align-items:center;gap:12px;margin:0 0 14px;font:600 18px/1.2 Inter,sans-serif;color:#9ED8FF;letter-spacing:.01em}
+html.mf body section#julie .jv5-kick::before{content:"";width:34px;height:1.5px;background:linear-gradient(90deg,rgba(158,216,255,0),#9ED8FF)}
+html.mf body:not(#mf-x):not(#mf-t) section#julie .jv5-title{margin:0 0 16px;font:500 48px/1.08 'Playfair Display',Georgia,serif!important;color:#fff!important;letter-spacing:-.01em;text-wrap:balance}
+html.mf body:not(#mf-x):not(#mf-t) section#julie .jv5-title em{display:block;font-style:italic;font-weight:500;color:transparent!important;background:linear-gradient(100deg,#FFFFFF 0%,#9ED8FF 45%,#58A8E8 100%);-webkit-background-clip:text;background-clip:text}
+html.mf body:not(#mf-x):not(#mf-t) section#julie .jv5-msg{margin:0 0 26px;font:500 21px/1.5 Inter,sans-serif!important;color:#DCE7F7!important;max-width:34ch}
+html.mf body:not(#mf-x):not(#mf-t) section#julie .jv5-msg b{color:#fff;font-weight:700}
+html.mf body section#julie .jv5-stats{display:flex;gap:0;margin:0 0 28px;padding:0}
+html.mf body section#julie .jv5-stats>div{padding:2px 28px 2px 0;margin-right:28px;border-right:1px solid rgba(158,216,255,.28)}
+html.mf body section#julie .jv5-stats>div:last-child{border-right:0;margin-right:0}
+html.mf body:not(#mf-x):not(#mf-t) section#julie .jv5-stats dt{margin:0;font:500 38px/1 'Playfair Display',Georgia,serif!important;color:transparent!important;background:linear-gradient(180deg,#FFFFFF,#9ED8FF);-webkit-background-clip:text;background-clip:text}
+html.mf body:not(#mf-x):not(#mf-t) section#julie .jv5-stats dd{margin:8px 0 0;font:500 17px/1.2 Inter,sans-serif!important;color:#B9D3F0!important}
+/* ticket */
+html.mf body section#julie .jv5-ticket{position:relative;display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:22px;padding:18px 18px 18px 24px;border-radius:20px;
+  background:linear-gradient(135deg,rgba(255,255,255,.12),rgba(158,216,255,.06));border:1px solid rgba(158,216,255,.32);box-shadow:inset 0 1px 0 rgba(255,255,255,.18)}
+html.mf body section#julie .jv5-date{position:relative;margin:0;padding-right:22px;display:flex;flex-direction:column;line-height:1}
+html.mf body section#julie .jv5-date::after{content:"";position:absolute;right:0;top:-6px;bottom:-6px;border-right:1.5px dashed rgba(158,216,255,.45)}
+html.mf body:not(#mf-x):not(#mf-t) section#julie .jv5-date span{font:600 16px/1 Inter,sans-serif!important;color:#9ED8FF!important;margin-bottom:6px}
+html.mf body:not(#mf-x):not(#mf-t) section#julie .jv5-date b{font:500 30px/1 'Playfair Display',Georgia,serif!important;color:#fff!important;white-space:nowrap}
+html.mf body:not(#mf-x):not(#mf-t) section#julie .jv5-when{margin:0;display:flex;flex-direction:column;gap:4px;min-width:0}
+html.mf body:not(#mf-x):not(#mf-t) section#julie .jv5-when b{font:700 19px/1.2 Inter,sans-serif!important;color:#fff!important}
+html.mf body:not(#mf-x):not(#mf-t) section#julie .jv5-when span{font:500 17px/1.3 Inter,sans-serif!important;color:#DCE7F7!important}
+html.mf body:not(#mf-x):not(#mf-t) section#julie a.jv5-btn{display:inline-flex;align-items:center;gap:10px;padding:16px 26px;border-radius:999px;text-decoration:none;white-space:nowrap;
+  font:700 19px/1 Inter,sans-serif!important;color:#0A1A40!important;background:linear-gradient(180deg,#FFFFFF 0%,#E2EFFF 35%,#9ED8FF 100%);
+  box-shadow:0 10px 30px -8px rgba(158,216,255,.75),0 0 0 1px rgba(255,255,255,.6) inset;transition:transform .2s,box-shadow .2s}
+html.mf body section#julie a.jv5-btn svg{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round}
+html.mf body section#julie a.jv5-btn:hover{transform:translateY(-2px);box-shadow:0 16px 40px -8px rgba(158,216,255,.9),0 0 0 1px rgba(255,255,255,.7) inset}
+/* tablet */
+@media (max-width:980px){
+  html.mf body section#julie .jv5{grid-template-columns:minmax(0,300px) minmax(0,1fr);gap:36px;padding:32px}
+  html.mf body:not(#mf-x):not(#mf-t) section#julie .jv5-title{font-size:40px!important}
+}
+/* phones: compact, about half a screen; portrait beside the title; no motion */
+@media (max-width:640px){
+  html.mf body:not(#mf-x):not(#mf-t):not(#mf-j):not(#mf-v) section#julie.jv5-sec{padding:44px 0!important}
+  html.mf body section#julie .jv5{grid-template-columns:116px minmax(0,1fr);grid-template-areas:"photo head" "body body";gap:16px 16px;padding:20px 18px 18px;border-radius:24px;margin:0 6px}
+  html.mf body section#julie .jv5-sheen::after{animation:none;display:none}
+  html.mf body section#julie .jv5-photo{grid-area:photo;align-self:start;border-radius:70px 70px 18px 18px}
+  html.mf body section#julie .jv5-body{display:contents}
+  html.mf body section#julie .jv5-kick{grid-area:head;align-self:start;margin:4px 0 0;font-size:16px}
+  html.mf body section#julie .jv5-kick::before{width:20px}
+  html.mf body:not(#mf-x):not(#mf-t) section#julie .jv5-title{grid-area:head;align-self:end;margin:34px 0 0;font-size:27px!important;line-height:1.1}
+  html.mf body:not(#mf-x):not(#mf-t) section#julie .jv5-msg{grid-column:1/-1;margin:2px 0 0;font-size:18px!important;max-width:none}
+  html.mf body section#julie .jv5-stats{grid-column:1/-1;margin:2px 0 0}
+  html.mf body section#julie .jv5-stats>div{padding-right:20px;margin-right:20px}
+  html.mf body:not(#mf-x):not(#mf-t) section#julie .jv5-stats dt{font-size:30px!important}
+  html.mf body:not(#mf-x):not(#mf-t) section#julie .jv5-stats dd{font-size:16px!important;margin-top:6px}
+  html.mf body section#julie .jv5-ticket{grid-column:1/-1;grid-template-columns:auto 1fr;gap:14px 16px;padding:14px 14px 14px 18px}
+  html.mf body:not(#mf-x):not(#mf-t) section#julie .jv5-date b{font-size:26px!important}
+  html.mf body:not(#mf-x):not(#mf-t) section#julie .jv5-when b{font-size:17px!important}
+  html.mf body:not(#mf-x):not(#mf-t) section#julie .jv5-when span{font-size:16px!important}
+  html.mf body:not(#mf-x):not(#mf-t) section#julie a.jv5-btn{grid-column:1/-1;justify-content:center;padding:15px 20px;font-size:18px!important}
+}
+@media (prefers-reduced-motion:reduce){html.mf body section#julie .jv5-sheen::after{animation:none}}
+@media (max-width:640px){
+  html.mf body:not(#mf-x):not(#mf-t):not(#mf-j):not(#mf-v) section#julie.jv5-sec{padding:30px 0!important}
+  html.mf body section#julie .jv5{grid-template-columns:92px minmax(0,1fr);gap:14px 14px;padding:18px 16px 16px}
+  html.mf body section#julie .jv5-photo{border-radius:56px 56px 14px 14px}
+  html.mf body section#julie .jv5-rim{box-shadow:0 0 0 4px rgba(158,216,255,.08),0 0 22px rgba(158,216,255,.4)}
+  html.mf body section#julie .jv5-kick{font-size:15px;margin-top:2px}
+  html.mf body:not(#mf-x):not(#mf-t) section#julie .jv5-title{margin:26px 0 0;font-size:23px!important;line-height:1.12}
+  html.mf body:not(#mf-x):not(#mf-t) section#julie .jv5-title em{display:inline}
+  html.mf body:not(#mf-x):not(#mf-t) section#julie .jv5-msg{font-size:17px!important;line-height:1.45}
+  html.mf body section#julie .jv5-stats{display:none}
+  html.mf body section#julie .jv5-ticket{grid-template-columns:auto 1fr;gap:12px 14px;padding:12px 12px 12px 16px;border-radius:18px}
+  html.mf body section#julie .jv5-date{padding-right:14px}
+  html.mf body:not(#mf-x):not(#mf-t) section#julie .jv5-date span{font-size:15px!important;margin-bottom:4px}
+  html.mf body:not(#mf-x):not(#mf-t) section#julie .jv5-date b{font-size:23px!important}
+  html.mf body:not(#mf-x):not(#mf-t) section#julie a.jv5-btn{padding:13px 18px;font-size:17px!important}
+}
