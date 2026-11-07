@@ -24,6 +24,7 @@ new = '''<section class="mf-julie mf-julie-bonus jv5-sec" id="julie">
     <article class="jv5">
       <span class="jv5-sheen" aria-hidden="true"></span>
       <header class="jv5-head">
+        <figure class="jv5-avatar" aria-hidden="true"><img src="assets/mf/julie-face.jpg" alt="" width="600" height="600" loading="lazy"></figure>
         <p class="jv5-kick">Exclusive VIP Access ·&nbsp;<strong>Included</strong></p>
         <h2 class="jb4-title jv5-title"><span class="jb4-masterclass">The Longevity Masterclass</span> <em>Julie Gibson&nbsp;Clark</em></h2>
         <p class="jv5-msg"><b>Learn to age&nbsp;slower</b> from the 2nd slowest&#8209;aging woman on&nbsp;Earth</p>
@@ -40,6 +41,6 @@ new = '''<section class="mf-julie mf-julie-bonus jv5-sec" id="julie">
 s = s[:i] + new + s[j:]
 link = re.search(r'<link rel="stylesheet" href="assets/lla-julie-vip-motion\.css\?v=[^"]*">', s)
 if not link: sys.exit('motion css link not found')
-s = s[:link.end()] + '\n<link rel="stylesheet" href="assets/lla-julie-vip-glass.css?v=20261107-3">' + s[link.end():]
+s = s[:link.end()] + '\n<link rel="stylesheet" href="assets/lla-julie-vip-glass.css?v=20261107-4">' + s[link.end():]
 open(out, 'w', encoding='utf-8').write(s)
 print('patched', out)
