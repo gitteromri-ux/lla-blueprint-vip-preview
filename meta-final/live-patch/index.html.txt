@@ -12589,7 +12589,7 @@ html body#lpRoot #enrollModal .em-band .b-v .lla-tu-vip{border-top:1px solid rgb
 <link rel="stylesheet" href="assets/lla-ui-refinements.css?v=20261106-about4">
 <link rel="stylesheet" href="assets/lla-type-quality.css?v=20261106-2">
 <link rel="stylesheet" href="assets/lla-julie-vip-motion.css?v=20261107-7">
-<link rel="stylesheet" href="assets/lla-julie-vip-glass.css?v=20261107-14">
+<link rel="stylesheet" href="assets/lla-julie-vip-glass.css?v=20261107-15">
 <script src="assets/lla-julie-vip-motion.js?v=20261106-1" defer></script>
 </head>
 <body id="lpRoot">
@@ -13260,7 +13260,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
   </section>
 <section class="mf-julie mf-julie-bonus jv14" id="julie">
-  <div class="jv14-media" aria-hidden="true"><img src="assets/mf/julie-film-still.jpg" alt="" width="1280" height="720" loading="lazy"></div>
+  <div class="jv14-media"><img src="assets/mf/julie-studio.webp" alt="Julie Gibson Clark" width="860" height="1304" loading="lazy"></div>
   <div class="container">
     <div class="jv14-in">
       <p class="jv14-eyebrow">The Longevity Masterclass<i aria-hidden="true"></i><br class="jv14-br">Exclusive VIP Access, <b>included</b></p>

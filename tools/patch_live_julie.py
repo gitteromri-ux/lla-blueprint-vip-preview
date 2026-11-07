@@ -20,7 +20,7 @@ VARIANT = ' jv14-black' if '--black' in sys.argv else ''
 cal = '<svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="5" width="17" height="15" rx="3"/><path d="M3.5 10h17M8 3v4M16 3v4"/></svg>'
 chk = '<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.6 2.6L16 9.8"/></svg>'
 new = """<section class="mf-julie mf-julie-bonus jv14""" + VARIANT + """" id="julie">
-  <div class="jv14-media" aria-hidden="true"><img src="assets/mf/julie-film-still.jpg" alt="" width="1280" height="720" loading="lazy"></div>
+  <div class="jv14-media"><img src="assets/mf/julie-studio.webp" alt="Julie Gibson Clark" width="860" height="1304" loading="lazy"></div>
   <div class="container">
     <div class="jv14-in">
       <p class="jv14-eyebrow">The Longevity Masterclass<i aria-hidden="true"></i><br class="jv14-br">Exclusive VIP Access, <b>included</b></p>
@@ -39,6 +39,6 @@ new = """<section class="mf-julie mf-julie-bonus jv14""" + VARIANT + """" id="ju
 s = s[:i] + new + s[j:]
 link = re.search(r'<link rel="stylesheet" href="assets/lla-julie-vip-motion\.css\?v=[^"]*">', s)
 if not link: sys.exit('motion css link not found')
-s = s[:link.end()] + '\n<link rel="stylesheet" href="assets/lla-julie-vip-glass.css?v=20261107-14">' + s[link.end():]
+s = s[:link.end()] + '\n<link rel="stylesheet" href="assets/lla-julie-vip-glass.css?v=20261107-15">' + s[link.end():]
 open(out, 'w', encoding='utf-8').write(s)
 print('patched', out)
