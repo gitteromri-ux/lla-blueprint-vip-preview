@@ -12589,7 +12589,7 @@ html body#lpRoot #enrollModal .em-band .b-v .lla-tu-vip{border-top:1px solid rgb
 <link rel="stylesheet" href="assets/lla-ui-refinements.css?v=20261106-about4">
 <link rel="stylesheet" href="assets/lla-type-quality.css?v=20261106-2">
 <link rel="stylesheet" href="assets/lla-julie-vip-motion.css?v=20261107-7">
-<link rel="stylesheet" href="assets/lla-julie-vip-glass.css?v=20261107-12">
+<link rel="stylesheet" href="assets/lla-julie-vip-glass.css?v=20261107-13">
 <script src="assets/lla-julie-vip-motion.js?v=20261106-1" defer></script>
 </head>
 <body id="lpRoot">
@@ -13259,24 +13259,22 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <a href="#lead-gen" class="section-cta-btn">Enroll Now <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
     </div>
   </section>
-<section class="mf-julie mf-julie-bonus jv5-sec jv12 jv5-black" id="julie">
+<section class="mf-julie mf-julie-bonus jv13 jv13-black" id="julie">
   <div class="container">
-    <div class="jv12-wrap">
-      <header class="jv12-copy">
-        <p class="jv12-kick">Exclusive VIP Access <span>&middot;</span> <b>Included in enrollment</b></p>
-        <h2 class="jb4-title jv12-title"><span class="jb4-masterclass">The Longevity Masterclass</span> <em>with Julie Gibson&nbsp;Clark</em></h2>
-        <p class="jv12-msg">Learn to age 33% slower from the 2<sup>nd</sup> <b>slowest aging woman on&nbsp;Earth</b></p>
-        <p class="jv12-when"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="5" width="17" height="15" rx="3"/><path d="M3.5 10h17M8 3v4M16 3v4"/></svg><b>Nov 14<sup>th</sup>, 12:00&nbsp;PM (EST)</b><span>90&nbsp;min live Masterclass + Q&amp;A</span></p>
-        <div class="jv12-cta"><a class="jv12-btn" href="#lead-gen" data-checkout-open>Join&nbsp;us<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a><p class="jv12-incl"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.6 2.6L16 9.8"/></svg><span><b>Included</b> in enrollment</span></p></div>
+    <div class="jv13-in">
+      <header class="jv13-head">
+        <p class="jv13-eyebrow">The Longevity Masterclass<i aria-hidden="true"></i><br class="jv13-br">Exclusive VIP Access, <b>included</b></p>
+        <h2 class="jv13-h">Learn to <em>age slower</em> from the 2nd slowest&#8209;aging woman on&nbsp;Earth.</h2>
       </header>
-      <div class="jb4-motion jv5-stage" role="group" aria-label="Julie’s Masterclass animations">
-        <div class="jb4-motion-track" tabindex="0" aria-label="Two Masterclass animations. Swipe or use arrow keys to view each.">
-        <article class="jb4-animation"><h3 class="jb4-animation-title"><em>Ages 33% slower</em> than average&nbsp;human</h3><div class="jb4-clip" data-motion-src="assets/mf/anim/ANIM_CURVE_1080.mp4"><img src="assets/mf/anim/curve-poster.jpg" alt="Julie’s aging-curve animation" loading="lazy" width="1920" height="1080"></div></article>
-        <figure class="jv5-photo"><span class="jv5-halo" aria-hidden="true"></span><img src="assets/mf/julie-face.jpg" alt="Julie Gibson Clark" width="600" height="600" loading="lazy"><span class="jv5-rim" aria-hidden="true"></span></figure>
-        <article class="jb4-animation"><h3 class="jb4-animation-title"><em>Ages 6.7 years</em> a&nbsp;decade</h3><div class="jb4-clip" data-motion-src="assets/mf/anim/ANIM_PACE_1080.mp4"><img src="assets/mf/anim/pace-poster.jpg" alt="Julie’s pace-of-aging animation" loading="lazy" width="1920" height="1080"></div></article>
-      </div>
-        <span class="jb4-motion-hint">Swipe for more</span>
-        <button class="jb4-motion-toggle" type="button" aria-pressed="false">Pause animations</button>
+      <figure class="jv13-portrait"><img src="assets/mf/julie-face.jpg" alt="Julie Gibson Clark" width="600" height="600" loading="lazy"><figcaption><b>Julie Gibson Clark</b><span>2nd slowest-aging woman on Earth</span></figcaption></figure>
+      <div class="jv13-side">
+        <div class="jb4-motion jv13-proof" role="group" aria-label="Julie&rsquo;s Masterclass animations">
+          <div class="jv13-stat"><p class="jv13-num">33<small>%</small></p><p class="jv13-lbl">slower aging than the average&nbsp;human</p><div class="jb4-clip" data-motion-src="assets/mf/anim/ANIM_CURVE_1080.mp4"><img src="assets/mf/anim/curve-poster.jpg" alt="Julie’s aging-curve animation" loading="lazy" width="1920" height="1080"></div></div>
+          <div class="jv13-stat"><p class="jv13-num">6.7</p><p class="jv13-lbl">years of aging per&nbsp;decade</p><div class="jb4-clip" data-motion-src="assets/mf/anim/ANIM_PACE_1080.mp4"><img src="assets/mf/anim/pace-poster.jpg" alt="Julie’s pace-of-aging animation" loading="lazy" width="1920" height="1080"></div></div>
+          <button class="jb4-motion-toggle" type="button" aria-pressed="false">Pause animations</button>
+        </div>
+        <p class="jv13-when"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="5" width="17" height="15" rx="3"/><path d="M3.5 10h17M8 3v4M16 3v4"/></svg><b>Sat, Nov&nbsp;14</b><span>12:00 PM ET</span><span>90&nbsp;min live with&nbsp;Q&amp;A</span></p>
+        <div class="jv13-cta"><a class="jv13-btn" href="#lead-gen" data-checkout-open>Join&nbsp;us<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a><p class="jv13-incl"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.6 2.6L16 9.8"/></svg><span>Included in your enrollment</span></p></div>
       </div>
     </div>
   </div>

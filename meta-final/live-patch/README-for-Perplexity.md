@@ -1,10 +1,10 @@
-# Julie VIP fold, web layout v12 (Omri 7 Nov 2026)
+# Julie VIP fold, editorial v13 (Omri 7 Nov 2026)
 
 Built on top of live main **6ddcb65**. Two changes only, presentation only (no tracking, CRM, checkout or network code):
 
-1. `index.html`: replace with `meta-final/live-patch/index.html.txt` (navy background) OR `meta-final/live-patch/index-black.html.txt` (black background); Omri picks one. They differ only by the class `jv5-black` on the section.
+1. `index.html`: replace with `meta-final/live-patch/index.html.txt` (navy background) OR `meta-final/live-patch/index-black.html.txt` (black background); Omri picks one. They differ only by the class `jv13-black` on the section.
    - Diff vs live must show only (a) the `<section ... id="julie">` block and (b) one new line after the `lla-julie-vip-motion.css` link:
-     `<link rel="stylesheet" href="assets/lla-julie-vip-glass.css?v=20261107-12">`
+     `<link rel="stylesheet" href="assets/lla-julie-vip-glass.css?v=20261107-13">`
    - Same copy as live. Same animation markup and classes (`jb4-motion`, `jb4-motion-track`, `jb4-animation`, `jb4-clip`, `jb4-motion-toggle`), so `assets/lla-julie-vip-motion.js` keeps working. "Join us" keeps `data-checkout-open`.
 2. Upload `meta-final/live-patch/lla-julie-vip-glass.css` to `assets/lla-julie-vip-glass.css`.
 
