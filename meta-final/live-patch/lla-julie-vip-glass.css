@@ -1,90 +1,89 @@
-/* LLA Julie VIP Masterclass fold, v13 editorial (Omri 7 Nov: top agency level, clean). Promise headline, portrait, two proof stats with the animations, offer.
-   Black background: class jv13-black. Presentation only: no tracking, CRM, checkout or network code. Keeps lla-julie-vip-motion.js hooks (jb4-motion, data-motion-src, jb4-motion-toggle). */
-html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv13{position:relative!important;overflow:hidden!important;padding:112px 0!important;background:radial-gradient(50% 70% at 22% 62%,rgba(88,168,232,.18),transparent 70%),radial-gradient(60% 50% at 80% 0%,rgba(158,216,255,.10),transparent 70%),linear-gradient(180deg,#071230 0%,#0A1A40 55%,#071230 100%)!important}
-html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv13.jv13-black{background:radial-gradient(50% 70% at 22% 62%,rgba(88,168,232,.20),transparent 70%),radial-gradient(60% 50% at 80% 0%,rgba(158,216,255,.08),transparent 70%),#000!important}
-html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv13::before,html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv13::after{display:none!important}
-html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv13 .jv13-in{display:grid!important;grid-template-columns:minmax(0,5fr) minmax(0,6fr)!important;grid-template-areas:"head head" "portrait side"!important;column-gap:72px!important;row-gap:56px!important;max-width:1200px!important;margin:0 auto!important;text-align:left!important}
-html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv13 .jv13-head{grid-area:head;max-width:1040px}
-html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv13 .jv13-eyebrow{display:flex!important;align-items:center;flex-wrap:wrap;gap:12px;margin:0 0 22px!important;font:600 17px/1.3 Inter,sans-serif!important;letter-spacing:.02em!important;color:#9ED8FF!important}
-html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv13 .jv13-eyebrow i{display:inline-block;width:28px;height:1px;background:rgba(158,216,255,.55)}
-html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv13 .jv13-eyebrow b{color:#FFFFFF!important;font-weight:700!important}
-html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv13 h2.jv13-h{margin:0!important;font:500 66px/1.06 'Playfair Display',Georgia,serif!important;letter-spacing:-.018em!important;color:#FFFFFF!important;text-align:left!important;text-wrap:balance}
-html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv13 h2.jv13-h em{font-style:italic!important;font-weight:500!important;color:transparent!important;background:linear-gradient(100deg,#DDF1FF 0%,#9ED8FF 55%,#6FB6EC 100%)!important;-webkit-background-clip:text!important;background-clip:text!important;padding-right:.04em}
-html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv13 .jv13-portrait{grid-area:portrait;position:relative!important;margin:0!important;border-radius:28px!important;overflow:hidden!important;aspect-ratio:4/5;box-shadow:0 60px 120px -50px rgba(0,0,0,.95),0 0 0 1px rgba(158,216,255,.22)!important;align-self:stretch}
-html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv13 .jv13-portrait img{display:block!important;width:100%!important;height:100%!important;object-fit:cover!important;object-position:50% 22%!important;filter:saturate(.94) contrast(1.04)}
-html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv13 .jv13-portrait::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 55%,rgba(7,18,48,.92) 100%);pointer-events:none}
-html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv13 .jv13-portrait figcaption{position:absolute;left:28px;right:28px;bottom:24px;z-index:1;display:flex;flex-direction:column;gap:4px}
-html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv13 .jv13-portrait figcaption b{font:500 28px/1.1 'Playfair Display',Georgia,serif!important;color:#FFFFFF!important}
-html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv13 .jv13-portrait figcaption span{font:500 16px/1.3 Inter,sans-serif!important;color:#BFE5FF!important}
-html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv13 .jv13-side{grid-area:side;display:flex!important;flex-direction:column!important;justify-content:space-between;min-width:0}
-html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv13 .jb4-motion{position:relative!important;margin:0!important;padding:0!important;width:100%!important;max-width:none!important;display:block!important}
-html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv13 .jv13-stat{display:grid!important;grid-template-columns:minmax(0,1fr) 248px;grid-template-areas:"num clip" "lbl clip";column-gap:32px;align-items:center;padding:30px 0;border-top:1px solid rgba(158,216,255,.18)}
-html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv13 .jv13-stat:first-child{padding-top:4px;border-top:0}
-html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv13 .jv13-num{grid-area:num;align-self:end;margin:0!important;font:500 96px/.92 'Playfair Display',Georgia,serif!important;letter-spacing:-.03em!important;color:transparent!important;background:linear-gradient(180deg,#FFFFFF 10%,#9ED8FF 100%)!important;-webkit-background-clip:text!important;background-clip:text!important}
-html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv13 .jv13-num small{font-size:.5em!important;letter-spacing:0;margin-left:4px;vertical-align:.62em}
-html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv13 .jv13-lbl{grid-area:lbl;align-self:start;margin:12px 0 0!important;max-width:24ch;font:500 20px/1.35 Inter,sans-serif!important;color:#C9DAF0!important}
-html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv13 .jv13-stat .jb4-clip{grid-area:clip;position:relative!important;aspect-ratio:16/9!important;width:100%!important;margin:0!important;border-radius:16px!important;overflow:hidden!important;background:#030817!important;border:1px solid rgba(158,216,255,.28)!important;box-shadow:0 24px 50px -24px rgba(0,0,0,.9),0 0 40px -16px rgba(88,168,232,.7)!important;transform:none!important}
-html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv13 .jv13-stat .jb4-clip :is(img,video){position:absolute!important;inset:0!important;width:100%!important;height:100%!important;object-fit:cover!important;border-radius:0!important}
-html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv13 .jb4-motion-toggle{position:absolute!important;right:0;top:-34px;margin:0!important;padding:4px 0!important;background:none!important;border:0!important;font:500 14px/1 Inter,sans-serif!important;color:rgba(158,216,255,.75)!important;text-decoration:underline!important;text-underline-offset:3px;cursor:pointer;width:auto!important;display:block!important;transform:none!important}
-html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv13 .jv13-when{display:flex!important;align-items:center;flex-wrap:wrap;gap:8px 18px;margin:8px 0 28px!important;padding:22px 0 0;border-top:1px solid rgba(158,216,255,.18);text-align:left!important}
-html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv13 .jv13-when svg{width:22px;height:22px;fill:none;stroke:#9ED8FF;stroke-width:1.8;stroke-linecap:round}
-html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv13 .jv13-when b{font:700 20px/1.3 Inter,sans-serif!important;color:#FFFFFF!important}
-html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv13 .jv13-when span{font:500 19px/1.3 Inter,sans-serif!important;color:#C9DAF0!important}
-html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv13 .jv13-when span::before{content:"";display:inline-block;width:4px;height:4px;border-radius:50%;background:rgba(158,216,255,.6);margin:0 14px 0 0;vertical-align:middle}
-html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv13 .jv13-cta{display:flex!important;align-items:center;flex-wrap:wrap;gap:16px 26px}
-html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv13 a.jv13-btn{display:inline-flex!important;align-items:center;gap:12px;padding:20px 38px!important;margin:0!important;border-radius:999px!important;text-decoration:none!important;white-space:nowrap;font:700 20px/1 Inter,sans-serif!important;color:#071230!important;background:linear-gradient(180deg,#FFFFFF 0%,#DDF1FF 45%,#9ED8FF 100%)!important;border:0!important;box-shadow:0 18px 44px -14px rgba(158,216,255,.85),inset 0 1px 0 #fff!important;transition:transform .2s,box-shadow .2s}
-html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv13 a.jv13-btn svg{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round}
-html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv13 a.jv13-btn:hover{transform:translateY(-2px);box-shadow:0 24px 54px -14px rgba(158,216,255,1),inset 0 1px 0 #fff!important}
-html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv13 .jv13-incl{display:flex!important;align-items:center;gap:10px;margin:0!important}
-html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv13 .jv13-incl svg{width:24px;height:24px;fill:none;stroke:#9ED8FF;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
-html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv13 .jv13-incl span{font:500 18px/1.3 Inter,sans-serif!important;color:#DCE7F7!important}
+/* LLA Julie VIP Masterclass fold, v14 cinematic (Omri 7 Nov: premium). Julie's approved 4K film still bleeds on the right; promise, proof and offer on the left.
+   Black background: class jv14-black. Presentation only: no tracking, CRM, checkout or network code. Keeps lla-julie-vip-motion.js hooks. */
+html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv14{position:relative!important;overflow:hidden!important;isolation:isolate;padding:120px 0 112px!important;min-height:880px;background:#050B1C!important}
+html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv14::before,html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv14::after{display:none!important}
+html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv14 .jv14-media{position:absolute!important;inset:0 0 0 34%;z-index:-1;pointer-events:none}
+html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv14 .jv14-media img{display:block!important;width:100%!important;height:100%!important;object-fit:cover!important;object-position:46% 28%!important;filter:saturate(.82) brightness(.9) contrast(1.06);max-width:none!important;border-radius:0!important}
+html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv14 .jv14-media::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,#050B1C 0%,rgba(5,11,28,.92) 12%,rgba(5,11,28,.45) 34%,rgba(5,11,28,.05) 58%,rgba(5,11,28,0) 100%),linear-gradient(0deg,#050B1C 0%,rgba(5,11,28,.6) 16%,rgba(5,11,28,0) 40%),linear-gradient(180deg,#050B1C 0%,rgba(5,11,28,0) 18%),radial-gradient(70% 80% at 70% 40%,rgba(42,78,138,.0),rgba(10,26,64,.35) 100%)}
+html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv14 .jv14-media::before{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(120deg,rgba(88,168,232,.18),rgba(10,26,64,.25));mix-blend-mode:color;pointer-events:none}
+html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv14.jv14-black,html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv14.jv14-black .jv14-media::after{background-color:#000!important}
+html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv14.jv14-black .jv14-media::after{background:linear-gradient(90deg,#000 0%,rgba(0,0,0,.92) 12%,rgba(0,0,0,.45) 34%,rgba(0,0,0,.05) 58%,transparent 100%),linear-gradient(0deg,#000 0%,rgba(0,0,0,.6) 16%,transparent 40%),linear-gradient(180deg,#000 0%,transparent 18%)}
+html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv14 .container{position:relative;z-index:1}
+html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv14 .jv14-in{max-width:600px!important;margin:0!important;text-align:left!important}
+html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv14 .jv14-eyebrow{display:block!important;margin:0 0 26px!important;font:600 16px/1.4 Inter,sans-serif!important;letter-spacing:.03em!important;color:#9ED8FF!important}
+html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv14 .jv14-eyebrow i{display:inline-block;width:28px;height:1px;margin:0 12px;vertical-align:middle;position:relative;top:-1px;background:rgba(158,216,255,.55)}
+html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv14 .jv14-eyebrow b{color:#FFFFFF!important;font-weight:700!important}
+html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv14 .jv14-br{display:none}
+html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv14 h2.jv14-h{margin:0!important;font:500 60px/1.06 'Playfair Display',Georgia,serif!important;letter-spacing:-.018em!important;color:#FFFFFF!important;text-align:left!important;text-wrap:balance;text-shadow:0 2px 30px rgba(0,0,0,.35)}
+html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv14 h2.jv14-h em{font-style:italic!important;font-weight:500!important;color:transparent!important;background:linear-gradient(100deg,#E6F5FF 0%,#9ED8FF 60%,#6FB6EC 100%)!important;-webkit-background-clip:text!important;background-clip:text!important;padding-right:.05em}
+html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv14 .jv14-by{margin:18px 0 44px!important;font:400 22px/1.3 'Playfair Display',Georgia,serif!important;font-style:italic!important;color:#C9DAF0!important;text-align:left!important}
+html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv14 .jv14-by b{font-weight:600!important;color:#FFFFFF!important}
+html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv14 .jb4-motion{position:relative!important;display:grid!important;grid-template-columns:1fr 1fr;column-gap:28px;margin:0 0 40px!important;padding:0!important;width:100%!important;max-width:none!important}
+html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv14 .jv14-stat{display:flex!important;flex-direction:column;min-width:0}
+html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv14 .jv14-num{margin:0!important;font:500 76px/.95 'Playfair Display',Georgia,serif!important;letter-spacing:-.03em!important;font-variant-numeric:lining-nums proportional-nums!important;font-feature-settings:"lnum" 1,"pnum" 1!important;color:transparent!important;background:linear-gradient(180deg,#FFFFFF 15%,#9ED8FF 100%)!important;-webkit-background-clip:text!important;background-clip:text!important}
+html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv14 .jv14-num small{font-size:.48em!important;letter-spacing:0;margin-left:3px;vertical-align:.75em}
+html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv14 .jv14-lbl{margin:10px 0 18px!important;min-height:2.7em;font:500 17px/1.35 Inter,sans-serif!important;color:#C9DAF0!important}
+html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv14 .jv14-stat .jb4-clip{position:relative!important;aspect-ratio:16/9!important;width:100%!important;margin:0!important;border-radius:14px!important;overflow:hidden!important;background:#030817!important;border:1px solid rgba(158,216,255,.26)!important;box-shadow:0 30px 60px -30px rgba(0,0,0,.95),0 0 36px -16px rgba(88,168,232,.7)!important;transform:none!important}
+html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv14 .jv14-stat .jb4-clip :is(img,video){position:absolute!important;inset:0!important;width:100%!important;height:100%!important;object-fit:cover!important;border-radius:0!important}
+html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv14 .jb4-motion-hint{display:none!important}
+html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv14 .jb4-motion-toggle{position:absolute!important;left:0;bottom:-30px;margin:0!important;padding:2px 0!important;background:none!important;border:0!important;font:500 13px/1 Inter,sans-serif!important;color:rgba(158,216,255,.7)!important;text-decoration:underline!important;text-underline-offset:3px;cursor:pointer;width:auto!important;transform:none!important}
+html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv14 .jv14-when{display:flex!important;align-items:center;flex-wrap:wrap;gap:8px 16px;margin:0 0 30px!important;padding:24px 0 0;border-top:1px solid rgba(158,216,255,.2);text-align:left!important}
+html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv14 .jv14-when svg{width:22px;height:22px;fill:none;stroke:#9ED8FF;stroke-width:1.8;stroke-linecap:round}
+html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv14 .jv14-when b{font:700 19px/1.3 Inter,sans-serif!important;color:#FFFFFF!important}
+html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv14 .jv14-when span{font:500 18px/1.3 Inter,sans-serif!important;color:#C9DAF0!important}
+html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv14 .jv14-when span::before{content:"";display:inline-block;width:4px;height:4px;border-radius:50%;background:rgba(158,216,255,.6);margin:0 14px 0 0;vertical-align:middle}
+html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv14 .jv14-cta{display:flex!important;align-items:center;flex-wrap:wrap;gap:16px 26px}
+html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv14 a.jv14-btn{display:inline-flex!important;align-items:center;gap:12px;padding:20px 40px!important;margin:0!important;border-radius:999px!important;text-decoration:none!important;white-space:nowrap;font:700 19px/1 Inter,sans-serif!important;letter-spacing:.01em;color:#050B1C!important;background:linear-gradient(180deg,#FFFFFF 0%,#E2F2FF 50%,#A9DCFF 100%)!important;border:0!important;box-shadow:0 18px 46px -14px rgba(158,216,255,.8),inset 0 1px 0 #fff!important;transition:transform .2s,box-shadow .2s}
+html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv14 a.jv14-btn svg{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round}
+html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv14 a.jv14-btn:hover{transform:translateY(-2px);box-shadow:0 24px 56px -14px rgba(158,216,255,1),inset 0 1px 0 #fff!important}
+html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv14 .jv14-incl{display:flex!important;align-items:center;gap:10px;margin:0!important}
+html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv14 .jv14-incl svg{width:22px;height:22px;fill:none;stroke:#9ED8FF;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv14 .jv14-incl span{font:500 17px/1.3 Inter,sans-serif!important;color:#DCE7F7!important}
 @media (max-width:980px){
-html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv13{padding:80px 0!important}
-html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv13 .jv13-in{grid-template-columns:minmax(0,1fr) minmax(0,1.1fr)!important;column-gap:40px!important;row-gap:40px!important}
-html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv13 h2.jv13-h{font-size:48px!important}
-html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv13 .jv13-stat{grid-template-columns:minmax(0,1fr) 200px;column-gap:20px}
-html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv13 .jv13-num{font-size:72px!important}
+html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv14{min-height:0;padding:96px 0 88px!important}
+html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv14 .jv14-media{inset:0 0 0 22%}
+html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv14 h2.jv14-h{font-size:50px!important}
+html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv14 .jv14-in{max-width:540px!important}
 }
 @media (max-width:640px){
-html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv13{padding:56px 0!important}
-html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv13 .jv13-in{grid-template-columns:minmax(0,1fr)!important;grid-template-areas:"head" "portrait" "side"!important;row-gap:28px!important;padding:0 8px}
-html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv13 .jv13-eyebrow{font-size:15px!important;gap:8px;margin-bottom:14px!important}
-html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv13 .jv13-eyebrow i{width:16px}
-html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv13 h2.jv13-h{font-size:36px!important;line-height:1.1!important}
-html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv13 .jv13-portrait{aspect-ratio:4/3.4;border-radius:22px!important}
-html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv13 .jv13-portrait figcaption{left:18px;bottom:16px}
-html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv13 .jv13-portrait figcaption b{font-size:23px!important}
-html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv13 .jv13-portrait figcaption span{font-size:15px!important}
-html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv13 .jb4-motion{display:grid!important;grid-template-columns:1fr 1fr;column-gap:14px}
-html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv13 .jv13-stat{grid-template-columns:1fr;grid-template-areas:"num" "lbl" "clip";padding:0;border:0;row-gap:0}
-html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv13 .jv13-stat:first-child{padding-top:0}
-html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv13 .jv13-num{font-size:56px!important}
-html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv13 .jv13-lbl{font-size:16px!important;margin:6px 0 12px!important;min-height:2.7em}
-html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv13 .jv13-stat .jb4-clip{border-radius:12px!important}
-html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv13 .jb4-motion-toggle{position:absolute!important;width:1px!important;height:1px!important;overflow:hidden!important;clip:rect(0 0 0 0)!important;white-space:nowrap!important;top:auto;right:auto}
-html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv13 .jv13-when{gap:4px 12px;margin:6px 0 18px!important;padding-top:18px}
-html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv13 .jv13-when b{font-size:18px!important}
-html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv13 .jv13-when span{font-size:16px!important}
-html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv13 .jv13-when span::before{margin-right:10px}
-html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv13 .jv13-cta{flex-direction:column;align-items:stretch;gap:12px}
-html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv13 a.jv13-btn{justify-content:center;padding:18px 20px!important;font-size:19px!important}
-html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv13 .jv13-incl{justify-content:center}
-html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv13 .jv13-incl span{font-size:16px!important}
+html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv14{padding:0 0 52px!important}
+html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv14 .jv14-media{position:relative!important;inset:auto;height:330px;z-index:0;margin-bottom:-56px}
+html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv14 .jv14-media img{object-position:47% 18%!important}
+html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv14 .jv14-media::after{background:linear-gradient(0deg,#050B1C 0%,rgba(5,11,28,.55) 30%,rgba(5,11,28,0) 60%),linear-gradient(180deg,rgba(5,11,28,.55) 0%,rgba(5,11,28,0) 22%)!important}
+html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv14.jv14-black .jv14-media::after{background:linear-gradient(0deg,#000 0%,rgba(0,0,0,.55) 30%,transparent 60%),linear-gradient(180deg,rgba(0,0,0,.55) 0%,transparent 22%)!important}
+html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv14 .jv14-in{max-width:none!important;padding:0 8px}
+html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv14 .jv14-eyebrow{font-size:14px!important;margin-bottom:12px!important;line-height:1.55!important}
+html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv14 .jv14-eyebrow i{display:none}
+html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv14 .jv14-br{display:inline}
+html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv14 h2.jv14-h{font-size:35px!important;line-height:1.1!important}
+html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv14 .jv14-by{font-size:19px!important;margin:10px 0 26px!important}
+html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv14 .jb4-motion{column-gap:14px;margin-bottom:26px!important}
+html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv14 .jv14-num{font-size:54px!important}
+html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv14 .jv14-lbl{font-size:15px!important;margin:6px 0 12px!important}
+html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv14 .jv14-stat .jb4-clip{border-radius:10px!important}
+html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv14 .jb4-motion-toggle{width:1px!important;height:1px!important;overflow:hidden!important;clip:rect(0 0 0 0)!important;white-space:nowrap!important;bottom:0}
+html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv14 .jv14-when{gap:4px 12px;margin-bottom:20px!important;padding-top:18px}
+html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv14 .jv14-when b{font-size:18px!important}
+html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv14 .jv14-when span{font-size:16px!important}
+html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv14 .jv14-when span:last-child{flex-basis:100%;padding-left:34px}
+html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv14 .jv14-when span:last-child::before{display:none}
+html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv14 .jv14-cta{flex-direction:column;align-items:stretch;gap:12px}
+html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv14 a.jv14-btn{justify-content:center;padding:18px 20px!important;font-size:19px!important}
+html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv14 .jv14-incl{justify-content:center}
+html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv14 .jv14-incl span{font-size:16px!important}
 }
 
-html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv13 .jv13-num{font-variant-numeric:lining-nums proportional-nums!important;font-feature-settings:"lnum" 1,"pnum" 1!important}
-html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv13 .jv13-num small{vertical-align:.7em;margin-left:2px}
-html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv13 .jv13-eyebrow{display:block!important}
-html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv13 .jv13-eyebrow i{vertical-align:middle;margin:0 12px;position:relative;top:-1px}
-html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv13 .jv13-side{justify-content:center!important;gap:0}
-html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv13 .jv13-when{margin-top:6px!important}
-@media (max-width:640px){
-html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv13 .jv13-eyebrow i{display:none}
-html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv13 .jv13-eyebrow{line-height:1.5!important}
-html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv13 .jv13-portrait{aspect-ratio:4/3!important}
-html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv13 .jv13-when span:last-child{flex-basis:100%;padding-left:34px}
-html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv13 .jv13-when span:last-child::before{display:none}
-html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv13 .jv13-num small{vertical-align:.62em}
+/* cinematic panel: the whole film frame, soft edges, no zoom */
+@media (min-width:641px){
+html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv14{min-height:0!important;padding:110px 0!important}
+html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv14 .jv14-media{inset:auto!important;right:0;top:50%;width:66%;aspect-ratio:16/9;transform:translateY(-50%);-webkit-mask-image:linear-gradient(90deg,transparent 0%,#000 34%),linear-gradient(180deg,transparent 0%,#000 16%,#000 82%,transparent 100%);-webkit-mask-composite:source-in;mask-image:linear-gradient(90deg,transparent 0%,#000 34%),linear-gradient(180deg,transparent 0%,#000 16%,#000 82%,transparent 100%);mask-composite:intersect}
+html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv14 .jv14-media img{object-position:50% 40%!important;filter:saturate(.85) brightness(.88) contrast(1.06)}
+html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv14 .jv14-media::after{background:radial-gradient(80% 90% at 70% 45%,rgba(5,11,28,0) 40%,rgba(5,11,28,.55) 100%)!important}
+html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv14 .jv14-in{max-width:620px!important}
+html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv14 h2.jv14-h{font-size:56px!important}
 }
-html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv13 .jv13-br{display:none}
-@media (max-width:640px){html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv13 .jv13-br{display:inline}}
+@media (min-width:1300px){ html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv14 .jv14-media{width:62%} }
+@media (max-width:640px){
+html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv14 .jv14-media img{object-position:52% 30%!important}
+}
+@media (min-width:641px){html.mf body#lpRoot:not(#legacy-ui):not(#legacy-fonts):not(#jv-a):not(#jv-b) section#julie.jv14 .jv14-media{inset:50% 0 auto auto!important}}

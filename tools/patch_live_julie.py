@@ -16,32 +16,29 @@ clips = dict((m.group(1), m.group(0)) for m in re.finditer(r'<div class="jb4-cli
 pace = [v for k, v in clips.items() if 'ANIM_PACE' in k]; curve = [v for k, v in clips.items() if 'ANIM_CURVE' in k]
 if len(pace) != 1 or len(curve) != 1: sys.exit('animation clips not found')
 if '<button class="jb4-motion-toggle"' not in old: sys.exit('toggle not found')
-VARIANT = ' jv13-black' if '--black' in sys.argv else ''
+VARIANT = ' jv14-black' if '--black' in sys.argv else ''
 cal = '<svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="5" width="17" height="15" rx="3"/><path d="M3.5 10h17M8 3v4M16 3v4"/></svg>'
 chk = '<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.6 2.6L16 9.8"/></svg>'
-new = """<section class="mf-julie mf-julie-bonus jv13""" + VARIANT + """" id="julie">
+new = """<section class="mf-julie mf-julie-bonus jv14""" + VARIANT + """" id="julie">
+  <div class="jv14-media" aria-hidden="true"><img src="assets/mf/julie-film-still.jpg" alt="" width="1280" height="720" loading="lazy"></div>
   <div class="container">
-    <div class="jv13-in">
-      <header class="jv13-head">
-        <p class="jv13-eyebrow">The Longevity Masterclass<i aria-hidden="true"></i><br class="jv13-br">Exclusive VIP Access, <b>included</b></p>
-        <h2 class="jv13-h">Learn to <em>age slower</em> from the 2nd slowest&#8209;aging woman on&nbsp;Earth.</h2>
-      </header>
-      <figure class="jv13-portrait"><img src="assets/mf/julie-face.jpg" alt="Julie Gibson Clark" width="600" height="600" loading="lazy"><figcaption><b>Julie Gibson Clark</b><span>2nd slowest-aging woman on Earth</span></figcaption></figure>
-      <div class="jv13-side">
-        <div class="jb4-motion jv13-proof" role="group" aria-label="Julie&rsquo;s Masterclass animations">
-          <div class="jv13-stat"><p class="jv13-num">33<small>%</small></p><p class="jv13-lbl">slower aging than the average&nbsp;human</p>""" + curve[0] + """</div>
-          <div class="jv13-stat"><p class="jv13-num">6.7</p><p class="jv13-lbl">years of aging per&nbsp;decade</p>""" + pace[0] + """</div>
-          <button class="jb4-motion-toggle" type="button" aria-pressed="false">Pause animations</button>
-        </div>
-        <p class="jv13-when">""" + cal + """<b>Sat, Nov&nbsp;14</b><span>12:00 PM ET</span><span>90&nbsp;min live with&nbsp;Q&amp;A</span></p>
-        <div class="jv13-cta"><a class="jv13-btn" href="#lead-gen" data-checkout-open>Join&nbsp;us<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a><p class="jv13-incl">""" + chk + """<span>Included in your enrollment</span></p></div>
+    <div class="jv14-in">
+      <p class="jv14-eyebrow">The Longevity Masterclass<i aria-hidden="true"></i><br class="jv14-br">Exclusive VIP Access, <b>included</b></p>
+      <h2 class="jv14-h">Learn to <em>age slower</em> from the 2nd slowest&#8209;aging woman on&nbsp;Earth.</h2>
+      <p class="jv14-by">with <b>Julie Gibson&nbsp;Clark</b></p>
+      <div class="jb4-motion jv14-proof" role="group" aria-label="Julie&rsquo;s Masterclass animations">
+        <div class="jv14-stat"><p class="jv14-num">33<small>%</small></p><p class="jv14-lbl">slower aging than the average&nbsp;human</p>""" + curve[0] + """</div>
+        <div class="jv14-stat"><p class="jv14-num">6.7</p><p class="jv14-lbl">years of aging per&nbsp;decade</p>""" + pace[0] + """</div>
+        <button class="jb4-motion-toggle" type="button" aria-pressed="false">Pause animations</button>
       </div>
+      <p class="jv14-when">""" + cal + """<b>Sat, Nov&nbsp;14</b><span>12:00 PM ET</span><span>90&nbsp;min live with&nbsp;Q&amp;A</span></p>
+      <div class="jv14-cta"><a class="jv14-btn" href="#lead-gen" data-checkout-open>Join&nbsp;us<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a><p class="jv14-incl">""" + chk + """<span>Included in your enrollment</span></p></div>
     </div>
   </div>
 </section>"""
 s = s[:i] + new + s[j:]
 link = re.search(r'<link rel="stylesheet" href="assets/lla-julie-vip-motion\.css\?v=[^"]*">', s)
 if not link: sys.exit('motion css link not found')
-s = s[:link.end()] + '\n<link rel="stylesheet" href="assets/lla-julie-vip-glass.css?v=20261107-13">' + s[link.end():]
+s = s[:link.end()] + '\n<link rel="stylesheet" href="assets/lla-julie-vip-glass.css?v=20261107-14">' + s[link.end():]
 open(out, 'w', encoding='utf-8').write(s)
 print('patched', out)
